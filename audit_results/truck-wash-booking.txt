@@ -1,0 +1,1 @@
+SITE: truck-wash-booking | CENTERING: N | BRANDING: N | LOREM: false | NOTES: Could not find the main application source file (src/App.jsx or src/App.tsx) to analyze UI centering, branding quality, or Lorem Ipsum content. Analysis is based solely on index.html.

@@ -1,0 +1,6 @@
+Name,URL,HTTP Status,Accessible,Load Time (ms),Size (KB),Mobile Score,A11y Score,Perf Score,Issues
+"Civic Insight Engine","https://new-ashtabula-initiative.vercel.app/civic-insight/",200,True,204,0.9,80,90,100,"No H1 heading found; No responsive CSS patterns detected"
+"Permit Whisperer","https://new-ashtabula-initiative.vercel.app/permits/",200,True,154,0.5,80,90,100,"No H1 heading found; No responsive CSS patterns detected"
+"Eligibility Screener","https://new-ashtabula-initiative.vercel.app/eligibility/",200,True,177,0.8,80,90,100,"No H1 heading found; No responsive CSS patterns detected"
+"Eligibility Lite","https://new-ashtabula-initiative.vercel.app/eligibility-lite/",200,True,207,0.5,80,90,100,"No H1 heading found; No responsive CSS patterns detected"
+"Eligibility Pro","https://new-ashtabula-initiative.vercel.app/eligibility-pro/",200,True,191,0.7,80,90,100,"No H1 heading found; No responsive CSS patterns detected"

@@ -1,0 +1,1 @@
+SITE: boxflow-estimator | CENTERING: 0 | BRANDING: 1 | LOREM: False | NOTES: The index.html file is a minimal template and does not contain the actual UI or branding elements. Centering and branding quality cannot be assessed from this file alone. No placeholder text was found.

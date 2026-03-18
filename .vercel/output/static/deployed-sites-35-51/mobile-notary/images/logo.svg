@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <defs>
+    <linearGradient id="sealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a"/>
+      <stop offset="100%" style="stop-color:#1e40af"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Seal background -->
+  <circle cx="60" cy="60" r="50" fill="#f8fafc" stroke="url(#goldGrad)" stroke-width="3"/>
+  <circle cx="60" cy="60" r="43" fill="none" stroke="url(#sealGrad)" stroke-width="2"/>
+  
+  <!-- Document -->
+  <rect x="42" y="35" width="36" height="46" rx="2" fill="#fff" stroke="#1e40af" stroke-width="2"/>
+  
+  <!-- Lines on document -->
+  <line x1="48" y1="45" x2="72" y2="45" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="48" y1="53" x2="72" y2="53" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="48" y1="61" x2="65" y2="61" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="48" y1="69" x2="70" y2="69" stroke="#94a3b8" stroke-width="2"/>
+  
+  <!-- Notary seal stamp -->
+  <circle cx="72" cy="68" r="12" fill="none" stroke="#dc2626" stroke-width="2"/>
+  <text x="72" y="72" font-family="Arial, sans-serif" font-size="6" fill="#dc2626" text-anchor="middle" font-weight="bold">NOTARY</text>
+  
+  <!-- Pen -->
+  <rect x="75" y="28" width="6" height="25" rx="1" fill="url(#goldGrad)" transform="rotate(30 78 40)"/>
+  
+  <!-- Text -->
+  <text x="130" y="50" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#1e3a8a">Mobile Notary</text>
+  <text x="130" y="75" font-family="Arial, sans-serif" font-size="16" fill="#64748b" letter-spacing="2">ASHTABULA COUNTY</text>
+  <text x="130" y="95" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">LICENSED • BONDED • INSURED</text>
+</svg>

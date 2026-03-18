@@ -1,0 +1,1 @@
+SITE: visual-portfolio | CENTERING: 5 | BRANDING: 7 | LOREM: false | NOTES: Custom SVG logo, creative theme. No Lorem Ipsum found in App.jsx. Centering not confirmed via JSX.

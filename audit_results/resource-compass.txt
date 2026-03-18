@@ -1,0 +1,1 @@
+SITE: resource-compass | CENTERING: 7 | BRANDING: 9 | LOREM: false | NOTES: The application is well-branded and functional, utilizing a Gemini API for resource lookup. UI appears to be structured for centering, and no placeholder text was found.

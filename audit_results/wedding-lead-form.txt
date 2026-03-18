@@ -1,0 +1,1 @@
+SITE: wedding-lead-form | CENTERING: 6 | BRANDING: 8 | LOREM: false | NOTES: UI elements likely centered via CSS. Branding uses romantic themes and AI integration for proposals. No Lorem Ipsum found.

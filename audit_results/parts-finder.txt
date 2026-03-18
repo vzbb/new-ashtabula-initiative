@@ -1,0 +1,1 @@
+SITE: parts-finder | CENTERING: 5 | BRANDING: 8 | LOREM: false | NOTES: Custom logo, professional tone, and relevant icons indicate good branding. Centering is inferred from the site structure.

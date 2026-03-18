@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --color-ashtabula-primary: #1e3a5f;
+  --color-ashtabula-secondary: #c9a227;
+  --color-ashtabula-accent: #2d5a87;
+  --color-ashtabula-bg: #f8f9fa;
+}
+
+@theme {
+  --color-ashtabula-primary: #1e3a5f;
+  --color-ashtabula-secondary: #c9a227;
+  --color-ashtabula-accent: #2d5a87;
+  --color-ashtabula-bg: #f8f9fa;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer base {
+  body {
+    @apply bg-ashtabula-bg text-slate-900 font-sans antialiased;
+  }
+}

@@ -1,0 +1,1 @@
+SITE: auto-detail-booking | CENTERING: 9 | BRANDING: 9 | LOREM: false | NOTES: The main content container uses `mx-auto` for horizontal centering. Branding is consistent with 'Auto Detail Pro', 'AI Booking Assistant', and Gemini integration, using specific text and custom icons. No Lorem Ipsum found.

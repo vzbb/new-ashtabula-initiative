@@ -1,0 +1,13 @@
+{
+  "name": "nai-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "New Ashtabula Initiative landing page with Vercel form handler",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

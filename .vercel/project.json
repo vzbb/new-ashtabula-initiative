@@ -1,0 +1,16 @@
+{
+  "projectId": "prj_FSuKOqAQMKYQ3p6rO0EPxUg6dMHc",
+  "orgId": "team_v5dXbQCU0coJVLKdBan5jJ8W",
+  "projectName": "new-ashtabula-initiative",
+  "settings": {
+    "createdAt": 1772280553607,
+    "framework": null,
+    "devCommand": null,
+    "installCommand": null,
+    "buildCommand": null,
+    "outputDirectory": null,
+    "rootDirectory": null,
+    "directoryListing": false,
+    "nodeVersion": "24.x"
+  }
+}

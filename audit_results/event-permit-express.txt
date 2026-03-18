@@ -1,0 +1,1 @@
+SITE: event-permit-express | CENTERING: N | BRANDING: N | LOREM: false | NOTES: Main application source files (e.g., src/App.jsx, src/App.tsx) could not be located for a full analysis of centering, branding quality, and Lorem Ipsum. Analysis is based solely on the provided index.html, which does not contain centering CSS, branding content, or Lorem Ipsum text.

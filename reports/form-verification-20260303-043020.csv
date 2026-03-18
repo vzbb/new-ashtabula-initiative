@@ -1,0 +1,85 @@
+Site Name,Site URL,Forms Found,Forms Passed,Forms Failed,Status,Issues
+resource-compass,https://newashtabula.vercel.app/resource-compass,0,0,0,warn,None
+sbdc-business-planning,https://newashtabula.vercel.app/sbdc-business-planning,0,0,0,warn,None
+cashflow-tracker,https://newashtabula.vercel.app/cashflow-tracker,0,0,0,warn,None
+business-networking-tools,https://newashtabula.vercel.app/business-networking-tools,0,0,0,warn,None
+charter-booking,https://newashtabula.vercel.app/charter-booking,0,0,0,warn,None
+engineers-assistant,https://newashtabula.vercel.app/engineers-assistant,0,0,0,warn,None
+screenshots-kimi-35-51,https://newashtabula.vercel.app/screenshots-kimi-35-51,0,0,0,fail,No index.html found
+truck-wash-booking,https://newashtabula.vercel.app/truck-wash-booking,0,0,0,warn,None
+compassionate-planner,https://newashtabula.vercel.app/compassionate-planner,0,0,0,warn,None
+local-grocer-go,https://newashtabula.vercel.app/local-grocer-go,0,0,0,warn,None
+mobile-notary,https://newashtabula.vercel.app/mobile-notary,0,0,0,warn,None
+volunteer-scheduler,https://newashtabula.vercel.app/volunteer-scheduler,0,0,0,warn,None
+instant-dirt-quote,https://newashtabula.vercel.app/instant-dirt-quote,0,0,0,warn,None
+wedding-lead-form,https://newashtabula.vercel.app/wedding-lead-form,0,0,0,warn,None
+insta-book,https://newashtabula.vercel.app/insta-book,0,0,0,warn,None
+plating-tracker,https://newashtabula.vercel.app/plating-tracker,0,0,0,warn,None
+resource-compass-pro,https://newashtabula.vercel.app/resource-compass-pro,0,0,0,warn,None
+ride-ready,https://newashtabula.vercel.app/ride-ready,0,0,0,warn,None
+eligibility-lite,https://newashtabula.vercel.app/eligibility-lite,0,0,0,warn,None
+virtual-concierge,https://newashtabula.vercel.app/virtual-concierge,0,0,0,warn,None
+screenshots-kimi-35-51-v3,https://newashtabula.vercel.app/screenshots-kimi-35-51-v3,0,0,0,fail,No index.html found
+box-builder,https://newashtabula.vercel.app/box-builder,0,0,0,warn,None
+contractor-match,https://newashtabula.vercel.app/contractor-match,0,0,0,warn,None
+node_modules,https://newashtabula.vercel.app/node_modules,0,0,0,fail,No index.html found
+service-scheduler,https://newashtabula.vercel.app/service-scheduler,0,0,0,warn,None
+artist-commission-form,https://newashtabula.vercel.app/artist-commission-form,0,0,0,warn,None
+blueprint-analyzer,https://newashtabula.vercel.app/blueprint-analyzer,0,0,0,warn,None
+screenshots-kimi-35-51-v2,https://newashtabula.vercel.app/screenshots-kimi-35-51-v2,0,0,0,fail,No index.html found
+sbdc-support-tools,https://newashtabula.vercel.app/sbdc-support-tools,0,0,0,warn,None
+nai-aerial-draw2,https://newashtabula.vercel.app/nai-aerial-draw2,0,0,0,warn,None
+nai-aerial-draw1,https://newashtabula.vercel.app/nai-aerial-draw1,0,0,0,warn,None
+farm-stand-finder,https://newashtabula.vercel.app/farm-stand-finder,0,0,0,warn,None
+govtech-box,https://newashtabula.vercel.app/govtech-box,0,0,0,warn,None
+ai-docent-pro,https://newashtabula.vercel.app/ai-docent-pro,0,0,0,warn,None
+service-scheduler-sms,https://newashtabula.vercel.app/service-scheduler-sms,0,0,0,warn,None
+pet-matchmaker,https://newashtabula.vercel.app/pet-matchmaker,0,0,0,warn,None
+plating-tracker-pro,https://newashtabula.vercel.app/plating-tracker-pro,0,0,0,warn,None
+zoning-clerk,https://newashtabula.vercel.app/zoning-clerk,0,0,0,warn,None
+fence-quote,https://newashtabula.vercel.app/fence-quote,0,0,0,warn,None
+harvest-alert,https://newashtabula.vercel.app/harvest-alert,0,0,0,warn,None
+sbdc-educational-resources,https://newashtabula.vercel.app/sbdc-educational-resources,0,0,0,warn,None
+mytrip-planner,https://newashtabula.vercel.app/mytrip-planner,0,0,0,warn,None
+auto-detail-booking,https://newashtabula.vercel.app/auto-detail-booking,0,0,0,warn,None
+sbdc-business-counseling,https://newashtabula.vercel.app/sbdc-business-counseling,0,0,0,warn,None
+screenshots,https://newashtabula.vercel.app/screenshots,0,0,0,fail,No index.html found
+ai-docent,https://newashtabula.vercel.app/ai-docent,0,0,0,warn,None
+permit-whisperer,https://newashtabula.vercel.app/permit-whisperer,0,0,0,warn,None
+screenshots-gemini-18-34,https://newashtabula.vercel.app/screenshots-gemini-18-34,0,0,0,fail,No index.html found
+nai-aerial-draw3,https://newashtabula.vercel.app/nai-aerial-draw3,0,0,0,warn,None
+policy-pal,https://newashtabula.vercel.app/policy-pal,0,0,0,warn,None
+pocket-historian,https://newashtabula.vercel.app/pocket-historian,0,0,0,warn,None
+pocket-sommelier-pro,https://newashtabula.vercel.app/pocket-sommelier-pro,0,0,0,warn,None
+snow-plow-tracker,https://newashtabula.vercel.app/snow-plow-tracker,0,0,0,warn,None
+event-permit-express,https://newashtabula.vercel.app/event-permit-express,0,0,0,warn,None
+landlord-repair-queue,https://newashtabula.vercel.app/landlord-repair-queue,0,0,0,warn,None
+license-wizard,https://newashtabula.vercel.app/license-wizard,0,0,0,warn,None
+sbdc-learning-modules,https://newashtabula.vercel.app/sbdc-learning-modules,0,0,0,warn,None
+harbor-cam-dashboard,https://newashtabula.vercel.app/harbor-cam-dashboard,0,0,0,warn,None
+insta-book-stripe,https://newashtabula.vercel.app/insta-book-stripe,0,0,0,warn,None
+boat-storage-waitlist,https://newashtabula.vercel.app/boat-storage-waitlist,0,0,0,warn,None
+eligibility-screener,https://newashtabula.vercel.app/eligibility-screener,0,0,0,warn,None
+parts-finder-request,https://newashtabula.vercel.app/parts-finder-request,0,0,0,warn,None
+civic-insight-engine,https://newashtabula.vercel.app/civic-insight-engine,0,0,0,warn,None
+route-optimizer,https://newashtabula.vercel.app/route-optimizer,0,0,0,warn,None
+visual-portfolio,https://newashtabula.vercel.app/visual-portfolio,0,0,0,warn,None
+curbside-pickup-tracker,https://newashtabula.vercel.app/curbside-pickup-tracker,0,0,0,warn,None
+aidflow-navigator,https://newashtabula.vercel.app/aidflow-navigator,0,0,0,warn,None
+rental-availability,https://newashtabula.vercel.app/rental-availability,0,0,0,warn,None
+hvac-tuneup,https://newashtabula.vercel.app/hvac-tuneup,0,0,0,warn,None
+eligibility-pro,https://newashtabula.vercel.app/eligibility-pro,0,0,0,warn,None
+grantgenius,https://newashtabula.vercel.app/grantgenius,0,0,0,warn,None
+screenshots-kimi-35-51-final,https://newashtabula.vercel.app/screenshots-kimi-35-51-final,0,0,0,fail,No index.html found
+visitor-parking-finder,https://newashtabula.vercel.app/visitor-parking-finder,0,0,0,warn,None
+marina-slip-waitlist,https://newashtabula.vercel.app/marina-slip-waitlist,0,0,0,warn,None
+pocket-sommelier,https://newashtabula.vercel.app/pocket-sommelier,0,0,0,warn,None
+gotl-weekend-planner,https://newashtabula.vercel.app/gotl-weekend-planner,0,0,0,warn,None
+sbdc-adjacent-services,https://newashtabula.vercel.app/sbdc-adjacent-services,0,0,0,warn,None
+lawn-quote-tool,https://newashtabula.vercel.app/lawn-quote-tool,0,0,0,warn,None
+adaptive-reuse-planner,https://newashtabula.vercel.app/adaptive-reuse-planner,0,0,0,warn,None
+mytrip-planner-export,https://newashtabula.vercel.app/mytrip-planner-export,0,0,0,warn,None
+boxflow-estimator,https://newashtabula.vercel.app/boxflow-estimator,0,0,0,warn,None
+pocket-historian-pro,https://newashtabula.vercel.app/pocket-historian-pro,0,0,0,warn,None
+invest-ashtabula,https://newashtabula.vercel.app/invest-ashtabula,0,0,0,warn,None
+parts-finder,https://newashtabula.vercel.app/parts-finder,0,0,0,warn,None

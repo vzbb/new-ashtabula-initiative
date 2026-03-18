@@ -1,0 +1,1 @@
+SITE: pocket-historian | CENTERING: 10 | BRANDING: 9 | LOREM: false | NOTES: The UI is well-centered using `margin: 0 auto;` on the main page container for various screen sizes. Branding is strong and specific to "Pocket Historian" and "Ashtabula Maritime Museum." No Lorem Ipsum text was found.

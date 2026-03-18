@@ -1,0 +1,570 @@
+{
+  "version": 2,
+  "name": "new-ashtabula-initiative",
+  "routes": [
+    {
+      "src": "/sbdc-educational-resources/?(.*)",
+      "dest": "/websites/sbdc-educational-resources/dist/$1"
+    },
+    {
+      "src": "/business-networking-tools/?(.*)",
+      "dest": "/websites/business-networking-tools/dist/$1"
+    },
+    {
+      "src": "/sbdc-business-counseling/?(.*)",
+      "dest": "/websites/sbdc-business-counseling/dist/$1"
+    },
+    {
+      "src": "/curbside-pickup-tracker/?(.*)",
+      "dest": "/websites/curbside-pickup-tracker/dist/$1"
+    },
+    {
+      "src": "/adaptive-reuse-planner/?(.*)",
+      "dest": "/websites/adaptive-reuse-planner/dist/$1"
+    },
+    {
+      "src": "/artist-commission-form/?(.*)",
+      "dest": "/websites/artist-commission-form/dist/$1"
+    },
+    {
+      "src": "/sbdc-adjacent-services/?(.*)",
+      "dest": "/websites/sbdc-adjacent-services/dist/$1"
+    },
+    {
+      "src": "/sbdc-business-planning/?(.*)",
+      "dest": "/websites/sbdc-business-planning/dist/$1"
+    },
+    {
+      "src": "/visitor-parking-finder/?(.*)",
+      "dest": "/websites/visitor-parking-finder/dist/$1"
+    },
+    {
+      "src": "/boat-storage-waitlist/?(.*)",
+      "dest": "/websites/boat-storage-waitlist/dist/$1"
+    },
+    {
+      "src": "/compassionate-planner/?(.*)",
+      "dest": "/websites/compassionate-planner/dist/$1"
+    },
+    {
+      "src": "/landlord-repair-queue/?(.*)",
+      "dest": "/websites/landlord-repair-queue/dist/$1"
+    },
+    {
+      "src": "/mytrip-planner-export/?(.*)",
+      "dest": "/websites/mytrip-planner-export/dist/$1"
+    },
+    {
+      "src": "/sbdc-learning-modules/?(.*)",
+      "dest": "/websites/sbdc-learning-modules/dist/$1"
+    },
+    {
+      "src": "/service-scheduler-sms/?(.*)",
+      "dest": "/websites/service-scheduler-sms/dist/$1"
+    },
+    {
+      "src": "/civic-insight-engine/?(.*)",
+      "dest": "/websites/civic-insight-engine/dist/$1"
+    },
+    {
+      "src": "/eligibility-screener/?(.*)",
+      "dest": "/websites/eligibility-screener/dist/$1"
+    },
+    {
+      "src": "/event-permit-express/?(.*)",
+      "dest": "/websites/event-permit-express/dist/$1"
+    },
+    {
+      "src": "/gotl-weekend-planner/?(.*)",
+      "dest": "/websites/gotl-weekend-planner/dist/$1"
+    },
+    {
+      "src": "/harbor-cam-dashboard/?(.*)",
+      "dest": "/websites/harbor-cam-dashboard/dist/$1"
+    },
+    {
+      "src": "/marina-slip-waitlist/?(.*)",
+      "dest": "/websites/marina-slip-waitlist/dist/$1"
+    },
+    {
+      "src": "/parts-finder-request/?(.*)",
+      "dest": "/websites/parts-finder-request/dist/$1"
+    },
+    {
+      "src": "/pocket-historian-pro/?(.*)",
+      "dest": "/websites/pocket-historian-pro/dist/$1"
+    },
+    {
+      "src": "/pocket-sommelier-pro/?(.*)",
+      "dest": "/websites/pocket-sommelier-pro/dist/$1"
+    },
+    {
+      "src": "/resource-compass-pro/?(.*)",
+      "dest": "/websites/resource-compass-pro/dist/$1"
+    },
+    {
+      "src": "/auto-detail-booking/?(.*)",
+      "dest": "/websites/auto-detail-booking/dist/$1"
+    },
+    {
+      "src": "/engineers-assistant/?(.*)",
+      "dest": "/websites/engineers-assistant/dist/$1"
+    },
+    {
+      "src": "/plating-tracker-pro/?(.*)",
+      "dest": "/websites/plating-tracker-pro/dist/$1"
+    },
+    {
+      "src": "/rental-availability/?(.*)",
+      "dest": "/websites/rental-availability/dist/$1"
+    },
+    {
+      "src": "/volunteer-scheduler/?(.*)",
+      "dest": "/websites/volunteer-scheduler/dist/$1"
+    },
+    {
+      "src": "/blueprint-analyzer/?(.*)",
+      "dest": "/websites/blueprint-analyzer/dist/$1"
+    },
+    {
+      "src": "/instant-dirt-quote/?(.*)",
+      "dest": "/websites/instant-dirt-quote/dist/$1"
+    },
+    {
+      "src": "/sbdc-support-tools/?(.*)",
+      "dest": "/websites/sbdc-support-tools/dist/$1"
+    },
+    {
+      "src": "/truck-wash-booking/?(.*)",
+      "dest": "/websites/truck-wash-booking/dist/$1"
+    },
+    {
+      "src": "/aidflow-navigator/?(.*)",
+      "dest": "/websites/aidflow-navigator/dist/$1"
+    },
+    {
+      "src": "/boxflow-estimator/?(.*)",
+      "dest": "/websites/boxflow-estimator/dist/$1"
+    },
+    {
+      "src": "/farm-stand-finder/?(.*)",
+      "dest": "/websites/farm-stand-finder/dist/$1"
+    },
+    {
+      "src": "/insta-book-stripe/?(.*)",
+      "dest": "/websites/insta-book-stripe/dist/$1"
+    },
+    {
+      "src": "/service-scheduler/?(.*)",
+      "dest": "/websites/service-scheduler/dist/$1"
+    },
+    {
+      "src": "/snow-plow-tracker/?(.*)",
+      "dest": "/websites/snow-plow-tracker/dist/$1"
+    },
+    {
+      "src": "/virtual-concierge/?(.*)",
+      "dest": "/websites/virtual-concierge/dist/$1"
+    },
+    {
+      "src": "/wedding-lead-form/?(.*)",
+      "dest": "/websites/wedding-lead-form/dist/$1"
+    },
+    {
+      "src": "/artist-commission/?(.*)",
+      "dest": "/websites/artist-commission-form/dist/$1"
+    },
+    {
+      "src": "/cashflow-tracker/?(.*)",
+      "dest": "/websites/cashflow-tracker/dist/$1"
+    },
+    {
+      "src": "/contractor-match/?(.*)",
+      "dest": "/websites/contractor-match/dist/$1"
+    },
+    {
+      "src": "/invest-ashtabula/?(.*)",
+      "dest": "/websites/invest-ashtabula/dist/$1"
+    },
+    {
+      "src": "/permit-whisperer/?(.*)",
+      "dest": "/websites/permit-whisperer/dist/$1"
+    },
+    {
+      "src": "/pocket-historian/?(.*)",
+      "dest": "/websites/pocket-historian/dist/$1"
+    },
+    {
+      "src": "/pocket-sommelier/?(.*)",
+      "dest": "/websites/pocket-sommelier/dist/$1"
+    },
+    {
+      "src": "/resource-compass/?(.*)",
+      "dest": "/websites/resource-compass/dist/$1"
+    },
+    {
+      "src": "/visual-portfolio/?(.*)",
+      "dest": "/websites/visual-portfolio/dist/$1"
+    },
+    {
+      "src": "/ashtabula-fence/?(.*)",
+      "dest": "/websites/ashtabula-fence/dist/$1"
+    },
+    {
+      "src": "/charter-booking/?(.*)",
+      "dest": "/websites/charter-booking/dist/$1"
+    },
+    {
+      "src": "/eligibility-pro/?(.*)",
+      "dest": "/websites/eligibility-pro/dist/$1"
+    },
+    {
+      "src": "/lawn-quote-tool/?(.*)",
+      "dest": "/websites/lawn-quote-tool/dist/$1"
+    },
+    {
+      "src": "/local-grocer-go/?(.*)",
+      "dest": "/websites/local-grocer-go/client/dist/$1"
+    },
+    {
+      "src": "/plating-tracker/?(.*)",
+      "dest": "/websites/plating-tracker/dist/$1"
+    },
+    {
+      "src": "/route-optimizer/?(.*)",
+      "dest": "/websites/route-optimizer/dist/$1"
+    },
+    {
+      "src": "/trumbull-locker/?(.*)",
+      "dest": "/websites/trumbull-locker/dist/$1"
+    },
+    {
+      "src": "/license-wizard/?(.*)",
+      "dest": "/websites/license-wizard/dist/$1"
+    },
+    {
+      "src": "/mytrip-planner/?(.*)",
+      "dest": "/websites/mytrip-planner/dist/$1"
+    },
+    {
+      "src": "/pet-matchmaker/?(.*)",
+      "dest": "/websites/pet-matchmaker/dist/$1"
+    },
+    {
+      "src": "/rennick-market/?(.*)",
+      "dest": "/websites/rennick-market/dist/$1"
+    },
+    {
+      "src": "/adaptive-reuse/?(.*)",
+      "dest": "/websites/adaptive-reuse-planner/dist/$1"
+    },
+    {
+      "src": "/ai-docent-pro/?(.*)",
+      "dest": "/websites/ai-docent-pro/dist/$1"
+    },
+    {
+      "src": "/harvest-alert/?(.*)",
+      "dest": "/websites/harvest-alert/dist/$1"
+    },
+    {
+      "src": "/mobile-notary/?(.*)",
+      "dest": "/websites/mobile-notary/dist/$1"
+    },
+    {
+      "src": "/terra-vantage/?(.*)",
+      "dest": "/websites/terra-vantage/dist/$1"
+    },
+    {
+      "src": "/civic-insight/?(.*)",
+      "dest": "/websites/civic-insight-engine/dist/$1"
+    },
+    {
+      "src": "/compassionate/?(.*)",
+      "dest": "/websites/compassionate-planner/dist/$1"
+    },
+    {
+      "src": "/historian-pro/?(.*)",
+      "dest": "/websites/pocket-historian-pro/dist/$1"
+    },
+    {
+      "src": "/sommelier-pro/?(.*)",
+      "dest": "/websites/pocket-sommelier-pro/dist/$1"
+    },
+    {
+      "src": "/scheduler-sms/?(.*)",
+      "dest": "/websites/service-scheduler-sms/dist/$1"
+    },
+    {
+      "src": "/parts-request/?(.*)",
+      "dest": "/websites/parts-finder-request/dist/$1"
+    },
+    {
+      "src": "/mytrip-export/?(.*)",
+      "dest": "/websites/mytrip-planner-export/dist/$1"
+    },
+    {
+      "src": "/parts-finder/?(.*)",
+      "dest": "/websites/parts-finder/dist/$1"
+    },
+    {
+      "src": "/site-ops-pro/?(.*)",
+      "dest": "/websites/site-ops-pro/dist/$1"
+    },
+    {
+      "src": "/thomas-fence/?(.*)",
+      "dest": "/websites/thomas-fence/dist/$1"
+    },
+    {
+      "src": "/zoning-clerk/?(.*)",
+      "dest": "/websites/zoning-clerk/dist/$1"
+    },
+    {
+      "src": "/boat-storage/?(.*)",
+      "dest": "/websites/boat-storage-waitlist/dist/$1"
+    },
+    {
+      "src": "/event-permit/?(.*)",
+      "dest": "/websites/event-permit-express/dist/$1"
+    },
+    {
+      "src": "/resource-pro/?(.*)",
+      "dest": "/websites/resource-compass-pro/dist/$1"
+    },
+    {
+      "src": "/box-builder/?(.*)",
+      "dest": "/websites/box-builder/dist/$1"
+    },
+    {
+      "src": "/fence-quote/?(.*)",
+      "dest": "/websites/fence-quote/dist/$1"
+    },
+    {
+      "src": "/govtech-box/?(.*)",
+      "dest": "/websites/govtech-box/dist/$1"
+    },
+    {
+      "src": "/grantgenius/?(.*)",
+      "dest": "/websites/grantgenius/dist/$1"
+    },
+    {
+      "src": "/hvac-tuneup/?(.*)",
+      "dest": "/websites/hvac-tuneup/dist/$1"
+    },
+    {
+      "src": "/parcelvisor/?(.*)",
+      "dest": "/websites/parcelvisor/dist/$1"
+    },
+    {
+      "src": "/contractors/?(.*)",
+      "dest": "/websites/contractor-match/dist/$1"
+    },
+    {
+      "src": "/eligibility/?(.*)",
+      "dest": "/websites/eligibility-screener/dist/$1"
+    },
+    {
+      "src": "/auto-detail/?(.*)",
+      "dest": "/websites/auto-detail-booking/dist/$1"
+    },
+    {
+      "src": "/plating-pro/?(.*)",
+      "dest": "/websites/plating-tracker-pro/dist/$1"
+    },
+    {
+      "src": "/cut-custom/?(.*)",
+      "dest": "/websites/cut-custom/dist/$1"
+    },
+    {
+      "src": "/insta-book/?(.*)",
+      "dest": "/websites/insta-book/dist/$1"
+    },
+    {
+      "src": "/policy-pal/?(.*)",
+      "dest": "/websites/policy-pal/dist/$1"
+    },
+    {
+      "src": "/ride-ready/?(.*)",
+      "dest": "/websites/ride-ready/dist/$1"
+    },
+    {
+      "src": "/dirt-quote/?(.*)",
+      "dest": "/websites/instant-dirt-quote/dist/$1"
+    },
+    {
+      "src": "/farm-stand/?(.*)",
+      "dest": "/websites/farm-stand-finder/dist/$1"
+    },
+    {
+      "src": "/truck-wash/?(.*)",
+      "dest": "/websites/truck-wash-booking/dist/$1"
+    },
+    {
+      "src": "/ai-docent/?(.*)",
+      "dest": "/websites/ai-docent/dist/$1"
+    },
+    {
+      "src": "/roofquote/?(.*)",
+      "dest": "/websites/roofquote/dist/$1"
+    },
+    {
+      "src": "/blueprint/?(.*)",
+      "dest": "/websites/blueprint-analyzer/dist/$1"
+    },
+    {
+      "src": "/snow-plow/?(.*)",
+      "dest": "/websites/snow-plow-tracker/dist/$1"
+    },
+    {
+      "src": "/engineers/?(.*)",
+      "dest": "/websites/engineers-assistant/dist/$1"
+    },
+    {
+      "src": "/concierge/?(.*)",
+      "dest": "/websites/virtual-concierge/dist/$1"
+    },
+    {
+      "src": "/pet-match/?(.*)",
+      "dest": "/websites/pet-matchmaker/dist/$1"
+    },
+    {
+      "src": "/portfolio/?(.*)",
+      "dest": "/websites/visual-portfolio/dist/$1"
+    },
+    {
+      "src": "/volunteer/?(.*)",
+      "dest": "/websites/volunteer-scheduler/dist/$1"
+    },
+    {
+      "src": "/historian/?(.*)",
+      "dest": "/websites/pocket-historian/dist/$1"
+    },
+    {
+      "src": "/sommelier/?(.*)",
+      "dest": "/websites/pocket-sommelier/dist/$1"
+    },
+    {
+      "src": "/scheduler/?(.*)",
+      "dest": "/websites/service-scheduler/dist/$1"
+    },
+    {
+      "src": "/site-ops/?(.*)",
+      "dest": "/websites/site-ops-pro/dist/$1"
+    },
+    {
+      "src": "/cashflow/?(.*)",
+      "dest": "/websites/cashflow-tracker/dist/$1"
+    },
+    {
+      "src": "/landlord/?(.*)",
+      "dest": "/websites/landlord-repair-queue/dist/$1"
+    },
+    {
+      "src": "/curbside/?(.*)",
+      "dest": "/websites/curbside-pickup-tracker/dist/$1"
+    },
+    {
+      "src": "/resource/?(.*)",
+      "dest": "/websites/resource-compass/dist/$1"
+    },
+    {
+      "src": "/permits/?(.*)",
+      "dest": "/websites/permit-whisperer/dist/$1"
+    },
+    {
+      "src": "/plating/?(.*)",
+      "dest": "/websites/plating-tracker/dist/$1"
+    },
+    {
+      "src": "/boxflow/?(.*)",
+      "dest": "/websites/boxflow-estimator/dist/$1"
+    },
+    {
+      "src": "/parking/?(.*)",
+      "dest": "/websites/visitor-parking-finder/dist/$1"
+    },
+    {
+      "src": "/charter/?(.*)",
+      "dest": "/websites/charter-booking/dist/$1"
+    },
+    {
+      "src": "/aidflow/?(.*)",
+      "dest": "/websites/aidflow-navigator/dist/$1"
+    },
+    {
+      "src": "/harvest/?(.*)",
+      "dest": "/websites/harvest-alert/dist/$1"
+    },
+    {
+      "src": "/wedding/?(.*)",
+      "dest": "/websites/wedding-lead-form/dist/$1"
+    },
+    {
+      "src": "/license/?(.*)",
+      "dest": "/websites/license-wizard/dist/$1"
+    },
+    {
+      "src": "/govtech/?(.*)",
+      "dest": "/websites/govtech-box/dist/$1"
+    },
+    {
+      "src": "/harbor/?(.*)",
+      "dest": "/websites/harbor-cam-dashboard/dist/$1"
+    },
+    {
+      "src": "/invest/?(.*)",
+      "dest": "/websites/invest-ashtabula/dist/$1"
+    },
+    {
+      "src": "/grocer/?(.*)",
+      "dest": "/websites/local-grocer-go/client/dist/$1"
+    },
+    {
+      "src": "/rental/?(.*)",
+      "dest": "/websites/rental-availability/dist/$1"
+    },
+    {
+      "src": "/notary/?(.*)",
+      "dest": "/websites/mobile-notary/dist/$1"
+    },
+    {
+      "src": "/routes/?(.*)",
+      "dest": "/websites/route-optimizer/dist/$1"
+    },
+    {
+      "src": "/marina/?(.*)",
+      "dest": "/websites/marina-slip-waitlist/dist/$1"
+    },
+    {
+      "src": "/zoning/?(.*)",
+      "dest": "/websites/zoning-clerk/dist/$1"
+    },
+    {
+      "src": "/mytrip/?(.*)",
+      "dest": "/websites/mytrip-planner/dist/$1"
+    },
+    {
+      "src": "/parts/?(.*)",
+      "dest": "/websites/parts-finder/dist/$1"
+    },
+    {
+      "src": "/lawn/?(.*)",
+      "dest": "/websites/lawn-quote-tool/dist/$1"
+    },
+    {
+      "src": "/hvac/?(.*)",
+      "dest": "/websites/hvac-tuneup/dist/$1"
+    },
+    {
+      "src": "/gotl/?(.*)",
+      "dest": "/websites/gotl-weekend-planner/dist/$1"
+    },
+    {
+      "src": "/all-mvps/?(.*)",
+      "dest": "/landing-page/all-mvps.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/landing-page/index.html"
+    }
+  ]
+}

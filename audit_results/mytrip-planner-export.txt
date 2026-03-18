@@ -1,0 +1,1 @@
+SITE: mytrip-planner-export | CENTERING: 10 | BRANDING: 10 | LOREM: false | NOTES: The UI is well-centered and responsive using `margin: 0 auto;` on container elements. Branding is strong with custom logos, clear naming, and a tagline. No Lorem Ipsum text was found.

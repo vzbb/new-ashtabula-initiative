@@ -1,0 +1,1 @@
+SITE: cut-custom | CENTERING: 0 | BRANDING: 2 | LOREM: False | NOTES: The HTML file is a minimal template and does not contain sufficient information for centering or branding assessment. It loads a script from /src/main.tsx, which is not accessible. Centering is likely handled by CSS/JS in the loaded bundle. Branding is absent in this file.

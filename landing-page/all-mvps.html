@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution Archive | Ashtabula Infrastructure Modernization</title>
+    <meta name="description" content="Complete catalog of 68 functional solutions deployed to modernize Ashtabula's civic and commercial infrastructure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #030303;
+            --accent: #00d4ff;
+            --accent-soft: rgba(0, 212, 255, 0.15);
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #ffffff;
+            --text-soft: rgba(255, 255, 255, 0.6);
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Background */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.02) 1px, transparent 1px);
+            background-size: 80px 80px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .bg-glow {
+            position: fixed;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.2rem 3rem;
+            background: rgba(3, 3, 3, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-logo span { color: var(--accent); }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-soft);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-cta {
+            padding: 0.6rem 1.2rem;
+            background: #fff;
+            color: #000;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 20px var(--accent-soft);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 3rem 4rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: var(--text-soft);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Category Sections */
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 3rem 6rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-section {
+            margin-bottom: 5rem;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .category-header h2 {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        .category-count {
+            padding: 0.2rem 0.6rem;
+            background: var(--accent-soft);
+            border: 1px solid var(--accent);
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .mvp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+        }
+
+        .mvp-card {
+            background: var(--bg);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 180px;
+        }
+
+        .mvp-card:hover {
+            background: #0a0a0a;
+            box-shadow: inset 0 0 40px rgba(0, 212, 255, 0.05);
+        }
+
+        .mvp-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .mvp-card p {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+            margin-bottom: 1rem;
+        }
+
+        .mvp-link {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: auto;
+        }
+
+        .mvp-link svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 6rem 3rem;
+            border-top: 1px solid var(--border);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            background: #000;
+        }
+
+        .footer-logo {
+            font-family: var(--font-mono);
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .footer-logo span { color: var(--accent); }
+
+        .footer-bottom {
+            color: rgba(255,255,255,0.2);
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+            .hero { padding: 8rem 1.5rem 3rem; }
+            .main-content { padding: 1rem 1.5rem 4rem; }
+            .mvp-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">ASHTABULA<span>.MODERN</span></a>
+            <div class="nav-links">
+                <a href="index.html#mission">Strategy</a>
+                <a href="index.html#solutions">Solutions</a>
+                <a href="index.html#request">Modernization Intake</a>
+            </div>
+            <a href="index.html#request" class="nav-cta">Contact_</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <h1>Solution Archive</h1>
+        <p>A comprehensive catalog of 68 functional tools deployed to modernize and empower Ashtabula's civic and commercial infrastructure.</p>
+    </header>
+
+    <main class="main-content">
+        <!-- Government & Civic -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Civic Modernization</h2>
+                <span class="category-count">10</span>
+            </div>
+            <div class="mvp-grid">
+                <a href="/civic-insight/" class="mvp-card">
+                    <h3>Civic Insight Engine</h3>
+                    <p>Modernizing feedback loops for local agencies.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/permits/" class="mvp-card">
+                    <h3>Permit Whisperer</h3>
+                    <p>Empowering local civic permit guidance.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/eligibility/" class="mvp-card">
+                    <h3>Eligibility Screener</h3>
+                    <p>Proactive routing for public service access.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/eligibility-lite/" class="mvp-card">
+                    <h3>Eligibility Lite</h3>
+                    <p>Simplified intake for community support.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/eligibility-pro/" class="mvp-card">
+                    <h3>Eligibility Pro</h3>
+                    <p>Advanced routing for multi-agency support.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/license/" class="mvp-card">
+                    <h3>License Wizard</h3>
+                    <p>Restoring clarity to local licensing paths.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/event-permit/" class="mvp-card">
+                    <h3>Event Permit Express</h3>
+                    <p>Modernizing public event planning.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/zoning/" class="mvp-card">
+                    <h3>Zoning Clerk</h3>
+                    <p>Streamlined guidance for local zoning inquiries.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/govtech/" class="mvp-card">
+                    <h3>GovTech Box</h3>
+                    <p>Modernized digital toolset for small agencies.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/grantgenius/" class="mvp-card">
+                    <h3>GrantGenius</h3>
+                    <p>Protecting community funding through better capture.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Economic & Business -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Economic Stability</h2>
+                <span class="category-count">9</span>
+            </div>
+            <div class="mvp-grid">
+                <a href="/invest/" class="mvp-card">
+                    <h3>Invest Ashtabula</h3>
+                    <p>Securing investment narratives for the community.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/blueprint/" class="mvp-card">
+                    <h3>Blueprint Analyzer</h3>
+                    <p>Optimizing project timelines with rapid review.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/box-builder/" class="mvp-card">
+                    <h3>Box Builder</h3>
+                    <p>Supporting local manufacturing and logistics.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/boxflow/" class="mvp-card">
+                    <h3>BoxFlow Estimator</h3>
+                    <p>Modernizing commercial quoting workflows.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/cashflow/" class="mvp-card">
+                    <h3>CashFlow Tracker</h3>
+                    <p>Protecting margins for local small businesses.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/parts/" class="mvp-card">
+                    <h3>Parts Finder</h3>
+                    <p>Optimizing supply chain for local industry.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/parts-request/" class="mvp-card">
+                    <h3>Parts Request</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/plating/" class="mvp-card">
+                    <h3>Plating Tracker</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/plating-pro/" class="mvp-card">
+                    <h3>Plating Pro</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Home & Property -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Property & Growth</h2>
+                <span class="category-count">10</span>
+            </div>
+            <div class="mvp-grid">
+                <a href="/contractors/" class="mvp-card">
+                    <h3>Contractor Match</h3>
+                    <p>Routing residents to immediate repair help.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/fence-quote/" class="mvp-card">
+                    <h3>Fence Quote</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/landlord/" class="mvp-card">
+                    <h3>Landlord Repair Queue</h3>
+                    <p>Modernizing tenant-landlord maintenance links.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/lawn/" class="mvp-card">
+                    <h3>Lawn Quote Tool</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/hvac/" class="mvp-card">
+                    <h3>HVAC Tuneup</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/snow-plow/" class="mvp-card">
+                    <h3>Snow Plow Tracker</h3>
+                    <p>Critical seasonal awareness for residents.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/dirt-quote/" class="mvp-card">
+                    <h3>Instant Dirt Quote</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/rental/" class="mvp-card">
+                    <h3>Rental Availability</h3>
+                    <p>Empowering the search for local housing.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/adaptive-reuse/" class="mvp-card">
+                    <h3>Reuse Planner</h3>
+                    <p>Restoring life to abandoned local properties.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/engineers/" class="mvp-card">
+                    <h3>Engineer's Assistant</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Local Services -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Service Resilience</h2>
+                <span class="category-count">12</span>
+            </div>
+            <div class="mvp-grid">
+                <a href="/grocer/" class="mvp-card">
+                    <h3>Local Grocer Go</h3>
+                    <p>Supporting local food access infrastructure.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/curbside/" class="mvp-card">
+                    <h3>Curbside Tracker</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/farm-stand/" class="mvp-card">
+                    <h3>Farm Stand Finder</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/notary/" class="mvp-card">
+                    <h3>Mobile Notary</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/auto-detail/" class="mvp-card">
+                    <h3>Auto Detail Booking</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/truck-wash/" class="mvp-card">
+                    <h3>Truck Wash Booking</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/scheduler/" class="mvp-card">
+                    <h3>Service Scheduler</h3>
+                    <p>Modernizing appointment coordination.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/scheduler-sms/" class="mvp-card">
+                    <h3>Scheduler SMS</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/insta-book/" class="mvp-card">
+                    <h3>Insta Book</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/insta-book-stripe/" class="mvp-card">
+                    <h3>Insta Book Stripe</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/concierge/" class="mvp-card">
+                    <h3>Virtual Concierge</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/parking/" class="mvp-card">
+                    <h3>Parking Finder</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Community & Social -->
+        <section class="category-section">
+            <div class="category-header">
+                <h2>Community Foundations</h2>
+                <span class="category-count">13</span>
+            </div>
+            <div class="mvp-grid">
+                <a href="/aidflow/" class="mvp-card">
+                    <h3>AidFlow Navigator</h3>
+                    <p>Modernizing household access to critical resources.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/volunteer/" class="mvp-card">
+                    <h3>Volunteer Hub</h3>
+                    <p>Empowering volunteer coordination.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/harbor/" class="mvp-card">
+                    <h3>Harbor Visibility</h3>
+                    <p>Real-time community awareness tools.</p>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/resource/" class="mvp-card">
+                    <h3>Resource Compass</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/compassionate/" class="mvp-card">
+                    <h3>Compassionate Planner</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/pet-match/" class="mvp-card">
+                    <h3>Pet Matchmaker</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+                <a href="/historian/" class="mvp-card">
+                    <h3>Pocket Historian</h3>
+                    <div class="mvp-link">Deploy Solution <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">ASHTABULA<span>.MODERN</span></div>
+        <p style="color: var(--text-soft); max-width: 600px; margin: 0 auto; font-size: 0.9rem;">
+            A comprehensive catalog of functional solutions deployed to modernize and empower Ashtabula's civic and commercial infrastructure.
+        </p>
+        <div class="footer-bottom">
+            <p>Built by Noirsys AI · 2026</p>
+            <p>STATUS: PROACTIVE</p>
+        </div>
+    </footer>
+</body>
+</html>

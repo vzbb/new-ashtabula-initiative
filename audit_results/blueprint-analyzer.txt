@@ -1,0 +1,1 @@
+SITE: blueprint-analyzer | CENTERING: Y | BRANDING: Y | LOREM: false | NOTES: The website uses `mx-auto` for centering content. Branding is consistent with a purple/cyan theme, specific fonts (Lato, Merriweather), and a clear title indicating the Ashtabula Chamber of Commerce. No Lorem Ipsum text was found.

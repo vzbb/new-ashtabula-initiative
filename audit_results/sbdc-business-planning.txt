@@ -1,0 +1,1 @@
+SITE: sbdc-business-planning | CENTERING: 7 | BRANDING: 9 | LOREM: false | NOTES: Well-structured React component for a business plan builder. Consistent Lakeland SBDC branding with a custom SVG logo. Content is specific and relevant; no Lorem Ipsum found. Layout implies centering through container classes, though explicit centering classes are not directly in JSX.

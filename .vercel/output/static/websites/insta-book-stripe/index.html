@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstaBook - Instant Property Booking with Stripe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .brand { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold text-indigo-600 brand">InstaBook</span>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="#features" class="text-gray-600 hover:text-indigo-600">Features</a>
+          <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600">How It Works</a>
+          <button class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-sm mb-6">
+            <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+            Now with Stripe Payments
+          </div>
+          <h1 class="text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Book Properties <span class="text-yellow-300">Instantly</span>
+          </h1>
+          <p class="text-xl text-indigo-100 mb-8 leading-relaxed">
+            The fastest way to book vacation rentals, apartments, and commercial spaces. 
+            Secure payments powered by Stripe. No waiting, no hassle.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button class="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition shadow-lg">
+              Start Booking Now
+            </button>
+            <button class="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition">
+              View Demo
+            </button>
+          </div>
+          <div class="mt-8 flex items-center gap-6 text-sm text-indigo-200">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Instant Confirmation
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Secure Payments
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              24/7 Support
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 shadow-2xl">
+            <div class="bg-white rounded-xl p-4 shadow-lg">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-gray-500 text-sm">Available Properties</span>
+                <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">124 available</span>
+              </div>
+              <!-- Property Card 1 -->
+              <div class="border rounded-lg p-3 mb-3 hover:shadow-md transition">
+                <div class="flex gap-3">
+                  <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center text-white text-2xl">🏖️</div>
+                  <div class="flex-1">
+                    <h4 class="font-semibold text-gray-900">Beachfront Villa</h4>
+                    <p class="text-sm text-gray-500">Miami, FL</p>
+                    <div class="flex items-center justify-between mt-2">
+                      <span class="text-indigo-600 font-bold">$299/night</span>
+                      <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">★ 4.9</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Property Card 2 -->
+              <div class="border rounded-lg p-3 mb-3 hover:shadow-md transition">
+                <div class="flex gap-3">
+                  <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-lg flex items-center justify-center text-white text-2xl">🏔️</div>
+                  <div class="flex-1">
+                    <h4 class="font-semibold text-gray-900">Mountain Cabin</h4>
+                    <p class="text-sm text-gray-500">Aspen, CO</p>
+                    <div class="flex items-center justify-between mt-2">
+                      <span class="text-indigo-600 font-bold">$189/night</span>
+                      <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">★ 4.8</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Property Card 3 -->
+              <div class="border rounded-lg p-3 hover:shadow-md transition">
+                <div class="flex gap-3">
+                  <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center text-white text-2xl">🏙️</div>
+                  <div class="flex-1">
+                    <h4 class="font-semibold text-gray-900">Downtown Loft</h4>
+                    <p class="text-sm text-gray-500">New York, NY</p>
+                    <div class="flex items-center justify-between mt-2">
+                      <span class="text-indigo-600 font-bold">$399/night</span>
+                      <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">★ 4.7</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-indigo-600 mb-2">50K+</div>
+          <div class="text-gray-600">Properties Listed</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-indigo-600 mb-2">$2M+</div>
+          <div class="text-gray-600">Transactions Processed</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-indigo-600 mb-2">15K+</div>
+          <div class="text-gray-600">Happy Guests</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-indigo-600 mb-2">99.9%</div>
+          <div class="text-gray-600">Uptime Guaranteed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">Why Choose InstaBook?</h2>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need to book your perfect stay, backed by the security of Stripe payments.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Instant Booking</h3>
+          <p class="text-gray-600 leading-relaxed">No more waiting for host approval. See it, like it, book it. Your reservation is confirmed in seconds.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Secure Payments</h3>
+          <p class="text-gray-600 leading-relaxed">Your payments are processed securely with Stripe. PCI compliant, encrypted, and protected.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Mobile First</h3>
+          <p class="text-gray-600 leading-relaxed">Book on the go with our mobile-optimized platform. Works perfectly on any device, anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+        <p class="text-xl text-gray-600">Book your perfect stay in three simple steps</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Search & Discover</h3>
+          <p class="text-gray-600">Browse thousands of properties filtered by location, price, amenities, and availability.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Book Instantly</h3>
+          <p class="text-gray-600">Select your dates and complete the secure checkout with Stripe. No waiting required.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Check In</h3>
+          <p class="text-gray-600">Receive your digital key and arrival instructions. Enjoy your stay!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-6">Ready to Book Your Next Stay?</h2>
+      <p class="text-xl text-indigo-100 mb-8">Join thousands of happy guests who've discovered the easiest way to book properties online.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-white text-indigo-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition shadow-lg">
+          Get Started Free
+        </button>
+        <button class="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition">
+          Contact Sales
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <span class="text-2xl font-bold text-white brand">InstaBook</span>
+          <p class="mt-4 text-gray-400">The fastest way to book properties online. Secure, instant, and hassle-free.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Product</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">Features</a></li>
+            <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+            <li><a href="#" class="hover:text-white transition">API</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Company</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">About</a></li>
+            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+            <li><a href="#" class="hover:text-white transition">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Support</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+            <li><a href="#" class="hover:text-white transition">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+        <p>&copy; 2026 InstaBook. All rights reserved. Powered by Stripe.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

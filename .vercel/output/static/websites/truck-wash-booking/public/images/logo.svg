@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <defs>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e2e8f0"/>
+      <stop offset="50%" style="stop-color:#94a3b8"/>
+      <stop offset="100%" style="stop-color:#475569"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0369a1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="60" cy="60" r="50" fill="#1e293b"/>
+  
+  <!-- Truck silhouette -->
+  <rect x="25" y="50" width="55" height="25" rx="3" fill="url(#metalGrad)"/>
+  <rect x="60" y="40" width="30" height="35" rx="2" fill="url(#metalGrad)"/>
+  <rect x="65" y="45" width="20" height="15" fill="#0ea5e9" opacity="0.3"/>
+  
+  <!-- Wheels -->
+  <circle cx="40" cy="78" r="8" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+  <circle cx="40" cy="78" r="4" fill="#94a3b8"/>
+  <circle cx="75" cy="78" r="8" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+  <circle cx="75" cy="78" r="4" fill="#94a3b8"/>
+  
+  <!-- Water drops -->
+  <path d="M85 55 Q90 50, 95 55 Q95 62, 90 65 Q85 62, 85 55" fill="url(#blueGrad)"/>
+  <path d="M92 45 Q95 42, 98 45 Q98 50, 95 52 Q92 50, 92 45" fill="url(#blueGrad)" opacity="0.7"/>
+  
+  <!-- Sparkle -->
+  <path d="M30 45 L32 40 L34 45 L39 47 L34 49 L32 54 L30 49 L25 47 Z" fill="#fbbf24"/>
+  
+  <!-- Text -->
+  <text x="130" y="50" font-family="Arial Black, sans-serif" font-size="26" font-weight="bold" fill="#1e293b">TRUCK WASH</text>
+  <text x="130" y="75" font-family="Arial, sans-serif" font-size="18" fill="#0ea5e9" letter-spacing="4">PROFESSIONAL</text>
+  <text x="130" y="95" font-family="Arial, sans-serif" font-size="10" fill="#64748b">ASHTABULA • FLEET SERVICES • 24/7</text>
+</svg>

@@ -1,0 +1,1 @@
+SITE: mytrip-planner | CENTERING: Y | BRANDING: Y | LOREM: False | NOTES: The UI is centered using `margin: 0 auto` on the main container and `display: flex; place-items: center;` on the body. Branding is strong with custom SVG icons, clear brand name, and taglines. No Lorem Ipsum text was found.

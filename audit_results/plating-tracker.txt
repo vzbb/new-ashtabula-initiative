@@ -1,0 +1,1 @@
+SITE: plating-tracker | CENTERING: 2 | BRANDING: 4 | LOREM: False | NOTES: No explicit centering classes found in JSX; branding is descriptive but basic.

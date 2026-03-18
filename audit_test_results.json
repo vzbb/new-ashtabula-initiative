@@ -1,0 +1,22 @@
+[
+  {
+    "site": "adaptive-reuse-planner",
+    "error": "Command '['gemini', '--model', 'gemini-2.5-flash-lite', '--yolo', '--prompt', 'You are a code auditor. Analyze the directory \\'websites/adaptive-reuse-planner\\'. \\n1. Read index.html and the main App file (src/App.tsx or src/App.jsx).\\n2. Check if the layout is centered (look for mx-auto, flex justify-center, container, etc.). Score 0-10.\\n3. Assess branding: is it generic or tailored to a target lead/purpose? Check for Lorem Ipsum. Score 0-10.\\nOutput ONLY the JSON: {\"site\": \"adaptive-reuse-planner\", \"centering\": N, \"branding\": N, \"lorem\": bool, \"notes\": \"...\"}']' timed out after 60 seconds"
+  },
+  {
+    "site": "aidflow-navigator",
+    "error": "Command '['gemini', '--model', 'gemini-2.5-flash-lite', '--yolo', '--prompt', 'You are a code auditor. Analyze the directory \\'websites/aidflow-navigator\\'. \\n1. Read index.html and the main App file (src/App.tsx or src/App.jsx).\\n2. Check if the layout is centered (look for mx-auto, flex justify-center, container, etc.). Score 0-10.\\n3. Assess branding: is it generic or tailored to a target lead/purpose? Check for Lorem Ipsum. Score 0-10.\\nOutput ONLY the JSON: {\"site\": \"aidflow-navigator\", \"centering\": N, \"branding\": N, \"lorem\": bool, \"notes\": \"...\"}']' timed out after 60 seconds"
+  },
+  {
+    "site": "ai-docent",
+    "error": "Command '['gemini', '--model', 'gemini-2.5-flash-lite', '--yolo', '--prompt', 'You are a code auditor. Analyze the directory \\'websites/ai-docent\\'. \\n1. Read index.html and the main App file (src/App.tsx or src/App.jsx).\\n2. Check if the layout is centered (look for mx-auto, flex justify-center, container, etc.). Score 0-10.\\n3. Assess branding: is it generic or tailored to a target lead/purpose? Check for Lorem Ipsum. Score 0-10.\\nOutput ONLY the JSON: {\"site\": \"ai-docent\", \"centering\": N, \"branding\": N, \"lorem\": bool, \"notes\": \"...\"}']' timed out after 60 seconds"
+  },
+  {
+    "site": "ai-docent-pro",
+    "error": "Command '['gemini', '--model', 'gemini-2.5-flash-lite', '--yolo', '--prompt', 'You are a code auditor. Analyze the directory \\'websites/ai-docent-pro\\'. \\n1. Read index.html and the main App file (src/App.tsx or src/App.jsx).\\n2. Check if the layout is centered (look for mx-auto, flex justify-center, container, etc.). Score 0-10.\\n3. Assess branding: is it generic or tailored to a target lead/purpose? Check for Lorem Ipsum. Score 0-10.\\nOutput ONLY the JSON: {\"site\": \"ai-docent-pro\", \"centering\": N, \"branding\": N, \"lorem\": bool, \"notes\": \"...\"}']' timed out after 60 seconds"
+  },
+  {
+    "site": "artist-commission-form",
+    "error": "Command '['gemini', '--model', 'gemini-2.5-flash-lite', '--yolo', '--prompt', 'You are a code auditor. Analyze the directory \\'websites/artist-commission-form\\'. \\n1. Read index.html and the main App file (src/App.tsx or src/App.jsx).\\n2. Check if the layout is centered (look for mx-auto, flex justify-center, container, etc.). Score 0-10.\\n3. Assess branding: is it generic or tailored to a target lead/purpose? Check for Lorem Ipsum. Score 0-10.\\nOutput ONLY the JSON: {\"site\": \"artist-commission-form\", \"centering\": N, \"branding\": N, \"lorem\": bool, \"notes\": \"...\"}']' timed out after 60 seconds"
+  }
+]

@@ -1,0 +1,419 @@
+/* Service Scheduler SMS - Mobile Messaging Theme */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sms-green: #25d366;
+  --message-blue: #34b7f1;
+  --phone-grey: #075e54;
+  --chat-white: #ffffff;
+  --bubble-grey: #f0f2f5;
+  --sent-green: #dcf8c6;
+  --mobile-shadow: rgba(37, 211, 102, 0.15);
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: linear-gradient(135deg, #ece5dd 0%, #d4c5b5 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Chat Bubbles Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cellipse cx='30' cy='25' rx='20' ry='12' fill='none' stroke='%2325d366' stroke-width='0.5' opacity='0.08'/%3E%3Cellipse cx='55' cy='55' rx='18' ry='10' fill='none' stroke='%2334b7f1' stroke-width='0.5' opacity='0.06'/%3E%3Cpath d='M30 35 L25 40 L30 37' fill='none' stroke='%2325d366' stroke-width='0.5' opacity='0.08'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  filter: drop-shadow(0 4px 10px rgba(37, 211, 102, 0.3));
+}
+
+.brand-name {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--phone-grey);
+  letter-spacing: -0.5px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(145deg, var(--phone-grey) 0%, #128c7e 100%);
+  border-radius: 24px;
+  padding: 45px;
+  margin-bottom: 30px;
+  box-shadow: 0 20px 50px rgba(7, 94, 84, 0.2), 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(37, 211, 102, 0.15) 0%, transparent 60%);
+  border-radius: 50%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(37, 211, 102, 0.2);
+  color: #a7f3d0;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.sub {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* Input Card */
+.input-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.input-card h3 {
+  color: var(--phone-grey);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.input-card label {
+  display: block;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.input-card input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.input-card input:focus {
+  outline: none;
+  border-color: var(--sms-green);
+  box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.1);
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: linear-gradient(135deg, var(--sms-green) 0%, #128c7e 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+}
+
+.primary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(37, 211, 102, 0.5);
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ghost {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.5);
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ghost:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: white;
+}
+
+/* Trust Badges */
+.trust {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.trust span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Chat Preview Card */
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 35px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.card-head h2 {
+  color: var(--phone-grey);
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pill {
+  background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, rgba(52, 183, 241, 0.1) 100%);
+  color: var(--sms-green);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Chat Bubble Styles */
+.chat-preview {
+  background: linear-gradient(180deg, #e5ddd5 0%, #d4c5b0 100%);
+  border-radius: 16px;
+  padding: 25px;
+  min-height: 200px;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 14px 18px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.chat-bubble.sent {
+  background: var(--sent-green);
+  color: #1f2937;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.received {
+  background: white;
+  color: #1f2937;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.chat-time {
+  font-size: 0.7rem;
+  color: #888;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.muted {
+  color: #888;
+  text-align: center;
+  padding: 40px;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  border-left: 4px solid #c62828;
+}
+
+/* Feature Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.tile {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.12);
+  border-color: rgba(37, 211, 102, 0.15);
+}
+
+.tile-icon {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.tile h3 {
+  color: var(--sms-green);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tile p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  padding: 25px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  
+  .hero {
+    padding: 28px;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+  }
+  
+  .primary, .ghost {
+    width: 100%;
+  }
+}

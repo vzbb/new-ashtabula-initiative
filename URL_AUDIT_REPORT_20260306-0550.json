@@ -1,0 +1,419 @@
+{
+  "auditDate": "2026-03-06T05:50:17.114578",
+  "totalSites": 68,
+  "summary": {
+    "ok": 0,
+    "redirectToMain": 0,
+    "error": 68
+  },
+  "sites": [
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Civic Insight Engine",
+      "url": "https://new-ashtabula-initiative.vercel.app/civic-insight/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Permit Whisperer",
+      "url": "https://new-ashtabula-initiative.vercel.app/permits/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Eligibility Screener",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Eligibility Lite",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-lite/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Eligibility Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-pro/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "License Wizard",
+      "url": "https://new-ashtabula-initiative.vercel.app/license/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Event Permit Express",
+      "url": "https://new-ashtabula-initiative.vercel.app/event-permit/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Zoning Clerk",
+      "url": "https://new-ashtabula-initiative.vercel.app/zoning/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "GovTech Box",
+      "url": "https://new-ashtabula-initiative.vercel.app/govtech/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "GrantGenius",
+      "url": "https://new-ashtabula-initiative.vercel.app/grantgenius/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Invest Ashtabula",
+      "url": "https://new-ashtabula-initiative.vercel.app/invest/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Blueprint Analyzer",
+      "url": "https://new-ashtabula-initiative.vercel.app/blueprint/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Box Builder",
+      "url": "https://new-ashtabula-initiative.vercel.app/box-builder/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "BoxFlow Estimator",
+      "url": "https://new-ashtabula-initiative.vercel.app/boxflow/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "CashFlow Tracker",
+      "url": "https://new-ashtabula-initiative.vercel.app/cashflow/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Parts Finder",
+      "url": "https://new-ashtabula-initiative.vercel.app/parts/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Parts Request",
+      "url": "https://new-ashtabula-initiative.vercel.app/parts-request/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Plating Tracker",
+      "url": "https://new-ashtabula-initiative.vercel.app/plating/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Plating Tracker Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/plating-pro/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Contractor Match",
+      "url": "https://new-ashtabula-initiative.vercel.app/contractors/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Fence Quote",
+      "url": "https://new-ashtabula-initiative.vercel.app/fence-quote/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Landlord Repair Queue",
+      "url": "https://new-ashtabula-initiative.vercel.app/landlord/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Lawn Quote Tool",
+      "url": "https://new-ashtabula-initiative.vercel.app/lawn/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "HVAC Tuneup",
+      "url": "https://new-ashtabula-initiative.vercel.app/hvac/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Snow Plow Tracker",
+      "url": "https://new-ashtabula-initiative.vercel.app/snow-plow/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Instant Dirt Quote",
+      "url": "https://new-ashtabula-initiative.vercel.app/dirt-quote/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Rental Availability",
+      "url": "https://new-ashtabula-initiative.vercel.app/rental/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Adaptive Reuse Planner",
+      "url": "https://new-ashtabula-initiative.vercel.app/adaptive-reuse/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Engineer's Assistant",
+      "url": "https://new-ashtabula-initiative.vercel.app/engineers/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Local Grocer Go",
+      "url": "https://new-ashtabula-initiative.vercel.app/grocer/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Curbside Pickup Tracker",
+      "url": "https://new-ashtabula-initiative.vercel.app/curbside/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Farm Stand Finder",
+      "url": "https://new-ashtabula-initiative.vercel.app/farm-stand/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Mobile Notary",
+      "url": "https://new-ashtabula-initiative.vercel.app/notary/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Auto Detail Booking",
+      "url": "https://new-ashtabula-initiative.vercel.app/auto-detail/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Truck Wash Booking",
+      "url": "https://new-ashtabula-initiative.vercel.app/truck-wash/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Service Scheduler",
+      "url": "https://new-ashtabula-initiative.vercel.app/scheduler/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Service Scheduler SMS",
+      "url": "https://new-ashtabula-initiative.vercel.app/scheduler-sms/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Insta Book",
+      "url": "https://new-ashtabula-initiative.vercel.app/insta-book/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Insta Book Stripe",
+      "url": "https://new-ashtabula-initiative.vercel.app/insta-book-stripe/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Virtual Concierge",
+      "url": "https://new-ashtabula-initiative.vercel.app/concierge/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Visitor Parking Finder",
+      "url": "https://new-ashtabula-initiative.vercel.app/parking/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "MyTrip Planner",
+      "url": "https://new-ashtabula-initiative.vercel.app/mytrip/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "MyTrip Export",
+      "url": "https://new-ashtabula-initiative.vercel.app/mytrip-export/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Route Optimizer",
+      "url": "https://new-ashtabula-initiative.vercel.app/routes/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Ride Ready",
+      "url": "https://new-ashtabula-initiative.vercel.app/ride-ready/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Charter Booking",
+      "url": "https://new-ashtabula-initiative.vercel.app/charter/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Marina Slip Waitlist",
+      "url": "https://new-ashtabula-initiative.vercel.app/marina/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Compassionate Planner",
+      "url": "https://new-ashtabula-initiative.vercel.app/compassionate/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "AidFlow Navigator",
+      "url": "https://new-ashtabula-initiative.vercel.app/aidflow/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Resource Compass",
+      "url": "https://new-ashtabula-initiative.vercel.app/resource/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Resource Compass Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/resource-pro/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Policy Pal",
+      "url": "https://new-ashtabula-initiative.vercel.app/policy-pal/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Boat Storage Waitlist",
+      "url": "https://new-ashtabula-initiative.vercel.app/boat-storage/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Harvest Alert",
+      "url": "https://new-ashtabula-initiative.vercel.app/harvest/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "AI Docent",
+      "url": "https://new-ashtabula-initiative.vercel.app/ai-docent/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "AI Docent Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/ai-docent-pro/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Artist Commission Form",
+      "url": "https://new-ashtabula-initiative.vercel.app/artist-commission/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Pocket Historian",
+      "url": "https://new-ashtabula-initiative.vercel.app/historian/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Pocket Historian Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/historian-pro/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Pocket Sommelier",
+      "url": "https://new-ashtabula-initiative.vercel.app/sommelier/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Pocket Sommelier Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/sommelier-pro/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "GOTL Weekend Planner",
+      "url": "https://new-ashtabula-initiative.vercel.app/gotl/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Harbor Cam Dashboard",
+      "url": "https://new-ashtabula-initiative.vercel.app/harbor/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Pet Matchmaker",
+      "url": "https://new-ashtabula-initiative.vercel.app/pet-match/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Visual Portfolio",
+      "url": "https://new-ashtabula-initiative.vercel.app/portfolio/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Volunteer Scheduler",
+      "url": "https://new-ashtabula-initiative.vercel.app/volunteer/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Wedding Lead Form",
+      "url": "https://new-ashtabula-initiative.vercel.app/wedding/"
+    },
+    {
+      "httpStatus": "404",
+      "actualStatus": "ERROR_404",
+      "name": "Through the Grapevine",
+      "url": "https://new-ashtabula-initiative.vercel.app/wine/"
+    }
+  ]
+}

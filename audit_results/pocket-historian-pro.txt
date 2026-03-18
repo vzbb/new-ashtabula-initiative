@@ -1,0 +1,1 @@
+SITE: pocket-historian-pro | CENTERING: 2 | BRANDING: 8 | LOREM: false | NOTES: The UI does not appear to have explicit centering classes for the main layout in the JSX. Branding is consistent and thematic, using Ashtabula's history and characters. No Lorem Ipsum text found.

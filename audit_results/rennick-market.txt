@@ -1,0 +1,1 @@
+SITE: rennick-market | CENTERING: Y | BRANDING: N | LOREM: F | NOTES: UI appears centered based on common Tailwind classes found in component files. Branding quality cannot be assessed from code. No Lorem Ipsum found.

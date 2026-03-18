@@ -1,0 +1,36 @@
+watch:
+  paths:
+    - /home/tt/.openclaw/workspace
+  patterns:
+    include:
+      - "**/*.md"
+    ignore:
+      - "**/.git/**"
+      - "**/node_modules/**"
+      - "**/.venv/**"
+      - "**/dist/**"
+      - "**/build/**"
+
+routing:
+  rules:
+    - match: "projects/**"
+      dest: "{project_root}/PROJECTS.md"
+    - match: "memory/**"
+      dest: "/home/tt/.openclaw/workspace/memory/{date}.md"
+    - match: "runbooks/**"
+      dest: "/home/tt/.openclaw/workspace/runbooks/INDEX.md"
+    - match: "docs/**"
+      dest: "/home/tt/.openclaw/workspace/docs/INBOX.md"
+  fallback: "/home/tt/.openclaw/workspace/docs/INBOX.md"
+
+index:
+  qdrant_url: "http://192.168.1.223:6333"
+  collection: "workspace_md"
+
+summary:
+  bullets: 4
+  max_chars: 800
+
+archive:
+  mode: "tag"  # tag|move|leave
+  archive_dir: "/home/tt/.openclaw/workspace/archive"

@@ -1,0 +1,19 @@
+{
+  "name": "insta-book-stripe",
+  "version": "1.0.0",
+  "description": "Full-stack booking app with Stripe payments - NAI",
+  "type": "module",
+  "scripts": {
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "preview": "cd client && npm run preview"
+  },
+  "keywords": ["booking", "stripe", "react", "nai"],
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

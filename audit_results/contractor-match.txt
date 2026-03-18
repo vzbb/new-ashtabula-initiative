@@ -1,0 +1,1 @@
+SITE: contractor-match | CENTERING: N | BRANDING: N | LOREM: false | NOTES: `index.html` is a shell; UI centering and branding quality are not determinable from this file alone. No "Lorem Ipsum" text found.

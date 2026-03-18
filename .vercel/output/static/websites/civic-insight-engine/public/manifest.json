@@ -1,0 +1,16 @@
+{
+  "name": "Civic Insight Engine",
+  "short_name": "Civic Insight",
+  "description": "AI-powered transparency for Ashtabula County.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

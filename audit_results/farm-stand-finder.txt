@@ -1,0 +1,1 @@
+SITE: farm-stand-finder | CENTERING: N | BRANDING: N | LOREM: false | NOTES: Centering and branding assessment requires analyzing the associated JavaScript/CSS files. No Lorem Ipsum found in index.html.

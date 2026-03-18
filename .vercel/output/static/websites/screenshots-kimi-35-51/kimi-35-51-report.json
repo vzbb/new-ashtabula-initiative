@@ -1,0 +1,297 @@
+[
+  {
+    "site": "landlord-repair-queue",
+    "siteNum": 35,
+    "url": "https://new-ashtabula-initiative.vercel.app/landlord-repair-queue",
+    "status": "NEEDS_FIX",
+    "desktopSize": 8511,
+    "tabletSize": 4464,
+    "mobileSize": 5783,
+    "consoleErrors": 1,
+    "brandingIssues": [
+      "Desktop page too small - possible blank/minimal content",
+      "Tablet page too small - possible blank/minimal content",
+      "Mobile page too small - possible blank/minimal content",
+      "Console errors: 1"
+    ],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/35-landlord-repair-queue-desktop.png",
+      "tablet": "screenshots-kimi-35-51/35-landlord-repair-queue-tablet.png",
+      "mobile": "screenshots-kimi-35-51/35-landlord-repair-queue-mobile.png"
+    }
+  },
+  {
+    "site": "lawn-quote-tool",
+    "siteNum": 36,
+    "url": "https://new-ashtabula-initiative.vercel.app/lawn-quote-tool",
+    "status": "NEEDS_FIX",
+    "desktopSize": 8511,
+    "tabletSize": 4464,
+    "mobileSize": 5783,
+    "consoleErrors": 1,
+    "brandingIssues": [
+      "Desktop page too small - possible blank/minimal content",
+      "Tablet page too small - possible blank/minimal content",
+      "Mobile page too small - possible blank/minimal content",
+      "Console errors: 1"
+    ],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/36-lawn-quote-tool-desktop.png",
+      "tablet": "screenshots-kimi-35-51/36-lawn-quote-tool-tablet.png",
+      "mobile": "screenshots-kimi-35-51/36-lawn-quote-tool-mobile.png"
+    }
+  },
+  {
+    "site": "license-wizard",
+    "siteNum": 37,
+    "url": "https://new-ashtabula-initiative.vercel.app/license-wizard",
+    "status": "NEEDS_FIX",
+    "desktopSize": 8511,
+    "tabletSize": 4464,
+    "mobileSize": 5783,
+    "consoleErrors": 1,
+    "brandingIssues": [
+      "Desktop page too small - possible blank/minimal content",
+      "Tablet page too small - possible blank/minimal content",
+      "Mobile page too small - possible blank/minimal content",
+      "Console errors: 1"
+    ],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/37-license-wizard-desktop.png",
+      "tablet": "screenshots-kimi-35-51/37-license-wizard-tablet.png",
+      "mobile": "screenshots-kimi-35-51/37-license-wizard-mobile.png"
+    }
+  },
+  {
+    "site": "local-grocer-go",
+    "siteNum": 38,
+    "url": "https://new-ashtabula-initiative.vercel.app/local-grocer-go",
+    "status": "PASS",
+    "desktopSize": 475069,
+    "tabletSize": 421144,
+    "mobileSize": 1061945,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/38-local-grocer-go-desktop.png",
+      "tablet": "screenshots-kimi-35-51/38-local-grocer-go-tablet.png",
+      "mobile": "screenshots-kimi-35-51/38-local-grocer-go-mobile.png"
+    }
+  },
+  {
+    "site": "marina-slip-waitlist",
+    "siteNum": 39,
+    "url": "https://new-ashtabula-initiative.vercel.app/marina-slip-waitlist",
+    "status": "PASS",
+    "desktopSize": 266361,
+    "tabletSize": 205278,
+    "mobileSize": 421561,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/39-marina-slip-waitlist-desktop.png",
+      "tablet": "screenshots-kimi-35-51/39-marina-slip-waitlist-tablet.png",
+      "mobile": "screenshots-kimi-35-51/39-marina-slip-waitlist-mobile.png"
+    }
+  },
+  {
+    "site": "mobile-notary",
+    "siteNum": 40,
+    "url": "https://new-ashtabula-initiative.vercel.app/mobile-notary",
+    "status": "PASS",
+    "desktopSize": 264072,
+    "tabletSize": 199307,
+    "mobileSize": 399092,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/40-mobile-notary-desktop.png",
+      "tablet": "screenshots-kimi-35-51/40-mobile-notary-tablet.png",
+      "mobile": "screenshots-kimi-35-51/40-mobile-notary-mobile.png"
+    }
+  },
+  {
+    "site": "mytrip-planner",
+    "siteNum": 41,
+    "url": "https://new-ashtabula-initiative.vercel.app/mytrip-planner",
+    "status": "PASS",
+    "desktopSize": 822905,
+    "tabletSize": 346981,
+    "mobileSize": 713262,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/41-mytrip-planner-desktop.png",
+      "tablet": "screenshots-kimi-35-51/41-mytrip-planner-tablet.png",
+      "mobile": "screenshots-kimi-35-51/41-mytrip-planner-mobile.png"
+    }
+  },
+  {
+    "site": "mytrip-planner-export",
+    "siteNum": 42,
+    "url": "https://new-ashtabula-initiative.vercel.app/mytrip-planner-export",
+    "status": "PASS",
+    "desktopSize": 495643,
+    "tabletSize": 233023,
+    "mobileSize": 435038,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/42-mytrip-planner-export-desktop.png",
+      "tablet": "screenshots-kimi-35-51/42-mytrip-planner-export-tablet.png",
+      "mobile": "screenshots-kimi-35-51/42-mytrip-planner-export-mobile.png"
+    }
+  },
+  {
+    "site": "parts-finder",
+    "siteNum": 43,
+    "url": "https://new-ashtabula-initiative.vercel.app/parts-finder",
+    "status": "NEEDS_FIX",
+    "desktopSize": 22380,
+    "tabletSize": 18135,
+    "mobileSize": 26822,
+    "consoleErrors": 1,
+    "brandingIssues": [
+      "Desktop page too small - possible blank/minimal content",
+      "Tablet page too small - possible blank/minimal content",
+      "Console errors: 1"
+    ],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/43-parts-finder-desktop.png",
+      "tablet": "screenshots-kimi-35-51/43-parts-finder-tablet.png",
+      "mobile": "screenshots-kimi-35-51/43-parts-finder-mobile.png"
+    }
+  },
+  {
+    "site": "parts-finder-request",
+    "siteNum": 44,
+    "url": "https://new-ashtabula-initiative.vercel.app/parts-finder-request",
+    "status": "PASS",
+    "desktopSize": 111273,
+    "tabletSize": 106973,
+    "mobileSize": 239006,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/44-parts-finder-request-desktop.png",
+      "tablet": "screenshots-kimi-35-51/44-parts-finder-request-tablet.png",
+      "mobile": "screenshots-kimi-35-51/44-parts-finder-request-mobile.png"
+    }
+  },
+  {
+    "site": "permit-whisperer",
+    "siteNum": 45,
+    "url": "https://new-ashtabula-initiative.vercel.app/permit-whisperer",
+    "status": "PASS",
+    "desktopSize": 474723,
+    "tabletSize": 423143,
+    "mobileSize": 1056795,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/45-permit-whisperer-desktop.png",
+      "tablet": "screenshots-kimi-35-51/45-permit-whisperer-tablet.png",
+      "mobile": "screenshots-kimi-35-51/45-permit-whisperer-mobile.png"
+    }
+  },
+  {
+    "site": "pet-matchmaker",
+    "siteNum": 46,
+    "url": "https://new-ashtabula-initiative.vercel.app/pet-matchmaker",
+    "status": "PASS",
+    "desktopSize": 213632,
+    "tabletSize": 203057,
+    "mobileSize": 520157,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/46-pet-matchmaker-desktop.png",
+      "tablet": "screenshots-kimi-35-51/46-pet-matchmaker-tablet.png",
+      "mobile": "screenshots-kimi-35-51/46-pet-matchmaker-mobile.png"
+    }
+  },
+  {
+    "site": "plating-tracker",
+    "siteNum": 47,
+    "url": "https://new-ashtabula-initiative.vercel.app/plating-tracker",
+    "status": "NEEDS_FIX",
+    "desktopSize": 22026,
+    "tabletSize": 18335,
+    "mobileSize": 26540,
+    "consoleErrors": 1,
+    "brandingIssues": [
+      "Desktop page too small - possible blank/minimal content",
+      "Tablet page too small - possible blank/minimal content",
+      "Console errors: 1"
+    ],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/47-plating-tracker-desktop.png",
+      "tablet": "screenshots-kimi-35-51/47-plating-tracker-tablet.png",
+      "mobile": "screenshots-kimi-35-51/47-plating-tracker-mobile.png"
+    }
+  },
+  {
+    "site": "plating-tracker-pro",
+    "siteNum": 48,
+    "url": "https://new-ashtabula-initiative.vercel.app/plating-tracker-pro",
+    "status": "PASS",
+    "desktopSize": 127013,
+    "tabletSize": 117746,
+    "mobileSize": 257690,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/48-plating-tracker-pro-desktop.png",
+      "tablet": "screenshots-kimi-35-51/48-plating-tracker-pro-tablet.png",
+      "mobile": "screenshots-kimi-35-51/48-plating-tracker-pro-mobile.png"
+    }
+  },
+  {
+    "site": "pocket-historian",
+    "siteNum": 49,
+    "url": "https://new-ashtabula-initiative.vercel.app/pocket-historian",
+    "status": "PASS",
+    "desktopSize": 193441,
+    "tabletSize": 167108,
+    "mobileSize": 407875,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/49-pocket-historian-desktop.png",
+      "tablet": "screenshots-kimi-35-51/49-pocket-historian-tablet.png",
+      "mobile": "screenshots-kimi-35-51/49-pocket-historian-mobile.png"
+    }
+  },
+  {
+    "site": "pocket-historian-pro",
+    "siteNum": 50,
+    "url": "https://new-ashtabula-initiative.vercel.app/pocket-historian-pro",
+    "status": "PASS",
+    "desktopSize": 199938,
+    "tabletSize": 190497,
+    "mobileSize": 467310,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/50-pocket-historian-pro-desktop.png",
+      "tablet": "screenshots-kimi-35-51/50-pocket-historian-pro-tablet.png",
+      "mobile": "screenshots-kimi-35-51/50-pocket-historian-pro-mobile.png"
+    }
+  },
+  {
+    "site": "pocket-sommelier",
+    "siteNum": 51,
+    "url": "https://new-ashtabula-initiative.vercel.app/pocket-sommelier",
+    "status": "PASS",
+    "desktopSize": 162616,
+    "tabletSize": 156365,
+    "mobileSize": 389753,
+    "consoleErrors": 0,
+    "brandingIssues": [],
+    "screenshots": {
+      "desktop": "screenshots-kimi-35-51/51-pocket-sommelier-desktop.png",
+      "tablet": "screenshots-kimi-35-51/51-pocket-sommelier-tablet.png",
+      "mobile": "screenshots-kimi-35-51/51-pocket-sommelier-mobile.png"
+    }
+  }
+]

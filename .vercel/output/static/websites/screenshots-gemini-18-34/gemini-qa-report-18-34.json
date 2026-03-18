@@ -1,0 +1,305 @@
+{
+  "timestamp": "2026-03-01T04:20:03.452Z",
+  "agent": "Gemini Visual QA",
+  "baseUrl": "https://new-ashtabula-initiative.vercel.app",
+  "sitesChecked": 17,
+  "thresholds": {
+    "mobile": 10000,
+    "tablet": 20000,
+    "desktop": 30000
+  },
+  "results": [
+    {
+      "site": "eligibility-pro",
+      "siteNum": "18",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-pro",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/18-eligibility-pro-desktop.png",
+        "tablet": "screenshots-gemini-18-34/18-eligibility-pro-tablet.png",
+        "mobile": "screenshots-gemini-18-34/18-eligibility-pro-mobile.png"
+      },
+      "sizes": {
+        "desktop": 173217,
+        "tablet": 133181,
+        "mobile": 187332
+      }
+    },
+    {
+      "site": "eligibility-screener",
+      "siteNum": "19",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/19-eligibility-screener-desktop.png",
+        "tablet": "screenshots-gemini-18-34/19-eligibility-screener-tablet.png",
+        "mobile": "screenshots-gemini-18-34/19-eligibility-screener-mobile.png"
+      },
+      "sizes": {
+        "desktop": 59426,
+        "tablet": 46165,
+        "mobile": 95616
+      }
+    },
+    {
+      "site": "engineers-assistant",
+      "siteNum": "20",
+      "url": "https://new-ashtabula-initiative.vercel.app/engineers-assistant",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/20-engineers-assistant-desktop.png",
+        "tablet": "screenshots-gemini-18-34/20-engineers-assistant-tablet.png",
+        "mobile": "screenshots-gemini-18-34/20-engineers-assistant-mobile.png"
+      },
+      "sizes": {
+        "desktop": 72510,
+        "tablet": 59095,
+        "mobile": 92908
+      }
+    },
+    {
+      "site": "event-permit-express",
+      "siteNum": "21",
+      "url": "https://new-ashtabula-initiative.vercel.app/event-permit-express",
+      "status": "needs-fix",
+      "issues": [
+        "Low contrast text: \"🎪Festival...\"",
+        "Low contrast text: \"🎵Concert...\"",
+        "Low contrast text: \"🥕Farmers Market...\"",
+        "Low contrast text: \"🎊Parade...\"",
+        "Low contrast text: \"⚽Sports Event...\"",
+        "Low contrast text: \"🍺Alcohol Permit...\"",
+        "Low contrast text: \"🚧Street Closure...\"",
+        "Low contrast text: \"⛺Tents/Structures...\"",
+        "Low contrast text: \"🔊Amplified Sound...\""
+      ],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/21-event-permit-express-desktop.png",
+        "tablet": "screenshots-gemini-18-34/21-event-permit-express-tablet.png",
+        "mobile": "screenshots-gemini-18-34/21-event-permit-express-mobile.png"
+      },
+      "sizes": {
+        "desktop": 200066,
+        "tablet": 146786,
+        "mobile": 173239
+      }
+    },
+    {
+      "site": "farm-stand-finder",
+      "siteNum": "22",
+      "url": "https://new-ashtabula-initiative.vercel.app/farm-stand-finder",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/22-farm-stand-finder-desktop.png",
+        "tablet": "screenshots-gemini-18-34/22-farm-stand-finder-tablet.png",
+        "mobile": "screenshots-gemini-18-34/22-farm-stand-finder-mobile.png"
+      },
+      "sizes": {
+        "desktop": 118199,
+        "tablet": 79574,
+        "mobile": 103990
+      }
+    },
+    {
+      "site": "fence-quote",
+      "siteNum": "23",
+      "url": "https://new-ashtabula-initiative.vercel.app/fence-quote",
+      "status": "needs-fix",
+      "issues": [
+        "Low contrast text: \"Vinyl$$...\"",
+        "Low contrast text: \"Aluminum$$$...\"",
+        "Low contrast text: \"Chain Link$...\""
+      ],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/23-fence-quote-desktop.png",
+        "tablet": "screenshots-gemini-18-34/23-fence-quote-tablet.png",
+        "mobile": "screenshots-gemini-18-34/23-fence-quote-mobile.png"
+      },
+      "sizes": {
+        "desktop": 191607,
+        "tablet": 109218,
+        "mobile": 170725
+      }
+    },
+    {
+      "site": "gotl-weekend-planner",
+      "siteNum": "24",
+      "url": "https://new-ashtabula-initiative.vercel.app/gotl-weekend-planner",
+      "status": "needs-fix",
+      "issues": [
+        "Low contrast text: \"👨‍👩‍👧‍👦Family Fun...\"",
+        "Low contrast text: \"🏃Adventure...\"",
+        "Low contrast text: \"🧘Relaxation...\"",
+        "Low contrast text: \"💕Romantic...\""
+      ],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/24-gotl-weekend-planner-desktop.png",
+        "tablet": "screenshots-gemini-18-34/24-gotl-weekend-planner-tablet.png",
+        "mobile": "screenshots-gemini-18-34/24-gotl-weekend-planner-mobile.png"
+      },
+      "sizes": {
+        "desktop": 647857,
+        "tablet": 265108,
+        "mobile": 322695
+      }
+    },
+    {
+      "site": "govtech-box",
+      "siteNum": "25",
+      "url": "https://new-ashtabula-initiative.vercel.app/govtech-box",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/25-govtech-box-desktop.png",
+        "tablet": "screenshots-gemini-18-34/25-govtech-box-tablet.png",
+        "mobile": "screenshots-gemini-18-34/25-govtech-box-mobile.png"
+      },
+      "sizes": {
+        "desktop": 129468,
+        "tablet": 95846,
+        "mobile": 98033
+      }
+    },
+    {
+      "site": "grantgenius",
+      "siteNum": "26",
+      "url": "https://new-ashtabula-initiative.vercel.app/grantgenius",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/26-grantgenius-desktop.png",
+        "tablet": "screenshots-gemini-18-34/26-grantgenius-tablet.png",
+        "mobile": "screenshots-gemini-18-34/26-grantgenius-mobile.png"
+      },
+      "sizes": {
+        "desktop": 130696,
+        "tablet": 87261,
+        "mobile": 109918
+      }
+    },
+    {
+      "site": "harvest-alert",
+      "siteNum": "27",
+      "url": "https://new-ashtabula-initiative.vercel.app/harvest-alert",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/27-harvest-alert-desktop.png",
+        "tablet": "screenshots-gemini-18-34/27-harvest-alert-tablet.png",
+        "mobile": "screenshots-gemini-18-34/27-harvest-alert-mobile.png"
+      },
+      "sizes": {
+        "desktop": 122278,
+        "tablet": 80463,
+        "mobile": 101722
+      }
+    },
+    {
+      "site": "hvac-tuneup",
+      "siteNum": "28",
+      "url": "https://new-ashtabula-initiative.vercel.app/hvac-tuneup",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/28-hvac-tuneup-desktop.png",
+        "tablet": "screenshots-gemini-18-34/28-hvac-tuneup-tablet.png",
+        "mobile": "screenshots-gemini-18-34/28-hvac-tuneup-mobile.png"
+      },
+      "sizes": {
+        "desktop": 157015,
+        "tablet": 102015,
+        "mobile": 108672
+      }
+    },
+    {
+      "site": "insta-book",
+      "siteNum": "29",
+      "url": "https://new-ashtabula-initiative.vercel.app/insta-book",
+      "status": "needs-fix",
+      "issues": [
+        "WARNING: Mobile screenshot only 6KB"
+      ],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/29-insta-book-desktop.png",
+        "tablet": "screenshots-gemini-18-34/29-insta-book-tablet.png",
+        "mobile": "screenshots-gemini-18-34/29-insta-book-mobile.png"
+      },
+      "sizes": {
+        "desktop": 145409,
+        "tablet": 99113,
+        "mobile": 5783
+      }
+    },
+    {
+      "site": "insta-book-stripe",
+      "siteNum": "30",
+      "url": "https://new-ashtabula-initiative.vercel.app/insta-book-stripe",
+      "status": "error",
+      "error": "page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('#root') to be visible\n",
+      "issues": []
+    },
+    {
+      "site": "instant-dirt-quote",
+      "siteNum": "31",
+      "url": "https://new-ashtabula-initiative.vercel.app/instant-dirt-quote",
+      "status": "error",
+      "error": "page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator('#root') to be visible\n    35 × locator resolved to hidden <div id=\"root\"></div>\n",
+      "issues": []
+    },
+    {
+      "site": "landlord-repair-queue",
+      "siteNum": "32",
+      "url": "https://new-ashtabula-initiative.vercel.app/landlord-repair-queue",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/32-landlord-repair-queue-desktop.png",
+        "tablet": "screenshots-gemini-18-34/32-landlord-repair-queue-tablet.png",
+        "mobile": "screenshots-gemini-18-34/32-landlord-repair-queue-mobile.png"
+      },
+      "sizes": {
+        "desktop": 142856,
+        "tablet": 95678,
+        "mobile": 107926
+      }
+    },
+    {
+      "site": "lawn-quote-tool",
+      "siteNum": "33",
+      "url": "https://new-ashtabula-initiative.vercel.app/lawn-quote-tool",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/33-lawn-quote-tool-desktop.png",
+        "tablet": "screenshots-gemini-18-34/33-lawn-quote-tool-tablet.png",
+        "mobile": "screenshots-gemini-18-34/33-lawn-quote-tool-mobile.png"
+      },
+      "sizes": {
+        "desktop": 677307,
+        "tablet": 216873,
+        "mobile": 195873
+      }
+    },
+    {
+      "site": "license-wizard",
+      "siteNum": "34",
+      "url": "https://new-ashtabula-initiative.vercel.app/license-wizard",
+      "status": "pass",
+      "issues": [],
+      "screenshots": {
+        "desktop": "screenshots-gemini-18-34/34-license-wizard-desktop.png",
+        "tablet": "screenshots-gemini-18-34/34-license-wizard-tablet.png",
+        "mobile": "screenshots-gemini-18-34/34-license-wizard-mobile.png"
+      },
+      "sizes": {
+        "desktop": 197434,
+        "tablet": 147767,
+        "mobile": 177659
+      }
+    }
+  ]
+}

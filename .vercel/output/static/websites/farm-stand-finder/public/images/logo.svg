@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <defs>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#65a30d"/>
+      <stop offset="100%" style="stop-color:#365314"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="60" cy="60" r="50" fill="#fefce8"/>
+  
+  <!-- Sun -->
+  <circle cx="85" cy="35" r="15" fill="url(#sunGrad)"/>
+  <line x1="85" y1="12" x2="85" y2="18" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="85" y1="52" x2="85" y2="58" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="62" y1="35" x2="68" y2="35" stroke="#f59e0b" stroke-width="2"/>
+  <line x1="102" y1="35" x2="108" y2="35" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- Farm stand -->
+  <rect x="25" y="55" width="50" height="30" fill="#dc2626"/>
+  <path d="M20 55 L50 35 L80 55 Z" fill="#7f1d1d"/>
+  <rect x="30" y="62" width="15" height="15" fill="#fef3c7"/>
+  <rect x="50" y="62" width="15" height="15" fill="#fef3c7"/>
+  
+  <!-- Vegetables -->
+  <circle cx="37" cy="70" r="5" fill="#ea580c"/> <!-- Tomato -->
+  <ellipse cx="57" cy="70" rx="4" ry="6" fill="#16a34a"/> <!-- Corn -->
+  <circle cx="70" cy="75" r="4" fill="#f97316"/> <!-- Orange -->
+  
+  <!-- Barn quilt pattern hint -->
+  <rect x="25" y="85" width="50" height="8" fill="#1e3a8a" opacity="0.1"/>
+  
+  <!-- Text -->
+  <text x="130" y="50" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#365314">Farm Stand</text>
+  <text x="130" y="75" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#ea580c">Finder</text>
+  <text x="130" y="95" font-family="Arial, sans-serif" font-size="10" fill="#65a30d" letter-spacing="2">ASHTABULA COUNTY • FRESH • LOCAL</text>
+</svg>

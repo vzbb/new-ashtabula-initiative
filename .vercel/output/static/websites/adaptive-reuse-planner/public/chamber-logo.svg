@@ -1,0 +1,27 @@
+<!-- Chamber of Commerce Network Logo SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" height="50">
+  <!-- Network nodes and connections -->
+  <g fill="none" fill-rule="evenodd">
+    <!-- Connection lines - Gold -->
+    <path d="M15 25 L35 15 L55 25 L75 20 L95 25" stroke="#d4af37" stroke-width="2" stroke-linecap="round"/>
+    <path d="M35 15 L35 35" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M55 25 L55 35" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M15 25 L15 35 L35 35 L55 35" stroke="#d4af37" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- Nodes - Navy circles with gold borders -->
+    <circle cx="15" cy="25" r="6" fill="#003366" stroke="#d4af37" stroke-width="2"/>
+    <circle cx="35" cy="15" r="6" fill="#003366" stroke="#d4af37" stroke-width="2"/>
+    <circle cx="55" cy="25" r="6" fill="#003366" stroke="#d4af37" stroke-width="2"/>
+    <circle cx="35" cy="35" r="4" fill="#003366" stroke="#d4af37" stroke-width="1.5"/>
+    <circle cx="55" cy="35" r="4" fill="#003366" stroke="#d4af37" stroke-width="1.5"/>
+    <circle cx="75" cy="20" r="5" fill="#003366" stroke="#d4af37" stroke-width="2"/>
+    <circle cx="95" cy="25" r="6" fill="#003366" stroke="#d4af37" stroke-width="2"/>
+    
+    <!-- Bridge/Support pillars suggestion -->
+    <path d="M25 40 Q45 45 65 40" stroke="#003366" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Text - Ashtabula Chamber -->
+  <text x="110" y="22" font-family="Merriweather, Georgia, serif" font-size="14" font-weight="700" fill="#003366">Ashtabula</text>
+  <text x="110" y="40" font-family="Lato, Arial, sans-serif" font-size="12" font-weight="500" fill="#2c3e50" letter-spacing="0.5">CHAMBER OF COMMERCE</text>
+</svg>

@@ -1,0 +1,366 @@
+/** Ashtabula County Community Resources - Volunteer Scheduler
+ *  Official Government Brand Theme
+ *  Colors: County Blue (#003f87), White (#ffffff), Seal Gold (#ffd700), Agricultural Green (#27ae60)
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+  --county-blue: #003f87;
+  --county-blue-dark: #002d62;
+  --seal-gold: #ffd700;
+  --seal-gold-dark: #e6c200;
+  --agricultural-green: #27ae60;
+  --heritage-cream: #f8f6f0;
+  --white: #ffffff;
+  --text-dark: #1a1a1a;
+  --text-muted: #5a5a5a;
+  --border-light: #e8e4dc;
+  --shadow-md: 0 4px 6px rgba(0, 63, 135, 0.08);
+  --shadow-lg: 0 10px 25px rgba(0, 63, 135, 0.12);
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Open Sans', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--heritage-cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.page {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Heritage Background */
+.bg-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg opacity='0.06'%3E%3Cpath d='M10 160 Q30 140 50 160 L50 180 L10 180 Z' fill='%23003f87'/%3E%3Cpath d='M120 140 Q140 120 160 140 L160 180 L120 180 Z' fill='%23003f87'/%3E%3Cpath d='M80 180c0-25 5-50 10-70M90 180c0-25 5-50 10-70' stroke='%2327ae60' stroke-width='1.5' fill='none'/%3E%3Cpath d='M0 190 Q25 185 50 190 T100 190 T150 190 T200 190' stroke='%23003f87' stroke-width='1' fill='none' opacity='0.6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Official Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--seal-gold);
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--county-blue);
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.official-badge {
+  background: var(--county-blue);
+  color: var(--seal-gold);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 24px 0 32px;
+}
+
+.hero-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--seal-gold-dark);
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--county-blue);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Input Card */
+.input-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--county-blue);
+  margin-bottom: 24px;
+}
+
+.input-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--county-blue);
+  margin-bottom: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-row label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.form-row input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  transition: all 0.2s;
+}
+
+.form-row input:focus {
+  outline: none;
+  border-color: var(--county-blue);
+  box-shadow: 0 0 0 3px rgba(0, 63, 135, 0.1);
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  flex: 1;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--county-blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--county-blue-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: var(--white);
+  color: var(--county-blue);
+  border: 1px solid var(--county-blue);
+}
+
+.btn-secondary:hover {
+  background: var(--heritage-cream);
+}
+
+/* Confirmation Card */
+.confirmation-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--agricultural-green);
+  margin-bottom: 24px;
+}
+
+.confirmation-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--county-blue);
+  margin-bottom: 16px;
+}
+
+.confirmation-card pre {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  white-space: pre-wrap;
+}
+
+/* Error */
+.error {
+  background: #fef2f2;
+  color: #991b1b;
+  padding: 14px 18px;
+  border-radius: 6px;
+  border-left: 3px solid #ef4444;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+/* Trust Badges */
+.trust {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.trust span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.feature {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--county-blue);
+  transition: all 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-top-color: var(--seal-gold);
+}
+
+.feature span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feature h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--county-blue);
+  margin-bottom: 6px;
+}
+
+.feature p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Official Footer */
+.footer {
+  text-align: center;
+  padding-top: 24px;
+  margin-top: 24px;
+  border-top: 2px solid var(--seal-gold);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-text {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--county-blue);
+}
+
+.footer-subtext {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  body { padding: 16px; }
+  .header { flex-direction: column; gap: 12px; text-align: center; }
+  .form-row { grid-template-columns: 1fr; }
+  .features { grid-template-columns: 1fr; }
+  .btn-group { flex-direction: column; }
+  .trust { flex-direction: column; gap: 12px; }
+}

@@ -1,0 +1,401 @@
+/* Truck Wash Booking - Clean Water Theme */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --water-blue: #3498db;
+  --soap-white: #ffffff;
+  --shine-silver: #bdc3c7;
+  --bubble-cyan: #00bcd4;
+  --deep-ocean: #1a5276;
+  --foam-white: #f8f9fa;
+  --wash-shadow: rgba(52, 152, 219, 0.15);
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background: linear-gradient(180deg, #e3f2fd 0%, #bbdefb 50%, #e1f5fe 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Water Droplets Pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cellipse cx='20' cy='25' rx='6' ry='8' fill='none' stroke='%233498db' stroke-width='0.5' opacity='0.08'/%3E%3Cellipse cx='60' cy='55' rx='5' ry='7' fill='none' stroke='%2300bcd4' stroke-width='0.5' opacity='0.06'/%3E%3Cellipse cx='40' cy='70' rx='4' ry='6' fill='none' stroke='%233498db' stroke-width='0.5' opacity='0.05'/%3E%3Ccircle cx='70' cy='20' r='3' fill='%2300bcd4' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 55px;
+  height: 55px;
+  filter: drop-shadow(0 4px 10px rgba(52, 152, 219, 0.4));
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--deep-ocean);
+  letter-spacing: 0.5px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(145deg, #0288d1 0%, #01579b 100%);
+  border-radius: 28px;
+  padding: 45px;
+  margin-bottom: 30px;
+  box-shadow: 0 20px 50px rgba(2, 136, 209, 0.25), 0 10px 30px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 188, 212, 0.15) 0%, transparent 50%);
+  border-radius: 50%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: #b3e5fc;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+
+.sub {
+  color: rgba(255,255,255,0.9);
+  font-size: 1.15rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* Input Card */
+.input-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.input-card h3 {
+  color: var(--deep-ocean);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-card label {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.input-card input,
+.input-card select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.input-card input:focus,
+.input-card select:focus {
+  outline: none;
+  border-color: var(--water-blue);
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+}
+
+/* Buttons */
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 25px rgba(0, 188, 212, 0.4);
+}
+
+.primary:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 188, 212, 0.5);
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ghost {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255,255,255,0.5);
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ghost:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: white;
+}
+
+/* Trust Badges */
+.trust {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.trust span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Results Card */
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 35px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.card-head h2 {
+  color: var(--deep-ocean);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.pill {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(0, 188, 212, 0.1) 100%);
+  color: var(--water-blue);
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.output {
+  background: linear-gradient(135deg, #e3f2fd 0%, #e0f7fa 100%);
+  border-radius: 16px;
+  padding: 25px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #1a5276;
+  white-space: pre-wrap;
+  border-left: 5px solid var(--bubble-cyan);
+}
+
+.muted {
+  color: #90a4ae;
+  text-align: center;
+  padding: 40px;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+/* Feature Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-bottom: 35px;
+}
+
+.tile {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(52, 152, 219, 0.12);
+  border-color: rgba(52, 152, 219, 0.15);
+}
+
+.tile-icon {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.tile h3 {
+  color: var(--water-blue);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tile p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: #78909c;
+  font-size: 0.9rem;
+  padding: 25px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  
+  .hero {
+    padding: 28px;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+  }
+  
+  .primary, .ghost {
+    width: 100%;
+  }
+}

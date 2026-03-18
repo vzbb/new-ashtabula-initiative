@@ -1,0 +1,1 @@
+SITE: harbor-cam-dashboard | CENTERING: N | BRANDING: N | LOREM: false | NOTES: Could not find a main source file (e.g., src/App.tsx or src/App.jsx) to analyze for centering, branding quality, or Lorem Ipsum. Analysis based solely on index.html.

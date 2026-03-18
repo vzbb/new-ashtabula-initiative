@@ -1,0 +1,1 @@
+SITE: adaptive-reuse-planner | CENTERING: 9 | BRANDING: 9 | LOREM: false | NOTES: The UI is well-centered using margin: 0 auto for main containers and max-width. Branding is strong and consistent with local references and a thematic color palette. No Lorem Ipsum text was found.

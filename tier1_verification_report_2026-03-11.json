@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-03-11T11:44:48.660292",
+  "total_sites": 4,
+  "passed_automated": 0,
+  "sites": [
+    {
+      "site_name": "City of Ashtabula Building Dept",
+      "url": "https://newashtabula.vercel.app/city-of-ashtabula-building-dept",
+      "target_buyer": "Municipal Government",
+      "demo_flow": "Permit application \u2192 Status tracking",
+      "timestamp": "2026-03-11T11:44:48.377930",
+      "overall_pass": false,
+      "checks": [
+        {
+          "check_name": "Page Load",
+          "passed": false,
+          "details": "Failed: HTTP Error 404: Not Found",
+          "severity": "critical"
+        }
+      ],
+      "manual_checklist": {
+        "Page loads without console errors": false,
+        "Hero section displays correctly": false,
+        "Form renders with all fields visible": false,
+        "Form validation works": false,
+        "Submit button responds": false,
+        "Mobile layout (375px) adapts": false,
+        "Tablet layout (768px) adapts": false,
+        "Contact information accurate": false,
+        "Browser compatibility verified": false
+      }
+    },
+    {
+      "site_name": "Ashtabula Area Chamber of Commerce",
+      "url": "https://newashtabula.vercel.app/ashtabula-area-chamber-of-commerce",
+      "target_buyer": "Economic Development",
+      "demo_flow": "Membership info \u2192 Contact form",
+      "timestamp": "2026-03-11T11:44:48.480677",
+      "overall_pass": false,
+      "checks": [
+        {
+          "check_name": "Page Load",
+          "passed": false,
+          "details": "Failed: HTTP Error 404: Not Found",
+          "severity": "critical"
+        }
+      ],
+      "manual_checklist": {
+        "Page loads without console errors": false,
+        "Hero section displays correctly": false,
+        "Form renders with all fields visible": false,
+        "Form validation works": false,
+        "Submit button responds": false,
+        "Mobile layout (375px) adapts": false,
+        "Tablet layout (768px) adapts": false,
+        "Contact information accurate": false,
+        "Browser compatibility verified": false
+      }
+    },
+    {
+      "site_name": "Lakeland SBDC",
+      "url": "https://newashtabula.vercel.app/lakeland-sbdc",
+      "target_buyer": "Small Business Development Center",
+      "demo_flow": "Services overview \u2192 Appointment booking",
+      "timestamp": "2026-03-11T11:44:48.574019",
+      "overall_pass": false,
+      "checks": [
+        {
+          "check_name": "Page Load",
+          "passed": false,
+          "details": "Failed: HTTP Error 404: Not Found",
+          "severity": "critical"
+        }
+      ],
+      "manual_checklist": {
+        "Page loads without console errors": false,
+        "Hero section displays correctly": false,
+        "Form renders with all fields visible": false,
+        "Form validation works": false,
+        "Submit button responds": false,
+        "Mobile layout (375px) adapts": false,
+        "Tablet layout (768px) adapts": false,
+        "Contact information accurate": false,
+        "Browser compatibility verified": false
+      }
+    },
+    {
+      "site_name": "Ashtabula County Commissioners",
+      "url": "https://newashtabula.vercel.app/ashtabula-county-commissioners",
+      "target_buyer": "County Government",
+      "demo_flow": "Department directory \u2192 Contact",
+      "timestamp": "2026-03-11T11:44:48.660121",
+      "overall_pass": false,
+      "checks": [
+        {
+          "check_name": "Page Load",
+          "passed": false,
+          "details": "Failed: HTTP Error 404: Not Found",
+          "severity": "critical"
+        }
+      ],
+      "manual_checklist": {
+        "Page loads without console errors": false,
+        "Hero section displays correctly": false,
+        "Form renders with all fields visible": false,
+        "Form validation works": false,
+        "Submit button responds": false,
+        "Mobile layout (375px) adapts": false,
+        "Tablet layout (768px) adapts": false,
+        "Contact information accurate": false,
+        "Browser compatibility verified": false
+      }
+    }
+  ]
+}
