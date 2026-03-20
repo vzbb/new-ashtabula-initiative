@@ -1,9 +1,9 @@
 # New Ashtabula Initiative (NAI)
 
-**82 AI-powered applications transforming how our community lives, works, and connects.**
+**81 AI-powered applications transforming how our community lives, works, and connects.**
 
 [![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://newashtabula.vercel.app)
-[![Sites](https://img.shields.io/badge/sites-82-blue?style=flat-square)]()
+[![Sites](https://img.shields.io/badge/sites-81-blue?style=flat-square)]()
 [![Status](https://img.shields.io/badge/status-live-success?style=flat-square)]()
 
 ---
@@ -19,7 +19,7 @@
 - 🛒 [Local Grocer Go](https://new-ashtabula-initiative.vercel.app/grocer/) — Local food marketplace
 - 🔧 [Contractor Match](https://new-ashtabula-initiative.vercel.app/contractors/) — Verified contractor finder
 
-**See all 82 sites:** [SITEMAP.md](SITEMAP.md)
+**See all 81 sites:** [SITEMAP.md](SITEMAP.md)
 
 ---
 
@@ -27,9 +27,9 @@
 
 | Metric | Value |
 |--------|-------|
-| **Total Solutions** | 82 |
+| **Total Solutions** | 81 |
 | **Categories** | 8 (GovTech, Business, Services, Tourism, etc.) |
-| **Build Status** | 82/82 Live (100%) |
+| **Build Status** | Live |
 | **Platform** | Vercel |
 | **Architecture** | Main landing + MVP subpaths |
 
@@ -48,9 +48,8 @@ new-ashtabula-initiative.vercel.app/
 ├── /parts/              ← Parts Finder (Auto)
 ├── /plating/            ← Plating Tracker (Manufacturing)
 ├── /eligibility/        ← Eligibility Screener (GovTech)
-├── /wine/               ← Through The Grapevine (Tourism)
 ├── /harbor/             ← Harbor Cam Dashboard (Tourism)
-└── /{mvp}/              ← 58 additional MVPs
+└── /{mvp}/              ← 71 additional MVPs
 ```
 
 ---
@@ -73,7 +72,7 @@ new-ashtabula-initiative/
 ├── 🔧 deploy.sh                    # Deployment automation
 │
 ├── 🏠 landing-page/                # Main landing page
-├── 🌐 websites/                    # All 82 MVP websites
+├── 🌐 websites/                    # All 81 MVP websites
 │   ├── civic-insight-engine/
 │   ├── invest-ashtabula/
 │   ├── permit-whisperer/
@@ -92,6 +91,8 @@ new-ashtabula-initiative/
 | Document | Purpose |
 |----------|---------|
 | [README.md](README.md) | 📖 Project overview (this file) |
+| [AGENTS.md](AGENTS.md) | 🤖 Project-specific guidance for agents |
+| [MONOREPO_PROTOCOL.md](MONOREPO_PROTOCOL.md) | 🧭 Short monorepo workflow rules |
 | [SITEMAP.md](SITEMAP.md) | 📍 Complete site directory & URLs |
 | [PROJECT_STATUS.md](PROJECT_STATUS.md) | 📊 Current status dashboard |
 
@@ -100,7 +101,7 @@ new-ashtabula-initiative/
 | Document | Purpose |
 |----------|---------|
 | [SALES_OUTREACH_BIBLE.md](SALES_OUTREACH_BIBLE.md) | 🎯 **PRIMARY** — Complete sales playbook (templates, scripts, pricing) |
-| [LEAD_RESEARCH_REPORT.md](LEAD_RESEARCH_REPORT.md) | 🔍 Deep buyer research for all 82 MVPs |
+| [LEAD_RESEARCH_REPORT.md](LEAD_RESEARCH_REPORT.md) | 🔍 Deep buyer research for all 81 MVPs |
 | [SITE_PROSPECT_MAPPING.md](SITE_PROSPECT_MAPPING.md) | 🗺️ Site-to-prospect assignments |
 | [THE_CLOSER_IRRESISTIBLE_OFFERS.md](THE_CLOSER_IRRESISTIBLE_OFFERS.md) | 💎 Offer psychology & personalization |
 
@@ -150,8 +151,8 @@ new-ashtabula-initiative/
 ```bash
 cd /home/tt/.openclaw/workspace/projects/new-ashtabula-initiative
 
-# Use automation script
-./deploy.sh
+# Use the workflow command
+./nai deploy
 
 # Or manual deployment
 vercel --prod
@@ -164,6 +165,33 @@ cd websites/{site-name}
 npm install
 npm run build
 ```
+
+### Track Progress
+
+```bash
+./nai screenshots
+```
+
+### Agent Workflow
+
+When an AI agent is assigned to one MVP, follow this order:
+
+1. Find the route in [`SITEMAP.md`](SITEMAP.md).
+2. Map the slug to the correct folder under [`websites/`](websites/).
+3. Edit only that app unless the bug is shared across multiple sites.
+4. If the issue is shared, fix the common code in [`shared/`](shared/) or [`siteflow.py`](siteflow.py).
+5. Do not edit generated `dist/` output by hand.
+6. Do not treat `node_modules/` or `.vercel/` as source.
+7. Use [`./nai scan`](nai) to confirm the site path, build root, and shim status.
+8. Use [`./nai routes`](nai) if the route map changed.
+9. Use [`./nai deploy`](nai) when you are ready to publish production.
+
+Rules of thumb:
+
+- Prefer source fixes over one-off deploy hacks.
+- Rebuild only the site you changed unless you touched shared code.
+- If a page looks blank, check the built `dist/index.html`, the active `vercel.json`, and the deploy target.
+- Treat [`SITEMAP.md`](SITEMAP.md) as the source of truth for live routes.
 
 ---
 
@@ -179,7 +207,7 @@ npm run build
 
 ## 📈 Development Status
 
-- ✅ 82/82 sites built and live
+- ✅ 81/81 sites built and live
 - ✅ Vercel configuration complete
 - ✅ Landing page ready
 - ✅ Sales materials complete
@@ -210,5 +238,5 @@ Built with care for the Ashtabula community.
 ---
 
 <p align="center">
-  <strong>82 Solutions. One Mission: Empower Our Community.</strong>
+<strong>81 Solutions. One Mission: Empower Our Community.</strong>
 </p>

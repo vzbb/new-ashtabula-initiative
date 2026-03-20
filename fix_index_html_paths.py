@@ -1,11 +1,36 @@
-import os
+import re
+from pathlib import Path
 
-with open('allsites.txt', 'r') as f:
-    sites = [line.strip() for line in f if line.strip()]
+ROOT = Path(__file__).resolve().parent
+SITEMAP_PATH = ROOT / 'SITEMAP.md'
+SITE_ROOTS = [
+    ROOT / 'websites',
+]
+
+
+def load_sites_from_sitemap() -> list[str]:
+    text = SITEMAP_PATH.read_text()
+    pattern = re.compile(r'\[/([a-z0-9-]+)/\]\(https://new-ashtabula-initiative\.vercel\.app/[^)]+\)')
+    sites: list[str] = []
+    seen: set[str] = set()
+    for site in pattern.findall(text):
+        if site not in seen:
+            seen.add(site)
+            sites.append(site)
+    return sites
+
+
+sites = load_sites_from_sitemap()
 
 for site in sites:
-    index_path = os.path.join('websites', site, 'dist', 'index.html')
-    if os.path.exists(index_path):
+    index_path = None
+    for site_root in SITE_ROOTS:
+        candidate = site_root / site / 'dist' / 'index.html'
+        if candidate.exists():
+            index_path = candidate
+            break
+
+    if index_path:
         with open(index_path, 'r') as f:
             content = f.read()
         

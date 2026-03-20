@@ -21,7 +21,7 @@ new-ashtabula-initiative/
 │   ├── styles.css
 │   └── assets/
 │
-├── 🌐 websites/                          # All 82 MVP websites
+├── 🌐 websites/                          # All 81 MVP websites
 │   ├── civic-insight-engine/
 │   ├── permit-whisperer/
 │   ├── invest-ashtabula/
@@ -36,7 +36,7 @@ new-ashtabula-initiative/
 
 ---
 
-## 🌐 Complete Website Index (82 Sites)
+## 🌐 Complete Website Index (81 Sites)
 
 ### 🏛️ Government & Civic (10 sites)
 AI-powered tools for municipal government and civic engagement.
@@ -187,8 +187,6 @@ Event planning, volunteer coordination, and community engagement tools.
 | 65 | Visual Portfolio | [/portfolio/](https://new-ashtabula-initiative.vercel.app/portfolio/) | Portfolio showcase |
 | 66 | Volunteer Scheduler | [/volunteer/](https://new-ashtabula-initiative.vercel.app/volunteer/) | Volunteer coordination |
 | 67 | Wedding Lead Form | [/wedding/](https://new-ashtabula-initiative.vercel.app/wedding/) | Wedding vendor connector |
-| 68 | Through the Grapevine | [/wine/](https://new-ashtabula-initiative.vercel.app/wine/) | Wine trail guide |
-
 **Primary Buyer:** Ashtabula County + Chamber of Commerce  
 **Contacts:** Research in progress
 

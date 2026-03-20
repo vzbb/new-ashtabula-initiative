@@ -69,14 +69,11 @@
 ### Step 1: Build Verification
 
 ```bash
-# Clean install
-npm ci
+# Build and normalize every site
+./nai build
 
-# Build production
-npm run build
-
-# Verify build output
-ls -la dist/  # or build/ or out/
+# Inspect the current build summary
+./nai scan
 ```
 
 ### Step 2: Platform Setup
@@ -84,16 +81,8 @@ ls -la dist/  # or build/ or out/
 #### Vercel Deployment
 
 ```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Login (first time)
-vercel login
-
-# Deploy
-vercel --prod
-
-# Or connect GitHub repo for auto-deploys
+# One-command deploy
+./nai deploy
 ```
 
 #### Netlify Deployment

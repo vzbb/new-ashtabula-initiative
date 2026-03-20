@@ -6,6 +6,8 @@ node_modules/
 # Build outputs
 dist/
 build/
+.vercel/
+.vercel/output/
 .cache/
 *.tsbuildinfo
 
@@ -44,15 +46,22 @@ screenshots/
 tmp/
 temp/
 *.tmp
+__pycache__/
 
 # Backup files
 *.bak
 *.backup
+*.bak-*
+vercel.json.bak-*
 
 # Large data files
 *.tar.gz
 *.zip
 *.tgz
+
+# Project-generated exports
+nai_clickup_export.csv
+output.json
 
 # Cursor rules (if any)
 .cursorrules

@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import subprocess
+import sys
+from pathlib import Path
+
+from siteflow import (
+    find_best_build_root,
+    load_public_slugs,
+    normalize_build_output,
+    package_dirs,
+    needs_api_client_shim,
+    run_site_build,
+    site_dir_for_slug,
+)
+
+ROOT = Path(__file__).resolve().parent
+
+
+def cmd_scan(_: argparse.Namespace) -> int:
+    slugs = load_public_slugs()
+    print(f"Found {len(slugs)} public routes in SITEMAP.md")
+    print("")
+    for slug in slugs:
+        site_dir = site_dir_for_slug(slug)
+        build_root = find_best_build_root(site_dir)
+        packages = package_dirs(site_dir)
+        status = "exists" if site_dir.exists() else "missing"
+        print(f"{slug:20} -> {site_dir.name} ({status})")
+        print(f"  packages: {', '.join(p.relative_to(site_dir).as_posix() for p in packages) if packages else 'none'}")
+        print(f"  build: {build_root.relative_to(site_dir).as_posix() if build_root else 'missing'}")
+        print(f"  dist: {'yes' if (site_dir / 'dist').exists() else 'no'}")
+        print(f"  api-client shim: {'missing' if needs_api_client_shim(site_dir) else 'ok'}")
+    return 0
+
+
+def cmd_build(_: argparse.Namespace) -> int:
+    slugs = load_public_slugs()
+    ready = 0
+    failed: list[str] = []
+
+    for index, slug in enumerate(slugs, start=1):
+        site_dir = site_dir_for_slug(slug)
+        if not (site_dir / "package.json").exists() and not package_dirs(site_dir):
+            print(f"[{index}/{len(slugs)}] {slug}: skipped (no package.json)")
+            continue
+
+        print(f"[{index}/{len(slugs)}] {slug}: building {site_dir.name}")
+        if needs_api_client_shim(site_dir):
+            print("  ⚠️  missing src/api-client.js shim; build may fail until the import graph is fixed")
+        try:
+            build_root = run_site_build(site_dir)
+            normalized = normalize_build_output(site_dir) or build_root
+            print(f"  ✅ {normalized.relative_to(site_dir).as_posix()}")
+            ready += 1
+        except subprocess.CalledProcessError as exc:
+            print(f"  ❌ build failed: {exc}")
+            failed.append(slug)
+        except Exception as exc:
+            print(f"  ❌ {exc}")
+            failed.append(slug)
+
+    print("")
+    print(f"Build complete: {ready} succeeded, {len(failed)} failed")
+    if failed:
+        print("Failed sites:")
+        for slug in failed:
+            print(f"  - {slug}")
+        return 1
+
+    subprocess.run([sys.executable, str(ROOT / "update_vercel.py")], check=True)
+    return 0
+
+
+def cmd_routes(_: argparse.Namespace) -> int:
+    subprocess.run([sys.executable, str(ROOT / "update_vercel.py")], check=True)
+    return 0
+
+
+def cmd_deploy(_: argparse.Namespace) -> int:
+    if cmd_build(argparse.Namespace()) != 0:
+        return 1
+
+    print("")
+    print("Building Vercel output...")
+    subprocess.run(["vercel", "build", "--prod"], cwd=ROOT, check=True)
+
+    print("")
+    print("Deploying prebuilt output to production...")
+    subprocess.run(["vercel", "deploy", "--prebuilt", "--prod", "--yes"], cwd=ROOT, check=True)
+    return 0
+
+
+def cmd_screenshots(_: argparse.Namespace) -> int:
+    subprocess.run([sys.executable, str(ROOT / "screenshots_sitemap.py")], check=True)
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="nai", description="NAI workflow helper")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    sub.add_parser("scan", help="inspect site build status").set_defaults(func=cmd_scan)
+    sub.add_parser("build", help="install dependencies and build every site").set_defaults(func=cmd_build)
+    sub.add_parser("routes", help="regenerate vercel.json").set_defaults(func=cmd_routes)
+    sub.add_parser("deploy", help="build everything and deploy with Vercel").set_defaults(func=cmd_deploy)
+    sub.add_parser("screenshots", help="capture sitemap screenshots from local build outputs").set_defaults(func=cmd_screenshots)
+
+    return parser
+
+
+def main() -> int:
+    parser = build_parser()
+    args = parser.parse_args()
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

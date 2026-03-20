@@ -1,98 +1,52 @@
+from __future__ import annotations
+
 import json
+from pathlib import Path
 
-with open('allsites.txt', 'r') as f:
-    sites = [line.strip() for line in f if line.strip()]
+from siteflow import find_best_build_root, load_public_slugs, site_dir_for_slug
 
-# Add custom mappings for short names
-short_mappings = {
-    "civic-insight": "civic-insight-engine",
-    "contractors": "contractor-match",
-    "eligibility": "eligibility-screener",
-    "harbor": "harbor-cam-dashboard",
-    "invest": "invest-ashtabula",
-    "grocer": "local-grocer-go",
-    "permits": "permit-whisperer",
-    "parts": "parts-finder",
-    "plating": "plating-tracker",
-    "site-ops": "site-ops-pro",
-    "adaptive-reuse": "adaptive-reuse-planner",
-    "blueprint": "blueprint-analyzer",
-    "boxflow": "boxflow-estimator",
-    "cashflow": "cashflow-tracker",
-    "landlord": "landlord-repair-queue",
-    "lawn": "lawn-quote-tool",
-    "hvac": "hvac-tuneup",
-    "snow-plow": "snow-plow-tracker",
-    "dirt-quote": "instant-dirt-quote",
-    "rental": "rental-availability",
-    "engineers": "engineers-assistant",
-    "curbside": "curbside-pickup-tracker",
-    "farm-stand": "farm-stand-finder",
-    "notary": "mobile-notary",
-    "auto-detail": "auto-detail-booking",
-    "truck-wash": "truck-wash-booking",
-    "concierge": "virtual-concierge",
-    "parking": "visitor-parking-finder",
-    "routes": "route-optimizer",
-    "charter": "charter-booking",
-    "marina": "marina-slip-waitlist",
-    "compassionate": "compassionate-planner",
-    "aidflow": "aidflow-navigator",
-    "boat-storage": "boat-storage-waitlist",
-    "harvest": "harvest-alert",
-    "artist-commission": "artist-commission-form",
-    "gotl": "gotl-weekend-planner",
-    "pet-match": "pet-matchmaker",
-    "portfolio": "visual-portfolio",
-    "volunteer": "volunteer-scheduler",
-    "wedding": "wedding-lead-form",
-    "license": "license-wizard",
-    "event-permit": "event-permit-express",
-    "zoning": "zoning-clerk",
-    "govtech": "govtech-box",
-    "historian-pro": "pocket-historian-pro",
-    "historian": "pocket-historian",
-    "sommelier-pro": "pocket-sommelier-pro",
-    "sommelier": "pocket-sommelier",
-    "resource-pro": "resource-compass-pro",
-    "resource": "resource-compass",
-    "scheduler-sms": "service-scheduler-sms",
-    "scheduler": "service-scheduler",
-    "plating-pro": "plating-tracker-pro",
-    "parts-request": "parts-finder-request",
-    "mytrip-export": "mytrip-planner-export",
-    "mytrip": "mytrip-planner",
-}
+ROOT = Path(__file__).resolve().parent
 
-routes = []
-# Ensure full names are mapped
-for site in sites:
-    routes.append({"src": f"/{site}/?(.*)", "dest": f"/websites/{site}/dist/$1"})
 
-# Add short name mappings
-for short, full in short_mappings.items():
-    if short != full:
-        routes.append({"src": f"/{short}/?(.*)", "dest": f"/websites/{full}/dist/$1"})
+def route_dest_for_slug(slug: str) -> str | None:
+    site_dir = site_dir_for_slug(slug)
+    build_root = find_best_build_root(site_dir)
+    if build_root is None:
+        return None
 
-# Special case for grocer client dist
-for route in routes:
-    if "local-grocer-go" in route["dest"]:
-        route["dest"] = route["dest"].replace("dist", "client/dist")
+    try:
+        rel_path = build_root.relative_to(ROOT).as_posix()
+    except ValueError:
+        return None
 
-# SORT ROUTES BY LENGTH (Longest first to avoid prefix matching issues)
-routes.sort(key=lambda x: len(x["src"]), reverse=True)
+    return f"/{rel_path}/$1"
 
-# Add landing page and catch-all
-routes.append({"src": "/all-mvps/?(.*)", "dest": "/landing-page/all-mvps.html"})
-routes.append({"src": "/(.*)", "dest": "/landing-page/index.html"})
 
-vercel_config = {
-    "version": 2,
-    "name": "new-ashtabula-initiative",
-    "routes": routes
-}
+def build_routes() -> list[dict[str, str]]:
+    routes: list[dict[str, str]] = []
 
-with open('vercel.json', 'w') as f:
-    json.dump(vercel_config, f, indent=2)
+    for slug in load_public_slugs():
+        dest = route_dest_for_slug(slug)
+        if dest is None:
+            continue
+        routes.append({"src": f"/{slug}/?(.*)", "dest": dest})
 
-print("vercel.json updated successfully with sorted routes.")
+    routes.sort(key=lambda item: len(item["src"]), reverse=True)
+    routes.append({"src": "/all-mvps/?(.*)", "dest": "/landing-page/all-mvps.html"})
+    routes.append({"src": "/(.*)", "dest": "/landing-page/index.html"})
+    return routes
+
+
+def main() -> None:
+    vercel_config = {
+        "version": 2,
+        "name": "new-ashtabula-initiative",
+        "routes": build_routes(),
+    }
+
+    (ROOT / "vercel.json").write_text(json.dumps(vercel_config, indent=2) + "\n")
+    print("vercel.json updated successfully with build-aware routes.")
+
+
+if __name__ == "__main__":
+    main()
