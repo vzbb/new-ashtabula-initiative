@@ -1,0 +1,5 @@
+{
+  "name": "Earth & Fence Estimator Suite",
+  "description": "A suite of 3 tools: Instant-Dirt Quote, Snap-to-Quote Fence, and EarthFlow Estimator, sharing a common mapping backend.",
+  "requestFramePermissions": []
+}
