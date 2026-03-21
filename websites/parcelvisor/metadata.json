@@ -1,0 +1,5 @@
+{
+  "name": "ParcelVisor",
+  "description": "Blight Detective AI Vision script for Ashtabula Land Bank to bulk-grade property conditions from Street View.",
+  "requestFramePermissions": []
+}
