@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffaf0"/>
+      <stop offset="100%" stop-color="#fff3e0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="120" r="200" fill="#ed8936" opacity="0.11"/>
+  <circle cx="1090" cy="450" r="180" fill="#4a5568" opacity="0.08"/>
+  <rect x="70" y="70" width="220" height="220" rx="52" fill="#ffffff" stroke="#ed8936" stroke-width="10"/>
+  <path d="M118 164c0-24 19-44 43-44 13 0 24 5.6 32 15.4 8-9.8 19-15.4 32-15.4 24 0 43 20 43 44 0 44-38 72-75 95-37-23-75-51-75-95Z" fill="#ed8936" opacity="0.15"/>
+  <text x="340" y="165" fill="#2d3748" font-family="Nunito, Arial, sans-serif" font-size="72" font-weight="900">Pet Match</text>
+  <text x="340" y="240" fill="#4a5568" font-family="Nunito, Arial, sans-serif" font-size="42" font-weight="800">Ashtabula County Animal Protective League</text>
+  <text x="340" y="320" fill="#d97706" font-family="Nunito, Arial, sans-serif" font-size="32" font-weight="900" letter-spacing="1.5">Find Your Furever Friend.</text>
+  <text x="340" y="390" fill="#718096" font-family="Nunito, Arial, sans-serif" font-size="30" font-weight="700">Shelter-first adoption matching for Ashtabula County families, fosters, and volunteers.</text>
+</svg>
