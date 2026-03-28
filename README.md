@@ -45,6 +45,7 @@ Saybrook request lane:
 - n8n Data Tables store the request-intake records and power the trustee queue view
 - the request intake workflow inserts rows into the Saybrook request Data Table
 - the trustee workflow reads rows back from the same Data Table for the hidden review page
+- resident image attachments should be uploaded to durable Blob storage first, then the resulting URLs are written into the request row
 - the live Saybrook experience is an interaction-first municipal workstation with a CivicSidebar, a right-side chat canvas, and an IntakeDrawer for official submission
 - the township seal remains as a contained trust anchor, not a competing hero element
 

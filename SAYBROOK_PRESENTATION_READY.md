@@ -20,6 +20,8 @@ The current UI is a split-screen municipal workstation:
   - `https://flow.noirsys.com/webhook/saybrook-zoning-trustee-requests`
 - n8n Data Table:
   - Saybrook request records are stored in the shared n8n Data Table used by both the intake and trustee workflows
+- Attachment storage:
+  - resident images should be uploaded to durable Blob storage first, with the resulting URLs written back into the request row
 
 Imported workflow sources:
 
@@ -44,6 +46,9 @@ the app now treats the request surfaces as live-capable by default.
 The request intake flow should insert the normalized record into the Saybrook request
 Data Table immediately after the normalization node.
 
+If the resident attached images, the workflow should upload them to Blob storage
+before the row insert, then store the returned URLs in `attachments_json`.
+
 Recommended row operation:
 - Resource: `Row`
 - Operation: `Insert`
@@ -54,6 +59,8 @@ Recommended row operation:
 ### n8n trustee list flow
 
 The trustee list flow should read from the same Saybrook request Data Table.
+If attachment URLs are present, the queue page should render thumbnails and
+openable image links for staff review.
 
 Recommended row operation:
 - Resource: `Row`

@@ -1,0 +1,8 @@
+{
+  "name": "saybrook-api",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@vercel/blob": "2.3.2"
+  }
+}

@@ -9,8 +9,9 @@ The product shape is:
 3. AI helps summarize the issue into a clean township-facing request
 4. user confirms the drafted request
 5. user enters contact information
-6. n8n normalizes the packet
-7. n8n inserts the final structured row into the Saybrook request Data Table
+6. n8n uploads any attached images to durable storage, such as Vercel Blob
+7. n8n normalizes the packet and captures attachment URLs
+8. n8n inserts the final structured row into the Saybrook request Data Table
 
 This keeps the assistant useful even when the user doesn't know zoning language.
 
@@ -67,6 +68,11 @@ Suggested table name:
 - `Saybrook Zoning Requests`
 
 This workflow should end with a row insert, not just an email or a remote API call.
+If images are present, the workflow should store the actual files in Blob storage
+and only write the resulting URLs + metadata into the Data Table.
+The upload hop can be a lightweight Vercel function such as
+`/api/saybrook-blob-upload`, which receives the attachment payload from n8n and
+returns durable URLs.
 
 Recommended Data Table columns:
 
@@ -89,6 +95,20 @@ Recommended Data Table columns:
 - `chat_transcript_json`
 - `status` default `new`
 
+For image attachments, `attachments_json` should store a JSON array with items
+like:
+
+```json
+[
+  {
+    "fileName": "site-photo-1.jpg",
+    "mimeType": "image/jpeg",
+    "size": 1827341,
+    "url": "https://blob.vercel-storage.com/..."
+  }
+]
+```
+
 ## Canonical Request Contract
 
 The frontend may send friendly aliases, but the normalized record should land as:
@@ -110,7 +130,7 @@ The frontend may send friendly aliases, but the normalized record should land as
   "ai_summary": "Assistant summarized the issue for staff review.",
   "source_answer": "Assistant answer text.",
   "source_citations_json": "[]",
-  "attachments_json": "[]",
+  "attachments_json": "[{\"fileName\":\"site-photo-1.jpg\",\"mimeType\":\"image/jpeg\",\"size\":1827341,\"url\":\"https://blob.vercel-storage.com/...\"}]",
   "chat_transcript_json": "[]",
   "status": "new"
 }
@@ -140,6 +160,7 @@ Accepted aliases during normalization:
 ## Workflow Shape
 
 - `Webhook`
+- `Upload Attachments`
 - `Normalize + Validate`
 - `Shape Table Row`
 - `Insert Into Data Table`

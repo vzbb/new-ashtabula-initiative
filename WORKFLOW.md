@@ -39,6 +39,7 @@ Saybrook request lane note:
 - Saybrook request intake now uses n8n Data Tables as the shared row store for resident requests
 - the request workflow should insert normalized rows into the Saybrook request Data Table
 - the trustee workflow should fetch rows back from the same table for the hidden queue view
+- image attachments should be uploaded to Blob storage before the row insert so the Data Table stores durable URLs rather than file bytes
 - keep the request intake docs in `n8n/SAYBROOK_ZONING_REQUEST_FLOW.md` in sync with the workflow artifact
 - keep the trustee read-side docs in `n8n/SAYBROOK_ZONING_TRUSTEE_REQUESTS.md` in sync with the workflow artifact
 - the live Saybrook UI should stay interaction-first, keep the seal contained, use the CivicSidebar + chat canvas + IntakeDrawer structure, and avoid any sign-header or demo/draft framing in the visible product

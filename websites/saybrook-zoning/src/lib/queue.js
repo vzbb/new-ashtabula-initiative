@@ -19,6 +19,32 @@ function safeJsonParse(value) {
   }
 }
 
+function normalizeAttachment(item) {
+  if (!item) return null;
+  if (typeof item === "string") {
+    return {
+      url: item,
+      fileName: item.split("/").pop() || item,
+      mimeType: "",
+      size: null,
+      key: "",
+    };
+  }
+  if (typeof item !== "object") return null;
+  return {
+    url: item.url || item.publicUrl || item.downloadUrl || item.href || "",
+    fileName: item.fileName || item.name || item.filename || "Attachment",
+    mimeType: item.mimeType || item.type || "",
+    size:
+      typeof item.size === "number"
+        ? item.size
+        : typeof item.fileSize === "number"
+          ? item.fileSize
+          : null,
+    key: item.key || item.path || item.pathname || "",
+  };
+}
+
 function normalizeStatus(value) {
   const status = String(value || "new").trim().toLowerCase();
   if (status.includes("need")) return "needs info";
@@ -42,7 +68,7 @@ function normalizeRequest(item) {
       record.images ??
       record.image_urls ??
       []
-  );
+  ).map(normalizeAttachment).filter(Boolean);
   const transcript = safeJsonParse(
     record.chat_transcript_json ??
       record.chatTranscript ??

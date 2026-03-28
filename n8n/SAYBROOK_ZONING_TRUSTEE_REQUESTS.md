@@ -39,3 +39,6 @@ It should stay simple:
 
 The page can still advertise higher-end operational options in its own UI, but
 those notes should stay out of the response payload itself.
+
+If the request row includes attachment URLs from Vercel Blob, the trustee page
+should show small previews and let staff open the image in a new tab.

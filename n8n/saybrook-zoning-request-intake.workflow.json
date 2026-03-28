@@ -33,6 +33,21 @@
       }
     },
     {
+      "id": "upload-attachments",
+      "name": "Upload Attachments",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        120
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "mode": "runOnceForAllItems",
+        "jsCode": "const body = $json.body ?? $json;\nconst binary = $binary ?? {};\nconst uploadUrl =\n  $env.SAYBROOK_ATTACHMENT_UPLOAD_URL ||\n  'https://new-ashtabula-initiative.vercel.app/api/saybrook-blob-upload';\n\nconst attachmentEntries = Object.entries(binary).map(([key, item], index) => ({\n  key,\n  fileName: item.fileName || key || `attachment-${index + 1}`,\n  mimeType: item.mimeType || 'application/octet-stream',\n  size: typeof item.fileSize === 'number' ? item.fileSize : null,\n  data: item.data || item.fileData || '',\n}));\n\nif (!attachmentEntries.length) {\n  return [{\n    json: {\n      ...body,\n      attachments: Array.isArray(body.attachments) ? body.attachments : [],\n      uploadedAttachments: [],\n    },\n  }];\n}\n\nconst response = await fetch(uploadUrl, {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n    Accept: 'application/json',\n  },\n  body: JSON.stringify({\n    slug: body.slug || 'saybrook-zoning',\n    jurisdiction: body.jurisdiction || 'Saybrook Township',\n    requestId: body.requestId || body.id || '',\n    attachments: attachmentEntries,\n  }),\n});\n\nif (!response.ok) {\n  const detail = await response.text().catch(() => '');\n  throw new Error(`Attachment upload failed ${response.status}: ${detail}`);\n}\n\nconst result = await response.json().catch(() => ({}));\nconst uploadedAttachments = Array.isArray(result.attachments) ? result.attachments : [];\n\nreturn [{\n  json: {\n    ...body,\n    attachments: uploadedAttachments,\n    uploadedAttachments,\n    uploadedAttachmentCount: uploadedAttachments.length,\n  },\n}];"
+      }
+    },
+    {
       "id": "request-table-insert",
       "name": "Insert Request Row",
       "type": "n8n-nodes-base.dataTable",
@@ -78,6 +93,17 @@
   ],
   "connections": {
     "Request Webhook": {
+      "main": [
+        [
+          {
+            "node": "Upload Attachments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Attachments": {
       "main": [
         [
           {

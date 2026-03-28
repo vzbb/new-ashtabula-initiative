@@ -63,6 +63,54 @@ function QueueStat({ label, value, hint }) {
   );
 }
 
+function AttachmentGallery({ attachments = [] }) {
+  const visible = attachments
+    .map((attachment) => {
+      if (!attachment || typeof attachment !== "object") return null;
+      return {
+        url: attachment.url || attachment.publicUrl || attachment.downloadUrl || "",
+        fileName: attachment.fileName || attachment.name || attachment.filename || "Attachment",
+      };
+    })
+    .filter((attachment) => attachment?.url)
+    .slice(0, 4);
+
+  if (!visible.length) return null;
+
+  return (
+    <div className="mt-4">
+      <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-400">
+        Attachments
+      </p>
+      <div className="mt-2 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        {visible.map((attachment, index) => (
+          <a
+            key={`${attachment.url}-${index}`}
+            href={attachment.url}
+            target="_blank"
+            rel="noreferrer"
+            className="group overflow-hidden rounded-2xl border border-saybrook-border bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(17,33,28,0.12)]"
+          >
+            <div className="aspect-square bg-slate-100">
+              <img
+                src={attachment.url}
+                alt={attachment.fileName}
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                loading="lazy"
+              />
+            </div>
+            <div className="border-t border-saybrook-border bg-white px-3 py-2">
+              <p className="line-clamp-1 text-[11px] font-semibold text-slate-700">
+                {attachment.fileName}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function QueueEmptyState({ title, copy }) {
   return (
     <div className="grid gap-4">
@@ -369,6 +417,7 @@ export function TrusteeQueue() {
                                 {request.preferredContact || "email"} preferred
                               </span>
                             </div>
+                            <AttachmentGallery attachments={request.attachments} />
                           </div>
                         </div>
                       </article>
