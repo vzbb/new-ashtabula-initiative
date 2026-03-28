@@ -46,7 +46,8 @@ Saybrook request lane:
 - run `./nai saybrook-request-api --host 0.0.0.0 --port 18765` to serve the local request writer
 - the request intake workflow posts to `http://host.docker.internal:18765/saybrook-zoning-request` by default
 - the local queue DB lives at `data/saybrook-zoning-requests.db`
-- the live Saybrook experience is chat-first, citation-led, and uses the township seal only as a contained trust anchor
+- the live Saybrook experience is an interaction-first municipal workstation with a CivicSidebar, a right-side chat canvas, and an IntakeDrawer for official submission
+- the township seal remains as a contained trust anchor, not a competing hero element
 
 Tooling awareness:
 - `NAI_TOOLCHAIN.json` is the structured registry for which scripts are core, support, or legacy

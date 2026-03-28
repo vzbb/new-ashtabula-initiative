@@ -116,7 +116,3 @@ export function PropertyLookup() {
     </div>
   );
 }
-
-function cn(...inputs) {
-  return inputs.filter(Boolean).join(' ');
-}

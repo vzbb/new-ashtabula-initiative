@@ -2,39 +2,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --color-ashtabula-primary: #17362d;
-  --color-ashtabula-secondary: #c28a3d;
-  --color-ashtabula-accent: #6f8f99;
-  --color-ashtabula-bg: #f5efe6;
-  --color-saybrook-forest: #17362d;
-  --color-saybrook-forest-deep: #0f241e;
-  --color-saybrook-fern: #2d5d4a;
-  --color-saybrook-lake: #6f8f99;
-  --color-saybrook-mist: #d9e5df;
-  --color-saybrook-cream: #f5efe6;
-  --color-saybrook-sand: #ead9bf;
-  --color-saybrook-clay: #b88a5e;
-  --color-saybrook-ink: #10211c;
-  --color-saybrook-border: rgba(23, 54, 45, 0.12);
+  /* Saybrook Brand Tokens - Drive both CSS and Tailwind */
+  --saybrook-forest: #17362d;
+  --saybrook-forest-deep: #0f241e;
+  --saybrook-fern: #2d5d4a;
+  --saybrook-lake: #6f8f99;
+  --saybrook-mist: #d9e5df;
+  --saybrook-cream: #f5efe6;
+  --saybrook-sand: #ead9bf;
+  --saybrook-clay: #b88a5e;
+  --saybrook-ink: #10211c;
+  --saybrook-border: rgba(15, 36, 30, 0.16);
+  --saybrook-border-strong: rgba(15, 36, 30, 0.28);
+  --saybrook-panel: rgba(255, 253, 248, 0.92);
+  --saybrook-panel-soft: rgba(248, 243, 235, 0.92);
+  --saybrook-shadow: 0 28px 80px rgba(9, 20, 17, 0.14);
+  --saybrook-shadow-soft: 0 16px 36px rgba(9, 20, 17, 0.1);
+
   --font-sans: "Manrope", "Inter", system-ui, sans-serif;
   --font-display: "Fraunces", Georgia, serif;
 }
 
 @theme {
-  --color-ashtabula-primary: #17362d;
-  --color-ashtabula-secondary: #c28a3d;
-  --color-ashtabula-accent: #6f8f99;
-  --color-ashtabula-bg: #f5efe6;
-  --color-saybrook-forest: #17362d;
-  --color-saybrook-forest-deep: #0f241e;
-  --color-saybrook-fern: #2d5d4a;
-  --color-saybrook-lake: #6f8f99;
-  --color-saybrook-mist: #d9e5df;
-  --color-saybrook-cream: #f5efe6;
-  --color-saybrook-sand: #ead9bf;
-  --color-saybrook-clay: #b88a5e;
-  --color-saybrook-ink: #10211c;
-  --color-saybrook-border: rgba(23, 54, 45, 0.12);
+  /* Map Brand Colors to Utilities */
+  --color-saybrook-forest: var(--saybrook-forest);
+  --color-saybrook-forest-deep: var(--saybrook-forest-deep);
+  --color-saybrook-fern: var(--saybrook-fern);
+  --color-saybrook-lake: var(--saybrook-lake);
+  --color-saybrook-mist: var(--saybrook-mist);
+  --color-saybrook-cream: var(--saybrook-cream);
+  --color-saybrook-sand: var(--saybrook-sand);
+  --color-saybrook-clay: var(--saybrook-clay);
+  --color-saybrook-ink: var(--saybrook-ink);
+  
+  /* Map Interface Utilities */
+  --color-saybrook-border: var(--saybrook-border);
+  --color-saybrook-border-strong: var(--saybrook-border-strong);
+  --color-saybrook-panel: var(--saybrook-panel);
 }
 
 html {
@@ -49,7 +53,7 @@ body {
 
 @layer base {
   body {
-    @apply bg-ashtabula-bg text-slate-900 antialiased;
+    @apply bg-saybrook-cream text-slate-900 antialiased;
     font-family: var(--font-sans);
     background-image:
       radial-gradient(circle at top, rgba(111, 143, 153, 0.16), transparent 38%),
@@ -87,3 +91,4 @@ body {
     background: transparent;
   }
 }
+

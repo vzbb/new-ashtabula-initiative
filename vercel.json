@@ -22,10 +22,6 @@
       "dest": "/websites/sbdc-support-tools/dist/$1"
     },
     {
-      "src": "/insta-book-stripe/?(.*)",
-      "dest": "/websites/insta-book-stripe/dist/$1"
-    },
-    {
       "src": "/artist-commission/?(.*)",
       "dest": "/websites/artist-commission-form/dist/$1"
     },
@@ -44,6 +40,10 @@
     {
       "src": "/trumbull-locker/?(.*)",
       "dest": "/websites/trumbull-locker/dist/$1"
+    },
+    {
+      "src": "/saybrook-zoning/?(.*)",
+      "dest": "/websites/saybrook-zoning/dist/$1"
     },
     {
       "src": "/adaptive-reuse/?(.*)",
@@ -70,16 +70,12 @@
       "dest": "/websites/mytrip-planner-export/dist/$1"
     },
     {
-      "src": "/compassionate/?(.*)",
-      "dest": "/websites/compassionate-planner/dist/$1"
-    },
-    {
       "src": "/ai-docent-pro/?(.*)",
       "dest": "/websites/ai-docent-pro/dist/$1"
     },
     {
       "src": "/historian-pro/?(.*)",
-      "dest": "/websites/pocket-historian-pro/$1"
+      "dest": "/websites/pocket-historian-pro/dist/$1"
     },
     {
       "src": "/sommelier-pro/?(.*)",
@@ -114,20 +110,8 @@
       "dest": "/websites/eligibility-screener/dist/$1"
     },
     {
-      "src": "/grantgenius/?(.*)",
-      "dest": "/websites/grantgenius/dist/$1"
-    },
-    {
-      "src": "/box-builder/?(.*)",
-      "dest": "/websites/box-builder/dist/$1"
-    },
-    {
       "src": "/plating-pro/?(.*)",
       "dest": "/websites/plating-tracker-pro/dist/$1"
-    },
-    {
-      "src": "/contractors/?(.*)",
-      "dest": "/websites/contractor-match/$1"
     },
     {
       "src": "/fence-quote/?(.*)",
@@ -190,10 +174,6 @@
       "dest": "/websites/virtual-concierge/dist/$1"
     },
     {
-      "src": "/ai-docent/?(.*)",
-      "dest": "/websites/ai-docent/$1"
-    },
-    {
       "src": "/historian/?(.*)",
       "dest": "/websites/pocket-historian/dist/$1"
     },
@@ -216,10 +196,6 @@
     {
       "src": "/roofquote/?(.*)",
       "dest": "/websites/roofquote/dist/$1"
-    },
-    {
-      "src": "/cashflow/?(.*)",
-      "dest": "/websites/cashflow-tracker/$1"
     },
     {
       "src": "/landlord/?(.*)",
@@ -307,7 +283,7 @@
     },
     {
       "src": "/harbor/?(.*)",
-      "dest": "/websites/harbor-cam-dashboard/$1"
+      "dest": "/websites/harbor-cam-dashboard/dist/$1"
     },
     {
       "src": "/parts/?(.*)",

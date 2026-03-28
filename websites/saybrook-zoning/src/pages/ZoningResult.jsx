@@ -18,7 +18,7 @@ export function ZoningResult() {
   const propertyData = {
     address: decodeURIComponent(address),
     parcelId: '48-002-10-045-00',
-    saybrook-zoningDistrict: 'R-1 (Single-Family Residential)',
+    zoningDistrict: 'R-1 (Single-Family Residential)',
     description: 'This district is intended to provide for low-density residential development consisting primarily of single-family detached dwellings.',
     allowedUses: ['Single-family detached dwellings', 'Public parks and playgrounds', 'Home occupations (subject to Section 1105.02)'],
     conditionalUses: ['Churches and places of worship', 'Schools', 'Daycare centers'],
@@ -62,7 +62,7 @@ export function ZoningResult() {
             </div>
             <div className="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 text-center">
               <span className="block text-xs uppercase opacity-70 mb-1">Current Zone</span>
-              <span className="text-xl font-bold">{propertyData.saybrook-zoningDistrict.split(' ')[0]}</span>
+              <span className="text-xl font-bold">{propertyData.zoningDistrict.split(' ')[0]}</span>
             </div>
           </div>
         </div>

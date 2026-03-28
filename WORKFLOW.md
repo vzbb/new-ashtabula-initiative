@@ -19,11 +19,11 @@ Immediate focus:
 - deploy the materially improved MVP batch
 - verify the live routes
 - reconcile canonical documentation drift
-- keep the Saybrook demo request lane documented and easy to restart
+- keep the Saybrook request lane documented and easy to restart
 
 Current scan truth:
 - `SITEMAP.json` defines 75 public routes
-- 74 are currently source-backed
+- 75 are currently source-backed
 - retired routes should be removed from `SITEMAP.json`, rerendered into `SITEMAP.md`, and scrubbed from active screenshot/report surfaces together
 
 Canonical data note:
@@ -41,7 +41,7 @@ Saybrook request lane note:
 - start the local writer with `./nai saybrook-request-api --host 0.0.0.0 --port 18765`
 - the request queue DB is `data/saybrook-zoning-requests.db`
 - keep the request intake docs in `n8n/SAYBROOK_ZONING_REQUEST_FLOW.md` in sync with the workflow artifact
-- the live Saybrook UI should stay chat-first, keep the seal contained, and avoid any sign-header or demo/draft framing in the visible product
+- the live Saybrook UI should stay interaction-first, keep the seal contained, use the CivicSidebar + chat canvas + IntakeDrawer structure, and avoid any sign-header or demo/draft framing in the visible product
 
 Tooling note:
 - `NAI_TOOLCHAIN.json` is the canonical registry for which scripts are core, support, or legacy

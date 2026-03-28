@@ -70,7 +70,7 @@ export function CitationCard({ citation }) {
           href={citation.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-[color:var(--color-ashtabula-primary)] transition-opacity hover:opacity-80"
+          className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-saybrook-forest transition-opacity hover:opacity-80"
         >
           View source <ExternalLink size={10} />
         </a>

@@ -1,23 +1,7 @@
-import { ShieldCheck, MessageSquareText } from "lucide-react";
 import { ChatAssistant } from "./pages/ChatAssistant.jsx";
 import { TrusteeQueue } from "./pages/TrusteeQueue.jsx";
+import { CivicSidebar } from "./components/CivicSidebar.jsx";
 import "./App.css";
-
-const ASSET_BASE = import.meta.env.BASE_URL || "/";
-const saybrookSeal = `${ASSET_BASE}saybrook-seal.png`;
-
-const intakeSteps = [
-  { label: "1", title: "Ask", copy: "Start with zoning Q&A." },
-  { label: "2", title: "Attach", copy: "Optionally add 1-2 reference images." },
-  { label: "3", title: "Prepare", copy: "Convert the answer into a ready-to-send request." },
-  { label: "4", title: "Submit", copy: "Send it straight to the township queue." },
-];
-
-const trustNotes = [
-  { label: "Service", value: "Saybrook Township zoning intake" },
-  { label: "Answer style", value: "Cited, compact, plain English" },
-  { label: "Handoff", value: "Township-ready request queue" },
-];
 
 function getViewMode() {
   if (typeof window === "undefined") return "public";
@@ -48,70 +32,21 @@ function App() {
   }
 
   return (
-    <div className="saybrook-app">
-      <header className="saybrook-header">
-        <div className="saybrook-shell">
-          <div className="saybrook-topline">
-            <span>Saybrook Township zoning service</span>
-            <span>Resident questions, citations, and request handoff</span>
+    <div className="saybrook-app flex flex-col lg:flex-row h-screen overflow-hidden">
+      <CivicSidebar />
+      
+      <main className="flex-1 relative flex flex-col min-w-0 overflow-y-auto">
+        {/* Top decorative bar */}
+        <div className="h-1 bg-saybrook-forest shrink-0" />
+        
+        <div className="saybrook-main-container flex-1 flex flex-col p-4 md:p-8 lg:p-12">
+          <div className="max-w-5xl mx-auto w-full flex-1 flex flex-col">
+            <ChatAssistant />
           </div>
-        </div>
-      </header>
-
-      <main className="saybrook-shell saybrook-main">
-        <ChatAssistant />
-
-        <section className="saybrook-intro-panel saybrook-context-strip">
-          <div className="saybrook-intro-copy">
-            <p className="saybrook-eyebrow">Saybrook Township zoning clerk</p>
-            <h1 className="saybrook-hero-title saybrook-hero-title-small">
-              Ask the zoning question. Get the rule. Send the request.
-            </h1>
-            <p className="saybrook-hero-copytext">
-              Ask in plain English, review the cited code section, and if needed turn the answer
-              into a request for the township queue.
-            </p>
-
-            <div className="saybrook-badge-row">
-              <span className="saybrook-pill">
-                <ShieldCheck size={14} />
-                Live zoning answers
-              </span>
-              <span className="saybrook-pill">Optional image context</span>
-              <span className="saybrook-pill">
-                <MessageSquareText size={14} />
-                Queue handoff ready
-              </span>
-            </div>
-
-            <div className="saybrook-trust-row">
-              {trustNotes.map((note) => (
-                <div key={note.label} className="saybrook-trust-card">
-                  <span className="saybrook-trust-label">{note.label}</span>
-                  <span className="saybrook-trust-value">{note.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="saybrook-intro-seal-card" aria-hidden="true">
-            <div className="saybrook-intro-seal-frame">
-              <img className="saybrook-intro-seal" src={saybrookSeal} alt="" />
-            </div>
-            <p className="saybrook-intro-seal-note">Official township mark</p>
-          </div>
-        </section>
-
-        <div className="saybrook-step-grid">
-          {intakeSteps.map((step) => (
-            <div key={step.label} className="saybrook-step-card">
-              <span className="saybrook-step-badge">{step.label}</span>
-              <div className="saybrook-step-copy">
-                <p className="saybrook-step-title">{step.title}</p>
-                <p className="saybrook-step-text">{step.copy}</p>
-              </div>
-            </div>
-          ))}
+          
+          <footer className="mt-8 text-center text-[10px] uppercase tracking-[0.2em] text-saybrook-ink/40 font-bold pb-4">
+            Saybrook Township Zoning Workstation • Official Resident Service
+          </footer>
         </div>
       </main>
     </div>

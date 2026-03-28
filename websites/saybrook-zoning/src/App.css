@@ -1,23 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
 
-:root {
-  --saybrook-forest: #17362d;
-  --saybrook-forest-deep: #0f241e;
-  --saybrook-fern: #2d5d4a;
-  --saybrook-lake: #6f8f99;
-  --saybrook-mist: #d9e5df;
-  --saybrook-cream: #f5efe6;
-  --saybrook-sand: #ead9bf;
-  --saybrook-clay: #b88a5e;
-  --saybrook-ink: #10211c;
-  --saybrook-border: rgba(15, 36, 30, 0.16);
-  --saybrook-border-strong: rgba(15, 36, 30, 0.28);
-  --saybrook-panel: rgba(255, 253, 248, 0.92);
-  --saybrook-panel-soft: rgba(248, 243, 235, 0.92);
-  --saybrook-shadow: 0 28px 80px rgba(9, 20, 17, 0.14);
-  --saybrook-shadow-soft: 0 16px 36px rgba(9, 20, 17, 0.1);
-}
-
 .saybrook-app {
   position: relative;
   min-height: 100vh;
@@ -730,59 +712,57 @@
   word-break: break-word;
 }
 
-@media (max-width: 1100px) {
-  .saybrook-shell {
-    width: min(100vw - 1.4rem, 1320px);
-  }
-
-  .saybrook-intro-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .saybrook-trust-row {
-    grid-template-columns: 1fr;
+/* Responsive Municipal Shell */
+@media (max-width: 1023px) {
+  .saybrook-app {
+    height: 100vh;
+    height: 100dvh;
   }
 
   .saybrook-chat-shell {
     width: 100%;
-    min-height: 68vh;
+    min-height: 0;
+    flex: 1;
+    border-radius: 1.5rem 1.5rem 0 0;
+    border-bottom: 0;
+  }
+
+  .saybrook-main-container {
+    padding: 1rem !important;
+    gap: 1rem;
+  }
+  
+  .saybrook-chat-title {
+    font-size: 1.1rem;
+  }
+  
+  .saybrook-chat-subtitle {
+    display: none; /* Hide subtitle on mobile to save space */
   }
 }
 
-@media (max-width: 720px) {
-  .saybrook-topline {
-    font-size: 0.64rem;
-    letter-spacing: 0.16em;
-  }
-
-  .saybrook-sidebar {
-    grid-template-columns: 1fr;
-  }
-
-  .saybrook-sidebar-title {
-    font-size: clamp(1.8rem, 8vw, 2.5rem);
-  }
-
-  .saybrook-chat-header,
-  .saybrook-composer-head,
-  .saybrook-composer-meta {
+@media (max-width: 640px) {
+  .saybrook-chat-header {
+    flex-direction: column;
     align-items: flex-start;
+    gap: 0.5rem;
   }
-
-  .saybrook-chat-brand {
-    width: 100%;
-  }
-
-  .saybrook-chat-title {
-    font-size: 1.25rem;
-  }
-
-  .saybrook-chat-shell {
-    min-height: 68vh;
+  
+  .saybrook-chat-status {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.6rem;
   }
 
   .saybrook-composer-row input {
-    min-height: 3.9rem;
-    font-size: 1rem;
+    min-height: 3.5rem;
+    font-size: 0.95rem;
+    padding-right: 4.5rem;
+  }
+
+  .saybrook-composer-send {
+    width: 2.8rem;
+    height: 2.8rem;
+    top: 0.35rem;
+    right: 0.35rem;
   }
 }

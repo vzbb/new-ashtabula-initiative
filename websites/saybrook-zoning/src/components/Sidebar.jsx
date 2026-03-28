@@ -63,12 +63,16 @@ export function Sidebar() {
                 : "hover:bg-white/5 text-white/70 hover:text-white"
             )}
           >
-            <item.icon size={22} className={cn(
-              "shrink-0 transition-colors",
-              "group-hover:text-ashtabula-secondary"
-            )} />
-            {isOpen && <span className="truncate">{item.label}</span>}
-            {isActive && <div className="absolute right-0 top-0 bottom-0 w-1 bg-white" />}
+            {({ isActive }) => (
+              <>
+                <item.icon size={22} className={cn(
+                  "shrink-0 transition-colors",
+                  "group-hover:text-ashtabula-secondary"
+                )} />
+                {isOpen && <span className="truncate">{item.label}</span>}
+                {isActive && <div className="absolute right-0 top-0 bottom-0 w-1 bg-white" />}
+              </>
+            )}
           </NavLink>
         ))}
       </nav>

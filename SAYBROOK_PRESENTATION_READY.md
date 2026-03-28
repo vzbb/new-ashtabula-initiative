@@ -2,12 +2,13 @@
 
 This is the shortest path to a clean live presentation of `saybrook-zoning`.
 
-The current live UI is chat-first:
+The current UI is a split-screen municipal workstation:
 
-- the chatbot is the primary visible surface
-- the township seal is a contained trust anchor, not a competing hero
+- the CivicSidebar holds the township seal and system status
+- the chatbot occupies the primary interaction canvas
+- the IntakeDrawer handles the official submission flow
 - the sign header has been removed
-- the request handoff and queue view sit below the main Q&A surface
+- the request handoff and queue view stay secondary to the main Q&A surface
 
 ### Live pieces
 
@@ -90,3 +91,4 @@ https://new-ashtabula-initiative.vercel.app/saybrook-zoning/?view=trustees
 - AI-assisted request formalization
 - structured township queue handoff
 - internal trustee/staff visibility without adding a heavy admin system
+- an official civic workstation layout rather than a brochure-style landing page

@@ -122,7 +122,3 @@ export function DocumentCenter() {
     </div>
   );
 }
-
-function cn(...inputs) {
-  return inputs.filter(Boolean).join(' ');
-}
