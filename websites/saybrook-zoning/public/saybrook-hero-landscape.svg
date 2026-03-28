@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Saybrook Township inspired civic landscape">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eef2ef" />
+      <stop offset="44%" stop-color="#dbe5de" />
+      <stop offset="100%" stop-color="#c6d0c8" />
+    </linearGradient>
+    <linearGradient id="horizon" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7f9283" stop-opacity="0.18" />
+      <stop offset="45%" stop-color="#60726a" stop-opacity="0.34" />
+      <stop offset="100%" stop-color="#3c4c47" stop-opacity="0.22" />
+    </linearGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#17232c" stop-opacity="0.14" />
+      <stop offset="100%" stop-color="#0e151b" stop-opacity="0.42" />
+    </linearGradient>
+    <linearGradient id="signFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16304a" stop-opacity="0.94" />
+      <stop offset="100%" stop-color="#274961" stop-opacity="0.92" />
+    </linearGradient>
+    <linearGradient id="paperGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7" />
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#132028" flood-opacity="0.26" />
+    </filter>
+    <pattern id="topo" width="240" height="240" patternUnits="userSpaceOnUse">
+      <path d="M-20 50 C 30 10, 85 10, 140 48 S 250 90, 290 40" fill="none" stroke="#19313a" stroke-opacity="0.08" stroke-width="2" />
+      <path d="M-20 98 C 30 58, 90 60, 140 92 S 250 138, 290 90" fill="none" stroke="#19313a" stroke-opacity="0.07" stroke-width="2" />
+      <path d="M-20 150 C 28 116, 88 118, 140 150 S 246 195, 290 144" fill="none" stroke="#19313a" stroke-opacity="0.06" stroke-width="2" />
+      <path d="M-20 204 C 28 166, 84 168, 140 200 S 246 246, 290 198" fill="none" stroke="#19313a" stroke-opacity="0.05" stroke-width="2" />
+      <path d="M40 -24 C 80 18, 112 42, 148 90 S 208 176, 228 236" fill="none" stroke="#19313a" stroke-opacity="0.04" stroke-width="2" />
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)" />
+  <rect width="1600" height="900" fill="url(#topo)" opacity="0.75" />
+
+  <g opacity="0.96">
+    <path d="M0 400 C 240 350, 380 378, 590 340 C 760 310, 900 270, 1135 302 C 1320 328, 1450 378, 1600 352 L 1600 900 L 0 900 Z" fill="url(#horizon)" />
+    <path d="M0 464 C 240 420, 388 448, 560 420 C 770 386, 928 366, 1110 400 C 1260 428, 1415 473, 1600 452 L 1600 900 L 0 900 Z" fill="#8fa08f" fill-opacity="0.18" />
+    <path d="M0 540 C 205 492, 386 526, 556 518 C 737 509, 910 474, 1110 510 C 1298 544, 1466 584, 1600 564 L 1600 900 L 0 900 Z" fill="#60726a" fill-opacity="0.18" />
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M170 706 C 305 650, 430 615, 565 596 C 675 579, 783 570, 903 578 C 1010 586, 1120 604, 1245 646" fill="none" stroke="url(#road)" stroke-width="68" stroke-linecap="round" />
+    <path d="M170 706 C 305 650, 430 615, 565 596 C 675 579, 783 570, 903 578 C 1010 586, 1120 604, 1245 646" fill="none" stroke="#f8f1de" stroke-opacity="0.32" stroke-width="4" stroke-linecap="round" stroke-dasharray="22 22" />
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(1030 410) rotate(2)">
+    <rect x="0" y="0" width="330" height="206" rx="26" fill="url(#signFace)" />
+    <rect x="18" y="16" width="294" height="174" rx="20" fill="none" stroke="#d8e3db" stroke-opacity="0.28" stroke-width="2" />
+    <rect x="42" y="204" width="16" height="240" rx="8" fill="#4e5c58" fill-opacity="0.9" />
+    <rect x="268" y="204" width="16" height="240" rx="8" fill="#4e5c58" fill-opacity="0.9" />
+    <path d="M34 66 H296" stroke="#dfe7dd" stroke-opacity="0.36" stroke-width="2" />
+    <text x="165" y="82" text-anchor="middle" fill="#f2f4ef" font-size="28" font-weight="700" letter-spacing="6" font-family="Georgia, 'Times New Roman', serif">SAYBROOK</text>
+    <text x="165" y="118" text-anchor="middle" fill="#c8d7d1" font-size="15" font-weight="700" letter-spacing="4" font-family="Arial, Helvetica, sans-serif">TOWNSHIP</text>
+    <text x="165" y="151" text-anchor="middle" fill="#f2efe4" font-size="17" font-weight="700" letter-spacing="2" font-family="Arial, Helvetica, sans-serif">DRAFT CODE GUIDANCE</text>
+  </g>
+
+  <ellipse cx="1240" cy="250" rx="160" ry="100" fill="url(#paperGlow)" opacity="0.28" filter="url(#softBlur)" />
+  <ellipse cx="355" cy="200" rx="180" ry="120" fill="#ffffff" opacity="0.22" filter="url(#softBlur)" />
+
+  <g opacity="0.18">
+    <path d="M90 314 C 200 292, 300 286, 410 298" fill="none" stroke="#fffef8" stroke-width="2" />
+    <path d="M1320 302 C 1415 286, 1505 286, 1590 300" fill="none" stroke="#fffef8" stroke-width="2" />
+  </g>
+</svg>

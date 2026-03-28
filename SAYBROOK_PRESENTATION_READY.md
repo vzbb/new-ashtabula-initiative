@@ -1,0 +1,92 @@
+## Saybrook Presentation Ready
+
+This is the shortest path to a clean live presentation of `saybrook-zoning`.
+
+The current live UI is chat-first:
+
+- the chatbot is the primary visible surface
+- the township seal is a contained trust anchor, not a competing hero
+- the sign header has been removed
+- the request handoff and queue view sit below the main Q&A surface
+
+### Live pieces
+
+- Public RAG query webhook:
+  - `https://flow.noirsys.com/webhook/saybrook-zoning-query`
+- Request intake webhook:
+  - `https://flow.noirsys.com/webhook/saybrook-zoning-request`
+- Trustee request list webhook:
+  - `https://flow.noirsys.com/webhook/saybrook-zoning-trustee-requests`
+- Local SQLite writer:
+  - `./nai saybrook-request-api --host 0.0.0.0 --port 18765`
+
+Imported workflow sources:
+
+- `n8n/saybrook-zoning-request-intake.workflow.json`
+- `n8n/saybrook-zoning-trustee-requests.workflow.json`
+
+### Frontend env
+
+Set these for `websites/saybrook-zoning`:
+
+```bash
+VITE_SAYBROOK_RAG_API_URL=https://flow.noirsys.com/webhook/saybrook-zoning-query
+VITE_SAYBROOK_REQUEST_API_URL=https://flow.noirsys.com/webhook/saybrook-zoning-request
+VITE_SAYBROOK_REQUESTS_API_URL=https://flow.noirsys.com/webhook/saybrook-zoning-trustee-requests
+```
+
+Optional health URLs are not required for the presentation. If the webhook URLs are present,
+the app now treats the request surfaces as live-capable by default.
+
+### n8n request flow
+
+The request intake flow should POST normalized records to:
+
+```text
+http://host.docker.internal:18765/saybrook-zoning-request
+```
+
+If your Docker network prefers service names instead of host passthrough, update this
+to the host-accessible path that works from inside `n8n`.
+
+### n8n trustee list flow
+
+The trustee list flow should GET from:
+
+```text
+http://host.docker.internal:18765/requests?limit=25
+```
+
+### Hidden trustee view
+
+Any of these should open the internal queue view:
+
+- `?view=trustees`
+- `#trustees`
+- any path containing `trustee`
+- any path containing `queue`
+
+Example:
+
+```text
+https://new-ashtabula-initiative.vercel.app/saybrook-zoning/?view=trustees
+```
+
+### Demo path
+
+1. Ask a real zoning question.
+2. Show the cited answer.
+3. Add one or two images.
+4. Fill contact info.
+5. Prepare the formal request packet.
+6. Submit to township queue.
+7. Open the hidden trustee page and refresh.
+8. Show the newly queued request card.
+
+### What this demonstrates
+
+- modern resident-facing zoning guidance
+- citation-backed retrieval over the actual Saybrook code
+- AI-assisted request formalization
+- structured township queue handoff
+- internal trustee/staff visibility without adding a heavy admin system

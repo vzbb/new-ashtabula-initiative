@@ -1,0 +1,788 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --saybrook-forest: #17362d;
+  --saybrook-forest-deep: #0f241e;
+  --saybrook-fern: #2d5d4a;
+  --saybrook-lake: #6f8f99;
+  --saybrook-mist: #d9e5df;
+  --saybrook-cream: #f5efe6;
+  --saybrook-sand: #ead9bf;
+  --saybrook-clay: #b88a5e;
+  --saybrook-ink: #10211c;
+  --saybrook-border: rgba(15, 36, 30, 0.16);
+  --saybrook-border-strong: rgba(15, 36, 30, 0.28);
+  --saybrook-panel: rgba(255, 253, 248, 0.92);
+  --saybrook-panel-soft: rgba(248, 243, 235, 0.92);
+  --saybrook-shadow: 0 28px 80px rgba(9, 20, 17, 0.14);
+  --saybrook-shadow-soft: 0 16px 36px rgba(9, 20, 17, 0.1);
+}
+
+.saybrook-app {
+  position: relative;
+  min-height: 100vh;
+  overflow: clip;
+  background:
+    radial-gradient(circle at top right, rgba(111, 143, 153, 0.24), transparent 24rem),
+    radial-gradient(circle at left bottom, rgba(184, 138, 94, 0.18), transparent 28rem),
+    linear-gradient(180deg, #f7f0e6 0%, #f2eadc 45%, #f6f1e8 100%);
+}
+
+.saybrook-app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12)),
+    linear-gradient(90deg, rgba(15, 36, 30, 0.025) 1px, transparent 1px),
+    linear-gradient(rgba(15, 36, 30, 0.025) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 88%);
+}
+
+.saybrook-shell {
+  width: min(1320px, calc(100vw - 2rem));
+  margin: 0 auto;
+}
+
+.saybrook-header {
+  padding: 0.8rem 0 0.4rem;
+}
+
+.saybrook-topline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(15, 36, 30, 0.97), rgba(23, 54, 45, 0.97));
+  color: rgba(255, 251, 244, 0.92);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 30px rgba(9, 20, 17, 0.16);
+}
+
+.saybrook-topline span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.saybrook-topline span::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgba(234, 217, 191, 0.92);
+  box-shadow: 0 0 0 7px rgba(234, 217, 191, 0.12);
+}
+
+.saybrook-main {
+  padding: 0.35rem 0 1.5rem;
+}
+
+.saybrook-intro-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.95rem;
+  border-radius: 1.6rem;
+  border: 1px solid rgba(15, 36, 30, 0.12);
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.94), rgba(245, 239, 230, 0.98));
+  box-shadow: var(--saybrook-shadow-soft);
+}
+
+.saybrook-intro-copy {
+  min-width: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.saybrook-eyebrow {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(16, 33, 28, 0.56);
+}
+
+.saybrook-hero-title {
+  margin: 0;
+  max-width: 18ch;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2.25rem, 4vw, 3.35rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
+  color: var(--saybrook-ink);
+}
+
+.saybrook-hero-title-small {
+  max-width: 24ch;
+  font-size: clamp(1.9rem, 3vw, 2.55rem);
+  line-height: 0.98;
+}
+
+.saybrook-hero-copytext {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(16, 33, 28, 0.76);
+}
+
+.saybrook-trust-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.35rem;
+}
+
+.saybrook-trust-card {
+  display: grid;
+  gap: 0.25rem;
+  border-radius: 1.05rem;
+  border: 1px solid rgba(15, 36, 30, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.85rem 0.9rem;
+}
+
+.saybrook-trust-label {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(16, 33, 28, 0.48);
+}
+
+.saybrook-trust-value {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  color: rgba(16, 33, 28, 0.84);
+}
+
+.saybrook-intro-seal-card {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.6rem;
+  border-radius: 1.35rem;
+  border: 1px solid rgba(15, 36, 30, 0.12);
+  background:
+    radial-gradient(circle at center, rgba(111, 143, 153, 0.14), transparent 48%),
+    linear-gradient(180deg, rgba(247, 241, 232, 0.98), rgba(242, 235, 224, 0.98));
+  min-height: 100%;
+  padding: 1rem;
+}
+
+.saybrook-intro-seal-frame {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 10rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(15, 36, 30, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.18));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.saybrook-intro-seal {
+  width: min(10rem, 100%);
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(16, 33, 28, 0.16));
+}
+
+.saybrook-intro-seal-note {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(16, 33, 28, 0.56);
+}
+
+.saybrook-console {
+  display: grid;
+  grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.saybrook-sidebar {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.saybrook-sidebar-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.65rem;
+  border: 1px solid var(--saybrook-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(245, 239, 229, 0.98));
+  box-shadow: var(--saybrook-shadow-soft);
+  padding: 1.1rem;
+}
+
+.saybrook-sidebar-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), transparent 35%);
+}
+
+.saybrook-sidebar-card-primary {
+  background:
+    radial-gradient(circle at top right, rgba(111, 143, 153, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(15, 36, 30, 0.985), rgba(23, 54, 45, 0.975));
+  border-color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 252, 246, 0.94);
+  box-shadow: 0 26px 60px rgba(9, 20, 17, 0.24);
+}
+
+.saybrook-sidebar-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(16, 33, 28, 0.58);
+}
+
+.saybrook-sidebar-card-primary .saybrook-sidebar-kicker {
+  color: rgba(234, 217, 191, 0.88);
+}
+
+.saybrook-sidebar-title {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2rem, 2.9vw, 3rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  color: #fff;
+}
+
+.saybrook-sidebar-copy {
+  margin: 0.9rem 0 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: rgba(255, 248, 240, 0.82);
+}
+
+.saybrook-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.saybrook-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 36, 30, 0.16);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.7rem 0.95rem;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: rgba(16, 33, 28, 0.9);
+  box-shadow: 0 10px 24px rgba(9, 20, 17, 0.08);
+}
+
+.saybrook-sidebar-card-primary .saybrook-pill {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 252, 246, 0.94);
+  box-shadow: none;
+}
+
+.saybrook-signal-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.saybrook-signal-card {
+  display: grid;
+  gap: 0.25rem;
+  border-radius: 1.05rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  padding: 0.8rem 0.9rem;
+}
+
+.saybrook-signal-label {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(234, 217, 191, 0.8);
+}
+
+.saybrook-signal-value {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: rgba(255, 252, 246, 0.94);
+}
+
+.saybrook-seal-panel {
+  display: grid;
+  gap: 0.9rem;
+  min-height: 16rem;
+  background:
+    radial-gradient(circle at center, rgba(111, 143, 153, 0.15), transparent 42%),
+    linear-gradient(180deg, rgba(248, 243, 235, 0.96), rgba(242, 235, 224, 0.98));
+}
+
+.saybrook-seal-panel-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.saybrook-seal-title {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: var(--saybrook-ink);
+}
+
+.saybrook-seal-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 10rem;
+}
+
+.saybrook-seal-frame::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border-radius: 1.3rem;
+  border: 1px solid rgba(15, 36, 30, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.18));
+}
+
+.saybrook-seal-mark {
+  position: relative;
+  z-index: 1;
+  width: min(12.5rem, 100%);
+  height: auto;
+  filter: drop-shadow(0 14px 26px rgba(16, 33, 28, 0.12));
+}
+
+.saybrook-step-stack {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.saybrook-step-card {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  padding: 0.9rem 0.95rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(15, 36, 30, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.saybrook-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(15, 36, 30, 0.98), rgba(23, 54, 45, 0.95));
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.saybrook-step-copy {
+  min-width: 0;
+}
+
+.saybrook-step-title {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--saybrook-forest);
+}
+
+.saybrook-step-text {
+  margin: 0.35rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(16, 33, 28, 0.8);
+}
+
+.saybrook-chat-column {
+  min-width: 0;
+  display: flex;
+}
+
+.saybrook-chat-shell {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 980px);
+  margin: 0 auto;
+  border-radius: 1.85rem;
+  border: 1px solid var(--saybrook-border-strong);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(247, 241, 232, 0.98));
+  box-shadow: var(--saybrook-shadow);
+  overflow: hidden;
+  min-height: clamp(620px, calc(100vh - 10rem), 900px);
+}
+
+.saybrook-chat-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(111, 143, 153, 0.12), transparent 28%),
+    radial-gradient(circle at 96% 0%, rgba(184, 138, 94, 0.12), transparent 32%);
+}
+
+.saybrook-chat-topbar {
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(15, 36, 30, 0.985), rgba(23, 54, 45, 0.965));
+}
+
+.saybrook-chat-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.saybrook-chat-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.saybrook-chat-heading {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.saybrook-chat-kicker {
+  margin: 0;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(234, 217, 191, 0.88);
+}
+
+.saybrook-chat-title {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.18rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.saybrook-chat-subtitle {
+  margin: 0;
+  max-width: 30rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(255, 248, 240, 0.76);
+}
+
+.saybrook-chat-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 248, 240, 0.84);
+}
+
+.saybrook-chat-status-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  box-shadow: 0 0 0 8px rgba(111, 143, 153, 0.1);
+}
+
+.saybrook-chat-status-dot[data-state="live"] {
+  background: #49b96d;
+}
+
+.saybrook-chat-status-dot[data-state="warm"] {
+  background: #d2a54e;
+}
+
+.saybrook-chat-status-dot[data-state="soft"] {
+  background: #88a5ae;
+}
+
+.saybrook-chat-stream {
+  position: relative;
+  flex: 1;
+  background:
+    radial-gradient(circle at 6% 8%, rgba(111, 143, 153, 0.04), transparent 28%),
+    linear-gradient(180deg, rgba(255, 255, 254, 0.995), rgba(246, 241, 234, 0.98));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.saybrook-chat-footer {
+  position: relative;
+  border-top: 1px solid rgba(15, 36, 30, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 241, 232, 0.98));
+}
+
+.saybrook-composer-shell {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(15, 36, 30, 0.18);
+  background: linear-gradient(180deg, rgba(250, 253, 249, 0.99), rgba(242, 248, 243, 0.98));
+  box-shadow: 0 18px 36px rgba(9, 20, 17, 0.1);
+  padding: 1rem;
+}
+
+.saybrook-composer-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.saybrook-composer-kicker {
+  margin: 0 0 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(16, 33, 28, 0.56);
+}
+
+.saybrook-composer-title {
+  margin: 0;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--saybrook-ink);
+}
+
+.saybrook-composer-copy {
+  margin: 0.3rem 0 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(16, 33, 28, 0.72);
+}
+
+.saybrook-composer-signal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 36, 30, 0.12);
+  background: rgba(23, 54, 45, 0.06);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--saybrook-forest);
+}
+
+.saybrook-composer-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.saybrook-composer-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(16, 33, 28, 0.7);
+}
+
+.saybrook-composer-row {
+  position: relative;
+}
+
+.saybrook-composer-row input {
+  width: 100%;
+  min-height: 4rem;
+  padding: 0 5.4rem 0 1.35rem;
+  border-radius: 1.35rem;
+  border: 1px solid rgba(15, 36, 30, 0.18);
+  background: #fffdf9;
+  color: var(--saybrook-ink);
+  font-size: 1.08rem;
+  font-weight: 600;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.saybrook-composer-row input::placeholder {
+  color: rgba(16, 33, 28, 0.42);
+  font-weight: 500;
+}
+
+.saybrook-composer-row input:focus {
+  outline: none;
+  border-color: rgba(15, 36, 30, 0.38);
+  box-shadow:
+    0 0 0 4px rgba(23, 54, 45, 0.08),
+    0 18px 36px rgba(9, 20, 17, 0.08);
+  background: #ffffff;
+}
+
+.saybrook-composer-send {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 0;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(15, 36, 30, 1), rgba(23, 54, 45, 0.96));
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(15, 36, 30, 0.24);
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.saybrook-composer-send:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(15, 36, 30, 0.3);
+}
+
+.saybrook-composer-send:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+.saybrook-composer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+}
+
+.saybrook-composer-note {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: rgba(16, 33, 28, 0.62);
+}
+
+.saybrook-prompt-shell {
+  margin-top: 0.85rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(15, 36, 30, 0.1);
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.75rem 0.85rem;
+  box-shadow: 0 10px 20px rgba(9, 20, 17, 0.04);
+}
+
+.saybrook-queue-panel {
+  border-radius: 1.55rem;
+  border: 1px solid rgba(15, 36, 30, 0.12);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 243, 235, 0.96));
+  box-shadow: 0 14px 32px rgba(9, 20, 17, 0.08);
+}
+
+.saybrook-queue-panel pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 1100px) {
+  .saybrook-shell {
+    width: min(100vw - 1.4rem, 1320px);
+  }
+
+  .saybrook-intro-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .saybrook-trust-row {
+    grid-template-columns: 1fr;
+  }
+
+  .saybrook-chat-shell {
+    width: 100%;
+    min-height: 68vh;
+  }
+}
+
+@media (max-width: 720px) {
+  .saybrook-topline {
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+  }
+
+  .saybrook-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .saybrook-sidebar-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .saybrook-chat-header,
+  .saybrook-composer-head,
+  .saybrook-composer-meta {
+    align-items: flex-start;
+  }
+
+  .saybrook-chat-brand {
+    width: 100%;
+  }
+
+  .saybrook-chat-title {
+    font-size: 1.25rem;
+  }
+
+  .saybrook-chat-shell {
+    min-height: 68vh;
+  }
+
+  .saybrook-composer-row input {
+    min-height: 3.9rem;
+    font-size: 1rem;
+  }
+}
