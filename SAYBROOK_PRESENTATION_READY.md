@@ -18,8 +18,8 @@ The current UI is a split-screen municipal workstation:
   - `https://flow.noirsys.com/webhook/saybrook-zoning-request`
 - Trustee request list webhook:
   - `https://flow.noirsys.com/webhook/saybrook-zoning-trustee-requests`
-- Local SQLite writer:
-  - `./nai saybrook-request-api --host 0.0.0.0 --port 18765`
+- n8n Data Table:
+  - Saybrook request records are stored in the shared n8n Data Table used by both the intake and trustee workflows
 
 Imported workflow sources:
 
@@ -41,22 +41,26 @@ the app now treats the request surfaces as live-capable by default.
 
 ### n8n request flow
 
-The request intake flow should POST normalized records to:
+The request intake flow should insert the normalized record into the Saybrook request
+Data Table immediately after the normalization node.
 
-```text
-http://host.docker.internal:18765/saybrook-zoning-request
-```
-
-If your Docker network prefers service names instead of host passthrough, update this
-to the host-accessible path that works from inside `n8n`.
+Recommended row operation:
+- Resource: `Row`
+- Operation: `Insert`
+- Data table: `Saybrook Zoning Requests`
+- Mapping mode: `Map Automatically` when the normalized field names already match the
+  table columns; otherwise map manually.
 
 ### n8n trustee list flow
 
-The trustee list flow should GET from:
+The trustee list flow should read from the same Saybrook request Data Table.
 
-```text
-http://host.docker.internal:18765/requests?limit=25
-```
+Recommended row operation:
+- Resource: `Row`
+- Operation: `Get`
+- Data table: `Saybrook Zoning Requests`
+- Order By: `submitted_at` descending
+- Limit: `25`
 
 ### Hidden trustee view
 

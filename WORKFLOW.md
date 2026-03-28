@@ -36,11 +36,11 @@ Canonical data note:
   - run `./nai routes` if route data changed
 
 Saybrook request lane note:
-- Saybrook request intake uses a tiny local Python service that writes into SQLite
-- the request webhook forwards to `http://host.docker.internal:18765/saybrook-zoning-request`
-- start the local writer with `./nai saybrook-request-api --host 0.0.0.0 --port 18765`
-- the request queue DB is `data/saybrook-zoning-requests.db`
+- Saybrook request intake now uses n8n Data Tables as the shared row store for resident requests
+- the request workflow should insert normalized rows into the Saybrook request Data Table
+- the trustee workflow should fetch rows back from the same table for the hidden queue view
 - keep the request intake docs in `n8n/SAYBROOK_ZONING_REQUEST_FLOW.md` in sync with the workflow artifact
+- keep the trustee read-side docs in `n8n/SAYBROOK_ZONING_TRUSTEE_REQUESTS.md` in sync with the workflow artifact
 - the live Saybrook UI should stay interaction-first, keep the seal contained, use the CivicSidebar + chat canvas + IntakeDrawer structure, and avoid any sign-header or demo/draft framing in the visible product
 
 Tooling note:

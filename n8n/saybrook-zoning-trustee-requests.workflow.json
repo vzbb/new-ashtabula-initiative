@@ -1,0 +1,123 @@
+{
+  "name": "Saybrook Zoning - Trustee Requests",
+  "nodes": [
+    {
+      "id": "trustee-webhook",
+      "name": "Trustee Requests Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        280
+      ],
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "saybrook-zoning-trustee-requests",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "load-requests",
+      "name": "Load Requests",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1,
+      "position": [
+        520,
+        280
+      ],
+      "parameters": {
+        "operation": "get",
+        "returnAll": true,
+        "dataTableId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Saybrook Zoning Requests",
+          "cachedResultName": "Saybrook Zoning Requests"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "format-requests",
+      "name": "Format Requests",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        790,
+        280
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "mode": "runOnceForAllItems",
+        "jsCode": "const rows = $input.all().map(({ json }) => json).filter(Boolean);\nconst toTime = (row) => {\n  const value = row.submitted_at || row.submittedAt || row.created_at || row.createdAt || row.updated_at || row.updatedAt || '';\n  const time = Date.parse(value);\n  return Number.isFinite(time) ? time : 0;\n};\nconst requests = rows\n  .slice()\n  .sort((a, b) => toTime(b) - toTime(a))\n  .slice(0, 25)\n  .map((row, index) => ({\n    id: row.id ?? row.rowId ?? index + 1,\n    submitted_at: row.submitted_at || row.submittedAt || '',\n    applicant_name: row.applicant_name || row.applicantName || '',\n    property_address: row.property_address || row.propertyAddress || '',\n    project_type: row.project_type || row.projectType || '',\n    specific_question: row.specific_question || row.specificQuestion || '',\n    status: row.status || 'new',\n    slug: row.slug || 'saybrook-zoning',\n    jurisdiction: row.jurisdiction || 'Saybrook Township',\n    email: row.email || '',\n    phone: row.phone || '',\n    preferred_contact: row.preferred_contact || row.preferredContact || '',\n    project_summary: row.project_summary || row.projectSummary || '',\n    ai_summary: row.ai_summary || row.aiSummary || '',\n    source_answer: row.source_answer || row.sourceAnswer || '',\n    source_citations_json: row.source_citations_json || '[]',\n    attachments_json: row.attachments_json || '[]',\n    chat_transcript_json: row.chat_transcript_json || '[]'\n  }));\nreturn [{ json: { ok: true, count: requests.length, requests, source: 'saybrook-zoning-trustee-requests' } }];"
+      }
+    },
+    {
+      "id": "respond-requests",
+      "name": "Respond Requests",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        1040,
+        280
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Trustee Requests Webhook": {
+      "main": [
+        [
+          {
+            "node": "Load Requests",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Load Requests": {
+      "main": [
+        [
+          {
+            "node": "Format Requests",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Requests": {
+      "main": [
+        [
+          {
+            "node": "Respond Requests",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "saybrook-zoning"
+    },
+    {
+      "name": "trustee"
+    },
+    {
+      "name": "requests"
+    }
+  ]
+}

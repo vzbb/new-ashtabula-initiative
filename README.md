@@ -42,10 +42,9 @@ Canonical sitemap workflow:
 
 Saybrook request lane:
 - `Qdrant` stores the zoning-code retrieval vectors
-- `SQLite` stores the request-intake records
-- run `./nai saybrook-request-api --host 0.0.0.0 --port 18765` to serve the local request writer
-- the request intake workflow posts to `http://host.docker.internal:18765/saybrook-zoning-request` by default
-- the local queue DB lives at `data/saybrook-zoning-requests.db`
+- n8n Data Tables store the request-intake records and power the trustee queue view
+- the request intake workflow inserts rows into the Saybrook request Data Table
+- the trustee workflow reads rows back from the same Data Table for the hidden review page
 - the live Saybrook experience is an interaction-first municipal workstation with a CivicSidebar, a right-side chat canvas, and an IntakeDrawer for official submission
 - the township seal remains as a contained trust anchor, not a competing hero element
 
