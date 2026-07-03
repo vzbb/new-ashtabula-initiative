@@ -1,0 +1,175 @@
+{
+  "mvp": "harbor",
+  "mvp_name": "Harbor Cam Dashboard",
+  "research_date": "2026-03-24",
+  "target_buyers": [
+    {
+      "priority": 1,
+      "organization": "Ashtabula Yacht Club",
+      "type": "Yacht Club / Marina",
+      "website": "https://www.aycohio.com",
+      "fit_rationale": "Premier yacht club with 200+ members and 140 docks located directly on the Ashtabula River at historic Bridge Street. Already integrated into the harbor ecosystem and would benefit from harbor cam visibility for member safety and dock scheduling. High engagement boating community that values real-time harbor conditions.",
+      "contacts": [
+        {
+          "name": "Jeff Pritchard",
+          "title": "Commodore (President)",
+          "email": null,
+          "phone": "440-964-3129",
+          "linkedin": null,
+          "notes": "Primary decision maker. Joanne Pritchard (likely spouse) manages website content. Contact via club email or phone."
+        },
+        {
+          "name": "Chris Chmura",
+          "title": "Vice Commodore",
+          "email": null,
+          "phone": null,
+          "notes": "Secondary contact, second in command"
+        },
+        {
+          "name": "Anne Bugansky",
+          "title": "Fleet Captain",
+          "email": null,
+          "phone": "440-661-2984",
+          "notes": "Fleet operations contact - directly relevant for harbor cam coordination"
+        },
+        {
+          "name": "Joanne Pritchard",
+          "title": "Webmaster/Content Manager",
+          "email": null,
+          "phone": null,
+          "notes": "Manages website updates - technical implementation contact"
+        }
+      ],
+      "emails_found": [
+        {
+          "email": "aycohio22@gmail.com",
+          "source": "Website footer - https://www.aycohio.com",
+          "confidence": "high",
+          "type": "general"
+        },
+        {
+          "email": "aycohio@aycohio.com",
+          "source": "Sail-Clubs directory",
+          "confidence": "medium",
+          "type": "general"
+        }
+      ],
+      "phones": [
+        "440-964-3129 (main)",
+        "440-661-2984 (Fleet Captain)"
+      ],
+      "address": "970 West 5th Street, Ashtabula, OH 44004",
+      "social": {
+        "facebook": "https://www.facebook.com/groups/389061425659494"
+      },
+      "outreach_strategy": "Contact via aycohio22@gmail.com. Reference Harbor Cam value for member safety and dock scheduling. Mention partnership potential with Port Authority. Fleet Captain Anne Bugansky is key operational contact."
+    },
+    {
+      "priority": 2,
+      "organization": "Ashtabula County Port Authority",
+      "type": "Government / Port Authority",
+      "website": "https://www.ashtabulacounty.us/305/Ashtabula-County-Port-Authority",
+      "fit_rationale": "Official economic development entity created in 1988 by county commissioners. Manages harbor infrastructure, industrial parks, and port facilities. Primary stakeholder for any harbor-wide technology initiative. Would provide legitimacy and potential funding/partnership for harbor cam deployment.",
+      "contacts": [
+        {
+          "name": "Mark Winchell",
+          "title": "Executive Director",
+          "email": "mawinchell@ashtabulacounty.us",
+          "phone": "440-576-6069",
+          "linkedin": "https://www.linkedin.com/in/mark-winchell-1588387/",
+          "notes": "Primary decision maker. Confirmed email from Ohio Council of Port Authorities listing. Specializes in economic development for Ashtabula County."
+        },
+        {
+          "name": "Mark Brockway",
+          "title": "Chairman, Ashtabula City Port Authority",
+          "email": null,
+          "phone": null,
+          "notes": "City Port Authority board chair - separate from County Port Authority but related"
+        },
+        {
+          "name": "Joseph Craine",
+          "title": "Vice Chair, Ashtabula City Port Authority",
+          "email": null,
+          "phone": null,
+          "notes": "City Port Authority leadership"
+        },
+        {
+          "name": "Mary Church",
+          "title": "Secretary, Ashtabula City Port Authority",
+          "email": null,
+          "phone": null,
+          "notes": "City Port Authority secretary"
+        },
+        {
+          "name": "Gunar Luhta",
+          "title": "Board Member, Ashtabula City Port Authority",
+          "email": null,
+          "phone": null,
+          "notes": "AHS Hall of Fame inductee (Class of 1992). Board member since at least 2021."
+        }
+      ],
+      "emails_found": [
+        {
+          "email": "mawinchell@ashtabulacounty.us",
+          "source": "Ohio Council of Port Authorities - https://www.ohioportauthorities.com/port-authority-listing",
+          "confidence": "high",
+          "type": "executive",
+          "contact_name": "Mark Winchell"
+        }
+      ],
+      "phones": [
+        "440-576-6069 (Executive Director)",
+        "440-992-7118 (City Port Authority)"
+      ],
+      "addresses": [
+        "91 North Chestnut St, Jefferson, OH 44047 (County)",
+        "35 West Jefferson St, Jefferson, OH 44047 (County)",
+        "4250 Lake Ave, Ashtabula OH 44004 (City)"
+      ],
+      "board_meetings": "3rd Wednesday of each month, 8:00 a.m., Council Chambers Building, 4230 Lake Ave",
+      "outreach_strategy": "Email Mark Winchell directly at mawinchell@ashtabulacounty.us. Frame harbor cam as economic development/tourism tool. Reference existing LakeVision camera at Redbrook Boat Club as precedent. Mention potential for job creation and harbor visibility for economic growth."
+    }
+  ],
+  "research_notes": {
+    "critical_findings": [
+      "Mark Winchell's email CONFIRMED: mawinchell@ashtabulacounty.us from official Ohio Council of Port Authorities listing",
+      "AYC general email CONFIRMED: aycohio22@gmail.com from website footer",
+      "MVP needs correction: Currently shows 'Ashtabula Maritime Partnership' which doesn't exist - should be 'Ashtabula County Port Authority'",
+      "Fleet Captain Anne Buganskey is key operational contact at AYC for harbor coordination"
+    ],
+    "additional_leads": [
+      {
+        "organization": "Redbrook Boat Club",
+        "website": "http://www.redbrookboatclub.com",
+        "note": "Already operates LakeVision Camera Eleven - proves harbor cam value proposition",
+        "priority": "warm"
+      },
+      {
+        "organization": "Historic Ashtabula Harbor / Lift Bridge Community Association",
+        "website": "https://www.historicashtabulaharbor.org",
+        "note": "Tourism org that would benefit from harbor cam for visitor engagement",
+        "priority": "warm"
+      },
+      {
+        "organization": "Harbor Yacht Club & Marina",
+        "website": "https://www.harboryachtclub.net",
+        "note": "Private marina at 1833 Giannell Ave - competitor/complement to AYC",
+        "priority": "cool"
+      }
+    ],
+    "sources": [
+      "https://www.aycohio.com",
+      "https://www.ashtabulacounty.us/305/Ashtabula-County-Port-Authority",
+      "https://www.ashtabulacounty.us/Directory.aspx?did=52",
+      "https://www.cityofashtabula.com/port-authority",
+      "https://www.ohioportauthorities.com/port-authority-listing",
+      "https://sail-clubs.com/en/i/1932/United-States/Ohio/Ashtabula/Sailing-Yacht-Club/Ashtabula-Yacht-Club"
+    ]
+  },
+  "next_actions": [
+    "Send initial outreach email to Mark Winchell (mawinchell@ashtabulacounty.us)",
+    "Send outreach to AYC via aycohio22@gmail.com, reference Fleet Captain coordination",
+    "CRITICAL: Update MVP website to replace 'Ashtabula Maritime Partnership' with 'Ashtabula County Port Authority'",
+    "Research Redbrook Boat Club LakeVision partnership potential"
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "timestamp": "2026-03-11T12:42:01.815788",
+  "tool": "NAI Deployment Diagnostic v1.0",
+  "summary": {
+    "total_sites": 4,
+    "sites_with_404": 4,
+    "sites_accessible": 0
+  },
+  "results": {
+    "city-of-ashtabula-building-dept": {
+      "site_id": "city-of-ashtabula-building-dept",
+      "name": "City of Ashtabula Building Dept",
+      "url": "https://newashtabula.vercel.app/city-of-ashtabula-building-dept",
+      "tests": {
+        "dns": {
+          "status": "ok",
+          "ip": "64.29.17.67",
+          "error": null
+        },
+        "http": {
+          "status": "http_error",
+          "code": 404,
+          "url": "https://newashtabula.vercel.app/city-of-ashtabula-building-dept",
+          "headers": {
+            "Cache-Control": "public, max-age=0, must-revalidate",
+            "Content-Length": "107",
+            "Content-Type": "text/plain; charset=utf-8",
+            "Date": "Wed, 11 Mar 2026 16:41:59 GMT",
+            "Server": "Vercel",
+            "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+            "X-Vercel-Error": "DEPLOYMENT_NOT_FOUND",
+            "X-Vercel-Id": "cle1::nsjd6-1773247319905-1e525f65c34d",
+            "Connection": "close"
+          },
+          "elapsed_ms": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        "root_http": {
+          "status": "http_error",
+          "code": 404,
+          "url": "https://newashtabula.vercel.app",
+          "headers": {
+            "Cache-Control": "public, max-age=0, must-revalidate",
+            "Content-Length": "107",
+            "Content-Type": "text/plain; charset=utf-8",
+            "Date": "Wed, 11 Mar 2026 16:41:59 GMT",
+            "Server": "Vercel",
+            "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+            "X-Vercel-Error": "DEPLOYMENT_NOT_FOUND",
+            "X-Vercel-Id": "cle1::9hxgc-1773247319986-014ab123b2b3",
+            "Connection": "close"
+          },
+          "elapsed_ms": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        "alternatives": [
+          {
+            "url": "https://newashtabula.vercel.app/city-of-ashtabula-building-dept",
+            "status": "http_error",
+            "code": 404
+          },
+          {
+            "url": "https://newashtabula-git-main.vercel.app/city-of-ashtabula-building-dept",
+            "status": "http_error",
+            "code": 404
+          },
+          {
+            "url": "https://newashtabula-nai.vercel.app/city-of-ashtabula-building-dept",
+            "status": "http_error",
+            "code": 404
+          }
+        ]
+      },
+      "findings": [
+        "HTTP_404_NOT_FOUND",
+        "ROOT_DOMAIN_FAILED"
+      ],
+      "recommendations": [
+        "Path does not exist - check Vercel routing configuration",
+        "Verify build output includes this path",
+        "Check vercel.json rewrites configuration"
+      ]
+    },
+    "ashtabula-area-chamber-of-commerce": {
+      "site_id": "ashtabula-area-chamber-of-commerce",
+      "name": "Ashtabula Area Chamber of Commerce",
+      "url": "https://newashtabula.vercel.app/ashtabula-area-chamber-of-commerce",
+      "tests": {
+        "dns": {
+          "status": "ok",
+          "ip": "64.29.17.67",
+          "error": null
+        },
+        "http": {
+          "status": "http_error",
+          "code": 404,
+          "url": "https://newashtabula.vercel.app/ashtabula-area-chamber-of-commerce",
+          "headers": {
+            "Cache-Control": "public, max-age=0, must-revalidate",
+            "Content-Length": "107",
+            "Content-Type": "text/plain; charset=utf-8",
+            "Date": "Wed, 11 Mar 2026 16:42:00 GMT",
+            "Server": "Vercel",
+            "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+            "X-Vercel-Error": "DEPLOYMENT_NOT_FOUND",
+            "X-Vercel-Id": "cle1::k8mvt-1773247320557-d517cb4d1ec7",
+            "Connection": "close"
+          },
+          "elapsed_ms": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        "root_http": {
+          "status": "http_error",
+          "code": 404,
+          "url": "https://newashtabula.vercel.app",
+          "headers": {
+            "Cache-Control": "public, max-age=0, must-revalidate",
+            "Content-Length": "107",
+            "Content-Type": "text/plain; charset=utf-8",
+            "Date": "Wed, 11 Mar 2026 16:42:00 GMT",
+            "Server": "Vercel",
+            "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+            "X-Vercel-Error": "DEPLOYMENT_NOT_FOUND",
+            "X-Vercel-Id": "cle1::6nqbf-1773247320649-3de658b18f82",
+            "Connection": "close"
+          },
+          "elapsed_ms": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        "alternatives": [
+          {
+            "url": "https://newashtabula.vercel.app/ashtabula-area-chamber-of-commerce",
+            "status": "http_error",
+            "code": 404
+          },
+          {
+            "url": "https://newashtabula-git-main.vercel.app/ashtabula-area-chamber-of-commerce",
+            "status": "http_error",
+            "code": 404
+          },
+          {
+            "url": "https://newashtabula-nai.vercel.app/ashtabula-area-chamber-of-commerce",
+            "status": "http_error",
+            "code": 404
+          }
+        ]
+      },
+      "findings": [
+        "HTTP_404_NOT_FOUND",
+        "ROOT_DOMAIN_FAILED"
+      ],
+      "recommendations": [
+        "Path does not exist - check Vercel routing configuration",
+        "Verify build output includes this path",
+        "Check vercel.json rewrites configuration"
+      ]
+    },
+    "lakeland-sbdc": {
+      "site_id": "lakeland-sbdc",
+      "name": "Lakeland SBDC",
+      "url": "https://newashtabula.vercel.app/lakeland-sbdc",
+      "tests": {
+        "dns": {
+          "status": "ok",
+          "ip": "64.29.17.67",
+          "error": null
+        },
+        "http": {
+          "status": "http_error",
+          "code": 404,
+          "url": "https://newashtabula.vercel.app/lakeland-sbdc",
+          "headers": {
+            "Cache-Control": "public, max-age=0, must-revalidate",
+            "Content-Length": "107",
+            "Content-Type": "text/plain; charset=utf-8",
+            "Date": "Wed, 11 Mar 2026 16:42:01 GMT",
+            "Server": "Vercel",
+            "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+            "X-Vercel-Error": "DEPLOYMENT_NOT_FOUND",
+            "X-Vercel-Id": "cle1::bjgdd-1773247321003-dfab2d2202bd",
+            "Connection": "close"
+          },
+          "elapsed_ms": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        "root_http": {
+          "status": "http_error",
+          "code": 404,
+          "url": "https://newashtabula.vercel.app",
+          "headers": {
+            "Cache-Control": "public, max-age=0, must-revalidate",
+            "Content-Length": "107",
+            "Content-Type": "text/plain; charset=utf-8",
+            "Date": "Wed, 11 Mar 2026 16:42:01 GMT",
+            "Server": "Vercel",
+            "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+            "X-Vercel-Error": "DEPLOYMENT_NOT_FOUND",
+            "X-Vercel-Id": "cle1::2jr4p-1773247321087-d598cd0c50c3",
+            "Connection": "close"
+          },
+          "elapsed_ms": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        "alternatives": [
+          {
+            "url": "https://newashtabula.vercel.app/lakeland-sbdc",
+            "status": "http_error",
+            "code": 404
+          },
+          {
+            "url": "https://newashtabula-git-main.vercel.app/lakeland-sbdc",
+            "status": "http_error",
+            "code": 404
+          },
+          {
+            "url": "https://newashtabula-nai.vercel.app/lakeland-sbdc",
+            "status": "http_error",
+            "code": 404
+          }
+        ]
+      },
+      "findings": [
+        "HTTP_404_NOT_FOUND",
+        "ROOT_DOMAIN_FAILED"
+      ],
+      "recommendations": [
+        "Path does not exist - check Vercel routing configuration",
+        "Verify build output includes this path",
+        "Check vercel.json rewrites configuration"
+      ]
+    },
+    "ashtabula-county-commissioners": {
+      "site_id": "ashtabula-county-commissioners",
+      "name": "Ashtabula County Commissioners",
+      "url": "https://newashtabula.vercel.app/ashtabula-county-commissioners",
+      "tests": {
+        "dns": {
+          "status": "ok",
+          "ip": "64.29.17.67",
+          "error": null
+        },
+        "http": {
+          "status": "http_error",
+          "code": 404,
+          "url": "https://newashtabula.vercel.app/ashtabula-county-commissioners",
+          "headers": {
+            "Cache-Control": "public, max-age=0, must-revalidate",
+            "Content-Length": "107",
+            "Content-Type": "text/plain; charset=utf-8",
+            "Date": "Wed, 11 Mar 2026 16:42:01 GMT",
+            "Server": "Vercel",
+            "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+            "X-Vercel-Error": "DEPLOYMENT_NOT_FOUND",
+            "X-Vercel-Id": "cle1::sq9lw-1773247321463-f8f345b56adc",
+            "Connection": "close"
+          },
+          "elapsed_ms": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        "root_http": {
+          "status": "http_error",
+          "code": 404,
+          "url": "https://newashtabula.vercel.app",
+          "headers": {
+            "Cache-Control": "public, max-age=0, must-revalidate",
+            "Content-Length": "107",
+            "Content-Type": "text/plain; charset=utf-8",
+            "Date": "Wed, 11 Mar 2026 16:42:01 GMT",
+            "Server": "Vercel",
+            "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+            "X-Vercel-Error": "DEPLOYMENT_NOT_FOUND",
+            "X-Vercel-Id": "cle1::dkjvk-1773247321544-ed0494522517",
+            "Connection": "close"
+          },
+          "elapsed_ms": null,
+          "error": "HTTP Error 404: Not Found"
+        },
+        "alternatives": [
+          {
+            "url": "https://newashtabula.vercel.app/ashtabula-county-commissioners",
+            "status": "http_error",
+            "code": 404
+          },
+          {
+            "url": "https://newashtabula-git-main.vercel.app/ashtabula-county-commissioners",
+            "status": "http_error",
+            "code": 404
+          },
+          {
+            "url": "https://newashtabula-nai.vercel.app/ashtabula-county-commissioners",
+            "status": "http_error",
+            "code": 404
+          }
+        ]
+      },
+      "findings": [
+        "HTTP_404_NOT_FOUND",
+        "ROOT_DOMAIN_FAILED"
+      ],
+      "recommendations": [
+        "Path does not exist - check Vercel routing configuration",
+        "Verify build output includes this path",
+        "Check vercel.json rewrites configuration"
+      ]
+    }
+  },
+  "blocker_status": "CRITICAL"
+}

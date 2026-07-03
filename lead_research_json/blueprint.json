@@ -1,0 +1,83 @@
+{
+  "mvp": "blueprint",
+  "run_timestamp_utc": "2026-03-21T18:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Blueprint MVP (architectural design/blueprint management platform). Targets architects, building departments, and residential designers in Ashtabula County and Northeast Ohio who could benefit from digital blueprint management, plan review tools, and design collaboration.",
+  "leads": [
+    {
+      "organization": "Ashtabula County Building Department",
+      "type": "County Building Authority",
+      "website": "https://www.ashtabulacounty.us/181/Building",
+      "fit_rationale": "Provides plan review services, inspections, and code information. Digital blueprint submission and review tools would streamline permit processing and reduce paper handling.",
+      "source": "https://www.ashtabulacounty.us/181/Building"
+    },
+    {
+      "organization": "City of Ashtabula Engineering/Zoning Department",
+      "type": "Municipal Building/Zoning Office",
+      "website": "https://www.cityofashtabula.com/engineering",
+      "fit_rationale": "Issues zoning permits and coordinates with County Building Department. Digital blueprint integration between city and county would improve workflow.",
+      "source": "https://www.cityofashtabula.com/engineering"
+    },
+    {
+      "organization": "Pantuso Architecture (Ashtabula County)",
+      "type": "Local Architectural Firm",
+      "website": "https://www.yelp.com/search?cflt=architects&find_loc=Ashtabula+County,+OH",
+      "fit_rationale": "Local architect serving Ashtabula County. Digital blueprint management and client collaboration tools would enhance their design process.",
+      "source": "https://www.yelp.com/search?cflt=architects&find_loc=Ashtabula+County,+OH"
+    },
+    {
+      "organization": "Dimit Architects (Northeast Ohio)",
+      "type": "Regional Architectural Firm",
+      "website": "https://www.dimitarchitects.com/",
+      "fit_rationale": "Full-scope architectural services for residential, commercial, and historic renovation projects. Cloud-based blueprint management would support their multi-project workflow.",
+      "source": "https://www.dimitarchitects.com/"
+    },
+    {
+      "organization": "Lake House Design (Northeast Ohio)",
+      "type": "Residential Architecture/Design-Build Firm",
+      "website": "https://www.lakehousedesign.com/",
+      "fit_rationale": "Specializes in new residential construction and renovations in Greater Cleveland/Akron area. Blueprint collaboration tools would improve client communication.",
+      "source": "https://www.lakehousedesign.com/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add digital blueprint upload with version control and revision tracking.",
+    "Include annotation tools for markups and collaborative feedback.",
+    "Create mobile-friendly viewing for field access to plans.",
+    "Integrate with building department permit submission workflows.",
+    "Add 3D visualization from 2D blueprints for client presentations.",
+    "Provide measurement and calculation tools within the blueprint viewer.",
+    "Include electronic approval signatures and stamp integration.",
+    "Add project sharing with controlled access for contractors and clients."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Blueprint tools need precision and clarity—cluttered UI interferes with technical work.",
+      "Slow rendering of large blueprint files frustrates architects and reviewers.",
+      "Poor mobile optimization makes field access difficult for contractors."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "High (tentative)",
+    "reason": "Blueprint management platforms can be white-labeled for building departments, architectural firms, or construction companies with custom branding.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Ashtabula County Building Department about digital plan review pilot.",
+    "Reach out to local architects about blueprint collaboration tools.",
+    "Explore integration with common CAD software (AutoCAD, Revit, SketchUp)."
+  ],
+  "sources": [
+    "https://www.ashtabulacounty.us/181/Building",
+    "https://www.cityofashtabula.com/engineering",
+    "https://www.yelp.com/search?cflt=architects&find_loc=Ashtabula+County,+OH",
+    "https://www.dimitarchitects.com/",
+    "https://www.lakehousedesign.com/"
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "mvp": "event-permit",
+  "run_timestamp_utc": "2026-03-24T09:48:00Z",
+  "summary": "Email research for Event Permit MVP - Special event permit management tool for municipalities and parks systems.",
+  "target_buyers": [
+    {
+      "organization": "City of Cleveland – Division of Special Events",
+      "type": "City special events office",
+      "website": "https://www.clevelandohio.gov/city-hall/departments/public-works/divisions/special-events",
+      "fit_rationale": "Handles special event permits and multi-department coordination for city properties including parks, playgrounds, Public Square, Cultural Gardens, and City Hall Rotunda. Processes permits for events ranging from small gatherings to large-scale citywide events.",
+      "contacts": [
+        {
+          "name": "Office of Special Events",
+          "title": "General Inquiries",
+          "email": "specialevents@clevelandohio.gov",
+          "verified": true,
+          "source": "https://static1.squarespace.com/static/63e403189c2b587ad6dbe0eb/t/6411e76d80fce30987625ab2/1678894957985/SpecialEventsPermitApplication0222.pdf"
+        },
+        {
+          "name": "Office of Special Events",
+          "title": "Phone Contact",
+          "phone": "(216) 664-2484",
+          "verified": true,
+          "source": "https://www.clevelandohio.gov/sites/clevelandohio/files/2023-06/BlockPartyPermitApplication0222.pdf"
+        }
+      ],
+      "address": "500 Lakeside Ave, Cleveland, OH 44114",
+      "properties_managed": [
+        "City Hall Rotunda",
+        "Malls B & C",
+        "Parks and Playgrounds",
+        "Public Square",
+        "Cultural Gardens",
+        "Rockefeller Park Greenhouse",
+        "Cemeteries"
+      ],
+      "permit_requirements": {
+        "lead_time": "14 days prior to event",
+        "fee": "$20 money order for block parties",
+        "security_required": "May be required based on event type"
+      }
+    },
+    {
+      "organization": "Cleveland Metroparks – Special Events & Experiences",
+      "type": "Regional parks system",
+      "website": "https://www.clevelandmetroparks.com/parks/visit/plan-your-event/special-event-permits",
+      "fit_rationale": "Processes event permits for 18 reservations across the Emerald Necklace park system. Handles events from small picnics to large-scale multi-day festivals. Strong digital infrastructure with online permit applications.",
+      "contacts": [
+        {
+          "name": "Special Events & Experiences",
+          "title": "General Inquiries",
+          "email": "ssc@clevelandmetroparks.com",
+          "verified": true,
+          "source": "https://www.clevelandmetroparks.com/parks/visit/plan-your-event/special-event-permits"
+        },
+        {
+          "name": "Special Events & Experiences",
+          "title": "Director (Large Scale Events)",
+          "email": "ssc@clevelandmetroparks.com",
+          "verified": true,
+          "note": "Contact for large scale, multi-day festivals before submitting application",
+          "source": "https://www.clevelandmetroparks.com/parks/visit/plan-your-event/special-event-permits"
+        },
+        {
+          "name": "Special Events & Experiences",
+          "title": "Phone Contact",
+          "phone": "216-635-3304",
+          "verified": true,
+          "hours": "Monday-Friday, 8:30 a.m. to 4:30 p.m.",
+          "source": "https://www.clevelandmetroparks.com/about/cleveland-metroparks-organization/faqs"
+        },
+        {
+          "name": "Fax",
+          "title": "Document Submission",
+          "phone": "216-661-3312",
+          "verified": true,
+          "source": "https://www.clevelandmetroparks.com/about/cleveland-metroparks-organization/policies-procedures/permits/special-event-permit"
+        }
+      ],
+      "address": "3900 Wildlife Way, Cleveland, OH 44109",
+      "fax": "216-661-3312",
+      "park_system": {
+        "reservations": 18,
+        "name": "Emerald Necklace",
+        "features": ["Hiking trails", "Lakefront parks", "Nature centers", "Zoo", "Golf courses"]
+      },
+      "permit_process": {
+        "submission_methods": ["Email", "Mail", "Fax"],
+        "review_process": "Cleveland Metroparks reviews application and sends permit with conditions if accepted"
+      }
+    }
+  ],
+  "additional_targets_researched": [
+    {
+      "organization": "City of Columbus – Office of Special Events",
+      "type": "City special events office",
+      "website": "https://specialeventapplication.columbus.gov/",
+      "contacts": [
+        {
+          "name": "Police Special Events",
+          "email": "specialevents@columbuspolice.org",
+          "verified": true
+        },
+        {
+          "phone": "(614) 645-4375"
+        }
+      ],
+      "address": "120 Marconi Blvd, Second Floor, Columbus, OH 43215",
+      "hours": "Monday-Friday, 8:30AM – 3:30PM"
+    }
+  ],
+  "research_metadata": {
+    "emails_found": 4,
+    "phone_numbers_found": 3,
+    "organizations_researched": 3,
+    "verification_status": "emails_verified_via_official_documents",
+    "research_date": "2026-03-24"
+  },
+  "notes": [
+    "Cleveland Division of Special Events uses specialevents@clevelandohio.gov as primary contact - verified through official permit application PDFs",
+    "Cleveland Metroparks uses ssc@clevelandmetroparks.com for all special events inquiries - verified on official website",
+    "Columbus has dedicated special event portal at specialeventapplication.columbus.gov indicating mature digital infrastructure",
+    "Both Cleveland organizations require 14+ day advance notice for permit applications",
+    "Cleveland Metroparks handles permits for 18 reservations - significant scale for event management software"
+  ]
+}

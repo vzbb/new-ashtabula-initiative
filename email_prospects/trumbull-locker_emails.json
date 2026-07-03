@@ -1,0 +1,41 @@
+{
+  "mvp": "trumbull-locker",
+  "research_date": "2026-03-24",
+  "target_buyers": [
+    {
+      "rank": 1,
+      "organization": "Trumbull Locker Plant",
+      "website": "https://trumbull-locker.com/",
+      "why_target": "Primary user of the Trumbull Locker digital cut sheet MVP. Family-owned meat processor since 1947 in Trumbull Township, Ashtabula County. Specializes in hickory-smoked meats, wild game processing, and custom cut sheets. Already partnered on the MVP development.",
+      "contacts": [
+        {
+          "name": "General Contact",
+          "title": "Management",
+          "email": "UNVERIFIED - Contact via website form",
+          "phone": "440-474-4631",
+          "notes": "Family-owned since 1947. Contact through website contact form or by phone. Located at 7319 State Route 534, Windsor, OH."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "organization": "Miles Farmers Market",
+      "website": "https://www.milesfarmersmarket.com/",
+      "why_target": "Major farmers market in Solon, OH with full-service butcher shop and custom meat processing. Partner of Trumbull Locker for produce. Digital cut sheet system would streamline their custom meat orders and processing workflows.",
+      "contacts": [
+        {
+          "name": "Meat Department",
+          "title": "Butcher Shop/Meat Processing",
+          "email": "UNVERIFIED - Contact via phone",
+          "phone": "440-248-5222",
+          "notes": "21,000+ sq ft market with custom cut butcher shop. 48-hour processing time for custom orders. Located at 28560 Miles Road, Solon, OH 44139."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://trumbull-locker.com/",
+    "https://www.milesfarmersmarket.com/",
+    "https://nextdoor.com/pages/trumbull-locker-plant-geneva-oh/"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "mvp": "resource-pro",
+  "mvp_description": "Resource management and allocation platform for workforce development",
+  "research_date": "2026-03-24",
+  "top_buyers": [
+    {
+      "rank": 1,
+      "name": "OhioMeansJobs Ashtabula County",
+      "type": "Workforce Resource Center",
+      "website": "https://www.acdjfs.org/copy-of-transportation",
+      "emails": [
+        {
+          "email": "Hattie.Grubke-Barnard@jfs.ohio.gov",
+          "type": "direct",
+          "contact_name": "Hattie Grubke-Barnard",
+          "contact_title": "Job Posting Coordinator",
+          "source": "acdjfs.org",
+          "confidence": "verified"
+        }
+      ],
+      "phones": [
+        {
+          "phone": "440-994-1234",
+          "type": "main"
+        },
+        {
+          "phone": "800-935-0242",
+          "type": "toll-free"
+        }
+      ],
+      "address": "2247 Lake Avenue, Ashtabula, Ohio 44004",
+      "fit_rationale": "All-in-one workforce resource center providing job training and workforce development services. Resource management platform would help track client resources, training programs, and service allocation. Part of Ashtabula County Department of Job & Family Services.",
+      "priority": "high"
+    },
+    {
+      "rank": 2,
+      "name": "Growth Partnership for Ashtabula County",
+      "type": "Economic Development Organization",
+      "website": "https://www.ashtabulagrowth.com/workforce-development",
+      "emails": [
+        {
+          "email": "info@ashtabulagrowth.com",
+          "type": "general",
+          "source": "inferred",
+          "confidence": "inferred"
+        }
+      ],
+      "fit_rationale": "Focuses on workforce development and business resources. Resource Pro platform would help manage business assistance programs and workforce initiatives.",
+      "priority": "high"
+    }
+  ],
+  "additional_contacts": [
+    {
+      "name": "ROA Group",
+      "type": "ERP Consulting",
+      "website": "https://roagroup.com/roanews/",
+      "fit_rationale": "Provides Enterprise Resource Planning (ERP) consulting in Northeast Ohio. Resource management platform could complement their ERP solutions for smaller businesses.",
+      "priority": "medium"
+    },
+    {
+      "name": "GBQ Partners",
+      "type": "Professional Services Firm",
+      "website": "https://gbq.com/service/information-technology/enterprise-resource-planning/",
+      "fit_rationale": "Ohio-based ERP consulting firm serving professional services. Resource Pro could serve as a lighter alternative for businesses not ready for full ERP.",
+      "priority": "medium"
+    },
+    {
+      "name": "infinIT",
+      "type": "IT Services Provider",
+      "website": "https://infinit.us/",
+      "fit_rationale": "Serves manufacturing, nonprofits, and municipal services in NE Ohio with IT resource management. Partnership opportunity.",
+      "priority": "medium"
+    }
+  ],
+  "email_templates_suggested": [
+    "workforce_resource_management",
+    "economic_development_tools",
+    "erp_light_solution"
+  ],
+  "research_notes": "OhioMeansJobs has verified contact for Hattie Grubke-Barnard. Growth Partnership email inferred. Strong workforce development infrastructure in Ashtabula County."
+}

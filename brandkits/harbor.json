@@ -1,0 +1,109 @@
+{
+  "mvp": "harbor",
+  "generated_at": "2026-03-22T17:29:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/harbor.json",
+  "research_sources": [
+    "https://www.aycohio.com",
+    "https://www.ashtabulacounty.us/305/Ashtabula-County-Port-Authority"
+  ],
+  "target_buyer_1": {
+    "organization": "Ashtabula Yacht Club",
+    "type": "Yacht Club / Marina",
+    "website": "https://www.aycohio.com",
+    "address": "Ashtabula River at historic Bridge Street, Ashtabula, OH",
+    "why_top_candidate": "Premier yacht club founded in 1924 with 150+ members and 125 docks. Located in protected harbor on Ashtabula River, 1/2 mile south of Lake Erie lighthouse. Recently invested in harbor infrastructure including 35-ton travel lift and 600+ feet of bulkhead replacement. Reputation for friendliness, great sail/racing program. Part of newly renovated Ashtabula Harbor historic district with world-class restaurants, live music, wineries nearby.",
+    "fit_score": 94
+  },
+  "target_buyer_2": {
+    "organization": "Ashtabula County Port Authority",
+    "type": "Government / Port Authority",
+    "website": "https://www.ashtabulacounty.us/305/Ashtabula-County-Port-Authority",
+    "address": "91 North Chestnut St, Jefferson, OH 44047",
+    "phone": "(440) 576-6069",
+    "why_top_candidate": "Official economic development entity established 1988 by county commissioners. Manages harbor infrastructure, industrial parks, and port facilities. Strategic location: 59% of US/Canadian populations within 600 miles. Critical role in North Bend Industrial Park, Coffee Creek Industrial Park, and former First Energy Plant C acquisition. Primary stakeholder for harbor-wide technology initiatives with legitimacy and potential funding.",
+    "fit_score": 91
+  },
+  "actual_brand_research": {
+    "ashtabula_yacht_club": {
+      "founded": 1924,
+      "members": "150+",
+      "docks": 125,
+      "location": "Ashtabula River, 1/2 mile south of Lake Erie lighthouse",
+      "boat_types": "Powerboats and sailboats (24' to 50')",
+      "recent_investments": [
+        "35-ton travel lift",
+        "600+ feet of bulkhead replacement"
+      ],
+      "programs": ["Sailing", "Racing"],
+      "nearby_attractions": [
+        "World-class restaurants",
+        "Live music",
+        "Shopping",
+        "Great beaches",
+        "Fishing",
+        "Dozens of wineries",
+        "Geneva on the Lake resort"
+      ],
+      "visual_style": "Nautical, historic, community-focused, sailing heritage"
+    },
+    "ashtabula_county_port_authority": {
+      "established": 1988,
+      "location": "Jefferson, OH (Ashtabula County)",
+      "contact": "91 North Chestnut St, Jefferson, OH 44047 | (440) 576-6069",
+      "strategic_position": "59% of US/Canadian populations within 600 miles",
+      "nearby_cities": ["Cleveland (1 hour)", "Youngstown (1 hour)", "Erie (1 hour)", "Pittsburgh (2 hours)"],
+      "industrial_parks": [
+        "North Bend Industrial Park",
+        "Coffee Creek Industrial Park"
+      ],
+      "major_acquisition": "Former First Energy Plant C",
+      "economic_impact": "Port authorities report $6.5B annual impact on Ohio's economy",
+      "visual_style": "Government authority, economic development, industrial, strategic"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "See the Harbor. Plan Your Voyage.",
+    "positioning": "The real-time harbor visibility platform for Ashtabula Harbor — serving the Ashtabula Yacht Club's 150+ members and the Port Authority's maritime infrastructure with live conditions, lift bridge status, and harbor cameras.",
+    "color_palette_derived_from_research": {
+      "primary": "#1E3A5F",
+      "accent": "#C9A227",
+      "background": "#F5F7FA",
+      "text": "#2C3E50",
+      "secondary": "#5D8AA8"
+    },
+    "typography_recommendation": {
+      "heading_font": "Nautical serif or bold maritime sans-serif",
+      "body_font": "Clean professional sans-serif"
+    },
+    "mood_keywords_from_research": ["nautical", "maritime", "historic", "sailing", "harbor", "lake-erie"],
+    "visual_direction": {
+      "hero_image_concept": "Ashtabula Harbor lighthouse with sailboats and lift bridge",
+      "color_scheme": "Deep navy blues with gold accents (nautical)",
+      "photography_style": "Ashtabula Harbor, Bridge Street, Lake Erie, yacht club, lift bridge"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Ashtabula Harbor's nautical heritage and Port Authority's economic development mission",
+    "key_features_needed": [
+      "Live harbor camera feeds",
+      "Lift bridge status/opening schedule",
+      "Weather conditions (wind, waves, visibility)",
+      "Marina dock availability",
+      "Member login for Yacht Club",
+      "Port Authority infrastructure alerts",
+      "Mobile app for boaters",
+      "Integration with existing LakeVision cameras"
+    ],
+    "differentiators_based_on_research": [
+      "1924-founded Yacht Club with 150+ members",
+      "125 docks for boats 24-50 feet",
+      "Port Authority established 1988",
+      "Strategic location: 59% of US/Canada within 600 miles",
+      "Historic Ashtabula Harbor district",
+      "35-ton travel lift on site",
+      "Lake Erie destination port",
+      "Nearby wineries and Geneva on the Lake"
+    ]
+  }
+}

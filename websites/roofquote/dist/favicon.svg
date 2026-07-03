@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">A &amp; R Roofing favicon</title>
+  <desc id="desc">A red and navy roof mark for the A and R Roofing RoofQuote demo.</desc>
+  <rect width="64" height="64" rx="16" fill="#1E3A5F" />
+  <path d="M14 34L32 18l18 16v14H14V34Z" fill="#C53030" />
+  <path d="M20 34L32 24l12 10v10H20V34Z" fill="#ffffff" opacity="0.95" />
+  <path d="M26 36h12v12H26z" fill="#1E3A5F" opacity="0.9" />
+  <path d="M30 48V38h4v10" fill="#ffffff" opacity="0.85" />
+</svg>

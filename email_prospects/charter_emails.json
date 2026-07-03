@@ -1,0 +1,103 @@
+{
+  "mvp": "charter",
+  "processed_at": "2026-03-24T07:15:00Z",
+  "lead_research_source": "lead_research_json/charter.json",
+  "status": "complete",
+  "prospects": [
+    {
+      "organization": "Compensator Lake Erie Fishing Charters",
+      "type": "Charter Fishing Service",
+      "website": "https://compensatorfishingcharters.com/",
+      "fit_rationale": "Ashtabula-based charter targeting walleye, steelhead, and perch. Online booking and automated customer communication would streamline their operations.",
+      "priority": 1,
+      "contacts": [
+        {
+          "name": "Captain Bill Hill",
+          "role": "Owner/Operator",
+          "confidence": "high",
+          "emails": [
+            {
+              "address": "captainbill@compensatorfishingcharters.com",
+              "source": "Website contact page",
+              "confidence": "high",
+              "verified": false
+            }
+          ],
+          "phones": [
+            "440-474-3045 (cell)",
+            "440-466-0053 (home)"
+          ],
+          "social": []
+        }
+      ],
+      "addresses": [
+        "Capt. Bill Hill, 4329 Austin Road, Geneva, Ohio 44041"
+      ],
+      "research_notes": "Direct email contact found on main website. Captain Bill is USCG licensed and insured. Charter offers walleye, steelhead, and jumbo perch fishing trips from Ashtabula River dock. Established business with clear online presence.",
+      "outreach_strategy": "Pitch online booking system to replace phone-only reservations. Emphasize automated customer communication for trip reminders and weather alerts. Mention group booking features for corporate events."
+    },
+    {
+      "organization": "Lucky Strike Lake Erie Fishing Charters",
+      "type": "Charter Fishing Service",
+      "website": "https://lake-erie-walleye-fishing-charters.com/",
+      "fit_rationale": "Ashtabula charter operator emphasizing limit catches. A booking platform with weather integration and automated reminders would enhance customer experience.",
+      "priority": 2,
+      "contacts": [
+        {
+          "name": "Captain Art",
+          "role": "Owner/Operator",
+          "confidence": "high",
+          "emails": [
+            {
+              "address": "angler@captainart.ipage.com",
+              "source": "Website contact link",
+              "confidence": "high",
+              "verified": false
+            },
+            {
+              "address": "calendar@captainart.ipage.com",
+              "source": "Website calendar page",
+              "confidence": "medium",
+              "verified": false
+            }
+          ],
+          "phones": [
+            "440-997-7010",
+            "440-599-1028"
+          ],
+          "social": [
+            {
+              "platform": "Facebook",
+              "url": "https://www.facebook.com/LUCKY-STRIKE-fishing-charters-on-Lake-Erie-337533456959/",
+              "notes": "Active business page with customer engagement"
+            },
+            {
+              "platform": "Twitter",
+              "handle": "@Lucky_Strike_",
+              "notes": "Active social presence"
+            }
+          ]
+        }
+      ],
+      "addresses": [
+        "6101 McNutt Ave, Ashtabula, Ohio 44004"
+      ],
+      "research_notes": "Two email addresses found via website contact links (ipage hosting). Captain Art has 30+ years experience. Multi-boat corporate outing capabilities. Strong social media presence. Docked at Kister Marina #33-S. Alternate domain: lakeeriecaptain.com.",
+      "outreach_strategy": "Focus on corporate booking features - they explicitly advertise multi-boat coordination for business outings. Emphasize calendar integration and automated reminders for groups. Professional tone targeting experienced operator."
+    }
+  ],
+  "summary": {
+    "total_prospects": 2,
+    "emails_found": 3,
+    "phone_contacts": 2,
+    "social_profiles": 3,
+    "geographic_focus": "Ashtabula/Geneva, Ohio",
+    "notes": "Both target leads are established Lake Erie charter operators in Ashtabula County. Compensator (Captain Bill) has a direct domain email while Lucky Strike (Captain Art) uses ipage hosting emails. Both rely heavily on phone bookings - prime candidates for online booking platform pilot program. Lucky Strike shows more sophisticated marketing with multiple domains and active social media."
+  },
+  "next_steps": [
+    "Send personalized outreach to captainbill@compensatorfishingcharters.com highlighting ease of online booking for seasonal fishing trips",
+    "Contact Captain Art at angler@captainart.ipage.com emphasizing corporate/group booking features",
+    "Offer free pilot program for remainder of 2026 fishing season (May-October peak)",
+    "Mention integration with local lodging partners for package deals as value-add"
+  ]
+}

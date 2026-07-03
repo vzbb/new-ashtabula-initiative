@@ -1,0 +1,83 @@
+{
+  "mvp": "adaptive-reuse-planner",
+  "run_timestamp_utc": "2026-03-22T08:07:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Adaptive Reuse Planner MVP (historic building renovation and adaptive reuse planning platform). Targets developers, property owners, architects, and municipalities in Ashtabula County and Northeast Ohio who are working on historic building renovations, tax credit applications, and adaptive reuse projects.",
+  "leads": [
+    {
+      "organization": "Renew Partners LLC",
+      "type": "Historic Development & Management Company",
+      "website": "https://www.renewptr.com/",
+      "fit_rationale": "Development company focused on adaptive reuse of historic buildings throughout Ashtabula, Lake, and Geauga Counties. Completed $5.2M Historic Hotel Ashtabula redevelopment. Adaptive reuse planning tools would streamline their multi-project pipeline and tax credit applications.",
+      "source": "https://www.renewptr.com/"
+    },
+    {
+      "organization": "Ashtabula County Planning & Development",
+      "type": "County Planning Authority",
+      "website": "https://www.ashtabulacounty.us/262/Planning-and-Development",
+      "fit_rationale": "Administers CDBG and CHIP grants for community development. Digital tools for tracking adaptive reuse projects would improve grant administration and economic development reporting.",
+      "source": "https://www.ashtabulacounty.us/262/Planning-and-Development"
+    },
+    {
+      "organization": "Heritage Ohio",
+      "type": "Statewide Historic Preservation Organization",
+      "website": "https://heritageohio.org/",
+      "fit_rationale": "Ohio's official historic preservation and Main Street organization. Adaptive reuse planning platform would complement their downtown revitalization work and provide resources for their member communities.",
+      "source": "https://heritageohio.org/"
+    },
+    {
+      "organization": "Ashtabula Downtown Development Association (ADDA)",
+      "type": "Downtown Revitalization Organization",
+      "website": "https://www.downtownashtabula.com/",
+      "fit_rationale": "Promotes downtown Ashtabula including historic district designation and facade improvement programs. Adaptive reuse tools would help property owners navigate historic building renovations.",
+      "source": "https://www.downtownashtabula.com/"
+    },
+    {
+      "organization": "Chambers, Murphy & Burge Restoration Architects",
+      "type": "Historic Preservation Architecture Firm",
+      "website": "https://www.cmbarchitects.com/",
+      "fit_rationale": "Over 50 years of historic preservation architecture experience. Digital adaptive reuse planning tools would enhance their project workflows and client collaboration on renovation projects.",
+      "source": "https://www.heritageohio.org/consultants-documentation/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add historic tax credit eligibility checker with federal and Ohio state requirements.",
+    "Include project timeline templates for adaptive reuse phases (planning, financing, construction).",
+    "Create contractor/vendor directory specializing in historic preservation work.",
+    "Add document management for preservation applications, tax forms, and compliance tracking.",
+    "Provide cost estimation tools specific to historic renovation vs. new construction.",
+    "Include case studies of successful adaptive reuse projects with before/after documentation.",
+    "Add integration with Ohio Historic Preservation Office resources and contacts.",
+    "Create checklist workflows for Certified Local Government requirements."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Historic preservation audiences expect professional, elegant design that respects traditional aesthetics.",
+      "Complex project workflows require clear navigation—cluttered interfaces discourage adoption.",
+      "Mobile access is important for site visits and field documentation."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Very High (tentative)",
+    "reason": "Adaptive reuse planning platforms are highly white-labelable for economic development organizations, historic preservation offices, Main Street programs, and developer consortiums.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Renew Partners about piloting adaptive reuse planning tools.",
+    "Reach out to Heritage Ohio about statewide partnership opportunities.",
+    "Explore integration with Ohio Historic Preservation Office digital resources."
+  ],
+  "sources": [
+    "https://www.renewptr.com/",
+    "https://www.ashtabulacounty.us/262/Planning-and-Development",
+    "https://heritageohio.org/",
+    "https://www.downtownashtabula.com/",
+    "https://www.heritageohio.org/consultants-documentation/"
+  ]
+}

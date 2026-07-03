@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.saybrook-app {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--saybrook-cream);
+  color: var(--saybrook-ink);
+  margin: 0;
+  padding: 0;
+}
+
+.saybrook-shell {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-left: none;
+}
+
+/* Sidebar - Editorial Civic */
+.saybrook-sidebar {
+  width: 320px;
+  background-color: var(--saybrook-forest);
+  color: white;
+  height: 100%;
+  padding: 32px 32px 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  border-right: 4px solid rgba(0,0,0,0.3);
+}
+
+/* Saybrook Seal as an integrated anchor */
+.saybrook-seal-anchor {
+  width: 208px;
+  max-width: 94%;
+  height: auto;
+  margin: 0 auto 10px auto;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+  opacity: 1;
+}
+
+/* Main Content Area */
+.saybrook-main {
+  flex: 1;
+  background-color: var(--saybrook-cream);
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.saybrook-hero {
+  padding: 120px 0 60px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.saybrook-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid var(--saybrook-border);
+  border-radius: 99px;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.saybrook-hero h1 {
+  font-size: 2.3rem;
+  line-height: 1.1;
+  color: var(--saybrook-forest);
+  margin-bottom: 5px;
+  letter-spacing: -0.01em;
+}
+
+.saybrook-hero h1 span {
+  text-shadow: 1px 1px 0 rgba(16,40,32,0.1), 2px 2px 0 rgba(16,40,32,0.05);
+  display: inline-block;
+  transform: rotate(-1deg);
+}
+
+.saybrook-hero p {
+  font-size: 1.1rem;
+  color: var(--saybrook-forest-soft);
+  opacity: 0.7;
+  max-width: 460px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.saybrook-hero-highlight {
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+}
+
+.saybrook-hero-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 0.4em;
+  background: var(--saybrook-sand);
+  opacity: 0.15;
+  z-index: -1;
+  border-radius: 2px;
+}
+
+/* Saybrook Scrollbar Styling */
+.saybrook-drawer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.saybrook-drawer::-webkit-scrollbar-track {
+  background: #08120e;
+}
+
+.saybrook-drawer::-webkit-scrollbar-thumb {
+  background: var(--saybrook-sand);
+  border-radius: 20px;
+  border: 2px solid #08120e;
+}
+
+.saybrook-drawer::-webkit-scrollbar-thumb:hover {
+  background: var(--saybrook-glow);
+}
+
+/* Modern Friendly Step Styling */
+.saybrook-friendly-step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.saybrook-friendly-step:hover {
+  opacity: 1;
+}
+
+.saybrook-step-number {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--saybrook-sand);
+  line-height: normal;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  height: 1.3rem;
+  min-width: 36px;
+}
+
+.saybrook-sidebar-divider {
+  width: 85%;
+  height: 1px;
+  margin: 10px auto 18px auto;
+  background: linear-gradient(to right, transparent, var(--saybrook-sand) 50%, transparent);
+  opacity: 0.3;
+}
+
+.saybrook-sidebar .custom-scrollbar {
+  padding-bottom: 8px;
+}
+
+.saybrook-sidebar .custom-scrollbar > div:first-child {
+  gap: 18px;
+}
+
+.saybrook-sidebar h2 {
+  font-size: 3rem;
+}
+
+.saybrook-sidebar h2 + div {
+  font-size: 2.45rem;
+}
+
+.saybrook-sidebar .text-base {
+  font-size: 1rem;
+  line-height: 1.15;
+}
+
+.saybrook-sidebar .text-\[13px\] {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.saybrook-sidebar .pt-10 {
+  padding-top: 10px;
+}
+
+.saybrook-sidebar .space-y-6 {
+  row-gap: 10px;
+}
+
+.saybrook-sidebar .text-\[10px\] {
+  font-size: 9px;
+}
+
+@media (max-height: 860px) {
+  .saybrook-sidebar {
+    padding: 24px 28px 18px;
+  }
+
+  .saybrook-seal-anchor {
+    width: 176px;
+    margin-bottom: 6px;
+  }
+
+  .saybrook-sidebar h2 {
+    font-size: 2.65rem;
+  }
+
+  .saybrook-sidebar h2 + div {
+    font-size: 2.15rem;
+  }
+
+  .saybrook-sidebar-divider {
+    margin: 8px auto 14px auto;
+  }
+
+  .saybrook-sidebar .custom-scrollbar > div:first-child {
+    gap: 14px;
+  }
+
+  .saybrook-sidebar .text-base {
+    font-size: 1rem;
+  }
+
+  .saybrook-sidebar .text-\[13px\] {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .saybrook-sidebar .pt-10 {
+    padding-top: 12px;
+  }
+}
+
+/* The Composer */
+.saybrook-composer-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 40px 15px;
+  pointer-events: none;
+  background: linear-gradient(to top, var(--saybrook-cream) 20%, transparent);
+  z-index: 20;
+}
+
+.saybrook-composer-container > * {
+  pointer-events: auto;
+}
+
+.saybrook-composer {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 999px;
+  padding: 8px 12px 8px 32px;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow-float);
+  border: 2px solid rgba(16,40,32,0.12);
+  pointer-events: auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.saybrook-composer:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -10px rgba(16,40,32,0.15);
+  border-color: rgba(16,40,32,0.15);
+}
+
+.saybrook-input {
+  flex: 1;
+  background-color: transparent !important;
+  background: transparent !important;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--saybrook-ink);
+  outline: none;
+  font-weight: 500;
+}
+
+.saybrook-input:-webkit-autofill,
+.saybrook-input:-webkit-autofill:hover, 
+.saybrook-input:-webkit-autofill:focus, 
+.saybrook-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: var(--saybrook-ink) !important;
+}
+
+.saybrook-input::selection {
+  background-color: var(--saybrook-mist);
+  color: var(--saybrook-forest);
+}
+
+.saybrook-input::placeholder {
+  color: rgba(16,40,32,0.3);
+}
+
+.saybrook-submit-golden {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background-color: #EAB308; /* Premium Gold */
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--saybrook-forest);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(234, 179, 8, 0.3);
+}
+
+.saybrook-submit-golden:disabled {
+  background-color: var(--saybrook-mist);
+  border-color: var(--saybrook-border);
+  color: rgba(0,0,0,0.2);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.saybrook-submit-golden:not(:disabled):hover {
+  background-color: #FACC15; /* Brighter gold on hover */
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(234, 179, 8, 0.4);
+}
+
+.saybrook-submit-golden:not(:disabled):active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Header Gradient Mask */
+.saybrook-header-mask {
+  position: absolute;
+  top: 64px; /* Below new header */
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--saybrook-cream) 40%, transparent);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Icon Pulsate Animation */
+@keyframes pulsating-underline {
+  0% { border-bottom-color: rgba(212, 175, 55, 0.1); }
+  50% { border-bottom-color: rgba(212, 175, 55, 0.9); }
+  100% { border-bottom-color: rgba(212, 175, 55, 0.1); }
+}
+
+.saybrook-header-icon {
+  width: 44px;
+  height: 38px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: transparent;
+  border-bottom: 2px solid var(--saybrook-sand);
+  animation: pulsating-underline 4s infinite ease-in-out;
+  margin-right: 8px;
+  padding-bottom: 1px;
+}
+
+.saybrook-avatar {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.saybrook-avatar-bot {
+  border: 2px solid rgba(16, 40, 32, 0.1);
+}
+
+@media (max-width: 760px) {
+  .saybrook-app { overflow-y: auto; height: 100vh; display: flex; flex-direction: column; }
+  .saybrook-shell { flex-direction: column; height: auto; min-height: 100vh; border-left: none; }
+  
+  /* Compact Mobile Sidebar Branding - Horizontal Header Layout */
+  .saybrook-sidebar { 
+    width: 100%; 
+    height: auto !important; 
+    padding: 8px 30px !important; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 30px;
+    background-color: var(--saybrook-forest);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  .saybrook-sidebar .flex-col { flex-direction: row; align-items: center; gap: 20px; }
+  .saybrook-seal-anchor { 
+    width: 70px !important; 
+    margin: 0 !important; 
+  }
+  .saybrook-sidebar .text-center h2 { font-size: 1.6rem !important; text-align: left !important; margin: 0 !important; line-height: 1 !important; }
+  .saybrook-sidebar .text-saybrook-sand { font-size: 1.2rem !important; text-align: left !important; margin: 0 !important; margin-top: -2px !important; line-height: 1 !important; }
+  
+  /* Hide instructions and footer to prevent vertical scrolling on mobile */
+  .saybrook-sidebar .flex-1,
+  .saybrook-sidebar-divider,
+  .saybrook-sidebar .pt-10 {
+    display: none !important;
+  }
+
+  .saybrook-main { overflow: visible !important; height: auto !important; flex: 1; }
+  .saybrook-composer-container { position: sticky; bottom: 0; background: var(--saybrook-cream); padding: 15px 20px; z-index: 40;}
+  .saybrook-hero { padding: 40px 20px; }
+  .saybrook-hero h1 { font-size: 1.8rem; }
+}
+
+@media (max-height: 920px) {
+  .saybrook-hero { padding: 40px 0 20px; }
+  .saybrook-hero h1 { font-size: 1.8rem; }
+  /* Normalized: no random padding shifts for the sidebar */
+}
+@media (max-width: 430px) {
+  .saybrook-sidebar { padding: 10px 15px !important; gap: 15px; }
+  .saybrook-seal-anchor { width: 50px !important; }
+  .saybrook-sidebar .text-center h2 { font-size: 1.3rem !important; }
+  .saybrook-sidebar .text-saybrook-sand { font-size: 1.1rem !important; }
+  .saybrook-hero h1 { font-size: 1.5rem; }
+  .saybrook-composer-container { padding: 10px 15px; }
+  .saybrook-header-icon { transform: scale(0.85); margin-right: 4px; }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

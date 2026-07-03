@@ -1,0 +1,138 @@
+{
+  "mvp": "eligibility-lite",
+  "run_timestamp_utc": "2026-03-24T10:15:00Z",
+  "top_target_buyers": [
+    {
+      "rank": 1,
+      "organization": "Ashtabula County Department of Job and Family Services",
+      "type": "County Social Services Agency",
+      "website": "https://www.acdjfs.org/",
+      "rationale": "Primary county agency determining eligibility for SNAP, Medicaid, OWF, and childcare assistance. A lite screening tool would directly reduce their intake workload and help residents quickly understand potential eligibility.",
+      "contacts": [
+        {
+          "name": "Patrick J. Arcaro",
+          "title": "Executive Director",
+          "email": "patrick.arcaro@jfs.ohio.gov",
+          "email_confidence": "estimated",
+          "email_pattern": "firstname.lastname@jfs.ohio.gov (state OHJFS pattern)",
+          "phone": "(440) 998-1110",
+          "linkedin": "https://www.linkedin.com/in/patrick-j-arcaro-78985621",
+          "bio": "Executive Director since September 2004. Bachelor's in Political Science from Gannon University, Master's in Public Administration with Healthcare Administration Certificate from Cleveland State University. Serves on several local, county and State Boards and Committees.",
+          "priority": "primary",
+          "notes": "Primary decision maker for agency technology and operations. Directly oversees all benefit eligibility programs."
+        },
+        {
+          "name": "Beverly DeFazio",
+          "title": "Social Services Director",
+          "email": "beverly.defazio@jfs.ohio.gov",
+          "email_confidence": "verified",
+          "phone": "(440) 998-1811",
+          "source": "Ohio JFS County Directory 2020",
+          "priority": "secondary",
+          "notes": "Oversees social services programs including eligibility screening. Key contact for program implementation."
+        },
+        {
+          "name": "General Information",
+          "title": "Agency Main Line",
+          "email": "info@acdjfs.org",
+          "email_confidence": "estimated",
+          "phone": "(440) 998-1110",
+          "fax": "(440) 998-1538",
+          "address": "2924 Donahoe Dr., Ashtabula, OH 44004",
+          "hours": "Mon-Fri 8am-4:30pm",
+          "priority": "fallback",
+          "notes": "Main agency contact for general inquiries about partnerships and technology solutions."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "organization": "Ashtabula County Community Action Agency (ACCAA)",
+      "type": "Anti-Poverty Organization",
+      "website": "https://accaa.org/",
+      "rationale": "Helps residents access assistance programs and achieve self-sufficiency. Eligibility screening tools would streamline their client intake process and help direct clients to appropriate resources faster.",
+      "contacts": [
+        {
+          "name": "Alissa Holdson",
+          "title": "Executive Director",
+          "email": "aholdson@accaa.org",
+          "email_confidence": "verified",
+          "phone": "(440) 997-5957",
+          "source": "accaa.org/about-us/board-staff.html",
+          "priority": "primary",
+          "notes": "Executive Director - top decision maker for agency partnerships and technology initiatives. Listed on National CAP directory.",
+          "secondary_email": "aholdson@accaa.org"
+        },
+        {
+          "name": "Dino Mauri",
+          "title": "Director of Information Technology",
+          "email": "dmauri@accaa.org",
+          "email_confidence": "verified",
+          "phone": "(440) 997-5957",
+          "source": "accaa.org/about-us/board-staff.html",
+          "priority": "technical",
+          "notes": "IT Director - key technical decision maker for evaluating and implementing new software/tools. Direct contact for technical integration discussions."
+        },
+        {
+          "name": "Ilana Litwak",
+          "title": "Director of Health & Nutrition Services",
+          "email": "ilitwak@accaa.org",
+          "email_confidence": "verified",
+          "phone": "(440) 990-1778",
+          "source": "accaa.org/about-us/board-staff.html",
+          "priority": "secondary",
+          "notes": "Oversees health and nutrition programs including SNAP outreach. Would be end-user stakeholder for eligibility screening tool."
+        },
+        {
+          "name": "Marlo Millard",
+          "title": "Director of Housing & Energy Services",
+          "email": "mmillard@accaa.org",
+          "email_confidence": "verified",
+          "phone": "(440) 997-5957",
+          "source": "accaa.org/about-us/board-staff.html",
+          "priority": "secondary",
+          "notes": "Oversees housing and energy assistance programs. Cross-program eligibility screening would benefit their intake process."
+        },
+        {
+          "name": "Renee Sherman",
+          "title": "Director of Fiscal Services",
+          "email": "rsherman@accaa.org",
+          "email_confidence": "verified",
+          "phone": "(440) 997-5957",
+          "source": "accaa.org/about-us/board-staff.html",
+          "priority": "financial",
+          "notes": "Fiscal Director - involved in budget decisions for new tools/services."
+        }
+      ],
+      "organization_stats": {
+        "residents_served_last_year": 11763,
+        "meals_provided": 100290,
+        "households_weatherized": 99,
+        "main_office": "6920 Austinburg Road, Ashtabula, OH",
+        "secondary_location": "2009 W Prospect Road, PO Box 2610, Ashtabula OH 44005"
+      }
+    }
+  ],
+  "research_notes": {
+    "acdjfs_email_pattern": "Based on Ohio JFS County Directory, emails follow firstname.lastname@jfs.ohio.gov pattern. Patrick Arcaro's email extrapolated from this pattern.",
+    "accaa_verified_emails": "All ACCAA emails verified from official board-staff.html page as of March 24, 2026.",
+    "next_steps": [
+      "Primary outreach: Patrick Arcaro (ACDJFS) and Alissa Holdson (ACCAA)",
+      "Technical discussions: Dino Mauri (ACCAA IT Director)",
+      "Program-specific: Ilana Litwak (ACCAA Health & Nutrition) and Beverly DeFazio (ACDJFS Social Services)",
+      "Emphasize reduced intake workload and faster client screening benefits"
+    ]
+  },
+  "sources": [
+    "https://www.acdjfs.org/",
+    "https://www.acdjfs.org/contact",
+    "https://dam.assets.ohio.gov/image/upload/jfs.ohio.gov/County/County_Directory.pdf",
+    "https://dam.assets.ohio.gov/image/upload/jfs.ohio.gov/ocf/CountyChildWelfareContacts2020.pdf",
+    "https://accaa.org/",
+    "https://accaa.org/about-us/board-staff.html",
+    "https://accaa.org/about-us/contact.html",
+    "https://communityactionpartnership.com/stores/ashtabula-county-community-action-agency/",
+    "https://www.linkedin.com/in/patrick-j-arcaro-78985621",
+    "https://www.ashtabulacounty.us/327/Department-of-Job-Family-Services"
+  ]
+}

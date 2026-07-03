@@ -1,0 +1,95 @@
+{
+  "mvp": "ashtabula-fence",
+  "research_date": "2026-03-24",
+  "target_buyers": [
+    {
+      "organization": "Thomas Fence Co.",
+      "type": "Fence Contractor (50+ Years)",
+      "website": "https://thomasfence.com/",
+      "address": "5515 Woodman Ave, Ashtabula, OH 44004",
+      "phone": "(440) 998-4747",
+      "priority": "Primary",
+      "contacts": [
+        {
+          "name": "Drew D. Thomas",
+          "title": "CEO / Owner",
+          "email": "thomasfence@suite224.net",
+          "phone": "(440) 998-4747",
+          "notes": "Key principal and CEO. Family-owned business for 50+ years. Licensed contractor in Ohio and Pennsylvania.",
+          "source": "Facebook, Dun & Bradstreet, BuildZoom"
+        },
+        {
+          "name": "General Inquiries",
+          "title": "Business Contact",
+          "email": "thomasfence@suite224.net",
+          "phone": "(440) 998-4747",
+          "notes": "Main business email. Serves 8 counties in Ohio and northern Pennsylvania. No subcontractors - all in-house team.",
+          "source": "Facebook business page"
+        }
+      ],
+      "fit_rationale": "Family-owned fence contractor celebrating 50+ years serving Northeast Ohio and Northwest Pennsylvania. Offers both commercial and residential fencing. Digital platform would streamline their estimate requests, permit guidance for customers, and project scheduling across their 8-county service area.",
+      "outreach_notes": "Emphasize multi-county service area efficiency, permit guidance integration for customers, and streamlining estimate requests across their large geographic footprint."
+    },
+    {
+      "organization": "Ashtabula Fence Co.",
+      "type": "Local Fence Contractor",
+      "website": "https://ashtabulafence.com/",
+      "address": "1220 Stanhope-Kelloggsville Rd, Dorset, OH 44032",
+      "phone": "(440) 858-2455",
+      "priority": "Primary",
+      "contacts": [
+        {
+          "name": "Devon Starcher",
+          "title": "Founder / Owner / Lead Foreman",
+          "email": "Contact@ashtabulafence.com",
+          "phone": "(440) 858-2455",
+          "notes": "Founder and Lead Foreman. Started installing fence at age 18. Fully responsible for final installations and customer satisfaction. Family owned and operated with wife Misty.",
+          "source": "Company website, BBB, LinkedIn, Star Beacon news article"
+        },
+        {
+          "name": "Misty Starcher",
+          "title": "Estimator / Administrator",
+          "email": "Contact@ashtabulafence.com",
+          "phone": "(440) 858-2455",
+          "notes": "Primary customer contact and estimator. Handles measurements, quotes, and customer service. Frequently mentioned in customer reviews for excellent communication.",
+          "source": "Company website, BBB profile, customer reviews"
+        }
+      ],
+      "fit_rationale": "Ashtabula-based fence company specializing in residential privacy fences, custom driveway gates, and repairs. Strong local reputation with excellent customer reviews. Platform would enhance their quote management and customer communication.",
+      "outreach_notes": "Highlight quote management and customer communication improvements. Mention custom driveway gate capabilities. Reference their excellent reviews and reputation for quality service. Family business angle - husband/wife team."
+    }
+  ],
+  "secondary_targets": [
+    {
+      "organization": "Ashtabula County Building Department",
+      "type": "County Permitting Authority",
+      "website": "https://www.ashtabulacounty.us/181/Building",
+      "priority": "Secondary",
+      "fit_rationale": "Issues building permits for fence installations in unincorporated areas of Ashtabula County. Fence platform with integrated permit guidance would reduce inquiries and help residents understand zoning requirements before applying.",
+      "outreach_notes": "Partnership opportunity for permit integration and zoning requirement lookups."
+    },
+    {
+      "organization": "City of Ashtabula Zoning Department",
+      "type": "Municipal Zoning Authority",
+      "website": "https://www.cityofashtabula.com/zoning",
+      "priority": "Secondary",
+      "fit_rationale": "Issues zoning permits required before building permits for fence installations within city limits. Digital fence platform could include municipal zoning requirement lookups to streamline the permit process for residents.",
+      "outreach_notes": "Municipal partnership for zoning lookup integration."
+    }
+  ],
+  "research_summary": {
+    "total_emails_found": 4,
+    "organizations_researched": 2,
+    "primary_contacts": 4,
+    "research_methods": [
+      "Company website contact page scraping",
+      "Facebook business page review",
+      "Better Business Bureau profile review",
+      "LinkedIn profile verification",
+      "News article research (Star Beacon)",
+      "Business directory verification (Dun & Bradstreet, BuildZoom)"
+    ],
+    "confidence_level": "High",
+    "notes": "Both primary targets are family-owned businesses with strong local presence. Thomas Fence is established 50+ years with multi-county reach. Ashtabula Fence Co. is newer (founded ~2021) but has excellent reviews and growing reputation. Both use shared general email addresses rather than individual accounts."
+  }
+}

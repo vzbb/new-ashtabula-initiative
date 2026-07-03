@@ -1,0 +1,44 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6] [cursor=pointer]:
+        - img "Ducro Funeral Services" [ref=e8]
+        - generic [ref=e9]:
+          - generic [ref=e10]: Ducro Funeral Services
+          - generic [ref=e11]: Legacy Link • A Ducro Funeral Services tool
+      - generic [ref=e12]:
+        - img [ref=e13]
+        - text: (440) 992-2191
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]: Legacy Link
+      - generic [ref=e19]:
+        - generic [ref=e20]: Ducro Funeral Services
+        - generic [ref=e21]: •
+        - generic [ref=e22]: Compassionate planning support
+      - heading "Plan with dignity, peace, and clarity." [level=1] [ref=e23]:
+        - text: Plan with dignity,
+        - text: peace, and clarity.
+      - paragraph [ref=e24]: Guiding Ashtabula County families through end-of-life arrangements with a gentle, step-by-step approach. Remove the burden of guesswork for those you love.
+      - button "Start Planning" [ref=e26] [cursor=pointer]:
+        - text: Start Planning
+        - img [ref=e27]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - img [ref=e32]
+          - heading "Compassionate" [level=3] [ref=e34]
+          - paragraph [ref=e35]: Gentle, understanding guidance at your own pace.
+        - generic [ref=e36]:
+          - img [ref=e38]
+          - heading "Clear Steps" [level=3] [ref=e41]
+          - paragraph [ref=e42]: Know exactly what to prepare and what comes next.
+        - generic [ref=e43]:
+          - img [ref=e45]
+          - heading "Less Stress" [level=3] [ref=e48]
+          - paragraph [ref=e49]: Simplify difficult decisions for your family.
+  - contentinfo [ref=e50]:
+    - generic [ref=e51]:
+      - paragraph [ref=e52]: Ducro Funeral Services
+      - paragraph [ref=e53]: 4101 Main Avenue • Ashtabula, OH 44004
+      - paragraph [ref=e54]: (440) 992-2191
+      - paragraph [ref=e55]: Serving Ashtabula County Families for 130+ Years

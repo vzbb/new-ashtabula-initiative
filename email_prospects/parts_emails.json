@@ -1,0 +1,68 @@
+{
+  "mvp": "parts",
+  "mvp_description": "Parts Finder - Industrial Parts Locator",
+  "research_date": "2026-03-24",
+  "target_region": "Ashtabula County, Ohio",
+  "leads": [
+    {
+      "rank": 1,
+      "category": "manufacturing_plant",
+      "company_name": "Grand River Rubber & Plastics Co.",
+      "contact_name": "Keith Wyatt",
+      "title": "Chief Operating Officer",
+      "email": "kwyatt@grrp.com",
+      "phone": "440-998-2900 Ext. #153",
+      "address": "2029 Aetna Rd, Ashtabula, OH 44004",
+      "company_website": "https://www.grandriverrubber.com",
+      "company_description": "Employee-owned U.S. manufacturer of custom lathe-cut gaskets, sweeper belts, and drum and pail gaskets, built to ISO 9001:2015 standards",
+      "email_source": "Company contact page - https://www.grandriverrubber.com/contact/",
+      "email_confidence": "high",
+      "notes": "COO is operations leadership - ideal contact for plant operations and parts sourcing decisions. Company is ISO certified manufacturer with 100+ years of experience serving industrial markets."
+    },
+    {
+      "rank": 2,
+      "category": "industrial_distributor",
+      "company_name": "A. Louis Supply Co.",
+      "contact_name": "General Sales",
+      "title": "Sales Department",
+      "email": "sales@alouissupply.com",
+      "phone": "440-997-5161",
+      "address": "5610 Main Avenue, Ashtabula, OH 44004",
+      "company_website": "https://alouissupply.com",
+      "company_description": "Wholesale industrial distributor of electrical, pipe, valves & fittings, tools, PHAC, furniture, janitorial, misc mill supplies and underground utilities. 110+ years in business.",
+      "email_source": "LinkedIn company page and chamber directory",
+      "email_confidence": "high",
+      "notes": "Regional industrial distributor serving Ashtabula area for 110+ years. Primary customer base includes industrial plants, contractors, municipalities, schools, and hospitals. Maintains own fleet for local delivery."
+    }
+  ],
+  "alternative_leads_considered": [
+    {
+      "company": "ITEN Industries",
+      "email": "info@itenindustries.com",
+      "phone": "1-800-227-4836",
+      "address": "4602 Benefit Avenue, Ashtabula, OH 44005",
+      "reason_not_selected": "General info email vs. named operations contact at Grand River Rubber"
+    },
+    {
+      "company": "Chromaflo Technologies (Vibrantz)",
+      "contact": "Shelly Carpenter",
+      "email": "scarpenter@chromaflo.com",
+      "phone": "440-997-0190",
+      "reason_not_selected": "Specialty chemicals focus vs. general industrial parts distribution"
+    },
+    {
+      "company": "Molded Fiber Glass Companies (MFG)",
+      "phone": "(440) 997-5851",
+      "address": "2925 MFG Place, Ashtabula, OH 44005",
+      "reason_not_selected": "No direct email found; ZoomInfo shows Operations Manager Jose Cisneros but email not publicly available"
+    }
+  ],
+  "research_notes": "Ashtabula County has a strong industrial base with 60+ year legacy in plastics, rubber, and composites manufacturing. Key industrial employers include MFG Companies, Vibrantz (Chromaflo), ITEN Industries, and Grand River Rubber & Plastics. A. Louis Supply is the primary industrial distributor serving this manufacturing cluster.",
+  "data_sources": [
+    "Greater Ashtabula Chamber of Commerce directory",
+    "Company websites and contact pages",
+    "LinkedIn company profiles",
+    "ZoomInfo employee directories",
+    "ThomasNet industrial directory"
+  ]
+}

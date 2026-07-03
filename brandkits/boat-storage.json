@@ -1,0 +1,90 @@
+{
+  "mvp": "boat-storage",
+  "generated_at": "2026-03-22T12:08:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/boat-storage.json",
+  "research_sources": [
+    "https://www.genevamarina.com/",
+    "https://www.harboryachtclub.net/",
+    "https://www.aycohio.com/"
+  ],
+  "target_buyer": {
+    "organization": "Geneva Marina",
+    "type": "Full-Service Marina",
+    "website": "https://www.genevamarina.com/",
+    "why_top_candidate": "Premier marina with 379 slips, transient docking, winter storage, trailer storage, marine shop (The Doc Shop), fuel dock, and boat ramp. Located at Geneva State Park with direct Lake Erie access. Ohio Clean Marina Platinum certification. Seasonal operation May 1 - October 31.",
+    "fit_score": 92
+  },
+  "actual_brand_research": {
+    "existing_brand_name": "Geneva Marina",
+    "location": "Geneva State Park, Ohio",
+    "tagline": "Ohio's Gleaming Northeastern Shoreline",
+    "key_stats": {
+      "slips": 379,
+      "season": "May 1 - October 31"
+    },
+    "amenities": [
+      "Marina Store",
+      "Bait & Tackle",
+      "Pavilion",
+      "Restrooms and Showers",
+      "Dock Box Rental",
+      "Trailer Storage",
+      "Winter Storage",
+      "Marine Shop (The Doc Shop)",
+      "Fuel Dock (Diesel & Recreational)",
+      "Pump Out",
+      "Self Contained Boat Wash Station"
+    ],
+    "certifications": ["Ohio Clean Marina Platinum"],
+    "services": [
+      "Small Repairs",
+      "Tune-ups",
+      "Oil Changes",
+      "Prop Replacements/Repairs",
+      "Boat Bottom Painting",
+      "Detailing",
+      "Winterizing & De-winterizing"
+    ],
+    "visual_style": "Family-oriented, Lake Erie recreational, professional marina"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Your Boat. Your Storage. Your Lake Erie Adventure.",
+    "positioning": "The digital storage management platform for Geneva Marina — streamlining slip reservations, winter storage, and trailer storage for 379 boats on Ohio's northeastern shoreline.",
+    "color_palette_derived_from_research": {
+      "primary": "#1E5F8E",
+      "accent": "#4A9FD8",
+      "background": "#F5F7FA",
+      "text": "#2C3E50",
+      "secondary": "#8FA4B8"
+    },
+    "typography_recommendation": {
+      "heading_font": "Clean nautical sans-serif",
+      "body_font": "Highly readable sans-serif"
+    },
+    "mood_keywords_from_research": ["nautical", "family-oriented", "professional", "Lake Erie", "recreational"],
+    "visual_direction": {
+      "hero_image_concept": "Aerial view of Geneva Marina with Lake Erie and boats",
+      "color_scheme": "Nautical blues conveying water and professionalism",
+      "photography_style": "Marina operations, boats on Lake Erie, family recreation"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Geneva Marina's family-oriented, professional Lake Erie recreation brand",
+    "key_features_needed": [
+      "Slip reservation system (379 slips)",
+      "Seasonal vs transient docking options",
+      "Winter storage management",
+      "Trailer storage tracking",
+      "Integration with The Doc Shop services",
+      "Fuel dock access scheduling"
+    ],
+    "differentiators_based_on_research": [
+      "379 slips - largest in area",
+      "Ohio Clean Marina Platinum certification",
+      "Full-service marina with marine shop",
+      "Geneva State Park location",
+      "Direct Lake Erie central basin access"
+    ]
+  }
+}

@@ -1,0 +1,321 @@
+/* Adjacent Services Styles */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  background: linear-gradient(135deg, #003366 0%, #002244 100%);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0, 51, 102, 0.3);
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: 'Crimson Text', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.logo-subtitle {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 0.75rem;
+  color: #f1c40f;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  color: #f1c40f;
+}
+
+.nav-btn {
+  background: #cc0000;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.nav-btn:hover {
+  background: #a00000;
+  transform: translateY(-1px);
+}
+
+.content {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(241, 196, 15, 0.15);
+  border: 1px solid rgba(241, 196, 15, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge span {
+  font-size: 0.9rem;
+  color: #003366;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.services-section {
+  margin: 2rem 0;
+}
+
+.category-tabs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.category-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: white;
+  border: 2px solid rgba(0, 51, 102, 0.1);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #003366;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.category-tab:hover {
+  border-color: #003366;
+}
+
+.category-tab.active {
+  background: #003366;
+  color: white;
+  border-color: #003366;
+}
+
+.partners-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 51, 102, 0.08);
+  transition: all 0.2s ease;
+}
+
+.partner-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 51, 102, 0.1);
+  transform: translateY(-2px);
+}
+
+.partner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.partner-header h4 {
+  font-size: 1.15rem;
+  color: #003366;
+}
+
+.availability-badge {
+  background: rgba(46, 125, 50, 0.1);
+  color: #2e7d32;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.partner-service {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.partner-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #003366;
+  border: 1px solid #003366;
+  padding: 0.7rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 51, 102, 0.05);
+}
+
+.btn-primary {
+  background: #003366;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #cc0000;
+}
+
+.referral-section {
+  margin: 2.5rem 0;
+}
+
+.referral-card {
+  background: linear-gradient(135deg, #003366 0%, #002244 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.referral-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.referral-card h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.referral-card p {
+  opacity: 0.9;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.7;
+}
+
+.footer {
+  background: #002244;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 2.5rem 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand strong {
+  color: white;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .header-container { padding: 1rem; }
+  .nav a { display: none; }
+  .content { padding: 1rem; }
+  .hero h1 { font-size: 1.9rem; }
+  .partner-actions {
+    flex-direction: column;
+  }
+}

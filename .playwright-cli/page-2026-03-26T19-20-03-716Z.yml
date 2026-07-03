@@ -1,0 +1,116 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e6]
+      - generic [ref=e12]:
+        - generic [ref=e13]: ACAPL
+        - generic [ref=e14]: Find Your Furever Friend.
+    - generic [ref=e15]: Ashtabula County • Shelter-first adoption matching
+  - banner [ref=e16]:
+    - generic [ref=e17]:
+      - generic [ref=e18]: Compassionate • Family-focused • Rescue-ready
+      - heading "Help good pets find the best possible furever home." [level=1] [ref=e19]
+      - paragraph [ref=e20]: "Built for the Ashtabula County Animal Protective League: a warm, practical matching experience for adopters, foster families, volunteers, and donors."
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - heading "Mission" [level=3] [ref=e23]
+          - paragraph [ref=e24]: Provide temporary homes for the parent-less pets of Ashtabula County until we can find them the best possible furever home.
+        - generic [ref=e25]:
+          - heading "Programs" [level=3] [ref=e26]
+          - paragraph [ref=e27]: Adoption • Foster • Rescue • Volunteer
+          - paragraph [ref=e28]: Volunteer, rescue, foster, and adoption all in one flow.
+      - generic [ref=e29]:
+        - generic [ref=e30]: Spay/neuter
+        - generic [ref=e31]: Responsible pet ownership
+        - generic [ref=e32]: Companion pet education
+  - generic [ref=e33]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "Adoption match profile" [level=2] [ref=e36]
+        - paragraph [ref=e37]: Tailor the guidance to the adopter’s real home setup so the page feels shelter-ready, not generic.
+      - generic [ref=e38]: ACAPL pack
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: Pet Type
+          - combobox "Pet Type" [ref=e43]:
+            - option "Any" [selected]
+            - option "Dog"
+            - option "Cat"
+            - option "Other"
+        - generic [ref=e44]:
+          - generic [ref=e45]: Size Preference
+          - combobox "Size Preference" [ref=e46]:
+            - option "Any Size" [selected]
+            - option "Small (under 25 lbs)"
+            - option "Medium (25-60 lbs)"
+            - option "Large (over 60 lbs)"
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]: Age Preference
+          - combobox "Age Preference" [ref=e50]:
+            - option "Any Age" [selected]
+            - option "Baby (under 1 year)"
+            - option "Young (1-3 years)"
+            - option "Adult (3-8 years)"
+            - option "Senior (8+ years)"
+        - generic [ref=e51]:
+          - generic [ref=e52]: Temperament
+          - combobox "Temperament" [ref=e53]:
+            - option "Any" [selected]
+            - option "Calm & Gentle"
+            - option "Active & Playful"
+            - option "Social & Friendly"
+            - option "Shy / Needs time"
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]: Your Experience
+          - combobox "Your Experience" [ref=e57]:
+            - option "First-time owner"
+            - option "Some experience" [selected]
+            - option "Very experienced"
+        - generic [ref=e58]:
+          - generic [ref=e59]: Living Space
+          - combobox "Living Space" [ref=e60]:
+            - option "Apartment"
+            - option "Small yard" [selected]
+            - option "Large yard"
+            - option "Acreage / Farm"
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]: Your Name *
+          - textbox "Your Name *" [ref=e64]:
+            - /placeholder: Full name
+        - generic [ref=e65]:
+          - generic [ref=e66]: Email *
+          - textbox "Email *" [ref=e67]:
+            - /placeholder: your@email.com
+      - generic [ref=e69]:
+        - generic [ref=e70]: Phone *
+        - textbox "Phone *" [ref=e71]:
+          - /placeholder: (440) 555-0123
+      - generic [ref=e72]:
+        - button "Find My Match" [ref=e73] [cursor=pointer]
+        - button "Start Over" [ref=e74] [cursor=pointer]
+  - generic [ref=e75]:
+    - generic [ref=e76]:
+      - heading "Furever-home matching" [level=3] [ref=e77]
+      - paragraph [ref=e78]: Match pets with families based on lifestyle, home setup, and the kind of companion they can truly keep for life.
+    - generic [ref=e79]:
+      - heading "Shelter-first workflow" [level=3] [ref=e80]
+      - paragraph [ref=e81]: Give ACAPL a clean way to show adoptable pets, manage foster paths, and route adoption interest without friction.
+    - generic [ref=e82]:
+      - heading "Volunteer and support ready" [level=3] [ref=e83]
+      - paragraph [ref=e84]: Make it easy to back the shelter with donations, wishlists, and hands-on volunteer help.
+  - generic [ref=e85]:
+    - generic [ref=e87]:
+      - heading "Ways to help ACAPL" [level=2] [ref=e88]
+      - paragraph [ref=e89]: Give supporters a clear path to take action instead of just browsing pets.
+    - generic [ref=e90]:
+      - generic [ref=e91]: Monetary donations
+      - generic [ref=e92]: In-kind donations
+      - generic [ref=e93]: Sponsorships
+      - generic [ref=e94]: Amazon / Chewy wishlists
+  - contentinfo [ref=e95]:
+    - generic [ref=e96]: Ashtabula County Animal Protective League • Find Your Furever Friend.
+    - generic [ref=e97]: Ashtabula County, Ohio

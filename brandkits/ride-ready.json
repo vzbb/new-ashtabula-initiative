@@ -1,0 +1,158 @@
+{
+  "mvp": "ride-ready",
+  "generated_at": "2026-03-22T23:50:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/ride-ready.json",
+  "research_sources": [
+    "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+    "https://reliaride.org/"
+  ],
+  "target_buyer_1": {
+    "organization": "Ashtabula County Transportation System (ACTS)",
+    "type": "County Public Transit / Door-to-Door Service",
+    "website": "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+    "location": "425 W. 24th St., Ashtabula, OH 44004 (Admin: 2924 Donahoe Drive)",
+    "contact": "Carol Lennon, Program Manager | Ph: 440-994-2502 | Main: 440-992-4411 or 800-445-4140",
+    "why_top_candidate": "Provides door-to-door bus service with wheelchair accessibility and reduced fares for elderly/disabled. Office hours: Monday-Friday 8am-4:30pm. Service route hours: Monday-Saturday 7am-5pm. Demand response hours: Monday-Friday 7am-5pm. Ride scheduling platform would significantly improve booking and tracking for seniors and disabled residents throughout Ashtabula County.",
+    "fit_score": 95
+  },
+  "target_buyer_2": {
+    "organization": "ReliaRide",
+    "type": "Non-Emergency Medical Transportation (NEMT)",
+    "website": "https://reliaride.org/",
+    "phone": "330-244-0657",
+    "why_top_candidate": "Leading non-emergency medical transportation provider in Northeast Ohio since 2007. Family-run nonprofit that looks 'Beyond the Ride.' One of the largest wheelchair ambulette services in Ohio. 450,000+ rides completed. Average return time: 20 minutes (vs 1-3 hours for competitors). Waiver provider through Area Agency on Aging. Licensed and regulated. Services: Hospitals, rehab facilities, nursing homes, outpatient surgery, clinics, doctor appointments, dialysis, pharmacy trips, and more. Digital ride management would optimize their already excellent operations.",
+    "fit_score": 93
+  },
+  "actual_brand_research": {
+    "acts_ashtabula": {
+      "name": "Ashtabula County Transportation System (ACTS)",
+      "program_manager": "Carol Lennon",
+      "phone": "440-994-2502",
+      "main_phone": "440-992-4411 or 800-445-4140",
+      "fax": "440-994-2025",
+      "locations": {
+        "service_address": "425 W. 24th St., Ashtabula, OH 44004",
+        "admin_office": "2924 Donahoe Drive, Ashtabula, OH 44004"
+      },
+      "hours": {
+        "office": "Monday-Friday 8am-4:30pm",
+        "service_route": "Monday-Saturday 7am-5pm",
+        "demand_response": "Monday-Friday 7am-5pm"
+      },
+      "holidays_closed": [
+        "New Year's Day",
+        "Memorial Day",
+        "July 4th",
+        "Labor Day",
+        "Thanksgiving",
+        "Christmas Day"
+      ],
+      "features": [
+        "Door-to-door bus service",
+        "Wheelchair accessibility",
+        "Reduced fares for elderly/disabled"
+      ],
+      "visual_style": "County public service, accessibility focused, senior-friendly"
+    },
+    "reliaride": {
+      "name": "ReliaRide Medical Transportation",
+      "positioning": "#1 NE Ohio Non-Emergency Medical Transportation Provider",
+      "founded": 2007,
+      "phone": "330-244-0657",
+      "organization_type": "Family-run nonprofit",
+      "philosophy": "Beyond the Ride - changing the way you think about transportation",
+      "logo_meaning": "Heart shape representing blessed path from point A to point B and back again",
+      "rides_completed": "450,000+",
+      "average_return_time": "20 minutes (vs 1-3 hours competitors)",
+      "credentials": [
+        "Licensed non-emergency transportation provider",
+        "One of the largest wheelchair ambulette services in Ohio",
+        "Waiver provider through Area Agency on Aging",
+        "Licensed and regulated (unlike ride-share companies)"
+      ],
+      "service_areas": [
+        "Hospitals",
+        "Rehab and Skilled Nursing Facilities",
+        "Nursing and Healthcare Facilities",
+        "Outpatient Surgery",
+        "Local Clinics",
+        "Doctors Office",
+        "Appointments",
+        "Rehabilitation",
+        "Physical Therapy",
+        "Checkups",
+        "Sleep Studies",
+        "Pharmacy Trips",
+        "Dialysis",
+        "Eye Exams",
+        "X-rays"
+      ],
+      "career_opportunities": [
+        "Drivers",
+        "Call Center Reps",
+        "Logistics"
+      ],
+      "testimonials_highlights": [
+        "Exceptional service with personal touch",
+        "Best drivers - courteous, professional, friendly",
+        "On time, very courteous, joyful to ride with",
+        "Wheelchair vans for handicap customers",
+        "Never late, great drivers"
+      ],
+      "origin_story": "Started in 2007 after seeing need for safe, professional, reliable Nursing Home transportation in Stark County",
+      "visual_style": "Caring, family-run, heart-centered, reliable, professional"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Rides When You Need Them. Care In Every Mile.",
+    "positioning": "The transportation scheduling platform for Ashtabula County seniors and disabled individuals — connecting ACTS door-to-door service with ReliaRide's medical transportation expertise for reliable, caring rides.",
+    "color_palette_derived_from_research": {
+      "primary": "#2B6CB0",
+      "accent": "#E53E3E",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#718096"
+    },
+    "typography_recommendation": {
+      "heading_font": "Large clear sans-serif (senior-friendly)",
+      "body_font": "High-contrast readable sans-serif"
+    },
+    "mood_keywords_from_research": ["reliable", "caring", "accessible", "medical", "friendly", "safe"],
+    "visual_direction": {
+      "hero_image_concept": "Senior citizen safely boarding accessible transport with caring driver",
+      "color_scheme": "Trust blue with heart red accents (reliability + care)",
+      "photography_style": "Accessible transportation, caring drivers, seniors, medical appointments, Ashtabula County"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with ReliaRide's heart-centered care philosophy and ACTS's public service accessibility mission",
+    "key_features_needed": [
+      "Easy-to-use ride booking interface optimized for seniors",
+      "Accessibility preferences (wheelchair, walker, assistance needed)",
+      "Real-time tracking for families to monitor rides",
+      "Medication reminder integration for medical appointments",
+      "Multiple booking methods (phone, web, app, caregiver portal)",
+      "Driver profiles with photos and background checks",
+      "Recurring ride scheduling for regular appointments",
+      "Emergency contact notifications for ride status"
+    ],
+    "differentiators_based_on_research": [
+      "ReliaRide: 450,000+ rides completed",
+      "ReliaRide: 20-minute average return time",
+      "ReliaRide: Heart-centered philosophy",
+      "ReliaRide: Largest wheelchair ambulette service in Ohio",
+      "ReliaRide: Waiver provider through Area Agency on Aging",
+      "ACTS: County public transit with door-to-door service",
+      "ACTS: Wheelchair accessibility + reduced fares",
+      "ACTS: Ashtabula County focused",
+      "Both: Senior and disabled transportation specialists"
+    ],
+    "outreach_strategy": [
+      "Contact Carol Lennon at ACTS about digital booking pilot",
+      "Reach out to ReliaRide about partnership/integration",
+      "Highlight 20-minute return time benchmark to ACTS",
+      "Propose caregiver portal for family ride management"
+    ]
+  }
+}

@@ -1,0 +1,776 @@
+{
+  "schema_version": 1,
+  "generated_from": "SITEMAP.md",
+  "base_url": "https://new-ashtabula-initiative.vercel.app",
+  "route_count": 75,
+  "routes": [
+    {
+      "index": 1,
+      "site": "Civic Insight Engine",
+      "slug": "civic-insight",
+      "url": "https://new-ashtabula-initiative.vercel.app/civic-insight/",
+      "target": "Ashtabula County Government (Transparency Portal)",
+      "description": "Municipal transparency dashboard",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 2,
+      "site": "Permit Whisperer",
+      "slug": "permits",
+      "url": "https://new-ashtabula-initiative.vercel.app/permits/",
+      "target": "City of Ashtabula",
+      "description": "AI permit guidance assistant",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 3,
+      "site": "Zoning Clerk",
+      "slug": "zoning",
+      "url": "https://new-ashtabula-initiative.vercel.app/zoning/",
+      "target": "Ashtabula County Planning & Development Department",
+      "description": "Zoning guidance tool",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 4,
+      "site": "Eligibility Screener",
+      "slug": "eligibility",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility/",
+      "target": "Ashtabula County Department of Job and Family Services",
+      "description": "Benefits eligibility wizard",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 5,
+      "site": "Eligibility Lite",
+      "slug": "eligibility-lite",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-lite/",
+      "target": "Ashtabula County Department of Job and Family Services",
+      "description": "Streamlined benefits check",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 6,
+      "site": "Eligibility Pro",
+      "slug": "eligibility-pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-pro/",
+      "target": "Ashtabula County Department of Job and Family Services (ACDJFS)",
+      "description": "Advanced benefits analysis",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 7,
+      "site": "License Wizard",
+      "slug": "license",
+      "url": "https://new-ashtabula-initiative.vercel.app/license/",
+      "target": "City of Ashtabula",
+      "description": "Business licensing guide",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 8,
+      "site": "Event Permit Express",
+      "slug": "event-permit",
+      "url": "https://new-ashtabula-initiative.vercel.app/event-permit/",
+      "target": "Ashtabula County Fairgrounds",
+      "description": "Special event permits",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 9,
+      "site": "GovTech Box",
+      "slug": "govtech",
+      "url": "https://new-ashtabula-initiative.vercel.app/govtech/",
+      "target": "Ashtabula County Data Board / IT Services",
+      "description": "Government tech portal",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 10,
+      "site": "Invest Ashtabula",
+      "slug": "invest",
+      "url": "https://new-ashtabula-initiative.vercel.app/invest/",
+      "target": "Ashtabula Area Chamber of Commerce",
+      "description": "Investment attraction portal",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic (9 sites)"
+    },
+    {
+      "index": 11,
+      "site": "Blueprint Analyzer",
+      "slug": "blueprint",
+      "url": "https://new-ashtabula-initiative.vercel.app/blueprint/",
+      "target": "Ashtabula County Building Department",
+      "description": "Construction document AI",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 12,
+      "site": "BoxFlow Estimator",
+      "slug": "boxflow",
+      "url": "https://new-ashtabula-initiative.vercel.app/boxflow/",
+      "target": "World Shipping, Inc. (Port of Ashtabula)",
+      "description": "Logistics cost estimator",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 13,
+      "site": "Parts Finder",
+      "slug": "parts",
+      "url": "https://new-ashtabula-initiative.vercel.app/parts/",
+      "target": "Grand River Rubber & Plastics Co.",
+      "description": "Industrial parts locator",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 14,
+      "site": "Parts Request",
+      "slug": "parts-request",
+      "url": "https://new-ashtabula-initiative.vercel.app/parts-request/",
+      "target": "Grand River Rubber & Plastics Co.",
+      "description": "Custom parts sourcing",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 15,
+      "site": "Plating Tracker",
+      "slug": "plating",
+      "url": "https://new-ashtabula-initiative.vercel.app/plating/",
+      "target": "Lake City Plating",
+      "description": "Quality tracking system",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 16,
+      "site": "Plating Tracker Pro",
+      "slug": "plating-pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/plating-pro/",
+      "target": "Lake City Plating",
+      "description": "Advanced plating analytics",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 17,
+      "site": "Fence Quote",
+      "slug": "fence-quote",
+      "url": "https://new-ashtabula-initiative.vercel.app/fence-quote/",
+      "target": "Miller's Integrity Construction LLC",
+      "description": "Instant fence estimates",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 18,
+      "site": "Landlord Repair Queue",
+      "slug": "landlord",
+      "url": "https://new-ashtabula-initiative.vercel.app/landlord/",
+      "target": "Ashtabula Metropolitan Housing Authority (AMHA)",
+      "description": "Maintenance management",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 19,
+      "site": "Lawn Quote Tool",
+      "slug": "lawn",
+      "url": "https://new-ashtabula-initiative.vercel.app/lawn/",
+      "target": "MC Professional Lawn Care and Snow Plowing",
+      "description": "Landscaping estimates",
+      "category": "\ud83d\udcbc Business & Investment (7 sites)"
+    },
+    {
+      "index": 20,
+      "site": "HVAC Tuneup",
+      "slug": "hvac",
+      "url": "https://new-ashtabula-initiative.vercel.app/hvac/",
+      "target": "HAVE Heating and Cooling (HAVE, Inc.)",
+      "description": "HVAC service scheduler",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 21,
+      "site": "Snow Plow Tracker",
+      "slug": "snow-plow",
+      "url": "https://new-ashtabula-initiative.vercel.app/snow-plow/",
+      "target": "MC Professional Lawn Care and Snow Plowing",
+      "description": "Snow removal coordination",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 22,
+      "site": "Instant Dirt Quote",
+      "slug": "dirt-quote",
+      "url": "https://new-ashtabula-initiative.vercel.app/dirt-quote/",
+      "target": "Brockway's Topsoil",
+      "description": "Excavation quotes",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 23,
+      "site": "Rental Availability",
+      "slug": "rental",
+      "url": "https://new-ashtabula-initiative.vercel.app/rental/",
+      "target": "Ridgeview Estates",
+      "description": "Housing portal",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 24,
+      "site": "Adaptive Reuse Planner",
+      "slug": "adaptive-reuse",
+      "url": "https://new-ashtabula-initiative.vercel.app/adaptive-reuse/",
+      "target": "Renew Partners LLC",
+      "description": "Historic building reuse",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 25,
+      "site": "Engineer's Assistant",
+      "slug": "engineers",
+      "url": "https://new-ashtabula-initiative.vercel.app/engineers/",
+      "target": "City of Ashtabula Engineering Division",
+      "description": "Engineering document AI",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 26,
+      "site": "Local Grocer Go",
+      "slug": "grocer",
+      "url": "https://new-ashtabula-initiative.vercel.app/grocer/",
+      "target": "Harbor Gardens",
+      "description": "Local food marketplace",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 27,
+      "site": "Curbside Pickup Tracker",
+      "slug": "curbside",
+      "url": "https://new-ashtabula-initiative.vercel.app/curbside/",
+      "target": "Harbor Gardens",
+      "description": "Order coordination",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 28,
+      "site": "Farm Stand Finder",
+      "slug": "farm-stand",
+      "url": "https://new-ashtabula-initiative.vercel.app/farm-stand/",
+      "target": "Ashtabula Farmers Market",
+      "description": "Local farm locator",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 29,
+      "site": "Mobile Notary",
+      "slug": "notary",
+      "url": "https://new-ashtabula-initiative.vercel.app/notary/",
+      "target": "Notes and Prints Mobile",
+      "description": "Notary booking service",
+      "category": "\ud83c\udfe0 Home & Property (9 sites)"
+    },
+    {
+      "index": 30,
+      "site": "Auto Detail Booking",
+      "slug": "auto-detail",
+      "url": "https://new-ashtabula-initiative.vercel.app/auto-detail/",
+      "target": "Flawless Coating & Detailing",
+      "description": "Detailing scheduler",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 31,
+      "site": "Truck Wash Booking",
+      "slug": "truck-wash",
+      "url": "https://new-ashtabula-initiative.vercel.app/truck-wash/",
+      "target": "Quick Clean Car and Truck Wash",
+      "description": "Fleet wash scheduling",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 32,
+      "site": "Service Scheduler",
+      "slug": "scheduler",
+      "url": "https://new-ashtabula-initiative.vercel.app/scheduler/",
+      "target": "Blank Heating Company Inc",
+      "description": "Appointment booking",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 33,
+      "site": "Service Scheduler SMS",
+      "slug": "scheduler-sms",
+      "url": "https://new-ashtabula-initiative.vercel.app/scheduler-sms/",
+      "target": "Blank Heating Company Inc",
+      "description": "SMS-based scheduling",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 34,
+      "site": "Insta Book",
+      "slug": "insta-book",
+      "url": "https://new-ashtabula-initiative.vercel.app/insta-book/",
+      "target": "The Lakehouse Inn",
+      "description": "Instant booking system",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 36,
+      "site": "Virtual Concierge",
+      "slug": "concierge",
+      "url": "https://new-ashtabula-initiative.vercel.app/concierge/",
+      "target": "The Lodge at Geneva-on-the-Lake",
+      "description": "Visitor assistance",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 37,
+      "site": "Visitor Parking Finder",
+      "slug": "parking",
+      "url": "https://new-ashtabula-initiative.vercel.app/parking/",
+      "target": "City of Ashtabula",
+      "description": "Downtown parking guide",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 38,
+      "site": "MyTrip Planner",
+      "slug": "mytrip",
+      "url": "https://new-ashtabula-initiative.vercel.app/mytrip/",
+      "target": "Visit Ashtabula County (Official Tourism Site)",
+      "description": "Trip itinerary builder",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 39,
+      "site": "MyTrip Export",
+      "slug": "mytrip-export",
+      "url": "https://new-ashtabula-initiative.vercel.app/mytrip-export/",
+      "target": "Ashtabula County Convention & Visitors Bureau",
+      "description": "Trip plan export",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 40,
+      "site": "Route Optimizer",
+      "slug": "routes",
+      "url": "https://new-ashtabula-initiative.vercel.app/routes/",
+      "target": "Ashtabula County Transportation System (ACTS)",
+      "description": "Delivery route planning",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 41,
+      "site": "Ride Ready",
+      "slug": "ride-ready",
+      "url": "https://new-ashtabula-initiative.vercel.app/ride-ready/",
+      "target": "Ashtabula County Transportation System (ACTS)",
+      "description": "Transportation access",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
+      "index": 42,
+      "site": "Charter Booking",
+      "slug": "charter",
+      "url": "https://new-ashtabula-initiative.vercel.app/charter/",
+      "target": "Compensator Lake Erie Fishing Charters",
+      "description": "Charter service portal",
+      "category": "\ud83d\ude9b Transportation & Logistics (6 sites)"
+    },
+    {
+      "index": 43,
+      "site": "Marina Slip Waitlist",
+      "slug": "marina",
+      "url": "https://new-ashtabula-initiative.vercel.app/marina/",
+      "target": "Harbor Yacht Club & Marina",
+      "description": "Marina management",
+      "category": "\ud83d\ude9b Transportation & Logistics (6 sites)"
+    },
+    {
+      "index": 44,
+      "site": "AidFlow Navigator",
+      "slug": "aidflow",
+      "url": "https://new-ashtabula-initiative.vercel.app/aidflow/",
+      "target": "211 Ashtabula County / United Way of Ashtabula County",
+      "description": "Benefits navigation",
+      "category": "\ud83d\ude9b Transportation & Logistics (6 sites)"
+    },
+    {
+      "index": 45,
+      "site": "Resource Compass",
+      "slug": "resource",
+      "url": "https://new-ashtabula-initiative.vercel.app/resource/",
+      "target": "211 Ashtabula County / United Way of Ashtabula County",
+      "description": "Resource directory",
+      "category": "\ud83d\ude9b Transportation & Logistics (6 sites)"
+    },
+    {
+      "index": 46,
+      "site": "Resource Compass Pro",
+      "slug": "resource-pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/resource-pro/",
+      "target": "OhioMeansJobs Ashtabula County",
+      "description": "Advanced resource matching",
+      "category": "\ud83d\ude9b Transportation & Logistics (6 sites)"
+    },
+    {
+      "index": 47,
+      "site": "Policy Pal",
+      "slug": "policy-pal",
+      "url": "https://new-ashtabula-initiative.vercel.app/policy-pal/",
+      "target": "Kollhoff Insurance Agency",
+      "description": "Insurance guidance",
+      "category": "\ud83d\ude9b Transportation & Logistics (6 sites)"
+    },
+    {
+      "index": 48,
+      "site": "Boat Storage Waitlist",
+      "slug": "boat-storage",
+      "url": "https://new-ashtabula-initiative.vercel.app/boat-storage/",
+      "target": "Geneva Marina",
+      "description": "Storage management",
+      "category": "\u2764\ufe0f Health & Social Services (6 sites)"
+    },
+    {
+      "index": 49,
+      "site": "Harvest Alert",
+      "slug": "harvest",
+      "url": "https://new-ashtabula-initiative.vercel.app/harvest/",
+      "target": "Ashtabula Farmers Market",
+      "description": "Agricultural alerts",
+      "category": "\u2764\ufe0f Health & Social Services (6 sites)"
+    },
+    {
+      "index": 51,
+      "site": "AI Docent Pro",
+      "slug": "ai-docent-pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/ai-docent-pro/",
+      "target": "Ashtabula County Historical Society (ACHS)",
+      "description": "Advanced museum AI",
+      "category": "\u2764\ufe0f Health & Social Services (6 sites)"
+    },
+    {
+      "index": 52,
+      "site": "Artist Commission Form",
+      "slug": "artist-commission",
+      "url": "https://new-ashtabula-initiative.vercel.app/artist-commission/",
+      "target": "Ashtabula Arts Center",
+      "description": "Commission system",
+      "category": "\u2764\ufe0f Health & Social Services (6 sites)"
+    },
+    {
+      "index": 53,
+      "site": "Pocket Historian",
+      "slug": "historian",
+      "url": "https://new-ashtabula-initiative.vercel.app/historian/",
+      "target": "Ashtabula County Historical Society",
+      "description": "Local history guide",
+      "category": "\u2764\ufe0f Health & Social Services (6 sites)"
+    },
+    {
+      "index": 54,
+      "site": "Pocket Historian Pro",
+      "slug": "historian-pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/historian-pro/",
+      "target": "Ashtabula County Historical Society",
+      "description": "History archives",
+      "category": "\u2764\ufe0f Health & Social Services (6 sites)"
+    },
+    {
+      "index": 55,
+      "site": "Pocket Sommelier",
+      "slug": "sommelier",
+      "url": "https://new-ashtabula-initiative.vercel.app/sommelier/",
+      "target": "Ferrante Winery & Ristorante",
+      "description": "Wine pairing guide",
+      "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
+    },
+    {
+      "index": 56,
+      "site": "Pocket Sommelier Pro",
+      "slug": "sommelier-pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/sommelier-pro/",
+      "target": "Ferrante Winery & Ristorante",
+      "description": "Advanced wine AI",
+      "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
+    },
+    {
+      "index": 57,
+      "site": "GOTL Weekend Planner",
+      "slug": "gotl",
+      "url": "https://new-ashtabula-initiative.vercel.app/gotl/",
+      "target": "Geneva-on-the-Lake Convention and Visitors Bureau",
+      "description": "Geneva-on-the-Lake planner",
+      "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
+    },
+    {
+      "index": 58,
+      "site": "Harbor Cam Dashboard",
+      "slug": "harbor",
+      "url": "https://new-ashtabula-initiative.vercel.app/harbor/",
+      "target": "Ashtabula Yacht Club",
+      "description": "Live harbor conditions",
+      "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
+    },
+    {
+      "index": 59,
+      "site": "Pet Matchmaker",
+      "slug": "pet-match",
+      "url": "https://new-ashtabula-initiative.vercel.app/pet-match/",
+      "target": "Ashtabula County Animal Protective League (ACAPL)",
+      "description": "Pet adoption matching",
+      "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
+    },
+    {
+      "index": 60,
+      "site": "Visual Portfolio",
+      "slug": "portfolio",
+      "url": "https://new-ashtabula-initiative.vercel.app/portfolio/",
+      "target": "PIPE! Creative",
+      "description": "Portfolio showcase",
+      "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
+    },
+    {
+      "index": 61,
+      "site": "Volunteer Scheduler",
+      "slug": "volunteer",
+      "url": "https://new-ashtabula-initiative.vercel.app/volunteer/",
+      "target": "RSVP (Retired Senior Volunteer Program) - Axess Family Services",
+      "description": "Volunteer coordination",
+      "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
+    },
+    {
+      "index": 62,
+      "site": "Wedding Lead Form",
+      "slug": "wedding",
+      "url": "https://new-ashtabula-initiative.vercel.app/wedding/",
+      "target": "Elks Lodge #208",
+      "description": "Wedding vendor connector",
+      "category": "\ud83c\udf89 Events & Community (6 sites)"
+    },
+    {
+      "index": 63,
+      "site": "Ashtabula Fence",
+      "slug": "ashtabula-fence",
+      "url": "https://new-ashtabula-initiative.vercel.app/ashtabula-fence/",
+      "target": "Thomas Fence Co.",
+      "description": "Fence company site",
+      "category": "\ud83c\udf89 Events & Community (6 sites)"
+    },
+    {
+      "index": 64,
+      "site": "Thomas Fence",
+      "slug": "thomas-fence",
+      "url": "https://new-ashtabula-initiative.vercel.app/thomas-fence/",
+      "target": "Thomas Fence Co.",
+      "description": "Thomas Fence site",
+      "category": "\ud83c\udf89 Events & Community (6 sites)"
+    },
+    {
+      "index": 65,
+      "site": "Cut Custom",
+      "slug": "cut-custom",
+      "url": "https://new-ashtabula-initiative.vercel.app/cut-custom/",
+      "target": "Trumbull Locker Plant",
+      "description": "Custom cutting service",
+      "category": "\ud83c\udf89 Events & Community (6 sites)"
+    },
+    {
+      "index": 66,
+      "site": "Rennick Market",
+      "slug": "rennick-market",
+      "url": "https://new-ashtabula-initiative.vercel.app/rennick-market/",
+      "target": "Rennick Meat Market",
+      "description": "Rennick Market site",
+      "category": "\ud83c\udf89 Events & Community (6 sites)"
+    },
+    {
+      "index": 67,
+      "site": "Trumbull Locker",
+      "slug": "trumbull-locker",
+      "url": "https://new-ashtabula-initiative.vercel.app/trumbull-locker/",
+      "target": "Trumbull Locker Plant",
+      "description": "Trumbull Locker site",
+      "category": "\ud83c\udf89 Events & Community (6 sites)"
+    },
+    {
+      "index": 68,
+      "site": "Terra Vantage",
+      "slug": "terra-vantage",
+      "url": "https://new-ashtabula-initiative.vercel.app/terra-vantage/",
+      "target": "Severino Construction",
+      "description": "Terra Vantage site",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 69,
+      "site": "ParcelVisor",
+      "slug": "parcelvisor",
+      "url": "https://new-ashtabula-initiative.vercel.app/parcelvisor/",
+      "target": "Ashtabula County Land Reutilization Corporation (AC Land Bank)",
+      "description": "Parcel management",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 70,
+      "site": "RoofQuote",
+      "slug": "roofquote",
+      "url": "https://new-ashtabula-initiative.vercel.app/roofquote/",
+      "target": "A & R Roofing",
+      "description": "Roofing quotes",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 71,
+      "site": "Site Ops Pro",
+      "slug": "site-ops-pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/site-ops-pro/",
+      "target": "Brobst Earthworks, LTD",
+      "description": "Site operations",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 72,
+      "site": "SBDC Business Counseling",
+      "slug": "sbdc-business-counseling",
+      "url": "https://new-ashtabula-initiative.vercel.app/sbdc-business-counseling/",
+      "target": "Ohio SBDC at Lakeland Community College",
+      "description": "SBDC counseling",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 73,
+      "site": "SBDC Business Planning",
+      "slug": "sbdc-business-planning",
+      "url": "https://new-ashtabula-initiative.vercel.app/sbdc-business-planning/",
+      "target": "Ohio Small Business Development Centers (State Network)",
+      "description": "Business planning",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 74,
+      "site": "SBDC Educational Resources",
+      "slug": "sbdc-educational-resources",
+      "url": "https://new-ashtabula-initiative.vercel.app/sbdc-educational-resources/",
+      "target": "Ohio Small Business Development Centers (Statewide Network)",
+      "description": "Educational content",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 75,
+      "site": "SBDC Learning Modules",
+      "slug": "sbdc-learning-modules",
+      "url": "https://new-ashtabula-initiative.vercel.app/sbdc-learning-modules/",
+      "target": "Ohio Small Business Development Centers (Statewide Network)",
+      "description": "Learning platform",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 76,
+      "site": "SBDC Support Tools",
+      "slug": "sbdc-support-tools",
+      "url": "https://new-ashtabula-initiative.vercel.app/sbdc-support-tools/",
+      "target": "Ohio Small Business Development Centers (State Network)",
+      "description": "Support resources",
+      "category": "\ud83c\udfea Additional Business Sites (14 sites)"
+    },
+    {
+      "index": 77,
+      "site": "Saybrook Zoning Clerk",
+      "slug": "saybrook-zoning",
+      "url": "https://new-ashtabula-initiative.vercel.app/saybrook-zoning/",
+      "target": "Saybrook Township Zoning Office",
+      "description": "Zoning code assistant and permit guidance",
+      "category": "\ud83c\udfdb\ufe0f Government & Civic"
+    }
+  ],
+  "target_ledger": [
+    {
+      "site": "Compassionate Planner",
+      "route": "`/compassionate-planner/`",
+      "primary_target": "Ducro Funeral Services",
+      "secondary_targets": "Ducro Funeral Services contacts",
+      "notes": "Keep Legacy Link as the tool name; this is a settled mapping"
+    },
+    {
+      "site": "Terra Vantage",
+      "route": "`/terra-vantage/`",
+      "primary_target": "Severino Construction",
+      "secondary_targets": "JCI Contractors; Koski Construction Co.",
+      "notes": "Proprietary tool name stays Terra Vantage; keep later white-label / clone potential open"
+    },
+    {
+      "site": "Site Ops Pro",
+      "route": "`/site-ops-pro/`",
+      "primary_target": "Brobst Earthworks, LTD",
+      "secondary_targets": "Wilkinson Paving & Excavating; J. Severino Construction Inc.; Koski Construction Co.",
+      "notes": "Keep Brobst as the primary target; Wilkinson is a strong later white-label / clone candidate"
+    },
+    {
+      "site": "Ashtabula Fence",
+      "route": "`/ashtabula-fence/`",
+      "primary_target": "Ashtabula Fence Co. LLC",
+      "secondary_targets": "Thomas Fence Co. Inc.; Miller's Integrity Construction LLC",
+      "notes": "Concrete brand; keep polishing"
+    },
+    {
+      "site": "Thomas Fence",
+      "route": "`/thomas-fence/`",
+      "primary_target": "Thomas Fence Co. Inc.",
+      "secondary_targets": "Ashtabula Fence Co. LLC; Miller's Integrity Construction LLC",
+      "notes": "Concrete brand; keep polishing"
+    },
+    {
+      "site": "Fence Quote",
+      "route": "`/fence-quote/`",
+      "primary_target": "Miller's Integrity Construction LLC",
+      "secondary_targets": "Lion Fence Builders; Residence Artists Inc.",
+      "notes": "Generic MVP, now anchored to a distinct fence buyer; Ashtabula Fence Co. and Thomas Fence Co. are separate MVPs and not clone candidates here"
+    },
+    {
+      "site": "Farm Stand Finder",
+      "route": "`/farm-stand/`",
+      "primary_target": "Ashtabula Farmers Market",
+      "secondary_targets": "Harbor Gardens; 2140 Farm Market; Conneaut Farmers Market",
+      "notes": "Generic MVP, use the most concrete farm/market buyer available"
+    },
+    {
+      "site": "Rennick Market",
+      "route": "`/rennick-market/`",
+      "primary_target": "Rennick Meat Market",
+      "secondary_targets": "Harbor Gardens; Ashtabula Local Food Network; Ashtabula County Farm Bureau",
+      "notes": "Brand is concrete; polish the identity"
+    },
+    {
+      "site": "Trumbull Locker",
+      "route": "`/trumbull-locker/`",
+      "primary_target": "Trumbull Locker Plant",
+      "secondary_targets": "NaKyrsie Meats; Miles Farmers Market; Don's Custom Meats",
+      "notes": "Brand is concrete; polish the identity"
+    },
+    {
+      "site": "AidFlow Navigator",
+      "route": "`/aidflow/`",
+      "primary_target": "211 Ashtabula County / United Way of Ashtabula County",
+      "secondary_targets": "Ashtabula County Community Action Agency; ACDJFS",
+      "notes": "Shared social-service body is acceptable here"
+    },
+    {
+      "site": "Resource Compass",
+      "route": "`/resource/`",
+      "primary_target": "211 Ashtabula County / United Way of Ashtabula County",
+      "secondary_targets": "Ashtabula County Community Action Agency; ACDJFS",
+      "notes": "Shared social-service body is acceptable here"
+    },
+    {
+      "site": "Resource Compass Pro",
+      "route": "`/resource-pro/`",
+      "primary_target": "OhioMeansJobs Ashtabula County",
+      "secondary_targets": "Growth Partnership for Ashtabula County; ROA Group",
+      "notes": "Advanced resource matching"
+    },
+    {
+      "site": "Saybrook Zoning Clerk",
+      "route": "/saybrook-zoning/",
+      "primary_target": "Saybrook Township Zoning Office",
+      "secondary_targets": "",
+      "notes": "Child clone of Zoning Clerk for Saybrook Township Zoning Office; parent route zoning remains canonical."
+    }
+  ]
+}

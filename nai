@@ -1,0 +1,739 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import json
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+from nai_suite.sitemap_data import (
+    find_route_by_slug,
+    find_target_ledger_entry,
+    import_sitemap_from_markdown,
+    load_sitemap_data,
+    next_route_index,
+    render_markdown_from_json,
+    validate_sitemap_data,
+    write_sitemap_json,
+)
+from nai_suite.siteflow import (
+    find_best_build_root,
+    load_public_slugs,
+    normalize_build_output,
+    package_dirs,
+    needs_api_client_shim,
+    run_site_build,
+    site_dir_for_slug,
+    check_vite_base_matches_route,
+)
+
+ROOT = Path(__file__).resolve().parent
+
+
+def _slugify(value: str) -> str:
+    import re
+
+    slug = value.strip().lower()
+    slug = re.sub(r"[^a-z0-9]+", "-", slug)
+    slug = re.sub(r"-{2,}", "-", slug).strip("-")
+    return slug
+
+
+def _clean_category_label(value: str) -> str:
+    import re
+
+    return re.sub(r"\s*\(\d+\s+sites?\)\s*$", "", value.strip())
+
+
+def _collect_clone_rewrite_targets(parent_dir: Path, parent_slug: str, parent_folder: str, parent_target: str) -> list[str]:
+    candidates: list[str] = []
+    needles = tuple(filter(None, [parent_slug, f"/{parent_slug}/", parent_folder, parent_target]))
+    for path in sorted(parent_dir.rglob("*")):
+        if not path.is_file():
+            continue
+        if any(part in {"node_modules", "dist", ".vercel"} for part in path.parts):
+            continue
+        if path.suffix.lower() not in {
+            ".js", ".jsx", ".ts", ".tsx", ".json", ".html", ".md", ".css", ".txt", ".svg", ".yml", ".yaml"
+        }:
+            continue
+        try:
+            text = path.read_text(errors="ignore")
+        except OSError:
+            continue
+        if any(needle and needle in text for needle in needles):
+            candidates.append(path.relative_to(parent_dir).as_posix())
+    return candidates
+
+
+def _copy_clone_tree(parent_dir: Path, child_dir: Path) -> None:
+    def _ignore(path: str, names: list[str]) -> set[str]:
+        ignored = {"node_modules", "dist", ".vercel", "__pycache__"}
+        return {name for name in names if name in ignored}
+
+    shutil.copytree(parent_dir, child_dir, ignore=_ignore)
+
+
+def _rewrite_clone_files(
+    child_dir: Path,
+    rewrite_targets: list[str],
+    parent_slug: str,
+    new_slug: str,
+    parent_folder: str,
+    new_folder: str,
+    parent_site_name: str,
+    site_name: str,
+    parent_target: str,
+    target: str,
+) -> None:
+    route_placeholder = "__NAI_ROUTE_PLACEHOLDER__"
+    slug_placeholder = "__NAI_SLUG_PLACEHOLDER__"
+    replacements = [
+        (f"/{parent_slug}/", route_placeholder),
+        (parent_slug, slug_placeholder),
+        (parent_folder, new_folder),
+        (parent_site_name, site_name),
+        (parent_target, target),
+    ]
+    for rel_path in rewrite_targets:
+        path = child_dir / rel_path
+        if not path.exists() or not path.is_file():
+            continue
+        text = path.read_text(errors="ignore")
+        original = text
+        for old, new in replacements:
+            if old and new:
+                text = text.replace(old, new)
+        text = text.replace(route_placeholder, f"/{new_slug}/")
+        text = text.replace(slug_placeholder, new_slug)
+        if text != original:
+            path.write_text(text)
+
+
+def cmd_clone_mvp(args: argparse.Namespace) -> int:
+    data = load_sitemap_data()
+    errors = validate_sitemap_data(data)
+    if errors:
+        for error in errors:
+            print(f"❌ {error}")
+        return 1
+
+    parent_slug = args.parent_slug.strip()
+    new_slug = _slugify(args.new_slug)
+    site_name = args.site_name.strip()
+    target = args.target.strip()
+    description = args.description.strip()
+
+    parent_route = find_route_by_slug(parent_slug)
+    if parent_route is None:
+        print(f"❌ Parent slug `{parent_slug}` does not exist in SITEMAP.json")
+        return 1
+
+    existing = find_route_by_slug(new_slug)
+    if existing is not None:
+        print(f"❌ New slug `{new_slug}` already exists in the canonical sitemap")
+        return 1
+
+    parent_dir = site_dir_for_slug(parent_slug)
+    if not parent_dir.exists():
+        print(f"❌ Parent site folder is missing: {parent_dir.relative_to(ROOT)}")
+        return 1
+
+    parent_build = find_best_build_root(parent_dir)
+    if parent_build is None and not args.force:
+        print(f"❌ Parent `{parent_slug}` does not currently resolve to a build root. Use --force to inspect anyway.")
+        return 1
+
+    new_folder = _slugify(args.new_folder or new_slug)
+    child_dir = ROOT / "websites" / new_folder
+    if child_dir.exists():
+        print(f"❌ Target folder already exists: {child_dir.relative_to(ROOT)}")
+        return 1
+
+    category = _clean_category_label(args.category) if args.category else _clean_category_label(str(parent_route.get("category", "")))
+    if not category:
+        print("❌ Category is required because the parent route does not provide one")
+        return 1
+
+    parent_target = str(parent_route.get("target", "")).strip()
+    route_index = args.index if args.index is not None else next_route_index()
+    route_url = f"https://new-ashtabula-initiative.vercel.app/{new_slug}/"
+    route_path = f"/{new_slug}/"
+
+    route_record = {
+        "index": route_index,
+        "site": site_name,
+        "slug": new_slug,
+        "url": route_url,
+        "target": target,
+        "description": description,
+        "category": category,
+    }
+
+    notes = args.notes.strip() if args.notes else ""
+    ledger_record = {
+        "site": site_name,
+        "route": route_path,
+        "primary_target": target,
+        "secondary_targets": args.secondary_targets.strip() if args.secondary_targets else "",
+        "notes": notes or (
+            f"Child clone of {parent_route.get('site', parent_slug)} for {target}; parent route {parent_slug} remains canonical."
+        ),
+    }
+
+    files_to_copy = []
+    for path in sorted(parent_dir.rglob("*")):
+        if any(part in {"node_modules", "dist", ".vercel"} for part in path.parts):
+            continue
+        files_to_copy.append(path.relative_to(parent_dir).as_posix() + ("/" if path.is_dir() else ""))
+    files_to_copy = [p for p in files_to_copy if p != "./"]
+
+    rewrite_targets = _collect_clone_rewrite_targets(parent_dir, parent_slug, parent_dir.name, parent_target)
+    artifacts_to_create = [
+        f"lead_research_json/{new_slug}.json",
+        f"brandkits/{new_slug}.json",
+        f"branding_research/{new_slug}/branding.md",
+    ]
+
+    print("=== NAI clone-mvp dry run ===")
+    print("")
+    print("Parent")
+    print(f"- slug: {parent_slug}")
+    print(f"- site: {parent_route.get('site', '')}")
+    print(f"- target: {parent_target}")
+    print(f"- folder: {parent_dir.relative_to(ROOT)}")
+    print(f"- build root: {parent_build.relative_to(parent_dir).as_posix() if parent_build else 'missing'}")
+    print("")
+    print("Child")
+    print(f"- slug: {new_slug}")
+    print(f"- site name: {site_name}")
+    print(f"- target: {target}")
+    print(f"- folder: {child_dir.relative_to(ROOT)}")
+    print(f"- route: {route_path}")
+    print(f"- category: {category}")
+    print("")
+    print("Proposed route record")
+    print(json.dumps(route_record, indent=2))
+    print("")
+    print("Proposed target-ledger row")
+    print(json.dumps(ledger_record, indent=2))
+    print("")
+    print("Planned artifact stubs")
+    for path in artifacts_to_create:
+        print(f"- {path}")
+    print("")
+    print("Likely structural rewrite targets")
+    if rewrite_targets:
+        for path in rewrite_targets[:50]:
+            print(f"- {path}")
+        if len(rewrite_targets) > 50:
+            print(f"- ... and {len(rewrite_targets) - 50} more")
+    else:
+        print("- none detected")
+    print("")
+    print("Follow-up commands")
+    print("- ./nai sitemap-validate")
+    print("- ./nai sitemap-render-md")
+    print("- ./nai routes")
+    print(f"- cd {child_dir.relative_to(ROOT)} && npm run build")
+    print("- ./nai scan")
+    print("")
+    if args.dry_run:
+        print("Dry run only. No files were written.")
+        return 0
+
+    sitemap_path = ROOT / "SITEMAP.json"
+    original_sitemap = sitemap_path.read_text()
+    created_child_dir = False
+
+    try:
+        _copy_clone_tree(parent_dir, child_dir)
+        created_child_dir = True
+
+        _rewrite_clone_files(
+            child_dir=child_dir,
+            rewrite_targets=rewrite_targets,
+            parent_slug=parent_slug,
+            new_slug=new_slug,
+            parent_folder=parent_dir.name,
+            new_folder=new_folder,
+            parent_site_name=str(parent_route.get("site", "")).strip(),
+            site_name=site_name,
+            parent_target=parent_target,
+            target=target,
+        )
+
+        mutable = dict(data)
+        routes = [route for route in mutable.get("routes", []) if isinstance(route, dict)]
+        routes.append(route_record)
+        routes.sort(key=lambda route: (int(route.get("index", 0) or 0), str(route.get("slug", ""))))
+        mutable["routes"] = routes
+
+        ledger = [entry for entry in mutable.get("target_ledger", []) if isinstance(entry, dict)]
+        ledger.append(ledger_record)
+        mutable["target_ledger"] = ledger
+
+        write_sitemap_json(mutable, sitemap_path)
+        render_markdown_from_json()
+
+        print(f"✅ Cloned parent into {child_dir.relative_to(ROOT)}")
+        print(f"✅ Added canonical route `{new_slug}` to SITEMAP.json")
+        print("✅ Rendered SITEMAP.md from canonical data")
+        print("")
+        print("Next steps:")
+        print("- ./nai sitemap-validate")
+        print("- ./nai routes")
+        print(f"- cd {child_dir.relative_to(ROOT)} && npm run build")
+        print("- ./nai scan")
+        return 0
+    except Exception as exc:
+        sitemap_path.write_text(original_sitemap)
+        if created_child_dir and child_dir.exists():
+            shutil.rmtree(child_dir)
+        print(f"❌ Clone failed and was rolled back: {exc}")
+        return 1
+
+def cmd_scan(_: argparse.Namespace) -> int:
+    slugs = load_public_slugs()
+    print(f"Found {len(slugs)} public routes in canonical sitemap data")
+    print("")
+    
+    base_mismatches = []
+    missing_sites = []
+    for slug in slugs:
+        site_dir = site_dir_for_slug(slug)
+        build_root = find_best_build_root(site_dir)
+        packages = package_dirs(site_dir)
+        status = "exists" if site_dir.exists() else "missing"
+        base_status = ""
+        if not site_dir.exists():
+            missing_sites.append({
+                "slug": slug,
+                "folder": site_dir.name,
+            })
+        else:
+            base_ok, current_base, expected_base = check_vite_base_matches_route(slug, site_dir)
+            if not base_ok:
+                base_status = f" ⚠️  base mismatch: {current_base} should be {expected_base}"
+                base_mismatches.append({
+                    "slug": slug,
+                    "folder": site_dir.name,
+                    "current": current_base,
+                    "expected": expected_base
+                })
+        
+        print(f"{slug:20} -> {site_dir.name} ({status}){base_status}")
+        print(f"  packages: {', '.join(p.relative_to(site_dir).as_posix() for p in packages) if packages else 'none'}")
+        print(f"  build: {build_root.relative_to(site_dir).as_posix() if build_root else 'missing'}")
+        print(f"  dist: {'yes' if (site_dir / 'dist').exists() else 'no'}")
+        print(f"  api-client shim: {'missing' if needs_api_client_shim(site_dir) else 'ok'}")
+    
+    if missing_sites or base_mismatches:
+        print("\n" + "=" * 70)
+        if missing_sites:
+            print(f"⚠️  Missing site directories: {len(missing_sites)}")
+            print("These slugs are still in the canonical sitemap, but their site folders/builds are missing:")
+            for item in missing_sites:
+                print(f"  - {item['slug']} -> {item['folder']}")
+            if base_mismatches:
+                print("")
+        if base_mismatches:
+            print(f"⚠️  Vite base path mismatches: {len(base_mismatches)}")
+            print("These can cause blank pages because assets are requested from wrong URLs.")
+            print("Fix by setting `base: './'` (recommended) or `base: '/<slug>/'` in that site's vite.config.*.")
+        return 1
+    
+    return 0
+
+
+def cmd_build(_: argparse.Namespace) -> int:
+    slugs = load_public_slugs()
+    ready = 0
+    failed: list[str] = []
+
+    for index, slug in enumerate(slugs, start=1):
+        site_dir = site_dir_for_slug(slug)
+        if not (site_dir / "package.json").exists() and not package_dirs(site_dir):
+            print(f"[{index}/{len(slugs)}] {slug}: skipped (no package.json)")
+            continue
+
+        print(f"[{index}/{len(slugs)}] {slug}: building {site_dir.name}")
+        if needs_api_client_shim(site_dir):
+            print("  ⚠️  missing src/api-client.js shim; build may fail until the import graph is fixed")
+        try:
+            build_root = run_site_build(site_dir)
+            normalized = normalize_build_output(site_dir) or build_root
+            print(f"  ✅ {normalized.relative_to(site_dir).as_posix()}")
+            ready += 1
+        except subprocess.CalledProcessError as exc:
+            print(f"  ❌ build failed: {exc}")
+            failed.append(slug)
+        except Exception as exc:
+            print(f"  ❌ {exc}")
+            failed.append(slug)
+
+    print("")
+    print(f"Build complete: {ready} succeeded, {len(failed)} failed")
+    if failed:
+        print("Failed sites:")
+        for slug in failed:
+            print(f"  - {slug}")
+        return 1
+
+    subprocess.run([sys.executable, "-m", "nai_suite.update_vercel"], check=True, cwd=ROOT)
+    return 0
+
+
+def cmd_routes(_: argparse.Namespace) -> int:
+    errors = validate_sitemap_data(load_sitemap_data())
+    if errors:
+        for error in errors:
+            print(f"❌ {error}")
+        return 1
+    subprocess.run([sys.executable, "-m", "nai_suite.update_vercel"], check=True, cwd=ROOT)
+    return 0
+
+
+def cmd_sitemap_sync(_: argparse.Namespace) -> int:
+    errors = validate_sitemap_data(load_sitemap_data())
+    if errors:
+        for error in errors:
+            print(f"❌ {error}")
+        return 1
+    path = render_markdown_from_json()
+    print(f"Rendered human-readable sitemap to {path.relative_to(ROOT)}")
+    return 0
+
+
+def cmd_sitemap_render_md(_: argparse.Namespace) -> int:
+    return cmd_sitemap_sync(argparse.Namespace())
+
+
+def cmd_sitemap_import_md(_: argparse.Namespace) -> int:
+    path = import_sitemap_from_markdown()
+    print(f"Bootstrapped canonical sitemap data to {path.relative_to(ROOT)}")
+    return 0
+
+
+def cmd_sitemap_validate(_: argparse.Namespace) -> int:
+    errors = validate_sitemap_data(load_sitemap_data())
+    if errors:
+        for error in errors:
+            print(f"❌ {error}")
+        return 1
+    print("✅ SITEMAP.json is valid")
+    return 0
+
+
+def cmd_render_all_mvps(_: argparse.Namespace) -> int:
+    subprocess.run([sys.executable, "-m", "nai_suite.generate_all_mvps_page"], check=True, cwd=ROOT)
+    return 0
+
+
+def cmd_fix_bases(_: argparse.Namespace) -> int:
+    """Fix vite.config.js base paths for route-prefixed deploys."""
+    import re
+    
+    slugs = load_public_slugs()
+    fixed = []
+    errors = []
+    
+    for slug in slugs:
+        site_dir = site_dir_for_slug(slug)
+        if not site_dir.exists():
+            continue
+            
+        base_ok, current_base, expected_base = check_vite_base_matches_route(slug, site_dir)
+        if base_ok:
+            continue
+        desired_base = "./"
+            
+        # Find and fix vite.config.js/ts
+        for config_name in ["vite.config.js", "vite.config.ts"]:
+            config_path = site_dir / config_name
+            if not config_path.exists():
+                continue
+                
+            text = config_path.read_text()
+            
+            # Pattern to match base property
+            pattern = r"(base\s*:\s*)['\"]([^'\"]+)['\"]"
+            
+            if re.search(pattern, text):
+                new_text = re.sub(pattern, rf"\1'{desired_base}'", text)
+                config_path.write_text(new_text)
+                fixed.append({
+                    "slug": slug,
+                    "folder": site_dir.name,
+                    "old": current_base,
+                    "new": desired_base,
+                    "config": config_name
+                })
+                print(f"✅ Fixed {slug}: {current_base} → {desired_base}")
+                break
+        else:
+            errors.append(slug)
+    
+    if fixed:
+        print(f"\n✅ Fixed {len(fixed)} vite.config.js base path(s)")
+        print("\nNext steps:")
+        print("  1. Run './nai build' to rebuild all sites")
+        print("  2. Run './nai deploy' to deploy to production")
+    
+    if errors:
+        print(f"\n❌ Could not fix {len(errors)} site(s): {', '.join(errors)}")
+        return 1
+    
+    if not fixed:
+        print("✅ All vite.config.js base paths are already correct!")
+    
+    return 0
+
+
+def cmd_deploy(_: argparse.Namespace) -> int:
+    if cmd_build(argparse.Namespace()) != 0:
+        return 1
+
+    print("")
+    print("Building Vercel output...")
+    subprocess.run(["vercel", "build", "--prod"], cwd=ROOT, check=True)
+
+    print("")
+    print("Deploying prebuilt output to production...")
+    subprocess.run(["vercel", "deploy", "--prebuilt", "--prod", "--yes"], cwd=ROOT, check=True)
+    return 0
+
+
+def cmd_screenshots(args: argparse.Namespace) -> int:
+    cmd = [sys.executable, "-m", "nai_suite.screenshots_sitemap"]
+    if args.live:
+        cmd.append("--live")
+    if args.headed:
+        cmd.append("--headed")
+    if args.slugs:
+        cmd.append("--slugs")
+        cmd.extend(args.slugs)
+    if args.browse_only:
+        cmd.append("--browse-only")
+    if args.linger is not None:
+        cmd.extend(["--linger", str(args.linger)])
+    if args.settle_ms is not None:
+        cmd.extend(["--settle-ms", str(args.settle_ms)])
+    if args.slow_mo:
+        cmd.extend(["--slow-mo", str(args.slow_mo)])
+    subprocess.run(cmd, check=True)
+    return 0
+
+
+def cmd_browse(args: argparse.Namespace) -> int:
+    cmd = [sys.executable, "-m", "nai_suite.screenshots_sitemap", "--live", "--headed", "--browse-only"]
+    linger = args.linger if args.linger is not None else 1
+    cmd.extend(["--linger", str(linger)])
+    if args.settle_ms is not None:
+        cmd.extend(["--settle-ms", str(args.settle_ms)])
+    if args.slow_mo:
+        cmd.extend(["--slow-mo", str(args.slow_mo)])
+    subprocess.run(cmd, check=True)
+    return 0
+
+
+def cmd_analyze_screenshots(args: argparse.Namespace) -> int:
+    cmd = [sys.executable, "-m", "nai_suite.analyze_sitemap_screenshots"]
+    if args.image_dir is not None:
+        cmd.extend(["--image-dir", str(args.image_dir)])
+    if args.output is not None:
+        cmd.extend(["--output", str(args.output)])
+    if args.model is not None:
+        cmd.extend(["--model", args.model])
+    if args.quality is not None:
+        cmd.extend(["--quality", args.quality])
+    if args.slugs:
+        cmd.append("--slugs")
+        cmd.extend(args.slugs)
+    if args.slugs_file is not None:
+        cmd.extend(["--slugs-file", str(args.slugs_file)])
+    if args.limit is not None:
+        cmd.extend(["--limit", str(args.limit)])
+    if args.temperature is not None:
+        cmd.extend(["--temperature", str(args.temperature)])
+    if args.max_tokens is not None:
+        cmd.extend(["--max-tokens", str(args.max_tokens)])
+    if args.sleep is not None:
+        cmd.extend(["--sleep", str(args.sleep)])
+    if getattr(args, "focus", False):
+        cmd.append("--focus")
+    if getattr(args, "branding_only", False):
+        cmd.append("--branding-only")
+    if args.verify_targets is False:
+        cmd.append("--no-verify-targets")
+    subprocess.run(cmd, check=True)
+    return 0
+
+
+def cmd_progress(args: argparse.Namespace) -> int:
+    cmd = [sys.executable, "-m", "nai_suite.generate_screenshot_progress"]
+    if args.archive_dir is not None:
+        cmd.extend(["--archive-dir", str(args.archive_dir)])
+    if args.current_report is not None:
+        cmd.extend(["--current-report", str(args.current_report)])
+    if args.output is not None:
+        cmd.extend(["--output", str(args.output)])
+    if args.data_output is not None:
+        cmd.extend(["--data-output", str(args.data_output)])
+    if args.open:
+        cmd.append("--open")
+    subprocess.run(cmd, check=True)
+    return 0
+
+
+def cmd_hub(_: argparse.Namespace) -> int:
+    subprocess.run([sys.executable, "-m", "nai_suite.nai_hub"], check=True, cwd=ROOT)
+    return 0
+
+
+def cmd_tooling(_: argparse.Namespace) -> int:
+    subprocess.run([sys.executable, "-m", "nai_suite.tooling_registry"], check=True, cwd=ROOT)
+    return 0
+
+
+def cmd_outreach_readiness(_: argparse.Namespace) -> int:
+    subprocess.run([sys.executable, "-m", "nai_suite.generate_outreach_readiness"], check=True, cwd=ROOT)
+    return 0
+
+
+def cmd_saybrook_request_api(args: argparse.Namespace) -> int:
+    cmd = [
+        sys.executable,
+        "-m",
+        "nai_suite.saybrook_request_api",
+        "--host",
+        args.host,
+        "--port",
+        str(args.port),
+        "--db-path",
+        str(args.db_path),
+    ]
+    subprocess.run(cmd, check=True, cwd=ROOT)
+    return 0
+
+
+def build_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(prog="nai", description="NAI workflow helper")
+    sub = parser.add_subparsers(dest="command", required=True)
+
+    sub.add_parser("scan", help="inspect site build status").set_defaults(func=cmd_scan)
+    sub.add_parser("build", help="install dependencies and build every site").set_defaults(func=cmd_build)
+    sub.add_parser("routes", help="regenerate vercel.json").set_defaults(func=cmd_routes)
+    sub.add_parser("sitemap-sync", help="validate SITEMAP.json and render SITEMAP.md").set_defaults(func=cmd_sitemap_sync)
+    sub.add_parser("sitemap-render-md", help="render SITEMAP.md from canonical SITEMAP.json").set_defaults(func=cmd_sitemap_render_md)
+    sub.add_parser("sitemap-import-md", help="bootstrap SITEMAP.json from SITEMAP.md").set_defaults(func=cmd_sitemap_import_md)
+    sub.add_parser("sitemap-validate", help="validate SITEMAP.json").set_defaults(func=cmd_sitemap_validate)
+    sub.add_parser("render-all-mvps", help="generate landing-page/all-mvps.html from canonical sitemap data").set_defaults(func=cmd_render_all_mvps)
+    sub.add_parser("fix-bases", help="fix vite.config.js base paths to match routes").set_defaults(func=cmd_fix_bases)
+    sub.add_parser("deploy", help="build everything and deploy with Vercel").set_defaults(func=cmd_deploy)
+    screenshots = sub.add_parser("screenshots", help="capture sitemap screenshots from local build outputs")
+    screenshots.add_argument("--live", action="store_true", help="navigate the live production URLs instead of local previews")
+    screenshots.add_argument("--headed", action="store_true", help="show the browser window while capturing")
+    screenshots.add_argument("--slugs", nargs="*", default=None, help="optional list of site slugs to capture")
+    screenshots.add_argument("--browse-only", action="store_true", help="visit pages without taking screenshots or building the gallery")
+    screenshots.add_argument("--linger", type=float, default=None, help="seconds to pause on each site before screenshotting")
+    screenshots.add_argument("--settle-ms", type=int, default=None, help="milliseconds to pause after a page settles before capture")
+    screenshots.add_argument("--slow-mo", type=int, default=0, help="delay between browser actions in milliseconds")
+    screenshots.set_defaults(func=cmd_screenshots)
+
+    browse = sub.add_parser("browse", help="open the live production URLs in a visible browser")
+    browse.add_argument("--linger", type=float, default=None, help="seconds to pause on each site before moving on")
+    browse.add_argument("--settle-ms", type=int, default=None, help="milliseconds to pause after a page settles before moving on")
+    browse.add_argument("--slow-mo", type=int, default=0, help="delay between browser actions in milliseconds")
+    browse.set_defaults(func=cmd_browse)
+
+    analyze = sub.add_parser("analyze-screenshots", help="run vision analysis over sitemap screenshots and write a JSON report")
+    analyze.add_argument("--image-dir", type=Path, default=None, help="directory containing screenshot images")
+    analyze.add_argument("--output", type=Path, default=None, help="path to write the JSON report")
+    analyze.add_argument("--model", default=None, help="OpenRouter model id to use")
+    analyze.add_argument("--quality", choices=["fast", "deep"], default="fast", help="model preset to use when --model is not set")
+    analyze.add_argument("--slugs", nargs="*", default=None, help="optional list of site slugs to analyze")
+    analyze.add_argument("--slugs-file", type=Path, default=None, help="newline-delimited list of site slugs to analyze")
+    analyze.add_argument("--limit", type=int, default=None, help="optional limit for testing")
+    analyze.add_argument("--temperature", type=float, default=None, help="sampling temperature")
+    analyze.add_argument("--max-tokens", type=int, default=None, help="maximum completion tokens per image")
+    analyze.add_argument("--sleep", type=float, default=None, help="seconds to sleep between requests")
+    analyze.add_argument("--focus", action=argparse.BooleanOptionalAction, default=False, help="use few-shot calibration examples for a focused subject pass")
+    analyze.add_argument("--branding-only", action=argparse.BooleanOptionalAction, default=False, help="only revise branding/target fields and merge them into the existing report")
+    analyze.add_argument("--verify-targets", action=argparse.BooleanOptionalAction, default=True, help="use web search to verify candidate target entities")
+    analyze.set_defaults(func=cmd_analyze_screenshots)
+
+    progress = sub.add_parser("progress", help="build the score-focused progress dashboard from archived JSON reports")
+    progress.add_argument("--archive-dir", type=Path, default=None, help="directory holding timestamped report snapshots")
+    progress.add_argument("--current-report", type=Path, default=None, help="path to the current visual_analysis_report.json")
+    progress.add_argument("--output", type=Path, default=None, help="path to write the HTML dashboard")
+    progress.add_argument("--data-output", type=Path, default=None, help="path to write the compact JSON payload")
+    progress.add_argument("--open", action="store_true", help="open the generated dashboard in the default browser")
+    progress.set_defaults(func=cmd_progress)
+
+    sub.add_parser("hub", help="open the lightweight browser wrapper for the NAI tool suite").set_defaults(func=cmd_hub)
+    sub.add_parser("tooling", help="show the core/support/legacy script registry and refresh its markdown view").set_defaults(func=cmd_tooling)
+    sub.add_parser("outreach-readiness", help="generate an outreach-oriented readiness board from live MVP, visual QA, and artifact data").set_defaults(func=cmd_outreach_readiness)
+
+    request_api = sub.add_parser("saybrook-request-api", help="serve the Saybrook request intake SQLite writer API")
+    request_api.add_argument("--host", default="0.0.0.0", help="host to bind the request API server to")
+    request_api.add_argument("--port", type=int, default=18765, help="port to bind the request API server to")
+    request_api.add_argument("--db-path", type=Path, default=ROOT / "data" / "saybrook-zoning-requests.db", help="SQLite database path for request intake rows")
+    request_api.set_defaults(func=cmd_saybrook_request_api)
+
+    clone = sub.add_parser("clone-mvp", help="plan a controlled child MVP clone from a strong parent")
+    clone.add_argument("--parent-slug", required=True, help="canonical slug of the parent MVP")
+    clone.add_argument("--new-slug", required=True, help="canonical slug for the child MVP")
+    clone.add_argument("--site-name", required=True, help="human-readable site name for the child MVP")
+    clone.add_argument("--target", required=True, help="primary target buyer for the child MVP")
+    clone.add_argument("--description", required=True, help="short route description for the child MVP")
+    clone.add_argument("--category", default=None, help="category label; defaults to the parent route category")
+    clone.add_argument("--new-folder", default=None, help="folder name under websites/; defaults to the new slug")
+    clone.add_argument("--secondary-targets", default=None, help="optional semicolon-delimited clone candidates for the target ledger")
+    clone.add_argument("--notes", default=None, help="optional target-ledger notes for the new child")
+    clone.add_argument("--index", type=int, default=None, help="optional explicit route index; defaults to the next canonical index")
+    clone.add_argument("--force", action="store_true", help="allow planning even if the parent currently lacks a detected build root")
+    clone.add_argument("--dry-run", action="store_true", default=False, help="show the full clone plan without writing files")
+    clone.set_defaults(func=cmd_clone_mvp)
+
+    focus = sub.add_parser("focus-analyze", help="run a narrow, few-shot-calibrated analysis pass on selected slugs")
+    focus.add_argument("--image-dir", type=Path, default=None, help="directory containing screenshot images")
+    focus.add_argument("--output", type=Path, default=None, help="path to write the JSON report")
+    focus.add_argument("--model", default=None, help="OpenRouter model id to use")
+    focus.add_argument("--quality", choices=["fast", "deep"], default="deep", help="model preset to use when --model is not set")
+    focus.add_argument("--slugs", nargs="*", default=None, help="optional list of site slugs to analyze")
+    focus.add_argument("--slugs-file", type=Path, default=None, help="newline-delimited list of site slugs to analyze")
+    focus.add_argument("--limit", type=int, default=None, help="optional limit for testing")
+    focus.add_argument("--temperature", type=float, default=None, help="sampling temperature")
+    focus.add_argument("--max-tokens", type=int, default=None, help="maximum completion tokens per image")
+    focus.add_argument("--sleep", type=float, default=None, help="seconds to sleep between requests")
+    focus.add_argument("--verify-targets", action=argparse.BooleanOptionalAction, default=True, help="use web search to verify candidate target entities")
+    focus.set_defaults(func=cmd_analyze_screenshots, focus=True)
+
+    branding = sub.add_parser("branding-pass", help="re-analyze only the branding layer and merge it into the existing report")
+    branding.add_argument("--image-dir", type=Path, default=None, help="directory containing screenshot images")
+    branding.add_argument("--output", type=Path, default=None, help="path to write the JSON report")
+    branding.add_argument("--model", default=None, help="OpenRouter model id to use")
+    branding.add_argument("--quality", choices=["fast", "deep"], default="deep", help="model preset to use when --model is not set")
+    branding.add_argument("--slugs", nargs="*", default=None, help="optional list of site slugs to analyze")
+    branding.add_argument("--slugs-file", type=Path, default=None, help="newline-delimited list of site slugs to analyze")
+    branding.add_argument("--limit", type=int, default=None, help="optional limit for testing")
+    branding.add_argument("--temperature", type=float, default=None, help="sampling temperature")
+    branding.add_argument("--max-tokens", type=int, default=None, help="maximum completion tokens per image")
+    branding.add_argument("--sleep", type=float, default=None, help="seconds to sleep between requests")
+    branding.add_argument("--verify-targets", action=argparse.BooleanOptionalAction, default=True, help="use web search to verify candidate target entities")
+    branding.set_defaults(func=cmd_analyze_screenshots, branding_only=True)
+
+    return parser
+
+
+def main() -> int:
+    parser = build_parser()
+    args = parser.parse_args()
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,1 @@
+SITE: eligibility-screener | CENTERING: 6 | BRANDING: 8 | LOREM: false | NOTES: The site uses a custom SVG logo for Ashtabula County and consistent branding in the header and footer. UI centering is likely handled by CSS classes not directly visible in the JSX. No placeholder text like 'Lorem Ipsum' was found.

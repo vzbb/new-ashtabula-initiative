@@ -1,0 +1,83 @@
+{
+  "mvp": "plating-pro",
+  "run_timestamp_utc": "2026-03-22T05:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Plating Pro MVP (metal plating and finishing management platform). Targets metal plating companies, surface finishing shops, and manufacturers in Northeast Ohio including Ashtabula County that could benefit from job tracking, quality management, and customer portal tools.",
+  "leads": [
+    {
+      "organization": "Lake City Plating",
+      "type": "Metal Plating Company",
+      "website": "https://lakecityplating.com/",
+      "fit_rationale": "ISO 9001:2015 and IATF 16949:2016 certified plating company with facilities in Jefferson, OH (Ashtabula County). Job tracking and quality management platform would support their high-volume and small lot order capabilities.",
+      "source": "https://lakecityplating.com/"
+    },
+    {
+      "organization": "Lakeside Custom Plating",
+      "type": "Custom Plating Shop",
+      "website": "https://www.veteranownedbusiness.com/business/31703/lakeside-custom-plating",
+      "fit_rationale": "Veteran-owned business in Conneaut, OH offering restorations, copper, nickel, chrome plating. Digital platform would help manage restoration projects and customer communications.",
+      "source": "https://www.veteranownedbusiness.com/business/31703/lakeside-custom-plating"
+    },
+    {
+      "organization": "Crown Metal Plating",
+      "type": "Industrial Plating Company",
+      "website": "https://crownmetalplating.com/",
+      "fit_rationale": "One of the largest plating providers in Northeast Ohio with nearly two acres of automation. Plating Pro platform could integrate with their advanced production systems for job tracking and quality control.",
+      "source": "https://crownmetalplating.com/"
+    },
+    {
+      "organization": "Aetna Plating",
+      "type": "Rack and Barrel Plating",
+      "website": "https://aetnaplating.com/",
+      "fit_rationale": "Cleveland-based plating company serving automotive, aerospace, and military customers with strict quality requirements. Platform would support their stringent specification tracking.",
+      "source": "https://aetnaplating.com/"
+    },
+    {
+      "organization": "Techmetals",
+      "type": "Industrial Metal Plating",
+      "website": "https://techmetals.com/",
+      "fit_rationale": "50+ years experience with Nadcap, ISO, AS9100D certifications. Plating management platform would enhance their already robust quality and tracking systems.",
+      "source": "https://techmetals.com/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add job tracking dashboard with real-time status updates.",
+    "Include quality control checklist and inspection reporting.",
+    "Create customer portal for order submission and tracking.",
+    "Add specification management for industry standards (ASTM, ASM, military).",
+    "Provide inventory tracking for chemicals and materials.",
+    "Include certification document generation (ISO, Nadcap compliance).",
+    "Add photo documentation system for before/after plating.",
+    "Create automated notifications for job completion and shipping."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Plating industry tools need industrial, professional aesthetic—not consumer-focused design.",
+      "Without clear job status visualization, shop floor communication suffers.",
+      "Poor mobile experience hinders technicians from updating jobs on the floor."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Very High (tentative)",
+    "reason": "Plating management platforms are highly white-labelable for individual plating shops with custom branding, workflows, and specification templates.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Lake City Plating (Jefferson, OH) about job management needs.",
+    "Reach out to Lakeside Custom Plating for restoration project tracking.",
+    "Explore integration opportunities with Crown Metal Plating's automation systems."
+  ],
+  "sources": [
+    "https://lakecityplating.com/",
+    "https://www.veteranownedbusiness.com/business/31703/lakeside-custom-plating",
+    "https://crownmetalplating.com/",
+    "https://aetnaplating.com/",
+    "https://techmetals.com/"
+  ]
+}

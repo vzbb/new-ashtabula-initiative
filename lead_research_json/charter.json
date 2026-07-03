@@ -1,0 +1,83 @@
+{
+  "mvp": "charter",
+  "run_timestamp_utc": "2026-03-21T15:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Charter MVP (charter fishing booking/management platform). Targets Lake Erie fishing charter operators in Ashtabula County and Geneva-on-the-Lake area who could benefit from online booking, customer management, and trip scheduling tools.",
+  "leads": [
+    {
+      "organization": "Compensator Lake Erie Fishing Charters",
+      "type": "Charter Fishing Service",
+      "website": "https://compensatorfishingcharters.com/",
+      "fit_rationale": "Ashtabula-based charter targeting walleye, steelhead, and perch. Online booking and automated customer communication would streamline their operations.",
+      "source": "https://compensatorfishingcharters.com/"
+    },
+    {
+      "organization": "Lucky Strike Lake Erie Fishing Charters",
+      "type": "Charter Fishing Service",
+      "website": "https://lake-erie-walleye-fishing-charters.com/",
+      "fit_rationale": "Ashtabula charter operator emphasizing limit catches. A booking platform with weather integration and automated reminders would enhance customer experience.",
+      "source": "https://lake-erie-walleye-fishing-charters.com/"
+    },
+    {
+      "organization": "DB Sport Fishing Charters",
+      "type": "Multi-Location Charter Fleet",
+      "website": "https://www.dbsportfishing.com/",
+      "fit_rationale": "Largest charter service in Geneva area with multiple boats covering Ashtabula to Port Clinton. Fleet management and multi-boat scheduling tools would be valuable.",
+      "source": "https://www.dbsportfishing.com/"
+    },
+    {
+      "organization": "Special-Eyes Charters",
+      "type": "Regional Charter Service",
+      "website": "https://www.specialeyescharters.com/",
+      "fit_rationale": "Premier charter with locations in Port Clinton, Ashtabula, and Lorain. Centralized booking across multiple ports would improve coordination.",
+      "source": "https://www.specialeyescharters.com/"
+    },
+    {
+      "organization": "RK Charters (Geneva, Ohio)",
+      "type": "Full-Service Charter Business",
+      "website": "https://www.rkcharters.com/",
+      "fit_rationale": "15+ years experience fishing Geneva area for walleye, steelhead, and perch. Customer management and repeat booking features would support their business.",
+      "source": "https://www.rkcharters.com/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add real-time availability calendar with instant booking and deposit processing.",
+    "Include weather forecast integration with trip rescheduling policies.",
+    "Create automated email/SMS reminders with meeting location and what to bring.",
+    "Add photo galleries showing past catches and happy customers.",
+    "Include customer reviews and testimonials to build trust.",
+    "Provide catch log/analytics for anglers to track their success.",
+    "Add group booking features for corporate events and parties.",
+    "Integrate with local lodging partners for package deals."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Charter sites need to evoke excitement and adventure—stale design may not convert.",
+      "Poor mobile experience hurts bookings made on-the-go by travelers.",
+      "Without clear pricing and availability, customers may hesitate to inquire."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Medium-High (tentative)",
+    "reason": "Charter booking platform can be white-labeled for individual captains or multi-boat operations with custom branding and booking rules.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Compensator and Lucky Strike charters about piloting online booking.",
+    "Reach out to DB Sport Fishing about fleet management features.",
+    "Explore partnership with Visit Ashtabula County for charter directory integration."
+  ],
+  "sources": [
+    "https://compensatorfishingcharters.com/",
+    "https://lake-erie-walleye-fishing-charters.com/",
+    "https://www.dbsportfishing.com/",
+    "https://www.specialeyescharters.com/",
+    "https://www.rkcharters.com/"
+  ]
+}

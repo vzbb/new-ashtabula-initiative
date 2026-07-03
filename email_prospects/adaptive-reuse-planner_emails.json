@@ -1,0 +1,118 @@
+{
+  "mvp": "adaptive-reuse-planner",
+  "mvp_slug": "adaptive-reuse-planner",
+  "research_date": "2026-03-23",
+  "top_2_targets": [
+    {
+      "organization": "Renew Partners LLC",
+      "type": "Historic Development & Management Company",
+      "website": "https://www.renewptr.com/",
+      "fit_rationale": "Development company focused on adaptive reuse of historic buildings throughout Ashtabula, Lake, and Geauga Counties. Completed $5.2M Historic Hotel Ashtabula redevelopment. Adaptive reuse planning tools would streamline their multi-project pipeline and tax credit applications.",
+      "contact_info": {
+        "general_email": "info@renewptr.com",
+        "phone": "440-901-2030",
+        "address": "9755 Plank Rd, Montville, Ohio 44064, USA",
+        "email_format": "firstName_lastName@renewptr.com",
+        "key_personnel": [
+          {
+            "name": "Shawn Neece",
+            "title": "Partner / Founder",
+            "email": "shawn_neece@renewptr.com",
+            "linkedin": "https://www.renewptr.com/shawn-neece",
+            "notes": "Likely primary decision maker for new tools and partnerships"
+          },
+          {
+            "name": "Kristine Neece",
+            "title": "Office Manager",
+            "email": "kristine_neece@renewptr.com",
+            "linkedin": "https://www.linkedin.com/in/kristine-neece-b05844170/",
+            "notes": "Handles day-to-day operations, potential pilot coordinator"
+          },
+          {
+            "name": "Josh Neece",
+            "title": "Development Associate",
+            "email": "josh_neece@renewptr.com",
+            "linkedin": "https://www.linkedin.com/in/josh-neece-bb4962280/",
+            "notes": "Involved in development projects, potential user of planning tools"
+          }
+        ],
+        "social_media": {
+          "facebook": "https://www.facebook.com/renewpartners",
+          "twitter": "https://twitter.com/RenewPartners",
+          "linkedin": "https://www.linkedin.com/company/renew-partners-llc/",
+          "instagram": "https://www.instagram.com/renewptr/"
+        }
+      },
+      "outreach_priority": 1,
+      "outreach_angle": "Adaptive reuse planning platform to streamline their multi-project pipeline and tax credit applications. Reference their work on Historic Hotel Ashtabula and ongoing Carlisle-Allen Complex project."
+    },
+    {
+      "organization": "Heritage Ohio",
+      "type": "Statewide Historic Preservation Organization",
+      "website": "https://heritageohio.org/",
+      "fit_rationale": "Ohio's official historic preservation and Main Street organization. Adaptive reuse planning platform would complement their downtown revitalization work and provide resources for their member communities.",
+      "contact_info": {
+        "general_email": "info@heritageohio.org",
+        "phone": "(614) 258-6200",
+        "address": "846 12 E Main St, Columbus, OH 43205",
+        "key_personnel": [
+          {
+            "name": "Frances Hamilton",
+            "title": "Director of Revitalization",
+            "email": "fhamilton@heritageohio.org",
+            "phone": "740.816.3859",
+            "notes": "Directs Main Street programs and downtown revitalization. Former Executive Director of Main Street Delaware. Ideal contact for partnership discussions."
+          },
+          {
+            "name": "Frank Quinn",
+            "title": "Staff (likely leadership/director level)",
+            "email": "fquinn@heritageohio.org",
+            "phone": "614.584.2441",
+            "notes": "Founding team member, preservation advocate. Good contact for technical/heritage expertise."
+          },
+          {
+            "name": "Executive Director",
+            "title": "Executive Director",
+            "email": "info@heritageohio.org",
+            "phone": "(614) 258-6200",
+            "notes": "Primary organizational contact for partnership inquiries"
+          }
+        ],
+        "social_media": {
+          "facebook": "https://www.facebook.com/heritageohio",
+          "twitter": "https://twitter.com/heritageohio",
+          "instagram": "https://www.instagram.com/heritageohio/",
+          "linkedin": "https://www.linkedin.com/company/heritage-ohio/"
+        }
+      },
+      "outreach_priority": 2,
+      "outreach_angle": "Statewide partnership opportunity - adaptive reuse planning platform that could be offered to all Heritage Ohio member communities. Complements their existing Main Street programs and historic preservation advocacy work."
+    }
+  ],
+  "outreach_sequence": {
+    "step_1": "Email Shawn Neece at Renew Partners referencing their adaptive reuse projects and offering a pilot of the planning platform",
+    "step_2": "Follow up with Kristine Neece if no response from Shawn within 5 business days",
+    "step_3": "Email Frances Hamilton at Heritage Ohio about statewide partnership opportunity",
+    "step_4": "Contact Frank Quinn at Heritage Ohio for technical/advisory perspective"
+  },
+  "email_templates_suggested": [
+    "pilot_program_offer",
+    "statewide_partnership_proposal",
+    "adaptive_reuse_tool_demo"
+  ],
+  "notes": [
+    "Renew Partners has active projects (Carlisle-Allen Complex, Cleveland Agora Complex) - time-sensitive opportunity",
+    "Heritage Ohio could provide statewide distribution channel for the platform",
+    "Both organizations have LinkedIn presence - consider social outreach as secondary channel",
+    "Email format for Renew Partners confirmed as firstName_lastName@renewptr.com via SignalHire"
+  ],
+  "data_sources": [
+    "https://www.renewptr.com/",
+    "https://www.renewptr.com/about",
+    "https://www.renewptr.com/contact",
+    "https://heritageohio.org/",
+    "https://heritageohio.org/our-staff/",
+    "https://www.signalhire.com/companies/renew-partners-llc/email-format",
+    "https://www.guidestar.org/profile/34-1845898"
+  ]
+}

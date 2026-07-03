@@ -1,0 +1,86 @@
+{
+  "mvp": "aidflow-navigator",
+  "run_timestamp_utc": "2026-03-22T08:27:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Aidflow Navigator MVP (social services and benefits assistance navigation platform). Targets social service agencies, community action organizations, county departments, and referral networks in Ashtabula County that help residents navigate SNAP, Medicaid, WIC, rental assistance, utility assistance, and other public benefits.",
+  "leads": [
+    {
+      "organization": "211 Ashtabula County / United Way of Ashtabula County",
+      "type": "Resource Referral Helpline",
+      "website": "https://www.211ashtabula.org/",
+      "fit_rationale": "2-1-1 is the primary resource database for Ashtabula County, connecting residents to food pantries, utility assistance, rent assistance, and social services. A digital navigation platform would complement their call center operations and expand self-service access.",
+      "source": "https://www.211ashtabula.org/"
+    },
+    {
+      "organization": "Ashtabula County Community Action Agency (ACCAA)",
+      "type": "Community Action Organization",
+      "website": "https://accaa.org/",
+      "fit_rationale": "55-year-old organization providing emergency food, clothing, rental/utility assistance, and self-sufficiency programs. Benefits navigation tools would streamline their intake and case management while helping clients access state/federal programs.",
+      "source": "https://accaa.org/"
+    },
+    {
+      "organization": "Ashtabula County Department of Job and Family Services (ACDJFS)",
+      "type": "County Public Assistance Agency",
+      "website": "https://www.acdjfs.org/",
+      "fit_rationale": "Determines eligibility for food stamps (SNAP), Medicaid, Ohio Works First, child care assistance, and Adult Protective Services. Digital pre-screening and application assistance would reduce call volume and improve client experience.",
+      "source": "https://www.acdjfs.org/"
+    },
+    {
+      "organization": "Ashtabula County Council on Aging / Senior Center",
+      "type": "Senior Services Organization",
+      "website": "https://www.ashtabulacounty.us/388/Council-on-Aging",
+      "fit_rationale": "Provides prescription assistance and helps seniors navigate Social Security Part D programs. Benefits navigation platform would support their mission of connecting older adults to medication and healthcare benefits.",
+      "source": "https://www.findhelp.org/provider/ashtabula-county-council-on-aging---ashtabula-senior-center--ashtabula-oh/5010529542340608"
+    },
+    {
+      "organization": "Ohio Department of Job and Family Services (ODJFS)",
+      "type": "State Benefits Administration",
+      "website": "https://benefits.ohio.gov/",
+      "fit_rationale": "Statewide Self-Service Portal for SNAP, Medicaid, cash assistance, and childcare benefits. County-level navigation tools that feed into this portal would improve application completion rates and reduce abandonment.",
+      "source": "https://benefits.ohio.gov/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add multi-benefit eligibility screener (SNAP, Medicaid, WIC, LIHEAP, rental assistance).",
+    "Include document checklist generator based on selected programs.",
+    "Create application progress tracker with status updates for submitted benefits.",
+    "Add appointment scheduling for county JFS office visits.",
+    "Provide multi-language support (Spanish, other common languages in county).",
+    "Include integration with Ohio Benefits Self-Service Portal for seamless handoff.",
+    "Add SMS/email reminders for renewal deadlines and required documentation.",
+    "Create case manager dashboard for community action agency staff.",
+    "Include FAQ and chatbot for common benefits questions.",
+    "Add resource map showing food pantries, WIC clinics, and social service locations."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Benefits navigation audiences include stressed individuals—design must be calming, not overwhelming.",
+      "Mobile-first design critical as many users rely on smartphones.",
+      "Accessibility (WCAG compliance) essential for users with disabilities."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Very High (tentative)",
+    "reason": "Benefits navigation platforms are highly white-labelable for different counties, community action agencies, and United Way chapters across Ohio and nationally.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact 211 Ashtabula about digital navigation partnership.",
+    "Reach out to ACCAA about piloting benefits screening tools.",
+    "Explore integration pathways with Ohio Benefits Self-Service Portal.",
+    "Research Medicaid/SNAP pre-screening API availability from state."
+  ],
+  "sources": [
+    "https://www.211ashtabula.org/",
+    "https://accaa.org/",
+    "https://www.acdjfs.org/",
+    "https://www.ashtabulacounty.us/388/Council-on-Aging",
+    "https://benefits.ohio.gov/"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "mvp": "plating-pro",
+  "generated_at": "2026-03-22T21:50:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/plating-pro.json",
+  "research_sources": [
+    "https://lakecityplating.com/",
+    "https://www.veteranownedbusiness.com/business/31703/lakeside-custom-plating"
+  ],
+  "target_buyer_1": {
+    "organization": "Lake City Plating",
+    "type": "Metal Plating Company / ISO Certified Manufacturer",
+    "website": "https://lakecityplating.com/",
+    "location": "Jefferson, OH (Ashtabula County) and El Paso, TX",
+    "why_top_candidate": "Trusted leader in metal finishing industry with facilities in Ashtabula County (Jefferson facility). Serves North America's leading manufacturers and distributors. Automated facilities with experienced platers and continuous improvement professionals. Data-driven, systems approach to plating. Capabilities: plate complex and delicate parts, high-volume orders, small lot orders. Certifications: ISO 9001:2015 and IATF 16949:2016 (DQS Inc.), Ohio Ashtabula facility certified to ISO 9001:2015 (Intertek). Job tracking and quality management platform would support their high standards.",
+    "fit_score": 95
+  },
+  "target_buyer_2": {
+    "organization": "Lakeside Custom Plating",
+    "type": "Veteran-Owned Custom Plating Shop",
+    "website": "https://www.veteranownedbusiness.com/business/31703/lakeside-custom-plating",
+    "location": "Conneaut, OH 44030 (Ashtabula County)",
+    "contact": "Tracy McBride, Owner, President | Emergency: 419-651-6209",
+    "why_top_candidate": "Veteran-owned business (Army, Retired), member since February 2019. Specializes in plating, polishing, painting, restorations and repair. Services: Restorations, copper, nickel, chrome, painting, polishing, metal repair. Hours: Mon-Fri 8am-4pm (Eastern). Emergency service available. Digital platform would help manage restoration projects and customer communications for this local Ashtabula County business.",
+    "fit_score": 88
+  },
+  "actual_brand_research": {
+    "lake_city_plating": {
+      "positioning": "Trusted leader in metal finishing industry",
+      "locations": [
+        "Jefferson, OH (Ashtabula County)",
+        "El Paso, TX"
+      ],
+      "capabilities": [
+        "Plate complex and delicate parts",
+        "High-volume orders",
+        "Small lot orders"
+      ],
+      "approach": "Automated facilities, talented mix of experienced platers and continuous improvement professionals, data-driven systems approach",
+      "certifications": {
+        "jefferson_ohio": "ISO 9001:2015 and IATF 16949:2016 (DQS Inc.)",
+        "ashtabula_ohio": "ISO 9001:2015 (Intertek)",
+        "el_paso_texas": "ISO 9001:2015 and IATF 16949:2016"
+      },
+      "target_market": "North America's leading manufacturers and distributors",
+      "visual_style": "Industrial, professional, ISO-certified, data-driven, systems approach"
+    },
+    "lakeside_custom_plating": {
+      "business_type": "Veteran-Owned Business (Army, Retired)",
+      "owner": "Tracy McBride, Owner, President",
+      "location": "Conneaut, OH 44030, Ashtabula County",
+      "member_since": "February 20, 2019",
+      "specialties": [
+        "Plating",
+        "Polishing",
+        "Painting",
+        "Restorations",
+        "Repair"
+      ],
+      "services": [
+        "Restorations",
+        "Copper plating",
+        "Nickel plating",
+        "Chrome plating",
+        "Painting",
+        "Polishing",
+        "Metal repair"
+      ],
+      "hours": "Monday-Friday 8:00am - 4:00pm (Eastern)",
+      "emergency": "419-651-6209",
+      "page_views": "3,130 times",
+      "visual_style": "Veteran-owned, local custom shop, restoration specialists"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Finish Smarter. Track Better.",
+    "positioning": "The metal plating and finishing management platform for Northeast Ohio — helping ISO-certified facilities like Lake City Plating and veteran-owned shops like Lakeside Custom Plating streamline job tracking, quality management, and customer communications.",
+    "color_palette_derived_from_research": {
+      "primary": "#2D3748",
+      "accent": "#C53030",
+      "background": "#F7FAFC",
+      "text": "#1A202C",
+      "secondary": "#4A5568"
+    },
+    "typography_recommendation": {
+      "heading_font": "Industrial-strength sans-serif",
+      "body_font": "Clean technical sans-serif"
+    },
+    "mood_keywords_from_research": ["industrial", "ISO-certified", "veteran-owned", "precision", "data-driven", "restoration"],
+    "visual_direction": {
+      "hero_image_concept": "Chrome-plated parts with digital interface overlay showing job tracking",
+      "color_scheme": "Industrial dark gray with red accents (veteran/metalworking)",
+      "photography_style": "Metal finishing, plating tanks, polished parts, industrial facilities, precision manufacturing"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with industrial professionalism of ISO-certified plating and veteran-owned business values",
+    "key_features_needed": [
+      "Job tracking dashboard with real-time status updates",
+      "Quality control checklist and inspection reporting",
+      "Customer portal for order submission and tracking",
+      "Specification management for industry standards (ASTM, ASM, military)",
+      "Inventory tracking for chemicals and materials",
+      "Certification document generation (ISO, Nadcap compliance)",
+      "Photo documentation system for before/after plating",
+      "Automated notifications for job completion and shipping"
+    ],
+    "differentiators_based_on_research": [
+      "Lake City: ISO 9001:2015 and IATF 16949:2016 certified",
+      "Lake City: Serves North America's leading manufacturers",
+      "Lake City: Jefferson facility in Ashtabula County",
+      "Lake City: Data-driven, systems approach",
+      "Lakeside: Veteran-owned (Army, Retired)",
+      "Lakeside: Custom restorations specialist",
+      "Lakeside: Emergency service available",
+      "Lakeside: Local Conneaut, Ashtabula County business"
+    ],
+    "outreach_strategy": [
+      "Contact Lake City Plating (Jefferson, OH) about job management needs",
+      "Reach out to Lakeside Custom Plating for restoration project tracking",
+      "Explore integration with Lake City's automated systems",
+      "Highlight veteran-owned business support for Lakeside"
+    ]
+  }
+}

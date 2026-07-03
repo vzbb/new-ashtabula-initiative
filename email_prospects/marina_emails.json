@@ -1,0 +1,105 @@
+{
+  "mvp": "marina",
+  "mvp_name": "Marina Slip Waitlist",
+  "research_date": "2026-03-24",
+  "researcher": "nai-email-researcher",
+  "status": "completed",
+  "notes": "Both target marinas are small local businesses that do not publicly list email addresses. They rely on phone contact and website contact forms. Email addresses would need to be obtained through direct phone inquiry or via their website contact forms.",
+  "target_buyers": [
+    {
+      "rank": 1,
+      "business_name": "Harbor Yacht Club & Marina",
+      "business_type": "Private Marina / Yacht Club",
+      "website": "https://www.harboryachtclub.net/",
+      "address": "1833 Giannell Avenue, Ashtabula, OH 44004",
+      "phone": "440-992-2628",
+      "hours": "Monday - Friday 9:00 AM - 5:00 PM",
+      "fit_rationale": "Private marina with seasonal dock openings. Currently offers dockage and actively markets seasonal openings. The MVP's waitlist system would help them manage seasonal slip turnover and waitlists for prospective members.",
+      "contacts": [
+        {
+          "name": "General Office",
+          "title": "Main Office",
+          "email": null,
+          "phone": "440-992-2628",
+          "contact_method": "Phone or website contact form at /contact/",
+          "confidence": "Confirmed",
+          "notes": "No publicly listed email. Contact form available on website."
+        }
+      ],
+      "recommended_outreach": "Call during business hours (Mon-Fri 9AM-5PM) or use website contact form to inquire about management contact for marina software/technology decisions."
+    },
+    {
+      "rank": 2,
+      "business_name": "North Coast Marina & Campgrounds (Brockway Marine Inc.)",
+      "business_type": "Full-Service Marina",
+      "legal_entity": "Brockway Marine Inc.",
+      "website": "https://northcoastmarina.com/",
+      "address": "347 W. 24th Street, Ashtabula, OH 44004",
+      "phone": "440-998-6272",
+      "fit_rationale": "Large facility with 250 boat slips, 32 campground sites, pool/spa, and full amenities. They already use Dockwa for online reservations, showing they invest in marina management technology. A white-label waitlist system could complement their existing Dockwa integration or provide a branded alternative for direct bookings.",
+      "contacts": [
+        {
+          "name": "General Office",
+          "title": "Main Office",
+          "email": null,
+          "phone": "440-998-6272",
+          "contact_method": "Phone or website contact form",
+          "confidence": "Confirmed",
+          "notes": "No publicly listed email. Business established 1972 as Brockway Marine Inc. Uses Dockwa platform for reservations."
+        }
+      ],
+      "recommended_outreach": "Call main number to speak with manager/owner about marina technology and waitlist management needs. Their use of Dockwa indicates openness to marina software solutions."
+    }
+  ],
+  "alternative_buyers_with_emails": [
+    {
+      "business_name": "A.R.U. Marina & Campgrounds",
+      "website": "https://www.arumarinaandcampground.com/",
+      "address": "1500 Great Lakes Ave, Ashtabula, Ohio 44004",
+      "phone": "440-992-9445",
+      "contact": {
+        "name": "Donna",
+        "title": "Office/Appointments",
+        "email": "sandman@gwcmail.net",
+        "phone": "440-228-1208",
+        "confidence": "Confirmed"
+      },
+      "source": "Website contact page"
+    },
+    {
+      "business_name": "Ashtabula Yacht Club",
+      "website": "https://www.aycohio.com/",
+      "address": "970 West 5th Street, Ashtabula, OH 44004",
+      "phone": "440-964-3129",
+      "contact": {
+        "name": "General Contact",
+        "title": "Club Office",
+        "email": null,
+        "contact_form": "https://www.aycohio.com/Contact-Us-Guests",
+        "confidence": "Medium"
+      },
+      "source": "City directory + website"
+    }
+  ],
+  "research_summary": {
+    "total_targets_researched": 2,
+    "emails_found": 0,
+    "phones_confirmed": 2,
+    "contact_forms_available": 2,
+    "alternative_emails_found": 1
+  },
+  "outreach_recommendations": [
+    "1. Call Harbor Yacht Club at 440-992-2628 during business hours (Mon-Fri 9AM-5PM)",
+    "2. Call North Coast Marina at 440-998-6272 - ask for owner/manager",
+    "3. Consider A.R.U. Marina (sandman@gwcmail.net) as fallback contact",
+    "4. Both marinas have contact forms - submit inquiry about marina management technology",
+    "5. North Coast Marina's Dockwa usage indicates tech openness - leverage this angle"
+  ],
+  "sources": [
+    "https://www.harboryachtclub.net/contact/",
+    "https://northcoastmarina.com/",
+    "https://www.bbb.org/us/oh/ashtabula/profile/marina/north-coast-marina-and-campground-0312-92030114",
+    "https://www.cityofashtabula.com/marinas",
+    "https://www.arumarinaandcampground.com/contact"
+  ]
+}

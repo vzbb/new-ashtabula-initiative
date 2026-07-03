@@ -1,0 +1,135 @@
+{
+  "mvp": "boat-storage",
+  "run_timestamp_utc": "2026-03-22T11:18:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "The boat-storage MVP is an unbranded template targeting marina and boat storage businesses in Ashtabula County, Ohio. Research identified 5 qualified leads including full-service marinas, yacht clubs, and combined marina/campground facilities. All leads offer seasonal slip rentals, winter storage options, and Lake Erie access. The Lake Erie boating market is significant, with Geneva Marina alone offering 379 slips and comprehensive marine services.",
+  "leads": [
+    {
+      "name": "Geneva Marina",
+      "type": "Full-Service Marina",
+      "website": "https://www.genevamarina.com/",
+      "fit_rationale": "Premier marina with 379 slips, transient docking, winter storage, trailer storage, marine shop (The Doc Shop), fuel dock, and boat ramp. Located at Geneva State Park with direct Lake Erie access. Offers comprehensive services including boat winterization, repairs, and certified Clean Marina status. High potential for digital booking and storage management.",
+      "source": "Brave Search + Web Fetch"
+    },
+    {
+      "name": "Harbor Yacht Club & Marina",
+      "type": "Private Yacht Club & Marina",
+      "website": "https://www.harboryachtclub.net/",
+      "fit_rationale": "Private marina with seasonal dock openings on Lake Erie. Located in Ashtabula Harbor with proximity to Geneva On The Lake. Targets boating enthusiasts and fishermen. Website indicates openness to new members and seasonal dock rentals, suggesting potential for improved booking and communication systems.",
+      "source": "Brave Search + Web Fetch"
+    },
+    {
+      "name": "Ashtabula Yacht Club",
+      "type": "Private Yacht Club",
+      "website": "https://www.aycohio.com/",
+      "fit_rationale": "Established in 1924 with 150+ members and 125 docks accommodating boats 24'-50'. Features 35 ton travel lift and recent bulkhead improvements. Active sailing and racing program with social events. Located in protected Ashtabula Harbor. Historic organization that could benefit from modernized member management and dock reservation systems.",
+      "source": "Brave Search + Web Fetch"
+    },
+    {
+      "name": "North Coast Marina & Campgrounds",
+      "type": "Marina & Campground",
+      "website": "https://northcoastmarina.com/",
+      "fit_rationale": "Combined marina and campground facility with dockage for 250 boats and 32 RV campsites (water/electric/sewer). Features pool, spas, pump-out station, and modern restrooms. Located on Ashtabula River with 20-minute cruise to Lake Erie. Markets itself as 'Lake Erie's Hottest Marina and Campground' - strong candidate for integrated booking platform covering both boat slips and campsites.",
+      "source": "Brave Search + Web Fetch"
+    },
+    {
+      "name": "A.R.U. Marina & Campgrounds",
+      "type": "Marina & Campground",
+      "website": "https://www.arumarinaandcampground.com/",
+      "fit_rationale": "Offers seasonal dry boat storage, launch ramps, RV campsites, and boat docks on the Ashtabula River. Explicitly mentions 'seasonal dry boat storage complete with launch ramps' making it a direct fit for boat storage MVP. Active Facebook presence (365+ likes) indicates established customer base. Family-friendly fishing and camping destination.",
+      "source": "Brave Search + Facebook"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_state": "unbranded",
+    "brand_presence": "almost_none",
+    "brand_quality_score_10": 2,
+    "issues": [
+      "No logo or brand identity present",
+      "Generic 'Local Marina' placeholder text",
+      "No color scheme or typography system",
+      "Missing contact information and trust signals",
+      "Page appears as raw HTML without CSS styling",
+      "Form layout is cramped and unstyled"
+    ]
+  },
+  "site_improvements": [
+    "Implement full CSS styling with responsive container layout",
+    "Add max-width container to prevent content stretching",
+    "Create branded header with marina-specific logo and navigation",
+    "Style form inputs with proper labels, spacing, and validation",
+    "Add footer with contact information, location, and business hours",
+    "Implement trust signals: testimonials, security badges, service guarantees",
+    "Add visual content: marina photos, Lake Erie imagery, facility tours",
+    "Create separate sections for different storage types (wet slip, dry storage, winter)",
+    "Add interactive map showing location on Ashtabula River/Lake Erie"
+  ],
+  "aesthetics_and_layout_notes": {
+    "color_scheme": "Recommend nautical palette: navy blue, white, and accent colors (teal or coral) reflecting Lake Erie maritime environment",
+    "typography": "Clean sans-serif for readability; consider serif accents for headings to convey tradition and trust",
+    "layout": "Single-column centered layout with clear sections: Hero/Value Prop -> Storage Options -> Contact/Booking -> Amenities -> Footer",
+    "imagery": "Lake Erie sunsets, marina aerial views, boat slips, satisfied customers, fishing charters, harbor scenes"
+  },
+  "whitelabel_potential": {
+    "rating": "high",
+    "applicable_leads": [
+      "Geneva Marina",
+      "Harbor Yacht Club & Marina",
+      "Ashtabula Yacht Club",
+      "North Coast Marina & Campgrounds",
+      "A.R.U. Marina & Campgrounds"
+    ],
+    "customization_points": [
+      "Swap logo and color scheme for each marina's brand",
+      "Customize storage options (wet slip vs dry storage vs winter)",
+      "Adjust amenities list to match each facility's offerings",
+      "Integrate specific location data and maps",
+      "Add member login for yacht clubs",
+      "Include charter boat partnerships where applicable"
+    ],
+    "regional_expansion": "Template easily adaptable for other Lake Erie marinas in Northeast Ohio (Conneaut, Fairport Harbor, Cleveland) and Lake Ontario region"
+  },
+  "action_next": "Contact Geneva Marina first (largest facility, most services, professional website indicates openness to technology). Follow with Harbor Yacht Club & Marina (explicitly seeking seasonal dock members).",
+  "sources": [
+    {
+      "name": "Geneva Marina Official Website",
+      "url": "https://www.genevamarina.com/",
+      "date_accessed": "2026-03-22"
+    },
+    {
+      "name": "Harbor Yacht Club & Marina",
+      "url": "https://www.harboryachtclub.net/",
+      "date_accessed": "2026-03-22"
+    },
+    {
+      "name": "Ashtabula Yacht Club",
+      "url": "https://www.aycohio.com/",
+      "date_accessed": "2026-03-22"
+    },
+    {
+      "name": "North Coast Marina & Campgrounds",
+      "url": "https://northcoastmarina.com/",
+      "date_accessed": "2026-03-22"
+    },
+    {
+      "name": "A.R.U. Marina & Campgrounds",
+      "url": "https://www.arumarinaandcampground.com/",
+      "date_accessed": "2026-03-22"
+    },
+    {
+      "name": "City of Ashtabula - Marinas",
+      "url": "https://www.cityofashtabula.com/marinas",
+      "date_accessed": "2026-03-22"
+    },
+    {
+      "name": "Ashtabula County Port Authority",
+      "url": "https://www.ashtabulacounty.us/305/Ashtabula-County-Port-Authority",
+      "date_accessed": "2026-03-22"
+    },
+    {
+      "name": "Visit Ashtabula County - Geneva Marina",
+      "url": "https://visitashtabulacounty.com/things-to-do/lake-erie-recreation/outdoor-recreation/geneva-marina/",
+      "date_accessed": "2026-03-22"
+    }
+  ]
+}

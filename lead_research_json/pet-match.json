@@ -1,0 +1,83 @@
+{
+  "mvp": "pet-match",
+  "run_timestamp_utc": "2026-03-21T14:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Pet Match MVP (pet adoption matching platform). Targets animal shelters, humane societies, and animal welfare organizations in Ashtabula County and Northeast Ohio that could benefit from digital adoption matching, pet profiles, and foster management.",
+  "leads": [
+    {
+      "organization": "Ashtabula County Animal Protective League (ACAPL)",
+      "type": "Animal Shelter / Nonprofit",
+      "website": "https://www.acapl.org/",
+      "fit_rationale": "Primary animal shelter serving Ashtabula County. A matching platform with detailed pet profiles and adoption applications would streamline their adoption process.",
+      "source": "https://www.acapl.org/"
+    },
+    {
+      "organization": "Humane Society of Ashtabula County",
+      "type": "Animal Welfare Organization",
+      "website": "http://www.humanesocietyashco.com/",
+      "fit_rationale": "Local humane society handling pet adoptions and animal welfare. Digital tools for pet matching and volunteer coordination would support their mission.",
+      "source": "http://www.humanesocietyashco.com/"
+    },
+    {
+      "organization": "Animal Welfare Center of Ashtabula (AWC)",
+      "type": "Animal Welfare Nonprofit",
+      "website": "https://www.awcashtabula.org/",
+      "fit_rationale": "Helps pets stay with their families during hardships. A matching platform could connect foster families with pets needing temporary homes.",
+      "source": "https://www.awcashtabula.org/"
+    },
+    {
+      "organization": "Petfinder (Ashtabula County Partners)",
+      "type": "National Adoption Platform / Local Partners",
+      "website": "https://www.petfinder.com/member/us/oh/jefferson/ashtabula-county-humane-society-oh104/",
+      "fit_rationale": "Already used by local shelters for pet listings. A local-focused matching tool could complement or enhance their current digital presence.",
+      "source": "https://www.petfinder.com/member/us/oh/jefferson/ashtabula-county-humane-society-oh104/"
+    },
+    {
+      "organization": "PAWS Ohio (Public Animal Welfare Society)",
+      "type": "Statewide Animal Rescue",
+      "website": "https://www.pawsohio.org/",
+      "fit_rationale": "One of Ohio's most reputable no-kill rescues. Advanced matching algorithms and foster management tools would enhance their operations.",
+      "source": "https://www.pawsohio.org/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add detailed pet profiles with photos, videos, personality assessments, and care requirements.",
+    "Implement matching algorithm based on adopter lifestyle, home environment, and pet preferences.",
+    "Include online adoption application with automated screening and approval workflow.",
+    "Create foster portal for temporary housing coordination and foster-to-adopt pathways.",
+    "Add volunteer management for dog walking, socialization, and transport.",
+    "Integrate donation processing with recurring giving and sponsorship options.",
+    "Provide lost/found pet reporting with map-based search and alerts.",
+    "Include success stories and post-adoption support resources."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Pet adoption sites must feature high-quality pet photography prominently—poor image display reduces adoption interest.",
+      "Overly clinical design may feel cold; warm, inviting aesthetics encourage adoptions.",
+      "Complex navigation can frustrate users looking to browse adoptable pets quickly."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "High (tentative)",
+    "reason": "Pet matching platforms can be white-labeled for individual shelters, rescue groups, or regional coalitions with custom branding and workflows.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact ACAPL about piloting a digital adoption matching system.",
+    "Reach out to Humane Society of Ashtabula County about integrating with their existing Petfinder presence.",
+    "Explore partnership with Animal Welfare Center for foster matching features."
+  ],
+  "sources": [
+    "https://www.acapl.org/",
+    "http://www.humanesocietyashco.com/",
+    "https://www.awcashtabula.org/",
+    "https://www.petfinder.com/member/us/oh/jefferson/ashtabula-county-humane-society-oh104/",
+    "https://www.pawsohio.org/"
+  ]
+}

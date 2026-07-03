@@ -1,0 +1,50 @@
+{
+  "mvp": "grantgenius",
+  "research_date": "2026-03-24",
+  "target_region": "Ashtabula, Ohio",
+  "leads": [
+    {
+      "priority": 1,
+      "organization": "City of Ashtabula",
+      "contact_name": "Amy Coursen",
+      "title": "Project Administrator",
+      "email": "acoursen@cityofashtabula.com",
+      "email_confidence": "high",
+      "email_source": "Official city website - https://www.cityofashtabula.com/planning",
+      "phone": "440-992-7118",
+      "department": "Planning and Community Development",
+      "relevance": "Directly handles grants for the city. Confirmed by news articles for securing and managing CDBG grants.",
+      "notes": "Works with Mary Church (Assistant Director) on grant applications. PCD@cityofashtabula.com is department general email."
+    },
+    {
+      "priority": 2,
+      "organization": "Ashtabula County",
+      "contact_name": "Jake Brand",
+      "title": "Director of Planning and Development",
+      "email": "jbrand@ashtabulacounty.us",
+      "email_confidence": "medium",
+      "email_source": "Inferred from county email pattern and ZoomInfo reference",
+      "phone": "440-576-1530",
+      "department": "Planning and Development - Community Development Division",
+      "relevance": "Oversees Community Development Block Grants (CDBG), CHIP grants, and other government grants for County Commissioners.",
+      "notes": "Also on staff: Heidi Barringer and Dawn Gates (Community Development Coordinators). Department handles grant administration for entire county."
+    }
+  ],
+  "additional_contacts": {
+    "city_finance_director": {
+      "name": "Vladimir Kan",
+      "title": "Finance Director",
+      "email": "vkan@cityofashtabula.com",
+      "email_confidence": "medium",
+      "notes": "Hired May 2025. Email inferred from city pattern. Best contact for fiscal matters but Amy Coursen is better for grant-specific inquiries."
+    },
+    "county_alternative": {
+      "name": "Heidi Barringer",
+      "title": "Community Development Coordinator",
+      "organization": "Ashtabula County",
+      "notes": "Works under Jake Brand on CDBG and grant programs."
+    }
+  },
+  "research_methodology": "Web search of official city/county websites, staff directories, news articles, and public records. Email patterns verified against confirmed addresses.",
+  "disclaimer": "Emails marked 'medium' confidence are inferred from organizational patterns and should be verified before use."
+}

@@ -1,0 +1,256 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]: CIVIC INSIGHT ENGINE — Ashtabula County Transparency Portal
+    - combobox [ref=e7] [cursor=pointer]:
+      - option "Countywide" [selected]
+      - option "District 1 - Bridge Street Corridor"
+      - option "District 2 - Main Avenue Area"
+      - option "District 3 - Harbor District"
+      - option "District 4 - West Side"
+      - option "District 5 - East Side"
+  - banner [ref=e8]:
+    - generic [ref=e11]:
+      - link "Ashtabula County Government Transparency Portal" [ref=e12] [cursor=pointer]:
+        - /url: /civic-insight
+        - img [ref=e15]
+        - generic [ref=e27]:
+          - generic [ref=e28]: Ashtabula County Government
+          - generic [ref=e29]: Transparency Portal
+      - navigation [ref=e30]:
+        - link "Dashboard" [ref=e31] [cursor=pointer]:
+          - /url: /civic-insight
+        - link "Community Issues" [ref=e32] [cursor=pointer]:
+          - /url: /civic-insight/issues
+        - link "Report Issue" [active] [ref=e33] [cursor=pointer]:
+          - /url: /civic-insight/report
+        - link "Property Lookup" [ref=e34] [cursor=pointer]:
+          - /url: /civic-insight/property
+  - main [ref=e35]:
+    - generic [ref=e424]:
+      - generic [ref=e425]:
+        - generic [ref=e426]:
+          - heading "Community Issues" [level=1] [ref=e427]
+          - paragraph [ref=e428]: Browse, track, and monitor local reports in real-time.
+        - link "Report New Issue" [ref=e429] [cursor=pointer]:
+          - /url: /civic-insight/report
+          - img [ref=e430]
+          - text: Report New Issue
+      - generic [ref=e432]:
+        - generic [ref=e433]:
+          - generic [ref=e434]:
+            - generic [ref=e435]:
+              - img [ref=e436]
+              - textbox "Search issues by keyword or location..." [ref=e439]
+            - generic [ref=e440]:
+              - generic [ref=e441]:
+                - img [ref=e442]
+                - combobox [ref=e444] [cursor=pointer]:
+                  - option "All Statuses" [selected]
+                  - option "OPEN"
+                  - option "IN PROGRESS"
+                  - option "RESOLVED"
+                  - option "CLOSED"
+              - generic [ref=e445]:
+                - img [ref=e446]
+                - combobox [ref=e448] [cursor=pointer]:
+                  - option "All Categories" [selected]
+                  - option "ROADS"
+                  - option "UTILITIES"
+                  - option "ZONING"
+                  - option "SAFETY"
+                  - option "OTHER"
+          - generic [ref=e449]:
+            - link "Large Pothole on 5th Ave 5th Ave & Elm St 2/24/2026 in progress A deep pothole has formed near the intersection of 5th Ave and Elm St. It is dangerous for small cars and needs immediate fill. 2 Updates roads View Progress" [ref=e450] [cursor=pointer]:
+              - /url: /civic-insight/issue/1
+              - generic [ref=e451]:
+                - generic [ref=e452]:
+                  - img [ref=e454]
+                  - generic [ref=e456]:
+                    - heading "Large Pothole on 5th Ave" [level=3] [ref=e457]
+                    - generic [ref=e458]:
+                      - generic [ref=e459]:
+                        - img [ref=e460]
+                        - text: 5th Ave & Elm St
+                      - generic [ref=e464]:
+                        - img [ref=e465]
+                        - text: 2/24/2026
+                - generic [ref=e468]: in progress
+              - paragraph [ref=e469]: A deep pothole has formed near the intersection of 5th Ave and Elm St. It is dangerous for small cars and needs immediate fill.
+              - generic [ref=e470]:
+                - generic [ref=e471]:
+                  - generic [ref=e472]:
+                    - img [ref=e473]
+                    - text: 2 Updates
+                  - generic [ref=e475]: roads
+                - generic [ref=e476]:
+                  - text: View Progress
+                  - img [ref=e477]
+            - link "Flickering Street Light 422 Lake Rd 2/25/2026 open The street light in front of 422 Lake Rd is flickering and frequently goes dark, making the sidewalk unsafe at night. 0 Updates utilities View Progress" [ref=e479] [cursor=pointer]:
+              - /url: /civic-insight/issue/2
+              - generic [ref=e480]:
+                - generic [ref=e481]:
+                  - img [ref=e483]
+                  - generic [ref=e485]:
+                    - heading "Flickering Street Light" [level=3] [ref=e486]
+                    - generic [ref=e487]:
+                      - generic [ref=e488]:
+                        - img [ref=e489]
+                        - text: 422 Lake Rd
+                      - generic [ref=e493]:
+                        - img [ref=e494]
+                        - text: 2/25/2026
+                - generic [ref=e497]: open
+              - paragraph [ref=e498]: The street light in front of 422 Lake Rd is flickering and frequently goes dark, making the sidewalk unsafe at night.
+              - generic [ref=e499]:
+                - generic [ref=e500]:
+                  - generic [ref=e501]:
+                    - img [ref=e502]
+                    - text: 0 Updates
+                  - generic [ref=e504]: utilities
+                - generic [ref=e505]:
+                  - text: View Progress
+                  - img [ref=e506]
+            - link "Illegal Dumping in Ditch Harbor Rd Bridge 2/15/2026 resolved Several old tires and a broken sofa have been dumped in the ditch near the Harbor Road bridge. 2 Updates safety View Progress" [ref=e508] [cursor=pointer]:
+              - /url: /civic-insight/issue/3
+              - generic [ref=e509]:
+                - generic [ref=e510]:
+                  - img [ref=e512]
+                  - generic [ref=e514]:
+                    - heading "Illegal Dumping in Ditch" [level=3] [ref=e515]
+                    - generic [ref=e516]:
+                      - generic [ref=e517]:
+                        - img [ref=e518]
+                        - text: Harbor Rd Bridge
+                      - generic [ref=e522]:
+                        - img [ref=e523]
+                        - text: 2/15/2026
+                - generic [ref=e526]: resolved
+              - paragraph [ref=e527]: Several old tires and a broken sofa have been dumped in the ditch near the Harbor Road bridge.
+              - generic [ref=e528]:
+                - generic [ref=e529]:
+                  - generic [ref=e530]:
+                    - img [ref=e531]
+                    - text: 2 Updates
+                  - generic [ref=e533]: safety
+                - generic [ref=e534]:
+                  - text: View Progress
+                  - img [ref=e535]
+            - link "Overgrown Abandoned Lot 89 Main St 2/20/2026 open The lot at 89 Main St has grass over 18 inches tall. It is attracting vermin and is a fire hazard. 1 Updates zoning View Progress" [ref=e537] [cursor=pointer]:
+              - /url: /civic-insight/issue/4
+              - generic [ref=e538]:
+                - generic [ref=e539]:
+                  - img [ref=e541]
+                  - generic [ref=e543]:
+                    - heading "Overgrown Abandoned Lot" [level=3] [ref=e544]
+                    - generic [ref=e545]:
+                      - generic [ref=e546]:
+                        - img [ref=e547]
+                        - text: 89 Main St
+                      - generic [ref=e551]:
+                        - img [ref=e552]
+                        - text: 2/20/2026
+                - generic [ref=e555]: open
+              - paragraph [ref=e556]: The lot at 89 Main St has grass over 18 inches tall. It is attracting vermin and is a fire hazard.
+              - generic [ref=e557]:
+                - generic [ref=e558]:
+                  - generic [ref=e559]:
+                    - img [ref=e560]
+                    - text: 1 Updates
+                  - generic [ref=e562]: zoning
+                - generic [ref=e563]:
+                  - text: View Progress
+                  - img [ref=e564]
+            - link "Blocked Storm Drain Walnut St & 3rd St 2/26/2026 open Storm drain is completely blocked with leaves and debris at the corner of Walnut and 3rd. Causes flooding during rain. 0 Updates utilities View Progress" [ref=e566] [cursor=pointer]:
+              - /url: /civic-insight/issue/5
+              - generic [ref=e567]:
+                - generic [ref=e568]:
+                  - img [ref=e570]
+                  - generic [ref=e572]:
+                    - heading "Blocked Storm Drain" [level=3] [ref=e573]
+                    - generic [ref=e574]:
+                      - generic [ref=e575]:
+                        - img [ref=e576]
+                        - text: Walnut St & 3rd St
+                      - generic [ref=e580]:
+                        - img [ref=e581]
+                        - text: 2/26/2026
+                - generic [ref=e584]: open
+              - paragraph [ref=e585]: Storm drain is completely blocked with leaves and debris at the corner of Walnut and 3rd. Causes flooding during rain.
+              - generic [ref=e586]:
+                - generic [ref=e587]:
+                  - generic [ref=e588]:
+                    - img [ref=e589]
+                    - text: 0 Updates
+                  - generic [ref=e591]: utilities
+                - generic [ref=e592]:
+                  - text: View Progress
+                  - img [ref=e593]
+        - generic [ref=e595]:
+          - generic [ref=e596]:
+            - generic [ref=e597]:
+              - heading "Live Issue Map" [level=3] [ref=e598]:
+                - img [ref=e599]
+                - text: Live Issue Map
+              - generic [ref=e602]:
+                - generic [ref=e603]: Open
+                - generic [ref=e605]: In Progress
+            - generic [ref=e607]:
+              - generic [ref=e608]:
+                - generic:
+                  - generic:
+                    - img
+                - generic:
+                  - generic [ref=e614]:
+                    - button "Zoom in" [ref=e615] [cursor=pointer]: +
+                    - button "Zoom out" [ref=e616] [cursor=pointer]: −
+                  - generic [ref=e617]:
+                    - link "Leaflet" [ref=e618] [cursor=pointer]:
+                      - /url: https://leafletjs.com
+                      - img [ref=e619]
+                      - text: Leaflet
+                    - text: "| ©"
+                    - link "OpenStreetMap" [ref=e623] [cursor=pointer]:
+                      - /url: https://www.openstreetmap.org/copyright
+                    - text: contributors
+              - paragraph [ref=e625]:
+                - img [ref=e626]
+                - text: Currently tracking 5 community reports across the township.
+          - generic [ref=e628]:
+            - heading "How it works" [level=3] [ref=e629]
+            - generic [ref=e630]:
+              - generic [ref=e631]:
+                - generic [ref=e632]: "1"
+                - generic [ref=e633]:
+                  - paragraph [ref=e634]: Report
+                  - paragraph [ref=e635]: Submit a photo and location of the issue you've spotted.
+              - generic [ref=e636]:
+                - generic [ref=e637]: "2"
+                - generic [ref=e638]:
+                  - paragraph [ref=e639]: Review
+                  - paragraph [ref=e640]: County clerks assign the ticket to the relevant department.
+              - generic [ref=e641]:
+                - generic [ref=e642]: "3"
+                - generic [ref=e643]:
+                  - paragraph [ref=e644]: Resolve
+                  - paragraph [ref=e645]: Track progress in real-time until the issue is fixed.
+          - generic [ref=e646]:
+            - img [ref=e648]
+            - heading "Issue Resolution Rate" [level=3] [ref=e651]
+            - generic [ref=e652]: 92%
+            - paragraph [ref=e653]: "Average response time: 48 hours"
+  - contentinfo [ref=e397]:
+    - generic [ref=e398]:
+      - generic [ref=e399]:
+        - generic [ref=e400]:
+          - img [ref=e403]
+          - generic [ref=e415]:
+            - paragraph [ref=e416]: Ashtabula County Government
+            - paragraph [ref=e417]: Your County Government, Working For You
+        - generic [ref=e418]:
+          - link "Privacy Policy" [ref=e419] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms of Use" [ref=e420] [cursor=pointer]:
+            - /url: "#"
+          - link "Contact" [ref=e421] [cursor=pointer]:
+            - /url: "#"
+      - paragraph [ref=e423]: © 2026 Ashtabula County Government | Official Transparency Portal | Serving Ashtabula residents since 1807

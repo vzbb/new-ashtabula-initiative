@@ -1,0 +1,1 @@
+SITE: engineers-assistant | CENTERING: N | BRANDING: N | LOREM: False | NOTES: The provided index.html is a minimal SPA entry point. Centering and branding quality cannot be assessed from this file alone as UI is rendered by JavaScript. No 'Lorem Ipsum' text found.

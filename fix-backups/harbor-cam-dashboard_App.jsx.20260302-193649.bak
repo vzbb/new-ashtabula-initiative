@@ -1,0 +1,170 @@
+import { useState, useEffect } from "react";
+import "./App.css";
+
+// Lighthouse/maritime logo
+const LogoIcon = () => (
+  <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="22" y="12" width="8" height="32" rx="1" fill="#ffffff" stroke="#0c2461" strokeWidth="2"/>
+    <path d="M18 12h16l-8-8-8 8z" fill="#e74c3c" stroke="#c0392b" strokeWidth="1"/>
+    <rect x="24" y="16" width="4" height="4" fill="#0c2461"/>
+    <rect x="24" y="24" width="4" height="4" fill="#0c2461"/>
+    <rect x="24" y="32" width="4" height="4" fill="#0c2461"/>
+    <path d="M6 44h40" stroke="#78e08f" strokeWidth="4" strokeLinecap="round"/>
+    <path d="M10 44q8-4 16-2t16 2" stroke="#3498db" strokeWidth="2" fill="none"/>
+  </svg>
+);
+
+// Wave pattern
+const WavePattern = () => (
+  <svg className="wave-pattern" viewBox="0 0 200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.1">
+      <path d="M0 30 Q50 20 100 30 T200 30" fill="none" stroke="#0c2461" strokeWidth="2"/>
+      <path d="M0 40 Q50 30 100 40 T200 40" fill="none" stroke="#0c2461" strokeWidth="2"/>
+      <path d="M0 50 Q50 40 100 50 T200 50" fill="none" stroke="#3498db" strokeWidth="2"/>
+      <path d="M0 60 Q50 50 100 60 T200 60" fill="none" stroke="#78e08f" strokeWidth="2"/>
+      <circle cx="150" cy="25" r="15" fill="none" stroke="#0c2461" strokeWidth="1"/>
+      <path d="M150 15v20M140 25h20" stroke="#0c2461" strokeWidth="1"/>
+    </g>
+  </svg>
+);
+
+function App() {
+  const [conditions, setConditions] = useState({ wind: "12 knots", waves: "2-3 ft", temp: "68°F", visibility: "Good" });
+  const [loading, setLoading] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState(new Date());
+
+  const refreshData = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLastUpdated(new Date());
+      setLoading(false);
+    }, 1000);
+  };
+
+  const status = conditions.waves.includes("4") || conditions.wind.includes("25") ? "danger" : 
+                 conditions.waves.includes("3") || conditions.wind.includes("15") ? "caution" : "good";
+
+  const statusConfig = {
+    good: { color: "#27ae60", bg: "#eafaf1", label: "GOOD TO GO", icon: "✓" },
+    caution: { color: "#f39c12", bg: "#fef9e7", label: "CAUTION", icon: "⚠" },
+    danger: { color: "#e74c3c", bg: "#fadbd8", label: "DANGEROUS", icon: "✕" }
+  };
+
+  return (
+    <div className="page">
+      <div className="bg-waves" aria-hidden="true">
+        <WavePattern />
+      </div>
+
+      <header className="header">
+        <div className="logo">
+          <LogoIcon />
+          <div className="logo-text">
+            <span className="logo-title">Harbor Cam</span>
+            <span className="logo-subtitle">Dashboard</span>
+          </div>
+        </div>        
+        <div className="location-badge">
+          <span>📍</span> Ashtabula Harbor, OH
+        </div>
+      </header>
+
+      <main className="content">
+        <div className="status-bar">
+          <div className="status-indicator" style={{ background: statusConfig[status].bg, borderColor: statusConfig[status].color }}>
+            <span className="status-icon" style={{ color: statusConfig[status].color }}>{statusConfig[status].icon}</span>
+            <span className="status-label" style={{ color: statusConfig[status].color }}>{statusConfig[status].label}</span>
+          </div>          
+          <button className="refresh-btn" onClick={refreshData} disabled={loading}>
+            <span className={loading ? 'spin' : ''}>↻</span> Refresh
+          </button>
+        </div>
+
+        <div className="main-grid">
+          <div className="camera-card">
+            <div className="card-header">
+              <span>📹</span>
+              <h3>Live Harbor Cam</h3>
+              <span className="live-badge">LIVE</span>
+            </div>            
+            <div className="camera-feed">
+              <div className="camera-placeholder">
+                <span>📷</span>
+                <p>Harbor Camera Feed</p>
+                <span className="camera-note">lakevision.com/camera_11</span>
+              </div>
+            </div>            
+            <div className="camera-meta">
+              <span>Last updated: {lastUpdated.toLocaleTimeString()}</span>
+            </div>
+          </div>
+
+          <div className="conditions-card">
+            <div className="card-header">
+              <span>🌊</span>
+              <h3>Marine Conditions</h3>
+            </div>            
+            <div className="conditions-grid">
+              <div className="condition-item">
+                <span className="condition-icon">💨</span>
+                <span className="condition-label">Wind</span>
+                <span className="condition-value">{conditions.wind}</span>
+              </div>
+              <div className="condition-item">
+                <span className="condition-icon">🌊</span>
+                <span className="condition-label">Waves</span>
+                <span className="condition-value">{conditions.waves}</span>
+              </div>
+              <div className="condition-item">
+                <span className="condition-icon">🌡️</span>
+                <span className="condition-label">Temp</span>
+                <span className="condition-value">{conditions.temp}</span>
+              </div>
+              <div className="condition-item">
+                <span className="condition-icon">👁️</span>
+                <span className="condition-label">Visibility</span>
+                <span className="condition-value">{conditions.visibility}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="forecast-card">
+          <div className="card-header">
+            <span>📋</span>
+            <h3>Marine Forecast</h3>
+            <span className="zone-badge">LEZ148</span>
+          </div>          
+          <div className="forecast-list">
+            <div className="forecast-item">
+              <span className="forecast-time">Today</span>
+              <span className="forecast-text">West winds 10 to 15 knots. Waves 2 to 4 feet.</span>
+            </div>
+            <div className="forecast-item">
+              <span className="forecast-time">Tonight</span>
+              <span className="forecast-text">Northwest winds 15 to 20 knots. Waves 3 to 5 feet.</span>
+            </div>
+            <div className="forecast-item">
+              <span className="forecast-time">Tomorrow</span>
+              <span className="forecast-text">Northwest winds 10 to 15 knots. Waves 2 to 4 feet.</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="safety-card">
+          <div className="safety-icon">🛟</div>
+          <div className="safety-content">
+            <h4>Boater Safety</h4>
+            <p>Always check latest NWS warnings before heading out. Life jackets save lives.</p>
+          </div>
+        </div>
+      </main>
+
+      <footer className="footer">
+        <p>Data: NOAA NDBC • © 2026 New Ashtabula Initiative</p>
+      </footer>
+    </div>
+  );
+}
+
+export default App;

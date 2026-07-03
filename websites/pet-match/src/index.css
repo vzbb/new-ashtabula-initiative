@@ -1,0 +1,38 @@
+:root {
+  font-family: "Nunito", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #2d3748;
+  background-color: #fffaf0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #d97706;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b45309;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}

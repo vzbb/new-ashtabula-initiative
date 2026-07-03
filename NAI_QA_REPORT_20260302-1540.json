@@ -1,0 +1,1169 @@
+{
+  "auditDate": "2026-03-02T15:40:53.614442",
+  "totalSites": 68,
+  "summary": {
+    "totalSites": 68,
+    "accessible": 68,
+    "broken": 0,
+    "averageMobileScore": 80,
+    "averageAccessibilityScore": 90,
+    "averagePerformanceScore": 100,
+    "totalBrokenLinks": 0,
+    "totalIssues": 134
+  },
+  "sites": [
+    {
+      "name": "Civic Insight Engine",
+      "url": "https://new-ashtabula-initiative.vercel.app/civic-insight/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 99.79081153869629,
+      "page_size_kb": 0.8994140625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Permit Whisperer",
+      "url": "https://new-ashtabula-initiative.vercel.app/permits/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 109.85589027404785,
+      "page_size_kb": 0.4755859375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Eligibility Screener",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 106.11987113952637,
+      "page_size_kb": 0.7880859375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Eligibility Lite",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-lite/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 95.63994407653809,
+      "page_size_kb": 0.501953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Eligibility Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-pro/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 96.49276733398438,
+      "page_size_kb": 0.74609375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "License Wizard",
+      "url": "https://new-ashtabula-initiative.vercel.app/license/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 86.76648139953613,
+      "page_size_kb": 0.693359375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Event Permit Express",
+      "url": "https://new-ashtabula-initiative.vercel.app/event-permit/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 188.2760524749756,
+      "page_size_kb": 0.7509765625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Zoning Clerk",
+      "url": "https://new-ashtabula-initiative.vercel.app/zoning/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 189.72158432006836,
+      "page_size_kb": 0.486328125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "GovTech Box",
+      "url": "https://new-ashtabula-initiative.vercel.app/govtech/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 158.97226333618164,
+      "page_size_kb": 0.7421875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "GrantGenius",
+      "url": "https://new-ashtabula-initiative.vercel.app/grantgenius/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 218.66631507873535,
+      "page_size_kb": 0.7626953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Invest Ashtabula",
+      "url": "https://new-ashtabula-initiative.vercel.app/invest/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 93.02544593811035,
+      "page_size_kb": 0.8056640625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Blueprint Analyzer",
+      "url": "https://new-ashtabula-initiative.vercel.app/blueprint/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 151.00550651550293,
+      "page_size_kb": 0.822265625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Box Builder",
+      "url": "https://new-ashtabula-initiative.vercel.app/box-builder/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 172.2121238708496,
+      "page_size_kb": 0.482421875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "BoxFlow Estimator",
+      "url": "https://new-ashtabula-initiative.vercel.app/boxflow/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 94.49362754821777,
+      "page_size_kb": 0.505859375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "CashFlow Tracker",
+      "url": "https://new-ashtabula-initiative.vercel.app/cashflow/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 95.24226188659668,
+      "page_size_kb": 0.501953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Parts Finder",
+      "url": "https://new-ashtabula-initiative.vercel.app/parts/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 235.34774780273438,
+      "page_size_kb": 0.7041015625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Parts Request",
+      "url": "https://new-ashtabula-initiative.vercel.app/parts-request/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 181.29277229309082,
+      "page_size_kb": 0.517578125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Plating Tracker",
+      "url": "https://new-ashtabula-initiative.vercel.app/plating/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 174.11351203918457,
+      "page_size_kb": 0.474609375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Plating Tracker Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/plating-pro/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 90.50178527832031,
+      "page_size_kb": 0.513671875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Contractor Match",
+      "url": "https://new-ashtabula-initiative.vercel.app/contractors/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 168.08271408081055,
+      "page_size_kb": 0.7998046875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Fence Quote",
+      "url": "https://new-ashtabula-initiative.vercel.app/fence-quote/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 169.9836254119873,
+      "page_size_kb": 0.7421875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Landlord Repair Queue",
+      "url": "https://new-ashtabula-initiative.vercel.app/landlord/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 169.75998878479004,
+      "page_size_kb": 0.751953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Lawn Quote Tool",
+      "url": "https://new-ashtabula-initiative.vercel.app/lawn/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 134.3514919281006,
+      "page_size_kb": 0.7021484375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "HVAC Tuneup",
+      "url": "https://new-ashtabula-initiative.vercel.app/hvac/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 242.63763427734375,
+      "page_size_kb": 0.7421875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Snow Plow Tracker",
+      "url": "https://new-ashtabula-initiative.vercel.app/snow-plow/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 104.90679740905762,
+      "page_size_kb": 0.505859375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Instant Dirt Quote",
+      "url": "https://new-ashtabula-initiative.vercel.app/dirt-quote/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 184.04078483581543,
+      "page_size_kb": 0.7490234375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Rental Availability",
+      "url": "https://new-ashtabula-initiative.vercel.app/rental/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 95.1540470123291,
+      "page_size_kb": 0.8876953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Adaptive Reuse Planner",
+      "url": "https://new-ashtabula-initiative.vercel.app/adaptive-reuse/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 93.63603591918945,
+      "page_size_kb": 0.8388671875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Engineer's Assistant",
+      "url": "https://new-ashtabula-initiative.vercel.app/engineers/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 202.93569564819336,
+      "page_size_kb": 0.75,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Local Grocer Go",
+      "url": "https://new-ashtabula-initiative.vercel.app/grocer/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 287.23835945129395,
+      "page_size_kb": 0.8232421875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Curbside Pickup Tracker",
+      "url": "https://new-ashtabula-initiative.vercel.app/curbside/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 161.5147590637207,
+      "page_size_kb": 0.529296875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Farm Stand Finder",
+      "url": "https://new-ashtabula-initiative.vercel.app/farm-stand/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 314.87512588500977,
+      "page_size_kb": 0.748046875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Mobile Notary",
+      "url": "https://new-ashtabula-initiative.vercel.app/notary/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 144.87147331237793,
+      "page_size_kb": 0.740234375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Auto Detail Booking",
+      "url": "https://new-ashtabula-initiative.vercel.app/auto-detail/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 94.0389633178711,
+      "page_size_kb": 0.9443359375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Truck Wash Booking",
+      "url": "https://new-ashtabula-initiative.vercel.app/truck-wash/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 94.33102607727051,
+      "page_size_kb": 0.509765625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Service Scheduler",
+      "url": "https://new-ashtabula-initiative.vercel.app/scheduler/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 102.64396667480469,
+      "page_size_kb": 0.7900390625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Service Scheduler SMS",
+      "url": "https://new-ashtabula-initiative.vercel.app/scheduler-sms/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 103.5006046295166,
+      "page_size_kb": 0.521484375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Insta Book",
+      "url": "https://new-ashtabula-initiative.vercel.app/insta-book/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 95.62993049621582,
+      "page_size_kb": 0.7412109375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Insta Book Stripe",
+      "url": "https://new-ashtabula-initiative.vercel.app/insta-book-stripe/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 157.7010154724121,
+      "page_size_kb": 0.748046875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Virtual Concierge",
+      "url": "https://new-ashtabula-initiative.vercel.app/concierge/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 154.45923805236816,
+      "page_size_kb": 0.505859375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Visitor Parking Finder",
+      "url": "https://new-ashtabula-initiative.vercel.app/parking/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 97.15986251831055,
+      "page_size_kb": 0.525390625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "MyTrip Planner",
+      "url": "https://new-ashtabula-initiative.vercel.app/mytrip/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 149.63698387145996,
+      "page_size_kb": 0.7275390625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "MyTrip Export",
+      "url": "https://new-ashtabula-initiative.vercel.app/mytrip-export/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 203.72819900512695,
+      "page_size_kb": 0.7470703125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Route Optimizer",
+      "url": "https://new-ashtabula-initiative.vercel.app/routes/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 185.286283493042,
+      "page_size_kb": 0.91796875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Ride Ready",
+      "url": "https://new-ashtabula-initiative.vercel.app/ride-ready/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 94.99859809875488,
+      "page_size_kb": 0.7626953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Charter Booking",
+      "url": "https://new-ashtabula-initiative.vercel.app/charter/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 163.0256175994873,
+      "page_size_kb": 0.7001953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Marina Slip Waitlist",
+      "url": "https://new-ashtabula-initiative.vercel.app/marina/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 188.71021270751953,
+      "page_size_kb": 0.744140625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Compassionate Planner",
+      "url": "https://new-ashtabula-initiative.vercel.app/compassionate/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 185.87803840637207,
+      "page_size_kb": 0.521484375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "AidFlow Navigator",
+      "url": "https://new-ashtabula-initiative.vercel.app/aidflow/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 225.57473182678223,
+      "page_size_kb": 0.9794921875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Resource Compass",
+      "url": "https://new-ashtabula-initiative.vercel.app/resource/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 179.7037124633789,
+      "page_size_kb": 1.21484375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Resource Compass Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/resource-pro/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 196.6254711151123,
+      "page_size_kb": 1.134765625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Policy Pal",
+      "url": "https://new-ashtabula-initiative.vercel.app/policy-pal/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 91.28403663635254,
+      "page_size_kb": 0.8740234375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Boat Storage Waitlist",
+      "url": "https://new-ashtabula-initiative.vercel.app/boat-storage/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 166.6584014892578,
+      "page_size_kb": 1.0009765625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Harvest Alert",
+      "url": "https://new-ashtabula-initiative.vercel.app/harvest/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 183.67457389831543,
+      "page_size_kb": 0.7919921875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "AI Docent",
+      "url": "https://new-ashtabula-initiative.vercel.app/ai-docent/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 165.30466079711914,
+      "page_size_kb": 0.90234375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "AI Docent Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/ai-docent-pro/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 90.69538116455078,
+      "page_size_kb": 0.490234375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Artist Commission Form",
+      "url": "https://new-ashtabula-initiative.vercel.app/artist-commission/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 194.98229026794434,
+      "page_size_kb": 0.525390625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Pocket Historian",
+      "url": "https://new-ashtabula-initiative.vercel.app/historian/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 219.451904296875,
+      "page_size_kb": 0.501953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Pocket Historian Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/historian-pro/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 153.09476852416992,
+      "page_size_kb": 0.517578125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Pocket Sommelier",
+      "url": "https://new-ashtabula-initiative.vercel.app/sommelier/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 104.26521301269531,
+      "page_size_kb": 0.501953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Pocket Sommelier Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/sommelier-pro/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 97.58663177490234,
+      "page_size_kb": 0.4580078125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "GOTL Weekend Planner",
+      "url": "https://new-ashtabula-initiative.vercel.app/gotl/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 90.18898010253906,
+      "page_size_kb": 0.7509765625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Harbor Cam Dashboard",
+      "url": "https://new-ashtabula-initiative.vercel.app/harbor/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 258.817195892334,
+      "page_size_kb": 0.7685546875,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Pet Matchmaker",
+      "url": "https://new-ashtabula-initiative.vercel.app/pet-match/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 92.36931800842285,
+      "page_size_kb": 0.494140625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Visual Portfolio",
+      "url": "https://new-ashtabula-initiative.vercel.app/portfolio/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 179.34894561767578,
+      "page_size_kb": 0.501953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Volunteer Scheduler",
+      "url": "https://new-ashtabula-initiative.vercel.app/volunteer/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 102.26750373840332,
+      "page_size_kb": 0.8447265625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Wedding Lead Form",
+      "url": "https://new-ashtabula-initiative.vercel.app/wedding/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 94.16699409484863,
+      "page_size_kb": 0.505859375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Through the Grapevine",
+      "url": "https://new-ashtabula-initiative.vercel.app/wine/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 114.61710929870605,
+      "page_size_kb": 3.0947265625,
+      "mobile_score": 100,
+      "accessibility_score": 100,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [],
+      "warnings": []
+    }
+  ]
+}

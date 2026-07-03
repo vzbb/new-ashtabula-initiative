@@ -1,0 +1,74 @@
+{
+  "mvp": "auto-detail",
+  "generated_at": "2026-03-22T10:25:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/auto-detail.json",
+  "research_sources": [
+    "https://flawlesscad.com/",
+    "https://www.lakesluxurywash.com/",
+    "https://www.quickcleancarandtruckwash.com/"
+  ],
+  "target_buyer": {
+    "organization": "Flawless Coating & Detailing",
+    "type": "Professional Auto Detailing / Ceramic Coating",
+    "website": "https://flawlesscad.com/",
+    "why_top_candidate": "Premium service provider with 10+ years ceramic coating experience, Northeast Ohio's most advanced detailing facility, owner Jonathan has built a reputation for the best ceramic coating application in the region. Strong existing brand and customer base.",
+    "fit_score": 95
+  },
+  "actual_brand_research": {
+    "observed_colors": {
+      "primary_background": "#000000 (black)",
+      "accent_color": "#00BFFF (cyan/teal - buttons/highlights)",
+      "text_color": "#FFFFFF (white)",
+      "secondary_background": "#1A1A1A (dark gray)"
+    },
+    "existing_brand_name": "Flawless Coating and Detailing",
+    "existing_tagline": "THE VEHICLE PRESERVATION EXPERTS",
+    "owner_name": "Jonathan",
+    "key_services": [
+      "Flawless Elite Coating Service ($1799-2099)",
+      "Flawless Ceramic Coating Service",
+      "Full exterior deep cleaning and detail",
+      "One Step Paint Correction"
+    ],
+    "brand_voice": "Confident, expertise-driven, direct communication style ('You probably scroll right past text like this—I get it')",
+    "visual_style": "High-contrast dark theme with cyan accents, professional automotive photography, before/after vehicle shots"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Premium Ceramic Coating Appointments — Now Bookable Online",
+    "positioning": "The digital booking extension of Flawless Coating & Detailing — bringing Jonathan's 10+ years of ceramic coating expertise online with seamless scheduling for Northeast Ohio's most discerning vehicle owners.",
+    "color_palette_derived_from_research": {
+      "primary": "#000000",
+      "accent": "#00BFFF",
+      "text_on_dark": "#FFFFFF",
+      "text_on_light": "#1A1A1A",
+      "secondary_background": "#1A1A1A",
+      "hover_state": "#33CCFF"
+    },
+    "typography_recommendation": {
+      "heading_font": "Use existing Flawless CAD brand fonts (maintain consistency)",
+      "body_font": "Clean sans-serif for readability (Inter or similar)"
+    },
+    "mood_keywords_from_research": ["premium", "expertise", "preservation", "protection", "mirror-like shine", "confidence"],
+    "visual_direction": {
+      "hero_image_concept": "Before/after ceramic coating shots from Flawless CAD portfolio",
+      "color_scheme": "Maintain existing black/cyan high-contrast aesthetic",
+      "photography_style": "Professional vehicle photography showing mirror-like finish, water beading effects"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "MUST use actual Flawless CAD colors (black/cyan) — do not invent new branding",
+    "key_features_needed": [
+      "Service selector showing Flawless Elite ($1799-2099) vs Ceramic Coating tiers",
+      "Consultation booking for new customers (high-ticket service requires trust)",
+      "Vehicle condition photo upload for accurate quoting",
+      "Integration with Jonathan's existing email/communication style"
+    ],
+    "differentiators_based_on_research": [
+      "Jonathan's personal brand and reputation",
+      "10+ years ceramic coating expertise",
+      "Best-selling Elite service with proven demand",
+      "Northeast Ohio specialization"
+    ]
+  }
+}

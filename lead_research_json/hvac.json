@@ -1,0 +1,174 @@
+{
+  "mvp": "hvac",
+  "mvp_title": "HVAC Tune-Up Scheduler",
+  "mvp_description": "Online scheduling tool for HVAC maintenance and tune-up appointments with smart recommendations",
+  "run_timestamp_utc": "2026-03-22T10:48:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "Found 5 qualified HVAC service companies in Ashtabula County, Ohio. All are established businesses with strong local presence, ranging from 20+ to 40+ years in operation. Companies serve both residential and commercial markets with full heating and cooling services. Strong opportunity for MVP adoption to streamline appointment scheduling and improve customer service.",
+  "leads": [
+    {
+      "name": "HAVE Heating and Cooling (HAVE, Inc.)",
+      "type": "HVAC Contractor - Residential/Commercial/Industrial",
+      "website": "https://have-inc.com/",
+      "fit_rationale": "Largest HVAC contractor in Ashtabula. Established 1975, offers MVP service agreements already, has 24/7 emergency service, and features 3,000+ sq ft sheet metal fabrication shop. Strong tech adoption potential given their investment in infrastructure and maintenance plans.",
+      "source": "Brave Search + Crawl4AI extraction",
+      "contact_info": {
+        "phone": "440-998-7252",
+        "address": "2101 Aetna Road, Ashtabula, OH 44004",
+        "license": "#28522"
+      },
+      "service_area": "Ashtabula, Lake, Geauga counties - Ashtabula, Concord, Conneaut, Jefferson, Madison, Painesville, OH"
+    },
+    {
+      "name": "Ogram Heating & Cooling, Inc.",
+      "type": "HVAC Contractor - Family-Owned Full Service",
+      "website": "https://www.ogramheatingandcooling.com/",
+      "fit_rationale": "Family-owned since 1980 (40+ years). 4-time Carrier President's Award winner for exceptional customer service. A+ BBB rating. Currently run by second generation (Ryan Ogram). Strong focus on customer experience makes them ideal for scheduling automation MVP.",
+      "source": "SearXNG + Crawl4AI extraction",
+      "contact_info": {
+        "phone": "(440) 293-6946",
+        "address": "6059 Stanhope-Kelloggsville Rd, Andover, OH 44003",
+        "license": "#13465"
+      },
+      "service_area": "Northeast Ohio & Western Pennsylvania - Ashtabula, Crawford, Geauga, Trumbull, Lake counties"
+    },
+    {
+      "name": "Blank Heating Company Inc",
+      "type": "HVAC Contractor - 3rd Generation Family Business",
+      "website": "https://www.blankheatingco.com/",
+      "fit_rationale": "Third-generation family-run business with strong reputation for honesty and dependability. NATE-certified technicians. Offers free in-home estimates and multiple payment options. Established customer base in Ashtabula area makes them ideal early adopter.",
+      "source": "Brave Search + web_fetch extraction",
+      "contact_info": {
+        "license": "OH LIC #25138"
+      },
+      "service_area": "Ashtabula, OH and surrounding communities"
+    },
+    {
+      "name": "Melaragno HVAC & Construction",
+      "type": "HVAC Contractor - Commercial & Residential",
+      "website": "https://melaragnohvac.com/",
+      "fit_rationale": "20+ years experience serving Ashtabula and Lake counties. Offers financing through Synchrony Bank. Commercial and residential services. Strong referral-based business ('Where Referrals Are Our Greatest Reputation') indicates customer satisfaction focus.",
+      "source": "Brave Search + Crawl4AI extraction",
+      "contact_info": {
+        "phone": "440-998-0188 (Office) / 440-813-8510 (Cell)",
+        "address": "4807 Park Avenue, Ashtabula, OH 44004",
+        "email": "rm@melaragnohvac.com",
+        "license": "OH LIC# 51029"
+      },
+      "service_area": "Ashtabula County, Lake County, Conneaut, OH"
+    },
+    {
+      "name": "DK Heating and Sons",
+      "type": "HVAC Contractor - Multi-County Service",
+      "website": "https://dkhtg.com/",
+      "fit_rationale": "Trusted HVAC contractor serving Lake, Geauga, and Ashtabula counties. Certified technicians for repairs, servicing, and system replacements. Residential and commercial customers. Financing options available. Strong presence across three counties.",
+      "source": "Brave Search",
+      "contact_info": {
+        "service_area": "Lake, Geauga, and Ashtabula counties"
+      },
+      "service_area": "Lake, Geauga, and Ashtabula counties"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_status": "unbranded_generic",
+    "issues": [
+      "Generic utility-focused interface with no specific business identity",
+      "No logo or brand colors - relies on default UI patterns",
+      "Placeholder text without regional specificity",
+      "Lacks trust signals like contact info or professional footer"
+    ],
+    "recommendations": [
+      "Target HAVE Heating and Cooling as primary branding candidate - largest operation with existing MVP service agreements",
+      "Ogram as secondary - award-winning customer service aligns with scheduling automation",
+      "Apply professional blue/orange HVAC industry color scheme",
+      "Add company-specific hero section with local imagery"
+    ]
+  },
+  "site_improvements": [
+    {
+      "priority": "high",
+      "item": "Add company logo and specific branding",
+      "rationale": "Current page is too generic - HVAC businesses need strong local branding for trust"
+    },
+    {
+      "priority": "high",
+      "item": "Implement actual scheduling backend",
+      "rationale": "Form currently goes nowhere - integrate with Calendly, Acuity, or custom booking system"
+    },
+    {
+      "priority": "medium",
+      "item": "Add contact phone number and physical address",
+      "rationale": "Local service businesses rely on immediate contact for trust"
+    },
+    {
+      "priority": "medium",
+      "item": "Include service area map",
+      "rationale": "HVAC companies serve specific geographic regions - show coverage area"
+    },
+    {
+      "priority": "low",
+      "item": "Add customer testimonials",
+      "rationale": "HVAC is trust-based business - reviews and testimonials crucial"
+    }
+  ],
+  "aesthetics_and_layout_notes": {
+    "strengths": [
+      "Clean, centered layout appropriate for single-purpose utility",
+      "Consistent spacing and generous margins",
+      "Clear visual hierarchy: Title -> Form -> Value Props",
+      "Professional blue/orange palette (though generic)"
+    ],
+    "weaknesses": [
+      "Lacks containerization - content feels floating",
+      "No visual identity or brand personality",
+      "Input field styling is basic",
+      "Status/confirmation area is minimal"
+    ],
+    "layout_score": 7,
+    "branding_score": 3,
+    "white_label_fit": "high - easily adaptable for any HVAC business"
+  },
+  "whitelabel_potential": {
+    "rating": "high",
+    "reasoning": "The HVAC scheduler has excellent white-label potential. The underlying structure (date picker, service type selector, contact form) is highly reusable across different HVAC companies. Color scheme, logo, and regional references can be easily swapped. The tool addresses a universal pain point for HVAC businesses: streamlining appointment scheduling and reducing phone tag.",
+    "target_market": "Small to mid-sized HVAC contractors in rural and suburban markets",
+    "value_proposition": "24/7 online booking reduces administrative overhead and captures leads outside business hours"
+  },
+  "action_next": [
+    "Contact HAVE Heating and Cooling (440-998-7252) - present MVP as upgrade to their existing MVP Service Agreement program",
+    "Reach out to Ogram Heating & Cooling - emphasize customer service automation aligning with their award-winning standards",
+    "Develop branded demo for Blank Heating Company - family business angle resonates",
+    "Prepare pricing tiers: Basic (scheduler only), Pro (with SMS reminders), Enterprise (full CRM integration)",
+    "Create case study showing how online scheduling reduces no-shows by 25-30%"
+  ],
+  "sources": [
+    {
+      "type": "web_search",
+      "tool": "Brave Search API",
+      "query": "HVAC companies Ashtabula County Ohio heating cooling contractors",
+      "date": "2026-03-22"
+    },
+    {
+      "type": "metasearch",
+      "tool": "SearXNG (local)",
+      "query": "HVAC contractors Ashtabula County Ohio",
+      "date": "2026-03-22"
+    },
+    {
+      "type": "crawl",
+      "tool": "Crawl4AI",
+      "urls": [
+        "https://have-inc.com/",
+        "https://www.ogramheatingandcooling.com/",
+        "https://melaragnohvac.com/"
+      ],
+      "date": "2026-03-22"
+    },
+    {
+      "type": "fetch",
+      "tool": "web_fetch",
+      "url": "https://www.blankheatingco.com/",
+      "date": "2026-03-22"
+    }
+  ]
+}

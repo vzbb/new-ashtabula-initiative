@@ -1,0 +1,1 @@
+SITE: pet-matchmaker | CENTERING: 8 | BRANDING: 9 | LOREM: false | NOTES: Main content block (`.page`) is horizontally centered using `margin: 0 auto` across multiple screen sizes. All text content is relevant to the application; no Lorem Ipsum found. Branding is consistent with design tokens.

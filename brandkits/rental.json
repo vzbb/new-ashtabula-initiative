@@ -1,0 +1,125 @@
+{
+  "mvp": "rental",
+  "generated_at": "2026-03-22T23:10:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/rental.json",
+  "research_sources": [
+    "https://www.ridgeviewestate.me/",
+    "https://www.ashtabulamha.com/"
+  ],
+  "target_buyer_1": {
+    "organization": "Ashtabula Metropolitan Housing Authority (AMHA)",
+    "type": "Public Housing Authority",
+    "website": "https://www.ashtabulamha.com/",
+    "location": "Ashtabula County, Ohio",
+    "why_top_candidate": "Official housing authority serving Ashtabula County with Section 8 vouchers (HCV Program), public housing, and USDA housing programs. Mission: 'Provide Ashtabula county residents clean and safe affordable housing.' Strives for strong relationships with residents and community stakeholders. Serves families with honesty, dignity, and respect. Offers exceptional communication, care, responsiveness. Manages significant affordable housing inventory. Would benefit greatly from centralized availability finder and streamlined application portal for HCV, landlords, public housing, USDA housing programs.",
+    "fit_score": 95
+  },
+  "target_buyer_2": {
+    "organization": "Ridgeview Estates",
+    "type": "Apartment Community / Property Management",
+    "website": "https://www.ridgeviewestate.me/",
+    "location": "4405 Erie Ridge Road, Ashtabula, OH 44004",
+    "phone": "330-979-2410",
+    "why_top_candidate": "Small apartment community in Ashtabula, Ohio. Positioning: 'Quality, Affordable Living' and 'Quality, Affordable Apartments In Ashtabula.' Located just off State Route 11, minutes from Interstate 90. Quiet, country-like setting close to city. Structured application process: $50 non-refundable fee per applicant, 2-5 business day approval process, 48-hour holding deposit deadline. Strict policies: 6 months rental history required, no pets (service animals only), non-smoking facility, felony conviction = automatic denial. Would benefit from automated availability tracking and tenant pre-screening tools.",
+    "fit_score": 90
+  },
+  "actual_brand_research": {
+    "ashtabula_mha": {
+      "name": "Ashtabula Metropolitan Housing Authority (AMHA)",
+      "mission": "Provide Ashtabula county residents clean and safe affordable housing",
+      "values": [
+        "Strong relationships with residents and community stakeholders",
+        "Serve families with honesty, dignity, and respect",
+        "Exceptional communication, care, and responsiveness",
+        "Opportunity for residents to participate in building AMHA's future"
+      ],
+      "programs": [
+        "HCV Program (Housing Choice Vouchers / Section 8)",
+        "Landlord partnerships",
+        "Public Housing",
+        "USDA Housing"
+      ],
+      "services": [
+        "Housing Application processing",
+        "Capital Fund management",
+        "Announcements and community updates"
+      ],
+      "visual_style": "Community-focused, affordable housing mission, government housing authority"
+    },
+    "ridgeview_estates": {
+      "name": "Ridgeview Estates",
+      "tagline": "Quality, Affordable Living",
+      "positioning": "Quality, Affordable Apartments In Ashtabula",
+      "location": "4405 Erie Ridge Road, Ashtabula, OH 44004",
+      "phone": "330-979-2410",
+      "description": "Small apartment community in beautiful lake shore community of Ashtabula Ohio. Clean, quality, affordable apartments in quiet, country-like setting minutes from city. Located just off State Route 11, few minutes from Interstate 90.",
+      "application_process": {
+        "step1": "Each occupant 18+ fills out application with valid ID",
+        "step2": "Bring completed forms to office with $50 non-refundable fee per applicant (Check or Money Order only)",
+        "step3": "Wait 2-5 business days for approval",
+        "step4": "48 hours to bring holding deposit if approved",
+        "payment_note": "NO CASH/CARDS - Cashier's Check or Money Order Only"
+      },
+      "policies": {
+        "rental_history": "At least 6 months required",
+        "pets": "Not allowed unless registered service animal",
+        "smoking": "Non-smoking facility, smoking 15+ feet from common entry",
+        "parking": "First come first serve, max 2 spots per apartment, 4-day limit",
+        "rent": "By apartment not bed - all tenants equally responsible",
+        "felony": "Automatic denial - 'Heck NO! We pride ourselves on keeping our residents safe'"
+      },
+      "visual_style": "Quality, affordable, quiet community, strict safety policies"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Find Your Place. Faster.",
+    "positioning": "The AI-powered rental availability finder for Ashtabula County — connecting residents with AMHA's affordable housing programs and Ridgeview Estates' quality apartments through smart matching and real-time availability.",
+    "color_palette_derived_from_research": {
+      "primary": "#2B6CB0",
+      "accent": "#38A169",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#718096"
+    },
+    "typography_recommendation": {
+      "heading_font": "Clean professional sans-serif",
+      "body_font": "Readable modern sans-serif"
+    },
+    "mood_keywords_from_research": ["affordable", "quality", "safe", "community", "clean", "responsive"],
+    "visual_direction": {
+      "hero_image_concept": "Ashtabula residential community with welcoming apartment homes",
+      "color_scheme": "Professional blue with green accents (trust, safety, growth)",
+      "photography_style": "Ashtabula housing communities, affordable apartments, family-friendly neighborhoods"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with AMHA's mission of clean, safe, affordable housing and Ridgeview's quality, affordable positioning",
+    "key_features_needed": [
+      "AI-powered rental matching algorithm",
+      "Real-time availability tracking",
+      "Tenant pre-screening tools",
+      "Application portal integration",
+      "HCV/Section 8 program filtering",
+      "Landlord/property manager dashboard",
+      "Map-based property search",
+      "Verified rentals badge system"
+    ],
+    "differentiators_based_on_research": [
+      "AMHA: Official housing authority for Ashtabula County",
+      "AMHA: Section 8, Public Housing, USDA programs",
+      "AMHA: Mission-focused on dignity and respect",
+      "Ridgeview: 'Quality, Affordable Living' tagline",
+      "Ridgeview: Strict safety policies (felony = denial)",
+      "Ridgeview: Non-smoking, quiet community focus",
+      "Both: Ashtabula County focused",
+      "Both: Structured application processes"
+    ],
+    "outreach_strategy": [
+      "Contact AMHA about digital housing application modernization",
+      "Reach out to Ridgeview Estates about tenant matching technology",
+      "Highlight HCV program integration for affordable housing seekers",
+      "Offer streamlined pre-screening to reduce application processing time"
+    ]
+  }
+}

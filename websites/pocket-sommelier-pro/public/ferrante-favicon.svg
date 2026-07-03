@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ferrante Sommelier Pro favicon">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6f2230" />
+      <stop offset="100%" stop-color="#341016" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)" />
+  <path d="M24 15h16c0 8-3.4 13.2-8 16v11.4c0 1.2.5 2.3 1.5 3.1l3.5 2.8V52H27v-3.7l3.5-2.8c1-.8 1.5-1.9 1.5-3.1V31c-4.6-2.8-8-8-8-16Z" fill="#f6e1c4"/>
+  <path d="M26.5 18c.6 6 3.1 9.6 5.5 11.4 2.4-1.8 4.9-5.4 5.5-11.4h-11Z" fill="#b26f45"/>
+  <circle cx="47.5" cy="18.5" r="4.5" fill="#f6e1c4" />
+</svg>

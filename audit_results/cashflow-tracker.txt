@@ -1,0 +1,1 @@
+SITE: cashflow-tracker | CENTERING: N | BRANDING: N | LOREM: false | NOTES: Unable to analyze main source file (e.g., src/App.tsx/jsx) as it is not accessible from the provided directory structure. Analysis is based solely on index.html.

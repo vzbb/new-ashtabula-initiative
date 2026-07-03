@@ -1,0 +1,687 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - generic [ref=e6]: 2026-03-26T13:41:24.920834+00:00 · 76 sites
+          - generic [ref=e7]: 2026-03-26T18:06:46.970651+00:00 · 76 sites
+          - generic [ref=e8]: 2026-03-26T20:07:23.682364+00:00 · 76 sites
+          - generic [ref=e9]: 2026-03-26T20:07:23.682364+00:00 · 76 sites
+        - heading "NAI Progress Dashboard" [level=1] [ref=e10]
+        - paragraph [ref=e11]: A lightweight, interactive timeline for the archived visual QA reports. It reads the JSON snapshots, tracks changes over time, and lets you compare sites without keeping every screenshot forever.
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: Snapshots
+          - generic [ref=e15]: "5"
+          - generic [ref=e16]: 2026-03-26T20:07:23.682364+00:00
+        - generic [ref=e17]:
+          - generic [ref=e18]: Sites
+          - generic [ref=e19]: "76"
+          - generic [ref=e20]: sitemap_screenshots/visual_analysis_report.json
+        - generic [ref=e21]:
+          - generic [ref=e22]: Avg design
+          - generic [ref=e23]: "8.1"
+          - generic [ref=e24]: latest snapshot
+        - generic [ref=e25]:
+          - generic [ref=e26]: Avg branding
+          - generic [ref=e27]: "7.4"
+          - generic [ref=e28]: latest snapshot
+        - generic [ref=e29]:
+          - generic [ref=e30]: Branded
+          - generic [ref=e31]: "52"
+          - generic [ref=e32]: 11 partial / 13 unbranded
+        - generic [ref=e33]:
+          - generic [ref=e34]: Shell-like
+          - generic [ref=e35]: "5"
+          - generic [ref=e36]: from summary
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - generic [ref=e40]: Timeline
+          - generic [ref=e41]: Interactive
+          - generic [ref=e42]: JSON snapshots
+        - combobox "Select snapshot" [ref=e44]:
+          - option "2026-03-26T13:04:01.626018+00:00 · 76 sites"
+          - option "2026-03-26T13:41:24.920834+00:00 · 76 sites"
+          - option "2026-03-26T18:06:46.970651+00:00 · 76 sites"
+          - option "2026-03-26T20:07:23.682364+00:00 · 76 sites"
+          - option "2026-03-26T20:07:23.682364+00:00 · 76 sites" [selected]
+      - generic [ref=e45]:
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - heading "Snapshot trajectory" [level=2] [ref=e48]
+            - generic [ref=e49]: Average scores across archived reports
+          - img "Snapshot averages chart" [ref=e52]:
+            - generic [ref=e53]: "10.0"
+            - generic [ref=e54]: "8.0"
+            - generic [ref=e55]: "6.0"
+            - generic [ref=e56]: "4.0"
+            - generic [ref=e57]: "2.0"
+            - generic [ref=e58]: "0.0"
+            - generic [ref=e124]: 2026-03-26
+            - generic [ref=e125]: 2026-03-26
+            - generic [ref=e126]: 2026-03-26
+            - generic [ref=e127]: 2026-03-26
+            - generic [ref=e128]: 2026-03-26
+          - generic [ref=e129]:
+            - generic [ref=e130]: Design
+            - generic [ref=e132]: Branding
+            - generic [ref=e134]: Clarity
+            - generic [ref=e136]: White-label fit
+            - generic [ref=e138]: Composite
+            - generic [ref=e140]: Composite slope
+            - generic [ref=e142]: Composite volatility
+            - generic [ref=e144]: Latest composite
+            - generic [ref=e146]: Latest design
+            - generic [ref=e148]: Latest branding
+            - generic [ref=e150]: Latest clarity
+            - generic [ref=e152]: Latest white-label
+        - generic [ref=e154]:
+          - generic [ref=e155]:
+            - heading "Snapshot heatmap" [level=2] [ref=e156]
+            - generic [ref=e157]: Rows are snapshots, columns are score channels
+          - generic [ref=e158]:
+            - generic [ref=e159]:
+              - generic [ref=e160]: Score heatmap
+              - generic [ref=e161]: Numeric only
+              - generic [ref=e162]: Snapshots 5
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - generic [ref=e166]: Design
+                - generic [ref=e167]: Branding
+                - generic [ref=e168]: Clarity
+                - generic [ref=e169]: White-label fit
+                - generic [ref=e170]: Composite
+              - generic [ref=e171]:
+                - generic [ref=e172]: 2026-03-26T13:04:01.626018+00:00 · 76
+                - generic [ref=e173]:
+                  - strong [ref=e174]: Design
+                  - text: "2.6"
+                - generic [ref=e175]:
+                  - strong [ref=e176]: Branding
+                  - text: "2.2"
+                - generic [ref=e177]:
+                  - strong [ref=e178]: Clarity
+                  - text: "2.9"
+                - generic [ref=e179]:
+                  - strong [ref=e180]: White-label fit
+                  - text: "2.9"
+                - generic [ref=e181]:
+                  - strong [ref=e182]: Composite
+                  - text: "2.6"
+              - generic [ref=e183]:
+                - generic [ref=e184]: 2026-03-26T13:41:24.920834+00:00 · 76
+                - generic [ref=e185]:
+                  - strong [ref=e186]: Design
+                  - text: "7.1"
+                - generic [ref=e187]:
+                  - strong [ref=e188]: Branding
+                  - text: "6.0"
+                - generic [ref=e189]:
+                  - strong [ref=e190]: Clarity
+                  - text: "8.1"
+                - generic [ref=e191]:
+                  - strong [ref=e192]: White-label fit
+                  - text: "8.1"
+                - generic [ref=e193]:
+                  - strong [ref=e194]: Composite
+                  - text: "7.3"
+              - generic [ref=e195]:
+                - generic [ref=e196]: 2026-03-26T18:06:46.970651+00:00 · 76
+                - generic [ref=e197]:
+                  - strong [ref=e198]: Design
+                  - text: "7.7"
+                - generic [ref=e199]:
+                  - strong [ref=e200]: Branding
+                  - text: "6.9"
+                - generic [ref=e201]:
+                  - strong [ref=e202]: Clarity
+                  - text: "8.8"
+                - generic [ref=e203]:
+                  - strong [ref=e204]: White-label fit
+                  - text: "7.4"
+                - generic [ref=e205]:
+                  - strong [ref=e206]: Composite
+                  - text: "7.7"
+              - generic [ref=e207]:
+                - generic [ref=e208]: 2026-03-26T20:07:23.682364+00:00 · 76
+                - generic [ref=e209]:
+                  - strong [ref=e210]: Design
+                  - text: "8.1"
+                - generic [ref=e211]:
+                  - strong [ref=e212]: Branding
+                  - text: "7.4"
+                - generic [ref=e213]:
+                  - strong [ref=e214]: Clarity
+                  - text: "9.1"
+                - generic [ref=e215]:
+                  - strong [ref=e216]: White-label fit
+                  - text: "6.9"
+                - generic [ref=e217]:
+                  - strong [ref=e218]: Composite
+                  - text: "7.9"
+              - generic [ref=e219]:
+                - generic [ref=e220]: 2026-03-26T20:07:23.682364+00:00 · 76
+                - generic [ref=e221]:
+                  - strong [ref=e222]: Design
+                  - text: "8.1"
+                - generic [ref=e223]:
+                  - strong [ref=e224]: Branding
+                  - text: "7.4"
+                - generic [ref=e225]:
+                  - strong [ref=e226]: Clarity
+                  - text: "9.1"
+                - generic [ref=e227]:
+                  - strong [ref=e228]: White-label fit
+                  - text: "6.9"
+                - generic [ref=e229]:
+                  - strong [ref=e230]: Composite
+                  - text: "7.9"
+    - generic [ref=e231]:
+      - generic [ref=e232]:
+        - heading "Pattern map" [level=2] [ref=e233]
+        - generic [ref=e234]: 3D state-space + correlation matrix
+      - generic [ref=e235]:
+        - generic [ref=e236]:
+          - generic [ref=e238]:
+            - generic [ref=e239]:
+              - strong [ref=e240]: X
+              - combobox "X" [ref=e241]:
+                - option "Latest composite" [selected]
+                - option "Latest design"
+                - option "Latest branding"
+                - option "Latest clarity"
+                - option "Latest white-label"
+                - option "Composite slope"
+                - option "Composite volatility"
+                - option "composite_delta"
+            - generic [ref=e242]:
+              - strong [ref=e243]: "Y"
+              - combobox "Y" [ref=e244]:
+                - option "Latest composite"
+                - option "Latest design"
+                - option "Latest branding" [selected]
+                - option "Latest clarity"
+                - option "Latest white-label"
+                - option "Composite slope"
+                - option "Composite volatility"
+                - option "composite_delta"
+            - generic [ref=e245]:
+              - strong [ref=e246]: Z
+              - combobox "Z" [ref=e247]:
+                - option "Latest composite"
+                - option "Latest design"
+                - option "Latest branding"
+                - option "Latest clarity" [selected]
+                - option "Latest white-label"
+                - option "Composite slope"
+                - option "Composite volatility"
+                - option "composite_delta"
+          - generic [ref=e249]:
+            - generic:
+              - generic:
+                - img
+                - generic [ref=e250]:
+                  - img
+                - img:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - generic: "0"
+                        - generic:
+                          - generic: "2"
+                        - generic:
+                          - generic: "4"
+                        - generic:
+                          - generic: "6"
+                        - generic:
+                          - generic: "8"
+                        - generic:
+                          - generic: "10"
+                      - generic:
+                        - generic:
+                          - generic: Composite
+                - generic [ref=e252]:
+                  - img [ref=e255] [cursor=pointer]
+                  - generic [ref=e257]:
+                    - img [ref=e259] [cursor=pointer]
+                    - img [ref=e262] [cursor=pointer]
+                    - img [ref=e265] [cursor=pointer]
+                    - img [ref=e268] [cursor=pointer]
+                  - generic [ref=e270]:
+                    - img [ref=e272] [cursor=pointer]
+                    - img [ref=e275] [cursor=pointer]
+                  - link "plotly-logomark" [ref=e278] [cursor=pointer]:
+                    - /url: https://plotly.com/
+                    - img "plotly-logomark" [ref=e279]
+                - img
+          - generic [ref=e292]:
+            - generic [ref=e293]: Marker size/color = composite
+            - generic [ref=e295]: "X: Latest composite"
+            - generic [ref=e297]: "Y: Latest branding"
+            - generic [ref=e299]: "Z: Latest clarity"
+        - generic [ref=e301]:
+          - generic [ref=e302]:
+            - heading "Metric correlations" [level=2] [ref=e303]
+            - generic [ref=e304]: Latest snapshot across all sites
+          - generic [ref=e305]:
+            - generic [ref=e306]:
+              - generic [ref=e307]: Metric matrix
+              - generic [ref=e308]: High/High 34
+              - generic [ref=e309]: High/Low 15
+              - generic [ref=e310]: Low/High 8
+              - generic [ref=e311]: Low/Low 19
+            - generic [ref=e312]:
+              - generic [ref=e313]:
+                - generic [ref=e315]: Design
+                - generic [ref=e316]: Branding
+                - generic [ref=e317]: Clarity
+                - generic [ref=e318]: White-label fit
+                - generic [ref=e319]: Composite
+              - generic [ref=e320]:
+                - generic [ref=e321]: Design
+                - strong [ref=e323]: "+1.00"
+                - strong [ref=e325]: "+0.83"
+                - strong [ref=e327]: "+0.53"
+                - strong [ref=e329]: "+0.16"
+                - strong [ref=e331]: "+0.94"
+              - generic [ref=e332]:
+                - generic [ref=e333]: Branding
+                - strong [ref=e335]: "+0.83"
+                - strong [ref=e337]: "+1.00"
+                - strong [ref=e339]: "+0.51"
+                - strong [ref=e341]: "-0.15"
+                - strong [ref=e343]: "+0.82"
+              - generic [ref=e344]:
+                - generic [ref=e345]: Clarity
+                - strong [ref=e347]: "+0.53"
+                - strong [ref=e349]: "+0.51"
+                - strong [ref=e351]: "+1.00"
+                - strong [ref=e353]: "-0.34"
+                - strong [ref=e355]: "+0.49"
+              - generic [ref=e356]:
+                - generic [ref=e357]: White-label fit
+                - strong [ref=e359]: "+0.16"
+                - strong [ref=e361]: "-0.15"
+                - strong [ref=e363]: "-0.34"
+                - strong [ref=e365]: "+1.00"
+                - strong [ref=e367]: "+0.36"
+              - generic [ref=e368]:
+                - generic [ref=e369]: Composite
+                - strong [ref=e371]: "+0.94"
+                - strong [ref=e373]: "+0.82"
+                - strong [ref=e375]: "+0.49"
+                - strong [ref=e377]: "+0.36"
+                - strong [ref=e379]: "+1.00"
+          - generic [ref=e380]: "Strongest correlations: Composite × Design: +0.94 · Branding × Design: +0.83 · Branding × Composite: +0.82"
+    - generic [ref=e381]:
+      - generic [ref=e382]:
+        - heading "Trend rails" [level=2] [ref=e383]
+        - generic [ref=e384]: 3D progress trails across snapshots
+      - generic [ref=e386]:
+        - generic:
+          - generic:
+            - img
+            - generic [ref=e387]:
+              - img
+            - img
+            - generic [ref=e389]:
+              - img [ref=e392] [cursor=pointer]
+              - generic [ref=e394]:
+                - img [ref=e396] [cursor=pointer]
+                - img [ref=e399] [cursor=pointer]
+                - img [ref=e402] [cursor=pointer]
+                - img [ref=e405] [cursor=pointer]
+              - generic [ref=e407]:
+                - img [ref=e409] [cursor=pointer]
+                - img [ref=e412] [cursor=pointer]
+              - link "plotly-logomark" [ref=e415] [cursor=pointer]:
+                - /url: https://plotly.com/
+                - img "plotly-logomark" [ref=e416]
+            - img
+      - generic [ref=e429]:
+        - generic [ref=e430]: Top 12 movers by Composite
+        - generic [ref=e432]: Drag to rotate
+        - generic [ref=e434]: Scroll to zoom
+    - generic [ref=e436]:
+      - generic [ref=e437]:
+        - generic [ref=e438]:
+          - heading "Biggest movers" [level=2] [ref=e439]
+          - generic [ref=e440]: First report vs latest report
+        - table [ref=e442]:
+          - rowgroup [ref=e443]:
+            - row "Slug Δ composite Δ design Δ branding Δ clarity Δ white-label" [ref=e444]:
+              - columnheader "Slug" [ref=e445]
+              - columnheader "Δ composite" [ref=e446]
+              - columnheader "Δ design" [ref=e447]
+              - columnheader "Δ branding" [ref=e448]
+              - columnheader "Δ clarity" [ref=e449]
+              - columnheader "Δ white-label" [ref=e450]
+          - rowgroup [ref=e451]:
+            - row "wedding +9.0 +9.0 +8.0 +10.0 +9.0" [ref=e452]:
+              - cell "wedding" [ref=e453]
+              - cell "+9.0" [ref=e454]
+              - cell "+9.0" [ref=e455]
+              - cell "+8.0" [ref=e456]
+              - cell "+10.0" [ref=e457]
+              - cell "+9.0" [ref=e458]
+            - row "sbdc-business-planning +9.0 +9.0 +9.0 +10.0 +8.0" [ref=e459]:
+              - cell "sbdc-business-planning" [ref=e460]
+              - cell "+9.0" [ref=e461]
+              - cell "+9.0" [ref=e462]
+              - cell "+9.0" [ref=e463]
+              - cell "+10.0" [ref=e464]
+              - cell "+8.0" [ref=e465]
+            - row "marina +9.0 +9.0 +9.0 +10.0 +8.0" [ref=e466]:
+              - cell "marina" [ref=e467]
+              - cell "+9.0" [ref=e468]
+              - cell "+9.0" [ref=e469]
+              - cell "+9.0" [ref=e470]
+              - cell "+10.0" [ref=e471]
+              - cell "+8.0" [ref=e472]
+            - row "boat-storage +9.0 +9.0 +9.0 +10.0 +8.0" [ref=e473]:
+              - cell "boat-storage" [ref=e474]
+              - cell "+9.0" [ref=e475]
+              - cell "+9.0" [ref=e476]
+              - cell "+9.0" [ref=e477]
+              - cell "+10.0" [ref=e478]
+              - cell "+8.0" [ref=e479]
+            - row "sbdc-support-tools +8.8 +9.0 +9.0 +9.0 +8.0" [ref=e480]:
+              - cell "sbdc-support-tools" [ref=e481]
+              - cell "+8.8" [ref=e482]
+              - cell "+9.0" [ref=e483]
+              - cell "+9.0" [ref=e484]
+              - cell "+9.0" [ref=e485]
+              - cell "+8.0" [ref=e486]
+            - row "sbdc-learning-modules +8.8 +9.0 +9.0 +10.0 +7.0" [ref=e487]:
+              - cell "sbdc-learning-modules" [ref=e488]
+              - cell "+8.8" [ref=e489]
+              - cell "+9.0" [ref=e490]
+              - cell "+9.0" [ref=e491]
+              - cell "+10.0" [ref=e492]
+              - cell "+7.0" [ref=e493]
+            - row "roofquote +8.8 +9.0 +9.0 +10.0 +7.0" [ref=e494]:
+              - cell "roofquote" [ref=e495]
+              - cell "+8.8" [ref=e496]
+              - cell "+9.0" [ref=e497]
+              - cell "+9.0" [ref=e498]
+              - cell "+10.0" [ref=e499]
+              - cell "+7.0" [ref=e500]
+            - row "rennick-market +8.8 +9.0 +9.0 +10.0 +7.0" [ref=e501]:
+              - cell "rennick-market" [ref=e502]
+              - cell "+8.8" [ref=e503]
+              - cell "+9.0" [ref=e504]
+              - cell "+9.0" [ref=e505]
+              - cell "+10.0" [ref=e506]
+              - cell "+7.0" [ref=e507]
+            - row "parcelvisor +8.8 +9.0 +9.0 +10.0 +7.0" [ref=e508]:
+              - cell "parcelvisor" [ref=e509]
+              - cell "+8.8" [ref=e510]
+              - cell "+9.0" [ref=e511]
+              - cell "+9.0" [ref=e512]
+              - cell "+10.0" [ref=e513]
+              - cell "+7.0" [ref=e514]
+            - row "historian-pro +8.8 +9.0 +9.0 +9.0 +8.0" [ref=e515]:
+              - cell "historian-pro" [ref=e516]
+              - cell "+8.8" [ref=e517]
+              - cell "+9.0" [ref=e518]
+              - cell "+9.0" [ref=e519]
+              - cell "+9.0" [ref=e520]
+              - cell "+8.0" [ref=e521]
+            - row "harvest +8.8 +8.0 +9.0 +9.0 +9.0" [ref=e522]:
+              - cell "harvest" [ref=e523]
+              - cell "+8.8" [ref=e524]
+              - cell "+8.0" [ref=e525]
+              - cell "+9.0" [ref=e526]
+              - cell "+9.0" [ref=e527]
+              - cell "+9.0" [ref=e528]
+            - row "farm-stand +8.8 +9.0 +8.0 +10.0 +8.0" [ref=e529]:
+              - cell "farm-stand" [ref=e530]
+              - cell "+8.8" [ref=e531]
+              - cell "+9.0" [ref=e532]
+              - cell "+8.0" [ref=e533]
+              - cell "+10.0" [ref=e534]
+              - cell "+8.0" [ref=e535]
+            - row "curbside +8.8 +9.0 +9.0 +10.0 +7.0" [ref=e536]:
+              - cell "curbside" [ref=e537]
+              - cell "+8.8" [ref=e538]
+              - cell "+9.0" [ref=e539]
+              - cell "+9.0" [ref=e540]
+              - cell "+10.0" [ref=e541]
+              - cell "+7.0" [ref=e542]
+            - row "aidflow +8.8 +9.0 +9.0 +10.0 +7.0" [ref=e543]:
+              - cell "aidflow" [ref=e544]
+              - cell "+8.8" [ref=e545]
+              - cell "+9.0" [ref=e546]
+              - cell "+9.0" [ref=e547]
+              - cell "+10.0" [ref=e548]
+              - cell "+7.0" [ref=e549]
+      - generic [ref=e550]:
+        - generic [ref=e551]:
+          - heading "Latest ranking" [level=2] [ref=e552]
+          - generic [ref=e553]: Sorted by latest composite score
+        - generic [ref=e554]:
+          - generic [ref=e555]:
+            - generic [ref=e556]: Slug
+            - generic [ref=e557]: Composite
+            - generic [ref=e558]: Design
+            - generic [ref=e559]: Branding
+            - generic [ref=e560]: Clarity
+            - generic [ref=e561]: White-label
+          - generic [ref=e562]:
+            - generic [ref=e563]: wedding
+            - generic [ref=e564]:
+              - text: "9.0"
+              - generic [ref=e565]: "+9.0"
+            - generic [ref=e566]: "9.0"
+            - generic [ref=e567]: "8.0"
+            - generic [ref=e568]: "10.0"
+            - generic [ref=e569]: "9.0"
+          - generic [ref=e570]:
+            - generic [ref=e571]: sbdc-business-planning
+            - generic [ref=e572]:
+              - text: "9.0"
+              - generic [ref=e573]: "+9.0"
+            - generic [ref=e574]: "9.0"
+            - generic [ref=e575]: "9.0"
+            - generic [ref=e576]: "10.0"
+            - generic [ref=e577]: "8.0"
+          - generic [ref=e578]:
+            - generic [ref=e579]: marina
+            - generic [ref=e580]:
+              - text: "9.0"
+              - generic [ref=e581]: "+9.0"
+            - generic [ref=e582]: "9.0"
+            - generic [ref=e583]: "9.0"
+            - generic [ref=e584]: "10.0"
+            - generic [ref=e585]: "8.0"
+          - generic [ref=e586]:
+            - generic [ref=e587]: boat-storage
+            - generic [ref=e588]:
+              - text: "9.0"
+              - generic [ref=e589]: "+9.0"
+            - generic [ref=e590]: "9.0"
+            - generic [ref=e591]: "9.0"
+            - generic [ref=e592]: "10.0"
+            - generic [ref=e593]: "8.0"
+          - generic [ref=e594]:
+            - generic [ref=e595]: eligibility-lite
+            - generic [ref=e596]:
+              - text: "9.0"
+              - generic [ref=e597]: "+0.8"
+            - generic [ref=e598]: "9.0"
+            - generic [ref=e599]: "9.0"
+            - generic [ref=e600]: "10.0"
+            - generic [ref=e601]: "8.0"
+          - generic [ref=e602]:
+            - generic [ref=e603]: eligibility
+            - generic [ref=e604]:
+              - text: "9.0"
+              - generic [ref=e605]: "+0.8"
+            - generic [ref=e606]: "9.0"
+            - generic [ref=e607]: "9.0"
+            - generic [ref=e608]: "10.0"
+            - generic [ref=e609]: "8.0"
+          - generic [ref=e610]:
+            - generic [ref=e611]: permits
+            - generic [ref=e612]:
+              - text: "9.0"
+              - generic [ref=e613]: "+0.3"
+            - generic [ref=e614]: "9.0"
+            - generic [ref=e615]: "9.0"
+            - generic [ref=e616]: "10.0"
+            - generic [ref=e617]: "8.0"
+          - generic [ref=e618]:
+            - generic [ref=e619]: sbdc-support-tools
+            - generic [ref=e620]:
+              - text: "8.8"
+              - generic [ref=e621]: "+8.8"
+            - generic [ref=e622]: "9.0"
+            - generic [ref=e623]: "9.0"
+            - generic [ref=e624]: "9.0"
+            - generic [ref=e625]: "8.0"
+          - generic [ref=e626]:
+            - generic [ref=e627]: sbdc-learning-modules
+            - generic [ref=e628]:
+              - text: "8.8"
+              - generic [ref=e629]: "+8.8"
+            - generic [ref=e630]: "9.0"
+            - generic [ref=e631]: "9.0"
+            - generic [ref=e632]: "10.0"
+            - generic [ref=e633]: "7.0"
+          - generic [ref=e634]:
+            - generic [ref=e635]: roofquote
+            - generic [ref=e636]:
+              - text: "8.8"
+              - generic [ref=e637]: "+8.8"
+            - generic [ref=e638]: "9.0"
+            - generic [ref=e639]: "9.0"
+            - generic [ref=e640]: "10.0"
+            - generic [ref=e641]: "7.0"
+          - generic [ref=e642]:
+            - generic [ref=e643]: rennick-market
+            - generic [ref=e644]:
+              - text: "8.8"
+              - generic [ref=e645]: "+8.8"
+            - generic [ref=e646]: "9.0"
+            - generic [ref=e647]: "9.0"
+            - generic [ref=e648]: "10.0"
+            - generic [ref=e649]: "7.0"
+          - generic [ref=e650]:
+            - generic [ref=e651]: parcelvisor
+            - generic [ref=e652]:
+              - text: "8.8"
+              - generic [ref=e653]: "+8.8"
+            - generic [ref=e654]: "9.0"
+            - generic [ref=e655]: "9.0"
+            - generic [ref=e656]: "10.0"
+            - generic [ref=e657]: "7.0"
+          - generic [ref=e658]:
+            - generic [ref=e659]: historian-pro
+            - generic [ref=e660]:
+              - text: "8.8"
+              - generic [ref=e661]: "+8.8"
+            - generic [ref=e662]: "9.0"
+            - generic [ref=e663]: "9.0"
+            - generic [ref=e664]: "9.0"
+            - generic [ref=e665]: "8.0"
+          - generic [ref=e666]:
+            - generic [ref=e667]: harvest
+            - generic [ref=e668]:
+              - text: "8.8"
+              - generic [ref=e669]: "+8.8"
+            - generic [ref=e670]: "8.0"
+            - generic [ref=e671]: "9.0"
+            - generic [ref=e672]: "9.0"
+            - generic [ref=e673]: "9.0"
+          - generic [ref=e674]:
+            - generic [ref=e675]: farm-stand
+            - generic [ref=e676]:
+              - text: "8.8"
+              - generic [ref=e677]: "+8.8"
+            - generic [ref=e678]: "9.0"
+            - generic [ref=e679]: "8.0"
+            - generic [ref=e680]: "10.0"
+            - generic [ref=e681]: "8.0"
+          - generic [ref=e682]:
+            - generic [ref=e683]: curbside
+            - generic [ref=e684]:
+              - text: "8.8"
+              - generic [ref=e685]: "+8.8"
+            - generic [ref=e686]: "9.0"
+            - generic [ref=e687]: "9.0"
+            - generic [ref=e688]: "10.0"
+            - generic [ref=e689]: "7.0"
+          - generic [ref=e690]:
+            - generic [ref=e691]: aidflow
+            - generic [ref=e692]:
+              - text: "8.8"
+              - generic [ref=e693]: "+8.8"
+            - generic [ref=e694]: "9.0"
+            - generic [ref=e695]: "9.0"
+            - generic [ref=e696]: "10.0"
+            - generic [ref=e697]: "7.0"
+          - generic [ref=e698]:
+            - generic [ref=e699]: hvac
+            - generic [ref=e700]:
+              - text: "8.8"
+              - generic [ref=e701]: "+1.8"
+            - generic [ref=e702]: "9.0"
+            - generic [ref=e703]: "9.0"
+            - generic [ref=e704]: "10.0"
+            - generic [ref=e705]: "7.0"
+          - generic [ref=e706]:
+            - generic [ref=e707]: dirt-quote
+            - generic [ref=e708]:
+              - text: "8.8"
+              - generic [ref=e709]: "+1.5"
+            - generic [ref=e710]: "9.0"
+            - generic [ref=e711]: "9.0"
+            - generic [ref=e712]: "10.0"
+            - generic [ref=e713]: "7.0"
+          - generic [ref=e714]:
+            - generic [ref=e715]: invest
+            - generic [ref=e716]:
+              - text: "8.8"
+              - generic [ref=e717]: "+0.3"
+            - generic [ref=e718]: "9.0"
+            - generic [ref=e719]: "9.0"
+            - generic [ref=e720]: "9.0"
+            - generic [ref=e721]: "8.0"
+    - generic [ref=e722]:
+      - generic [ref=e723]:
+        - heading "Snapshot list" [level=2] [ref=e724]
+        - generic [ref=e725]: Click to inspect a report
+      - generic [ref=e726]:
+        - generic [ref=e727] [cursor=pointer]:
+          - generic [ref=e728]:
+            - generic [ref=e729]: 2026-03-26T13:04:01.626018+00:00
+            - generic [ref=e730]: "76"
+          - generic [ref=e731]: .sitemap_screenshots_analysis_archive/20260326T131457Z/visual_analysis_report.json
+          - generic [ref=e732]: Branded 10 · Partial 6 · Unbranded 60
+        - generic [ref=e733] [cursor=pointer]:
+          - generic [ref=e734]:
+            - generic [ref=e735]: 2026-03-26T13:41:24.920834+00:00
+            - generic [ref=e736]: "76"
+          - generic [ref=e737]: .sitemap_screenshots_analysis_archive/20260326T140054Z/visual_analysis_report.json
+          - generic [ref=e738]: Branded 25 · Partial 27 · Unbranded 24
+        - generic [ref=e739] [cursor=pointer]:
+          - generic [ref=e740]:
+            - generic [ref=e741]: 2026-03-26T18:06:46.970651+00:00
+            - generic [ref=e742]: "76"
+          - generic [ref=e743]: .sitemap_screenshots_analysis_archive/20260326T183212Z/visual_analysis_report.json
+          - generic [ref=e744]: Branded 38 · Partial 22 · Unbranded 16
+        - generic [ref=e745] [cursor=pointer]:
+          - generic [ref=e746]:
+            - generic [ref=e747]: 2026-03-26T20:07:23.682364+00:00
+            - generic [ref=e748]: "76"
+          - generic [ref=e749]: .sitemap_screenshots_analysis_archive/20260326T202729Z/visual_analysis_report.json
+          - generic [ref=e750]: Branded 52 · Partial 11 · Unbranded 13
+        - generic [ref=e751] [cursor=pointer]:
+          - generic [ref=e752]:
+            - generic [ref=e753]: 2026-03-26T20:07:23.682364+00:00
+            - generic [ref=e754]: "76"
+          - generic [ref=e755]: sitemap_screenshots/visual_analysis_report.json
+          - generic [ref=e756]: Branded 52 · Partial 11 · Unbranded 13
+  - img [ref=e757]

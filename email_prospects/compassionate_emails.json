@@ -1,0 +1,41 @@
+{
+  "mvp": "compassionate",
+  "research_date": "2026-03-24",
+  "target_buyers": [
+    {
+      "rank": 1,
+      "organization": "Ducro Funeral Services",
+      "website": "https://www.ducro.com",
+      "why_target": "Primary target - Fifth-generation family-owned funeral home, oldest continuous family-owned firm in Ashtabula County since 1853. President/Owner is decision maker for adopting compassionate planning tools. Multiple locations in Ashtabula area with full-service operations including crematory.",
+      "contacts": [
+        {
+          "name": "J.P. Ducro IV",
+          "title": "President / Owner / Funeral Director",
+          "email": "jpducro@ducro.com",
+          "phone": "(440) 992-2191",
+          "notes": "Fifth-generation funeral director, family business leader since 1995. Primary decision maker for technology adoption."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "organization": "Ducro Funeral Services",
+      "website": "https://www.ducro.com",
+      "why_target": "Secondary contact at same target organization - Director of Operations handles day-to-day management and would be involved in implementation of legacy planning tools.",
+      "contacts": [
+        {
+          "name": "Stephanie M. Hall-Nesbitt",
+          "title": "Director of Operations / Funeral Director / Embalmer",
+          "email": "nesbitts@ducro.com",
+          "phone": "(440) 992-2191",
+          "notes": "Operations lead who would manage implementation of new planning tools. Also licensed funeral director and embalmer."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.ducro.com/about/our-staff",
+    "https://www.ducro.com/contact/contact-us",
+    "https://www.ashtabulacounty.us/directory.aspx?EID=275"
+  ]
+}

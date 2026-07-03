@@ -1,0 +1,88 @@
+{
+  "mvp": "ashtabula-fence",
+  "run_timestamp_utc": "2026-03-22T09:27:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Ashtabula Fence MVP (fence installation and services platform). Targets fence contractors, property owners, and municipalities in Ashtabula County and Northeast Ohio seeking fencing solutions for residential, commercial, and agricultural properties, including permit guidance and contractor matching.",
+  "leads": [
+    {
+      "organization": "Thomas Fence Co.",
+      "type": "Fence Contractor (50+ Years)",
+      "website": "https://thomasfence.com/",
+      "fit_rationale": "Family-owned fence contractor celebrating 50+ years serving Northeast Ohio and Northwest Pennsylvania. Offers both commercial and residential fencing. Digital platform would streamline their estimate requests, permit guidance for customers, and project scheduling across their 8-county service area.",
+      "source": "https://thomasfence.com/"
+    },
+    {
+      "organization": "Ashtabula Fence Co.",
+      "type": "Local Fence Contractor",
+      "website": "https://ashtabulafence.com/",
+      "fit_rationale": "Ashtabula-based fence company specializing in residential privacy fences, custom driveway gates, and repairs. Strong local reputation with excellent customer reviews. Platform would enhance their quote management and customer communication.",
+      "source": "https://ashtabulafence.com/"
+    },
+    {
+      "organization": "Ashtabula County Building Department",
+      "type": "County Permitting Authority",
+      "website": "https://www.ashtabulacounty.us/181/Building",
+      "fit_rationale": "Issues building permits for fence installations in unincorporated areas of Ashtabula County. Fence platform with integrated permit guidance would reduce inquiries and help residents understand zoning requirements before applying.",
+      "source": "https://www.ashtabulacounty.us/181/Building"
+    },
+    {
+      "organization": "City of Ashtabula Zoning Department",
+      "type": "Municipal Zoning Authority",
+      "website": "https://www.cityofashtabula.com/zoning",
+      "fit_rationale": "Issues zoning permits required before building permits for fence installations within city limits. Digital fence platform could include municipal zoning requirement lookups to streamline the permit process for residents.",
+      "source": "https://www.cityofashtabula.com/zoning"
+    },
+    {
+      "organization": "Property Management Companies (Ashtabula County)",
+      "type": "Rental Property Management",
+      "website": "https://www.ashtabulacounty.us/",
+      "fit_rationale": "Multi-property landlords and property management companies need fencing for tenant safety, pet containment, and property boundaries. Centralized fence contractor marketplace would simplify vendor management for portfolio-wide fencing projects.",
+      "source": "Local market research"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add fence type selector with visual examples (privacy, picket, chain-link, vinyl, wood).",
+    "Include property measurement tool integration for linear footage calculations.",
+    "Create permit requirement checker based on address/city/township location.",
+    "Add cost estimator with material and labor breakdowns.",
+    "Include contractor comparison tool with ratings, reviews, and portfolios.",
+    "Create project timeline tracker from quote to installation completion.",
+    "Add photo gallery of completed fence projects by neighborhood.",
+    "Include zoning regulation summaries for each municipality in Ashtabula County.",
+    "Create maintenance guides and seasonal care tips for different fence materials.",
+    "Add neighbor notification templates for shared fence line projects.",
+    "Include financing options or payment plan information.",
+    "Create referral program for existing customers."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Fence customers want to visualize options—poor photo galleries or lack of style examples hurt conversion.",
+      "Pricing transparency is important; hidden costs or unclear estimates frustrate users.",
+      "Mobile access critical for homeowners measuring yards and reviewing contractor profiles on-site."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "High (tentative)",
+    "reason": "Fence contractor platforms can be white-labeled for individual fencing companies, home improvement marketplaces, or property management portals with custom branding and contractor networks.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Thomas Fence Co. about digital transformation partnership.",
+    "Reach out to Ashtabula County Building Department about permit integration.",
+    "Survey local fence contractors about quoting and scheduling pain points.",
+    "Research Ohio line fence laws for agricultural property applications."
+  ],
+  "sources": [
+    "https://thomasfence.com/",
+    "https://ashtabulafence.com/",
+    "https://www.ashtabulacounty.us/181/Building",
+    "https://www.cityofashtabula.com/zoning",
+    "https://ashtabulatownship.com/zoning"
+  ]
+}

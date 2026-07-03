@@ -1,0 +1,76 @@
+- generic [ref=e3]:
+  - heading "EarthFlow Estimator" [level=1] [ref=e4]
+  - main [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - heading "EarthFlow Estimator" [level=2] [ref=e10]
+          - paragraph [ref=e11]: Professional site volume and labor calculator.
+        - generic [ref=e12]:
+          - heading "Job Site Location" [level=3] [ref=e13]:
+            - img [ref=e14]
+            - text: Job Site Location
+          - textbox "Enter site address or street..." [ref=e20]
+      - generic [ref=e21]:
+        - generic [ref=e23]:
+          - img [ref=e25]
+          - heading "Where is the job site?" [level=3] [ref=e28]
+          - paragraph [ref=e29]: Search for the site address to zoom in and start drawing the project area.
+          - textbox "Enter address..." [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic:
+              - generic [ref=e36]:
+                - button "Zoom in" [ref=e37] [cursor=pointer]: +
+                - button "Zoom out" [ref=e38] [cursor=pointer]: −
+              - generic [ref=e39]:
+                - link "Leaflet" [ref=e40] [cursor=pointer]:
+                  - /url: https://leafletjs.com
+                  - img [ref=e41]
+                  - text: Leaflet
+                - text: "| ©"
+                - link "Esri" [ref=e45] [cursor=pointer]:
+                  - /url: https://www.esri.com/
+          - button "Labels On" [ref=e47]:
+            - img [ref=e48]
+            - text: Labels On
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - heading "Project Scope" [level=3] [ref=e54]:
+            - img [ref=e55]
+            - text: Project Scope
+          - generic [ref=e59]:
+            - text: Operation Type
+            - generic [ref=e60]:
+              - button "Excavation" [ref=e61]
+              - button "Fill/Import" [ref=e62]
+              - button "Grading" [ref=e63]
+          - generic [ref=e64]:
+            - text: Depth/Height (inches)
+            - slider [ref=e65]: "12"
+            - generic [ref=e66]:
+              - generic [ref=e67]: 1"
+              - generic [ref=e68]: 12" (1 ft)
+              - generic [ref=e69]: 120"
+        - generic [ref=e70]:
+          - heading "Project Estimate" [level=3] [ref=e72]:
+            - img [ref=e73]
+            - text: Project Estimate
+          - generic [ref=e79]:
+            - generic [ref=e80]: $0
+            - generic [ref=e81]:
+              - generic [ref=e82]: 0 CY
+              - generic [ref=e83]:
+                - img [ref=e84]
+                - text: 0 hrs
+          - generic [ref=e87]:
+            - generic [ref=e88]:
+              - generic [ref=e89]: Area
+              - generic [ref=e90]: 0 sq ft
+            - generic [ref=e91]:
+              - generic [ref=e92]: Labor & Equipment
+              - generic [ref=e93]: $0
+            - generic [ref=e94]:
+              - generic [ref=e95]: Export & Disposal
+              - generic [ref=e96]: $0
+          - button "Generate Bid Proposal" [ref=e97]

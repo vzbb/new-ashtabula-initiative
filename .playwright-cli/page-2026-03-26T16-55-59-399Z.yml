@@ -1,0 +1,108 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e7]:
+        - paragraph [ref=e8]: Flawless Coating & Detailing
+        - img "Flawless Coating and Detailing" [ref=e9]
+        - heading "The vehicle preservation experts, now with a premium online consultation flow." [level=1] [ref=e10]
+      - paragraph [ref=e11]: A buyer-specific booking demo for Flawless that treats ceramic coating as a trust-led, high-ticket preservation service, not a generic detail appointment.
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - img [ref=e14]
+          - generic [ref=e17]: 20+ years of detailing experience
+        - generic [ref=e18]:
+          - img [ref=e19]
+          - generic [ref=e22]: 9+ years of ceramic coating expertise
+        - generic [ref=e23]:
+          - img [ref=e24]
+          - generic [ref=e27]: Premium vehicle preservation for Northeast Ohio
+      - generic [ref=e28]:
+        - img "Flawless Coating & Detailing ceramic coating workspace" [ref=e30]
+        - article [ref=e31]:
+          - generic [ref=e32]:
+            - heading "Flawless Elite Coating" [level=2] [ref=e33]
+            - generic [ref=e34]: $1,799-$2,099
+          - paragraph [ref=e35]: Full exterior detail, one-step paint correction, and premium long-term ceramic protection.
+        - article [ref=e36]:
+          - generic [ref=e37]:
+            - heading "Ceramic Coating Consultation" [level=2] [ref=e38]
+            - generic [ref=e39]: Custom quote
+          - paragraph [ref=e40]: Best fit for owners comparing coating tiers, paint condition, and maintenance expectations.
+        - article [ref=e41]:
+          - generic [ref=e42]:
+            - heading "Deep Clean + Paint Enhancement" [level=2] [ref=e43]
+            - generic [ref=e44]: From $799
+          - paragraph [ref=e45]: For vehicles that need correction, gloss recovery, and a clear path to long-term protection.
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Premium intake
+          - heading "Build a consultation-ready confirmation." [level=2] [ref=e50]
+        - generic [ref=e51]: Northeast Ohio
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: Service package
+          - combobox "Service package" [ref=e55]:
+            - option "Flawless Elite Coating" [selected]
+            - option "Ceramic Coating Consultation"
+            - option "Deep Clean + Paint Enhancement"
+        - generic [ref=e56]:
+          - generic [ref=e57]: Vehicle type
+          - combobox "Vehicle type" [ref=e58]:
+            - option "Coupe / Sedan"
+            - option "SUV / Crossover" [selected]
+            - option "Truck"
+            - option "Performance / Exotic"
+        - generic [ref=e59]:
+          - generic [ref=e60]: Preferred date
+          - textbox "Preferred date" [ref=e61]
+        - generic [ref=e62]:
+          - generic [ref=e63]: Paint condition
+          - combobox "Paint condition" [ref=e64]:
+            - option "Already well-kept, wants protection" [selected]
+            - option "Light swirl marks and daily-use wear"
+            - option "Needs correction before coating"
+            - option "Unsure and wants expert guidance"
+        - generic [ref=e65]:
+          - generic [ref=e66]: Owner notes
+          - textbox "Owner notes" [ref=e67]:
+            - /placeholder: Describe the vehicle, finish goals, current issues, or protection priorities.
+            - text: Black SUV, garage-kept, looking for long-term gloss and easier wash maintenance before summer.
+      - generic [ref=e68]:
+        - img [ref=e69]
+        - generic [ref=e72]:
+          - strong [ref=e73]: What makes this Flawless-specific
+          - paragraph [ref=e74]: The confirmation emphasizes ceramic coating expertise, paint-condition review, and photo-led quoting instead of sounding like a basic wash reminder.
+      - generic [ref=e75]:
+        - button "Generate confirmation" [ref=e76]:
+          - img [ref=e77]
+          - generic [ref=e80]: Generate confirmation
+        - button "Copy output" [disabled] [ref=e81]:
+          - img [ref=e82]
+          - generic [ref=e85]: Copy output
+  - generic [ref=e86]:
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - paragraph [ref=e89]: Reply preview
+        - heading "What Jonathan could send after a high-value inquiry." [level=2] [ref=e90]
+      - generic [ref=e91]: Consultation tone
+    - generic [ref=e92]:
+      - text: SAMPLE
+      - paragraph [ref=e93]: Thanks for reaching out to Flawless Coating & Detailing. Based on your vehicle and goals, the Flawless Elite Coating service looks like the right starting point. Jonathan will review your paint condition, confirm the best protection path, and make sure you understand exactly what prep, correction, and coating coverage your vehicle needs before locking in the appointment. If you send a few photos beforehand, we can make your consultation more precise and keep the process moving.
+  - generic [ref=e94]:
+    - article [ref=e95]:
+      - img [ref=e97]
+      - heading "Consultation-first booking" [level=3] [ref=e101]
+      - paragraph [ref=e102]: Built for premium coating work where trust, prep, and vehicle condition matter more than grabbing the cheapest slot.
+    - article [ref=e103]:
+      - img [ref=e105]
+      - heading "Jonathan-style communication" [level=3] [ref=e109]
+      - paragraph [ref=e110]: The confirmation flow is written to feel direct, confident, and expertise-driven instead of sounding like a generic auto shop.
+    - article [ref=e111]:
+      - img [ref=e113]
+      - heading "Higher-ticket service framing" [level=3] [ref=e117]
+      - paragraph [ref=e118]: Elite coating, correction, and preservation packages are positioned as premium outcomes, not commodity detail add-ons.
+  - contentinfo [ref=e119]:
+    - generic [ref=e120]: Flawless Coating & Detailing
+    - generic [ref=e121]: The Vehicle Preservation Experts
+    - generic [ref=e122]: Geneva, Ohio • serves Northeast Ohio

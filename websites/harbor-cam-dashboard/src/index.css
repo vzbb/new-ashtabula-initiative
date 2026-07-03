@@ -1,0 +1,21 @@
+:root {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #24364a;
+  background: #f5f7fa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body,
+#root {
+  min-height: 100vh;
+}

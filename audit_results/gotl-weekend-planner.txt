@@ -1,0 +1,1 @@
+SITE: gotl-weekend-planner | CENTERING: 6 | BRANDING: 8 | LOREM: False | NOTES: The site uses a custom logo and professional fonts. It integrates real business names and offers a functional itinerary builder. The main content appears contained and aligned. No "Lorem Ipsum" was found.

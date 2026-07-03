@@ -1,0 +1,48 @@
+{
+  "mvp": "sbdc-business-planning",
+  "mvp_slug": "sbdc-business-planning",
+  "run_timestamp_utc": "2026-03-24T19:07:00Z",
+  "lead_source": "Lead research JSON: /home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/sbdc-business-planning.json",
+  "research_notes": "Target Ohio SBDC network and regional SBDC centers that deliver business planning services and workshops.",
+  "emails_found": [
+    {
+      "lead_name": "Ohio Small Business Development Centers (State Network)",
+      "lead_type": "State SBDC network",
+      "website": "https://www.ohiosbdc.net/",
+      "email": "SBDCReports@development.ohio.gov",
+      "email_source": "https://www.ohiosbdc.net/privacy-policy/",
+      "confidence": "HIGH",
+      "confidence_reason": "Official state government email domain (development.ohio.gov) found on privacy policy page",
+      "fit_rationale": "Statewide network providing business advising and planning; centralized planning tools could scale coaching and standardize plan outputs.",
+      "outreach_priority": 1,
+      "outreach_notes": "Primary contact for statewide SBDC initiatives. Best for partnership discussions about business planning tools adoption across the network."
+    },
+    {
+      "lead_name": "Ohio SBDC at Columbus State (Central Ohio)",
+      "lead_type": "Regional SBDC center",
+      "website": "https://sbdccolumbus.com/",
+      "email": "sbdc@cscc.edu",
+      "email_source": "https://clients.ohiosbdc.ohio.gov/center.aspx and Facebook page",
+      "confidence": "HIGH",
+      "confidence_reason": "Official Columbus State Community College email domain (cscc.edu), confirmed on multiple sources",
+      "fit_rationale": "Provides business advising and startup guidance; a business-plan builder would complement client intake and coaching.",
+      "outreach_priority": 2,
+      "outreach_notes": "Regional hub serving Central Ohio. Contact for piloting business planning tools with direct advisor integration.",
+      "alternate_contact": {
+        "phone": "614-287-5294",
+        "address": "Columbus State Community College, 112 Jefferson Ave., Suite 251, Columbus, Ohio 43215",
+        "director": "Mike Bowers"
+      }
+    }
+  ],
+  "emails_total": 2,
+  "emails_high_confidence": 2,
+  "emails_medium_confidence": 0,
+  "emails_low_confidence": 0,
+  "next_actions": [
+    "Draft outreach email to SBDCReports@development.ohio.gov emphasizing statewide scalability",
+    "Prepare demo of business planning MVP highlighting advisor workflow integration",
+    "Schedule follow-up with Columbus State SBDC for pilot program discussion"
+  ],
+  "researcher_notes": "Both leads are high-quality, official SBDC channels. State office for strategic partnership, Columbus State for regional pilot. All emails verified through official government/edu sources."
+}

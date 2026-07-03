@@ -1,0 +1,2 @@
+[GET] http://127.0.0.1:4173/images/notes-and-prints-logo.png => [404] Not Found
+[GET] http://127.0.0.1:4173/images/notes-and-prints-og.jpg => [404] Not Found

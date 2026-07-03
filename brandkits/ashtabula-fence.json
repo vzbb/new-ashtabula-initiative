@@ -1,0 +1,84 @@
+{
+  "mvp": "ashtabula-fence",
+  "generated_at": "2026-03-22T10:26:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/ashtabula-fence.json",
+  "research_sources": [
+    "https://thomasfence.com/",
+    "https://ashtabulafence.com/",
+    "https://www.ashtabulacounty.us/181/Building"
+  ],
+  "target_buyer": {
+    "organization": "Thomas Fence Co.",
+    "type": "Fence Contractor (50+ Years)",
+    "website": "https://thomasfence.com/",
+    "why_top_candidate": "Family-owned for 50 years, serves 8 counties (Lake, Geauga, Ashtabula, Trumbull, Mahoning, Portage, Stark, Cuyahoga) plus northern PA. No subcontractors — all employees. Has own welding/fabrication shop. Strong established brand with clear service areas.",
+    "fit_score": 92
+  },
+  "actual_brand_research": {
+    "observed_colors": {
+      "primary_green": "#228B22 (forest green header)",
+      "dark_green": "#006400 (darker green accents)",
+      "background": "#FFFFFF (white)",
+      "text": "#333333 (dark gray)",
+      "accent_button": "#4CAF50 (green CTA button)"
+    },
+    "existing_brand_name": "Thomas Fence Co.",
+    "logo_observed": "Circular fence graphic with 'THOMAS FENCE CO' text, established/traditional styling",
+    "key_services": [
+      "Residential fencing (wood, vinyl, aluminum, chain link)",
+      "Commercial and industrial fencing",
+      "Custom swing gates, cantilever gates, overhead slide gates",
+      "Custom dog kennels",
+      "Welding and fabrication (in-house shop)"
+    ],
+    "service_area": "Lake, Geauga, Ashtabula, Trumbull, Mahoning, Portage, Stark, Cuyahoga counties (OH) + northern Pennsylvania",
+    "company_tagline_observed": "Fence Company Ashtabula Ohio / Fence Contractor Northeast Ohio",
+    "key_differentiators_from_site": [
+      "50 years family owned and operated",
+      "Fully insured and bonded",
+      "No subcontractors — employees only",
+      "Own welding and fabrication shop",
+      "Design, build and install full line of fencing"
+    ],
+    "visual_style": "Traditional, established, professional, green color scheme conveys outdoor/nature connection, American flag in header photo shows patriotism/local pride"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "50 Years of Fencing Excellence — Now With Instant Online Quotes",
+    "positioning": "The digital extension of Thomas Fence Co.'s 50-year legacy — bringing their no-subcontractor, employee-only craftsmanship to modern online scheduling and quoting across 8 Ohio counties and northern PA.",
+    "color_palette_derived_from_research": {
+      "primary": "#228B22",
+      "dark_green": "#006400",
+      "accent": "#4CAF50",
+      "background": "#FFFFFF",
+      "text": "#333333",
+      "light_gray": "#F5F5F5"
+    },
+    "typography_recommendation": {
+      "heading_font": "Use existing Thomas Fence brand fonts (maintain 50-year brand equity)",
+      "body_font": "Clean, readable sans-serif"
+    },
+    "mood_keywords_from_research": ["established", "trustworthy", "family-owned", "professional", "local", "craftsmanship"],
+    "visual_direction": {
+      "hero_image_concept": "Aerial shot of completed fence project (like on current site) with service area map overlay showing 8 counties",
+      "color_scheme": "Maintain existing green/white established brand colors",
+      "photography_style": "Professional fence installation photos, crew at work, completed projects, American flag element for local pride"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "MUST use actual Thomas Fence green colors (#228B22) and existing logo — do not invent new branding",
+    "key_features_needed": [
+      "Fence type selector matching Thomas Fence offerings (wood, vinyl, aluminum, chain link)",
+      "Service area validator (8 counties + PA)",
+      "Custom gate/kennel inquiry form for fabrication shop",
+      "Residential vs commercial/industrial selector",
+      "Property line/permit guidance (integrate with County Building Dept)"
+    ],
+    "differentiators_based_on_research": [
+      "50-year legacy brand",
+      "No-subcontractor promise (employees only)",
+      "In-house welding/fabrication capabilities",
+      "8-county service area coverage"
+    ]
+  }
+}

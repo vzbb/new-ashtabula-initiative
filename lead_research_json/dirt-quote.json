@@ -1,0 +1,94 @@
+{
+  "mvp": "dirt-quote",
+  "run_timestamp_utc": "2026-03-22T11:20:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "Instant Dirt Quote is a generic lead-generation MVP targeting excavation, topsoil, and fill dirt contractors in Ashtabula County. Research identified 5 active local/regional businesses that offer dirt hauling, topsoil delivery, and excavation services. The MVP provides instant quoting functionality which aligns with these companies' customer acquisition needs. Brand fit is strong for white-label deployment across any of these contractors.",
+  "leads": [
+    {
+      "name": "Brockway's Topsoil",
+      "type": "Topsoil & Fill Dirt Delivery",
+      "website": "https://www.brockwaystopsoil.com/",
+      "fit_rationale": "Over 20 years in business serving Ashtabula County and northeast Ohio. Specializes in topsoil and fill dirt delivery to landscapers, homeowners, and contractors. The 'Instant Dirt Quote' MVP aligns perfectly with their delivery-based business model. Small local operator that would benefit from online quoting automation.",
+      "source": "web_search - Brockway's Topsoil"
+    },
+    {
+      "name": "Simak Trucking & Excavating, Inc.",
+      "type": "Aggregate Hauling & Excavation",
+      "website": "https://www.simaktruckinginc.com/",
+      "fit_rationale": "Family-owned since 1956 (3 generations), based in North Kingsville, OH and actively serves Ashtabula County. Offers aggregate hauling, excavation, and materials trucking. Established reputation with commercial and residential customers. Their scale and service area make them ideal for a digital quoting tool.",
+      "source": "SearXNG search results + website crawl"
+    },
+    {
+      "name": "Brobst Earthworks, LTD",
+      "type": "Excavation & Demolition",
+      "website": "https://brobstearthworks.com/",
+      "fit_rationale": "Locally owned and operated out of Ashtabula, Ohio. Provides excavation, demolition, and land projects with fill dirt services (mentioned in customer testimonials). Young company with modern approach - ideal candidate for AI-powered quoting tools. Offers free estimates which could be automated.",
+      "source": "SearXNG + website crawl"
+    },
+    {
+      "name": "N&C Excavating",
+      "type": "Excavation & Site Preparation",
+      "website": "https://ncexcavating.com/",
+      "fit_rationale": "Locally owned company serving Ashtabula County among others. Offers land clearing, site preparation, grading, and excavation for homeowners and contractors. Military/law enforcement ownership background suggests discipline and interest in efficient systems. Operates across multiple counties in Northeast Ohio.",
+      "source": "Brave web search + website crawl"
+    },
+    {
+      "name": "Bull Moose Aggregates and Trucking LLC",
+      "type": "Aggregate Delivery & Trucking",
+      "website": "https://bullmooseagg.com/",
+      "fit_rationale": "Serves Lake, Geauga, Ashtabula, and Trumbull Counties. Offers gravel, stone, sand, and aggregate delivery. Has detailed material calculators on their website showing they understand the value of instant estimation tools. Active since 2020 with competitive delivery pricing ($40-$100 range).",      
+      "source": "Brave web search + website crawl"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_state": "The 'Instant Dirt Quote' MVP is a generic, white-label-ready tool with minimal branding. It does not represent a specific existing business.",
+    "visual_design_score": 6,
+    "brand_consistency": "Minimal - uses generic utility-focused design",
+    "white_label_readiness": "High - the tool is designed for rapid deployment to any excavation or aggregate delivery business",
+    "target_buyer_alignment": "The tool aligns well with small-to-mid-sized excavation, topsoil, and aggregate delivery businesses in Ashtabula County who need customer acquisition tools"
+  },
+  "site_improvements": [
+    {
+      "priority": "high",
+      "recommendation": "Add specific contractor branding (logo, company name) to replace generic placeholder",
+      "impact": "Transforms from template to functional business asset"
+    },
+    {
+      "priority": "high", 
+      "recommendation": "Implement actual quote calculation logic based on cubic yards/tonnage pricing",
+      "impact": "Makes the tool functional for real customer use"
+    },
+    {
+      "priority": "medium",
+      "recommendation": "Add service area map showing Ashtabula County delivery zones",
+      "impact": "Increases local relevance and conversion"
+    },
+    {
+      "priority": "medium",
+      "recommendation": "Include material type selection (fill dirt, topsoil, gravel) with pricing tiers",
+      "impact": "Matches actual business needs of identified leads"
+    }
+  ],
+  "aesthetics_and_layout_notes": {
+    "overall_design": "Clean, functional, card-based layout typical of lead-gen tools",
+    "color_scheme": "Professional but generic - suitable for construction/earthworks industry",
+    "mobile_fitness": "Appears responsive - important for contractors checking quotes in the field",
+    "trust_signals": "Should add license/insurance verification and customer testimonials for production use"
+  },
+  "whitelabel_potential": {
+    "rating": "excellent",
+    "reasoning": "The tool is a generic utility with no specific brand identity. Can be rapidly deployed to any of the 5 identified leads or other regional contractors. The instant quoting concept has universal appeal in the aggregate/excavation industry where customers frequently need quick estimates.",
+    "ease_of_redeployment": "High - swap logo, company name, contact info, and adjust pricing calculation for target business"
+  },
+  "action_next": "1. Select target contractor from leads list. 2. Customize branding with their assets. 3. Implement cubic yard/tonnage calculation logic. 4. Deploy for customer testing. Recommended first target: Brockway's Topsoil (established local presence, clear delivery focus) or Brobst Earthworks (local Ashtabula business, newer/tech-friendly).",
+  "sources": [
+    "Brockway's Topsoil - https://www.brockwaystopsoil.com/",
+    "Simak Trucking & Excavating - https://www.simaktruckinginc.com/",
+    "Brobst Earthworks - https://brobstearthworks.com/",
+    "N&C Excavating - https://ncexcavating.com/",
+    "Bull Moose Aggregates - https://bullmooseagg.com/",
+    "Yelp Excavation Services Ashtabula County",
+    "Better Business Bureau - Excavating Contractors Ashtabula OH",
+    "Angi/Angie's List - Excavation pros Ashtabula"
+  ]
+}

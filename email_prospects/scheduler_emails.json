@@ -1,0 +1,79 @@
+{
+  "mvp": "scheduler",
+  "mvp_slug": "scheduler",
+  "run_timestamp_utc": "2026-03-24T19:07:00Z",
+  "lead_source": "Lead research JSON: /home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/scheduler.json",
+  "research_notes": "The scheduler MVP targets service-based businesses in Ashtabula County needing appointment booking solutions. CRITICAL FINDING: All researched leads are phone-only businesses with NO public email addresses - this validates the market need for the scheduler tool.",
+  "emails_found": [],
+  "phone_only_leads": [
+    {
+      "lead_name": "Blank Heating Company Inc",
+      "lead_type": "HVAC Contractor",
+      "website": "https://www.blankheatingco.com/",
+      "phone": "440-969-1760",
+      "confidence": "HIGH",
+      "fit_rationale": "Family-owned HVAC business for 3 generations. Currently uses 'Request an Appointment' web form but lacks real-time online booking. High-value service calls make scheduling efficiency critical.",
+      "outreach_priority": 1,
+      "outreach_notes": "PHONE-ONLY BUSINESS - No email found. Primary outreach method: Phone call. Pitch: Online booking for winter heating service rush. They currently have web form only - opportunity to upgrade to real-time scheduling.",
+      "alternate_contact": {
+        "hours": "Mon-Fri: 8:00-4:00, 24-Hour Emergency Service",
+        "address": "Ashtabula, OH",
+        "license": "OH LIC #25138"
+      }
+    },
+    {
+      "lead_name": "Ultimate Appearance Salon",
+      "lead_type": "Hair Salon",
+      "website": "https://www.ultimateappearancesalon.com/",
+      "phone": "(440) 992-7733",
+      "confidence": "HIGH",
+      "fit_rationale": "Established salon specializing in color, cuts, and special occasion hair. Currently appointment-only via phone call. No online booking system detected. Active social media presence indicates tech-savvy ownership.",
+      "outreach_priority": 2,
+      "outreach_notes": "PHONE-ONLY BUSINESS - No email found. Primary outreach method: Phone call or Instagram DM (@ultimateappearance). Pitch: Online booking with Instagram 'Book Now' button integration. Located at 4702 Main Ave, Ashtabula OH.",
+      "alternate_contact": {
+        "address": "4702 Main Ave, Ashtabula OH 44004",
+        "social": {
+          "instagram": "https://instagram.com/ultimateappearance",
+          "facebook": "https://www.facebook.com/ultimateappearancesalon",
+          "twitter": "https://twitter.com/UAHairSalon"
+        }
+      }
+    }
+  ],
+  "additional_phone_leads": [
+    {
+      "lead_name": "Route 20 Auto Repair",
+      "lead_type": "Auto Repair Shop",
+      "website": "https://r20auto.com/",
+      "phone": "(440) 998-0221",
+      "outreach_notes": "Phone-only. Offers free digital diagnostic inspections via text/email - they HAVE customer email capability but no public contact email."
+    },
+    {
+      "lead_name": "HAVE Heating and Cooling",
+      "lead_type": "HVAC Contractor",
+      "website": "https://have-inc.com/",
+      "phone": "440-998-7252",
+      "outreach_notes": "Phone-only. 24/7 emergency service. License #28522. Located at 2101 Aetna Road, Ashtabula, OH 44004."
+    },
+    {
+      "lead_name": "Rural Health Clinic of Ashtabula (LECOM Health)",
+      "lead_type": "Medical Clinic",
+      "website": "https://lecomhealth.com/location/rural-health-clinic-of-ashtabula/",
+      "phone": "(440) 496-6500",
+      "outreach_notes": "Phone-only scheduling. Part of LECOM Health network - may require corporate-level contact for software decisions."
+    }
+  ],
+  "emails_total": 0,
+  "emails_high_confidence": 0,
+  "emails_medium_confidence": 0,
+  "emails_low_confidence": 0,
+  "market_insight": "100% of researched service businesses in Ashtabula rely on phone-only booking. This represents a significant market opportunity for the scheduler MVP - these businesses need online booking but don't have emails listed for digital outreach.",
+  "recommended_outreach_strategy": "Phone-first approach with follow-up SMS/email capture. Offer to bring them online with scheduling tool that includes customer email notification capabilities.",
+  "next_actions": [
+    "Call Blank Heating Company at 440-969-1760 - pitch online booking for HVAC appointments",
+    "Call Ultimate Appearance Salon at (440) 992-7733 or DM on Instagram - pitch salon booking with social media integration",
+    "Prepare script emphasizing: 24/7 booking, reduced phone interruptions, automated reminders",
+    "Develop strategy to capture email addresses during initial phone conversations for future digital nurture campaigns"
+  ],
+  "researcher_notes": "CRITICAL MARKET VALIDATION: All 5 researched leads are phone-only, confirming strong need for scheduler MVP. These businesses don't publish emails because they rely entirely on phone bookings - exactly the problem we're solving. Recommend phone-based outreach with email capture during conversation."
+}

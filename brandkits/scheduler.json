@@ -1,0 +1,143 @@
+{
+  "mvp": "scheduler",
+  "generated_at": "2026-03-23T01:50:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/scheduler.json",
+  "research_sources": [
+    "https://www.blankheatingco.com/",
+    "https://www.ultimateappearancesalon.com/"
+  ],
+  "target_buyer_1": {
+    "organization": "Blank Heating Company Inc",
+    "type": "HVAC Contractor",
+    "website": "https://www.blankheatingco.com/",
+    "phone": "440-969-1760",
+    "location": "Ashtabula, OH",
+    "why_top_candidate": "Family-owned HVAC business for three generations with OH LIC #25138. Currently uses 'Request an Appointment' web form but lacks real-time online booking. Services: AC Installation & Repair, Heating Installation & Repair, Zoning, Humidifier/Dehumidifier Installations, System Check-Ups, Air Purification. Differentiators: FREE in-home estimates, NATE-certified technicians, family-owned & operated, honest & dependable. High-value service calls make scheduling efficiency critical. Strong local reputation with competitive pricing and payment options. Currently relies on phone booking (440-969-1760).",
+    "fit_score": 93
+  },
+  "target_buyer_2": {
+    "organization": "Ultimate Appearance Salon",
+    "type": "Hair Salon",
+    "website": "https://www.ultimateappearancesalon.com/",
+    "phone": "(440) 992-7733",
+    "address": "4702 Main Ave, Ashtabula OH 44004",
+    "why_top_candidate": "Professional hair salon offering top quality salon services. Currently appointment-only via phone call - no online booking system detected. Active social media presence: Twitter (@UAHairSalon), Facebook, Instagram (@ultimateappearance), Yelp. Gift cards available online through Phorest. Tech-savvy ownership that would adopt scheduling software. Services: wide variety of professional hair services, experienced staff, quality and value focus. Location designed for enjoyable experience. Currently relies on phone: (440) 992-7733.",
+    "fit_score": 90
+  },
+  "actual_brand_research": {
+    "blank_heating": {
+      "name": "Blank Heating Company Inc",
+      "positioning": "A reputable HVAC contractor in Ashtabula, OH",
+      "license": "OH LIC #25138",
+      "heritage": "Honest, dependable, family run business for three generations",
+      "phone": "440-969-1760",
+      "services": [
+        "AC Installation & Repair",
+        "Heating Installation & Repair",
+        "Zoning",
+        "Humidifier & Dehumidifier Installations",
+        "System Check-Ups",
+        "Air Purification"
+      ],
+      "differentiators": [
+        "FREE in-home estimates",
+        "NATE-certified technicians",
+        "Family-owned & operated",
+        "Honest & dependable",
+        "Many payment options",
+        "Competitive pricing"
+      ],
+      "brand_values": [
+        "Treat customers like family",
+        "Review all equipment options in detail",
+        "Answer all questions",
+        "Deadline-oriented",
+        "Put indoor comfort above all else"
+      ],
+      "products": "Luxaire options installed by pros",
+      "current_booking": "Request an Appointment web form (not real-time)",
+      "visual_style": "Family-owned, trustworthy, professional HVAC, three generations"
+    },
+    "ultimate_appearance": {
+      "name": "Ultimate Appearance Salon",
+      "positioning": "Professional Hair Salon - Experience Excellence in Salon Service!",
+      "address": "4702 Main Ave, Ashtabula OH 44004",
+      "phone": "(440) 992-7733",
+      "social_media": {
+        "twitter": "@UAHairSalon",
+        "facebook": "ultimateappearancesalon",
+        "instagram": "@ultimateappearance",
+        "yelp": "ultimate-appearance-ashtabula"
+      },
+      "services": [
+        "Wide variety of top quality salon services",
+        "Professional hair services",
+        "Color services",
+        "Cuts",
+        "Special occasion hair"
+      ],
+      "value_proposition": [
+        "Experienced staff",
+        "Help determine best services for your needs",
+        "Quality and value you expect from a professional hair salon",
+        "Location designed to make your experience enjoyable"
+      ],
+      "gift_cards": "Available online through Phorest",
+      "current_booking": "Call for Appointment (phone only)",
+      "visual_style": "Professional salon, excellence in service, social media active, modern"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Book Appointments. Save Time.",
+    "positioning": "The scheduling platform for Ashtabula County service businesses — helping Blank Heating Company manage HVAC appointments and Ultimate Appearance Salon streamline salon bookings with 24/7 online scheduling.",
+    "color_palette_derived_from_research": {
+      "primary": "#2B6CB0",
+      "accent": "#ED8936",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#4A5568"
+    },
+    "typography_recommendation": {
+      "heading_font": "Clean professional sans-serif",
+      "body_font": "Highly readable sans-serif"
+    },
+    "mood_keywords_from_research": ["professional", "dependable", "family-owned", "excellence", "quality"],
+    "visual_direction": {
+      "hero_image_concept": "Split view: HVAC technician scheduling appointment and salon stylist checking calendar",
+      "color_scheme": "Professional blue with warm orange accents (trust + energy)",
+      "photography_style": "Ashtabula service professionals, HVAC equipment, salon environment, appointment booking interfaces"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Blank Heating's family-owned trustworthiness and Ultimate Appearance's excellence focus",
+    "key_features_needed": [
+      "Real-time online booking (not just request forms)",
+      "24/7 appointment scheduling",
+      "SMS notification capability for reminders",
+      "Mobile-responsive for field technicians",
+      "Recurring appointments for maintenance",
+      "Service type configuration",
+      "Operating hours customization",
+      "Instagram/Facebook 'Book Now' button integration",
+      "Gift card integration (Ultimate Appearance uses Phorest)"
+    ],
+    "differentiators_based_on_research": [
+      "Blank Heating: Three generations family-owned",
+      "Blank Heating: OH LIC #25138",
+      "Blank Heating: NATE-certified technicians",
+      "Blank Heating: FREE in-home estimates",
+      "Ultimate Appearance: Active social media presence",
+      "Ultimate Appearance: Gift cards via Phorest",
+      "Ultimate Appearance: Professional excellence focus",
+      "Both: Ashtabula-based businesses",
+      "Both: Currently phone-only booking"
+    ],
+    "outreach_strategy": [
+      "Contact Blank Heating (440-969-1760) about online booking for winter heating rush",
+      "Demo scheduler to Ultimate Appearance with Instagram 'Book Now' integration",
+      "Highlight 24/7 booking capability vs current phone-only",
+      "Propose SMS reminders to reduce no-shows"
+    ]
+  }
+}

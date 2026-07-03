@@ -1,0 +1,157 @@
+{
+  "mvp": "cut-custom",
+  "mvp_title": "Farm to Table - Custom Livestock Cut Sheet Tool",
+  "research_timestamp_utc": "2026-03-24T08:22:00Z",
+  "top_target_buyers": [
+    {
+      "rank": 1,
+      "business_name": "Trumbull Locker Plant",
+      "business_type": "Meat Locker & Processing Facility",
+      "location": "3393 State Route 534, Rock Creek, OH 44084",
+      "website": "https://trumbull-locker.com/",
+      "phone": "(440) 474-4631",
+      "decision_makers": [
+        {
+          "name": "Mark Kovacic",
+          "title": "Owner",
+          "notes": "Sole owner since 2020 (brother Chris Kovacic passed away in June 2020). Mark and Chris co-owned the business for 30+ years before that. Mark Kovacic Jr. also manages the facility."
+        },
+        {
+          "name": "Mark Kovacic Jr.",
+          "title": "Manager",
+          "notes": "Manages day-to-day operations at the facility."
+        }
+      ],
+      "email_addresses": [
+        {
+          "email": "info@trumbull-locker.com",
+          "type": "general",
+          "confidence": "verified",
+          "source": "Website contact page"
+        },
+        {
+          "email": "mark@trumbull-locker.com",
+          "type": "owner",
+          "confidence": "highly_likely",
+          "source": "Pattern extrapolation - common for small business owners"
+        },
+        {
+          "email": "orders@trumbull-locker.com",
+          "type": "operations",
+          "confidence": "possible",
+          "source": "Pattern extrapolation - common for processing orders"
+        }
+      ],
+      "fit_rationale": "Family-owned since 1947, offers complete meat processing with custom cut options. Fresh meat counter, deli, and produce section. Already serves the local farm community and processes beef, pork, and chicken. The custom cut sheet tool would streamline their customer ordering process and reduce manual paperwork.",
+      "outreach_angle": "Present as digital transformation partner for their custom processing workflow. Emphasize reducing paperwork for cut sheets and modernizing the customer ordering experience.",
+      "social_media": {
+        "facebook": "https://www.facebook.com/p/Trumbull-Locker-Plant-100063686494307/",
+        "nextdoor": "https://nextdoor.com/pages/trumbull-locker-plant-rock-creek-oh/"
+      },
+      "company_history": "Founded 1947 by Rose and Jerry Lukes. Ozzie Nelson took over in early 1970s. Mark and Chris Kovacic became owners in 1988. Chris Kovacic passed away June 21, 2020. Mark Kovacic is now sole owner."
+    },
+    {
+      "rank": 2,
+      "business_name": "NaKyrsie Meats",
+      "business_type": "USDA Inspected Whole Animal Butcher Shop",
+      "location": "100 Austin Rd, Geneva, OH 44041",
+      "website": "https://www.nkmeats.com/",
+      "phone": "(440) 361-3064",
+      "decision_makers": [
+        {
+          "name": "Nate Fagnilli",
+          "title": "Co-Owner / Chef",
+          "notes": "Former chef at Crosswinds Grille in Geneva OH. Started NaKyrsie Meats in 2016. Specializes in charcuterie and salumi."
+        },
+        {
+          "name": "Kristen Fagnilli",
+          "title": "Co-Owner",
+          "notes": "Co-founder with husband Nate. Company name 'NaKyrsie' is a combination of their first names (Na-te + Kyrs-ten)."
+        }
+      ],
+      "email_addresses": [
+        {
+          "email": "nate@nkmeats.com",
+          "type": "owner",
+          "confidence": "verified",
+          "source": "Website contact page, Facebook page, Google Maps"
+        },
+        {
+          "email": "kristen@nkmeats.com",
+          "type": "owner",
+          "confidence": "highly_likely",
+          "source": "Pattern extrapolation - co-owner with Nate, same email domain"
+        },
+        {
+          "email": "info@nkmeats.com",
+          "type": "general",
+          "confidence": "possible",
+          "source": "Pattern extrapolation - common business email"
+        },
+        {
+          "email": "orders@nkmeats.com",
+          "type": "operations",
+          "confidence": "possible",
+          "source": "Pattern extrapolation - common for order processing"
+        }
+      ],
+      "fit_rationale": "USDA inspected whole animal butcher shop specializing in charcuterie and salumi. Ohio Proud member since 2019. Produces nitrate-free salamis, hams, and bacons. Already sells to fine dining establishments in Ashtabula Harbor. A digital cut sheet tool would help them manage custom orders from restaurants and retail customers more efficiently.",
+      "outreach_angle": "Emphasize professional ordering system for their restaurant wholesale clients. Highlight how digital cut sheets can streamline their custom charcuterie orders and improve customer experience.",
+      "social_media": {
+        "facebook": "https://www.facebook.com/nakyrsiemeats/",
+        "instagram": "https://www.instagram.com/nakyrsie_meats/",
+        "linkedin": "https://www.linkedin.com/in/nate-fagnilli-874957135/"
+      },
+      "company_history": "Founded 2016 by Chef Nate Fagnilli (formerly of Crosswinds Grille) and wife Kristen. Na*Kyrsie (pronounced 'Na-Ker-See') is a portmanteau of their names. Specializes in dry-aged steaks, nitrate-free artisan salamis, bacon, and hams. Supplies local fine dining establishments.",
+      "wholesale_clients": [
+        "Aurelia Bistro (Chagrin Falls)",
+        "Bascule Bridge Grille (Ashtabula Harbor)",
+        "Briquettes Smokehouse (Ashtabula Harbor)",
+        "Cloven Hoof Brewing Co. (Ashtabula Harbor)",
+        "Cole's Public House (Amherst)",
+        "Crosswinds Grille (Geneva)"
+      ]
+    }
+  ],
+  "additional_leads_in_research": [
+    {
+      "name": "Bonner Farms Beef & Market",
+      "type": "Vertical Integration Farm & Retail Market",
+      "location": "Garrettsville, OH",
+      "website": "https://bonnerfarmsbeef.com/",
+      "priority": 3,
+      "notes": "100% vertically integrated beef operation. Featured by Ohio Farm Bureau."
+    },
+    {
+      "name": "Cherry Valley Slaughtering & Processing",
+      "type": "Custom Meat Processing",
+      "location": "Dorset, OH (Ashtabula County)",
+      "priority": 4,
+      "notes": "Custom slaughtering facility, fair-priced, listed in Ashtabula County Local Food Guide."
+    },
+    {
+      "name": "Millgate Farm",
+      "type": "Heritage Breed Livestock Farm",
+      "location": "Ashtabula County, OH",
+      "website": "https://www.millgatefarm.com/",
+      "priority": 5,
+      "notes": "Family farm since 1961 raising Berkshire pigs and Maine Anjou cows."
+    }
+  ],
+  "research_metadata": {
+    "agent": "nai-email-researcher",
+    "execution_mode": "cron",
+    "region": "Ashtabula County, Ohio",
+    "industry": "Agriculture / Meat Processing / Farm-to-Table",
+    "emails_verified": 2,
+    "emails_extrapolated": 5,
+    "research_date": "2026-03-24",
+    "sources": [
+      "Brave Web Search API",
+      "SearXNG Local Metasearch",
+      "Direct website extraction",
+      "LinkedIn profile discovery",
+      "Social media analysis"
+    ]
+  }
+}

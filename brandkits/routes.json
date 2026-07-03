@@ -1,0 +1,137 @@
+{
+  "mvp": "routes",
+  "generated_at": "2026-03-23T00:30:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/routes.json",
+  "research_sources": [
+    "https://www.noaca.org/regional-planning/transportation-planning/transit-planning-tod/transit-planning",
+    "https://www.unisco.com/locations/ohio/ashtabula/ltl"
+  ],
+  "target_buyer_1": {
+    "organization": "NOACA (Northeast Ohio Areawide Coordinating Agency)",
+    "type": "Regional Transportation Planning Agency",
+    "website": "https://www.noaca.org/",
+    "service_area": "Northeast Ohio (Cuyahoga, Geauga, Lake, Lorain, Medina counties + Ashtabula region)",
+    "why_top_candidate": "Coordinates transit planning across Northeast Ohio including transit agencies: Geauga County Transit, Greater Cleveland RTA, Laketran, Lorain County Transit, Medina County Transit. Also coordinates with PARTA, Akron Metro, SARTA. Focus areas: Managing congestion, transit planning, freight planning, human services mobility, bicycle/pedestrian planning, transportation asset management, regional safety. Key initiatives: GoHio Commute, Climate Action Plan, transportation emissions reduction. Route optimization and transit planning tools would directly support their regional mobility initiatives and coordinated transit planning mission.",
+    "fit_score": 96
+  },
+  "target_buyer_2": {
+    "organization": "Unis Logistics (Ashtabula)",
+    "type": "LTL Shipping/Logistics Provider",
+    "website": "https://www.unisco.com/locations/ohio/ashtabula/ltl",
+    "location": "Ashtabula, Ohio",
+    "why_top_candidate": "Specializes in less-than-truckload (LTL) shipping and freight consolidation. Services: Efficient LTL shipping combining multiple shipments, flexible scheduling with dynamic routing options, competitive pricing with volume-based discounts, secure handling with real-time tracking, nationwide network with strategic hub locations, smart consolidation with advanced load planning. Already uses dynamic routing. Route optimization platform would further improve delivery efficiency, reduce costs, and maximize trailer utilization for their Ashtabula operations.",
+    "fit_score": 92
+  },
+  "actual_brand_research": {
+    "noaca": {
+      "name": "Northeast Ohio Areawide Coordinating Agency (NOACA)",
+      "type": "Metropolitan Planning Organization (MPO)",
+      "service_area": "Five-county region: Cuyahoga, Geauga, Lake, Lorain, Medina (plus coordination with Ashtabula area)",
+      "transit_agencies_coordinated": [
+        "Geauga County Transit (GCT)",
+        "Greater Cleveland Regional Transit Authority (GCRTA)",
+        "Laketran",
+        "Lorain County Transit (LTC)",
+        "Medina County Public Transit (MCPT)",
+        "Portage Area Regional Transportation Authority (PARTA)",
+        "Akron Metro Regional Transit Authority",
+        "Stark Area Regional Transit Authority (SARTA)"
+      ],
+      "planning_areas": [
+        "Air Quality Planning / Climate Action Plan",
+        "GoHio Commute (carpool, vanpool, bike, walk, transit, telecommute)",
+        "Water Quality Planning",
+        "Transportation Planning - Managing Congestion",
+        "Transit Planning and Transit-Oriented Development (TOD)",
+        "Transportation Asset Management / Pavement Reports",
+        "Regional Safety Program (SAVE)",
+        "Freight Planning",
+        "Human Services and Mobility Planning",
+        "Bicycle and Pedestrian Planning",
+        "Signal Timing Optimization (STOP)",
+        "Electric Vehicle Charging Stations"
+      ],
+      "regional_trends": [
+        "Sprawl without growth - population expanding into rural areas",
+        "Transit ridership on the rise in some areas",
+        "Older adults looking to age in place",
+        "Younger professionals preferring transit-rich locations",
+        "Millennials driving less",
+        "Preference for walkable urban neighborhoods",
+        "Downtown population growth"
+      ],
+      "visual_style": "Regional planning, coordinated mobility, sustainability, data-driven"
+    },
+    "unis_logistics": {
+      "name": "Unis Logistics (Ashtabula LTL)",
+      "services": [
+        "Efficient LTL shipping - combine multiple shipments for cost-effective transportation",
+        "Flexible scheduling - choose pickup and delivery windows with dynamic routing",
+        "Competitive pricing - volume-based discounts and consolidated shipping rates",
+        "Secure handling - professional freight handling with real-time tracking",
+        "Nationwide network - extensive coverage with strategic hub locations",
+        "Smart consolidation - advanced load planning to maximize trailer utilization"
+      ],
+      "value_proposition": "Perfect for businesses that don't need a full truck for their freight",
+      "technology": [
+        "Dynamic routing options",
+        "Real-time tracking",
+        "Advanced load planning",
+        "Freight consolidation services"
+      ],
+      "visual_style": "Efficient, cost-effective, professional logistics, smart consolidation"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Smarter Routes. Better Deliveries.",
+    "positioning": "The route optimization platform for Northeast Ohio — helping NOACA coordinate regional transit planning and Unis Logistics maximize LTL efficiency through intelligent routing and real-time optimization.",
+    "color_palette_derived_from_research": {
+      "primary": "#2C5282",
+      "accent": "#38A169",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#718096"
+    },
+    "typography_recommendation": {
+      "heading_font": "Professional technical sans-serif",
+      "body_font": "Clean data-readable sans-serif"
+    },
+    "mood_keywords_from_research": ["coordinated", "efficient", "regional", "smart", "consolidated", "dynamic"],
+    "visual_direction": {
+      "hero_image_concept": "Regional transit map with optimized route overlays and real-time tracking",
+      "color_scheme": "Professional blue with green accents (regional + efficiency)",
+      "photography_style": "Northeast Ohio transit, logistics operations, route maps, transportation infrastructure"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with NOACA's regional coordination mission and Unis's efficiency-focused logistics",
+    "key_features_needed": [
+      "Real-time route optimization with traffic and weather integration",
+      "Multi-stop route planning for delivery and transit services",
+      "Driver mobile app with turn-by-turn navigation",
+      "Fuel cost calculator and efficiency tracking",
+      "Fleet management dashboard with vehicle tracking",
+      "Scheduling integration for appointment-based routes",
+      "Customer notification system for arrival estimates",
+      "Analytics dashboard for route performance metrics"
+    ],
+    "differentiators_based_on_research": [
+      "NOACA: Coordinates 8 transit agencies across NE Ohio",
+      "NOACA: GoHio Commute and Climate Action initiatives",
+      "NOACA: Regional planning for 5+ county area",
+      "NOACA: Managing sprawl without growth challenges",
+      "Unis: Dynamic routing already in place",
+      "Unis: Smart consolidation technology",
+      "Unis: Real-time tracking capabilities",
+      "Unis: Ashtabula-based LTL operations",
+      "Both: Focus on efficiency and optimization"
+    ],
+    "outreach_strategy": [
+      "Contact NOACA about regional transit route optimization",
+      "Reach out to Unis Logistics about LTL efficiency improvements",
+      "Highlight coordination with GoHio Commute initiatives",
+      "Propose pilot with ACTS for Ashtabula County transit"
+    ]
+  }
+}

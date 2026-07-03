@@ -1,0 +1,136 @@
+{
+  "mvp": "zoning",
+  "generated_at": "2026-03-23T04:10:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/zoning.json",
+  "research_sources": [
+    "https://www.ashtabulacounty.us/278/Zoning",
+    "https://www.cityofashtabula.com/zoning"
+  ],
+  "target_buyer_1": {
+    "organization": "Ashtabula County Planning & Development Department",
+    "type": "County Government - Planning/Zoning Oversight",
+    "website": "https://www.ashtabulacounty.us/278/Zoning",
+    "address": "25 W Jefferson St, Jefferson, OH 44047",
+    "phone": "(440) 576-3737",
+    "why_top_candidate": "Primary county-level zoning authority coordinating with 27 townships. Maintains comprehensive zoning contact directory and provides educational resources for township zoning officials. Three townships (Monroe, Richmond, Windsor) do not have township zoning resolutions. Links to township zoning resolutions provided when digital editions available. Specific zoning questions referred to township zoning officials. MVP could integrate with existing infrastructure to provide digital permit routing and status tracking across multi-jurisdictional landscape.",
+    "fit_score": 95
+  },
+  "target_buyer_2": {
+    "organization": "City of Ashtabula Zoning Department",
+    "type": "Municipal Government - Zoning Administration",
+    "website": "https://www.cityofashtabula.com/zoning",
+    "address": "4250 Lake Ave, Ashtabula, OH 44004",
+    "phone": "(440) 992-7118",
+    "email": "pcd@cityofashtabula.com",
+    "fax": "(440) 992-7180",
+    "why_top_candidate": "Largest city in Ashtabula County with active zoning enforcement. Issues zoning permits required before county building permits can be obtained. Review process takes up to one week. Permits picked up at office with fees due (fees vary). Applications for swimming pools, sheds, decks, garages, and new businesses. PDF forms must be printed, filled out, and returned - opportunity for digital transformation. Can fax to (440) 992-7180 or email to PCD@cityofashtabula.com. MVP would streamline application process and provide online submission and tracking.",
+    "fit_score": 93
+  },
+  "actual_brand_research": {
+    "ashtabula_county_zoning": {
+      "name": "Ashtabula County Planning & Development Department",
+      "website": "https://www.ashtabulacounty.us/278/Zoning",
+      "address": "25 W Jefferson St, Jefferson, OH 44047",
+      "phone": "(440) 576-3737",
+      "role": "County-level zoning oversight and coordination",
+      "jurisdiction": "Coordinates with 27 townships",
+      "townships_without_zoning": [
+        "Monroe",
+        "Richmond",
+        "Windsor"
+      ],
+      "services": [
+        "Maintains comprehensive zoning contact directory",
+        "Provides educational resources for township zoning officials",
+        "Links to township zoning resolutions (when digital editions available)",
+        "Referral to township zoning officials for specific questions"
+      ],
+      "disclaimer": "Every effort is made to place the most current zoning code on website, but changes may have been made at township level since last update",
+      "visual_style": "Government institutional, county authority, multi-jurisdictional coordination"
+    },
+    "city_of_ashtabula_zoning": {
+      "name": "City of Ashtabula Zoning Department",
+      "website": "https://www.cityofashtabula.com/zoning",
+      "address": "4250 Lake Ave, Ashtabula, OH 44004",
+      "phone": "(440) 992-7118",
+      "email": "PCD@cityofashtabula.com",
+      "fax": "(440) 992-7180",
+      "review_timeline": "Up to one week",
+      "permit_types": [
+        "Swimming pools",
+        "Sheds",
+        "Decks",
+        "Garages",
+        "New businesses"
+      ],
+      "process": [
+        "Fill out appropriate form for specific needs",
+        "Review process (up to one week)",
+        "Pick up permit at office",
+        "Pay fees due (fees vary)"
+      ],
+      "submission_methods": [
+        "Print PDF form, fill out, return in person",
+        "Fax to (440) 992-7180",
+        "Email scanned form to PCD@cityofashtabula.com"
+      ],
+      "plumbing_note": "New businesses not required to obtain plumbing inspection if building is existing and no structural changes to plumbing system",
+      "visual_style": "Municipal government, process-oriented, PDF-based workflow"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Navigate Zoning. Build with Confidence.",
+    "positioning": "The digital zoning permit platform for Ashtabula County — helping the County Planning Department coordinate across 27 townships and the City of Ashtabula streamline their one-week review process with online applications, document uploads, and real-time status tracking.",
+    "color_palette_derived_from_research": {
+      "primary": "#1A365D",
+      "accent": "#C53030",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#4A5568"
+    },
+    "typography_recommendation": {
+      "heading_font": "Professional serif for government authority",
+      "body_font": "Clean sans-serif for accessibility"
+    },
+    "mood_keywords_from_research": ["government", "official", "streamlined", "multi-jurisdictional", "professional"],
+    "visual_direction": {
+      "hero_image_concept": "Split view: Ashtabula County government building and City of Ashtabula zoning office with digital permit interface overlay",
+      "color_scheme": "Deep navy with red accents (government authority + action)",
+      "photography_style": "Ashtabula County buildings, municipal offices, permit documents, construction sites"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Ashtabula County's county-wide coordination role and City of Ashtabula's municipal permit process",
+    "key_features_needed": [
+      "Multi-jurisdictional jurisdiction selector (county/city/township)",
+      "Digital permit application submission",
+      "Document upload for site plans and supporting materials",
+      "Real-time status tracking dashboard",
+      "Integration with existing county and municipal permit systems",
+      "Township zoning resolution directory",
+      "Educational content on zoning terms and permit types",
+      "Mobile optimization for contractors on job sites",
+      "Email notifications for status updates",
+      "Fee payment integration"
+    ],
+    "differentiators_based_on_research": [
+      "County: Coordinates 27 townships",
+      "County: Maintains comprehensive zoning directory",
+      "County: Three townships without zoning (Monroe, Richmond, Windsor)",
+      "City: Largest city in Ashtabula County",
+      "City: One-week review process",
+      "City: Multiple permit types (pools, sheds, decks, garages)",
+      "City: Currently PDF-based workflow (opportunity for digital transformation)",
+      "Both: Ashtabula County government entities",
+      "Address: 25 W Jefferson St (County) and 4250 Lake Ave (City)"
+    ],
+    "outreach_strategy": [
+      "Contact Ashtabula County Planning & Development at (440) 576-3737 about county-wide coordination",
+      "Reach out to City of Ashtabula Zoning at (440) 992-7118 about digital permit transformation",
+      "Highlight multi-jurisdictional clarity for residents",
+      "Propose API integration for real-time status tracking",
+      "Demonstrate mobile optimization for contractors"
+    ]
+  }
+}

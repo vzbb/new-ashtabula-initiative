@@ -1,0 +1,101 @@
+{
+  "auditDate": "2026-03-02T14:42:29.118219",
+  "totalSites": 5,
+  "summary": {
+    "totalSites": 5,
+    "accessible": 5,
+    "broken": 0,
+    "averageMobileScore": 80,
+    "averageAccessibilityScore": 90,
+    "averagePerformanceScore": 100,
+    "totalBrokenLinks": 0,
+    "totalIssues": 10
+  },
+  "sites": [
+    {
+      "name": "Civic Insight Engine",
+      "url": "https://new-ashtabula-initiative.vercel.app/civic-insight/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 203.88245582580566,
+      "page_size_kb": 0.8994140625,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Permit Whisperer",
+      "url": "https://new-ashtabula-initiative.vercel.app/permits/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 153.86652946472168,
+      "page_size_kb": 0.4755859375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Eligibility Screener",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 176.93281173706055,
+      "page_size_kb": 0.7880859375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Eligibility Lite",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-lite/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 206.80570602416992,
+      "page_size_kb": 0.501953125,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    },
+    {
+      "name": "Eligibility Pro",
+      "url": "https://new-ashtabula-initiative.vercel.app/eligibility-pro/",
+      "http_status": 200,
+      "is_accessible": true,
+      "load_time_ms": 191.30325317382812,
+      "page_size_kb": 0.74609375,
+      "mobile_score": 80,
+      "accessibility_score": 90,
+      "performance_score": 100,
+      "broken_links": [],
+      "issues": [
+        "No H1 heading found",
+        "No responsive CSS patterns detected"
+      ],
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - img [ref=e8]
+        - generic [ref=e11]:
+          - paragraph [ref=e12]: A & R Roofing
+          - heading "RoofQuote" [level=1] [ref=e13]
+      - generic [ref=e14]:
+        - img [ref=e15]
+        - generic [ref=e19]: Ashtabula County, Ohio
+  - main [ref=e20]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - img [ref=e27]
+          - text: Friendly, honest roofing service in Ashtabula County and beyond
+        - heading "Roof quotes in minutes, backed by A&R's local reputation since 1992." [level=2] [ref=e29]
+        - paragraph [ref=e30]: This estimator helps A&R Roofing review a property faster using aerial imagery, street-level context, and AI-assisted scope notes before the crew heads out for the free estimate.
+        - generic [ref=e32]:
+          - img [ref=e33]
+          - textbox "Enter property address (e.g., 123 Main St, Ashtabula, OH)" [ref=e35]
+          - button "Analyze" [disabled] [ref=e36]:
+            - img [ref=e37]
+            - generic [ref=e40]: Analyze
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - img [ref=e43]
+            - generic [ref=e45]: Free estimates from a local, fully insured crew
+          - generic [ref=e46]:
+            - img [ref=e47]
+            - generic [ref=e50]: Built for A&R Roofing's honest field workflow
+        - generic [ref=e51]:
+          - img [ref=e52]
+          - generic [ref=e54]: Live map analysis is still being connected for this demo environment. The branded experience is ready, and the team can finish the live estimator once the maps key is added.
+      - generic [ref=e55]:
+        - paragraph [ref=e56]: Field-ready promise
+        - heading "A faster first pass before the truck leaves the yard." [level=3] [ref=e57]
+        - paragraph [ref=e58]: RoofQuote helps A&R prep the estimate with address-level imagery, visible roof context, and AI-assisted notes so the team can walk in more prepared.
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - img [ref=e62]
+              - paragraph [ref=e65]: Since 1992
+            - paragraph [ref=e66]: A & R Roofing has been serving Ashtabula County homeowners for more than 30 years with a friendly, honest reputation.
+          - generic [ref=e67]:
+            - generic [ref=e68]:
+              - img [ref=e69]
+              - paragraph [ref=e72]: Fast estimate prep
+            - paragraph [ref=e73]: This intake flow turns an address into an inspection-ready scope so the crew can quote faster without losing accuracy.
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - img [ref=e76]
+              - paragraph [ref=e78]: Roofing plus gutters and plowing
+            - paragraph [ref=e79]: Built for the same local team customers already trust for roofing, gutter service, and winter response.
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: How it works
+        - heading "Built around the way a local roofing estimate actually starts." [level=3] [ref=e83]
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e86]: "1"
+            - paragraph [ref=e87]: Enter the property address so the estimator can pull the roof into view.
+          - generic [ref=e88]:
+            - generic [ref=e89]: "2"
+            - paragraph [ref=e90]: Review aerial and street-level context to spot pitch, access, and condition clues.
+          - generic [ref=e91]:
+            - generic [ref=e92]: "3"
+            - paragraph [ref=e93]: Generate an AI-assisted scope summary your team can use before the on-site estimate.
+      - generic [ref=e94]:
+        - paragraph [ref=e95]: Why this fits A&R
+        - heading "A modern intake layer without losing the family-owned feel." [level=3] [ref=e96]
+        - generic [ref=e97]:
+          - paragraph [ref=e98]: The design leans into A&R Roofing's honest, long-running local reputation instead of pretending to be a flashy national SaaS brand.
+          - paragraph [ref=e99]: The estimator is framed as a prep tool for free estimates, not a gimmicky instant-close calculator. That makes the workflow feel more credible for residential and commercial roofing customers in Ashtabula County.
+          - generic [ref=e100]:
+            - paragraph [ref=e101]: Service fit
+            - paragraph [ref=e102]: Roofing, gutter servicing, and snow plowing are all reflected in the tone so the product feels like it belongs to the same crew customers already know.
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - paragraph [ref=e106]: A & R Roofing
+        - heading "Free estimates for roofing projects across Ashtabula County and beyond." [level=3] [ref=e107]
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: Family-owned. Friendly. Honest. Fully insured.
+        - paragraph [ref=e110]: Built as a branded demo for faster roof estimate intake and field prep.

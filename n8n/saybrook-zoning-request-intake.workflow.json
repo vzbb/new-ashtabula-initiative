@@ -1,0 +1,157 @@
+{
+  "name": "Saybrook Zoning - Request Intake",
+  "nodes": [
+    {
+      "id": "request-webhook",
+      "name": "Request Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "onError": "continueRegularOutput",
+      "position": [
+        220,
+        280
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "saybrook-zoning-request",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "normalize-request",
+      "name": "Normalize Request",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        280
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "mode": "runOnceForAllItems",
+        "jsCode": "const raw = $json.body ?? $json;\nconst binary = $binary ?? {};\nconst uploadUrl =\n  $env.SAYBROOK_ATTACHMENT_UPLOAD_URL ||\n  'https://new-ashtabula-initiative.vercel.app/api/saybrook-blob-upload';\n\nconst parseMaybeJson = (value) => {\n  if (typeof value !== 'string') return value && typeof value === 'object' ? value : null;\n  try {\n    return JSON.parse(value);\n  } catch {\n    return null;\n  }\n};\n\nconst decodeBinaryJson = (item) => {\n  if (!item?.data) return null;\n  try {\n    const text = Buffer.from(item.data, 'base64').toString('utf8');\n    return parseMaybeJson(text);\n  } catch {\n    return null;\n  }\n};\n\nconst payload =\n  parseMaybeJson(raw.payload) ||\n  parseMaybeJson(raw.body?.payload) ||\n  decodeBinaryJson(binary.payload) ||\n  raw;\nconst body = payload && typeof payload === 'object' ? { ...raw, ...payload } : raw;\nconst contact = body.contact ?? {};\nconst question = (body.question || body.sourceQuestion || body.specificQuestion || '').trim();\nconst draftRequest = (body.draftRequest || body.projectSummary || body.residentSummary || '').trim();\nif (!question && !draftRequest) throw new Error('question or draftRequest is required');\nif (!contact.email && !contact.phone && !body.email && !body.phone) {\n  throw new Error('At least one contact method is required');\n}\nconst binary = $binary ?? {};\nconst attachmentBinary = Object.entries(binary)\n  .filter(([key]) => key !== 'payload')\n  .map(([key, item]) => ({\n    key,\n    fileName: item.fileName || key,\n    mimeType: item.mimeType || null,\n    fileSize: typeof item.fileSize === 'number' ? item.fileSize : null,\n  }));\nconst attachments = [\n  ...attachmentBinary,\n  ...((Array.isArray(body.attachments) ? body.attachments : [])\n    .map((item) => {\n      if (typeof item === 'string') return { fileName: item };\n      if (item && typeof item === 'object') return item;\n      return null;\n    })\n    .filter(Boolean)),\n  ...((Array.isArray(body.images) ? body.images : [])\n    .map((item) => {\n      if (typeof item === 'string') return { fileName: item };\n      if (item && typeof item === 'object') return item;\n      return null;\n    })\n    .filter(Boolean))\n];\nconst citations = Array.isArray(body.sourceCitations) ? body.sourceCitations : Array.isArray(body.citations) ? body.citations : [];\nconst chatTranscript = Array.isArray(body.chatTranscript) ? body.chatTranscript : Array.isArray(body.chat_transcript) ? body.chat_transcript : [];\nconst record = {\n  submitted_at: body.submittedAt || body.submitted_at || new Date().toISOString(),\n  slug: body.slug || 'saybrook-zoning',\n  jurisdiction: body.jurisdiction || 'Saybrook Township',\n  request_type: body.requestType || body.request_type || body.projectType || 'zoning guidance',\n  applicant_name: body.fullName || body.applicant_name || contact.name || body.name || '',\n  email: body.email || contact.email || '',\n  phone: body.phone || contact.phone || '',\n  preferred_contact: body.preferredContact || body.preferred_contact || 'email',\n  property_address: body.propertyAddress || body.property_address || body.address || '',\n  project_type: body.projectType || body.project_type || '',\n  project_summary: draftRequest || '',\n  specific_question: question || '',\n  ai_summary: body.aiSummary || body.aiContextSummary || '',\n  source_answer: body.sourceAnswer || body.aiContextSummary || '',\n  source_citations_json: JSON.stringify(citations),\n  attachments_json: JSON.stringify(attachments),\n  chat_transcript_json: JSON.stringify(chatTranscript),\n  status: body.status || 'new'\n};\nreturn [{ json: record }];"
+      }
+    },
+    {
+      "id": "upload-attachments",
+      "name": "Upload Attachments",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        120
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "mode": "runOnceForAllItems",
+        "jsCode": "const body = $json.body ?? $json;\nconst binary = $binary ?? {};\nconst uploadUrl =\n  $env.SAYBROOK_ATTACHMENT_UPLOAD_URL ||\n  'https://new-ashtabula-initiative.vercel.app/api/saybrook-blob-upload';\n\nconst attachmentEntries = Object.entries(binary).map(([key, item], index) => ({\n  key,\n  fileName: item.fileName || key || `attachment-${index + 1}`,\n  mimeType: item.mimeType || 'application/octet-stream',\n  size: typeof item.fileSize === 'number' ? item.fileSize : null,\n  data: item.data || item.fileData || '',\n}));\n\nif (!attachmentEntries.length) {\n  return [{\n    json: {\n      ...body,\n      attachments: Array.isArray(body.attachments) ? body.attachments : [],\n      uploadedAttachments: [],\n    },\n  }];\n}\n\nconst response = await fetch(uploadUrl, {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json',\n    Accept: 'application/json',\n  },\n  body: JSON.stringify({\n    slug: body.slug || 'saybrook-zoning',\n    jurisdiction: body.jurisdiction || 'Saybrook Township',\n    requestId: body.requestId || body.id || '',\n    attachments: attachmentEntries,\n  }),\n});\n\nif (!response.ok) {\n  const detail = await response.text().catch(() => '');\n  throw new Error(`Attachment upload failed ${response.status}: ${detail}`);\n}\n\nconst result = await response.json().catch(() => ({}));\nconst uploadedAttachments = Array.isArray(result.attachments) ? result.attachments : [];\n\nreturn [{\n  json: {\n    ...body,\n    attachments: uploadedAttachments,\n    uploadedAttachments,\n    uploadedAttachmentCount: uploadedAttachments.length,\n  },\n}];"
+      }
+    },
+    {
+      "id": "request-table-insert",
+      "name": "Insert Request Row",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        740,
+        280
+      ],
+      "parameters": {
+        "operation": "insert",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Saybrook Zoning Requests",
+          "cachedResultName": "Saybrook Zoning Requests"
+        },
+        "columns": {
+          "value": {},
+          "schema": [],
+          "mappingMode": "autoMapInputData",
+          "matchingColumns": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "respond-request",
+      "name": "Respond Request",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1000,
+        280
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Request Webhook": {
+      "main": [
+        [
+          {
+            "node": "Upload Attachments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Attachments": {
+      "main": [
+        [
+          {
+            "node": "Normalize Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Request": {
+      "main": [
+        [
+          {
+            "node": "Insert Request Row",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert Request Row": {
+      "main": [
+        [
+          {
+            "node": "Respond Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "saybrook-zoning"
+    },
+    {
+      "name": "intake"
+    },
+    {
+      "name": "request"
+    }
+  ]
+}

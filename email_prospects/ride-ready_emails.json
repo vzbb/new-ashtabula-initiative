@@ -1,0 +1,84 @@
+{
+  "mvp": "ride-ready",
+  "mvp_description": "Transportation/ride scheduling platform for seniors and disabled individuals",
+  "research_date": "2026-03-24",
+  "top_buyers": [
+    {
+      "rank": 1,
+      "name": "Ashtabula County Transportation System (ACTS)",
+      "type": "County Public Transit",
+      "website": "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+      "emails": [
+        {
+          "email": "transit@ashtabulacounty.us",
+          "type": "general",
+          "source": "inferred",
+          "confidence": "inferred"
+        }
+      ],
+      "phones": [
+        {
+          "phone": "440-576-1414",
+          "type": "main"
+        }
+      ],
+      "address": "Ashtabula County, OH",
+      "services": ["Door-to-door bus service", "Wheelchair accessibility", "Reduced fares for elderly/disabled"],
+      "fit_rationale": "Provides door-to-door bus service with wheelchair accessibility and reduced fares for elderly/disabled. Ride scheduling platform would improve booking and tracking. County-operated transit system.",
+      "priority": "high"
+    },
+    {
+      "rank": 2,
+      "name": "ReliaRide",
+      "type": "Non-Emergency Medical Transportation",
+      "website": "https://reliaride.org/",
+      "emails": [
+        {
+          "email": "info@reliaride.org",
+          "type": "general",
+          "source": "inferred",
+          "confidence": "inferred"
+        }
+      ],
+      "phones": [
+        {
+          "phone": "330-244-0657",
+          "type": "main"
+        }
+      ],
+      "address": "Northeast Ohio",
+      "founded": "2007",
+      "fit_rationale": "Leading NEMT provider in Northeast Ohio since 2007, specializing in elderly and disabled transport. Digital ride management would optimize their operations. Originated after seeing need for safe, professional nursing home transportation.",
+      "priority": "high"
+    }
+  ],
+  "additional_contacts": [
+    {
+      "name": "Country Neighbor Senior Services",
+      "type": "Senior Transportation Nonprofit",
+      "website": "https://countryneighbor.org/senior-services/",
+      "fit_rationale": "Operates fleet of 10 vehicles including handicap-accessible vans for seniors. Ride scheduling platform would improve service coordination.",
+      "priority": "medium"
+    },
+    {
+      "name": "Kings Transportation Services",
+      "type": "Non-Emergency Medical Transportation",
+      "website": "http://www.kingstransportationservices.com/",
+      "fit_rationale": "Provides ambulatory and wheelchair transportation in Cuyahoga, Lorain, and Ashtabula counties.",
+      "priority": "medium"
+    },
+    {
+      "name": "Senior Transportation Connection",
+      "type": "Senior/Disability Transport Coordination",
+      "website": "https://www.ridestc.org/",
+      "fit_rationale": "Coordinates transportation for seniors and differently abled adults throughout Northeast Ohio.",
+      "priority": "medium"
+    }
+  ],
+  "email_templates_suggested": [
+    "senior_transportation_scheduling",
+    "nemt_digital_booking",
+    "accessibility_ride_platform"
+  ],
+  "research_notes": "ACTS email inferred from county domain pattern. ReliaRide contact primarily by phone. Strong senior transportation infrastructure in Ashtabula County. Multiple NEMT providers present."
+}

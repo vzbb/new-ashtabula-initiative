@@ -1,0 +1,83 @@
+{
+  "mvp": "ride-ready",
+  "run_timestamp_utc": "2026-03-21T23:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Ride Ready MVP (transportation/ride scheduling platform for seniors and disabled individuals). Targets transportation providers, medical transport services, and senior care organizations in Ashtabula County and Northeast Ohio that could benefit from ride scheduling and accessibility tools.",
+  "leads": [
+    {
+      "organization": "Ashtabula County Transportation System (ACTS)",
+      "type": "County Public Transit",
+      "website": "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+      "fit_rationale": "Provides door-to-door bus service with wheelchair accessibility and reduced fares for elderly/disabled. Ride scheduling platform would improve booking and tracking.",
+      "source": "https://www.ashtabulacounty.us/442/Door-to-Door-Service"
+    },
+    {
+      "organization": "ReliaRide (Northeast Ohio)",
+      "type": "Non-Emergency Medical Transportation",
+      "website": "https://reliaride.org/",
+      "fit_rationale": "Leading NEMT provider in Northeast Ohio since 2007, specializing in elderly and disabled transport. Digital ride management would optimize their operations.",
+      "source": "https://reliaride.org/"
+    },
+    {
+      "organization": "Country Neighbor Senior Services",
+      "type": "Senior Transportation Nonprofit",
+      "website": "https://countryneighbor.org/senior-services/",
+      "fit_rationale": "Operates fleet of 10 vehicles including handicap-accessible vans for seniors. Ride scheduling platform would improve service coordination.",
+      "source": "https://countryneighbor.org/senior-services/"
+    },
+    {
+      "organization": "Kings Transportation Services",
+      "type": "Non-Emergency Medical Transportation",
+      "website": "http://www.kingstransportationservices.com/",
+      "fit_rationale": "Provides ambulatory and wheelchair transportation in Cuyahoga, Lorain, and Ashtabula counties. Ride booking platform would enhance customer experience.",
+      "source": "http://www.kingstransportationservices.com/"
+    },
+    {
+      "organization": "Senior Transportation Connection",
+      "type": "Senior/Disability Transport Coordination",
+      "website": "https://www.ridestc.org/",
+      "fit_rationale": "Coordinates transportation for seniors and differently abled adults throughout Northeast Ohio. Platform integration would streamline their coordination services.",
+      "source": "https://www.ridestc.org/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add easy-to-use ride booking interface optimized for seniors and caregivers.",
+    "Include accessibility preferences (wheelchair, walker, assistance needed).",
+    "Create real-time tracking so families can monitor rides.",
+    "Add medication reminder integration for medical appointments.",
+    "Provide multiple booking methods (phone, web, app, caregiver portal).",
+    "Include driver profiles with photos and background checks for trust.",
+    "Add recurring ride scheduling for regular appointments.",
+    "Create emergency contact notifications for ride status updates."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Senior-focused transportation sites need large, clear text and simple navigation—complex design creates barriers.",
+      "Without high contrast and readable fonts, visually impaired users struggle.",
+      "Missing caregiver access features limit utility for family members managing rides."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "High (tentative)",
+    "reason": "Ride scheduling platforms are highly white-labelable for transportation companies, senior care agencies, and medical transport providers with custom branding.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Ashtabula County Transportation System about digital booking pilot.",
+    "Reach out to ReliaRide about partnership opportunities.",
+    "Explore integration with Medicaid transportation providers."
+  ],
+  "sources": [
+    "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+    "https://reliaride.org/",
+    "https://countryneighbor.org/senior-services/",
+    "http://www.kingstransportationservices.com/",
+    "https://www.ridestc.org/"
+  ]
+}

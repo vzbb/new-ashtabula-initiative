@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2b6cb0"/>
+      <stop offset="100%" stop-color="#38a169"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="320" rx="40" fill="#f7fafc"/>
+  <rect x="46" y="46" width="228" height="228" rx="52" fill="#ffffff" stroke="url(#g)" stroke-width="10"/>
+  <path d="M78 164L132 110L168 136L204 92L258 136" fill="none" stroke="#2b6cb0" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 210H244" fill="none" stroke="#38a169" stroke-width="14" stroke-linecap="round"/>
+  <path d="M120 202V150H166V202" fill="#ffffff" stroke="#718096" stroke-width="8" stroke-linejoin="round"/>
+  <text x="330" y="138" fill="#243245" font-family="Manrope, Arial, sans-serif" font-size="72" font-weight="800">Ridgeview Estates</text>
+  <text x="332" y="198" fill="#5f6b7a" font-family="Manrope, Arial, sans-serif" font-size="38" font-weight="700">Quality, Affordable Living</text>
+  <text x="332" y="246" fill="#2b6cb0" font-family="Manrope, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="2">ASHTABULA COUNTY AVAILABILITY</text>
+</svg>

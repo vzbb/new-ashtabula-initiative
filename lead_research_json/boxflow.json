@@ -1,0 +1,83 @@
+{
+  "mvp": "boxflow",
+  "run_timestamp_utc": "2026-03-21T20:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Boxflow MVP (inventory management/workflow automation platform). Targets logistics companies, warehouses, and small businesses in Ashtabula County and Northeast Ohio that need inventory tracking, workflow automation, and supply chain management tools.",
+  "leads": [
+    {
+      "organization": "World Shipping (Port of Ashtabula)",
+      "type": "International Freight Forwarder",
+      "website": "https://www.worldshipping.com/portfolio/port-of-ashtabula-ashtabula-ohio/",
+      "fit_rationale": "Active in Ashtabula since 1960, providing freight forwarding, warehousing, and distribution. Inventory management and workflow tools would optimize their operations.",
+      "source": "https://www.worldshipping.com/portfolio/port-of-ashtabula-ashtabula-ohio/"
+    },
+    {
+      "organization": "Ohio Logistics",
+      "type": "3PL Logistics Provider",
+      "website": "https://www.ohiologistics.com/",
+      "fit_rationale": "Ohio-based logistics company with warehousing and distribution services. Boxflow inventory tracking would complement their existing operations.",
+      "source": "https://www.ohiologistics.com/"
+    },
+    {
+      "organization": "ASW Global (Akron-Area Warehousing)",
+      "type": "3PL Warehousing & Distribution",
+      "website": "https://www.aswglobal.com/asws-akron-area-warehousing-distribution-services/",
+      "fit_rationale": "Four warehouse locations in Akron/Mogadore serving local and national clients. Workflow automation and inventory management tools would enhance their value-added services.",
+      "source": "https://www.aswglobal.com/asws-akron-area-warehousing-distribution-services/"
+    },
+    {
+      "organization": "ODW Logistics",
+      "type": "Nationwide Logistics Warehousing",
+      "website": "https://www.odwlogistics.com/services/warehousing",
+      "fit_rationale": "Nationwide network of warehouse distribution centers. Boxflow inventory tracking could be valuable for clients in the Northeast Ohio region.",
+      "source": "https://www.odwlogistics.com/services/warehousing"
+    },
+    {
+      "organization": "PITT OHIO",
+      "type": "LTL Trucking & Supply Chain",
+      "website": "https://pittohio.com/",
+      "fit_rationale": "Provides warehousing and distribution services with integrated transportation. Workflow automation would streamline their supply chain solutions.",
+      "source": "https://pittohio.com/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add barcode/QR code scanning for instant inventory entry and tracking.",
+    "Include real-time inventory dashboards with low-stock alerts.",
+    "Create workflow automation for reordering and purchase order generation.",
+    "Add multi-location inventory management for warehouses with multiple sites.",
+    "Integrate with shipping carriers for automated tracking and fulfillment.",
+    "Provide CSV import/export for easy data migration and reporting.",
+    "Include mobile app for inventory management on the warehouse floor.",
+    "Add role-based access control for team collaboration."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Inventory management tools need clean, efficient interfaces—cluttered design slows warehouse operations.",
+      "Without clear visual hierarchy, critical alerts (low stock, delays) may be missed.",
+      "Poor mobile design hinders floor staff who need quick inventory access."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "High (tentative)",
+    "reason": "Inventory and workflow platforms are highly white-labelable for logistics companies, warehouses, and manufacturers with custom branding and workflows.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact World Shipping at Port of Ashtabula about inventory management needs.",
+    "Reach out to Ohio Logistics about workflow automation opportunities.",
+    "Explore partnership with Northeast Ohio logistics cluster."
+  ],
+  "sources": [
+    "https://www.worldshipping.com/portfolio/port-of-ashtabula-ashtabula-ohio/",
+    "https://www.ohiologistics.com/",
+    "https://www.aswglobal.com/asws-akron-area-warehousing-distribution-services/",
+    "https://www.odwlogistics.com/services/warehousing",
+    "https://pittohio.com/"
+  ]
+}

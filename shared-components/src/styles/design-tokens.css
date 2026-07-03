@@ -1,0 +1,173 @@
+/* NAI Design Tokens - Tailwind CSS v3 */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Palette - Blue */
+  --nai-primary-50: #eff6ff;
+  --nai-primary-100: #dbeafe;
+  --nai-primary-200: #bfdbfe;
+  --nai-primary-300: #93c5fd;
+  --nai-primary-400: #60a5fa;
+  --nai-primary-500: #3b82f6;
+  --nai-primary-600: #2563eb;
+  --nai-primary-700: #1d4ed8;
+  --nai-primary-800: #1e40af;
+  --nai-primary-900: #1e3a8a;
+
+  /* Accent Palette - Green */
+  --nai-accent-50: #f0fdf4;
+  --nai-accent-100: #dcfce7;
+  --nai-accent-200: #bbf7d0;
+  --nai-accent-300: #86efac;
+  --nai-accent-400: #4ade80;
+  --nai-accent-500: #22c55e;
+  --nai-accent-600: #16a34a;
+  --nai-accent-700: #15803d;
+  --nai-accent-800: #166534;
+  --nai-accent-900: #14532d;
+
+  /* Neutral Palette - Slate */
+  --nai-slate-50: #f8fafc;
+  --nai-slate-100: #f1f5f9;
+  --nai-slate-200: #e2e8f0;
+  --nai-slate-300: #cbd5e1;
+  --nai-slate-400: #94a3b8;
+  --nai-slate-500: #64748b;
+  --nai-slate-600: #475569;
+  --nai-slate-700: #334155;
+  --nai-slate-800: #1e293b;
+  --nai-slate-900: #0f172a;
+
+  /* Semantic Colors */
+  --nai-bg-primary: var(--nai-slate-50);
+  --nai-bg-surface: #ffffff;
+  --nai-bg-elevated: var(--nai-slate-100);
+  
+  --nai-text-primary: var(--nai-slate-900);
+  --nai-text-secondary: var(--nai-slate-600);
+  --nai-text-muted: var(--nai-slate-400);
+  --nai-text-inverse: #ffffff;
+  
+  --nai-border-light: var(--nai-slate-200);
+  --nai-border-default: var(--nai-slate-300);
+
+  /* Typography */
+  --nai-font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --nai-font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --nai-text-xs: 0.75rem;    /* 12px */
+  --nai-text-sm: 0.875rem;   /* 14px */
+  --nai-text-base: 1rem;     /* 16px */
+  --nai-text-lg: 1.125rem;   /* 18px */
+  --nai-text-xl: 1.25rem;    /* 20px */
+  --nai-text-2xl: 1.5rem;    /* 24px */
+  --nai-text-3xl: 1.875rem;  /* 30px */
+  --nai-text-4xl: 2.25rem;   /* 36px */
+  --nai-text-5xl: 3rem;      /* 48px */
+
+  /* Font Weights */
+  --nai-font-normal: 400;
+  --nai-font-medium: 500;
+  --nai-font-semibold: 600;
+  --nai-font-bold: 700;
+
+  /* Spacing */
+  --nai-space-1: 0.25rem;   /* 4px */
+  --nai-space-2: 0.5rem;    /* 8px */
+  --nai-space-3: 0.75rem;   /* 12px */
+  --nai-space-4: 1rem;      /* 16px */
+  --nai-space-5: 1.25rem;   /* 20px */
+  --nai-space-6: 1.5rem;    /* 24px */
+  --nai-space-8: 2rem;      /* 32px */
+  --nai-space-10: 2.5rem;   /* 40px */
+  --nai-space-12: 3rem;     /* 48px */
+  --nai-space-16: 4rem;     /* 64px */
+  --nai-space-20: 5rem;     /* 80px */
+  --nai-space-24: 6rem;     /* 96px */
+
+  /* Shadows */
+  --nai-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --nai-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --nai-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --nai-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --nai-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Border Radius */
+  --nai-radius-sm: 0.25rem;  /* 4px */
+  --nai-radius: 0.375rem;    /* 6px */
+  --nai-radius-md: 0.5rem;   /* 8px */
+  --nai-radius-lg: 0.75rem;  /* 12px */
+  --nai-radius-xl: 1rem;     /* 16px */
+  --nai-radius-2xl: 1.5rem;  /* 24px */
+  --nai-radius-full: 9999px;
+
+  /* Transitions */
+  --nai-transition-fast: 150ms ease;
+  --nai-transition-base: 200ms ease;
+  --nai-transition-slow: 300ms ease;
+
+  /* Z-Index Scale */
+  --nai-z-dropdown: 100;
+  --nai-z-sticky: 200;
+  --nai-z-fixed: 300;
+  --nai-z-modal-backdrop: 400;
+  --nai-z-modal: 500;
+  --nai-z-popover: 600;
+  --nai-z-tooltip: 700;
+}
+
+/* Utility Classes */
+@layer components {
+  .nai-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .nai-section {
+    @apply py-12 sm:py-16 lg:py-24;
+  }
+
+  .nai-heading-1 {
+    @apply text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl;
+  }
+
+  .nai-heading-2 {
+    @apply text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl;
+  }
+
+  .nai-heading-3 {
+    @apply text-2xl font-bold tracking-tight text-slate-900;
+  }
+
+  .nai-body-large {
+    @apply text-lg leading-8 text-slate-600;
+  }
+
+  .nai-body {
+    @apply text-base leading-7 text-slate-600;
+  }
+
+  .nai-body-small {
+    @apply text-sm leading-6 text-slate-600;
+  }
+
+  .nai-link {
+    @apply font-semibold text-blue-600 hover:text-blue-800 transition-colors;
+  }
+
+  .nai-card {
+    @apply bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden;
+  }
+
+  .nai-input {
+    @apply block w-full rounded-lg border-slate-300 px-4 py-3 text-slate-900 
+           placeholder:text-slate-400 focus:border-blue-500 focus:ring-blue-500 
+           sm:text-sm;
+  }
+
+  .nai-label {
+    @apply block text-sm font-medium text-slate-700 mb-1;
+  }
+}

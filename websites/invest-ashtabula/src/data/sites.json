@@ -1,0 +1,127 @@
+{
+  "sites": [
+    {
+      "id": "harbor-industrial-park",
+      "name": "Harbor Industrial Park",
+      "acres": 50,
+      "type": "Heavy Industrial",
+      "status": "Shovel-Ready",
+      "features": ["Rail Access", "Port-Adjacent", "Utilities Ready"],
+      "highlights": ["CSX Rail Spur", "50k SF Available", "Tax Incentives"],
+      "description": "Prime industrial site located minutes from the Port of Ashtabula. Features direct CSX rail spur connection and full utility infrastructure including 3-phase power, natural gas, and fiber optic connectivity. Ideal for manufacturing, distribution, and logistics operations.",
+      "location": {
+        "lat": 41.865,
+        "lng": -80.789,
+        "address": "Harbor Road, Ashtabula, OH 44004"
+      },
+      "photos": [
+        "/images/site-harbor-1.jpg",
+        "/images/site-harbor-2.jpg",
+        "/images/site-harbor-3.jpg"
+      ],
+      "contact": {
+        "name": "Ashtabula Area Development Corporation",
+        "email": "invest@ashtabula.org",
+        "phone": "(440) 992-1438"
+      },
+      "zoning": "Heavy Industrial (I-2)",
+      "utilities": {
+        "electric": "AEP Ohio - 3-phase available",
+        "gas": "Columbia Gas - Main line at street",
+        "water": "City of Ashtabula",
+        "sewer": "City of Ashtabula",
+        "fiber": "Lumen, Spectrum Business"
+      },
+      "transportation": {
+        "highway": "I-90 (5 miles)",
+        "rail": "CSX direct spur",
+        "port": "Port of Ashtabula (2 miles)",
+        "airport": "Cleveland Hopkins (65 miles)"
+      }
+    },
+    {
+      "id": "route-20-commerce-center",
+      "name": "Route 20 Commerce Center",
+      "acres": 45,
+      "type": "Light Industrial / Flex",
+      "status": "Available",
+      "features": ["Highway Frontage", "Flexible Zoning", "Fast Permitting"],
+      "highlights": ["US-20 Visibility", "Flexible Build-to-Suit", "TIF Eligible"],
+      "description": "Strategically located on US-20 with excellent visibility and access. This flexible site accommodates light industrial, warehouse, or mixed-use development. Fast-track permitting available through City of Ashtabula. Build-to-suit opportunities with local developers.",
+      "location": {
+        "lat": 41.876,
+        "lng": -80.812,
+        "address": "US-20 West, Ashtabula, OH 44004"
+      },
+      "photos": [
+        "/images/site-route20-1.jpg",
+        "/images/site-route20-2.jpg",
+        "/images/site-route20-3.jpg"
+      ],
+      "contact": {
+        "name": "Ashtabula Area Development Corporation",
+        "email": "invest@ashtabula.org",
+        "phone": "(440) 992-1438"
+      },
+      "zoning": "Light Industrial / Commercial (I-1/C-2)",
+      "utilities": {
+        "electric": "AEP Ohio - 3-phase available",
+        "gas": "Columbia Gas - Available",
+        "water": "City of Ashtabula",
+        "sewer": "City of Ashtabula",
+        "fiber": "Available"
+      },
+      "transportation": {
+        "highway": "US-20 (direct frontage), I-90 (3 miles)",
+        "rail": "CSX accessible (8 miles)",
+        "port": "Port of Ashtabula (12 miles)",
+        "airport": "Cleveland Hopkins (62 miles)"
+      }
+    },
+    {
+      "id": "prospect-road-flex-campus",
+      "name": "Prospect Road Flex Campus",
+      "acres": 60,
+      "type": "Mixed-Use Business Park",
+      "status": "Pre-Development",
+      "features": ["Master Planned", "Greenfield", "Incentive Zone"],
+      "highlights": ["Opportunity Zone", "Phase 1 Ready", "Corporate Campus Setting"],
+      "description": "Master-planned business park in Opportunity Zone offering significant federal tax advantages. Phase 1 infrastructure complete with roads, utilities, and stormwater management. Suitable for corporate campus, light manufacturing, R&D facilities, or mixed-use development.",
+      "location": {
+        "lat": 41.891,
+        "lng": -80.765,
+        "address": "Prospect Road, Ashtabula Township, OH 44004"
+      },
+      "photos": [
+        "/images/site-prospect-1.jpg",
+        "/images/site-prospect-2.jpg",
+        "/images/site-prospect-3.jpg"
+      ],
+      "contact": {
+        "name": "Ashtabula Area Development Corporation",
+        "email": "invest@ashtabula.org",
+        "phone": "(440) 992-1438"
+      },
+      "zoning": "Planned Unit Development (PUD)",
+      "utilities": {
+        "electric": "AEP Ohio - Substation nearby",
+        "gas": "Columbia Gas - Planned extension",
+        "water": "AADC water system",
+        "sewer": "AADC sewer system",
+        "fiber": "Planned backbone"
+      },
+      "transportation": {
+        "highway": "I-90 (2 miles), SR-11 (5 miles)",
+        "rail": "CSX (4 miles)",
+        "port": "Port of Ashtabula (8 miles)",
+        "airport": "Cleveland Hopkins (68 miles)"
+      }
+    }
+  ],
+  "stats": {
+    "totalAcres": 155,
+    "sitesAvailable": 3,
+    "avgPricePerAcre": "Negotiable",
+    "incentivePrograms": ["Opportunity Zone", "TIF", "Tax Abatement", "JobsOhio"]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "mvp": "parcelvisor",
+  "run_timestamp_utc": "2026-03-22T12:45:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "AI Property Assessment tool targeting Ashtabula County Land Reutilization Corporation (Land Bank). The tool is designed to help assess and analyze land bank properties using AI vision technology. Research identified 5 key leads including the primary target entity and related organizations serving similar functions in Northeast Ohio.",
+  "leads": [
+    {
+      "name": "Ashtabula County Land Reutilization Corporation",
+      "type": "County Land Bank (Primary Target)",
+      "website": "https://www.ashtabulacountylandbank.com/",
+      "fit_rationale": "Primary target entity. Verified 501(c)(3) nonprofit government-related organization with EIN 47-1129824. Manages inventory of vacant, abandoned, and tax-foreclosed properties in Ashtabula County. Actively involved in demolition, property rehabilitation, and land assembly. Has received significant state funding ($609,000 through Demolition and Site Revitalization Program in 2023). Directly aligned with the AI Property Assessment tool's purpose for parcel analysis.",
+      "source": "GuideStar, ProPublica Nonprofit Explorer, Star Beacon News"
+    },
+    {
+      "name": "Alex Iarocci - Executive Director",
+      "type": "Decision Maker / Executive Contact",
+      "website": "https://www.linkedin.com/in/alex-iarocci-101570204/",
+      "fit_rationale": "Executive Director of the Ashtabula County Land Bank. LinkedIn profile confirms active leadership role at the organization. Cleveland State University education. Primary contact for technology adoption decisions. Previously Melissa Harvey held this position (referenced in 2016 county records).",
+      "source": "LinkedIn, Ashtabula County Board Minutes"
+    },
+    {
+      "name": "Cuyahoga County Land Reutilization Corporation (Cuyahoga Land Bank)",
+      "type": "Regional Land Bank (Expansion Target)",
+      "website": "https://www.cuyahogalandbank.org/",
+      "fit_rationale": "Largest and most technologically advanced land bank in Ohio. Based in Cleveland, serving Cuyahoga County. Known for innovative property management and large-scale demolition programs. Would benefit from AI assessment tools for their extensive property portfolio. Model organization for regional land bank technology adoption.",
+      "source": "Cuyahoga Land Bank Official Website, Industry Research"
+    },
+    {
+      "name": "Regrid (Formerly Loveland Technologies)",
+      "type": "Property Data Vendor / Technology Partner",
+      "website": "https://regrid.com/",
+      "fit_rationale": "Nationwide property data and mapping platform. Provides parcel data for Ohio including Ashtabula County. Offers machine learning and AI capabilities for land parcel analysis. Potential integration partner or technology vendor for enhancing the ParcelVisor tool with comprehensive parcel data layers. Regrid's API could provide foundational data for the AI assessment engine.",
+      "source": "Regrid Website, Ohio Parcel Data Research"
+    },
+    {
+      "name": "Ohio Housing Finance Agency (OHFA) - Neighborhood Initiative Program",
+      "type": "Funding Source / State Partner",
+      "website": "https://www.ohiohome.org/",
+      "fit_rationale": "State agency that funds land bank activities including the Neighborhood Initiative Program (NIP). Ashtabula County Land Bank operates under grants from OHFA. Technology investments in property assessment tools align with OHFA's mission of neighborhood revitalization and blight elimination. Potential advocate for technology adoption across Ohio's 51+ county land banks.",
+      "source": "Ohio Housing Finance Agency, Ashtabula County Grant Documents"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_score": 9,
+    "target_alignment": "Strong",
+    "notes": "The ParcelVisor MVP has strong branding with the Ashtabula Land Bank logo and civic-tech aesthetic. Dark navy background with vibrant green accents creates a professional, trustworthy appearance. However, the relationship between the vercel.app URL and the official organization needs clarification - appears to be a prototype/third-party project rather than official deployment."
+  },
+  "site_improvements": [
+    "Add footer section to complete the page layout (currently ends abruptly)",
+    "Implement actual AI property assessment functionality with backend integration",
+    "Add mobile-responsive breakpoints for the assessment card",
+    "Clarify relationship with official Ashtabula County Land Bank to establish legitimacy",
+    "Add data source attribution (auditor data, parcel boundaries, etc.)"
+  ],
+  "aesthetics_and_layout_notes": "Professional dark-mode civic-tech design with excellent use of whitespace. Strong visual hierarchy guides users to the primary CTA. Gradient text on 'made for you' adds modern polish. Icon usage (clock, bar chart) is appropriate and adds visual interest. High-contrast navy/green color scheme conveys authority and trustworthiness appropriate for government-adjacent services.",
+  "whitelabel_potential": {
+    "rating": "medium",
+    "reasoning": "While the layout is highly reusable for other land banks or municipal property assessment tools, the branding is deeply baked into the copy and logo, requiring significant 'skinning' effort to deploy elsewhere. However, the underlying architecture (input card, assessment display, value proposition badges) is modular and could be adapted for other county land banks in Ohio's network of 51+ land banks.",
+    "similar_targets": [
+      "Cuyahoga County Land Bank",
+      "Lake County Land Reutilization Corporation",
+      "Mahoning County Land Reutilization Corporation",
+      "Trumbull County Land Reutilization Corporation"
+    ]
+  },
+  "action_next": [
+    "Contact Alex Iarocci (Executive Director) to introduce ParcelVisor AI assessment tool",
+    "Schedule demo with Ashtabula County Land Bank board of directors (meets regularly, board includes County Treasurer Dawn Cragon and other county officials)",
+    "Explore integration with Regrid parcel data API for enhanced property analysis",
+    "Present at Ohio Land Bank Association meeting for statewide adoption",
+    "Apply for Ohio Housing Finance Agency innovation grant to fund deployment"
+  ],
+  "sources": [
+    {
+      "name": "Ashtabula County Land Bank Official Website",
+      "url": "https://www.ashtabulacountylandbank.com/"
+    },
+    {
+      "name": "GuideStar Profile - EIN 47-1129824",
+      "url": "https://www.guidestar.org/profile/47-1129824"
+    },
+    {
+      "name": "ProPublica Nonprofit Explorer",
+      "url": "https://projects.propublica.org/nonprofits/organizations/471129824"
+    },
+    {
+      "name": "Star Beacon - Land Bank Funding Article",
+      "url": "https://www.starbeacon.com/news/ashtabula-county-land-bank-500-000-richer/article_2762f1fe-2d72-11e4-8c08-001a4bcf887a.html"
+    },
+    {
+      "name": "Alex Iarocci LinkedIn Profile",
+      "url": "https://www.linkedin.com/in/alex-iarocci-101570204/"
+    },
+    {
+      "name": "Ohio Auditor of State Audit Reports",
+      "url": "https://ohioauditor.gov/auditsearch/Reports/2024/Ashtabula_County_Land_Reutilization_Corporation_23-Ashtabula_FINAL.pdf"
+    },
+    {
+      "name": "Regrid Property Data Platform",
+      "url": "https://regrid.com/"
+    },
+    {
+      "name": "Cuyahoga Land Bank",
+      "url": "https://www.cuyahogalandbank.org/"
+    }
+  ]
+}

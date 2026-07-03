@@ -1,0 +1,92 @@
+- main [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e7]: Harbor Gardens • 1022 Bridge Street • Ashtabula Harbor
+      - paragraph [ref=e8]: Local Groceries. Ready for Pickup.
+      - heading "A pickup marketplace shaped around Harbor Gardens, not a generic grocer." [level=1] [ref=e9]
+      - paragraph [ref=e10]: This version of Local Grocer Go is repositioned as a Harbor Gardens pickup confirmation flow for fresh produce, pantry staples, demonstration kitchen items, and artisan goods sourced from 50+ local vendors.
+      - generic [ref=e11]:
+        - generic [ref=e12]: 50+ local vendors
+        - generic [ref=e13]: Demonstration kitchen items
+        - generic [ref=e14]: Food security + self-reliance mission
+    - generic [ref=e15]:
+      - img "Harbor Gardens icon" [ref=e17]
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Pickup confirmation for
+        - img "Harbor Gardens" [ref=e20]
+        - paragraph [ref=e21]: A warmer, market-friendly confirmation experience for Harbor Gardens shoppers, classes, pantry pickups, and Bridge Street curbside orders.
+  - region "Harbor Gardens market photography" [ref=e22]:
+    - img "Harbor Gardens produce and market imagery" [ref=e23]
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: Harbor Gardens feel
+      - heading "Fresh market color, local food energy, and pickup flow built for the Harbor." [level=2] [ref=e26]
+  - generic [ref=e27]:
+    - article [ref=e28]:
+      - paragraph [ref=e29]: Mission
+      - heading "Community around self-reliance and food security" [level=3] [ref=e30]
+      - paragraph [ref=e31]: "Pickup messaging should feel like Harbor Gardens: practical, welcoming, and rooted in local food access."
+    - article [ref=e32]:
+      - paragraph [ref=e33]: Offerings
+      - heading "Produce, pantry, kitchen, and artisan goods" [level=3] [ref=e34]
+      - paragraph [ref=e35]: The flow now supports seasonal produce, grains, cheese, breads, eggs, prepared items, and local maker goods.
+    - article [ref=e36]:
+      - paragraph [ref=e37]: Why this works
+      - heading "Convenience without losing Harbor Gardens' voice" [level=3] [ref=e38]
+      - paragraph [ref=e39]: Customers get clear pickup information while the product still feels like a local food hub, not a chain checkout.
+  - generic [ref=e40]:
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - paragraph [ref=e43]: Confirmation Builder
+        - heading "Draft a Harbor Gardens pickup message." [level=2] [ref=e44]
+      - generic [ref=e45]:
+        - generic [ref=e46]: Pickup name
+        - textbox "Pickup name" [ref=e47]:
+          - /placeholder: Bridge Street Neighbor
+          - text: Bridge Street Neighbor
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]: Order mix
+          - combobox "Order mix" [ref=e51]:
+            - option "Fresh produce + pantry staples" [selected]
+            - option "Cheese, bread, and prepared kitchen items"
+            - option "Maple syrup, grains, and local eggs"
+            - option "Giftable artisan goods + grocery basics"
+        - generic [ref=e52]:
+          - generic [ref=e53]: Pickup window
+          - combobox "Pickup window" [ref=e54]:
+            - option "Wednesday, 3:00 PM - 4:00 PM"
+            - option "Thursday, 11:00 AM - 12:00 PM" [selected]
+            - option "Friday, 2:00 PM - 3:00 PM"
+            - option "Saturday, 10:30 AM - 11:30 AM"
+      - generic [ref=e55]:
+        - generic [ref=e56]: Substitution preference
+        - combobox "Substitution preference" [ref=e57]:
+          - option "No substitutions without checking first"
+          - option "Best available local substitute is okay" [selected]
+          - option "Prepared foods okay if seasonal produce is out"
+          - option "Focus on pantry items if produce changes"
+      - generic [ref=e58]: Harbor Gardens can use this kind of confirmation for weekly pantry pickup, class-adjacent market orders, and fresh local produce bundles.
+    - complementary [ref=e59]:
+      - generic [ref=e60]:
+        - paragraph [ref=e61]: Preview
+        - heading "Pickup confirmation" [level=2] [ref=e62]
+      - generic [ref=e63]: "Bridge Street Neighbor, Your Harbor Gardens order is confirmed for pickup at 1022 Bridge Street. We are gathering fresh produce, pantry goods, and local staples from today’s vendor selection. Pickup window: Thursday, 11:00 AM - 12:00 PM. Order type: Fresh produce + pantry staples. Substitution note: Best available local substitute is okay. If a seasonal item shifts, Harbor Gardens will match it with the closest local option that fits your note. Thank you for supporting Harbor Gardens and the 50+ local vendors we stock in Ashtabula Harbor."
+      - list [ref=e64]:
+        - listitem [ref=e65]: Anchored to Harbor Gardens and Bridge Street pickup.
+        - listitem [ref=e66]: Reflects local substitutions rather than generic inventory language.
+        - listitem [ref=e67]: Supports produce, pantry, kitchen, and artisan goods in one message.
+  - generic [ref=e68]:
+    - article [ref=e69]:
+      - paragraph [ref=e70]: Buyer fit
+      - heading "Built for Harbor Gardens' strongest real-world use cases." [level=3] [ref=e71]
+      - list [ref=e72]:
+        - listitem [ref=e73]: Seasonal produce pickups for repeat Harbor shoppers.
+        - listitem [ref=e74]: Prepared kitchen items bundled with pantry staples.
+        - listitem [ref=e75]: Mixed local vendor orders that need warm, clear substitution language.
+    - article [ref=e76]:
+      - paragraph [ref=e77]: Brand fidelity
+      - heading "Grounded in the Harbor Gardens research and asset pack." [level=3] [ref=e78]
+      - list [ref=e79]:
+        - listitem [ref=e80]: Uses the official surfaced icon plus Harbor Gardens-specific market photography.
+        - listitem [ref=e81]: Keeps the palette in organic greens, warm neutrals, and produce-market tones.
+        - listitem [ref=e82]: Centers community, sustainability, local vendors, and self-reliance over generic convenience copy.

@@ -1,0 +1,83 @@
+{
+  "mvp": "wedding",
+  "run_timestamp_utc": "2026-03-22T06:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Wedding MVP (wedding planning and vendor management platform). Targets wedding venues, planners, photographers, and bridal services in Ashtabula County and Northeast Ohio that could benefit from booking management, vendor coordination, and event planning tools.",
+  "leads": [
+    {
+      "organization": "Elks Lodge #208",
+      "type": "Wedding Venue",
+      "website": "https://www.theknot.com/marketplace/wedding-reception-venues-ashtabula-oh",
+      "fit_rationale": "Beautiful waterside wedding venue on Lake Erie in Ashtabula, OH. Wedding planning platform would help manage bookings, vendor coordination, and event logistics.",
+      "source": "https://www.theknot.com/marketplace/wedding-reception-venues-ashtabula-oh"
+    },
+    {
+      "organization": "Lake Erie Building",
+      "type": "Wedding/Event Venue",
+      "website": "https://lakeeriebuildingevents.com/",
+      "fit_rationale": "Industrial-style event venue with elegant chandeliers and open floor plan. Event management platform would support their creative wedding celebrations.",
+      "source": "https://lakeeriebuildingevents.com/"
+    },
+    {
+      "organization": "Designs by Bernie",
+      "type": "Wedding Planner",
+      "website": "https://www.theknot.com/marketplace/designs-by-bernie-ashtabula-oh-860011",
+      "fit_rationale": "Ashtabula-based wedding planner. Planning platform would streamline client management, vendor coordination, and timeline creation.",
+      "source": "https://www.theknot.com/marketplace/designs-by-bernie-ashtabula-oh-860011"
+    },
+    {
+      "organization": "WeddingWire Ashtabula Vendors",
+      "type": "Wedding Vendor Directory",
+      "website": "https://www.weddingwire.com/c/oh-ohio/ashtabula/wedding-vendors/605-vendors.html",
+      "fit_rationale": "Directory of 605+ wedding vendors in Ashtabula area. Platform partnership opportunity for vendor management and booking integration.",
+      "source": "https://www.weddingwire.com/c/oh-ohio/ashtabula/wedding-vendors/605-vendors.html"
+    },
+    {
+      "organization": "The Knot Ohio Photographers",
+      "type": "Photographer Directory",
+      "website": "https://www.theknot.com/marketplace/wedding-photographers/ohio",
+      "fit_rationale": "Leading wedding photographer marketplace in Ohio. Wedding platform could integrate with photographer booking and gallery delivery.",
+      "source": "https://www.theknot.com/marketplace/wedding-photographers/ohio"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add vendor marketplace with reviews and portfolios.",
+    "Include budget tracker with expense categories.",
+    "Create timeline builder with milestone reminders.",
+    "Add guest list manager with RSVP tracking.",
+    "Provide seating chart designer with drag-and-drop.",
+    "Include registry integration from multiple stores.",
+    "Add photo gallery sharing for vendors and couples.",
+    "Create vendor contract and payment tracking."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Wedding platforms need romantic, elegant design—clinical interfaces feel out of place.",
+      "Without mobile-friendly design, couples can't plan on-the-go.",
+      "Poor photo gallery features limit vendor portfolio display."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Very High (tentative)",
+    "reason": "Wedding planning platforms are highly white-labelable for individual venues, planners, and photographers with custom branding.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Elks Lodge #208 about venue management needs.",
+    "Reach out to Lake Erie Building about event planning tools.",
+    "Explore partnership with Designs by Bernie for planner tools."
+  ],
+  "sources": [
+    "https://www.theknot.com/marketplace/wedding-reception-venues-ashtabula-oh",
+    "https://lakeeriebuildingevents.com/",
+    "https://www.theknot.com/marketplace/designs-by-bernie-ashtabula-oh-860011",
+    "https://www.weddingwire.com/c/oh-ohio/ashtabula/wedding-vendors/605-vendors.html",
+    "https://www.theknot.com/marketplace/wedding-photographers/ohio"
+  ]
+}

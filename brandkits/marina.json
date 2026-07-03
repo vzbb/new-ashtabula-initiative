@@ -1,0 +1,113 @@
+{
+  "mvp": "marina",
+  "generated_at": "2026-03-22T19:30:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/marina.json",
+  "research_sources": [
+    "https://www.harboryachtclub.net/",
+    "https://northcoastmarina.com/"
+  ],
+  "target_buyer_1": {
+    "organization": "Harbor Yacht Club & Marina",
+    "type": "Private Marina / Yacht Club",
+    "website": "https://www.harboryachtclub.net/",
+    "address": "1833 Giannell Avenue, Ashtabula, OH 44004",
+    "phone": "440-992-2628",
+    "why_top_candidate": "Private marina with direct Lake Erie access located near Geneva On The Lake. Offers seasonal dock openings and markets them actively - indicating demand exceeds supply. Perfect candidate for a waitlist system to manage seasonal slip turnover and prospective member inquiries. Private club model with limited dock space creates natural scarcity requiring waitlist management.",
+    "fit_score": 94
+  },
+  "target_buyer_2": {
+    "organization": "North Coast Marina & Campgrounds",
+    "type": "Full-Service Marina & Campground",
+    "website": "https://northcoastmarina.com/",
+    "address": "115 East 24th Street, Ashtabula, OH 44004",
+    "phone": "440-998-6272",
+    "why_top_candidate": "Large facility with 250 boat slips and 32 campground sites on Ashtabula River - 20-minute cruise to Lake Erie. Full amenities: pool/spas, pump-out station, modern restrooms/showers. Markets itself as 'Lake Erie's Hottest Marina and Campground'. Already uses Dockwa for online reservations showing technology adoption. Waitlist system would complement existing booking infrastructure for high-demand seasonal spots.",
+    "fit_score": 92
+  },
+  "actual_brand_research": {
+    "harbor_yacht_club": {
+      "type": "Private marina with Lake Erie access",
+      "location": "Ashtabula, OH near Geneva On The Lake",
+      "features": [
+        "Direct Lake Erie access",
+        "Great fishing and boating access",
+        "Proximity to Geneva On The Lake"
+      ],
+      "availability": "Seasonal dock openings available (actively marketed)",
+      "positioning": "Perfect spot for your boat",
+      "visual_style": "Private, exclusive, boating/fishing focused"
+    },
+    "north_coast_marina": {
+      "tagline": "Lake Erie's Hottest Marina and Campground",
+      "location": "Ashtabula River, Ashtabula, OH (20-minute cruise to Lake Erie)",
+      "capacity": {
+        "boat_slips": 250,
+        "campground_sites": 32
+      },
+      "campground_amenities": [
+        "Water hookups",
+        "Electric hookups",
+        "Sewer hookups",
+        "Boat dock at each site"
+      ],
+      "marina_amenities": [
+        "Pool and spas",
+        "Full service pump-out station",
+        "Modern restrooms with showers"
+      ],
+      "nearby_attractions": [
+        "Historic Ashtabula Harbor",
+        "Beautiful beaches",
+        "Geneva-On-The-Lake"
+      ],
+      "experience": "Ultimate boating and camping lifestyle",
+      "visual_style": "Resort-style, family fun, full-service, picturesque setting"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Your Slip. Your Spot. On The List.",
+    "positioning": "The AI-powered slip waitlist and booking confirmation platform for Lake Erie marinas — serving private clubs like Harbor Yacht Club and full-service facilities like North Coast Marina with seamless waitlist management and boater communications.",
+    "color_palette_derived_from_research": {
+      "primary": "#1E3A5F",
+      "accent": "#4A90A4",
+      "background": "#F0F4F8",
+      "text": "#1A202C",
+      "secondary": "#5D8AA8"
+    },
+    "typography_recommendation": {
+      "heading_font": "Nautical-inspired serif or clean maritime sans-serif",
+      "body_font": "Clean professional sans-serif"
+    },
+    "mood_keywords_from_research": ["nautical", "Lake-Erie", "boating", "camping", "marina", "waitlist", "exclusive"],
+    "visual_direction": {
+      "hero_image_concept": "Boats docked at Ashtabula Harbor with Lake Erie sunset",
+      "color_scheme": "Deep nautical blues with aqua accents",
+      "photography_style": "Marina facilities, Lake Erie boating, Ashtabula River, camping, waterfront lifestyle"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Lake Erie maritime culture and Ashtabula Harbor's recreational boating community",
+    "key_features_needed": [
+      "Slip waitlist management with priority queue",
+      "Seasonal dock opening notifications",
+      "Boat size/ specifications matching",
+      "Member/prospect communication automation",
+      "Integration with Dockwa (North Coast already uses)",
+      "Transient dock reservation add-on",
+      "Campground site waitlist (North Coast)",
+      "Lake Erie weather alerts integration",
+      "Mobile app for boaters"
+    ],
+    "differentiators_based_on_research": [
+      "Harbor Yacht Club: Private marina with seasonal scarcity",
+      "Harbor Yacht Club: Near Geneva On The Lake",
+      "North Coast: 250 slips + 32 campground sites",
+      "North Coast: Full hookups (water/electric/sewer) at campsites",
+      "North Coast: Already uses Dockwa (tech adoption)",
+      "North Coast: 'Lake Erie's Hottest Marina' positioning",
+      "Both: Ashtabula River access to Lake Erie",
+      "Both: 20-minute cruise to open water"
+    ]
+  }
+}

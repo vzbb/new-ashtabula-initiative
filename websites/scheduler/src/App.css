@@ -1,0 +1,574 @@
+:root {
+  --ink: #132033;
+  --muted: #55657d;
+  --line: rgba(19, 32, 51, 0.12);
+  --panel: rgba(255, 255, 255, 0.92);
+  --panel-strong: #fffaf5;
+  --heat: #c2410c;
+  --heat-bright: #f97316;
+  --cool: #2563eb;
+  --cool-soft: #dbeafe;
+  --sand: #fff3e8;
+  --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+}
+
+.page-shell {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.2), transparent 32%),
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 28%),
+    linear-gradient(180deg, #f8fbff 0%, #fff7ef 52%, #fff 100%);
+}
+
+.page-backdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.backdrop-heat {
+  position: absolute;
+  inset: 6% auto auto 60%;
+  width: 28rem;
+  height: 28rem;
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.18), transparent 70%);
+  filter: blur(12px);
+}
+
+.backdrop-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.45;
+  background-image:
+    linear-gradient(rgba(19, 32, 51, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(19, 32, 51, 0.03) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent 86%);
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 40px;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(255, 247, 237, 0.95), rgba(255, 255, 255, 0.92));
+  border: 1px solid rgba(194, 65, 12, 0.12);
+  box-shadow: 0 18px 34px rgba(194, 65, 12, 0.08);
+}
+
+.brand-mark {
+  width: 72px;
+  height: 72px;
+  flex: none;
+  filter: drop-shadow(0 18px 30px rgba(194, 65, 12, 0.18));
+}
+
+.kicker,
+.eyebrow,
+.small-label {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.kicker,
+.eyebrow {
+  color: var(--heat);
+}
+
+.small-label {
+  color: var(--cool);
+}
+
+.brand-title {
+  margin: 0.2rem 0 0;
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.topbar-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.topbar-meta span,
+.status-pill,
+.confirmation-details span {
+  border: 1px solid rgba(37, 99, 235, 0.14);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.logo-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 24px;
+  margin-bottom: 22px;
+}
+
+.official-logo {
+  width: min(100%, 260px);
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-ribbon-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.logo-ribbon-copy strong {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.45fr 0.9fr;
+  gap: 22px;
+  padding: 34px;
+}
+
+.hero-copy h2,
+.section-heading h3,
+.proof-card h3,
+.contact-panel h3,
+.prep-panel h3,
+.emergency-panel h3,
+.service-spotlight h3,
+.callout-card strong,
+.confirmation-card h4 {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.hero-copy h2 {
+  margin: 10px 0 12px;
+  font-size: clamp(2.2rem, 4.2vw, 4rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.hero-text,
+.proof-card p,
+.contact-panel li,
+.prep-panel li,
+.emergency-panel p,
+.service-spotlight p,
+.callout-card p,
+.booking-form span,
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.confirmation-card p {
+  color: var(--muted);
+}
+
+.hero-text {
+  margin: 0;
+  max-width: 60ch;
+  font-size: 1.05rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.primary-action,
+.secondary-action,
+.emergency-link,
+.button-reset {
+  font: inherit;
+  text-decoration: none;
+}
+
+.primary-action,
+.secondary-action,
+.emergency-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  min-height: 52px;
+  font-weight: 700;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.button-reset {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-action {
+  padding: 0 20px;
+  color: white;
+  background: linear-gradient(135deg, var(--heat-bright), var(--heat));
+  box-shadow: 0 20px 30px rgba(194, 65, 12, 0.22);
+}
+
+.secondary-action {
+  padding: 0 18px;
+  color: var(--cool);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.16);
+}
+
+.primary-action:hover,
+.secondary-action:hover,
+.emergency-link:hover {
+  transform: translateY(-2px);
+}
+
+.signal-strip {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.signal-strip li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(19, 32, 51, 0.08);
+}
+
+.signal-strip svg,
+.spotlight-meta svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  color: var(--cool);
+}
+
+.hero-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.service-spotlight,
+.callout-card,
+.booking-panel,
+.contact-panel,
+.prep-panel,
+.emergency-panel,
+.proof-card {
+  padding: 24px;
+}
+
+.service-spotlight {
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255, 243, 232, 0.95), rgba(255, 255, 255, 0.95));
+  border: 1px solid rgba(194, 65, 12, 0.14);
+}
+
+.service-spotlight h3,
+.section-heading h3,
+.proof-card h3,
+.contact-panel h3,
+.prep-panel h3,
+.emergency-panel h3,
+.confirmation-card h4 {
+  margin: 8px 0 10px;
+  font-size: 1.85rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.spotlight-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.spotlight-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.callout-card {
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.96), rgba(30, 64, 175, 0.96));
+  color: white;
+}
+
+.callout-card .small-label,
+.callout-card p {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.callout-card strong {
+  display: block;
+  margin: 8px 0 10px;
+  font-size: 1.8rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+.proof-grid,
+.booking-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.proof-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.proof-card {
+  min-height: 220px;
+}
+
+.booking-grid {
+  grid-template-columns: 1.35fr 0.8fr;
+  align-items: start;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-form span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.form-row.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  border: 1px solid rgba(19, 32, 51, 0.14);
+  border-radius: 16px;
+  background: #fff;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: 3px solid rgba(37, 99, 235, 0.16);
+  border-color: rgba(37, 99, 235, 0.34);
+}
+
+.confirmation-card {
+  border-radius: 24px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  background: linear-gradient(180deg, rgba(219, 234, 254, 0.64), rgba(255, 255, 255, 0.95));
+  padding: 24px;
+}
+
+.confirmation-mark {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.12);
+  color: var(--cool);
+  padding: 0.45rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.confirmation-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.side-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.detail-list,
+.prep-list {
+  padding-left: 1.2rem;
+  margin: 12px 0 0;
+}
+
+.detail-list li,
+.prep-list li {
+  margin-bottom: 0.8rem;
+}
+
+.emergency-panel {
+  background: linear-gradient(180deg, rgba(255, 243, 232, 0.92), rgba(255, 255, 255, 0.96));
+}
+
+.emergency-link {
+  width: 100%;
+  margin-top: 18px;
+  background: var(--ink);
+  color: white;
+}
+
+@media (max-width: 1040px) {
+  .hero,
+  .booking-grid,
+  .proof-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(100% - 20px, 1180px);
+    padding-top: 18px;
+  }
+
+  .topbar,
+  .section-heading,
+  .form-row.split {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .topbar {
+    justify-content: stretch;
+  }
+
+  .logo-ribbon {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topbar-meta {
+    justify-content: flex-start;
+  }
+
+  .hero,
+  .service-spotlight,
+  .callout-card,
+  .booking-panel,
+  .contact-panel,
+  .prep-panel,
+  .emergency-panel,
+  .proof-card {
+    padding: 20px;
+  }
+
+  .brand-title {
+    font-size: clamp(2rem, 12vw, 3rem);
+  }
+
+  .hero-copy h2 {
+    font-size: clamp(1.8rem, 12vw, 3rem);
+  }
+}

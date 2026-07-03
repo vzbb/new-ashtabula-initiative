@@ -1,0 +1,3 @@
+[       9ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4210/pet-match/assets/index-CtT60zxv.css:0
+[       9ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4210/pet-match/assets/index-vZXE6FB_.js:0
+[     127ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:4210/pet-match/acapl-favicon.svg:0

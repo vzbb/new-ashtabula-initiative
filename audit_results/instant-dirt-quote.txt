@@ -1,0 +1,1 @@
+SITE: instant-dirt-quote | CENTERING: 0 | BRANDING: 0 | LOREM: false | NOTES: Analysis requires source files (e.g., src/App.jsx) as index.html is a boilerplate.

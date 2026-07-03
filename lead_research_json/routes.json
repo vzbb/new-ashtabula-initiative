@@ -1,0 +1,83 @@
+{
+  "mvp": "routes",
+  "run_timestamp_utc": "2026-03-22T03:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Routes MVP (transit routing/delivery optimization platform). Targets transportation providers, transit systems, and logistics companies in Ashtabula County and Northeast Ohio that could benefit from route optimization, transit planning, and delivery management tools.",
+  "leads": [
+    {
+      "organization": "Ashtabula County Transportation System (ACTS)",
+      "type": "County Public Transit",
+      "website": "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+      "fit_rationale": "Operates point deviation and door-to-door transit services. Route optimization tools would improve service efficiency and reduce travel times.",
+      "source": "https://www.ashtabulacounty.us/442/Door-to-Door-Service"
+    },
+    {
+      "organization": "NOACA (Northeast Ohio Areawide Coordinating Agency)",
+      "type": "Regional Transportation Planning",
+      "website": "https://www.noaca.org/regional-planning/transportation-planning/transit-planning-tod/transit-planning",
+      "fit_rationale": "Coordinates transit planning across Northeast Ohio. Route optimization and transit planning tools would support regional mobility initiatives.",
+      "source": "https://www.noaca.org/regional-planning/transportation-planning/transit-planning-tod/transit-planning"
+    },
+    {
+      "organization": "Unis Logistics (Ashtabula)",
+      "type": "LTL Shipping/Logistics",
+      "website": "https://www.unisco.com/locations/ohio/ashtabula/ltl",
+      "fit_rationale": "Specializes in less-than-truckload shipping and freight consolidation. Route optimization would improve delivery efficiency and reduce costs.",
+      "source": "https://www.unisco.com/locations/ohio/ashtabula/ltl"
+    },
+    {
+      "organization": "RTA (Greater Cleveland Regional Transit Authority)",
+      "type": "Regional Transit Authority",
+      "website": "https://www.riderta.com/",
+      "fit_rationale": "Major transit provider serving Cleveland and surrounding areas. Route planning tools could enhance service planning and optimization.",
+      "source": "https://www.riderta.com/"
+    },
+    {
+      "organization": "Ashtabula County Trucking Companies",
+      "type": "Local Freight Carriers",
+      "website": "https://www.quicktransportsolutions.com/carrier/ohio/ashtabula.php",
+      "fit_rationale": "Multiple local trucking and logistics companies. Route optimization platform would benefit small carriers competing with larger firms.",
+      "source": "https://www.quicktransportsolutions.com/carrier/ohio/ashtabula.php"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add real-time route optimization with traffic and weather integration.",
+    "Include multi-stop route planning for delivery and transit services.",
+    "Create driver mobile app with turn-by-turn navigation.",
+    "Add fuel cost calculator and efficiency tracking.",
+    "Provide fleet management dashboard with vehicle tracking.",
+    "Include scheduling integration for appointment-based routes.",
+    "Add customer notification system for arrival estimates.",
+    "Create analytics dashboard for route performance metrics."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Route planning interfaces need clear map visualization—poor map integration hinders usability.",
+      "Without mobile optimization, drivers cannot access routes in the field.",
+      "Complex route data without clear presentation overwhelms dispatchers."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Very High (tentative)",
+    "reason": "Route optimization platforms are highly white-labelable for transit agencies, logistics companies, and delivery services with custom branding.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Ashtabula County Transportation System about route optimization.",
+    "Reach out to NOACA about regional transit planning tools.",
+    "Explore partnership with local trucking companies."
+  ],
+  "sources": [
+    "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+    "https://www.noaca.org/regional-planning/transportation-planning/transit-planning-tod/transit-planning",
+    "https://www.unisco.com/locations/ohio/ashtabula/ltl",
+    "https://www.riderta.com/",
+    "https://www.quicktransportsolutions.com/carrier/ohio/ashtabula.php"
+  ]
+}

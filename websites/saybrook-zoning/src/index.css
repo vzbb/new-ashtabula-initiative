@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* Saybrook Heritage Palette - Subtle High-Contrast Forest & Sand */
+  --saybrook-forest: #182c25;
+  --saybrook-forest-soft: #2d4a3e;
+  --saybrook-mist: #e8e4db;
+  --saybrook-cream: #fdfcf8;
+  --saybrook-sand: #d4af37;
+  --saybrook-clay: #b88a5e;
+  --saybrook-ink: #182c25;
+  --saybrook-border: rgba(24, 44, 37, 0.08);
+  --saybrook-glow: #FACC15;
+
+  
+  /* Spatial Tokens - Sophisticated & Clean */
+  --blur-glass: 16px;
+  --shadow-spatial: 0 20px 50px -12px rgba(16, 40, 32, 0.15), 0 0 1px rgba(16, 40, 32, 0.05);
+  --shadow-float: 0 12px 30px -8px rgba(16, 40, 32, 0.2);
+  --border-glass: 1px solid rgba(16, 40, 32, 0.1);
+  --glass-saturate: 180%;
+  
+  --font-sans: "Manrope", "Inter", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+}
+
+@theme {
+  --color-saybrook-forest: var(--saybrook-forest);
+  --color-saybrook-forest-soft: var(--saybrook-forest-soft);
+  --color-saybrook-mist: var(--saybrook-mist);
+  --color-saybrook-cream: var(--saybrook-cream);
+  --color-saybrook-sand: var(--saybrook-sand);
+  --color-saybrook-clay: var(--saybrook-clay);
+  --color-saybrook-ink: var(--saybrook-ink);
+  --color-saybrook-glow: var(--saybrook-glow);
+  
+  --blur-glass: var(--blur-glass);
+  --shadow-spatial: var(--shadow-spatial);
+  --shadow-float: var(--shadow-float);
+  --border-glass: var(--border-glass);
+}
+
+@layer base {
+  body {
+    @apply bg-saybrook-cream text-saybrook-ink antialiased;
+    font-family: var(--font-sans);
+    background-image: 
+      radial-gradient(circle at 100% 0%, rgba(16, 40, 32, 0.02) 0, transparent 60%),
+      radial-gradient(circle at 0% 100%, rgba(212, 175, 55, 0.03) 0, transparent 40%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}

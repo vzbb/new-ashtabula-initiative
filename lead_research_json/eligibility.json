@@ -1,0 +1,83 @@
+{
+  "mvp": "eligibility",
+  "run_timestamp_utc": "2026-03-22T01:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Eligibility MVP (benefits eligibility determination platform). Targets county JFS offices, social service agencies, and community organizations that help residents determine eligibility for SNAP, Medicaid, cash assistance, and other public benefit programs.",
+  "leads": [
+    {
+      "organization": "Ashtabula County Department of Job and Family Services",
+      "type": "County Social Services Agency",
+      "website": "https://www.acdjfs.org/",
+      "fit_rationale": "Determines eligibility for food stamps, Medicaid, Ohio Works First, and childcare assistance. Eligibility screening tools would streamline intake and reduce caseworker workload.",
+      "source": "https://www.acdjfs.org/"
+    },
+    {
+      "organization": "SNAP Screener",
+      "type": "Third-Party Eligibility Calculator",
+      "website": "https://www.snapscreener.com/screener/ohio",
+      "fit_rationale": "Provides SNAP, WIC, and Medicaid eligibility calculators for Ohio. Partnership or white-label opportunities for localized eligibility tools.",
+      "source": "https://www.snapscreener.com/screener/ohio"
+    },
+    {
+      "organization": "Ohio Department of Job and Family Services",
+      "type": "State Social Services Agency",
+      "website": "https://jfs.ohio.gov/",
+      "fit_rationale": "Oversees statewide eligibility determination for cash and food assistance. Digital eligibility tools would support county-level implementation.",
+      "source": "https://jfs.ohio.gov/"
+    },
+    {
+      "organization": "Ohio Legal Help",
+      "type": "Legal Aid Organization",
+      "website": "https://www.ohiolegalhelp.org/topic/ohio_works_first",
+      "fit_rationale": "Provides information on cash assistance and work requirements. Eligibility tools would help their clients understand program requirements.",
+      "source": "https://www.ohiolegalhelp.org/topic/ohio_works_first"
+    },
+    {
+      "organization": "Ashtabula County Community Action Agency",
+      "type": "Anti-Poverty Organization",
+      "website": "https://accaa.org/",
+      "fit_rationale": "Helps residents access assistance programs. Eligibility screening would complement their services and help clients identify available benefits.",
+      "source": "https://accaa.org/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Create multi-program eligibility screener (SNAP, Medicaid, WIC, OWF, childcare) in one tool.",
+    "Include detailed eligibility calculation with step-by-step explanations.",
+    "Add document checklist generator based on household circumstances.",
+    "Provide estimated benefit amounts with clear disclaimers.",
+    "Create referral links to county JFS offices and application portals.",
+    "Add eligibility tracking for households with changing circumstances.",
+    "Include work requirement calculators for cash assistance programs.",
+    "Create mobile-optimized design for on-the-go screening."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Eligibility determination sites need trustworthy, government-appropriate design—unprofessional appearance undermines credibility.",
+      "Complex eligibility rules presented without clear explanation confuse users.",
+      "Missing progress indicators leave users uncertain about screening length."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Very High (tentative)",
+    "reason": "Eligibility determination platforms are highly white-labelable for county JFS offices, community action agencies, and healthcare navigators.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Ashtabula County DJFS about eligibility screening integration.",
+    "Reach out to SNAP Screener about partnership opportunities.",
+    "Explore integration with Ohio JFS statewide systems."
+  ],
+  "sources": [
+    "https://www.acdjfs.org/",
+    "https://www.snapscreener.com/screener/ohio",
+    "https://jfs.ohio.gov/",
+    "https://www.ohiolegalhelp.org/topic/ohio_works_first",
+    "https://accaa.org/"
+  ]
+}

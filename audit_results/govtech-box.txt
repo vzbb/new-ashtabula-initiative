@@ -1,0 +1,1 @@
+SITE: govtech-box | CENTERING: 9 | BRANDING: 9 | LOREM: false | NOTES: Main content is well-centered horizontally using margin:0 auto and flexbox. Strong, consistent branding with custom logo, color palette, and typography. No Lorem Ipsum.

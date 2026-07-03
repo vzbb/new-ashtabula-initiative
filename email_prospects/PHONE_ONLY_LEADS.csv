@@ -1,0 +1,13 @@
+mvp,lead_rank,organization,website,contact_name,contact_title,email,phone,source_file
+auto-detail-pro,1,Flawless Coating & Detailing,https://flawlesscad.com/,,,,,auto-detail_emails.json
+boat-storage,2,Harbor Yacht Club & Marina,https://www.harboryachtclub.net/,,,,,boat-storage_emails.json
+dirt-quote,1,,https://www.brockwaystopsoil.com/,,,,,dirt-quote_emails.json
+grocer,2,,https://sandersmarkets.com/jefferson/,,,,,grocer_emails.json
+marina,1,,https://www.harboryachtclub.net/,,,,,marina_emails.json
+marina,2,,https://northcoastmarina.com/,,,,,marina_emails.json
+scheduler,1,Blank Heating Company Inc,https://www.blankheatingco.com/,,,,,scheduler_emails.json
+scheduler,2,Ultimate Appearance Salon,https://www.ultimateappearancesalon.com/,,,,,scheduler_emails.json
+trumbull-locker,1,Trumbull Locker Plant,https://trumbull-locker.com/,,,,,trumbull-locker_emails.json
+trumbull-locker,2,Miles Farmers Market,https://www.milesfarmersmarket.com/,,,,,trumbull-locker_emails.json
+wedding-lead-form,1,The Lakehouse Inn & Winery,https://thelakehouseinn.com/,,,,,wedding_emails.json
+wedding-lead-form,2,Ferrante Winery & Ristorante,https://www.ferrantewinery.com/,,,,,wedding_emails.json

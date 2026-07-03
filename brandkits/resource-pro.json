@@ -1,0 +1,145 @@
+{
+  "mvp": "resource-pro",
+  "generated_at": "2026-03-22T23:30:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/resource-pro.json",
+  "research_sources": [
+    "https://www.ashtabulagrowth.com/workforce-development",
+    "https://www.acdjfs.org/"
+  ],
+  "target_buyer_1": {
+    "organization": "Growth Partnership for Ashtabula County",
+    "type": "Economic Development Organization",
+    "website": "https://www.ashtabulagrowth.com/workforce-development",
+    "why_top_candidate": "Focuses on workforce development and business resources in Ashtabula County. Partners with LEADERship Ashtabula County and The Computer Workshop to deliver leadership training courses. Offers member discounts (25% off) on professional development: Business Communications, Dealing with Conflict and Difficult People, Teamwork and Team Building, Communication Strategies. Resource Pro platform would help manage business assistance programs, workforce initiatives, and training resource allocation.",
+    "fit_score": 93
+  },
+  "target_buyer_2": {
+    "organization": "OhioMeansJobs Ashtabula County (via ACJFS)",
+    "type": "Workforce Resource Center / Public Agency",
+    "website": "https://www.acdjfs.org/copy-of-transportation",
+    "leadership": "Patrick J. Arcaro, Executive Director (since September 2004)",
+    "why_top_candidate": "All-in-one workforce resource center providing job training and workforce development services under Ashtabula County Job and Family Services. Mission: 'Provide superior service, promote well-being and self-sufficiency, alleviate conditions of poverty, and improve health and safety.' Patrick J. Arcaro has bachelor's in Political Science (Gannon University) and master's in Public Administration with Healthcare Administration Certificate (Cleveland State). Serves on several local, county and State Boards. Resource management platform would help track client resources, training programs, and service allocation.",
+    "fit_score": 95
+  },
+  "actual_brand_research": {
+    "growth_partnership": {
+      "name": "Growth Partnership for Ashtabula County",
+      "focus": "Workforce development and business resources",
+      "partnerships": [
+        "LEADERship Ashtabula County",
+        "The Computer Workshop"
+      ],
+      "training_programs": [
+        {
+          "name": "Business Communications",
+          "cost_member": "$299",
+          "cost_non_member": "$350",
+          "description": "Enhance communication skills to interact effectively with superiors, colleagues, team members, customers, and vendors"
+        },
+        {
+          "name": "Dealing with Conflict and Difficult People",
+          "cost_member": "$339",
+          "cost_non_member": "$399",
+          "description": "Learn about different types of conflict and how to manage scenarios productively"
+        },
+        {
+          "name": "Teamwork and Team Building",
+          "cost_member": "$299",
+          "cost_non_member": "$350",
+          "description": "Explore different aspects of a team and ways to become a top-notch team performer"
+        },
+        {
+          "name": "Communication Strategies",
+          "cost_member": "$299",
+          "cost_non_member": "$350",
+          "description": "Understand different methods of communication and how to make the most of each"
+        }
+      ],
+      "member_benefit": "25% discount on training courses",
+      "local_resources": [
+        "Kent State University at Ashtabula Campus",
+        "Ashtabula County Career Technology Campus (A-Tech)"
+      ],
+      "visual_style": "Professional development, business training, workforce advancement"
+    },
+    "acjfs_ohiomeansjobs": {
+      "name": "Ashtabula County Job and Family Services (ACJFS) - OhioMeansJobs",
+      "executive_director": "Patrick J. Arcaro (since September 2004)",
+      "education": {
+        "bachelors": "Political Science, Gannon University, Erie, PA",
+        "masters": "Public Administration with Healthcare Administration Certificate, Cleveland State University, Cleveland, OH"
+      },
+      "mission": "Provide superior service, promote well-being and self-sufficiency, alleviate conditions of poverty, and improve health and safety",
+      "services": [
+        "Cash, Food, and Medical Assistance",
+        "Child Care",
+        "Child Support",
+        "Transportation",
+        "OhioMeansJobs (workforce services)",
+        "Senior Levy",
+        "Social Services",
+        "Employment"
+      ],
+      "leadership": {
+        "county_commissioners": [
+          "J. P. Ducro IV",
+          "Casey R. Kozlowski",
+          "Kathryn Whittington"
+        ]
+      },
+      "community_involvement": "Serves on several local, county and State Boards and Committees",
+      "visual_style": "Public service, government agency, workforce development, community support"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Allocate Resources. Maximize Impact.",
+    "positioning": "The resource management and allocation platform for Ashtabula County — helping Growth Partnership manage workforce training programs and ACJFS track client services and training resources.",
+    "color_palette_derived_from_research": {
+      "primary": "#276749",
+      "accent": "#D69E2E",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#718096"
+    },
+    "typography_recommendation": {
+      "heading_font": "Professional government-style sans-serif",
+      "body_font": "Clean accessible sans-serif"
+    },
+    "mood_keywords_from_research": ["workforce", "development", "resources", "training", "self-sufficiency", "professional"],
+    "visual_direction": {
+      "hero_image_concept": "Workforce training session with resource allocation dashboard",
+      "color_scheme": "Professional green with gold accents (growth, prosperity)",
+      "photography_style": "Workforce training, business development, professional education, Ashtabula community"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Growth Partnership's professional development focus and ACJFS's public service mission",
+    "key_features_needed": [
+      "Resource allocation dashboard with utilization metrics",
+      "Project-based resource planning and scheduling",
+      "Skill matrix for matching resources to projects",
+      "Capacity planning with forecasted demand",
+      "Time tracking integrated with resource allocation",
+      "Reporting on resource efficiency and utilization rates",
+      "Mobile app for field staff resource updates",
+      "API for integration with existing ERP systems"
+    ],
+    "differentiators_based_on_research": [
+      "Growth Partnership: 25% member discount on training",
+      "Growth Partnership: Partners with KSU Ashtabula and A-Tech",
+      "Growth Partnership: Leadership and communication courses",
+      "ACJFS: Mission of self-sufficiency and poverty alleviation",
+      "ACJFS: Patrick Arcaro leadership since 2004",
+      "ACJFS: Comprehensive services (cash, food, medical, childcare)",
+      "Both: Ashtabula County focused",
+      "Both: Workforce development priorities"
+    ],
+    "outreach_strategy": [
+      "Contact Growth Partnership about training resource management",
+      "Reach out to Patrick Arcaro at ACJFS for workforce service tracking",
+      "Highlight capacity planning for training programs",
+      "Propose integration with OhioMeansJobs service delivery"
+    ]
+  }
+}

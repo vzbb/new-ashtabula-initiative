@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEURAL FLUIDITY | AI Startup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #030303;
+            --accent: #ff4d00;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.12);
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            height: 100vh;
+        }
+
+        /* Molten Glass Background */
+        .molten-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            filter: contrast(150%) brightness(80%);
+            background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000 100%);
+        }
+
+        .blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, #ff3c00, #7000ff, #00d9ff);
+            filter: blur(80px);
+            border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+            opacity: 0.4;
+            animation: flow 25s infinite alternate ease-in-out;
+        }
+
+        @keyframes flow {
+            0% { transform: translate(-10%, -10%) rotate(0deg) scale(1); border-radius: 40% 60% 70% 30%; }
+            33% { transform: translate(30%, 10%) rotate(120deg) scale(1.2); border-radius: 60% 40% 30% 70%; }
+            66% { transform: translate(-5%, 40%) rotate(240deg) scale(0.8); border-radius: 30% 70% 50% 50%; }
+            100% { transform: translate(-10%, -10%) rotate(360deg) scale(1); border-radius: 40% 60% 70% 30%; }
+        }
+
+        /* SVG Refraction Overlay */
+        .glass-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(2px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Layout */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 60px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: var(--font-mono);
+            font-weight: 500;
+            letter-spacing: -1px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        main {
+            padding: 0 60px;
+            position: relative;
+            z-index: 10;
+            height: calc(100vh - 120px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 12vw, 10rem);
+            font-weight: 800;
+            line-height: 0.85;
+            letter-spacing: -0.04em;
+            margin-bottom: 40px;
+            max-width: 1200px;
+            perspective: 1000px;
+        }
+
+        .hero-title span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(50px) rotateX(-45deg);
+            animation: reveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        }
+
+        @keyframes reveal {
+            to { opacity: 1; transform: translateY(0) rotateX(0); }
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 100px;
+            align-items: flex-end;
+        }
+
+        .description {
+            font-size: 1.5rem;
+            line-height: 1.4;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 500px;
+        }
+
+        /* Refractive Card */
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(24px) saturate(150%);
+            border: 1px solid var(--border);
+            padding: 40px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+            pointer-events: none;
+            transition: transform 0.6s;
+        }
+
+        .glass-card:hover::before {
+            transform: scale(1.2);
+        }
+
+        .stats {
+            font-family: var(--font-mono);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        .cta-button {
+            margin-top: 40px;
+            padding: 20px 40px;
+            background: #fff;
+            color: #000;
+            border: none;
+            font-family: var(--font-mono);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 0 30px rgba(255, 77, 0, 0.4);
+        }
+
+        /* Scroll indicator */
+        .scroll-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 60px;
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            opacity: 0.4;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .line {
+            width: 40px;
+            height: 1px;
+            background: #fff;
+            display: inline-block;
+        }
+
+        /* SVG Distortion Filter */
+        .filter-svg {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <svg class="filter-svg">
+        <filter id="molten">
+            <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="20" />
+        </filter>
+    </svg>
+
+    <div class="molten-container">
+        <div class="blob" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+        <div class="blob" style="bottom: 10%; right: 10%; background: linear-gradient(135deg, #00fff2, #0066ff); animation-delay: -5s; width: 400px; height: 400px;"></div>
+        <div class="blob" style="top: 50%; left: 50%; background: linear-gradient(135deg, #ff00ea, #ff4d00); animation-delay: -12s; width: 500px; height: 500px;"></div>
+    </div>
+
+    <div class="glass-overlay"></div>
+
+    <nav>
+        <div class="logo">Neural.Liquid</div>
+        <div class="nav-links">
+            <a href="#">Engine</a>
+            <a href="#">Substrates</a>
+            <a href="#">Manifesto</a>
+            <a href="#" style="color: var(--accent)">Connect_</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1 class="hero-title">
+            <span>SYNTHETIC</span><br>
+            <span style="animation-delay: 0.1s">INTEL</span>
+            <span style="animation-delay: 0.2s; color: rgba(255,255,255,0.1); -webkit-text-stroke: 1px rgba(255,255,255,0.5);">FLOW</span>
+        </h1>
+
+        <div class="hero-grid">
+            <div class="content-left">
+                <p class="description">
+                    Processing intelligence through molten-core architectures. We redefine AI not as cold silicon, but as fluid, refractive reasoning that bends to your data’s unique geometry.
+                </p>
+                <button class="cta-button">Initiate Protocol</button>
+            </div>
+
+            <div class="glass-card">
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Core Latency</span>
+                        <span class="stat-value">0.0004ms</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Neural Refraction</span>
+                        <span class="stat-value">99.8%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Liquid Ops/sec</span>
+                        <span class="stat-value">42.4 Petaflops</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Status</span>
+                        <span class="stat-value" style="color: #00ffaa;">Supercritical</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="scroll-hint">
+        <span class="line"></span>
+        SCROLL TO DISSOLVE
+    </div>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            const blobs = document.querySelectorAll('.blob');
+            blobs.forEach((blob, index) => {
+                const speed = (index + 1) * 20;
+                const shiftX = (x - 0.5) * speed;
+                const shiftY = (y - 0.5) * speed;
+                blob.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
+            });
+
+            // Subtle parallax for the card
+            const card = document.querySelector('.glass-card');
+            const cardX = (x - 0.5) * 30;
+            const cardY = (y - 0.5) * 30;
+            card.style.transform = `rotateY(${cardX}deg) rotateX(${-cardY}deg)`;
+        });
+
+        // Initialize characters for title if needed, but spans work better for control
+    </script>
+</body>
+</html>
+
+

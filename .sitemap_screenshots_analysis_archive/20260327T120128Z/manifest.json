@@ -1,0 +1,61 @@
+{
+  "archived_at": "2026-03-27T12:01:28.958064+00:00",
+  "generated_at": "2026-03-27T11:51:42.365491+00:00",
+  "image_dir": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots",
+  "output_file": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "model": "google/gemini-3.1-flash-lite-preview",
+  "quality": "fast",
+  "selected_slugs": null,
+  "item_count": 76,
+  "summary": {
+    "issue_counts_by_category": {
+      "UX": 22,
+      "content": 19,
+      "branding": 17,
+      "accessibility": 10,
+      "layout": 8,
+      "functionality": 5,
+      "functional": 3,
+      "design": 1,
+      "visual_design": 1,
+      "ui": 1,
+      "usability": 1,
+      "aesthetic": 1
+    },
+    "issue_counts_by_severity": {
+      "low": 75,
+      "medium": 8,
+      "critical": 4,
+      "high": 2
+    },
+    "brand_presence_counts": {
+      "strong": 51,
+      "moderate": 13,
+      "weak": 8,
+      "almost_none": 4
+    },
+    "branding_status_counts": {
+      "branded": 54,
+      "partial": 17,
+      "unbranded": 5
+    },
+    "target_brand_status_counts": {
+      "needs_research": 76
+    },
+    "white_label_fit_counts": {
+      "high": 45,
+      "medium": 19,
+      "low": 12
+    },
+    "shell_like_count": 8,
+    "needs_branding_pass_count": 20,
+    "needs_layout_pass_count": 3,
+    "needs_content_pass_count": 9,
+    "research_needed_count": 6
+  },
+  "artifacts": [
+    "visual_analysis_report.json",
+    "index.html",
+    "manifest.json"
+  ]
+}

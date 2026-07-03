@@ -1,0 +1,1 @@
+SITE: permit-whisperer | CENTERING: Y | BRANDING: Y | LOREM: false | NOTES: The UI is centered using `margin: 0 auto;` on main content containers. Custom municipal branding with a unique SVG logo, specific color palette, and relevant text is strongly present. No Lorem Ipsum text was found.

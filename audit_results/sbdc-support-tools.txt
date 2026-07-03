@@ -1,0 +1,1 @@
+ERROR: Could not find output line for sbdc-support-tools. Raw output: src/main.jsx` based on common project structures and your prompt. Without access to the application's component files, I cannot analyze its UI centering, branding quality, or check for "Lorem Ipsum".

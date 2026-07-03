@@ -1,0 +1,23 @@
+:root {
+  font-family: "Public Sans", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #233241;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

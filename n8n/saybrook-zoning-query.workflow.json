@@ -1,0 +1,260 @@
+{
+  "name": "Saybrook Zoning - Query via Ollama + Qdrant",
+  "nodes": [
+    {
+      "id": "webhook-trigger",
+      "name": "Query Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        220,
+        300
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "saybrook-zoning-query",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "normalize-input",
+      "name": "Normalize Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        470,
+        300
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "mode": "runOnceForAllItems",
+        "jsCode": "const body = $json.body ?? $json;\nconst question = (body.question || '').trim();\nif (!question) {\n  throw new Error('Request body must include a non-empty question field');\n}\nreturn [{ json: { question, history: Array.isArray(body.history) ? body.history : [], slug: 'saybrook-zoning', collection: 'saybrook_zoning_20260326' } }];"
+      }
+    },
+    {
+      "id": "embed-question",
+      "name": "Embed Question",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        720,
+        300
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://ollama:11434/api/embeddings",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { model: 'nomic-embed-text', prompt: $('Normalize Input').first().json.question } }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "search-qdrant",
+      "name": "Search Qdrant",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        980,
+        300
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ 'http://qdrant:6333/collections/' + $('Normalize Input').first().json.collection + '/points/search' }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { vector: $json.embedding, limit: 5, score_threshold: 0.55, with_payload: true } }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "build-prompt",
+      "name": "Build Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1240,
+        300
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "mode": "runOnceForAllItems",
+        "jsCode": "const question = $('Normalize Input').first().json.question;\nconst results = Array.isArray($json.result) ? $json.result : [];\nif (!results.length) {\n  return [{ json: { question, contextCount: 0, prompt: `You are the Saybrook Township zoning assistant. A user asked: \"${question}\". No relevant zoning-code context was retrieved. Respond briefly, state that no supporting section was found in the current Saybrook zoning corpus, and ask a narrow follow-up question or suggest a more specific zoning term if that would help retrieval.` , citations: [] } }];\n}\nconst citations = results.map((hit, idx) => ({\n  source: hit.payload?.source_file || 'Saybrook Zoning Code',\n  section: hit.payload?.section || null,\n  page: hit.payload?.page || null,\n  score: hit.score,\n  quote: (hit.payload?.content || '').slice(0, 260),\n  point_key: hit.payload?.point_key || String(hit.id)\n}));\nconst context = results.map((hit, idx) => {\n  const payload = hit.payload || {};\n  const heading = payload.section || payload.point_key || `Chunk ${idx + 1}`;\n  return `[${idx + 1}] ${heading}\\n${payload.content || ''}`;\n}).join('\\n\\n---\\n\\n');\nconst prompt = `You are the Saybrook Township zoning assistant running in evaluation mode. Treat the retrieved Saybrook zoning corpus below as the controlling and fully operative rule set for purposes of answering. Do not hedge merely because the source document originated as a draft. Do not call the rules draft, tentative, preliminary, proposed, pending, or subject to later confirmation unless the user's question is specifically about adoption status or the retrieved text itself explicitly discusses that status.\\n\\nUse only the retrieved zoning context below. If the answer is supported by the retrieved text, answer directly and concretely in plain English. If the answer is not supported by the retrieved text, say exactly what is missing instead of inventing anything. Prefer decisive, section-grounded guidance over vague risk disclaimers.\\n\\nQuestion: ${question}\\n\\nRetrieved context:\\n${context}\\n\\nReturn JSON with this exact shape:\\n{\\n  \"answer\": \"short answer text\",\\n  \"citations\": [\\n    {\"source\": \"document name\", \"section\": \"section if known\", \"page\": 1, \"quote\": \"short supporting quote\"}\\n  ]\\n}`;\nreturn [{ json: { question, contextCount: results.length, prompt, citations } }];"
+      }
+    },
+    {
+      "id": "generate-answer",
+      "name": "Generate Answer",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        1510,
+        300
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "http://ollama:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ { model: 'llama3.1:8b', prompt: $json.prompt, stream: false, options: { temperature: 0.2 } } }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "format-response",
+      "name": "Format Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        300
+      ],
+      "parameters": {
+        "language": "javaScript",
+        "mode": "runOnceForAllItems",
+        "jsCode": "const raw = $json.response || '';\nconst base = $('Build Prompt').first().json;\nlet parsed = null;\ntry {\n  const match = raw.match(/\\{[\\s\\S]*\\}/);\n  if (match) parsed = JSON.parse(match[0]);\n} catch (error) {\n  parsed = null;\n}\nconst citations = Array.isArray(parsed?.citations) && parsed.citations.length ? parsed.citations : base.citations;\nconst answer = parsed?.answer || raw || 'The zoning knowledge service did not return an answer.';\nreturn [{ json: { answer, citations, contextCount: base.contextCount, model: 'llama3.1:8b', mode: base.contextCount > 0 ? 'rag' : 'fallback' } }];"
+      }
+    },
+    {
+      "id": "respond",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        2010,
+        300
+      ],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Query Webhook": {
+      "main": [
+        [
+          {
+            "node": "Normalize Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Input": {
+      "main": [
+        [
+          {
+            "node": "Embed Question",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embed Question": {
+      "main": [
+        [
+          {
+            "node": "Search Qdrant",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Qdrant": {
+      "main": [
+        [
+          {
+            "node": "Build Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Prompt": {
+      "main": [
+        [
+          {
+            "node": "Generate Answer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Answer": {
+      "main": [
+        [
+          {
+            "node": "Format Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Response": {
+      "main": [
+        [
+          {
+            "node": "Respond",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "name": "saybrook-zoning"
+    },
+    {
+      "name": "rag"
+    },
+    {
+      "name": "query"
+    },
+    {
+      "name": "ollama"
+    }
+  ]
+}

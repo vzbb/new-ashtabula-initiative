@@ -1,0 +1,76 @@
+{
+  "mvp": "historian",
+  "generated_at": "2026-03-22T14:09:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/historian.json",
+  "research_sources": [
+    "https://ashtabulahistory.com/",
+    "https://www.acdl.info/genealogy-archives",
+    "https://www.ashtabulagen.org/"
+  ],
+  "target_buyer": {
+    "organization": "Ashtabula County Historical Society (ACHS)",
+    "type": "Historical Preservation Organization",
+    "website": "https://ashtabulahistory.com/",
+    "why_top_candidate": "Founded in 1838, second oldest historical society in Ohio. 185+ years of preserving Ashtabula County history. All-volunteer organization with museums, research library, and active preservation programs. Digital archiving and genealogy tools would enhance their mission.",
+    "fit_score": 92
+  },
+  "actual_brand_research": {
+    "existing_brand_name": "Ashtabula County Historical Society (ACHS)",
+    "founded": 1838,
+    "history": "185+ years preserving Ashtabula County history",
+    "distinction": "Second oldest historical society in Ohio",
+    "organization_type": "All-volunteer organization",
+    "phone": "866.533.3277",
+    "key_themes": ["Roots", "Bloom", "Bridge (past to present)", "Discover"],
+    "mission": "Preserve the history of Ashtabula County through research, preservation, and restoration",
+    "programs": [
+      "Museum properties",
+      "Research library",
+      "Preservation programs",
+      "Membership opportunities",
+      "Volunteer programs"
+    ],
+    "visual_style": "Heritage, scholarly, community-focused, timeless"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Preserve the Past. Discover Your Roots. Share the Story.",
+    "positioning": "The digital history and genealogy platform for Ashtabula County Historical Society — connecting 185 years of heritage with modern research tools.",
+    "color_palette_derived_from_research": {
+      "primary": "#5D4037",
+      "accent": "#8D6E63",
+      "background": "#F5F5DC",
+      "text": "#3E2723",
+      "secondary": "#A1887F"
+    },
+    "typography_recommendation": {
+      "heading_font": "Classic serif with heritage feel",
+      "body_font": "Readable serif or clean sans-serif"
+    },
+    "mood_keywords_from_research": ["heritage", "timeless", "scholarly", "community", "preservation"],
+    "visual_direction": {
+      "hero_image_concept": "Historical photographs fading into modern research interface",
+      "color_scheme": "Warm browns and creams evoking aged paper and history",
+      "photography_style": "Historical archives, museum artifacts, genealogy research"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with ACHS heritage and preservation mission",
+    "key_features_needed": [
+      "Searchable digital archive for documents and photographs",
+      "Family tree builder with local record integration",
+      "Interactive timeline of Ashtabula County history",
+      "Cemetery and burial records mapping",
+      "Historical map overlays",
+      "Oral history recording tools",
+      "Educational modules for schools"
+    ],
+    "differentiators_based_on_research": [
+      "Second oldest historical society in Ohio (founded 1838)",
+      "185+ years of continuous operation",
+      "All-volunteer community organization",
+      "Multiple museum properties",
+      "Active preservation and restoration focus"
+    ]
+  }
+}

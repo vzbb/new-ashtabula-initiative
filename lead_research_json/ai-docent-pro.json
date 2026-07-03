@@ -1,0 +1,86 @@
+{
+  "mvp": "ai-docent-pro",
+  "run_timestamp_utc": "2026-03-22T08:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for AI Docent Pro MVP (AI-powered virtual museum guide and interactive exhibit assistant). Targets museums, historical societies, cultural centers, and tourism destinations in Ashtabula County and Northeast Ohio seeking to enhance visitor engagement through AI-driven digital docents, audio guides, and interactive educational experiences.",
+  "leads": [
+    {
+      "organization": "Ashtabula County Historical Society (ACHS)",
+      "type": "Historical Society",
+      "website": "https://ashtabulahistory.com/",
+      "fit_rationale": "Second oldest historical society in Ohio (founded 1838) with 3 museum properties including the Jennie Munger Gregory Museum. All-volunteer team with limited resources for guided tours. AI docent would extend their capacity to tell Ashtabula County's story to visitors year-round.",
+      "source": "https://ashtabulahistory.com/"
+    },
+    {
+      "organization": "Ashtabula Maritime & Surface Transportation Museum",
+      "type": "Maritime Museum",
+      "website": "http://www.ashtabulamaritime.org/",
+      "fit_rationale": "Housed in former lighthouse keeper's residence (1871) with 25,000+ maritime artifacts, working Hulett model, and full-size pilot house from Great Lakes steamer. Seasonal operation limits access—AI docent would provide virtual tours and off-season engagement.",
+      "source": "http://www.ashtabulamaritime.org/"
+    },
+    {
+      "organization": "Historic Ashtabula Harbor",
+      "type": "Cultural Tourism District",
+      "website": "https://www.historicashtabulaharbor.org/",
+      "fit_rationale": "Tourism organization promoting the historic harbor district with lighthouse, shops, galleries, and restaurants. AI docent could guide visitors through the district's maritime history, architecture, and points of interest via mobile app.",
+      "source": "https://www.historicashtabulaharbor.org/"
+    },
+    {
+      "organization": "Ohio Museums Association (OMA)",
+      "type": "Statewide Museum Organization",
+      "website": "https://www.ohiomuseums.org/",
+      "fit_rationale": "Professional association serving museums across Ohio with workshops, advocacy, and technology resources. AI docent platform could be featured as a member benefit or technology solution for member institutions.",
+      "source": "https://www.ohiomuseums.org/"
+    },
+    {
+      "organization": "Visit Ashtabula County Tourism Bureau",
+      "type": "Destination Marketing Organization",
+      "website": "https://visitashtabulacounty.com/",
+      "fit_rationale": "Promotes tourism across Ashtabula County including wineries, covered bridges, and cultural attractions. AI docent integration would enhance visitor experience at multiple sites and support their mission of showcasing local heritage.",
+      "source": "https://visitashtabulacounty.com/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add multilingual support for international tourists visiting Great Lakes region.",
+    "Include voice interaction capabilities for hands-free museum navigation.",
+    "Create accessible features for visitors with visual or hearing impairments.",
+    "Add interactive AR elements that overlay historical images on current views.",
+    "Include QR code integration for physical exhibit labels linking to deep content.",
+    "Create personalized tour paths based on visitor interests (maritime, railroad, local history).",
+    "Add gamification elements like historical trivia quizzes and scavenger hunts.",
+    "Provide integration with museum collection databases for artifact inquiries.",
+    "Include offline mode for areas with limited cellular/wifi connectivity.",
+    "Add social sharing features for visitors to share discoveries and tour highlights."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Museum audiences expect elegant, distraction-free design that complements exhibits rather than competes.",
+      "Audio guide interface must work well in quiet gallery environments—voice prompts should be subtle.",
+      "Navigation must be intuitive for all age groups, including seniors and children."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Very High (tentative)",
+    "reason": "AI docent platforms are highly white-labelable for individual museums, historical societies, and tourism organizations with custom branding and content tailored to each institution.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Ashtabula County Historical Society about pilot program for AI docent.",
+    "Reach out to Maritime Museum about virtual tour and off-season engagement.",
+    "Explore partnership with Ohio Museums Association for statewide rollout.",
+    "Investigate integration with smart speakers (Alexa, Google Assistant) for home engagement."
+  ],
+  "sources": [
+    "https://ashtabulahistory.com/",
+    "http://www.ashtabulamaritime.org/",
+    "https://www.historicashtabulaharbor.org/",
+    "https://www.ohiomuseums.org/",
+    "https://visitashtabulacounty.com/"
+  ]
+}

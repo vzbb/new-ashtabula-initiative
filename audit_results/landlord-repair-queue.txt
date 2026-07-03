@@ -1,0 +1,1 @@
+SITE: landlord-repair-queue | CENTERING: 1 | BRANDING: 1 | LOREM: false | NOTES: Main source file (e.g., src/App.tsx) was not found. Analysis based on index.html and common Vite project structure. No explicit centering CSS or strong branding elements were found in index.html.

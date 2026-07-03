@@ -1,0 +1,40 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6] [cursor=pointer]:
+        - img "Ducro Funeral Services" [ref=e8]
+        - generic [ref=e9]:
+          - generic [ref=e10]: Ducro Funeral Services
+          - generic [ref=e11]: Legacy Link
+      - generic [ref=e12]:
+        - img [ref=e13]
+        - text: (440) 992-2191
+  - main [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]: Compassionate planning support
+      - heading "Plan with dignity, peace, and clarity." [level=1] [ref=e19]:
+        - text: Plan with dignity,
+        - text: peace, and clarity.
+      - paragraph [ref=e20]: Guiding Ashtabula County families through end-of-life arrangements with a gentle, step-by-step approach. Remove the burden of guesswork for those you love.
+      - button "Start Planning" [ref=e22] [cursor=pointer]:
+        - text: Start Planning
+        - img [ref=e23]
+      - generic [ref=e25]:
+        - generic [ref=e26]:
+          - img [ref=e28]
+          - heading "Compassionate" [level=3] [ref=e30]
+          - paragraph [ref=e31]: Gentle, understanding guidance at your own pace.
+        - generic [ref=e32]:
+          - img [ref=e34]
+          - heading "Clear Steps" [level=3] [ref=e37]
+          - paragraph [ref=e38]: Know exactly what to prepare and what comes next.
+        - generic [ref=e39]:
+          - img [ref=e41]
+          - heading "Less Stress" [level=3] [ref=e44]
+          - paragraph [ref=e45]: Simplify difficult decisions for your family.
+  - contentinfo [ref=e46]:
+    - generic [ref=e47]:
+      - paragraph [ref=e48]: Ducro Funeral Services
+      - paragraph [ref=e49]: 4101 Main Avenue • Ashtabula, OH 44004
+      - paragraph [ref=e50]: (440) 992-2191
+      - paragraph [ref=e51]: Serving Ashtabula County Families for 130+ Years

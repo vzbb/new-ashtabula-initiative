@@ -1,0 +1,82 @@
+{
+  "mvp": "govtech",
+  "generated_at": "2026-03-22T16:48:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/govtech.json",
+  "research_sources": [
+    "https://www.ashtabulacounty.us/555/Data-Board-IT-Services",
+    "https://www.citizenserve.com/",
+    "https://granicus.com/"
+  ],
+  "target_buyer": {
+    "organization": "Ashtabula County Data Board / IT Services",
+    "type": "County Government IT Department",
+    "website": "https://www.ashtabulacounty.us/555/Data-Board-IT-Services",
+    "why_top_candidate": "Primary technology decision-maker for Ashtabula County. The Data Board oversees all IT purchases, software, and services for county offices per Ohio Revised Code 307.84. Recent procurements include $75K for Citizenserve building software and court computer upgrades. Manages IT infrastructure for 25+ county departments. No county office can purchase IT equipment or services without board approval.",
+    "fit_score": 93,
+    "contact": {
+      "phone": "440-576-3798",
+      "address": "25 W. Jefferson St., Jefferson, OH 44047",
+      "email": "S.Pam@ashtabulacounty.us"
+    }
+  },
+  "actual_brand_research": {
+    "existing_brand_name": "Ashtabula County Data Board / IT Services",
+    "legal_authority": "Ohio Revised Code 307.84",
+    "governance": "Board consists of county treasurer, recorder, clerk of courts, board of commissioners representative, board of elections representatives, and county auditor (secretary)",
+    "authority_scope": "All county offices must obtain prior approval for purchasing, leasing, operating, or contracting for data processing equipment, software, or services",
+    "recent_procurements": [
+      "$75,000 3-year Citizenserve contract (Feb 2025)",
+      "Court computer upgrades",
+      "Electronic records systems"
+    ],
+    "current_stack": [
+      "CivicPlus (website)",
+      "Granicus (communications)",
+      "Right Stuff Software (city operations)",
+      "Citizenserve (building/permitting)"
+    ],
+    "visual_style": "Government, official, technology-focused, county authority"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Modern Government Tech. Simplified.",
+    "positioning": "The GovTech platform for Ashtabula County Data Board — streamlining technology procurement, software deployment, and IT service management across 25+ county departments.",
+    "color_palette_derived_from_research": {
+      "primary": "#1F4E79",
+      "accent": "#B8860B",
+      "background": "#F5F5F5",
+      "text": "#2C3E50",
+      "secondary": "#5D6D7E"
+    },
+    "typography_recommendation": {
+      "heading_font": "Official government serif or clean sans-serif",
+      "body_font": "Highly readable sans-serif"
+    },
+    "mood_keywords_from_research": ["official", "authority", "technology", "procurement", "compliance"],
+    "visual_direction": {
+      "hero_image_concept": "Modern government technology dashboard with Ashtabula County courthouse",
+      "color_scheme": "Official government blues with gold accents",
+      "photography_style": "County facilities, technology infrastructure, professional government settings"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Ashtabula County Data Board's statutory authority under ORC 307.84",
+    "key_features_needed": [
+      "IT procurement workflow approval",
+      "Software vendor evaluation tools",
+      "County department service catalog",
+      "Budget tracking for IT spending",
+      "Compliance checklist for ORC 307.84",
+      "Integration with existing CivicPlus/Granicus stack",
+      "Multi-department request management",
+      "Contract and vendor management"
+    ],
+    "differentiators_based_on_research": [
+      "Statutory authority under Ohio Revised Code",
+      "25+ county departments under management",
+      "Recent $75K Citizenserve procurement",
+      "Pre-approval required for all county IT",
+      "Multi-stakeholder board governance"
+    ]
+  }
+}

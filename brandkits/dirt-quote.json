@@ -1,0 +1,84 @@
+{
+  "mvp": "dirt-quote",
+  "generated_at": "2026-03-22T15:48:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/dirt-quote.json",
+  "research_sources": [
+    "https://www.brockwaystopsoil.com/",
+    "https://www.simaktruckinginc.com/",
+    "https://brobstearthworks.com/"
+  ],
+  "target_buyer": {
+    "organization": "Brockway's Topsoil",
+    "type": "Topsoil & Fill Dirt Delivery",
+    "website": "https://www.brockwaystopsoil.com/",
+    "why_top_candidate": "Over 20 years in business serving Ashtabula County and northeast Ohio. Locally owned and operated. Specializes in topsoil and fill dirt delivery to landscapers, homeowners, and contractors. Known for professionalism, quality products, and competitive prices. Promise of 100% customer satisfaction with on-time delivery.",
+    "fit_score": 90
+  },
+  "actual_brand_research": {
+    "existing_brand_name": "Brockway's Topsoil",
+    "heritage": "Over 20 years in the industry",
+    "location": "Ashtabula, OH and surrounding region",
+    "service_area": "Ashtabula County and northeast Ohio",
+    "business_model": "Locally owned and operated",
+    "target_customers": [
+      "Landscape contractors",
+      "Homeowners",
+      "Business owners",
+      "Property caretakers"
+    ],
+    "products": [
+      "Quality topsoil",
+      "Fill dirt",
+      "Nutrient-rich soil products"
+    ],
+    "key_differentiators": [
+      "Quality dirt at competitive prices",
+      "Locally owned and operated",
+      "On-time delivery guarantee",
+      "100% customer satisfaction promise",
+      "Nutrient-rich products"
+    ],
+    "visual_style": "Professional, local, dependable, quality-focused"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Get Your Dirt Quote. Instantly.",
+    "positioning": "The instant quoting platform for Brockway's Topsoil — delivering 20 years of quality topsoil expertise with modern speed and convenience.",
+    "color_palette_derived_from_research": {
+      "primary": "#5D4E37",
+      "accent": "#8B6914",
+      "background": "#F5F5DC",
+      "text": "#3E2723",
+      "secondary": "#A0522D"
+    },
+    "typography_recommendation": {
+      "heading_font": "Strong dependable serif or bold sans-serif",
+      "body_font": "Clean professional sans-serif"
+    },
+    "mood_keywords_from_research": ["professional", "local", "quality", "dependable", "nutrient-rich"],
+    "visual_direction": {
+      "hero_image_concept": "Rich dark topsoil with green plants, professional delivery truck",
+      "color_scheme": "Earthy browns and soil tones with green growth accents",
+      "photography_style": "Quality topsoil, healthy gardens, professional delivery"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Brockway's 20+ years of professional topsoil delivery and 100% satisfaction promise",
+    "key_features_needed": [
+      "Instant quote calculator based on cubic yards",
+      "Topsoil vs fill dirt selection",
+      "Delivery area validation",
+      "Customer type selection (contractor/homeowner)",
+      "Delivery scheduling",
+      "Multiple product options",
+      "Price transparency"
+    ],
+    "differentiators_based_on_research": [
+      "20+ years industry experience",
+      "Locally owned and operated",
+      "Ashtabula County focused",
+      "100% customer satisfaction promise",
+      "On-time delivery guarantee"
+    ]
+  }
+}

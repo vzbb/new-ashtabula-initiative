@@ -1,0 +1,1 @@
+SITE: parcelvisor | CENTERING: N | BRANDING: N | LOREM: false | NOTES: The `index.html` is a placeholder. The actual application content is rendered by JavaScript from `src/main.tsx`, which was not accessible in the provided directory structure. Therefore, centering and branding assessment are based solely on the very basic `index.html` file.

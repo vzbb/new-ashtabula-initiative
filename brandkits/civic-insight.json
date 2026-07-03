@@ -1,0 +1,62 @@
+{
+  "mvp": "civic-insight",
+  "generated_at": "2026-03-22T12:48:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/civic-insight.json",
+  "research_sources": [
+    "https://www.ashtabulacounty.us/232/Transparency-Portal",
+    "https://www.cityofashtabula.com/council-meeting-agendas-minutes",
+    "https://www.ohioopengov.com/"
+  ],
+  "target_buyer": {
+    "organization": "Ashtabula County Government (Transparency Portal)",
+    "type": "County Government",
+    "website": "https://www.ashtabulacounty.us/232/Transparency-Portal",
+    "why_top_candidate": "Already maintains a transparency portal with public records, agendas, and financial reports. Enhanced civic insight tools could improve data visualization and citizen accessibility to county information.",
+    "fit_score": 88
+  },
+  "actual_brand_research": {
+    "existing_brand_name": "Ashtabula County Transparency Portal",
+    "mission": "Improve access to information, ability to participate in county events, and communication with the county",
+    "focus": "Government transparency and open access to public records",
+    "visual_style": "Official government, trustworthy, accessible"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Your County. Your Data. Your Voice.",
+    "positioning": "The civic insight platform for Ashtabula County — enhancing transparency with interactive dashboards, meeting alerts, and citizen engagement tools.",
+    "color_palette_derived_from_research": {
+      "primary": "#1F4E79",
+      "accent": "#2E86AB",
+      "background": "#F5F5F5",
+      "text": "#2C3E50",
+      "secondary": "#5D6D7E"
+    },
+    "typography_recommendation": {
+      "heading_font": "Official government-style sans-serif",
+      "body_font": "Highly readable sans-serif"
+    },
+    "mood_keywords_from_research": ["transparent", "accessible", "official", "trustworthy", "engaging"],
+    "visual_direction": {
+      "hero_image_concept": "Interactive dashboard showing county data and civic participation",
+      "color_scheme": "Official government blues conveying trust and authority",
+      "photography_style": "County buildings, public meetings, community engagement"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Ashtabula County's transparency and accessibility mission",
+    "key_features_needed": [
+      "Interactive dashboards for budgets and spending",
+      "Meeting calendar with email/SMS alerts",
+      "Searchable public records database",
+      "Public comment submission portal",
+      "GIS mapping for zoning and development",
+      "Elected official profiles with voting records"
+    ],
+    "differentiators_based_on_research": [
+      "Existing transparency portal foundation",
+      "Official county government adoption",
+      "Open records and open meetings focus",
+      "Citizen engagement and participation"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "mvp": "eligibility-pro",
+  "run_timestamp_utc": "2026-03-21T19:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Eligibility Pro MVP (benefits eligibility screening platform). Targets county Job and Family Services offices, social services organizations, and benefits counselors who could benefit from streamlined eligibility determination tools for SNAP, Medicaid, and cash assistance.",
+  "leads": [
+    {
+      "organization": "Ashtabula County Department of Job and Family Services (ACDJFS)",
+      "type": "County Social Services Agency",
+      "website": "https://www.acdjfs.org/",
+      "fit_rationale": "Administers SNAP, Medicaid, cash assistance, child care, and adult protective services. Eligibility screening tools would streamline intake and reduce caseworker workload.",
+      "source": "https://www.acdjfs.org/"
+    },
+    {
+      "organization": "Ohio Benefits Self-Service Portal",
+      "type": "State Eligibility Screening Tool",
+      "website": "https://ssp.benefits.ohio.gov/",
+      "fit_rationale": "State-run eligibility pre-screening tool. Localized integration or enhanced UI could improve accessibility for Ashtabula County residents.",
+      "source": "https://ssp.benefits.ohio.gov/"
+    },
+    {
+      "organization": "Ashtabula County Department of Job and Family Services (County Website)",
+      "type": "County Government Social Services",
+      "website": "https://www.ashtabulacounty.us/327/Department-of-Job-Family-Services",
+      "fit_rationale": "Provides public assistance for well-being and self-sufficiency. Digital eligibility tools would improve access for residents in poverty.",
+      "source": "https://www.ashtabulacounty.us/327/Department-of-Job-Family-Services"
+    },
+    {
+      "organization": "211 Ashtabula County (Social Services Directory)",
+      "type": "Community Resource Directory",
+      "website": "https://www.211ashtabula.org/",
+      "fit_rationale": "Connects residents with social services. Eligibility screening integration would help direct callers to appropriate programs faster.",
+      "source": "https://www.211ashtabula.org/"
+    },
+    {
+      "organization": "Ashtabula County Community Action Agency (ACCAA)",
+      "type": "Anti-Poverty Organization",
+      "website": "https://accaa.org/",
+      "fit_rationale": "Provides services to alleviate poverty. Benefits eligibility screening would complement their existing programs and help clients access additional resources.",
+      "source": "https://accaa.org/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add multi-program eligibility calculator (SNAP, Medicaid, cash, childcare, WIC) in one interface.",
+    "Include document checklist generator based on household composition and programs sought.",
+    "Create plain-language explanations of eligibility rules and calculation methodology.",
+    "Add appointment scheduling integration with county JFS offices.",
+    "Provide application pre-fill with eligibility screening data to reduce repetitive entry.",
+    "Include eligibility estimator for seniors and people with disabilities (Medicare/Medicaid dual eligible).",
+    "Add multilingual support (Spanish, others) for non-English speaking residents.",
+    "Create mobile-first design for residents with limited computer access."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Benefits sites serving vulnerable populations need simple, non-intimidating design—complex forms create barriers.",
+      "Without clear progress indicators, users may abandon lengthy eligibility questionnaires.",
+      "Missing reassurance about data privacy may deter people from entering sensitive information."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "High (tentative)",
+    "reason": "Eligibility screening tools can be white-labeled for county JFS offices, community action agencies, or healthcare navigators with custom branding and program configurations.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact Ashtabula County DJFS about piloting eligibility screening integration.",
+    "Reach out to 211 Ashtabula about incorporating screening into their resource directory.",
+    "Explore integration with Ohio Benefits Self-Service Portal API (if available)."
+  ],
+  "sources": [
+    "https://www.acdjfs.org/",
+    "https://ssp.benefits.ohio.gov/",
+    "https://www.ashtabulacounty.us/327/Department-of-Job-Family-Services",
+    "https://www.211ashtabula.org/",
+    "https://accaa.org/"
+  ]
+}

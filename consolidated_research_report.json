@@ -1,0 +1,3338 @@
+{
+  "generated_at": "2026-03-22T10:16:05.249083Z",
+  "description": "Consolidated visual analysis + lead research for NAI MVPs",
+  "total_mvps": 77,
+  "mvps_with_lead_research": 33,
+  "mvps": {
+    "civic-insight": {
+      "slug": "civic-insight",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/civic-insight/",
+      "source_title": "Ashtabula County Transparency Portal \u2014 Official Government Dashboard",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Adjust modal behavior",
+            "why": "The current modal is intrusive and obscures the value proposition of the dashboard.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "medium",
+            "issue": "Modal blocking content",
+            "evidence": "The welcome modal covers the entire screen, preventing users from seeing the dashboard content until they interact with it.",
+            "quick_fix": "Change modal to a non-blocking 'hero' section or ensure it is dismissible with a clear, high-contrast 'X' button.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Government (Transparency Portal)",
+          "type": "County Government",
+          "website": "https://www.ashtabulacounty.us/232/Transparency-Portal",
+          "fit_rationale": "Already maintains a transparency portal with public records, agendas, and financial reports. Enhanced civic insight tools could improve data visualization and citizen accessibility.",
+          "source": "https://www.ashtabulacounty.us/232/Transparency-Portal"
+        },
+        "total_leads": 5
+      }
+    },
+    "permits": {
+      "slug": "permits",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/permits/",
+      "source_title": "permit-whisperer",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Consolidate alert banners",
+            "why": "Reduces visual clutter and improves the focus on the primary interactive element (the search box).",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "The 'Demo Mode' banner and 'Don't Let Other Lakefront Cities...' banner are visually competing for attention.",
+            "evidence": "Two distinct alert-style boxes stacked on top of each other.",
+            "quick_fix": "Combine these into a single, more cohesive notification section.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "zoning": {
+      "slug": "zoning",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/zoning/",
+      "source_title": "zoning-clerk",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add hover states to the three feature cards.",
+            "why": "Enhances interactivity and confirms to the user that these are clickable navigation elements.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Ensure the 'Get Zoning Info' button has a clear loading state.",
+            "why": "Improves UX during the transition from input to results.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "functionality",
+            "severity": "medium",
+            "issue": "The 'Zoning Guidance' section is currently a static placeholder.",
+            "evidence": "The text 'Enter your project details above to receive official zoning guidance...' is a prompt, not a functional result area.",
+            "quick_fix": "Implement the logic to display dynamic results or hide this section until a search is performed.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Planning and Development",
+          "type": "County Planning Department",
+          "website": "https://www.ashtabulacounty.us/262/Planning-and-Development",
+          "fit_rationale": "Reviews lot splits, subdivisions, and zoning amendments for unincorporated areas. Digital zoning tools would streamline application review and tracking.",
+          "source": "https://www.ashtabulacounty.us/262/Planning-and-Development"
+        },
+        "total_leads": 5
+      }
+    },
+    "eligibility": {
+      "slug": "eligibility",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/eligibility/",
+      "source_title": "ACDJFS Benefits Navigator - Ashtabula County Department of Job and Family Services",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Simplify background",
+            "why": "Reduces visual noise and increases focus on the primary content card.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "aesthetic",
+            "severity": "low",
+            "issue": "Distracting background pattern",
+            "evidence": "The repeating icon pattern in the background creates visual noise.",
+            "quick_fix": "Replace the background pattern with a solid light gray or a very subtle, low-opacity gradient.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Department of Job and Family Services",
+          "type": "County Social Services Agency",
+          "website": "https://www.acdjfs.org/",
+          "fit_rationale": "Determines eligibility for food stamps, Medicaid, Ohio Works First, and childcare assistance. Eligibility screening tools would streamline intake and reduce caseworker workload.",
+          "source": "https://www.acdjfs.org/"
+        },
+        "total_leads": 5
+      }
+    },
+    "eligibility-lite": {
+      "slug": "eligibility-lite",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/eligibility-lite/",
+      "source_title": "eligibility-lite",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Center the main content card",
+            "why": "Improves visual balance and makes the page look less like a mobile-only view stretched to desktop.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Extreme left-alignment on desktop",
+            "evidence": "The content card is pinned to the left, leaving 70%+ of the screen empty.",
+            "quick_fix": "Apply 'margin: 0 auto' or flexbox centering to the main container.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ohio Benefits Self-Service Portal",
+          "type": "State Eligibility Screening Tool",
+          "website": "https://ssp.benefits.ohio.gov/apspssp/ssp.portal/amIEligible/welcome",
+          "fit_rationale": "State-run self-assessment tool for benefits eligibility. A lightweight, localized version could serve specific county needs with faster load times and simplified interface.",
+          "source": "https://ssp.benefits.ohio.gov/apspssp/ssp.portal/amIEligible/welcome"
+        },
+        "total_leads": 5
+      }
+    },
+    "eligibility-pro": {
+      "slug": "eligibility-pro",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/eligibility-pro/",
+      "source_title": "ACCAA ClientStream Optimizer - Helping People. Changing Lives.",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Increase contrast on footer links",
+            "why": "Ensures compliance with accessibility standards for public-facing government/non-profit sites.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "accessibility",
+            "severity": "low",
+            "issue": "The contrast of the gold text on the navy background in the footer might be slightly low for some users.",
+            "evidence": "Footer links (ACCAA WEBSITE, CONTACT US, etc.)",
+            "quick_fix": "Slightly brighten the gold color or increase font weight.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Department of Job and Family Services (ACDJFS)",
+          "type": "County Social Services Agency",
+          "website": "https://www.acdjfs.org/",
+          "fit_rationale": "Administers SNAP, Medicaid, cash assistance, child care, and adult protective services. Eligibility screening tools would streamline intake and reduce caseworker workload.",
+          "source": "https://www.acdjfs.org/"
+        },
+        "total_leads": 5
+      }
+    },
+    "license": {
+      "slug": "license",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/license/",
+      "source_title": "License Wizard",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Center the main content container",
+            "why": "To balance the visual weight of the page and improve aesthetics on wider screens.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "Asymmetric layout",
+            "evidence": "The content is heavily left-aligned, leaving a large portion of the right side of the screen empty.",
+            "quick_fix": "Center the main content container or expand the form/cards to fill more of the horizontal space.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "event-permit": {
+      "slug": "event-permit",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/event-permit/",
+      "source_title": "event-permit-express",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 9,
+        "status": "excellent",
+        "research_needed": true,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add text labels to the 'What do you need?' icons.",
+            "why": "Improves accessibility and clarity for users who may not immediately recognize the iconography.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The 'What do you need?' section uses icons without text labels.",
+            "evidence": "The row of icons (beer, barrier, tent, megaphone) lacks descriptive text, which might be ambiguous for some users.",
+            "quick_fix": "Add small text labels below each icon.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "City of Cleveland \u2013 Division of Special Events",
+          "type": "City special events office",
+          "website": "https://www.clevelandohio.gov/city-hall/departments/public-works/divisions/special-events",
+          "fit_rationale": "Handles special event permits and multi\u2011department coordination; could benefit from streamlined permit intake, document collection, and status tracking.",
+          "source": "https://www.clevelandohio.gov/city-hall/departments/public-works/divisions/special-events"
+        },
+        "total_leads": 5
+      }
+    },
+    "govtech": {
+      "slug": "govtech",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/govtech/",
+      "source_title": "govtech-box",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Standardize footer branding",
+            "why": "Removes confusion between the platform name and the regional initiative.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Add a placeholder for a specific municipality logo",
+            "why": "Enhances the white-label potential by showing where a client's logo would live.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Conflicting branding signals",
+            "evidence": "The header says 'GovTech Box' while the footer mentions 'New Ashtabula Initiative'.",
+            "quick_fix": "Standardize the branding to either a platform name or a specific client name.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "grantgenius": {
+      "slug": "grantgenius",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/grantgenius/",
+      "source_title": "GrantGenius | Ashtabula Chamber of Commerce",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a 'How it works' or 'About' link",
+            "why": "Users might want to know more about the AI model or the organization behind it before pasting sensitive mission data.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "The footer branding is slightly disconnected from the main header branding.",
+            "evidence": "The footer text 'New Ashtabula Initiative' is small and lacks visual weight compared to the primary header.",
+            "quick_fix": "Integrate the Chamber of Commerce logo into the header or footer more prominently.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "invest": {
+      "slug": "invest",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/invest/",
+      "source_title": "Ashtabula County Economic Development \u2014 Investment Portal",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 9,
+        "status": "excellent",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Differentiate CTA buttons",
+            "why": "To guide user flow more effectively between 'viewing' and 'joining'.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "content",
+            "severity": "low",
+            "issue": "The 'Join 400+ Chamber Members' button is visually similar to the 'View Available Sites' button.",
+            "evidence": "Both buttons use similar gold/yellow styling.",
+            "quick_fix": "Differentiate the primary action (View Sites) from the secondary action (Join) using different button weights or colors.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "blueprint": {
+      "slug": "blueprint",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/blueprint/",
+      "source_title": "Blueprint Analyzer | Ashtabula Chamber of Commerce",
+      "visual_analysis": {
+        "design_score": 4,
+        "branding_score": 3,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 8,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Fix color contrast",
+            "why": "The site is currently illegible.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add a max-width container",
+            "why": "Improves readability and professional appearance.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 3,
+            "action": "Add padding/margins",
+            "why": "Prevents content from touching screen edges.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "accessibility",
+            "severity": "critical",
+            "issue": "Poor color contrast",
+            "evidence": "Dark text on a dark blue background is nearly illegible.",
+            "quick_fix": "Change background to white or light grey, or change text to white.",
+            "effort": "small"
+          },
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Full-width content",
+            "evidence": "Text stretches across the entire screen width, making it hard to read.",
+            "quick_fix": "Wrap content in a centered container with a max-width (e.g., 800px).",
+            "effort": "small"
+          },
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Lack of padding",
+            "evidence": "Content touches the edges of the screen.",
+            "quick_fix": "Add global padding to the main container.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Building Department",
+          "type": "County Building Authority",
+          "website": "https://www.ashtabulacounty.us/181/Building",
+          "fit_rationale": "Provides plan review services, inspections, and code information. Digital blueprint submission and review tools would streamline permit processing and reduce paper handling.",
+          "source": "https://www.ashtabulacounty.us/181/Building"
+        },
+        "total_leads": 5
+      }
+    },
+    "box-builder": {
+      "slug": "box-builder",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/box-builder/",
+      "source_title": "box-builder",
+      "visual_analysis": {
+        "design_score": 4,
+        "branding_score": 3,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 8,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Implement a centered layout container",
+            "why": "Immediate improvement to visual structure and readability.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Style form inputs and buttons",
+            "why": "Increases perceived quality and trust.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 3,
+            "action": "Add a header with a logo",
+            "why": "Establishes brand presence and professional identity.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "high",
+            "issue": "Lack of container/wrapper",
+            "evidence": "Content is left-aligned against the edge of the viewport with no max-width constraints.",
+            "quick_fix": "Wrap the main content in a centered container with a max-width (e.g., 800px).",
+            "effort": "small"
+          },
+          {
+            "category": "ui_components",
+            "severity": "medium",
+            "issue": "Unstyled form elements",
+            "evidence": "The 'Details' input field uses default browser styling.",
+            "quick_fix": "Apply a consistent border, padding, and border-radius to all form inputs.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "medium",
+            "issue": "Missing visual identity",
+            "evidence": "No logo or brand colors present.",
+            "quick_fix": "Add a logo in the header and define a primary brand color for buttons and accents.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "boxflow": {
+      "slug": "boxflow",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/boxflow/",
+      "source_title": "boxflow-estimator",
+      "visual_analysis": {
+        "design_score": 4,
+        "branding_score": 5,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Wrap content in a centered container",
+            "why": "Improves readability and prevents the 'stretched' look.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add vertical padding/margin between sections",
+            "why": "Reduces visual clutter and improves hierarchy.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 3,
+            "action": "Style the results section as a distinct card",
+            "why": "Makes the output of the calculator stand out from the input form.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "high",
+            "issue": "Lack of container/max-width",
+            "evidence": "Content stretches across the full width of the screen.",
+            "quick_fix": "Wrap the main content in a container div with a max-width of 800px and auto margins.",
+            "effort": "small"
+          },
+          {
+            "category": "ui",
+            "severity": "medium",
+            "issue": "Poor form styling",
+            "evidence": "Default browser inputs are unstyled and cramped.",
+            "quick_fix": "Add padding, border-radius, and consistent spacing to all input fields.",
+            "effort": "small"
+          },
+          {
+            "category": "visual_hierarchy",
+            "severity": "medium",
+            "issue": "Results section is hard to read",
+            "evidence": "The results are presented as a wall of text without clear grouping or visual separation.",
+            "quick_fix": "Use a card component with a background color and clear labels for the results section.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "World Shipping (Port of Ashtabula)",
+          "type": "International Freight Forwarder",
+          "website": "https://www.worldshipping.com/portfolio/port-of-ashtabula-ashtabula-ohio/",
+          "fit_rationale": "Active in Ashtabula since 1960, providing freight forwarding, warehousing, and distribution. Inventory management and workflow tools would optimize their operations.",
+          "source": "https://www.worldshipping.com/portfolio/port-of-ashtabula-ashtabula-ohio/"
+        },
+        "total_leads": 5
+      }
+    },
+    "cashflow": {
+      "slug": "cashflow",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/cashflow/",
+      "source_title": "CashFlow Tracker",
+      "visual_analysis": {
+        "design_score": 3,
+        "branding_score": 4,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a max-width container",
+            "why": "Improves readability and prevents the 'stretched' look on desktop.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add vertical padding/margins",
+            "why": "Prevents elements from touching and creates a more professional layout.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 3,
+            "action": "Style the form inputs",
+            "why": "Standard inputs look dated and unpolished.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Lack of container/max-width",
+            "evidence": "Content spans the full width of the screen, making it difficult to read on wide monitors.",
+            "quick_fix": "Wrap the main content in a container div with a max-width of 800px and auto margins.",
+            "effort": "small"
+          },
+          {
+            "category": "design",
+            "severity": "medium",
+            "issue": "Poor visual hierarchy",
+            "evidence": "Headings and body text are poorly differentiated.",
+            "quick_fix": "Implement a proper font scale (H1, H2, body) and add vertical spacing between sections.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Missing visual identity",
+            "evidence": "No logo or brand colors present.",
+            "quick_fix": "Add a simple logo in the header and define a primary brand color for the button and links.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "parts": {
+      "slug": "parts",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/parts/",
+      "source_title": "Parts Finder",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 5,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 6,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Remove or refine the background pattern",
+            "why": "It makes the page look like a generic template rather than a professional tool.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Enhance the 'Availability Response' empty state",
+            "why": "It is the primary interaction area; it needs to feel more inviting.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Generic background pattern",
+            "evidence": "The repeating gear icon pattern is distracting and feels like a default template asset.",
+            "quick_fix": "Replace with a subtle, solid color or a more sophisticated, high-quality background texture.",
+            "effort": "small"
+          },
+          {
+            "category": "content",
+            "severity": "medium",
+            "issue": "Empty state is too plain",
+            "evidence": "The 'Availability Response' section is just a wrench icon and text, which feels like a placeholder.",
+            "quick_fix": "Add a more engaging illustration or a 'How it works' tooltip to guide the user.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "parts-request": {
+      "slug": "parts-request",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/parts-request/",
+      "source_title": "parts-finder-request",
+      "visual_analysis": {
+        "design_score": 6,
+        "branding_score": 3,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 8,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Conditional rendering for confirmation section",
+            "why": "Prevents the page from looking broken or empty before the user interacts with it.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add brand logo and color palette",
+            "why": "Establishes trust and legitimacy for Ace Parts Company.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "medium",
+            "issue": "Empty state is visible",
+            "evidence": "The 'Confirmation' section shows 'Confirmation appears here.'",
+            "quick_fix": "Hide the entire 'Confirmation' section until the user submits a request.",
+            "effort": "small"
+          },
+          {
+            "category": "Branding",
+            "severity": "low",
+            "issue": "Lack of visual identity",
+            "evidence": "No logo, no brand colors, no custom typography.",
+            "quick_fix": "Add a logo for Ace Parts Company and apply a primary brand color to the buttons.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "plating": {
+      "slug": "plating",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/plating/",
+      "source_title": "plating-tracker",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add company logo",
+            "why": "Establishes immediate brand recognition and trust.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Center footer content",
+            "why": "Improves visual symmetry and polish.",
+            "effort": "small",
+            "impact": "low"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of visual identity",
+            "evidence": "No logo or specific brand colors used in the header or body.",
+            "quick_fix": "Add a company logo to the top left of the header.",
+            "effort": "small"
+          },
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "Footer alignment",
+            "evidence": "The footer text is left-aligned while the main content is centered, creating a slight visual imbalance.",
+            "quick_fix": "Center the footer text to match the main container width.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "plating-pro": {
+      "slug": "plating-pro",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/plating-pro/",
+      "source_title": "plating-tracker-pro",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add company logo",
+            "why": "Establishes immediate trust and brand recognition for the specific entity.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Enhance empty state",
+            "why": "Improves user guidance when no status is active.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of visual brand identity",
+            "evidence": "No logo or specific color palette associated with Lake City Plating.",
+            "quick_fix": "Add a company logo in the top left or center of the hero section.",
+            "effort": "small"
+          },
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "Empty state clarity",
+            "evidence": "The 'Status appears here' text is a bit generic.",
+            "quick_fix": "Add an icon or a more descriptive instruction for the user.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Lake City Plating",
+          "type": "Metal Plating Company",
+          "website": "https://lakecityplating.com/",
+          "fit_rationale": "ISO 9001:2015 and IATF 16949:2016 certified plating company with facilities in Jefferson, OH (Ashtabula County). Job tracking and quality management platform would support their high-volume and small lot order capabilities.",
+          "source": "https://lakecityplating.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "contractors": {
+      "slug": "contractors",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/contractors/",
+      "source_title": "Contractor Match | Ashtabula Chamber of Commerce",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add instructional text to the empty 'Contractor Matches' container.",
+            "why": "Improves user guidance and reduces confusion about how to use the tool.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "content",
+            "severity": "low",
+            "issue": "Empty state for 'Contractor Matches' is a bit stark.",
+            "evidence": "The box says 'Matches appear here' but provides no guidance on how to trigger the search beyond the hero CTA.",
+            "quick_fix": "Add a small helper text or icon indicating that the user should select a trade type and click 'Find Pros' to populate the list.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "fence-quote": {
+      "slug": "fence-quote",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/fence-quote/",
+      "source_title": "fence-quote",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a footer",
+            "why": "To establish legitimacy and provide contact info, which is crucial for service-based businesses.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of specific business identity",
+            "evidence": "The page feels like a template rather than a site for a specific company.",
+            "quick_fix": "Add a footer with contact information, a physical address, or a link to a parent company website.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "landlord": {
+      "slug": "landlord",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/landlord/",
+      "source_title": "landlord-repair-queue",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a specific logo",
+            "why": "To elevate the page from a generic tool to a branded product.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of a distinct logo or brand identity.",
+            "evidence": "The header uses plain text 'LANDLORD REPAIR QUEUE' rather than a branded logo.",
+            "quick_fix": "Replace the text header with a proper logo file.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula Metropolitan Housing Authority (AMHA)",
+          "type": "Public Housing Authority",
+          "website": "https://www.ashtabulamha.com/",
+          "fit_rationale": "Manages public housing and Section 8 vouchers; needs landlord onboarding tools, tenant screening integration, and compliance tracking. Already partners with AffordableHousing.com for listings.",
+          "source": "https://www.ashtabulamha.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "lawn": {
+      "slug": "lawn",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/lawn/",
+      "source_title": "Lawn Service Quote",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 7,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 3,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Enhance the empty state of the quote result card.",
+            "why": "It currently feels a bit static; a slight animation or more engaging visual would improve the 'wow' factor.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The 'Your Personalized Quote' section is empty until interaction, which is fine, but could benefit from a more engaging empty state.",
+            "evidence": "The area currently just shows a leaf icon and text.",
+            "quick_fix": "Add a subtle animation or a more descriptive placeholder image.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "hvac": {
+      "slug": "hvac",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/hvac/",
+      "source_title": "hvac-tuneup",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Replace generic header with a branded logo",
+            "why": "To establish trust and identify the service provider immediately.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add a contact phone number or address in the header/footer",
+            "why": "Local service businesses rely heavily on immediate contact information for trust.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of unique brand identity",
+            "evidence": "The header and overall design feel like a template without custom styling.",
+            "quick_fix": "Add a specific logo and custom color theme for the target HVAC company.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "snow-plow": {
+      "slug": "snow-plow",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/snow-plow/",
+      "source_title": "snow-plow-tracker",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 6,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add official logo",
+            "why": "Increases trust and confirms the page is an official government resource.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Refine footer",
+            "why": "The footer text is very small and lacks visual weight; it should be more prominent to anchor the page.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of municipal identity",
+            "evidence": "The page relies on generic icons and colors rather than specific branding for Ashtabula County.",
+            "quick_fix": "Add a municipal logo to the header and adjust the primary blue to match the official county brand colors.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "dirt-quote": {
+      "slug": "dirt-quote",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/dirt-quote/",
+      "source_title": "instant-dirt-quote",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a footer with contact info or company details",
+            "why": "Increases trust for a service-based tool.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Refine the slider styling",
+            "why": "The current slider looks a bit 'default browser' style; custom styling would improve polish.",
+            "effort": "small",
+            "impact": "low"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of unique brand identity",
+            "evidence": "The page relies on generic styling and lacks a strong visual hook.",
+            "quick_fix": "Add a primary brand color and a more distinct font pairing.",
+            "effort": "small"
+          },
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "Background circles feel slightly disconnected",
+            "evidence": "The floating circles are purely decorative and don't align with the grid.",
+            "quick_fix": "Reduce opacity or integrate them into the background gradient.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "rental": {
+      "slug": "rental",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/rental/",
+      "source_title": "Rental Availability Finder | Ashtabula County Rentals",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add official regional branding",
+            "why": "To build trust with local residents and establish authority.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add a 'How it works' section",
+            "why": "To clarify the AI-powered matching process for non-technical users.",
+            "effort": "medium",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of specific regional branding",
+            "evidence": "The page uses generic icons and text rather than incorporating the Ashtabula County seal or specific color scheme.",
+            "quick_fix": "Add the official Ashtabula County logo to the header and update the color palette to match their official branding.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "adaptive-reuse": {
+      "slug": "adaptive-reuse",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/adaptive-reuse/",
+      "source_title": "Adaptive Reuse Planner | Ashtabula Chamber of Commerce",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 5,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 6,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add organizational branding to the header",
+            "why": "Increases trust and confirms the user is in the right place.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of organizational logo",
+            "evidence": "The header is empty of any branding, making it feel slightly detached from the entity mentioned in the footer.",
+            "quick_fix": "Add the City of Geneva or Ashtabula Chamber of Commerce logo to the top left.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "engineers": {
+      "slug": "engineers",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/engineers/",
+      "source_title": "engineers-assistant",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Remove or resolve the 'Setup Required' warning",
+            "why": "It is a major trust-breaker and indicates the site is broken for the user.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Apply custom branding (logo/colors)",
+            "why": "To move from a generic template to a professional product for the target entity.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "functional",
+            "severity": "critical",
+            "issue": "Setup Required error message visible to end-users",
+            "evidence": "Yellow warning box at the top of the content area.",
+            "quick_fix": "Hide the warning in production or ensure the API key is configured.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "medium",
+            "issue": "Lack of distinct brand identity",
+            "evidence": "The site uses generic naming and lacks a logo or custom color scheme.",
+            "quick_fix": "Add a custom logo and update the primary color to match the target entity's branding.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "grocer": {
+      "slug": "grocer",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/grocer/",
+      "source_title": "Local Grocer Go",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Enhance the empty state",
+            "why": "The current empty state is a bit static; adding a subtle animation or a more descriptive prompt would improve the user experience.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "content",
+            "severity": "low",
+            "issue": "The 'Pickup Confirmation' section is currently a placeholder.",
+            "evidence": "The text says 'Enter your grocery list to generate...', which is standard for an empty state but could be more dynamic.",
+            "quick_fix": "Add a loading state or a more engaging empty state illustration.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "curbside": {
+      "slug": "curbside",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/curbside/",
+      "source_title": "curbside-pickup-tracker",
+      "visual_analysis": {
+        "design_score": 4,
+        "branding_score": 2,
+        "status": "mixed",
+        "research_needed": true,
+        "branding_work_remaining": 9,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a primary brand color and logo",
+            "why": "To establish basic trust and identity.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Style the input field and add a 'Track' button",
+            "why": "The current input is too subtle and lacks a clear call-to-action.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 3,
+            "action": "Wrap content in a styled card",
+            "why": "To improve visual focus and reduce the 'floating' feeling.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Lack of containerization",
+            "evidence": "The content is floating without a clear bounding box or card structure.",
+            "quick_fix": "Wrap the main content in a centered, max-width card with a white background and subtle drop shadow.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "high",
+            "issue": "Total lack of visual identity",
+            "evidence": "No logo, no brand colors, no typography hierarchy.",
+            "quick_fix": "Define a primary brand color and apply it to the header and primary buttons.",
+            "effort": "medium"
+          },
+          {
+            "category": "UX",
+            "severity": "medium",
+            "issue": "Input field is not prominent",
+            "evidence": "The 'Order code' input is small and easily missed.",
+            "quick_fix": "Increase the size of the input field and add a clear 'Track' button next to it.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "farm-stand": {
+      "slug": "farm-stand",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/farm-stand/",
+      "source_title": "farm-stand-finder",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 8,
+        "status": "excellent",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Implement dynamic content loading",
+            "why": "The current placeholder box is a dead end; showing actual results would significantly improve utility.",
+            "effort": "medium",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The middle section is a placeholder that doesn't provide immediate value.",
+            "evidence": "The box with the wheat icon says 'Select a day and click Find Fresh Stands', but this is redundant as the user has already seen the buttons.",
+            "quick_fix": "Replace the placeholder box with a dynamic results area or a map view once a day is selected.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "notary": {
+      "slug": "notary",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/notary/",
+      "source_title": "Mobile Notary Services",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Remove 'AI GENERATED' badge",
+            "why": "It undermines the professional appearance of the service.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add specific contact information",
+            "why": "A local service needs a phone number or email to build trust.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "AI-generated badge is visible",
+            "evidence": "The 'AI GENERATED' tag on the confirmation box.",
+            "quick_fix": "Remove the badge.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "medium",
+            "issue": "Generic branding",
+            "evidence": "The logo and color scheme are placeholders.",
+            "quick_fix": "Replace with a custom logo and brand-specific color palette.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "auto-detail": {
+      "slug": "auto-detail",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/auto-detail/",
+      "source_title": "Auto Detail Pro | AI Booking Assistant",
+      "visual_analysis": {
+        "design_score": 4,
+        "branding_score": 3,
+        "status": "mixed",
+        "research_needed": true,
+        "branding_work_remaining": 8,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Remove grid background",
+            "why": "It makes the page look like a design draft rather than a finished product.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Center the main content container",
+            "why": "Improves readability and professional appearance.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 3,
+            "action": "Add a primary brand color",
+            "why": "Helps guide the user's eye to the most important actions.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "visual_design",
+            "severity": "medium",
+            "issue": "Distracting grid background",
+            "evidence": "The entire background is covered in a visible grid pattern.",
+            "quick_fix": "Remove the grid background and use a solid dark gray or off-white background.",
+            "effort": "small"
+          },
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Narrow container width",
+            "evidence": "Content is constrained to a narrow column on the left.",
+            "quick_fix": "Increase the max-width of the main container and center it.",
+            "effort": "small"
+          },
+          {
+            "category": "ux",
+            "severity": "high",
+            "issue": "Lack of visual hierarchy",
+            "evidence": "Primary actions like 'Generate Confirmation' are not visually distinct from secondary elements.",
+            "quick_fix": "Apply a primary brand color to the main action buttons.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "total_leads": 9,
+        "top_candidate": {
+          "organization": "Flawless Coating & Detailing",
+          "type": "Professional Auto Detailing / Ceramic Coating"
+        }
+      }
+    },
+    "truck-wash": {
+      "slug": "truck-wash",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/truck-wash/",
+      "source_title": "truck-wash-booking",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Enhance the empty state of the Booking Confirmation card.",
+            "why": "It currently looks like a broken or missing component rather than a functional placeholder.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "content",
+            "severity": "low",
+            "issue": "The 'Booking Confirmation' area is empty and lacks a clear call-to-action or state indicator.",
+            "evidence": "The text 'Your booking confirmation will appear here...' is static.",
+            "quick_fix": "Add a placeholder graphic or a 'No bookings yet' state to make it feel less empty.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "scheduler": {
+      "slug": "scheduler",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/scheduler/",
+      "source_title": "Service Scheduler",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a brand logo",
+            "why": "To establish ownership and professionalism.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Replace generic footer",
+            "why": "The current footer feels like a placeholder; it should link to actual company policies or contact info.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of unique brand identity",
+            "evidence": "The page uses generic headers and placeholder text.",
+            "quick_fix": "Replace 'Service Scheduler' with a specific company logo and add a brand-specific color theme.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "scheduler-sms": {
+      "slug": "scheduler-sms",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/scheduler-sms/",
+      "source_title": "service-scheduler-sms",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add instructional text to the SMS Preview box.",
+            "why": "Users need to know how to trigger the preview to understand the tool's value.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The 'SMS Preview' box is currently empty and lacks a placeholder state that explains how to trigger the preview.",
+            "evidence": "The box says 'SMS preview will appear here...' but there is no clear instruction on how to populate it.",
+            "quick_fix": "Add a small instructional text or a 'Generate Preview' button state.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "insta-book": {
+      "slug": "insta-book",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/insta-book/",
+      "source_title": "insta-book",
+      "visual_analysis": {
+        "design_score": 6,
+        "branding_score": 4,
+        "status": "mixed",
+        "research_needed": true,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Remove background ghost cards",
+            "why": "They create visual clutter and make the page look like an incomplete wireframe.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add specific social proof",
+            "why": "The 5-star badge needs context to build real trust.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Distracting background placeholders",
+            "evidence": "Multiple empty grey rectangles floating behind the main content.",
+            "quick_fix": "Remove the background placeholder elements entirely.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Generic branding",
+            "evidence": "The logo and copy feel like a template.",
+            "quick_fix": "Replace the generic building icon with a custom brand mark and refine the copy to be more specific to the target audience.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "concierge": {
+      "slug": "concierge",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/concierge/",
+      "source_title": "virtual-concierge",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Replace generic icons with custom brand-aligned iconography",
+            "why": "To move away from the 'generic template' look and establish a unique brand voice.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Add a specific brand logo to the header",
+            "why": "To provide immediate brand recognition.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of unique brand identity",
+            "evidence": "The page uses generic icons and placeholders.",
+            "quick_fix": "Replace the generic 'Virtual Concierge' header with a specific brand logo and color scheme.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "parking": {
+      "slug": "parking",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/parking/",
+      "source_title": "visitor-parking-finder",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add municipal logo",
+            "why": "To establish trust and confirm the user is on an official government-sanctioned tool.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Adjust color palette",
+            "why": "Aligning the UI colors with the specific municipality's brand increases perceived legitimacy.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of municipal identity",
+            "evidence": "The page uses generic icons and colors rather than Ashtabula County's official branding or color scheme.",
+            "quick_fix": "Incorporate the official municipal logo in the header and adjust the primary button color to match the county's brand guidelines.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "City of Ashtabula",
+          "type": "Municipal Government",
+          "website": "https://www.cityofashtabula.com/",
+          "fit_rationale": "Manages downtown parking, street parking regulations, and parking ordinances. Digital parking management would streamline enforcement and payment collection.",
+          "source": "https://www.cityofashtabula.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "mytrip": {
+      "slug": "mytrip",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/mytrip/",
+      "source_title": "MyTrip Planner",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 7,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 3,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Enhance empty state",
+            "why": "The empty itinerary section feels slightly dead; a visual placeholder would improve the sense of progress.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The 'Your Personalized Itinerary' section is empty and lacks a clear call-to-action or visual indicator of what happens after clicking 'Create Itinerary'.",
+            "evidence": "Large empty white space under the header.",
+            "quick_fix": "Add a subtle placeholder illustration or a 'Waiting for your input' state.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Visit Ashtabula County (Official Tourism Site)",
+          "type": "County Convention & Visitors Bureau",
+          "website": "https://visitashtabulacounty.com/",
+          "fit_rationale": "Official county tourism site promoting 30+ wineries, 19 covered bridges, state parks, and fishing. A trip planner/itinerary builder would enhance visitor engagement and length of stay.",
+          "source": "https://visitashtabulacounty.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "mytrip-export": {
+      "slug": "mytrip-export",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/mytrip-export/",
+      "source_title": "MyTrip Planner Export",
+      "visual_analysis": {
+        "design_score": 6,
+        "branding_score": 4,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 6,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Fix API configuration",
+            "why": "The app is currently non-functional for users.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Improve error handling UI",
+            "why": "The current error message is too technical for a standard user.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "functional",
+            "severity": "critical",
+            "issue": "API key configuration error",
+            "evidence": "The page displays a red warning box: 'Gemini API key is not configured.'",
+            "quick_fix": "Configure the VITE_GEMINI_API_KEY in the production environment variables.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Generic branding",
+            "evidence": "The branding is very basic and lacks a unique visual identity beyond the logo.",
+            "quick_fix": "Incorporate specific brand assets from the Ashtabula CVB (colors, fonts, imagery).",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Convention & Visitors Bureau",
+          "type": "County tourism bureau / DMO",
+          "website": "https://www.ashtabulacounty.us/299/Ashtabula-County-Convention-Visitors-Bur",
+          "fit_rationale": "Publishes visitor information and travel guides for Ashtabula County; could use a branded itinerary export tool for trip planning and guide distribution.",
+          "source": "https://www.ashtabulacounty.us/299/Ashtabula-County-Convention-Visitors-Bur"
+        },
+        "total_leads": 5
+      }
+    },
+    "routes": {
+      "slug": "routes",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/routes/",
+      "source_title": "Route Optimizer | Ashtabula Efficiency",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 7,
+        "status": "excellent",
+        "research_needed": false,
+        "branding_work_remaining": 3,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a footer with contact info or support links.",
+            "why": "Adds professional credibility and provides a path for users if they encounter issues.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "The logo at the top is generic.",
+            "evidence": "The icon used is a standard stock-style line icon.",
+            "quick_fix": "Replace with an official Ashtabula County seal or a custom-designed logo.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Transportation System (ACTS)",
+          "type": "County Public Transit",
+          "website": "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+          "fit_rationale": "Operates point deviation and door-to-door transit services. Route optimization tools would improve service efficiency and reduce travel times.",
+          "source": "https://www.ashtabulacounty.us/442/Door-to-Door-Service"
+        },
+        "total_leads": 5
+      }
+    },
+    "ride-ready": {
+      "slug": "ride-ready",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/ride-ready/",
+      "source_title": "Ride Ready | Ashtabula County Transit Assistant",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 8,
+        "status": "excellent",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Enhance empty state for 'Next Departures'",
+            "why": "Currently, the empty state feels slightly dead; a small icon or more inviting text would improve the user experience.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The 'Next Departures' section is currently empty and lacks a clear call-to-action or placeholder state beyond the text.",
+            "evidence": "The area under 'Next Departures' is a large, empty gray box.",
+            "quick_fix": "Add a subtle illustration or a more descriptive prompt to encourage interaction.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Transportation System (ACTS)",
+          "type": "County Public Transit",
+          "website": "https://www.ashtabulacounty.us/442/Door-to-Door-Service",
+          "fit_rationale": "Provides door-to-door bus service with wheelchair accessibility and reduced fares for elderly/disabled. Ride scheduling platform would improve booking and tracking.",
+          "source": "https://www.ashtabulacounty.us/442/Door-to-Door-Service"
+        },
+        "total_leads": 5
+      }
+    },
+    "charter": {
+      "slug": "charter",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/charter/",
+      "source_title": "Ashtabula Fishing Charters | Lake Erie Walleye Capital",
+      "visual_analysis": {
+        "design_score": 2,
+        "branding_score": 3,
+        "status": "poor",
+        "research_needed": true,
+        "branding_work_remaining": 9,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Apply a global CSS reset and container wrapper",
+            "why": "To stop the content from bleeding to the edges and provide a baseline for layout.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add a navigation bar and footer styling",
+            "why": "To provide structure and professional framing for the content.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "critical",
+            "issue": "Missing CSS stylesheet",
+            "evidence": "The entire page is rendered in browser-default styles.",
+            "quick_fix": "Link a CSS framework (e.g., Tailwind) and apply a basic container and layout grid.",
+            "effort": "medium"
+          },
+          {
+            "category": "branding",
+            "severity": "high",
+            "issue": "No visual identity",
+            "evidence": "No logo, color scheme, or typography choices.",
+            "quick_fix": "Define a primary color and font stack; add a proper header with a logo.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Compensator Lake Erie Fishing Charters",
+          "type": "Charter Fishing Service",
+          "website": "https://compensatorfishingcharters.com/",
+          "fit_rationale": "Ashtabula-based charter targeting walleye, steelhead, and perch. Online booking and automated customer communication would streamline their operations.",
+          "source": "https://compensatorfishingcharters.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "marina": {
+      "slug": "marina",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/marina/",
+      "source_title": "Marina Slip Waitlist",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Remove 'AI GENERATED' badge",
+            "why": "It is unnecessary for the end-user and slightly undermines the professional branding.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The 'AI GENERATED' badge is prominent and might detract from the professional feel for end-users.",
+            "evidence": "Badge located in the top right of the 'Waitlist Confirmation' card.",
+            "quick_fix": "Remove or move to the footer.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "compassionate": {
+      "slug": "compassionate",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/compassionate/",
+      "source_title": "Compassionate Planner | Ducro Funeral Services",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Balance the feature card grid",
+            "why": "The current 3-card layout leaves an awkward empty space that disrupts the visual balance.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "Asymmetrical grid layout",
+            "evidence": "The three feature cards leave a noticeable empty space in the 2x2 grid structure.",
+            "quick_fix": "Add a fourth feature card or center the three cards horizontally.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "aidflow": {
+      "slug": "aidflow",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/aidflow/",
+      "source_title": "AidFlow Navigator | Ashtabula County Community Resource Guide",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 8,
+        "status": "excellent",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Update footer date",
+            "why": "The year 2026 might confuse users regarding the current status of the tool.",
+            "effort": "small",
+            "impact": "low"
+          }
+        ],
+        "issues": [
+          {
+            "category": "content",
+            "severity": "low",
+            "issue": "Footer copyright year",
+            "evidence": "Footer displays '2026 NOIRSYS ARCHIVES'",
+            "quick_fix": "Update to current year or remove if not applicable.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "resource": {
+      "slug": "resource",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/resource/",
+      "source_title": "Ashtabula Circles Navigator - Surviving to Thriving",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Adjust background pattern opacity",
+            "why": "To reduce visual noise and keep the focus on the primary call-to-action.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "visual_design",
+            "severity": "low",
+            "issue": "Background pattern is slightly repetitive and distracting.",
+            "evidence": "The repeating icon pattern in the background is quite dense.",
+            "quick_fix": "Reduce the opacity of the background pattern or increase the scale of the icons.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "resource-pro": {
+      "slug": "resource-pro",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/resource-pro/",
+      "source_title": "G.O. Benevolence Engine - Growth & Opportunity",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 7,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 3,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Enhance empty state",
+            "why": "To improve the user experience when no search has been performed yet.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The 'Resource Matches' section is empty by default, which is standard but could be more inviting.",
+            "evidence": "The text 'Enter your location and need to find matching resources...' is a bit plain.",
+            "quick_fix": "Add a subtle illustration or icon to the empty state to make it feel less like a 'missing' section.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "OhioMeansJobs Ashtabula County",
+          "type": "Workforce Resource Center",
+          "website": "https://www.acdjfs.org/copy-of-transportation",
+          "fit_rationale": "All-in-one workforce resource center providing job training and workforce development services. Resource management platform would help track client resources, training programs, and service allocation.",
+          "source": "https://www.acdjfs.org/copy-of-transportation"
+        },
+        "total_leads": 5
+      }
+    },
+    "policy-pal": {
+      "slug": "policy-pal",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/policy-pal/",
+      "source_title": "Policy Pal | AI Insurance Policy Summarizer for Agents",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 7,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 3,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Remove location-specific footer text",
+            "why": "It breaks the white-label potential and creates confusion about the product's scope.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "content",
+            "severity": "low",
+            "issue": "The footer mentions 'Ashtabula County, OH', which contradicts the generic 'Policy Pal' branding.",
+            "evidence": "Footer text at the bottom of the page.",
+            "quick_fix": "Remove the specific location or replace it with a generic 'Professional Insurance Tools' placeholder.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Crawford Insurance Agency",
+          "type": "Independent Insurance Agency",
+          "website": "https://www.crawfordinsurance.com/",
+          "fit_rationale": "Locally owned independent agency serving Ashtabula County for 80+ years. Could benefit from policy comparison dashboards and client digital document management.",
+          "source": "https://www.crawfordinsurance.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "boat-storage": {
+      "slug": "boat-storage",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/boat-storage/",
+      "source_title": "Boat Storage Waitlist \u2014 AI-Powered Marina Confirmations",
+      "visual_analysis": {
+        "design_score": 3,
+        "branding_score": 2,
+        "status": "mixed",
+        "research_needed": true,
+        "branding_work_remaining": 9,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a max-width container",
+            "why": "Improves readability and prevents the 'stretched' look.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Apply a CSS framework (e.g., Tailwind)",
+            "why": "Provides immediate access to professional spacing, typography, and component styling.",
+            "effort": "medium",
+            "impact": "high"
+          },
+          {
+            "priority": 3,
+            "action": "Add a header and footer",
+            "why": "Establishes a professional page structure and provides a place for branding.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "high",
+            "issue": "Lack of container/max-width",
+            "evidence": "Content spans the full width of the screen, making it difficult to read.",
+            "quick_fix": "Wrap the main content in a container div with a max-width (e.g., 800px) and center it.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "medium",
+            "issue": "No visual identity",
+            "evidence": "The page lacks a logo, brand colors, or professional typography.",
+            "quick_fix": "Add a header with a logo and apply a consistent color palette.",
+            "effort": "medium"
+          },
+          {
+            "category": "ux",
+            "severity": "medium",
+            "issue": "Poor form layout",
+            "evidence": "The 'Boat details' form is cramped and lacks labels or clear grouping.",
+            "quick_fix": "Use a card-based layout for the form with clear labels and spacing.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "harvest": {
+      "slug": "harvest",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/harvest/",
+      "source_title": "Ashtabula County Agricultural Services \u2014 Harvest Alert System",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Increase contrast of the 'OFFICIAL' badge",
+            "why": "It currently looks a bit like a secondary tag; making it more prominent would increase trust.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UI",
+            "severity": "low",
+            "issue": "The 'OFFICIAL' badge feels slightly disconnected from the header.",
+            "evidence": "The badge is floating to the right of the logo, which is fine, but it lacks a visual anchor to the header container.",
+            "quick_fix": "Integrate the badge into the header row with more consistent padding or a subtle border.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "ai-docent-pro": {
+      "slug": "ai-docent-pro",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/ai-docent-pro/",
+      "source_title": "AI Docent Pro",
+      "visual_analysis": {
+        "design_score": 4,
+        "branding_score": 5,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 6,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a max-width container to the main content",
+            "why": "Prevents the content from looking lost on large screens.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Style the input and buttons",
+            "why": "Improves perceived quality and usability.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Poor vertical spacing and alignment",
+            "evidence": "The page content is floating in the middle of a large empty space.",
+            "quick_fix": "Wrap the content in a container with a max-width and vertical padding.",
+            "effort": "small"
+          },
+          {
+            "category": "design",
+            "severity": "low",
+            "issue": "Lack of visual branding",
+            "evidence": "The page uses default browser styling for inputs and buttons.",
+            "quick_fix": "Apply a consistent color palette and custom CSS for buttons and inputs.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Historical Society (ACHS)",
+          "type": "Historical Society",
+          "website": "https://ashtabulahistory.com/",
+          "fit_rationale": "Second oldest historical society in Ohio (founded 1838) with 3 museum properties including the Jennie Munger Gregory Museum. All-volunteer team with limited resources for guided tours. AI docent would extend their capacity to tell Ashtabula County's story to visitors year-round.",
+          "source": "https://ashtabulahistory.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "artist-commission": {
+      "slug": "artist-commission",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/artist-commission/",
+      "source_title": "artist-commission-form",
+      "visual_analysis": {
+        "design_score": 3,
+        "branding_score": 4,
+        "status": "mixed",
+        "research_needed": false,
+        "branding_work_remaining": 8,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a max-width container",
+            "why": "Prevents content from stretching to the screen edges, improving readability.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add vertical spacing (gap) between form elements",
+            "why": "Improves visual hierarchy and makes the form easier to complete.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "high",
+            "issue": "Lack of container/wrapper",
+            "evidence": "Content spans the full width of the screen without margins.",
+            "quick_fix": "Wrap the content in a max-width container with horizontal padding.",
+            "effort": "small"
+          },
+          {
+            "category": "styling",
+            "severity": "medium",
+            "issue": "Unstyled form elements",
+            "evidence": "Inputs and buttons use default browser styles.",
+            "quick_fix": "Apply a CSS framework or custom styles to inputs, labels, and buttons.",
+            "effort": "medium"
+          },
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Collapsed spacing",
+            "evidence": "Form fields are touching each other.",
+            "quick_fix": "Add vertical margin/gap between form groups.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "historian": {
+      "slug": "historian",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/historian/",
+      "source_title": "pocket-historian",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 5,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a header logo",
+            "why": "Establishes immediate ownership and trust for the museum visitors.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Refine the footer",
+            "why": "The footer text is currently very small and easy to miss; it should be more prominent to ground the app.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of visual identity",
+            "evidence": "The page relies entirely on default styling without a logo or custom color palette.",
+            "quick_fix": "Add a logo in the top left and adjust the primary blue to match the museum's brand colors.",
+            "effort": "small"
+          },
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "Empty state is uninviting",
+            "evidence": "The 'Story appears here' text is a bit dry.",
+            "quick_fix": "Add a subtle illustration or a more engaging prompt when the story area is empty.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Historical Society",
+          "type": "Historical Preservation Organization",
+          "website": "https://ashtabulahistory.com/",
+          "fit_rationale": "Founded in 1838, second oldest historical society in Ohio. Digital archiving and genealogy tools would enhance their preservation mission and expand access to their collections.",
+          "source": "https://ashtabulahistory.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "sommelier": {
+      "slug": "sommelier",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/sommelier/",
+      "source_title": "pocket-sommelier",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a logo or brand mark to the top left.",
+            "why": "To establish immediate brand identity and authority.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Improve contrast on the 'Recommendation' card.",
+            "why": "The placeholder text 'Recommendation appears here' is quite light and could be more prominent.",
+            "effort": "small",
+            "impact": "low"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "The branding is restricted to a small footer text.",
+            "evidence": "Footer text 'Ferrante Winery' is the only indicator of ownership.",
+            "quick_fix": "Incorporate a logo or brand-specific color accent in the header.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "gotl": {
+      "slug": "gotl",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/gotl/",
+      "source_title": "Visit Geneva-on-the-Lake | Official Tourism & Planner",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add spacing to navigation links",
+            "why": "The current lack of spacing makes the navigation look broken and unprofessional.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Increase contrast on sub-headline",
+            "why": "Improves readability and accessibility for all users.",
+            "effort": "small",
+            "impact": "low"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "Navigation links are squashed",
+            "evidence": "The text 'AttractionsDiningLodgingEvents' lacks spacing between the items.",
+            "quick_fix": "Add horizontal padding/margin to the navigation links.",
+            "effort": "small"
+          },
+          {
+            "category": "accessibility",
+            "severity": "low",
+            "issue": "Low contrast on some text",
+            "evidence": "The sub-headline text is slightly light against the background.",
+            "quick_fix": "Slightly darken the text color for better readability.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "harbor": {
+      "slug": "harbor",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/harbor/",
+      "source_title": "harbor-cam-dashboard",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Fix footer text spacing",
+            "why": "It looks like a typo and degrades the professional feel.",
+            "effort": "small",
+            "impact": "low"
+          },
+          {
+            "priority": 2,
+            "action": "Improve camera error state",
+            "why": "The current error state is a bit stark; adding a 'Check back later' or a static image of the harbor would be more welcoming.",
+            "effort": "medium",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "functional",
+            "severity": "medium",
+            "issue": "Camera feed is unavailable",
+            "evidence": "The camera view shows 'Camera temporarily unavailable' with a retry button.",
+            "quick_fix": "Ensure the stream source is robust or provide a fallback image.",
+            "effort": "medium"
+          },
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "Footer text alignment",
+            "evidence": "The footer text 'Ashtabula Harbor CamPowered by...' is missing a space between 'Cam' and 'Powered'.",
+            "quick_fix": "Add a space or a line break between the two phrases.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "pet-match": {
+      "slug": "pet-match",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/pet-match/",
+      "source_title": "pet-matchmaker",
+      "visual_analysis": {
+        "design_score": 4,
+        "branding_score": 2,
+        "status": "broken",
+        "research_needed": false,
+        "branding_work_remaining": 9,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Fix API configuration",
+            "why": "The app is currently non-functional for the end user.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add shelter branding",
+            "why": "To establish trust and legitimacy for the user.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "functional",
+            "severity": "critical",
+            "issue": "API key not configured",
+            "evidence": "The page displays a large red error box stating 'Gemini API key is not configured'.",
+            "quick_fix": "Configure the VITE_GEMINI_API_KEY in the environment variables.",
+            "effort": "small"
+          },
+          {
+            "category": "branding",
+            "severity": "medium",
+            "issue": "Lack of identity",
+            "evidence": "No logo, custom colors, or specific branding for the shelter.",
+            "quick_fix": "Add a logo to the top left and update the color palette to match the shelter's brand.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ashtabula County Animal Protective League (ACAPL)",
+          "type": "Animal Shelter / Nonprofit",
+          "website": "https://www.acapl.org/",
+          "fit_rationale": "Primary animal shelter serving Ashtabula County. A matching platform with detailed pet profiles and adoption applications would streamline their adoption process.",
+          "source": "https://www.acapl.org/"
+        },
+        "total_leads": 5
+      }
+    },
+    "portfolio": {
+      "slug": "portfolio",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/portfolio/",
+      "source_title": "visual-portfolio",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a loading state to the 'Generate Description' button.",
+            "why": "To provide immediate feedback to the user when the AI is processing.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Replace generic emojis with custom SVG icons.",
+            "why": "To elevate the visual polish and move away from the 'default' look.",
+            "effort": "medium",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "content",
+            "severity": "low",
+            "issue": "The 'Project Description' output area is currently empty/placeholder, which might confuse users if they don't know they need to click 'Generate'.",
+            "evidence": "The text 'Enter project details to generate...' is static.",
+            "quick_fix": "Add a subtle animation or placeholder state that indicates the output will appear here.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "volunteer": {
+      "slug": "volunteer",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/volunteer/",
+      "source_title": "Ashtabula County Community Resources \u2014 Volunteer Scheduler",
+      "visual_analysis": {
+        "design_score": 7,
+        "branding_score": 8,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 2,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Center the main content container.",
+            "why": "It will immediately improve the visual balance and make the page look like a finished product rather than a draft.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "medium",
+            "issue": "Page content is left-aligned instead of centered.",
+            "evidence": "The main container sits on the left side of the screen with a large empty space on the right.",
+            "quick_fix": "Apply 'margin: 0 auto;' to the main container and set a max-width.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "United Way of Ashtabula County",
+          "type": "County nonprofit / volunteer coordinator",
+          "website": "https://unitedwayashtabula.org/",
+          "fit_rationale": "Coordinates community programs and volunteer initiatives; a scheduler with shift sign\u2011ups and reminders would reduce admin load.",
+          "source": "https://unitedwayashtabula.org/"
+        },
+        "total_leads": 5
+      }
+    },
+    "wedding": {
+      "slug": "wedding",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/wedding/",
+      "source_title": "wedding-lead-form",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Replace placeholder text with real business branding",
+            "why": "To move from a template to a functional business site.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "content",
+            "severity": "low",
+            "issue": "Placeholder text is generic",
+            "evidence": "The footer and header use generic 'Wedding Planner' and 'Ashtabula' references.",
+            "quick_fix": "Replace with specific business name and contact info.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Elks Lodge #208",
+          "type": "Wedding Venue",
+          "website": "https://www.theknot.com/marketplace/wedding-reception-venues-ashtabula-oh",
+          "fit_rationale": "Beautiful waterside wedding venue on Lake Erie in Ashtabula, OH. Wedding planning platform would help manage bookings, vendor coordination, and event logistics.",
+          "source": "https://www.theknot.com/marketplace/wedding-reception-venues-ashtabula-oh"
+        },
+        "total_leads": 5
+      }
+    },
+    "ashtabula-fence": {
+      "slug": "ashtabula-fence",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/ashtabula-fence/",
+      "source_title": "Ashtabula Fence Co. - Quality, Trust, and Integrity",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 5,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add company logo",
+            "why": "Establishes brand identity and increases professional trust.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Clean up bottom UI",
+            "why": "The stray line looks like a rendering artifact or incomplete layout.",
+            "effort": "small",
+            "impact": "low"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of visual branding",
+            "evidence": "No logo or unique brand assets present.",
+            "quick_fix": "Add a company logo to the top left of the header.",
+            "effort": "small"
+          },
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "Footer/Bottom spacing",
+            "evidence": "There is a faint, disconnected horizontal line at the bottom of the content area.",
+            "quick_fix": "Remove the stray horizontal line or integrate it into a proper footer.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Thomas Fence Co.",
+          "type": "Fence Contractor (50+ Years)",
+          "website": "https://thomasfence.com/",
+          "fit_rationale": "Family-owned fence contractor celebrating 50+ years serving Northeast Ohio and Northwest Pennsylvania. Offers both commercial and residential fencing. Digital platform would streamline their estimate requests, permit guidance for customers, and project scheduling across their 8-county service area.",
+          "source": "https://thomasfence.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "thomas-fence": {
+      "slug": "thomas-fence",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/thomas-fence/",
+      "source_title": "Thomas Fence Company - Serving Ashtabula for 50 Years",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 7,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add company logo",
+            "why": "Increases trust and brand recognition immediately.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Add a 'Contact Us' or 'About' link",
+            "why": "Provides a path for users who need more than just an estimate.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of visual brand identity",
+            "evidence": "No logo or unique color palette present.",
+            "quick_fix": "Add a company logo to the top left and incorporate brand colors into the UI elements.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "cut-custom": {
+      "slug": "cut-custom",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/cut-custom/",
+      "source_title": "My Google AI Studio App",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 7,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 3,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add product imagery",
+            "why": "Food is a visual product; icons are too abstract for a 'premium' farm-to-table experience.",
+            "effort": "medium",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of visual imagery",
+            "evidence": "The cards rely solely on icons; adding high-quality photography of the actual products would significantly increase conversion and trust.",
+            "quick_fix": "Replace icons with high-quality, consistent product photography.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "rennick-market": {
+      "slug": "rennick-market",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/rennick-market/",
+      "source_title": "Rennick Meat Market",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 4,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 7,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Update header branding",
+            "why": "To align the site with the actual business entity (Rennick Meat Market).",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add footer with contact info",
+            "why": "Increases trust and provides necessary business context for a local market.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "medium",
+            "issue": "Lack of specific branding for the target entity.",
+            "evidence": "The header says 'Farm to Table' instead of 'Rennick Meat Market'.",
+            "quick_fix": "Replace the 'Farm to Table' text/logo with the actual business logo or name.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Rennick Meat Market",
+          "type": "Butcher Shop / Restaurant",
+          "website": "https://rennickmeatmarket.com/",
+          "fit_rationale": "Established butcher-inspired steakhouse in Ashtabula Harbor. Could benefit from online ordering, reservation system, and local producer marketplace features.",
+          "source": "https://rennickmeatmarket.com/"
+        },
+        "total_leads": 5
+      }
+    },
+    "trumbull-locker": {
+      "slug": "trumbull-locker",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/trumbull-locker/",
+      "source_title": "Trumbull Meat Locker",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 5,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 5,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add specific business branding",
+            "why": "To move from a generic template to a professional, branded business site.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of unique brand identity",
+            "evidence": "The header 'Farm to Table' is generic and does not reflect a specific business.",
+            "quick_fix": "Replace the generic header with a specific business logo and brand-aligned color palette.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "terra-vantage": {
+      "slug": "terra-vantage",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/terra-vantage/",
+      "source_title": "EarthFlow Estimator",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 3,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 8,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add branding",
+            "why": "To establish ownership and professionalism.",
+            "effort": "small",
+            "impact": "medium"
+          },
+          {
+            "priority": 2,
+            "action": "Add a 'Help' or 'Info' tooltip",
+            "why": "To explain how to draw on the map, as it is currently implied but not explicit.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "Lack of brand identity",
+            "evidence": "No logo or company name present in the header.",
+            "quick_fix": "Add a brand logo or company name in the top left corner.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "parcelvisor": {
+      "slug": "parcelvisor",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/parcelvisor/",
+      "source_title": "ParcelVisor | AI Property Assessment",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add a footer",
+            "why": "The page feels incomplete without a footer to anchor the bottom of the viewport.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "The page appears to end abruptly after the hero section.",
+            "evidence": "Large empty white space below the hero section.",
+            "quick_fix": "Add a footer or secondary content section (e.g., 'How it works' or 'Recent Assessments') to ground the page.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "roofquote": {
+      "slug": "roofquote",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/roofquote/",
+      "source_title": "RoofQuote | AI Roof Analysis",
+      "visual_analysis": {
+        "design_score": 4,
+        "branding_score": 3,
+        "status": "broken",
+        "research_needed": true,
+        "branding_work_remaining": 8,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Fix API key configuration",
+            "why": "The app is currently non-functional.",
+            "effort": "small",
+            "impact": "high"
+          },
+          {
+            "priority": 2,
+            "action": "Add footer and informational content",
+            "why": "To reduce the 'empty' feel and improve SEO/trust.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "functional",
+            "severity": "critical",
+            "issue": "Missing API configuration",
+            "evidence": "The page displays a warning: 'Please configure VITE_GOOGLE_MAPS_API_KEY to use this app.'",
+            "quick_fix": "Configure the environment variables in the deployment environment.",
+            "effort": "small"
+          },
+          {
+            "category": "content",
+            "severity": "medium",
+            "issue": "Empty state",
+            "evidence": "The page is almost entirely empty below the fold.",
+            "quick_fix": "Add 'How it works' steps, benefits, or footer information to fill the space.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "site-ops-pro": {
+      "slug": "site-ops-pro",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/site-ops-pro/",
+      "source_title": "EarthFlow Estimator",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 6,
+        "status": "good",
+        "research_needed": true,
+        "branding_work_remaining": 4,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Dynamic Branding",
+            "why": "To improve white-label capability, ensure the partner name and logo can be swapped via a config object.",
+            "effort": "small",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "branding",
+            "severity": "low",
+            "issue": "The partner branding is hardcoded into the UI.",
+            "evidence": "The text 'Partner Tool: Severino & Koski Construction' is prominent.",
+            "quick_fix": "Move the partner name to a dynamic variable or configuration file.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "sbdc-business-counseling": {
+      "slug": "sbdc-business-counseling",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/sbdc-business-counseling/",
+      "source_title": "Business Counseling | Lakeland SBDC",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Replace emojis with real photos",
+            "why": "Emojis undermine the professional 'Expert' branding established by the text.",
+            "effort": "medium",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "aesthetic",
+            "severity": "low",
+            "issue": "Use of emojis as professional headshots",
+            "evidence": "The counselor cards use generic emojis instead of professional photos.",
+            "quick_fix": "Replace emojis with actual professional headshots of the counselors.",
+            "effort": "medium"
+          }
+        ]
+      },
+      "lead_research": null
+    },
+    "sbdc-business-planning": {
+      "slug": "sbdc-business-planning",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/sbdc-business-planning/",
+      "source_title": "Business Planning Tools \u2014 Lakeland SBDC Resource",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 9,
+        "status": "excellent",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Review mobile responsiveness",
+            "why": "The sidebar navigation might become cramped on smaller screens; ensure it collapses into a mobile-friendly menu.",
+            "effort": "medium",
+            "impact": "high"
+          }
+        ],
+        "issues": [
+          {
+            "category": "UX",
+            "severity": "low",
+            "issue": "The 'Save Progress' button in the header might be redundant if there is a 'Save Draft' button at the bottom of the form.",
+            "evidence": "Two save buttons exist; one in the top nav and one in the bottom action bar.",
+            "quick_fix": "Consider consolidating save functionality or clarifying the difference between the two.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ohio Small Business Development Centers (State Network)",
+          "type": "State SBDC network",
+          "website": "https://www.ohiosbdc.net/",
+          "fit_rationale": "Statewide network providing business advising and planning; centralized planning tools could scale coaching and standardize plan outputs.",
+          "source": "https://www.ohiosbdc.net/"
+        },
+        "total_leads": 5
+      }
+    },
+    "sbdc-educational-resources": {
+      "slug": "sbdc-educational-resources",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/sbdc-educational-resources/",
+      "source_title": "Educational Resources \u2014 Lakeland SBDC Resource",
+      "visual_analysis": {
+        "design_score": 8,
+        "branding_score": 9,
+        "status": "good",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Refine the 'FREE' badge placement",
+            "why": "It currently feels like an afterthought; integrating it into the main value proposition would improve flow.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "layout",
+            "severity": "low",
+            "issue": "The 'FREE' badge in the hero section feels slightly disconnected from the surrounding text.",
+            "evidence": "The badge sits above the stats section but doesn't align perfectly with the text flow.",
+            "quick_fix": "Integrate the 'FREE' messaging more naturally into the sub-headline or a dedicated tag near the resource list.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ohio Small Business Development Centers (Statewide Network)",
+          "type": "Statewide SBDC Network",
+          "website": "https://www.ohiosbdc.net/",
+          "fit_rationale": "Leading resource for Ohio entrepreneurs offering no-cost consulting and training. Centralized educational resources platform would standardize and enhance training delivery across all centers.",
+          "source": "https://www.ohiosbdc.net/"
+        },
+        "total_leads": 5
+      }
+    },
+    "sbdc-learning-modules": {
+      "slug": "sbdc-learning-modules",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/sbdc-learning-modules/",
+      "source_title": "Learning Modules | Lakeland SBDC",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 9,
+        "status": "excellent",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Add hover states to module cards",
+            "why": "Enhances interactivity and provides visual feedback that the cards are clickable.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "accessibility",
+            "severity": "low",
+            "issue": "Contrast on yellow buttons",
+            "evidence": "The 'Continue Learning' buttons use a yellow background with dark text, which is generally good, but ensure the contrast ratio meets WCAG AA standards for all users.",
+            "quick_fix": "Verify contrast ratio and adjust text color if necessary.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": {
+        "completed": true,
+        "top_candidate": {
+          "organization": "Ohio Small Business Development Centers (Statewide Network)",
+          "type": "Statewide SBDC Network",
+          "website": "https://www.ohiosbdc.net/",
+          "fit_rationale": "Leading resource for Ohio entrepreneurs offering no-cost consulting and training. Modular learning platform would complement their existing workshop programs and extend reach.",
+          "source": "https://www.ohiosbdc.net/"
+        },
+        "total_leads": 5
+      }
+    },
+    "sbdc-support-tools": {
+      "slug": "sbdc-support-tools",
+      "source_url": "https://new-ashtabula-initiative.vercel.app/sbdc-support-tools/",
+      "source_title": "Small Business Support Tools \u2014 Lakeland SBDC Resource",
+      "visual_analysis": {
+        "design_score": 9,
+        "branding_score": 9,
+        "status": "excellent",
+        "research_needed": false,
+        "branding_work_remaining": 1,
+        "quick_fixes": [
+          {
+            "priority": 1,
+            "action": "Increase contrast on secondary text",
+            "why": "Improve readability for users with visual impairments.",
+            "effort": "small",
+            "impact": "medium"
+          }
+        ],
+        "issues": [
+          {
+            "category": "accessibility",
+            "severity": "low",
+            "issue": "Contrast on some secondary text elements might be slightly low depending on screen calibration.",
+            "evidence": "The light grey text in the tool cards could be slightly darker for better readability.",
+            "quick_fix": "Darken the secondary text color slightly.",
+            "effort": "small"
+          }
+        ]
+      },
+      "lead_research": null
+    }
+  }
+}

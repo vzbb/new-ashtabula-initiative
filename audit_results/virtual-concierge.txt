@@ -1,0 +1,1 @@
+SITE: virtual-concierge | CENTERING: 3 | BRANDING: 9 | LOREM: false | NOTES: Strong luxury service branding, clear identity with custom logo and professional copy. Minimal explicit centering classes visible in JSX. No Lorem Ipsum found.

@@ -1,0 +1,39 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - button "Rennick Meat Market Ashtabula Harbor • Since 1947 Cut sheets, freezer orders & custom prep" [ref=e6]:
+        - img "Rennick Meat Market" [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]: Ashtabula Harbor • Since 1947
+          - generic [ref=e10]: Cut sheets, freezer orders & custom prep
+      - button "Cut Sheet" [ref=e11]:
+        - img [ref=e12]
+        - generic [ref=e15]: Cut Sheet
+  - main [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: Rennick Meat Market
+        - heading "Historic Bridge Street cut sheets" [level=2] [ref=e21]
+        - paragraph [ref=e22]: Custom cuts, freezer packs, and restaurant-ready orders from Ashtabula Harbor's butcher market.
+      - generic [ref=e23]:
+        - button "Beef Premium grass-fed beef cuts, perfect for grilling, roasting, and slow cooking. View Cut Sheet" [ref=e24]:
+          - img [ref=e26]
+          - heading "Beef" [level=3] [ref=e30]
+          - paragraph [ref=e31]: Premium grass-fed beef cuts, perfect for grilling, roasting, and slow cooking.
+          - generic [ref=e32]:
+            - generic [ref=e33]: View Cut Sheet
+            - img [ref=e34]
+        - button "Pork Heritage breed pork, offering rich marbling and exceptional flavor. View Cut Sheet" [ref=e36]:
+          - img [ref=e38]
+          - heading "Pork" [level=3] [ref=e41]
+          - paragraph [ref=e42]: Heritage breed pork, offering rich marbling and exceptional flavor.
+          - generic [ref=e43]:
+            - generic [ref=e44]: View Cut Sheet
+            - img [ref=e45]
+        - button "Poultry Pasture-raised chicken, tender and juicy for any occasion. View Cut Sheet" [ref=e47]:
+          - img [ref=e49]
+          - heading "Poultry" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Pasture-raised chicken, tender and juicy for any occasion.
+          - generic [ref=e55]:
+            - generic [ref=e56]: View Cut Sheet
+            - img [ref=e57]

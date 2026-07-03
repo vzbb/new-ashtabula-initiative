@@ -1,0 +1,119 @@
+{
+  "mvp": "grocer",
+  "generated_at": "2026-03-22T17:09:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/grocer.json",
+  "research_sources": [
+    "https://harborgardens.org/",
+    "https://sandersmarkets.com/"
+  ],
+  "target_buyer_1": {
+    "organization": "Harbor Gardens",
+    "type": "Local Food Market & Demonstration Kitchen",
+    "website": "https://harborgardens.org/",
+    "address": "1022 Bridge Street, Ashtabula, OH 44004",
+    "why_top_candidate": "Mission-driven local food market in Ashtabula Harbor focused on community, self-reliance, and food security. Features over 50 local vendors, demonstration kitchen, cooking classes, and urban food forest tours. Tech-forward approach to local food distribution with strong community engagement. Curbside pickup with AI confirmations would align perfectly with their innovative, community-focused model.",
+    "fit_score": 93
+  },
+  "target_buyer_2": {
+    "organization": "Sander's Market - Jefferson",
+    "type": "Regional Grocery Chain (Local Store)",
+    "website": "https://sandersmarkets.com/",
+    "address": "344 S. Chestnut St, Jefferson, OH 44047",
+    "phone": "(440) 624-4150",
+    "why_top_candidate": "Locally-owned grocery chain with Jefferson location serving Ashtabula County. Emphasizes community connection with Shurfine private label products, hot foods, and prepared dinners. Already offers DoorDash delivery. A curbside pickup confirmation tool would help them compete with larger chains while maintaining local charm. Multi-store presence suggests potential for broader rollout.",
+    "fit_score": 87
+  },
+  "actual_brand_research": {
+    "harbor_gardens": {
+      "tagline": "A general store building community around self-reliance and food security",
+      "location": "Ashtabula Harbor (1022 Bridge Street)",
+      "vendors_count": "50+ local vendors",
+      "products": [
+        "Local produce (seasonal)",
+        "Dry goods, garlic, butternut squash, potatoes",
+        "Cheeses from Mayfield Creamery (Orwell)",
+        "Sourdough breads",
+        "Maple syrup and honey (Ashtabula County)",
+        "Local eggs",
+        "Handmade artisan items",
+        "Soaps, bug repellent, beard oil"
+      ],
+      "unique_features": [
+        "Demonstration kitchen",
+        "Cooking classes (canning, fermenting)",
+        "Urban food forest tours",
+        "Gallo's Health Clinic",
+        "Classes on self-reliance"
+      ],
+      "hours": "Wed-Sun (seasonal)",
+      "community_focus": "Building community around self-reliance and food security",
+      "visual_style": "Natural, community-focused, sustainable, local food emphasis"
+    },
+    "sanders_market": {
+      "tagline": "Make It Simple, Make it Sander's!",
+      "location": "Jefferson, OH (Ashtabula County)",
+      "store_count": "7 stores across NW PA, NE OH, SW NY",
+      "products": [
+        "Full grocery",
+        "Shurfine private label",
+        "Hot foods",
+        "Prepared dinners",
+        "Certified Angus beef",
+        "Party platter catering"
+      ],
+      "unique_features": [
+        "Locally-owned chain",
+        "Community-focused",
+        "Double coupons up to $0.99 daily",
+        "DoorDash delivery available",
+        "Deli with party platter planning"
+      ],
+      "visual_style": "Local grocery chain, community values, simple shopping experience"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Local Groceries. Ready for Pickup.",
+    "positioning": "The AI-powered grocery pickup platform for Ashtabula County — connecting local food markets like Harbor Gardens and community grocers like Sander's Market with convenient curbside confirmation technology.",
+    "color_palette_derived_from_research": {
+      "primary": "#4A7C59",
+      "accent": "#D4A574",
+      "background": "#F9F7F2",
+      "text": "#3D3D3D",
+      "secondary": "#8B9A7C"
+    },
+    "typography_recommendation": {
+      "heading_font": "Friendly approachable sans-serif",
+      "body_font": "Clean readable sans-serif"
+    },
+    "mood_keywords_from_research": ["local", "community", "fresh", "sustainable", "self-reliance", "convenient"],
+    "visual_direction": {
+      "hero_image_concept": "Ashtabula Harbor local food scene with fresh produce and community gathering",
+      "color_scheme": "Fresh greens with warm earth tones",
+      "photography_style": "Local farms, fresh produce, Ashtabula Harbor, community connections"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Ashtabula County local food movement and community values",
+    "key_features_needed": [
+      "Curbside pickup scheduling",
+      "AI-powered confirmation system",
+      "Local vendor integration",
+      "Seasonal produce availability",
+      "Order customization for dietary needs",
+      "Pickup time slot management",
+      "Customer notification system",
+      "Multi-store support (Sander's 7 locations)"
+    ],
+    "differentiators_based_on_research": [
+      "50+ local vendors at Harbor Gardens",
+      "Demonstration kitchen integration",
+      "Urban food forest tours",
+      "Self-reliance and food security mission",
+      "Locally-owned Sander's Market chain",
+      "DoorDash integration potential",
+      "Double coupons at Sander's",
+      "Ashtabula Harbor location"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "mvp": "terra-vantage",
+  "run_timestamp_utc": "2026-03-22T12:35:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "EarthFlow Estimator - A construction/earthwork estimation tool for heavy civil projects. Primary target is Severino Construction, with Simak Trucking & Excavating and Mark Haynes Construction as the top white-label / clone candidates after the primary target. The MVP should stay open for later modular rebranding while preserving Terra Vantage as the proprietary tool name.",
+  "leads": [
+    {
+      "name": "J Severino Construction",
+      "type": "Commercial/Municipal Excavating Contractor",
+      "website": "https://severinoconstruction.com/",
+      "fit_rationale": "Primary target for Terra Vantage. Commercial, industrial, and municipal contractor specializing in site development, earthwork, and underground utilities. Uses Trimble GPS equipment and HCSS earthwork software already - Terra Vantage complements that stack and should remain the canonical first branding choice.",
+      "source": "severinoconstruction.com, The Blue Book"
+    },
+    {
+      "name": "Simak Trucking & Excavating, Inc.",
+      "type": "Excavation & Aggregate Hauling Contractor",
+      "website": "https://www.simaktruckinginc.com/",
+      "fit_rationale": "Primary white-label / clone candidate after Severino. Strong fit because their excavation and aggregate hauling workflows map directly to an earthwork estimator and they already operate in the same regional market.",
+      "source": "simaktruckinginc.com, Yelp"
+    },
+    {
+      "name": "Mark Haynes Construction",
+      "type": "Earthmoving & Erosion Control Contractor",
+      "website": "https://markhaynesconstruction.com/",
+      "fit_rationale": "Primary white-label / clone candidate after Severino. Strong fit because the company specializes in heavy civil work, site development, and earthmoving, making it a high-value later branding target.",
+      "source": "markhaynesconstruction.com, Web Search"
+    },
+    {
+      "name": "Brobst Earthworks, LTD",
+      "type": "Excavation & Site Development Contractor",
+      "website": "https://brobstearthworks.com/",
+      "fit_rationale": "Local Ashtabula-based earthwork contractor specializing in excavation, demolition, and land projects. Family-owned business serving Northeast Ohio. Perfect fit for EarthFlow Estimator to streamline their bidding process on earthwork and site development projects.",
+      "source": "brobstearthworks.com, Yelp, Local Search"
+    },
+    {
+      "name": "Koski Construction Co.",
+      "type": "Heavy Highway & Site Work Contractor",
+      "website": "https://www.thebluebook.com/iProView/406037/koski-construction-co/subcontractors/",
+      "fit_rationale": "Established Ashtabula contractor (since 1921) specializing in road construction, heavy highway work, and sewer projects. ODOT-certified contractor with earthwork and embankment capabilities. Would benefit from streamlined earthwork estimation for public works projects.",
+      "source": "The Blue Book, Chamber of Commerce, LinkedIn"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_state": "Unbranded/generic utility tool",
+    "brand_presence": "Almost none - no logo, color palette, or typography tied to specific entity",
+    "generic_signals": [
+      "Neutral orange/black/white color scheme",
+      "Standard UI component library aesthetic",
+      "No custom iconography or brand messaging",
+      "Highly modular layout suitable for white-labeling"
+    ],
+    "white_label_readiness": "Excellent - design is so generic it could be easily re-skinned for any construction firm",
+    "branding_work_remaining_10": 8,
+    "recommendations": [
+      "Add construction company logo placeholder in header",
+      "Implement dynamic color theming (currently static orange accent)",
+      "Add company name/configurable header text",
+      "Include footer with configurable contact information",
+      "Add subtle construction industry visual elements (equipment silhouettes, grid patterns)"
+    ]
+  },
+  "site_improvements": [
+    {
+      "priority": 1,
+      "issue": "No brand identity or company name in header",
+      "suggested_fix": "Add logo placeholder and configurable company name field",
+      "impact": "High - needed for white-label deployment"
+    },
+    {
+      "priority": 2,
+      "issue": "No help/instruction tooltip for map drawing",
+      "suggested_fix": "Add 'How to Draw' tooltip or guided tutorial",
+      "impact": "High - improves user onboarding"
+    },
+    {
+      "priority": 3,
+      "issue": "Missing footer with contact/legal info",
+      "suggested_fix": "Add configurable footer component",
+      "impact": "Medium - adds professional polish"
+    },
+    {
+      "priority": 4,
+      "issue": "No project save/load functionality",
+      "suggested_fix": "Implement local storage or backend project persistence",
+      "impact": "Medium - improves workflow for multiple bids"
+    }
+  ],
+  "aesthetics_and_layout_notes": {
+    "layout_assessment": "Excellent two-column split layout - control panel left, map visualization right. Balanced and professional dashboard feel. Centered container works well.",
+    "color_assessment": "Safe orange/black/white palette appropriate for construction industry. Orange conveys energy and caution. Dark mode map provides good contrast.",
+    "typography_assessment": "Clean sans-serif fonts prioritize readability. Good font weight differentiation between labels and values.",
+    "component_quality": "Well-styled inputs, sliders, and buttons with cohesive design system appearance. Estimate card appropriately highlighted.",
+    "polish_level": "High for MVP - map integration and card layout show professional polish. No obvious clipping or layout bugs.",
+    "whitespace_usage": "Effective whitespace separates Location, Scope, and Estimate sections clearly."
+  },
+  "whitelabel_potential": {
+    "rating": "High",
+    "score_10": 9,
+    "reasoning": "The tool is essentially a pure utility with no branding baked into the core functionality. The orange accent color could easily be made configurable. The modular card-based layout is perfect for swapping logos, colors, and company names. Target market is clearly defined (earthwork/excavation contractors) making white-label positioning straightforward.",
+    "target_verticals": [
+      "Commercial excavation contractors",
+      "Civil engineering firms",
+      "Site development companies",
+      "Municipal/public works contractors",
+      "Utility installation contractors"
+    ],
+    "deployment_regions": [
+      "Ashtabula County, OH",
+      "Northeast Ohio region",
+      "Lake County, OH",
+      "Geauga County, OH",
+      "Trumbull County, OH",
+      "Erie County, PA (nearby market)"
+    ]
+  },
+  "action_next": [
+    "Research identified local contractors further to validate EarthFlow Estimator fit",
+    "Create personalized outreach materials highlighting ROI for earthwork estimation",
+    "Develop demo dataset using actual Ashtabula County project parameters",
+    "Configure white-label branding system (configurable colors, logos, company names)",
+    "Add project save/export functionality for contractor workflow integration",
+    "Connect with Brobst Earthworks (most local, family-owned) for pilot program",
+    "Research additional leads: Alfadel's Trucking (Huntsburg), Kapalin Inc, BMT Excavating (Geneva)"
+  ],
+  "sources": [
+    {
+      "name": "Brobst Earthworks Website",
+      "url": "https://brobstearthworks.com/",
+      "type": "Primary Research"
+    },
+    {
+      "name": "J Severino Construction Website",
+      "url": "https://severinoconstruction.com/",
+      "type": "Primary Research"
+    },
+    {
+      "name": "The Blue Book - Construction Network",
+      "url": "https://www.thebluebook.com/",
+      "type": "Directory"
+    },
+    {
+      "name": "Greater Ashtabula Chamber of Commerce",
+      "url": "http://ashtabulachamber.chambermaster.com/",
+      "type": "Business Directory"
+    },
+    {
+      "name": "SearXNG Local Search",
+      "url": "http://127.0.0.1:8085",
+      "type": "Search Tool"
+    },
+    {
+      "name": "Brave Search API",
+      "url": "https://search.brave.com",
+      "type": "Search Tool"
+    }
+  ]
+}

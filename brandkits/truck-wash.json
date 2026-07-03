@@ -1,0 +1,131 @@
+{
+  "mvp": "truck-wash",
+  "generated_at": "2026-03-23T02:50:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/truck-wash.json",
+  "research_sources": [
+    "https://www.quickcleancarandtruckwash.com/",
+    "https://www.powerpaintplus.com/"
+  ],
+  "target_buyer_1": {
+    "organization": "Quick Clean Car and Truck Wash",
+    "type": "Self-Service Car and Truck Wash Facility",
+    "website": "https://www.quickcleancarandtruckwash.com/",
+    "address": "3834 Crawford Rd, Ashtabula, OH 44004",
+    "why_top_candidate": "Ashtabula's premier self-service car and truck wash. BIG Tall Bay for work trucks, box trucks, RVs and boats up to 12'5" in height. Services: Do-it-yourself center with high-pressure washers, Auto-Pro Wash automated system, powerful vacuums. Transparent pricing with four wash tiers ($7 Basic, $8 Deluxe, $10 Super, $11 Ultimate). Value proposition: 'Good Price. Better Service.' and 'When You Want Something Done Right.' Pressure strong enough to wipe away three days of mud riding yet contained enough not to damage vehicles. Two-minute automated wash pass. Perfect candidate for commercial account booking system.",
+    "fit_score": 94
+  },
+  "target_buyer_2": {
+    "organization": "PowerPaint Plus",
+    "type": "Industrial/Commercial Painting and Fleet Washing Service",
+    "website": "https://www.powerpaintplus.com/",
+    "phone": "440-661-1123",
+    "service_area": "Ashtabula, Lake and Cuyahoga County, and Northeast surrounding areas",
+    "why_top_candidate": "Industrial painting and refinishing, commercial painting, pressure washing and fleet washing services. Explicitly offers 'Fleet washing and steel roof repair, northeast ohio'. Free estimates available. Competitive prices and reliable service. Testimonial from Allcorn & Co. praises exceptional work on industrial painting and pressure washing project. Mobile service model could benefit from booking platform for fleet maintenance scheduling. Established local business with multi-county coverage.",
+    "fit_score": 90
+  },
+  "actual_brand_research": {
+    "quick_clean": {
+      "name": "Quick Clean Car and Truck Wash",
+      "positioning": "Ashtabula's premier self-service car and truck wash",
+      "tagline": "Good Price. Better Service.",
+      "address": "3834 Crawford Rd, Ashtabula, OH 44004",
+      "features": [
+        "BIG Tall Bay - Work Trucks, Box Trucks, RV's and Boats up to 12'5" in height",
+        "Do-It-Yourself Center - high pressure washers",
+        "Auto-Pro Wash - automated two-minute wash pass",
+        "Vacuums That REALLY Suck - powerful vacuum cleaners"
+      ],
+      "pricing_tiers": [
+        "$7 - Basic Wash (quickest and most affordable)",
+        "$8 - Deluxe Wash",
+        "$10 - Super Wash",
+        "$11 - Ultimate Wash"
+      ],
+      "value_propositions": [
+        "Good Price. Better Service.",
+        "When You Want Something Done Right",
+        "Pressure strong enough to wipe away three days of mud riding, yet contained enough not to damage vehicle",
+        "Two-minute pass automated wash",
+        "Transparent pricing that won't break the bank"
+      ],
+      "nearby_amenities": [
+        "Nearby Restaurant - 1236 Banner Road",
+        "Nearby Bars - 93920 Lanner Road",
+        "Nearby Store - 1234 Lake Road"
+      ],
+      "visual_style": "Clean, affordable, self-service, powerful equipment, premier local wash"
+    },
+    "powerpaint_plus": {
+      "name": "PowerPaint Plus, LLC",
+      "services": [
+        "Industrial Painting and Refinishing",
+        "Commercial Painting",
+        "Pressure Washing and Fleet Washing"
+      ],
+      "phone": "440-661-1123",
+      "tagline": "Make your property the best it can be!",
+      "value_proposition": [
+        "Call today for your free estimate",
+        "Competitive prices and reliable service",
+        "Serving Ashtabula, Lake and Cuyahoga County",
+        "Northeast surrounding areas coverage"
+      ],
+      "testimonials": [
+        "We hired PowerPaint Plus for an industrial painting and pressure washing project and their work proved to be exceptional. Thank you PowerPaint Plus - Allcorn & Co."
+      ],
+      "visual_style": "Industrial, commercial, professional, multi-county service, reliable"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Clean Fleets. Booked Simple.",
+    "positioning": "The fleet washing booking platform for Ashtabula County — helping Quick Clean manage their BIG Tall Bay commercial accounts and PowerPaint Plus schedule mobile fleet washing across Lake, Cuyahoga, and Ashtabula counties.",
+    "color_palette_derived_from_research": {
+      "primary": "#3182CE",
+      "accent": "#38A169",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#4A5568"
+    },
+    "typography_recommendation": {
+      "heading_font": "Clean bold sans-serif",
+      "body_font": "Readable modern sans-serif"
+    },
+    "mood_keywords_from_research": ["clean", "powerful", "affordable", "professional", "reliable"],
+    "visual_direction": {
+      "hero_image_concept": "Split view: sparkling clean work truck in BIG Tall Bay and mobile fleet washing operation",
+      "color_scheme": "Clean blue with green value accents (trust + affordability)",
+      "photography_style": "Ashtabula truck wash facility, commercial fleet vehicles, before/after cleanliness shots"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Quick Clean's affordable self-service power and PowerPaint Plus's professional industrial service",
+    "key_features_needed": [
+      "Commercial account booking system",
+      "BIG Tall Bay reservations for oversized vehicles",
+      "Mobile fleet washing route scheduling",
+      "Multi-county service area configuration",
+      "Pricing tier integration ($7-$11 Quick Clean tiers)",
+      "Free estimate request workflow",
+      "Before/after photo documentation",
+      "Fleet account management dashboard"
+    ],
+    "differentiators_based_on_research": [
+      "Quick Clean: BIG Tall Bay up to 12'5" height",
+      "Quick Clean: Four wash tiers ($7-$11)",
+      "Quick Clean: Two-minute automated wash",
+      "Quick Clean: Premier Ashtabula wash facility",
+      "PowerPaint Plus: Industrial and commercial painting expertise",
+      "PowerPaint Plus: Multi-county coverage (Ashtabula, Lake, Cuyahoga)",
+      "PowerPaint Plus: Free estimates",
+      "PowerPaint Plus: Exceptional client testimonials",
+      "Both: Ashtabula-based businesses serving commercial fleets"
+    ],
+    "outreach_strategy": [
+      "Visit Quick Clean at 3834 Crawford Rd to discuss commercial account booking",
+      "Contact PowerPaint Plus (440-661-1123) about fleet washing scheduling platform",
+      "Highlight BIG Tall Bay reservation capability for work trucks and RVs",
+      "Propose mobile fleet washing route optimization across three-county service area"
+    ]
+  }
+}

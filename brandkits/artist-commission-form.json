@@ -1,0 +1,67 @@
+{
+  "mvp": "artist-commission-form",
+  "generated_at": "2026-03-22T10:28:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/artist-commission-form.json",
+  "research_sources": [
+    "https://ashtabulaartscenter.org/",
+    "https://neo.opportunities.art/",
+    "https://www.heightsarts.org/"
+  ],
+  "target_buyer": {
+    "organization": "Ashtabula Arts Center",
+    "type": "Multi-Arts Nonprofit Organization",
+    "website": "https://ashtabulaartscenter.org/",
+    "why_top_candidate": "Multi-arts nonprofit with year-round programming, rotating monthly gallery exhibits, and established artist network. Commission platform would streamline artist submissions and connect exhibiting artists with buyers seeking custom work.",
+    "fit_score": 88
+  },
+  "actual_brand_research": {
+    "existing_brand_name": "Ashtabula Arts Center",
+    "key_programs": [
+      "Theater productions",
+      "Dance concerts", 
+      "Music performances",
+      "Visual arts gallery exhibits",
+      "Youth education programs"
+    ],
+    "artist_focus": "Local, regional, and national artists across multiple disciplines",
+    "visual_style": "Community arts center — approachable, creative, professional"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Commission Custom Art from Local Artists",
+    "positioning": "The digital commission platform for Ashtabula Arts Center — connecting art lovers with local artists for custom portraits, landscapes, and regional artwork inspired by Ashtabula County's scenic beauty.",
+    "color_palette_derived_from_research": {
+      "primary": "#8B4513",
+      "accent": "#D2691E",
+      "background": "#FFFAF0",
+      "text": "#2F4F4F"
+    },
+    "typography_recommendation": {
+      "heading_font": "Elegant serif for artistic feel",
+      "body_font": "Clean sans-serif for readability"
+    },
+    "mood_keywords_from_research": ["creative", "community", "artistic", "local", "inspiring"],
+    "visual_direction": {
+      "hero_image_concept": "Gallery showcase of local artist work with Ashtabula County scenic backdrop",
+      "color_scheme": "Warm earth tones with creative accent colors",
+      "photography_style": "Artist portraits at work, completed commissions, regional scenery inspiration"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Ashtabula Arts Center's community arts mission",
+    "key_features_needed": [
+      "Artist portfolio showcase with gallery-quality image display",
+      "Commission request workflow (scope, budget, timeline)",
+      "Artist availability calendar",
+      "Secure messaging between clients and artists",
+      "Milestone-based payment tracking",
+      "Art style/category filters"
+    ],
+    "differentiators_based_on_research": [
+      "Connection to established arts center reputation",
+      "Local Ashtabula County artist focus",
+      "Regional scenery inspiration (wineries, covered bridges)",
+      "Multi-discipline artist network (visual arts, theater, music)"
+    ]
+  }
+}

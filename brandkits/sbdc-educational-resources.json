@@ -1,0 +1,154 @@
+{
+  "mvp": "sbdc-educational-resources",
+  "generated_at": "2026-03-23T01:10:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/sbdc-educational-resources.json",
+  "research_sources": [
+    "https://www.neofund.org/",
+    "https://www.kent.edu/ashtabula/certificates-offered-kent-state-ashtabula"
+  ],
+  "target_buyer_1": {
+    "organization": "NEO Fund",
+    "type": "Ashtabula-based Entrepreneurial Education Nonprofit",
+    "website": "https://www.neofund.org/",
+    "location": "145 W 46th St, Ashtabula, OH 44004",
+    "phone": "(440) 525-9018",
+    "email": "info@neofund.org",
+    "why_top_candidate": "Ashtabula-based nonprofit focused on entrepreneurial education. Mission: 'Education & Support for Entrepreneurs' — helping start or grow businesses. Approach: Collaborate, Educate, Connect, Support. Programs: Entrepreneurship courses, Startup & Growth Resources, Peer Support Group Programs (monthly discussions, expert speakers, quarterly coaching, mentor network). Inclusive space for entrepreneurs to achieve financial goals and foster community growth. Social presence: Facebook, LinkedIn, Instagram. Created by Pipe! Creative. Educational resources platform would complement their existing workshops and peer support groups perfectly.",
+    "fit_score": 95
+  },
+  "target_buyer_2": {
+    "organization": "Kent State University at Ashtabula",
+    "type": "Regional Campus / Higher Education",
+    "website": "https://www.kent.edu/ashtabula/",
+    "why_top_candidate": "Offers Entrepreneurship undergraduate certificate addressing needs of small business managers and future business owners. Also covers intrapreneurship (innovative risk taking) for employees in larger organizations. Other relevant certificates: Business Management Technology, Brewing Technology, Enology, Event Management, Hospitality Management — all supporting Ashtabula County's business ecosystem. Local SBDC educational resources would benefit their students and broader community. Certificate coursework available on-campus, online, and hybrid formats.",
+    "fit_score": 90
+  },
+  "actual_brand_research": {
+    "neo_fund": {
+      "name": "NEO Fund",
+      "full_name": "New Entrepreneur Opportunity Fund",
+      "location": "145 W 46th St, Ashtabula, OH 44004",
+      "phone": "(440) 525-9018",
+      "email": "info@neofund.org",
+      "social": {
+        "facebook": "https://www.facebook.com/NEOFund",
+        "linkedin": "https://www.linkedin.com/company/neo-fund-ashtabula/",
+        "instagram": "https://www.instagram.com/neo_fund"
+      },
+      "mission": "Education & Support for Entrepreneurs",
+      "programs": [
+        "Entrepreneurship courses for starting or growing businesses",
+        "Startup & Growth Resources",
+        "Peer Support Group Programs (monthly discussions, expert speakers, quarterly coaching, mentor network)"
+      ],
+      "approach": [
+        "Collaborate: Work closely to understand goals and tailor resources",
+        "Educate: Workshops and peer support with practical training",
+        "Connect: Networking events and mentorship programs",
+        "Support: Guidance, funding opportunities, ongoing support"
+      ],
+      "values": [
+        "Inclusive space for entrepreneurs",
+        "Achieve financial goals",
+        "Foster community growth through altruism"
+      ],
+      "tagline": "From Startup to Success: We're Here for You",
+      "positioning": "More than a resource – we're your partner in building a thriving business",
+      "created_by": "Pipe! Creative",
+      "visual_style": "Entrepreneurial support, inclusive, community-focused, Ashtabula-based"
+    },
+    "kent_state_ashtabula": {
+      "name": "Kent State University at Ashtabula",
+      "type": "Regional Campus",
+      "certificates_offered": [
+        {
+          "name": "Entrepreneurship",
+          "description": "Addresses needs of small business managers and future business owners; covers intrapreneurship for employees in larger organizations"
+        },
+        {
+          "name": "Business Management Technology",
+          "description": "Background for experienced and aspiring business managers; articulates into Associate of Applied Business degree"
+        },
+        {
+          "name": "Brewing Technology",
+          "description": "Practical experience and technology skills of brewing; hands-on at local breweries"
+        },
+        {
+          "name": "Enology",
+          "description": "Practical experience and technology skills of winemaking; hands-on at local vineyards"
+        },
+        {
+          "name": "Event Management",
+          "description": "Introductory and practical skills for event management workforce; hotels, wineries, clubs, casinos, sporting events"
+        },
+        {
+          "name": "Hospitality Management",
+          "description": "Entry level management skills; articulates into bachelor's degree"
+        },
+        {
+          "name": "Viticulture",
+          "description": "Cultivation of grapes for winemaking; internships at local vineyards"
+        }
+      ],
+      "delivery_formats": [
+        "On-campus",
+        "Online",
+        "Hybrid formats"
+      ],
+      "visual_style": "Higher education, professional certificates, practical hands-on learning, Ashtabula-focused"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Learn. Build. Grow.",
+    "positioning": "The educational resource platform for Ashtabula County entrepreneurs — helping NEO Fund deliver courses and peer support, and Kent State Ashtabula students access entrepreneurship training with practical, hands-on learning.",
+    "color_palette_derived_from_research": {
+      "primary": "#276749",
+      "accent": "#D69E2E",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#4A5568"
+    },
+    "typography_recommendation": {
+      "heading_font": "Clean modern sans-serif (accessible, friendly)",
+      "body_font": "Readable sans-serif for educational content"
+    },
+    "mood_keywords_from_research": ["entrepreneurial", "supportive", "educational", "inclusive", "community-focused"],
+    "visual_direction": {
+      "hero_image_concept": "Diverse entrepreneurs learning together, peer support group, or student in hands-on training",
+      "color_scheme": "Growth green with gold accents (entrepreneurship + success)",
+      "photography_style": "Ashtabula entrepreneurs, Kent State students, peer support sessions, business workshops"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with NEO Fund's inclusive, supportive community approach and Kent State's practical, hands-on education",
+    "key_features_needed": [
+      "Searchable resource library with filters by topic, business stage, industry",
+      "Downloadable templates and toolkits (business plans, financial models, marketing)",
+      "Video tutorial library with captioning and transcripts",
+      "Interactive workshops and webinars with registration",
+      "Learning paths for different entrepreneur types",
+      "Success stories and case studies from local businesses",
+      "Assessment tools to identify knowledge gaps",
+      "Discussion forums for peer learning and networking"
+    ],
+    "differentiators_based_on_research": [
+      "NEO Fund: Ashtabula-based since 2011",
+      "NEO Fund: Peer Support Groups with monthly discussions",
+      "NEO Fund: Expert speakers and quarterly coaching",
+      "NEO Fund: Mentor network access",
+      "NEO Fund: Inclusive community-focused approach",
+      "Kent State Ashtabula: Entrepreneurship certificate program",
+      "Kent State Ashtabula: Brewing, Enology, Viticulture certificates",
+      "Kent State Ashtabula: Hospitality and Event Management focus",
+      "Both: On-campus and online/hybrid delivery options",
+      "Both: Ashtabula County community impact"
+    ],
+    "outreach_strategy": [
+      "Contact NEO Fund about integrating with their courses and peer support programs",
+      "Reach out to Kent State Ashtabula about entrepreneurship certificate partnership",
+      "Highlight alignment with local Brewing/Enology/Viticulture industry",
+      "Propose co-branded educational resources for Ashtabula entrepreneurs"
+    ]
+  }
+}

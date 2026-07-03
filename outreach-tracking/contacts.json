@@ -1,0 +1,46 @@
+[
+  {
+    "organization": "City of Ashtabula Building Department",
+    "role": "Building Official / Permit Clerk",
+    "name": null,
+    "email": "building@cityofashtabula.com",
+    "phone": "440-992-7115",
+    "priority": "P0",
+    "status": "not-contacted",
+    "last_contact": null,
+    "notes": ""
+  },
+  {
+    "organization": "Ashtabula Area Chamber of Commerce",
+    "role": "Executive Director",
+    "name": null,
+    "email": "info@ashtabulachamber.com",
+    "phone": "440-998-4741",
+    "priority": "P0",
+    "status": "not-contacted",
+    "last_contact": null,
+    "notes": ""
+  },
+  {
+    "organization": "SBDC at Lakeland Community College",
+    "role": "Regional Director",
+    "name": null,
+    "email": "sbdc@lakelandcc.edu",
+    "phone": "440-525-7450",
+    "priority": "P0",
+    "status": "not-contacted",
+    "last_contact": null,
+    "notes": ""
+  },
+  {
+    "organization": "Ashtabula County Commissioners",
+    "role": "Economic Development Liaison",
+    "name": null,
+    "email": null,
+    "phone": null,
+    "priority": "P1",
+    "status": "not-contacted",
+    "last_contact": null,
+    "notes": ""
+  }
+]

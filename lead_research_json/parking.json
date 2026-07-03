@@ -1,0 +1,83 @@
+{
+  "mvp": "parking",
+  "run_timestamp_utc": "2026-03-22T04:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for Parking MVP (parking management and transaction platform). Targets municipalities, parking operators, and downtown businesses in Ashtabula County and Northeast Ohio that could benefit from smart parking solutions, payment processing, and parking management tools.",
+  "leads": [
+    {
+      "organization": "City of Ashtabula",
+      "type": "Municipal Government",
+      "website": "https://www.cityofashtabula.com/",
+      "fit_rationale": "Manages downtown parking, street parking regulations, and parking ordinances. Digital parking management would streamline enforcement and payment collection.",
+      "source": "https://www.cityofashtabula.com/"
+    },
+    {
+      "organization": "Parkopedia (Ashtabula listings)",
+      "type": "Parking Information Platform",
+      "website": "https://en.parkopedia.com/parking/ashtabula_oh/",
+      "fit_rationale": "Aggregates parking information for Ashtabula including garages, street parking, and meters. Partnership opportunity for data integration or API feeds.",
+      "source": "https://en.parkopedia.com/parking/ashtabula_oh/"
+    },
+    {
+      "organization": "TIBA Parking Systems",
+      "type": "Parking Technology Provider",
+      "website": "https://tibaparking.com/",
+      "fit_rationale": "Provides cloud-based parking management solutions for cities and government facilities. Reference competitor/partner for municipal parking technology.",
+      "source": "https://tibaparking.com/"
+    },
+    {
+      "organization": "FRESH Equipment (Parking Management)",
+      "type": "Parking Technology Vendor",
+      "website": "https://www.fresh222.com/car-parking-management-system/",
+      "fit_rationale": "Offers RFID-based parking management systems operating in Ohio and 18 other states. Competitor analysis for technology features and pricing.",
+      "source": "https://www.fresh222.com/car-parking-management-system/"
+    },
+    {
+      "organization": "Propark Mobility",
+      "type": "Parking Management Company",
+      "website": "https://www.propark.com/",
+      "fit_rationale": "Provides smart parking technology and management services. Potential partner or competitor for parking platform features and best practices.",
+      "source": "https://www.propark.com/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add real-time parking availability map with space count.",
+    "Include mobile payment integration (credit card, Apple Pay, Google Pay).",
+    "Create permit management portal for monthly/annual parking passes.",
+    "Add enforcement officer mobile app for ticket issuance.",
+    "Provide analytics dashboard for occupancy and revenue tracking.",
+    "Include digital wallet for pre-paid parking credits.",
+    "Add notification system for time expiration alerts.",
+    "Create API for third-party navigation app integration."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Parking apps need intuitive, fast interface—users want quick payment, not complex navigation.",
+      "Poor map integration makes finding parking frustrating.",
+      "Without clear pricing display, users abandon transactions."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "Very High (tentative)",
+    "reason": "Parking management platforms are highly white-labelable for municipalities, universities, hospitals, and private parking operators with custom branding.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Contact City of Ashtabula about parking management modernization.",
+    "Explore partnership with downtown business associations for shared parking solutions.",
+    "Analyze competitor features from TIBA and Propark for differentiation."
+  ],
+  "sources": [
+    "https://www.cityofashtabula.com/",
+    "https://en.parkopedia.com/parking/ashtabula_oh/",
+    "https://tibaparking.com/",
+    "https://www.fresh222.com/car-parking-management-system/",
+    "https://www.propark.com/"
+  ]
+}

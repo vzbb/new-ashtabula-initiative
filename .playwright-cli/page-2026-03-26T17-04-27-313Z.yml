@@ -1,0 +1,131 @@
+- main [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - img "HAVE Heating and Cooling" [ref=e8]
+        - generic [ref=e9]:
+          - paragraph [ref=e10]: HAVE Heating and Cooling
+          - heading "Schedule service with HAVE, not with a generic HVAC template." [level=1] [ref=e11]
+      - paragraph [ref=e12]: This demo repositions the HVAC tune-up MVP as a HAVE-ready booking and dispatch experience for Ashtabula County homeowners, facility teams, and maintenance-plan customers.
+      - generic "HAVE trust signals" [ref=e13]:
+        - article [ref=e14]:
+          - strong [ref=e15]: "1975"
+          - generic [ref=e16]: Established
+        - article [ref=e17]:
+          - strong [ref=e18]: 24/7
+          - generic [ref=e19]: Emergency support
+        - article [ref=e20]:
+          - strong [ref=e21]: 3,000+
+          - generic [ref=e22]: Sq ft sheet metal shop
+        - article [ref=e23]:
+          - strong [ref=e24]: NATE
+          - generic [ref=e25]: Certified technicians
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - paragraph [ref=e28]: Service hub
+          - strong [ref=e29]: 2101 Aetna Road, Ashtabula, OH 44004
+          - text: "440-998-7252 • License #28522"
+        - generic [ref=e30]:
+          - paragraph [ref=e31]: Coverage
+          - strong [ref=e32]: Ashtabula, Concord, Conneaut, Jefferson, Madison, Painesville
+          - text: Residential, commercial, industrial, and engineering support
+    - complementary [ref=e33]:
+      - generic [ref=e34]:
+        - paragraph [ref=e35]: Secondary trust cue
+        - img "Bryant dealer badge" [ref=e36]
+        - heading "Branded for HAVE first." [level=2] [ref=e37]
+        - paragraph [ref=e38]: The Bryant badge stays supportive, while the actual HAVE identity leads the pitch with established-local credibility and maintenance-plan relevance.
+        - list [ref=e39]:
+          - listitem [ref=e40]: Built around MVP Value Plan conversations
+          - listitem [ref=e41]: Prepared for 24/7 emergency-service escalation
+          - listitem [ref=e42]: Grounded in HAVE’s real Ashtabula footprint
+  - generic [ref=e43]:
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - paragraph [ref=e46]: Dispatch Demo
+        - heading "Generate a HAVE-branded confirmation" [level=2] [ref=e47]
+        - paragraph [ref=e48]: Capture the service type, local routing context, and maintenance-plan status, then generate the kind of message a dispatcher could actually send.
+      - generic [ref=e49]:
+        - generic [ref=e50]:
+          - generic [ref=e51]: Customer or account name
+          - textbox "Customer or account name" [ref=e52]:
+            - /placeholder: Pat Miller, Harbor Suites, Lakeside Dental, etc.
+        - generic [ref=e53]:
+          - generic [ref=e54]: Requested service
+          - generic [ref=e55]:
+            - button "AC Air Conditioner Tune-Up Cooling inspection, airflow review, and condenser cleanup." [ref=e56] [cursor=pointer]:
+              - strong [ref=e57]: AC
+              - generic [ref=e58]: Air Conditioner Tune-Up
+              - generic [ref=e59]: Cooling inspection, airflow review, and condenser cleanup.
+            - button "Heat Furnace Precision Check Heating safety review before cold weather or uneven comfort calls." [ref=e60] [cursor=pointer]:
+              - strong [ref=e61]: Heat
+              - generic [ref=e62]: Furnace Precision Check
+              - generic [ref=e63]: Heating safety review before cold weather or uneven comfort calls.
+            - button "HP Heat Pump Service Dual-season maintenance for year-round comfort and efficiency." [ref=e64] [cursor=pointer]:
+              - strong [ref=e65]: HP
+              - generic [ref=e66]: Heat Pump Service
+              - generic [ref=e67]: Dual-season maintenance for year-round comfort and efficiency.
+            - button "Boiler Boiler Visit Hydronic performance review for dependable heat and control." [ref=e68] [cursor=pointer]:
+              - strong [ref=e69]: Boiler
+              - generic [ref=e70]: Boiler Visit
+              - generic [ref=e71]: Hydronic performance review for dependable heat and control.
+            - button "RTU Commercial Rooftop Unit Light-commercial service for offices, retail, and mixed-use spaces." [ref=e72] [cursor=pointer]:
+              - strong [ref=e73]: RTU
+              - generic [ref=e74]: Commercial Rooftop Unit
+              - generic [ref=e75]: Light-commercial service for offices, retail, and mixed-use spaces.
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]: Service area
+            - combobox "Service area" [ref=e79]:
+              - option "Ashtabula" [selected]
+              - option "Concord"
+              - option "Conneaut"
+              - option "Jefferson"
+              - option "Madison"
+              - option "Painesville"
+              - option "Geneva"
+              - option "Other nearby service area"
+          - generic [ref=e80]:
+            - generic [ref=e81]: Preferred date
+            - textbox "Preferred date" [ref=e82]
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]: Request type
+            - combobox "Request type" [ref=e86]:
+              - option "Routine seasonal maintenance" [selected]
+              - option "Comfort issue that may become urgent"
+              - option "No heat or no cooling concern"
+              - option "MVP Value Plan renewal visit"
+          - generic [ref=e87]:
+            - generic [ref=e88]: Maintenance-plan status
+            - combobox "Maintenance-plan status" [ref=e89]:
+              - option "Existing MVP Value Plan member" [selected]
+              - option "Not enrolled yet"
+        - generic [ref=e90]:
+          - generic [ref=e91]: Equipment notes or dispatcher context
+          - textbox "Equipment notes or dispatcher context" [ref=e92]:
+            - /placeholder: Older unit, thermostat issue, rooftop access note, noisy blower, replacement discussion, or after-hours concern.
+      - generic [ref=e93]:
+        - button "Generate confirmation preview" [ref=e94] [cursor=pointer]
+        - paragraph [ref=e95]: No API key detected, so the site falls back to a polished local confirmation.
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - paragraph [ref=e100]: Customer-Facing Output
+            - heading "Confirmation preview" [level=3] [ref=e101]
+          - generic [ref=e102]: AC
+        - paragraph [ref=e104]: Build a confirmation to preview how HAVE’s team could follow up after a tune-up, service issue, or maintenance-plan touchpoint.
+      - generic [ref=e105]:
+        - paragraph [ref=e106]: Pitch framing
+        - heading "Why this feels buyer-specific" [level=3] [ref=e107]
+        - generic [ref=e108]:
+          - article [ref=e109]:
+            - heading "MVP Value Plan ready" [level=4] [ref=e110]
+            - paragraph [ref=e111]: Frames HAVE's existing maintenance-plan story instead of pretending this is just another generic scheduler.
+          - article [ref=e112]:
+            - heading "Local dispatch context" [level=4] [ref=e113]
+            - paragraph [ref=e114]: Service-area routing and urgency capture make the demo feel grounded in the Ashtabula market.
+          - article [ref=e115]:
+            - heading "Customer-ready messaging" [level=4] [ref=e116]
+            - paragraph [ref=e117]: The generated confirmation sounds like a real office follow-up, complete with trust cues and prep guidance.

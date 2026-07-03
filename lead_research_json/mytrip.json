@@ -1,0 +1,81 @@
+{
+  "mvp": "mytrip",
+  "run_timestamp_utc": "2026-03-21T10:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for MyTrip MVP (travel/tourism trip planning). Targets regional CVBs, wine tour operators, and attractions that could benefit from itinerary builders, trip planners, and visitor engagement tools.",
+  "leads": [
+    {
+      "organization": "Visit Ashtabula County (Official Tourism Site)",
+      "type": "County Convention & Visitors Bureau",
+      "website": "https://visitashtabulacounty.com/",
+      "fit_rationale": "Official county tourism site promoting 30+ wineries, 19 covered bridges, state parks, and fishing. A trip planner/itinerary builder would enhance visitor engagement and length of stay.",
+      "source": "https://visitashtabulacounty.com/"
+    },
+    {
+      "organization": "Geneva-on-the-Lake Convention and Visitors Bureau",
+      "type": "Regional CVB / Nonprofit",
+      "website": "https://visitgenevaonthelake.com/",
+      "fit_rationale": "Promotes Ohio's first summer resort area; trip planning tools with lodging/attraction bundling could drive bookings and extend visits.",
+      "source": "https://visitgenevaonthelake.com/"
+    },
+    {
+      "organization": "Barrels and Bridges Tours",
+      "type": "Local tour operator",
+      "website": "https://barrelsandbridgestours.com/",
+      "fit_rationale": "Offers wine and covered bridge tours; an integrated trip planner with booking/reservation features would streamline their operations.",
+      "source": "https://barrelsandbridgestours.com/"
+    },
+    {
+      "organization": "Ashtabula County Barn Quilt Trail",
+      "type": "Cultural tourism attraction",
+      "website": "https://www.barnquiltsashtabulacounty.com/",
+      "fit_rationale": "Features 100+ barn quilts plus wineries/bridges. A trip planning tool with mapped routes and suggested itineraries would improve visitor experience.",
+      "source": "https://www.barnquiltsashtabulacounty.com/"
+    },
+    {
+      "organization": "Premier Transportation Service / Vines & Wines Wine Trail",
+      "type": "Transportation / Wine tour partner",
+      "website": "https://www.ohiowines.org/vines-wines-wine-trail",
+      "fit_rationale": "Provides wine tours, wedding transport, and custom itineraries. Trip planning integration with booking would be valuable.",
+      "source": "https://www.ohiowines.org/vines-wines-wine-trail"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON available yet; branding/layout assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add an interactive itinerary builder with drag-and-drop attractions.",
+    "Include day-trip and weekend-trip preset templates (winery tour, covered bridge tour, family fun).",
+    "Integrate lodging availability and booking CTAs within itineraries.",
+    "Add shareable trip links for groups/families planning together.",
+    "Include weather-aware suggestions (indoor vs outdoor activities).",
+    "Provide printable/downloadable itinerary PDFs for offline use.",
+    "Add trip cost estimator with per-attraction pricing."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "If the trip planner lacks visual hierarchy, users may miss key attractions.",
+      "Without clear CTAs, visitors may not complete bookings.",
+      "Poor mobile responsiveness would hurt on-the-go trip planning."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "High (tentative)",
+    "reason": "Trip planning tools can be branded for specific CVBs, tour operators, or attractions with minimal customization.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "Merge visual-analysis findings once the screenshot report exists.",
+    "Reach out to Visit Ashtabula County and Geneva-on-the-Lake CVB with trip planner demos.",
+    "Explore partnerships with wine tour operators for bundled itinerary+booking offerings."
+  ],
+  "sources": [
+    "https://visitashtabulacounty.com/",
+    "https://visitgenevaonthelake.com/",
+    "https://barrelsandbridgestours.com/",
+    "https://www.barnquiltsashtabulacounty.com/",
+    "https://www.ohiowines.org/vines-wines-wine-trail"
+  ]
+}

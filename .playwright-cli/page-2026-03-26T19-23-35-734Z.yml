@@ -1,0 +1,95 @@
+- generic [ref=e3]:
+  - heading "EarthFlow Estimator for Brobst Earthworks" [level=1] [ref=e4]
+  - main [ref=e5]:
+    - generic [ref=e7]:
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - paragraph [ref=e10]: "Primary target: Brobst Earthworks, LTD"
+          - heading "EarthFlow Estimator" [level=2] [ref=e11]
+          - paragraph [ref=e12]: Fast, buyer-specific earthwork estimation for Brobst Earthworks and nearby Northeast Ohio contractors.
+        - generic [ref=e13]:
+          - heading "Brobst Earthworks fit" [level=3] [ref=e14]:
+            - img [ref=e15]
+            - text: Brobst Earthworks fit
+          - paragraph [ref=e20]: Locally owned, customer-focused, and known for free estimates and clear communication. The estimate flow here is tuned to feel like a real Brobst bid assistant, not a generic contractor calculator.
+          - generic [ref=e21]:
+            - generic [ref=e22]:
+              - generic [ref=e23]: Voice
+              - generic [ref=e24]: Professional, friendly
+            - generic [ref=e25]:
+              - generic [ref=e26]: Promise
+              - generic [ref=e27]: Free estimates
+            - generic [ref=e28]:
+              - generic [ref=e29]: Focus
+              - generic [ref=e30]: Excavation & demo
+            - generic [ref=e31]:
+              - generic [ref=e32]: Region
+              - generic [ref=e33]: Ashtabula County
+        - generic [ref=e34]:
+          - heading "Job Site Location" [level=3] [ref=e35]:
+            - img [ref=e36]
+            - text: Job Site Location
+          - textbox "Enter site address or street..." [ref=e42]
+      - generic [ref=e43]:
+        - generic [ref=e45]:
+          - img [ref=e47]
+          - heading "Where is the job site?" [level=3] [ref=e50]
+          - paragraph [ref=e51]: Search for the site address to zoom in and start drawing the project area.
+          - textbox "Enter address..." [ref=e55]
+        - generic [ref=e56]:
+          - generic [ref=e57]:
+            - generic:
+              - generic [ref=e58]:
+                - button "Zoom in" [ref=e59] [cursor=pointer]: +
+                - button "Zoom out" [ref=e60] [cursor=pointer]: −
+              - generic [ref=e61]:
+                - link "Leaflet" [ref=e62] [cursor=pointer]:
+                  - /url: https://leafletjs.com
+                  - img [ref=e63]
+                  - text: Leaflet
+                - text: "| ©"
+                - link "Esri" [ref=e67] [cursor=pointer]:
+                  - /url: https://www.esri.com/
+          - button "Labels On" [ref=e69]:
+            - img [ref=e70]
+            - text: Labels On
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - heading "Project Scope" [level=3] [ref=e76]:
+            - img [ref=e77]
+            - text: Project Scope
+          - generic [ref=e81]:
+            - text: Operation Type
+            - generic [ref=e82]:
+              - button "Excavation" [ref=e83]
+              - button "Fill/Import" [ref=e84]
+              - button "Grading" [ref=e85]
+          - generic [ref=e86]:
+            - text: Depth/Height (inches)
+            - slider [ref=e87]: "12"
+            - generic [ref=e88]:
+              - generic [ref=e89]: 1"
+              - generic [ref=e90]: 12" (1 ft)
+              - generic [ref=e91]: 120"
+        - generic [ref=e92]:
+          - heading "Brobst Bid Snapshot" [level=3] [ref=e94]:
+            - img [ref=e95]
+            - text: Brobst Bid Snapshot
+          - generic [ref=e101]:
+            - generic [ref=e102]: $0
+            - generic [ref=e103]:
+              - generic [ref=e104]: 0 CY
+              - generic [ref=e105]:
+                - img [ref=e106]
+                - text: 0 hrs
+          - generic [ref=e109]:
+            - generic [ref=e110]:
+              - generic [ref=e111]: Area
+              - generic [ref=e112]: 0 sq ft
+            - generic [ref=e113]:
+              - generic [ref=e114]: Labor & Equipment
+              - generic [ref=e115]: $0
+            - generic [ref=e116]:
+              - generic [ref=e117]: Export & Disposal
+              - generic [ref=e118]: $0
+          - button "Generate Brobst Bid Proposal" [ref=e119]

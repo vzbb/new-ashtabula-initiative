@@ -1,0 +1,115 @@
+{
+  "mvp": "trumbull-locker",
+  "run_timestamp_utc": "2026-03-22T12:27:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "Found 5 relevant meat processing businesses in Ashtabula County and Northeast Ohio. The region has a strong tradition of family-owned meat lockers and custom processing facilities, with several multi-generational operations. The MVP's farm-to-table livestock selection interface aligns well with the custom processing needs of these businesses.",
+  "leads": [
+    {
+      "name": "Trumbull Locker Plant",
+      "type": "Meat Locker & Processing Facility",
+      "website": "https://trumbull-locker.com/",
+      "fit_rationale": "Perfect match - established 1947 family-owned meat locker in Trumbull Township, Ashtabula County. Offers hickory smoked meats, deer/hog processing, fresh cut meats, and produce. The MVP template directly aligns with their livestock processing and farm-to-table model.",
+      "source": "Primary Website + Yelp + Field to Freezer Directory"
+    },
+    {
+      "name": "NaKyrsie Meats",
+      "type": "USDA Inspected Whole Animal Butcher Shop",
+      "website": "https://www.nkmeats.com/",
+      "fit_rationale": "Artisan butcher in Geneva, OH specializing in charcuterie, dry-aged steaks, and nitrate-free products. Ohio Proud member since 2019. Strong emphasis on local sourcing and traditional butchery techniques. Would benefit from digital livestock ordering and cut sheet management.",
+      "source": "Primary Website + Facebook + MapQuest"
+    },
+    {
+      "name": "Don's Custom Meats",
+      "type": "Custom Meat Processing & Retail",
+      "website": "https://donscustommeats.com/",
+      "fit_rationale": "Family-owned since 1991 offering custom butchering for beef, pork, lamb/goat, deer processing, and retail meats. They explicitly promote 'Custom Order Beef, Pork, Lamb/Goat directly from us, or from your local farmer.' The MVP's livestock selection interface matches their service model perfectly.",
+      "source": "Primary Website"
+    },
+    {
+      "name": "Copey's Butcher Shop",
+      "type": "Full-Service Butcher Shop & Bakery",
+      "website": "https://www.copeys.com/",
+      "fit_rationale": "3rd generation family-owned since 1950 in Medway, OH. 12,000 sq ft facility with own modern smokehouse, 44 ft retail meat case, custom butchering, and in-house bakery. They process cattle and hogs for retail and custom orders. Strong candidate for digital transformation.",
+      "source": "Primary Website"
+    },
+    {
+      "name": "Locke's Custom Meats",
+      "type": "Custom Meat Processing",
+      "website": "Not identified - Yelp listing only",
+      "fit_rationale": "Well-reviewed custom meat processor in Ashtabula County. Listed among top butchers in the region on Yelp alongside Trumbull Locker and NaKyrsie Meats. Indicates established local presence in the custom processing market.",
+      "source": "Yelp Business Directory"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_score": 5,
+    "issues": [
+      "Generic 'Farm to Table' header lacks specific business identity",
+      "No logo or brand-specific color palette",
+      "No contact information or location details",
+      "No unique selling proposition or business story"
+    ],
+    "strengths": [
+      "Clean, professional card-based layout",
+      "Functional livestock selection interface",
+      "Good spacing and visual hierarchy",
+      "Highly adaptable white-label structure"
+    ]
+  },
+  "site_improvements": [
+    "Replace generic header with actual business name and logo",
+    "Add specific contact information, address, and hours",
+    "Include business story/history (many local lockers are multi-generational)",
+    "Add photos of actual facility, staff, and products",
+    "Integrate specific services (deer processing, custom smoking, etc.)",
+    "Add customer testimonials from actual patrons",
+    "Include pricing information or quote request form"
+  ],
+  "aesthetics_and_layout_notes": {
+    "design_score": 8,
+    "layout": "Clean, centered card-based design with good spacing and visual hierarchy",
+    "color_palette": "Neutral with orange accents - professional but generic",
+    "typography": "Clean, readable sans-serif font - good contrast and sizing",
+    "component_quality": "Well-constructed cards with subtle shadows and rounded corners",
+    "recommendations": [
+      "Add brand-specific colors (consider rustic/farm themes common in the industry)",
+      "Include actual product photography (smoked meats, fresh cuts)",
+      "Add trust signals (USDA inspection, BBB accreditation, years in business)",
+      "Consider seasonal imagery for agricultural connection"
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "high",
+    "applicability": "Excellent for meat lockers, custom processors, farm-to-table operations, and butcher shops across rural Ohio and the Midwest",
+    "customization_required": [
+      "Logo and business name",
+      "Color scheme to match brand",
+      "Contact information and location",
+      "Services menu (smoking, deer processing, custom cuts)",
+      "Pricing structure",
+      "Local farm partnerships"
+    ],
+    "target_regions": [
+      "Ashtabula County, OH",
+      "Northeast Ohio (Geauga, Lake, Trumbull counties)",
+      "Rural Midwest meat processing markets"
+    ]
+  },
+  "action_next": "Contact Trumbull Locker Plant first - they are the perfect match (established 1947, family-owned, in Ashtabula County). Offer free pilot program to digitize their cut sheet process and livestock ordering. Follow with NaKyrsie Meats for artisan/charcuterie positioning, and Don's Custom Meats for their strong 'custom order from local farmers' model.",
+  "sources": [
+    "https://trumbull-locker.com/",
+    "https://www.nkmeats.com/",
+    "https://donscustommeats.com/",
+    "https://www.copeys.com/",
+    "https://www.yelp.com/search?cflt=butcher&find_loc=Ashtabula+County,+OH",
+    "https://fieldtofreezer.com/meat_processor/ohio/trumbull-locker-plant/",
+    "https://www.mapquest.com/us/ohio/trumbull-locker-plant-447677143",
+    "SearXNG local search: meat locker Ashtabula County Ohio"
+  ],
+  "research_metadata": {
+    "tools_used": ["SearXNG (local)", "Brave web search", "Crawl4AI"],
+    "leads_found": 5,
+    "region_focus": "Ashtabula County, OH + Northeast Ohio",
+    "business_type": "Meat lockers, custom processing, butcher shops",
+    "verification_status": "All 5 leads verified via primary websites or established business directories"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "mvp": "hvac",
+  "mvp_title": "HVAC Tune-Up Scheduler",
+  "research_date": "2026-03-24",
+  "top_buyers": [
+    {
+      "rank": 1,
+      "company_name": "HAVE Heating and Cooling (HAVE, Inc.)",
+      "website": "https://have-inc.com/",
+      "phone": "440-998-7252",
+      "address": "2101 Aetna Road, Ashtabula, OH 44004",
+      "license": "#28522",
+      "description": "Largest HVAC contractor in Ashtabula. Established 1975, offers MVP service agreements, 24/7 emergency service, 3,000+ sq ft sheet metal fabrication shop.",
+      "key_contacts": [
+        {
+          "name": "Robert Schimmelpfennig",
+          "title": "President",
+          "email": "r.schimmelpfennig@have-inc.com",
+          "email_confidence": "high (pattern match from ZoomInfo r***@have-inc.com)",
+          "priority": 1
+        },
+        {
+          "name": "Christopher Carraher",
+          "title": "Residential Division Manager",
+          "email": "c.carraher@have-inc.com",
+          "email_confidence": "medium (pattern inference)",
+          "priority": 2
+        },
+        {
+          "name": "Paige",
+          "title": "Office/Admin Contact",
+          "email": "paige@have-inc.com",
+          "email_confidence": "high (confirmed on Facebook page)",
+          "priority": 3
+        }
+      ],
+      "service_area": "Ashtabula, Lake, Geauga counties - Ashtabula, Concord, Conneaut, Jefferson, Madison, Painesville, OH",
+      "fit_rationale": "Strong tech adoption potential given infrastructure investment and maintenance plans. Already has MVP service agreements - scheduling tool fits perfectly.",
+      "outreach_angle": "Present MVP as upgrade to existing MVP Service Agreement program - streamline appointment scheduling for maintenance customers",
+      "sources": [
+        "https://have-inc.com/",
+        "https://www.bbb.org/us/oh/ashtabula/profile/heating-and-air-conditioning/have-heating-cooling-llc-0312-92019652",
+        "https://www.zoominfo.com/p/Robert-Schimmelpfennig/224164638",
+        "https://www.facebook.com/haveheating/"
+      ]
+    },
+    {
+      "rank": 2,
+      "company_name": "Ogram Heating & Cooling, Inc.",
+      "website": "https://www.ogramheatingandcooling.com/",
+      "phone": "(440) 293-6946",
+      "address": "6059 Stanhope-Kelloggsville Rd, Andover, OH 44003",
+      "license": "#13465",
+      "description": "Family-owned since 1980 (40+ years). 4-time Carrier President's Award winner for exceptional customer service. A+ BBB rating.",
+      "key_contacts": [
+        {
+          "name": "Ryan Ogram",
+          "title": "Service and Installation Manager / Second Generation Owner",
+          "email": "info@ogramheatingandcooling.com",
+          "email_confidence": "high (general business email, confirmed on website)",
+          "linkedin": "https://www.linkedin.com/company/ogram-heating-cooling/",
+          "priority": 1,
+          "note": "Currently runs day-to-day operations. Best primary contact."
+        },
+        {
+          "name": "Mike Ogram",
+          "title": "President / Founder",
+          "email": "info@ogramheatingandcooling.com",
+          "email_confidence": "high (same general business email)",
+          "priority": 2,
+          "note": "Started business in 1980. May be semi-retired; Ryan runs operations."
+        },
+        {
+          "name": "Marilyn Ogram",
+          "title": "Secretary / Co-owner",
+          "email": "info@ogramheatingandcooling.com",
+          "email_confidence": "high (same general business email)",
+          "priority": 3,
+          "note": "Mike's wife, handles administrative/financial aspects"
+        }
+      ],
+      "service_area": "Northeast Ohio & Western Pennsylvania - Ashtabula, Crawford, Geauga, Trumbull, Lake counties",
+      "social_media": {
+        "linkedin": "https://www.linkedin.com/company/ogram-heating-cooling/",
+        "facebook": "https://www.facebook.com/ogramheatingandcooling",
+        "instagram": "https://www.instagram.com/ogramheatingandcooling/"
+      },
+      "fit_rationale": "Strong focus on customer experience makes them ideal for scheduling automation MVP. Award-winning service standards align with tool benefits.",
+      "outreach_angle": "Emphasize customer service automation aligning with their Carrier President's Award-winning standards. Online booking = fewer missed calls, better customer experience",
+      "sources": [
+        "https://www.ogramheatingandcooling.com/",
+        "https://www.ogramheatingandcooling.com/terms-conditions",
+        "https://www.bbb.org/us/oh/andover/profile/heating-and-air-conditioning/ogram-heating-cooling-0312-20002559",
+        "https://www.mapquest.com/us/ohio/ogram-heating-cooling-5682777",
+        "https://www.yelp.com/biz/ogram-heating-and-cooling-andover"
+      ]
+    }
+  ],
+  "research_notes": {
+    "email_discovery_method": "Web search for domain patterns, BBB profiles, Facebook pages, company website terms/hiring pages",
+    "confidence": "Medium-High for HAVE (confirmed domain pattern), High for Ogram (confirmed info@ address)",
+    "recommended_outreach_sequence": [
+      "1. Email Ryan Ogram at info@ogramheatingandcooling.com (primary decision maker for operations)",
+      "2. Email Robert Schimmelpfennig at r.schimmelpfennig@have-inc.com (President, HAVE)",
+      "3. Follow-up calls to both after 3-4 days if no response"
+    ]
+  },
+  "additional_prospects": [
+    {
+      "company": "Blank Heating Company Inc",
+      "website": "https://www.blankheatingco.com/",
+      "license": "OH LIC #25138",
+      "fit": "Third-generation family-run business. NATE-certified technicians. Strong reputation.",
+      "note": "Secondary prospect - contact after primary two"
+    },
+    {
+      "company": "Melaragno HVAC & Construction",
+      "website": "https://melaragnohvac.com/",
+      "email": "rm@melaragnohvac.com (confirmed from original research)",
+      "fit": "20+ years experience. Commercial and residential. Strong referral-based business.",
+      "note": "Has confirmed email - quick win opportunity"
+    }
+  ],
+  "research_timestamp": "2026-03-24T13:45:00Z"
+}

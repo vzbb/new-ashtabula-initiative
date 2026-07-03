@@ -1,0 +1,1 @@
+SITE: trumbull-locker | CENTERING: Y | BRANDING: Y | LOREM: false | NOTES: The site utilizes centering classes like 'mx-auto' for main content blocks. Branding is present with a "Farm to Table" title and a consistent color scheme; no Lorem Ipsum text was detected.

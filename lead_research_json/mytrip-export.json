@@ -1,0 +1,82 @@
+{
+  "mvp": "mytrip-export",
+  "run_timestamp_utc": "2026-03-21T06:43:00Z",
+  "visual_analysis_report_path": null,
+  "summary": "Lead research for MyTrip Export (itinerary export/sharing). Focus on tourism bureaus and destination marketing orgs that publish travel guides and itineraries.",
+  "leads": [
+    {
+      "organization": "Ashtabula County Convention & Visitors Bureau",
+      "type": "County tourism bureau / DMO",
+      "website": "https://www.ashtabulacounty.us/299/Ashtabula-County-Convention-Visitors-Bur",
+      "fit_rationale": "Publishes visitor information and travel guides for Ashtabula County; could use a branded itinerary export tool for trip planning and guide distribution.",
+      "source": "https://www.ashtabulacounty.us/299/Ashtabula-County-Convention-Visitors-Bur"
+    },
+    {
+      "organization": "Visit Ashtabula (Ashtabula County Visitors Bureau)",
+      "type": "Destination marketing / tourism site",
+      "website": "https://visitashtabulacounty.com/",
+      "fit_rationale": "Promotes local travel experiences and provides travel guides; MyTrip Export could power shareable itineraries and downloadable plans.",
+      "source": "https://visitashtabulacounty.com/"
+    },
+    {
+      "organization": "TourismOhio (Ohio Tourism, Ohio.gov)",
+      "type": "State tourism office",
+      "website": "https://ohio.org/wps/portal/gov/tourism/home/explore-ohio",
+      "fit_rationale": "State tourism portal highlighting itineraries and destinations; exportable itineraries can improve trip planning across regions.",
+      "source": "https://ohio.org/wps/portal/gov/tourism/home/explore-ohio"
+    },
+    {
+      "organization": "Destination Cleveland",
+      "type": "City tourism bureau / DMO",
+      "website": "https://www.thisiscleveland.com/",
+      "fit_rationale": "City-level tourism bureau that markets Cleveland; itinerary export/print/share can enhance visitor planning and conversions.",
+      "source": "https://www.thisiscleveland.com/"
+    },
+    {
+      "organization": "Truly Trumbull (Trumbull County Tourism)",
+      "type": "County tourism bureau / DMO",
+      "website": "https://trulytrumbull.com/",
+      "fit_rationale": "Regional tourism organization that promotes attractions; itinerary export can package weekend plans and event-based visits.",
+      "source": "https://trulytrumbull.com/"
+    }
+  ],
+  "branding_quality_assessment": {
+    "status": "UNVERIFIED",
+    "notes": "No visual-analysis JSON was available at runtime. Branding assessment deferred until screenshot analysis report exists."
+  },
+  "site_improvements": [
+    "Add a clear, branded hero section with a one-line value proposition (e.g., 'Export a full trip itinerary in one click').",
+    "Include a visible 'Export' call-to-action (PDF/Calendar/Share Link) above the fold.",
+    "Show example itineraries (weekend, family, wine trail) with export previews to demonstrate value quickly.",
+    "Provide export formats (PDF, ICS calendar, shareable link) with icons for clarity.",
+    "Add trust signals: supported destinations, tourism partners, and a short testimonial strip.",
+    "Improve information hierarchy: itinerary builder → preview → export button → email/share.",
+    "Add accessibility checks (contrast, font size) and mobile-first layout constraints.",
+    "Integrate a lightweight map preview with day-by-day route summaries."
+  ],
+  "aesthetics_and_layout_notes": {
+    "status": "UNVERIFIED",
+    "possible_issues": [
+      "Potential misalignment if the layout is not centered or consistent across sections.",
+      "Risk of excessive whitespace or uneven margins in itinerary cards if grid is not normalized.",
+      "If typography lacks hierarchy, the export value may be unclear at first glance."
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "High (tentative)",
+    "reason": "Itinerary export tools can be easily branded for tourism bureaus and agencies; if branding is minimal, whitelabeling should be straightforward.",
+    "status": "UNVERIFIED"
+  },
+  "action_next": [
+    "When the sitemap_screenshots visual-analysis JSON becomes available, merge its findings into this MVP file.",
+    "Identify 2–3 additional tourism bureaus or travel agencies in Northeast Ohio for outreach.",
+    "Draft a 3-step outreach email emphasizing itinerary export + travel guide integration."
+  ],
+  "sources": [
+    "https://www.ashtabulacounty.us/299/Ashtabula-County-Convention-Visitors-Bur",
+    "https://visitashtabulacounty.com/",
+    "https://ohio.org/wps/portal/gov/tourism/home/explore-ohio",
+    "https://www.thisiscleveland.com/",
+    "https://trulytrumbull.com/"
+  ]
+}

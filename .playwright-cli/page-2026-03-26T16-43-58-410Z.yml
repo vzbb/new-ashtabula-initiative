@@ -1,0 +1,115 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - img "Axess Family Services logo" [ref=e6]
+      - generic [ref=e7]:
+        - paragraph [ref=e8]: RSVP / Axess Family Services
+        - heading "Volunteer Scheduler" [level=1] [ref=e9]
+    - generic [ref=e10]: Powered by Axess Family Services
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: Connect Volunteers. Strengthen Community.
+        - heading "Schedule RSVP volunteers through Axess Family Services." [level=2] [ref=e15]
+        - paragraph [ref=e16]: Built for RSVP’s 15-county senior volunteer network where volunteers choose how, where, and how often they serve. The interface keeps Axess coordination simple for tutoring, meal delivery, transportation, clerical support, and more.
+        - generic "Primary brand references" [ref=e17]:
+          - generic [ref=e18]: RSVP
+          - generic [ref=e19]: Axess Family Services
+          - generic [ref=e20]: AmeriCorps Seniors
+        - generic [ref=e21]:
+          - button "Create volunteer confirmation" [ref=e22] [cursor=pointer]
+          - button "Review roster capacity" [ref=e23] [cursor=pointer]
+      - generic "Volunteer program highlights and brand references" [ref=e24]:
+        - generic [ref=e25]:
+          - img "RSVP volunteer community reference art" [ref=e26]
+          - generic [ref=e27]:
+            - strong [ref=e28]: RSVP Volunteer Scheduler
+            - generic [ref=e29]: Lead with Experience
+        - generic [ref=e30]:
+          - img "AmeriCorps Seniors reference" [ref=e31]
+          - img "RSVP reference logo" [ref=e32]
+        - generic [ref=e33]:
+          - article [ref=e34]:
+            - strong [ref=e35]: "15"
+            - generic [ref=e36]: counties in the RSVP network
+          - article [ref=e37]:
+            - strong [ref=e38]: 55+
+            - generic [ref=e39]: volunteers supported with flexible shifts
+          - article [ref=e40]:
+            - strong [ref=e41]: 40 hrs
+            - generic [ref=e42]: max weekly commitment range
+    - generic [ref=e43]:
+      - article [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - paragraph [ref=e47]: Volunteer intake
+            - heading "Plan the next shift" [level=3] [ref=e48]
+          - generic [ref=e49]: Live scheduling
+        - generic [ref=e50]:
+          - generic [ref=e51]:
+            - generic [ref=e52]: Event name
+            - textbox "Event name" [ref=e53]:
+              - /placeholder: RSVP Community Service Day
+              - text: RSVP Community Service Day
+          - generic [ref=e54]:
+            - generic [ref=e55]: Event date
+            - textbox "Event date" [ref=e56]
+          - generic [ref=e57]:
+            - generic [ref=e58]: Location
+            - textbox "Location" [ref=e59]:
+              - /placeholder: 184 E. Walnut Street, Jefferson, OH
+              - text: 184 E. Walnut Street, Jefferson, OH
+          - generic [ref=e60]:
+            - generic [ref=e61]: Volunteer spots
+            - textbox "Volunteer spots" [ref=e62]:
+              - /placeholder: "6"
+              - text: "6"
+          - generic [ref=e63]:
+            - generic [ref=e64]: Program focus
+            - combobox "Program focus" [ref=e65]:
+              - option "Tutoring and homework help" [selected]
+              - option "Meal delivery and prep"
+              - option "Transportation support"
+              - option "Food pantry and clothing assistance"
+              - option "Clerical and office support"
+              - option "Light cleaning and organizing"
+        - paragraph [ref=e67]: RSVP / Axess can support tutoring, meal delivery, transportation, clerical help, and other flexible service roles.
+      - article [ref=e68]:
+        - generic [ref=e69]:
+          - generic [ref=e70]:
+            - paragraph [ref=e71]: Confirmation studio
+            - heading "Ready-to-send volunteer message" [level=3] [ref=e72]
+          - generic [ref=e73]: Warm tone
+        - paragraph [ref=e75]: Use the scheduler to reserve volunteers, confirm the site, and keep RSVP/Axess coordination simple and human.
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]: Program
+            - strong [ref=e79]: Tutoring and homework help
+          - generic [ref=e80]:
+            - generic [ref=e81]: Site
+            - strong [ref=e82]: 184 E. Walnut Street, Jefferson, OH
+          - generic [ref=e83]:
+            - generic [ref=e84]: Capacity
+            - strong [ref=e85]: 6 spots
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - paragraph [ref=e88]: What the platform handles
+        - heading "Flexible enough for RSVP, ACCAA, Metroparks, and other community partners" [level=3] [ref=e89]
+      - generic [ref=e90]:
+        - article [ref=e91]:
+          - generic [ref=e92]: Weekday afternoons
+          - heading "Senior companion tutoring" [level=4] [ref=e93]
+          - paragraph [ref=e94]: One-on-one homework support for local schools and after-school programs
+        - article [ref=e95]:
+          - generic [ref=e96]: Morning and lunch blocks
+          - heading "Meal prep and delivery" [level=4] [ref=e97]
+          - paragraph [ref=e98]: Route-friendly volunteer shifts for food pantry and home-delivery programs
+        - article [ref=e99]:
+          - generic [ref=e100]: Flexible office hours
+          - heading "Community admin support" [level=4] [ref=e101]
+          - paragraph [ref=e102]: Reception, filing, and intake help for coordinated volunteer operations
+  - contentinfo [ref=e103]:
+    - generic [ref=e104]:
+      - paragraph [ref=e105]: RSVP / Axess Family Services
+      - paragraph [ref=e106]: Volunteer coordination for a flexible, 15-county senior service network.
+    - paragraph [ref=e107]: AmeriCorps Seniors-aligned scheduling for community service teams.

@@ -1,0 +1,193 @@
+{
+  "mvp": "cut-custom",
+  "mvp_title": "Farm to Table - Custom Livestock Cut Sheet Tool",
+  "run_timestamp_utc": "2026-03-22T14:23:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "The cut-custom MVP is a card-based livestock selection interface designed for farm-to-table meat processing. The tool allows customers to select livestock types (beef, pork, lamb, goat) and customize their cut sheets. Research confirms 'Farm to Table' is a generic placeholder, not a specific business entity. Ashtabula County and Northeast Ohio have a robust ecosystem of meat processors, lockers, and farms that would benefit from digital cut sheet customization. The region has strong agricultural roots with both USDA-inspected facilities and custom exempt processors serving local farmers and consumers.",
+  "leads": [
+    {
+      "name": "Trumbull Locker Plant",
+      "type": "Meat Locker & Processing Facility",
+      "location": "Rock Creek, OH (Ashtabula County)",
+      "website": "https://trumbull-locker.com/",
+      "contact": "info@trumbull-locker.com | 440-474-4631",
+      "fit_rationale": "Family-owned since 1947, offers complete meat processing with custom cut options. They have a fresh meat counter, deli, and produce section. Already serves the local farm community and processes beef, pork, and chicken. The custom cut sheet tool would streamline their customer ordering process and reduce manual paperwork.",
+      "source": "SearXNG search - Ashtabula County meat processing"
+    },
+    {
+      "name": "NaKyrsie Meats",
+      "type": "USDA Inspected Whole Animal Butcher Shop",
+      "location": "Geneva, OH (Ashtabula County)",
+      "website": "https://www.nkmeats.com/",
+      "contact": "Nate@nkmeats.com | (440) 361-3064",
+      "fit_rationale": "USDA inspected whole animal butcher shop specializing in charcuterie and salumi. Ohio Proud member since 2019. Produces nitrate-free salamis, hams, and bacons. Already sells to fine dining establishments in Ashtabula Harbor. A digital cut sheet tool would help them manage custom orders from restaurants and retail customers more efficiently.",
+      "source": "Brave web search + Crawl4AI extraction"
+    },
+    {
+      "name": "Bonner Farms Beef & Market",
+      "type": "Vertical Integration Farm & Retail Market",
+      "location": "Garrettsville, OH (Portage County - nearby)",
+      "website": "https://bonnerfarmsbeef.com/",
+      "contact": "12428 State Route 88, Garrettsville, OH 44231",
+      "fit_rationale": "100% vertically integrated beef operation - they own every step from growing cattle feed to butchering and delivery. Featured by Ohio Farm Bureau for premium beef marketing. Their market has butchers on staff who discuss specific cuts with customers. A digital cut sheet platform would integrate perfectly with their direct-to-consumer sales model.",
+      "source": "Brave web search + Crawl4AI extraction"
+    },
+    {
+      "name": "Cherry Valley Slaughtering & Processing",
+      "type": "Custom Meat Processing",
+      "location": "Dorset, OH (Ashtabula County)",
+      "website": "N/A - local business",
+      "contact": "4345 Piper Road, Dorset, OH 44032",
+      "fit_rationale": "Reputable custom slaughtering facility in Ashtabula County. Known for fair-priced, high-quality meats. Listed in Ashtabula County Local Food Guide. Specializes in custom processing for local farmers and hunters. Would benefit from digital cut sheet management to replace paper-based order tracking.",
+      "source": "SearXNG + Brave web search"
+    },
+    {
+      "name": "Millgate Farm",
+      "type": "Heritage Breed Livestock Farm",
+      "location": "Ashtabula County, OH",
+      "website": "https://www.millgatefarm.com/",
+      "contact": "Tod & Shelley Mogren",
+      "fit_rationale": "Family farm since 1961 raising heritage Berkshire pigs and Maine Anjou cows on 200+ acres of pasture and woods. Focus on natural, responsibly raised meats. They already market directly to consumers and would benefit from a cut sheet customization tool for customers ordering quarter/half/whole animals.",
+      "source": "SearXNG search - Ashtabula County livestock farms"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_brand_presence": "weak",
+    "brand_consistency": "partial",
+    "visual_identity": "The MVP uses a generic 'Farm to Table' header that lacks specific business identity. The orange accent color is appropriate for agricultural/food context but not unique.",
+    "content_quality": "The card-based selection interface is clean but relies solely on icons. No imagery of actual products or farm environment.",
+    "trust_signals": "Missing - no business address, phone number, certifications (USDA, Ohio Proud), or farm photos that would establish legitimacy.",
+    "differentiation": "Low - the interface looks like a template that could be used by any meat processor without customization."
+  },
+  "site_improvements": [
+    {
+      "priority": "high",
+      "improvement": "Add specific business branding",
+      "details": "Replace generic 'Farm to Table' text with actual business name, logo, and farm imagery"
+    },
+    {
+      "priority": "high",
+      "improvement": "Include product photography",
+      "details": "Replace icons with high-quality photos of actual meat cuts, livestock, and farm operations"
+    },
+    {
+      "priority": "medium",
+      "improvement": "Add trust elements",
+      "details": "Include USDA certification badges, Ohio Proud membership, farm address, contact information, and customer testimonials"
+    },
+    {
+      "priority": "medium",
+      "improvement": "Implement cut sheet preview",
+      "details": "Show customers a visual preview of their selected cuts before finalizing order"
+    },
+    {
+      "priority": "low",
+      "improvement": "Add educational content",
+      "details": "Include information about different cuts, cooking recommendations, and portion sizing guides"
+    }
+  ],
+  "aesthetics_and_layout_notes": {
+    "strengths": [
+      "Clean, centered layout with good whitespace",
+      "Card-based design is intuitive for livestock selection",
+      "Clear visual hierarchy from title to cards to actions",
+      "Orange accent color appropriate for food/agricultural context",
+      "Consistent spacing and margins"
+    ],
+    "weaknesses": [
+      "Generic iconography lacks personality",
+      "No imagery creates abstract, unengaging experience",
+      "Single-page design limits information depth",
+      "Missing footer with contact/location info",
+      "No visual feedback on card selection"
+    ],
+    "white_label_observations": "The layout is highly modular and could work for any livestock processor. The card system for beef/pork/lamb/goat is standard across the industry. Typography is system-default and easily replaced."
+  },
+  "whitelabel_potential": {
+    "rating": "high",
+    "reasoning": "The underlying architecture (livestock selection cards → cut sheet configuration) is a universal pattern used by meat lockers nationwide. The generic 'Farm to Table' branding is already placeholder-level, making it easy to swap in specific business identities.",
+    "applicable_business_types": [
+      "Custom meat lockers",
+      "USDA inspected butcher shops",
+      "Farm-direct meat sales",
+      "Hunting/processing facilities",
+      "Restaurant wholesale butchers",
+      "CSA meat programs"
+    ],
+    "deployment_considerations": "Each deployment would need: business name/logo, contact information, specific livestock types offered, custom cut options per species, pricing structure, and pickup/delivery logistics."
+  },
+  "regional_market_context": {
+    "geographic_focus": "Ashtabula County, Ohio and Northeast Ohio region",
+    "market_characteristics": [
+      "Strong agricultural heritage with active livestock raising",
+      "Mix of USDA-inspected and custom-exempt processors",
+      "Growing farm-to-table consumer movement",
+      "Active farmers market scene (Jefferson, Orwell, Ashtabula Harbor)",
+      "Support from Ohio State University Extension and Farm Bureau"
+    ],
+    "competitive_landscape": "Multiple established processors (Trumbull Locker, NaKyrsie, Cherry Valley) serve the region, but most still use paper-based cut sheet systems. Digital transformation opportunity exists.",
+    "regulatory_environment": "Ohio Department of Agriculture Division of Meat Inspection oversees facilities. Custom exempt processors serve farm owners; USDA-inspected can sell retail across state lines."
+  },
+  "action_next": [
+    {
+      "action": "Contact Trumbull Locker Plant",
+      "purpose": "Primary lead - established 1947, family-owned, serves Ashtabula County community",
+      "approach": "Present as digital transformation partner for their custom processing workflow"
+    },
+    {
+      "action": "Reach out to NaKyrsie Meats",
+      "purpose": "Secondary lead - USDA inspected, serves restaurants, modern operation",
+      "approach": "Emphasize professional ordering system for their restaurant wholesale clients"
+    },
+    {
+      "action": "Follow up with Bonner Farms",
+      "purpose": "Tertiary lead - vertically integrated, direct-to-consumer focus",
+      "approach": "Align with their premium brand and customer education focus"
+    }
+  ],
+  "sources": [
+    {
+      "source": "Brave Web Search API",
+      "queries": [
+        "Ashtabula County Ohio farm to table meat locker livestock processing butcher",
+        "NaKyrsie Meats Ashtabula County Ohio custom meat processing",
+        "Locke's Custom Meats Ashtabula Ohio meat locker",
+        "Bonner Farms Beef Market Ashtabula County Ohio",
+        "Badurik's Butcher Block Ashtabula Ohio meat processing",
+        "Cherry Valley Slaughtering Processing Ashtabula Ohio"
+      ],
+      "value": "Identified key businesses, websites, and contact information"
+    },
+    {
+      "source": "SearXNG Local Metasearch",
+      "queries": [
+        "Ashtabula County Ohio meat locker processing livestock custom butcher",
+        "Ashtabula County farmers market livestock CSA meat"
+      ],
+      "value": "Cross-validated businesses and discovered additional regional context"
+    },
+    {
+      "source": "Crawl4AI Deep Extraction",
+      "urls": [
+        "https://trumbull-locker.com/",
+        "https://bonnerfarmsbeef.com/",
+        "https://www.nkmeats.com/"
+      ],
+      "value": "Detailed business descriptions, service offerings, and brand positioning"
+    },
+    {
+      "source": "Visual Analysis Report",
+      "path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+      "value": "MVP assessment, research requirements, and white-label fit analysis"
+    }
+  ],
+  "research_metadata": {
+    "agent": "nai-lead-researcher",
+    "execution_mode": "cron",
+    "region": "Ashtabula County, Ohio",
+    "industry": "Agriculture / Meat Processing / Farm-to-Table",
+    "confidence_level": "high",
+    "leads_verified": 5,
+    "research_date": "2026-03-22"
+  }
+}

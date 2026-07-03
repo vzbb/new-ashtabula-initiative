@@ -1,0 +1,1 @@
+SITE: insta-book | CENTERING: 4 | BRANDING: 8 | LOREM: false | NOTES: The application's main content area is not explicitly centered, with some elements potentially having internal alignment. Branding is strong, with a custom logo, modern fonts, and a clear value proposition for hospitality AI services. No placeholder 'Lorem Ipsum' text was found.

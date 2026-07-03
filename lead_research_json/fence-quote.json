@@ -1,0 +1,102 @@
+{
+  "mvp": "fence-quote",
+  "run_timestamp_utc": "2026-03-22T10:38:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "Found 5 qualified fence company leads in Ashtabula County and surrounding Northeast Ohio area. Primary target is Miller's Integrity Construction LLC, an Amish fence and carpentry company with strong craftsmanship fit for the quote workflow. Ashtabula Fence Co. and Thomas Fence Co. already have their own dedicated MVPs, so they should be treated as separate products rather than fence-quote clones. All leads serve the Ashtabula County area and could benefit from an AI-powered fence quote tool.",
+  "leads": [
+    {
+      "name": "Miller's Integrity Construction LLC",
+      "type": "Amish Fence & Carpentry Company",
+      "website": "https://millersintegrityconstruction.com",
+      "fit_rationale": "Quality Amish construction and carpentry company with over 20 years of experience. Specializes in split rail fences, custom fabrication, and quality workmanship. Strong fit for a fence quote workflow that can emphasize craftsmanship, trust, and quote simplicity. Best fit when the MVP is positioned away from the two clone fence businesses.",
+      "source": "Brave web_search"
+    },
+    {
+      "name": "Ashtabula Fence Co. LLC",
+      "type": "Local Fence Contractor",
+      "website": "https://ashtabulafence.com",
+      "fit_rationale": "Family-owned business based in Dorset, OH with excellent Google reviews (4.9+ stars). Founded in 2021 with strong growth trajectory. Specializes in chain link, vinyl, wood, and ornamental fencing. Active social media presence and chamber of commerce member. This company already has its own dedicated fence MVP, so it is not a fence-quote clone candidate.",
+      "source": "Crawl4AI: ashtabulafence.com, SearXNG, BBB"
+    },
+    {
+      "name": "Thomas Fence Co. Inc.",
+      "type": "Established Fence Contractor",
+      "website": "https://thomasfence.com",
+      "fit_rationale": "50+ year family business in Ashtabula, OH (since 1970s). BBB A+ rated. Full-service commercial, residential, and industrial fencing. Serves 8+ counties including Ashtabula. Has own welding/fabrication shop. This company already has its own dedicated fence MVP, so it is not a fence-quote clone candidate.",
+      "source": "Crawl4AI: thomasfence.com, SearXNG, BBB"
+    },
+    {
+      "name": "Lion Fence Builders",
+      "type": "Regional Fence Company",
+      "website": "https://www.lionfencebuilders.com",
+      "fit_rationale": "Professional fence builders serving Ashtabula and surrounding counties. Offers wide variety of fencing styles. Good online presence with quote request system. AI-powered quote tool could enhance their existing digital capabilities.",
+      "source": "Brave web_search, SearXNG"
+    },
+    {
+      "name": "Residence Artists Inc.",
+      "type": "Home Improvement / Fence Services",
+      "website": "Not identified - listed on Houzz",
+      "fit_rationale": "Listed as top fence contractor on Houzz for Ashtabula area. Positive customer reviews mentioning professional service. Local presence in Ashtabula County. Could leverage AI quote tool for competitive advantage.",
+      "source": "Brave web_search: Houzz listing"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_state": "partial",
+    "score_10": 6,
+    "notes": "The fence-quote MVP has a clean, functional design with a custom logo mark and regional copy mentioning Ashtabula County. However, it still reads as a generic template unless the target branding is explicitly re-centered on Miller's Integrity Construction LLC. The quote workflow is strong; the identity layer needs to be made unmistakably specific."
+  },
+  "site_improvements": [
+    {
+      "priority": "high",
+      "item": "Add footer with real contact information",
+      "rationale": "Service businesses need visible contact info to build trust. Current footer is generic."
+    },
+    {
+      "priority": "high",
+      "item": "Replace placeholder business name with actual target company",
+      "rationale": "Page feels like a template. Needs specific company branding to convert leads."
+    },
+    {
+      "priority": "medium",
+      "item": "Add social proof section (testimonials, review counts)",
+      "rationale": "Fence purchases are high-consideration decisions. Social proof increases conversion."
+    },
+    {
+      "priority": "medium",
+      "item": "Include service area map",
+      "rationale": "Help users confirm their location is covered before requesting quote."
+    }
+  ],
+  "aesthetics_and_layout_notes": {
+    "strengths": [
+      "Clean, centered layout appropriate for conversion-focused tool",
+      "Pleasant blue-to-green gradient background",
+      "Well-styled form components with interactive slider",
+      "Trust signals (No Commitment, Local Rates icons) effectively placed"
+    ],
+    "improvements": [
+      "Add company-specific imagery (fence photos, team photos)",
+      "Consider adding 'About Us' section for credibility",
+      "Implement loading states for quote generation",
+      "Add mobile-responsive hamburger menu if adding more pages"
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "high",
+    "rationale": "The fence-quote MVP is highly modular and generic in positive ways. The logo, copy, and regional references can be easily swapped. The underlying quote calculator and form structure are reusable for other local fencing businesses, but not for the two companies that already have their own dedicated MVPs. Color scheme is neutral enough to adapt to most brand palettes."
+  },
+  "action_next": [
+    "Contact Miller's Integrity Construction LLC first via phone (440-321-7595) or website contact form",
+    "Present MVP as 'AI Quote Assistant' tailored to Amish craftsmanship and split-rail fence quoting",
+    "Offer customization package: logo swap, color theming, contact info integration",
+    "Use only distinct fence buyers that do not already have dedicated MVPs as future clone / white-label candidates"
+  ],
+  "sources": [
+    "https://ashtabulafence.com/ - Crawl4AI extraction",
+    "https://thomasfence.com/ - Crawl4AI extraction",
+    "https://www.bbb.org/us/oh/dorset/profile/fence-contractors/ashtabula-fence-co-0312-92054479",
+    "https://www.bbb.org/us/oh/ashtabula/profile/fence-contractors/thomas-fence-co-inc-0312-21757",
+    "SearXNG local search: http://127.0.0.1:8085",
+    "Brave Search API - fence companies Ashtabula County Ohio"
+  ]
+}

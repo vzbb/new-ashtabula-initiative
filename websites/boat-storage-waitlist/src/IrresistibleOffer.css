@@ -1,0 +1,24 @@
+/* Irresistible Offer CSS */
+.urgency-banner { animation: slideDown 0.5s ease-out; }
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.banner-pulse { animation: pulse 2s infinite; }
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+.claim-button { position: relative; overflow: hidden; transition: all 0.3s ease; }
+.claim-button:hover { transform: translateY(-2px); }
+.trust-badge { transition: all 0.3s ease; }
+.trust-badge:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+.loss-aversion-alert { animation: shake 0.5s ease-in-out; animation-delay: 2s; }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+@media print {
+  .urgency-banner, .claim-button, .loss-aversion-alert, .trust-badges { display: none !important; }
+}

@@ -1,0 +1,142 @@
+{
+  "mvp": "sbdc-learning-modules",
+  "generated_at": "2026-03-23T01:30:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/sbdc-learning-modules.json",
+  "research_sources": [
+    "https://www.terra.edu/kern_center/small_business_development_center.php",
+    "https://www.ashtabulabusiness.com/"
+  ],
+  "target_buyer_1": {
+    "organization": "Ohio SBDC at Terra State Community College",
+    "type": "Regional SBDC Office",
+    "website": "https://www.terra.edu/kern_center/small_business_development_center.php",
+    "location": "Terra State Community College, Fremont, OH",
+    "phone": "419.559.2210",
+    "why_top_candidate": "On campus since 1988 providing confidential one-to-one advising and entrepreneurial training programs. Serves Erie, Ottawa, Sandusky and Seneca Counties. Mission: 'Accelerate Ohio's economy by helping people start, sustain and grow their businesses!' Services are free of charge. Offers Small Business Basics training with downloadable resources including business plan worksheets, pro forma templates, and Ohio startup guides. Engages in outreach linking federal, state, local government resources with educational and private sector. Modular learning platform would enhance their training delivery and extend reach beyond workshop schedules.",
+    "fit_score": 92
+  },
+  "target_buyer_2": {
+    "organization": "Ashtabula County Business Exchange (AcBE)",
+    "type": "County Business Network / Education Organization",
+    "website": "https://www.ashtabulabusiness.com/",
+    "why_top_candidate": "Ashtabula County organization of local business owners networking to promote business and exchange client contacts. Mission: 'To exchange and promote business with members and support member businesses through information sharing and education, encouraging and sustaining entrepreneurship in Ashtabula County.' Offers Jay Sartini Memorial Scholarship for graduating high school seniors and Kent State students. Weekly meetings (Thursdays 7:15am) with Business Boost presentations. Promotes secondary business education through scholarships, mentorship, and information sharing. Exclusivity policy (one business per category). Learning modules would support their education mission and member development.",
+    "fit_score": 88
+  },
+  "actual_brand_research": {
+    "terra_state_sbdc": {
+      "name": "Ohio Small Business Development Center at Terra State Community College",
+      "established": 1988,
+      "mission": "Accelerate Ohio's economy by helping people start, sustain and grow their businesses!",
+      "service_area": "Erie, Ottawa, Sandusky and Seneca Counties",
+      "phone": "419.559.2210",
+      "services": [
+        "Confidential one-to-one advising",
+        "Entrepreneurial training programs",
+        "Small Business Basics workshops",
+        "Free services (fees may apply for workshops)"
+      ],
+      "training_resources": [
+        "Small Business Basics 2026 Schedule",
+        "Business Basics Counseling Information Form",
+        "Business Basics Outline",
+        "Business Plan Worksheet",
+        "Business Plan Narrative",
+        "Business Plan Pro forma",
+        "Starting Your Business in Ohio Publication"
+      ],
+      "funding_sources": [
+        "U.S. Small Business Administration (SBA)",
+        "Ohio Department of Development"
+      ],
+      "network_links": [
+        "www.sba.gov",
+        "www.development.ohio.gov",
+        "www.americassbdc.org"
+      ],
+      "visual_style": "Educational, professional, government-funded, community-focused"
+    },
+    "acbe": {
+      "name": "Ashtabula County Business Exchange (AcBE)",
+      "full_name": "Ashtabula County Business Exchange",
+      "mission": "To exchange and promote business with members and support member businesses through information sharing. To support secondary business education in Ashtabula County encouraging and sustaining entrepreneurship.",
+      "meeting_schedule": {
+        "regular_meetings": "Thursdays 7:15 a.m.",
+        "good_morning_ashtabula": "8:00 a.m.",
+        "format": "Zoom unless otherwise indicated",
+        "cancellation_policy": "If Ashtabula City Schools or A-Tech is closed or delayed, meeting is cancelled"
+      },
+      "programs": [
+        "Jay Sartini Memorial Scholarship for graduating high school seniors and second-year Kent State students",
+        "Business Boost Presentations (monthly featured businesses)",
+        "Weekly networking meetings",
+        "Mentorship programs"
+      ],
+      "membership_policy": {
+        "exclusivity": "Only one business per business category",
+        "joining_process": [
+          "Speak with current member to express interest",
+          "Ensure category not currently represented",
+          "Visit weekly AcBE meeting",
+          "Fill out application",
+          "Existing member must sign/sponsor application",
+          "Submit prorated membership fee"
+        ]
+      },
+      "testimonial": "AcBE provides the opportunity for members to get to know each other both personally and professionally. It provides a great network of resources for each member to refer clients and contacts to with confidence. AcBE is so much more than a networking group, we are like a family. - Debbie Powell of Berkshire Hathaway Home Services Professional Realty",
+      "visual_style": "Networking-focused, community-oriented, exclusive membership, family-like culture"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Learn at Your Pace. Grow Your Business.",
+    "positioning": "The modular learning platform for Ashtabula County and Northwest Ohio entrepreneurs — helping Terra State SBDC deliver structured training and AcBE members access bite-sized business education with progress tracking and certifications.",
+    "color_palette_derived_from_research": {
+      "primary": "#2B6CB0",
+      "accent": "#38A169",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#4A5568"
+    },
+    "typography_recommendation": {
+      "heading_font": "Clean modern sans-serif for educational content",
+      "body_font": "Highly readable sans-serif for self-paced learning"
+    },
+    "mood_keywords_from_research": ["educational", "modular", "professional", "community", "structured"],
+    "visual_direction": {
+      "hero_image_concept": "Entrepreneur completing learning module on laptop, or diverse group in business workshop",
+      "color_scheme": "Professional blue with green growth accents",
+      "photography_style": "Ashtabula business owners, Terra State campus, AcBE networking events, learning environments"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Terra State SBDC's educational mission and AcBE's networking community culture",
+    "key_features_needed": [
+      "Progress tracking and completion certificates",
+      "Interactive quizzes and knowledge checks",
+      "Learning paths for different business stages",
+      "Downloadable resources and templates",
+      "Discussion forums for peer learning",
+      "Spanish language modules",
+      "Advisor scheduling integration",
+      "Local Ohio business case studies"
+    ],
+    "differentiators_based_on_research": [
+      "Terra State SBDC: Serving since 1988",
+      "Terra State SBDC: Serves 4 counties (Erie, Ottawa, Sandusky, Seneca)",
+      "Terra State SBDC: Free confidential advising",
+      "Terra State SBDC: Small Business Basics training program",
+      "Terra State SBDC: SBA and Ohio Dept of Development funded",
+      "AcBE: Ashtabula County exclusive business network",
+      "AcBE: One business per category exclusivity",
+      "AcBE: Jay Sartini Memorial Scholarship",
+      "AcBE: Weekly Thursday morning meetings",
+      "Both: Strong focus on entrepreneurship education"
+    ],
+    "outreach_strategy": [
+      "Contact Terra State SBDC about modular learning enhancement",
+      "Reach out to AcBE about member education platform",
+      "Highlight progress tracking and completion certificates",
+      "Propose integration with existing Small Business Basics materials"
+    ]
+  }
+}

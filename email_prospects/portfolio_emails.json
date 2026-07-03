@@ -1,0 +1,112 @@
+{
+  "mvp": "portfolio",
+  "mvp_description": "AI-powered portfolio description generator for creative professionals",
+  "research_date": "2026-03-24",
+  "top_buyers": [
+    {
+      "rank": 1,
+      "name": "PIPE! Creative",
+      "type": "Full-Scope Creative Agency",
+      "website": "https://www.pipecreative.net/",
+      "emails": [
+        {
+          "email": "info@pipecreative.net",
+          "type": "general",
+          "source": "Facebook business page",
+          "confidence": "verified"
+        }
+      ],
+      "phones": [
+        {
+          "phone": "440-228-9541",
+          "type": "main"
+        }
+      ],
+      "address": "P.O. Box 129, Ashtabula, OH",
+      "social": {
+        "facebook": "https://www.facebook.com/100095264891639/",
+        "linkedin": "https://www.linkedin.com/in/david-clayman-82b72816a/",
+        "instagram": "pipe.creative"
+      },
+      "decision_makers": [
+        {
+          "name": "David Clayman",
+          "title": "Founder/Owner",
+          "linkedin": "https://www.linkedin.com/in/david-clayman-82b72816a/",
+          "notes": "Founded PIPE! Creative, full-service marketing and media production company"
+        }
+      ],
+      "fit_rationale": "Northeast Ohio creative agency specializing in video production, brand storytelling, and design. Works with clients like Leadership Ashtabula County, Lawrence School, and NEO Fund. Creates extensive visual portfolios and needs help generating consistent, compelling project descriptions for case studies.",
+      "priority": "high"
+    },
+    {
+      "rank": 2,
+      "name": "JBK Web Designs",
+      "type": "Web Design & Development Agency",
+      "website": "https://www.jbkwebdesigns.com/",
+      "emails": [
+        {
+          "email": "info@jbkwebdesigns.com",
+          "type": "general",
+          "source": "inferred",
+          "confidence": "inferred"
+        }
+      ],
+      "phones": [
+        {
+          "phone": "440-536-1343",
+          "type": "main"
+        }
+      ],
+      "address": "Ashtabula, OH 44004",
+      "fit_rationale": "Creative agency based in Ashtabula specializing in website design, maintenance, and social media design. Helps local businesses establish strong online presence. As a web design agency, they frequently need to create compelling portfolio descriptions for client projects.",
+      "priority": "high"
+    }
+  ],
+  "additional_contacts": [
+    {
+      "name": "LJ Web Services",
+      "type": "Web Design & Digital Marketing Agency",
+      "website": "https://ljwebservices.com/",
+      "emails": [
+        {
+          "email": "luke@ljwebservices.com",
+          "type": "direct",
+          "contact_name": "Luke Jernigan",
+          "contact_title": "Founder/Owner",
+          "source": "ContactOut",
+          "confidence": "verified"
+        }
+      ],
+      "phones": [
+        {
+          "phone": "440-563-3326",
+          "type": "main"
+        }
+      ],
+      "address": "2508 Tupelo Dr, Roaming Shores, OH 44084",
+      "fit_rationale": "Founded by Luke Jernigan with Fortune 500 experience. Serves small businesses, individuals, and non-profits in Ashtabula County. Over a decade of experience with SEO consulting services.",
+      "priority": "medium"
+    },
+    {
+      "name": "Five Rivers Marketing",
+      "type": "Full-Service Marketing Agency",
+      "website": "https://fiveriversmarketing.com/service-area/ashtabula-marketing/",
+      "fit_rationale": "Dayton-based agency serving Ashtabula area. Provides website design, SEO, and comprehensive marketing services. Needs compelling portfolio case studies and client success stories.",
+      "priority": "medium"
+    },
+    {
+      "name": "Martello Photography",
+      "type": "Photography Studio",
+      "website": "https://www.yelp.com/biz/martello-photography-ashtabula",
+      "fit_rationale": "Professional photography service in Ashtabula. Photographers need help writing compelling descriptions for portfolios, especially for event photography and commercial work.",
+      "priority": "medium"
+    }
+  ],
+  "email_templates_suggested": [
+    "ai_portfolio_description_generator",
+    "creative_agency_case_study_helper",
+    "web_design_portfolio_content"
+  ],
+  "research_notes": "PIPE! Creative has verified email from Facebook. JBK Web Designs email inferred - contact via phone recommended. LJ Web Services has verified founder email. Strong creative agency cluster in Ashtabula County for this MVP."
+}

@@ -1,0 +1,1 @@
+SITE: ai-docent | CENTERING: 6 | BRANDING: 7 | LOREM: False | NOTES: SPA entry point with clear title/description for branding. Centering inferred from JS/CSS. No Lorem Ipsum text found.

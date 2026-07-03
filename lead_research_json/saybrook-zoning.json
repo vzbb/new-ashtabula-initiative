@@ -1,0 +1,296 @@
+{
+  "mvp": "saybrook-zoning",
+  "run_timestamp_utc": "2026-03-27T00:00:00Z",
+  "visual_analysis_report_path": "sitemap_screenshots/visual_analysis_report.json",
+  "summary": "Saybrook Zoning is a proposed jurisdiction-specific child clone of the existing zoning MVP. The opportunity exists because Saybrook Township has been actively modernizing its zoning framework, publicly requested help over the last several years, and has now published a clean, highly digitized draft of its updated zoning code. That combination creates an unusually strong fit for a retrieval-backed zoning assistant: one jurisdiction, one current code corpus, and an obvious labor-saving use case for township staff, contractors, property owners, and trustees.",
+  "backend_architecture": {
+    "ingest": {
+      "embeddings_model": "nomic-embed-text",
+      "vector_store": "local Qdrant",
+      "orchestration": "n8n ingest workflow",
+      "source_document": "branding_research/saybrook-zoning/resources/zoning032626.pdf"
+    },
+    "query": {
+      "retrieval": "local Qdrant similarity search against the Saybrook zoning corpus",
+      "generation_model": "local llama3.1:8b via Ollama",
+      "product_constraint": "Answers should stay grounded in retrieved sections and surface citations rather than acting like a freeform general chatbot."
+    },
+    "product_implications": [
+      "The user flow should assume near-instant retrieval-backed answers rather than long-form document review.",
+      "The handoff record should preserve the exact AI-generated summary and cited sections so township staff can trust what the assistant surfaced.",
+      "Because the stack is local/nearby, the MVP should avoid promising unconditional 24/7 official service and instead frame itself as an intake and guidance assistant."
+    ]
+  },
+  "leads": [
+    {
+      "rank": 1,
+      "name": "Saybrook Township Zoning Office",
+      "website": "https://www.saybrooktownship.org/",
+      "fit_rationale": "The township is the direct operational beneficiary. They are actively updating zoning regulations and now have a clean modern draft that is highly suitable for chunking, embedding, indexing, and citation-backed retrieval. A township-specific assistant would reduce repetitive questions, accelerate code lookup, and make the modernization effort materially more usable to the public."
+    },
+    {
+      "rank": 2,
+      "name": "Saybrook Township Trustees",
+      "website": "https://www.saybrooktownship.org/",
+      "fit_rationale": "The trustees are a practical buyer/influencer group because they have direct governance responsibility for the modernization effort and a visible incentive to show the public that updated codes are not just published, but actually usable."
+    },
+    {
+      "rank": 3,
+      "name": "Verdantas",
+      "website": "https://www.verdantas.com/",
+      "fit_rationale": "If Verdantas is the consulting partner behind the zoning update, they may be a channel or influence point rather than the ideal direct operator. The stronger primary path is still Saybrook itself, but the consulting relationship may matter for rollout or political alignment."
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_parent_fit": "The existing zoning MVP already presents as a credible, government-adjacent utility. It provides a strong parent foundation for a Saybrook-specific clone.",
+    "clone_value": "A Saybrook-specific child would be more persuasive than the generic county-oriented parent because the branding, document corpus, and retrieval answers could all point to one township's code and process."
+  },
+  "site_improvements": [
+    {
+      "priority": "high",
+      "recommendation": "Swap county-level framing for Saybrook-specific governance, trustee, and township identity."
+    },
+    {
+      "priority": "high",
+      "recommendation": "Ingest the newly published Saybrook zoning code draft and treat it as the primary retrieval corpus for the child clone."
+    },
+    {
+      "priority": "high",
+      "recommendation": "Make all answers citation-backed, section-aware, and visibly tied to the Saybrook draft code."
+    },
+    {
+      "priority": "medium",
+      "recommendation": "Add simple quick-start flows for common questions such as use permissions, setbacks, permits, accessory structures, and variance-related guidance."
+    },
+    {
+      "priority": "high",
+      "recommendation": "Add a request-formalization lane where the assistant can turn a conversation into a structured zoning or permit request summary before the user submits contact details."
+    },
+    {
+      "priority": "high",
+      "recommendation": "Support optional upload of one or two photos so staff can quickly understand the site condition, structure, or parcel context that prompted the question."
+    }
+  ],
+  "user_jobs_to_be_done": [
+    {
+      "priority": "high",
+      "job": "Ask plain-English questions about setbacks, use permissions, accessory structures, and draft zoning language without reading the entire 164-page PDF."
+    },
+    {
+      "priority": "high",
+      "job": "Understand whether a project sounds like a zoning review, permit issue, variance, or simple informational question before contacting township staff."
+    },
+    {
+      "priority": "high",
+      "job": "Convert a rough homeowner or contractor question into a clean township-ready request summary with the core facts already organized."
+    },
+    {
+      "priority": "medium",
+      "job": "Attach one or two photos to help describe the parcel, current condition, or proposed work when text alone would be ambiguous."
+    },
+    {
+      "priority": "medium",
+      "job": "Leave contact information only after the user feels the assistant has captured the project accurately enough to hand off to staff."
+    },
+    {
+      "priority": "high",
+      "job": "Receive a formalized township-ready summary that clearly distinguishes what the user is asking, what property/project context matters, and which zoning draft sections were used to shape the answer."
+    }
+  ],
+  "formal_request_handoff": {
+    "goal": "Turn a conversation plus optional 1-2 images into a structured follow-up record that township staff can review without rereading the full chat transcript, while preserving the retrieval-backed context that shaped the draft request.",
+    "expectation_management": [
+      "The assistant should clearly state that it provides guidance from the Saybrook draft zoning corpus and does not issue official determinations, approvals, or permits.",
+      "The final structured record should be framed as a request for township review, not as a completed permit or guaranteed zoning decision.",
+      "If the retrieved material is ambiguous or incomplete, the assistant should say so explicitly and still help package the question for staff follow-up."
+    ],
+    "required_fields": [
+      "request_type",
+      "applicant_name",
+      "email_or_phone",
+      "property_address",
+      "parcel_or_location_notes",
+      "project_stage",
+      "project_summary",
+      "specific_question",
+      "requested_action",
+      "ai_summary",
+      "source_citations",
+      "retrieval_context_version"
+    ],
+    "optional_fields": [
+      "preferred_contact_method",
+      "timeline_or_deadline",
+      "contractor_or_business_name",
+      "attachments",
+      "follow_up_notes",
+      "parcel_number",
+      "zoning_district_if_known",
+      "related_sections_user_mentioned"
+    ],
+    "attachments_guidance": {
+      "count": "1-2 images maximum in the first pass",
+      "purpose": "Show lot context, existing structure, frontage, or the specific area that the question is about",
+      "notes": "Treat images as optional support, not a replacement for the textual summary. The AI should reference them only as visual context and avoid making definitive code conclusions from imagery alone."
+    },
+    "request_type_options": [
+      "general zoning question",
+      "permit readiness",
+      "use permission",
+      "setback or lot placement",
+      "variance or exception",
+      "official staff follow-up"
+    ],
+    "recommended_flow": [
+      "User asks a zoning or permit-related question in plain English.",
+      "User may optionally attach 1-2 images to clarify parcel, structure, or project context.",
+      "Assistant answers using Saybrook-specific retrieved code sections and cites the draft PDF.",
+      "Assistant makes clear that the answer is guidance based on the draft code and that township staff must make the official determination.",
+      "Assistant offers to formalize the conversation into a township-ready request summary.",
+      "If user accepts, assistant confirms missing structured fields, then collects contact details at the end rather than at the beginning.",
+      "The final record is written to the township follow-up queue / database as a compact structured request rather than a raw conversation dump."
+    ],
+    "recommended_staff_queue_fields": [
+      "submission_id",
+      "submitted_at",
+      "request_type",
+      "priority_hint",
+      "applicant_name",
+      "email",
+      "phone",
+      "preferred_contact_method",
+      "property_address",
+      "parcel_number",
+      "parcel_or_location_notes",
+      "zoning_district_if_known",
+      "project_stage",
+      "project_summary",
+      "specific_question",
+      "requested_action",
+      "attachments",
+      "ai_summary",
+      "citations",
+      "retrieval_context_version",
+      "model_used",
+      "staff_status",
+      "staff_notes"
+    ],
+    "structured_output_shape": {
+      "contact": {
+        "name": "string",
+        "email": "string",
+        "phone": "string",
+        "preferred_method": "string"
+      },
+      "property": {
+        "address": "string",
+        "parcel_number": "string",
+        "parcel_notes": "string",
+        "zoning_district_if_known": "string"
+      },
+      "request": {
+        "type": "string",
+        "project_type": "string",
+        "project_stage": "string",
+        "question": "string",
+        "summary": "string",
+        "requested_action": "string",
+        "user_confirmed_summary": true,
+        "attachments": [
+          "image_url_or_file_reference"
+        ]
+      },
+      "ai_support": {
+        "summary": "string",
+        "model_used": "llama3.1:8b",
+        "retrieval_context_version": "saybrook_zoning_20260326",
+        "confidence_notes": "string",
+        "citations": [
+          {
+            "source": "string",
+            "section": "string",
+            "page": 0,
+            "quote": "string"
+          }
+        ]
+      }
+    }
+  },
+  "aesthetics_and_layout_notes": {
+    "parent_note": "The existing zoning parent is already visually strong and institutionally credible. The child clone should preserve the same seriousness while making the identity unmistakably Saybrook-specific.",
+    "design_direction": "Township-government tone, clean document utility, restrained civic palette, strong citation/trust UI, and zero generic SaaS ambiguity."
+  },
+  "whitelabel_potential": {
+    "applicability": "Extremely high. Zoning administration is one of the clearest white-label categories in the repo because every jurisdiction needs the same core retrieval and guidance workflow but with different code corpora and identity layers.",
+    "child_clone_reason": "Saybrook is an ideal first jurisdiction-specific child because the latest code draft appears unusually well prepared for ingestion."
+  },
+  "action_next": [
+    {
+      "action": "Store the newly obtained Saybrook zoning draft in a durable project location",
+      "purpose": "Create a stable source document for chunking, embedding, and citation extraction",
+      "priority": "high",
+      "timeline": "Immediately"
+    },
+    {
+      "action": "Create the Saybrook child via the controlled clone pipeline",
+      "purpose": "Turn the zoning parent into a jurisdiction-specific Saybrook assistant without overwriting the broader county-facing MVP",
+      "priority": "high",
+      "timeline": "Next implementation pass"
+    },
+    {
+      "action": "Prepare a first-pass retrieval ingestion workflow around the new code PDF",
+      "purpose": "Demonstrate real utility beyond a static PDF handoff",
+      "priority": "high",
+      "timeline": "Next implementation pass"
+    },
+    {
+      "action": "Define the structured permit/zoning request handoff schema for staff follow-up",
+      "purpose": "Make sure AI Q&A can escalate into a usable township queue record rather than a loose chat transcript",
+      "priority": "high",
+      "timeline": "Same sprint as the first working query path"
+    },
+    {
+      "action": "Wire the frontend flow so citation-backed answers can transition directly into a structured request record with optional image attachments and final-step contact capture",
+      "purpose": "Match the product UX to the local RAG backend and the actual township follow-up workflow",
+      "priority": "high",
+      "timeline": "Same sprint as the first working handoff queue"
+    },
+    {
+      "action": "Use Bob Brobst / local relationship context carefully as a warm-introduction path if appropriate",
+      "purpose": "Turn a generic outreach path into a locally grounded modernization pitch",
+      "priority": "medium",
+      "timeline": "After child MVP is credible"
+    }
+  ],
+  "sources": [
+    {
+      "type": "existing_research",
+      "url": "lead_research_json/zoning.json",
+      "notes": "Saybrook already identified there as a strong modernization-fit target."
+    },
+    {
+      "type": "township_site",
+      "url": "https://www.saybrooktownship.org/",
+      "notes": "Primary township home page referenced in earlier zoning research."
+    },
+    {
+      "type": "township_site_alt",
+      "url": "http://saybrooktownship.org/zoning.shtml",
+      "notes": "Alternate zoning-specific path captured in earlier research."
+    },
+    {
+      "type": "pending_local_document",
+      "url": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/branding_research/saybrook-zoning/resources/zoning032626.pdf",
+      "notes": "Clean Saybrook zoning draft PDF obtained on 2026-03-27. Tagged Adobe-generated document, 164 pages, suitable for chunking, embedding, indexing, and citation extraction."
+    }
+  ],
+  "research_metadata": {
+    "status": "queued_child_clone",
+    "parent_mvp": "zoning",
+    "recommended_child_slug": "saybrook-zoning",
+    "recommended_site_name": "Saybrook Zoning Clerk",
+    "recommended_primary_target": "Saybrook Township Zoning Office",
+    "notes": "This file is a child-clone research stub created before the clone command writes the new site folder.",
+    "primary_source_pdf": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/branding_research/saybrook-zoning/resources/zoning032626.pdf"
+  }
+}

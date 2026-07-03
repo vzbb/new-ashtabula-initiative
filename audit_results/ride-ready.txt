@@ -1,0 +1,1 @@
+SITE: ride-ready | CENTERING: 6 | BRANDING: 7 | LOREM: False | NOTES: 'index.html' has good meta descriptions/keywords and uses modern fonts. No Lorem Ipsum found. UI centering cannot be fully assessed without source files, assuming moderate centering.

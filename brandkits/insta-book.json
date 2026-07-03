@@ -1,0 +1,122 @@
+{
+  "mvp": "insta-book",
+  "generated_at": "2026-03-22T18:30:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/insta-book.json",
+  "research_sources": [
+    "https://thelakehouseinn.com/",
+    "https://eaglecliffinn.com/"
+  ],
+  "target_buyer_1": {
+    "organization": "The Lakehouse Inn",
+    "type": "Bed & Breakfast / Boutique Hotel / Winery / Spa",
+    "website": "https://thelakehouseinn.com/",
+    "address": "Geneva-on-the-Lake, OH (Southern Shore of Lake Erie)",
+    "why_top_candidate": "Premier lakeside accommodation providing all-inclusive Ohio Wine Country experience. Features 8 inn rooms, 3 two-bedroom cottages, 3 premium lakeview suites, on-site winery with locally-made wine, farm-to-table Crosswinds Grille restaurant, and full-service spa. Complimentary breakfast baskets, lakefront patios, proximity to 30+ wineries and 19 covered bridges. Family-owned operations would benefit from AI-powered guest communications and automated booking confirmations for complex multi-service stays.",
+    "fit_score": 96
+  },
+  "target_buyer_2": {
+    "organization": "Eagle Cliff Inn Bed & Breakfast",
+    "type": "Historic Bed & Breakfast (National Register)",
+    "website": "https://eaglecliffinn.com/",
+    "address": "Geneva-on-the-Lake, OH (directly on 'The Strip')",
+    "why_top_candidate": "Historic Victorian B&B listed on National Register of Historic Places, nearly 140 years old. Restored to original state with original woodwork preserved. Offers 9 uniquely decorated guest rooms, suites, and heated cottages. Located directly across from Lake Erie on 'The Strip' in Ohio's First Resort Village. Wrap-around front porch with white wicker seating. High seasonal demand during summer months. Independent property that would benefit from modern booking confirmation automation while maintaining historic charm.",
+    "fit_score": 93
+  },
+  "actual_brand_research": {
+    "the_lakehouse_inn": {
+      "tagline": "Your Ohio Wine Country Destination",
+      "location": "Southern Shore of Lake Erie, Geneva-on-the-Lake, OH",
+      "accommodations": [
+        "8 room Inn",
+        "3 two-bedroom cottages",
+        "3 premium lakeview suites"
+      ],
+      "amenities": [
+        "On-site winery with locally-made wine",
+        "Crosswinds Grille - farm-to-table restaurant",
+        "Full-service spa with wellness memberships",
+        "Complimentary breakfast baskets delivered to room",
+        "Complimentary snacks upon arrival/departure",
+        "Lakefront patios",
+        "On-site gift shop"
+      ],
+      "nearby_attractions": [
+        "30+ wineries in Ohio Wine Country",
+        "19 covered bridges",
+        "Geneva-on-the-Lake (Ohio's oldest resort)",
+        "Spire Institute (7 miles)"
+      ],
+      "experience_focus": "All-inclusive wine country getaway, sunset watching, spa pampering",
+      "visual_style": "Lakeside luxury, wine country elegance, farm-to-table, spa retreat"
+    },
+    "eagle_cliff_inn": {
+      "tagline": "Step back into time nearly 140 years",
+      "location": "Directly on 'The Strip', Geneva-on-the-Lake, OH",
+      "historic_status": "Listed on National Register of Historic Places",
+      "age": "Nearly 140 years old (late 1800s)",
+      "accommodations": [
+        "9 uniquely decorated guest rooms",
+        "Suites with Lake Erie views",
+        "Heated cottages with private courtyard",
+        "One bedroom suite with slight lake view",
+        "Two bedroom suite overlooking The Strip"
+      ],
+      "features": [
+        "Original woodwork preserved",
+        "Restored to nearly original state by Jerry Busch",
+        "Modern conveniences: heat, AC, gas fireplaces, Wi-Fi, cable TV",
+        "Wrap-around front porch with white wicker seating",
+        "Porch swing",
+        "Large parking for jet skis/boats",
+        "Near State Park Marina"
+      ],
+      "experience_focus": "Historic Victorian charm, Lake Erie sunsets, star-filled nights, cozy laid-back atmosphere",
+      "visual_style": "Victorian historic, nostalgic, wrap-around porch, white wicker, late 1800s elegance"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Booked. Confirmed. Ready for Guests.",
+    "positioning": "The AI-powered booking confirmation platform for Geneva-on-the-Lake hospitality — serving historic inns like Eagle Cliff Inn (140 years) and lakeside resorts like The Lakehouse Inn with seamless guest communications and automated confirmations.",
+    "color_palette_derived_from_research": {
+      "primary": "#1E4D6B",
+      "accent": "#C9A86C",
+      "background": "#F7F5F0",
+      "text": "#2C3E50",
+      "secondary": "#8B7355"
+    },
+    "typography_recommendation": {
+      "heading_font": "Elegant serif for historic charm or refined sans-serif",
+      "body_font": "Clean modern sans-serif for readability"
+    },
+    "mood_keywords_from_research": ["lakeside", "wine-country", "historic", "romantic", "sunset", "farm-to-table", "spa", "victorian"],
+    "visual_direction": {
+      "hero_image_concept": "Lake Erie sunset at Geneva-on-the-Lake with historic inn and wine glasses",
+      "color_scheme": "Deep lake blues with warm gold accents (wine country luxury)",
+      "photography_style": "Lake Erie sunsets, covered bridges, wineries, Victorian porches, spa relaxation"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Geneva-on-the-Lake's status as Ohio's oldest resort and premier wine country destination",
+    "key_features_needed": [
+      "AI-generated booking confirmations",
+      "Multi-service stay coordination (room + restaurant + spa)",
+      "Wine tour package integration",
+      "Historic property charm preservation in messaging",
+      "Automated pre-arrival communications",
+      "Local attraction recommendations (30+ wineries, 19 covered bridges)",
+      "Mobile-friendly guest portal",
+      "Integration with farm-to-table dining reservations"
+    ],
+    "differentiators_based_on_research": [
+      "Lakehouse Inn: On-site winery, farm-to-table restaurant, full spa",
+      "Lakehouse Inn: 30+ wineries within minutes",
+      "Lakehouse Inn: Complimentary breakfast baskets to room",
+      "Eagle Cliff Inn: 140 years historic (National Register)",
+      "Eagle Cliff Inn: Original woodwork from late 1800s",
+      "Eagle Cliff Inn: Wrap-around porch with white wicker",
+      "Both: Geneva-on-the-Lake (Ohio's oldest resort)",
+      "Both: Southern shore of Lake Erie"
+    ]
+  }
+}

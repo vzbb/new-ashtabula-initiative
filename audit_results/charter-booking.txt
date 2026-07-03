@@ -1,0 +1,1 @@
+SITE: charter-booking | CENTERING: 7 | BRANDING: 9 | LOREM: false | NOTES: The main page content is horizontally centered using `margin: 0 auto;` and `max-width`. Some internal elements and text are also centered. Branding is strong with specific location and industry references, custom fonts, and colors. No Lorem Ipsum found.

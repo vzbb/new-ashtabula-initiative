@@ -1,0 +1,98 @@
+{
+  "mvp": "lawn",
+  "mvp_name": "FreshCut Lawn Quote",
+  "research_date": "2026-03-24",
+  "target_buyers": [
+    {
+      "rank": 1,
+      "company_name": "MC Professional Lawn Care and Snow Plowing",
+      "website": "https://www.mcprofessionallawncare.com/ashtabula-oh/",
+      "contact_person": "Michael Cliff",
+      "title": "Owner",
+      "phone": "(440) 224-2448",
+      "address": "4615 S Ridge Rd E, Ashtabula, OH 44004",
+      "fit_score": 9,
+      "fit_rationale": "Established full-service provider serving residential/commercial properties and HOAs in Ashtabula. Offers comprehensive services including fertilization, weed control, aeration, overseeding, pest control, and landscaping. Would benefit significantly from automated quote generation for their service packages.",
+      "emails": [
+        {
+          "email": "office@mcprofessionallawncare.com",
+          "source": "Facebook Business Page",
+          "confidence": "confirmed",
+          "notes": "Primary business contact email listed on Facebook"
+        },
+        {
+          "email": "michael@mcprofessionallawncare.com",
+          "source": "Inferred from ZoomInfo pattern",
+          "confidence": "high",
+          "notes": "ZoomInfo shows m***@mcprofessionallawncare.com for Michael Cliff, Owner. Pattern suggests first name email format."
+        }
+      ],
+      "additional_contacts": [
+        {
+          "name": "Marcus Barrickman",
+          "title": "General Manager",
+          "email_pattern": "m***@mcprofessionallawncare.com"
+        },
+        {
+          "name": "Stacey Reinke",
+          "title": "Office Manager",
+          "email_pattern": "s***@mcprofessionallawncare.com"
+        }
+      ],
+      "social_profiles": {
+        "facebook": "https://www.facebook.com/mcprofessionallawncareandsnowplowing/",
+        "linkedin": "https://www.linkedin.com/company/mc-professional-lawn-care-and-snow-plowing/",
+        "instagram": "https://www.instagram.com/mcprofessionallawncare/",
+        "youtube": "https://www.youtube.com/@mcprofessionallawncare",
+        "twitter": "https://twitter.com/mcprolawncare"
+      }
+    },
+    {
+      "rank": 2,
+      "company_name": "Canter's Classic Lawn Care",
+      "website": "https://cantersclassiclawncare.com/",
+      "contact_person": "Doug Canter",
+      "title": "Founder/Owner",
+      "phone": "(440) 224-3340",
+      "address": "2312 Aetna Road, Ashtabula, OH 44004",
+      "fit_score": 9,
+      "fit_rationale": "Nearly 30 years in business serving Ashtabula, Conneaut, and Geneva areas. Member of local Chamber of Commerce. Offers lawn maintenance, landscape design/installation, irrigation, and snow services. Currently lacks sophisticated online quote functionality - the MVP could streamline their pricing and customer intake process.",
+      "emails": [
+        {
+          "email": "cantersclassic@gmail.com",
+          "source": "Nextdoor Business Profile",
+          "confidence": "confirmed",
+          "notes": "Active business email found on Nextdoor listing"
+        },
+        {
+          "email": "doug@cantersclassiclawncare.com",
+          "source": "Inferred from domain ownership",
+          "confidence": "medium",
+          "notes": "Domain uses first name pattern. Doug Canter is the founder/owner. Worth testing this email pattern."
+        }
+      ],
+      "social_profiles": {
+        "facebook": "https://www.facebook.com/Canters-Classic-Lawn-Care-and-Snow-Removal-111897525525766/"
+      },
+      "chamber_member": true
+    }
+  ],
+  "research_notes": {
+    "mc_professional_insights": "Well-established 14+ year company with strong online presence. Very active on social media with professional website. Currently uses form-based quote requests. Would benefit from instant quote calculator for lead capture outside business hours.",
+    "canters_classic_insights": "Family-owned business with 30 years of local reputation. Chamber member. Website is functional but basic. Contact form requires manual follow-up. Owner Doug Canter is hands-on and provides personalized service.",
+    "outreach_strategy": [
+      "Lead with value: 'Capture leads while you sleep'",
+      "Emphasize reduced administrative overhead for quote generation",
+      "Offer free demo with their actual service pricing",
+      "Highlight 24/7 availability for customer inquiries"
+    ]
+  },
+  "sources": [
+    "https://www.mcprofessionallawncare.com/ashtabula-oh/",
+    "https://www.facebook.com/mcprofessionallawncareandsnowplowing/",
+    "https://www.zoominfo.com/p/Michael-Cliff/2184031099",
+    "https://cantersclassiclawncare.com/",
+    "https://nextdoor.com/pages/canters-classic-lawn-care-ashtabula-oh/",
+    "https://www.thebluebook.com/iProView/1529411/canter-s-classic-lawn-care/subcontractors/locations-contacts/"
+  ]
+}

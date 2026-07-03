@@ -1,0 +1,72 @@
+{
+  "mvp": "aidflow-navigator",
+  "generated_at": "2026-03-22T11:28:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/aidflow-navigator.json",
+  "research_sources": [
+    "https://www.211ashtabula.org/",
+    "https://accaa.org/",
+    "https://www.acdjfs.org/"
+  ],
+  "target_buyer": {
+    "organization": "211 Ashtabula County / United Way of Ashtabula County",
+    "type": "Resource Referral Helpline",
+    "website": "https://www.211ashtabula.org/",
+    "why_top_candidate": "Primary resource database for Ashtabula County connecting residents to food pantries, utility assistance, rent assistance, and social services. 24/7 live operators. Digital navigation platform would complement call center operations and expand self-service access.",
+    "fit_score": 93
+  },
+  "actual_brand_research": {
+    "existing_brand_name": "211 Ashtabula County",
+    "parent_organization": "United Way of Ashtabula County",
+    "tagline": "Helping People. Changing Lives.",
+    "services": [
+      "24/7 live operator helpline",
+      "Text support",
+      "Email support",
+      "Online resource database"
+    ],
+    "contact": {
+      "phone": "1-800-874-8545",
+      "email": "211@accaa.org",
+      "text": "Available"
+    },
+    "visual_style": "Community-focused, accessible, helpful"
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Navigate Benefits. Find Help. Get Support.",
+    "positioning": "The digital benefits navigation platform for 211 Ashtabula County — expanding their 24/7 helpline with self-service tools for SNAP, Medicaid, WIC, and rental assistance.",
+    "color_palette_derived_from_research": {
+      "primary": "#1E4D8C",
+      "accent": "#E87722",
+      "background": "#FFFFFF",
+      "text": "#333333",
+      "secondary": "#4A90A4"
+    },
+    "typography_recommendation": {
+      "heading_font": "Clean sans-serif for accessibility",
+      "body_font": "Highly readable sans-serif"
+    },
+    "mood_keywords_from_research": ["helpful", "accessible", "supportive", "community", "24/7"],
+    "visual_direction": {
+      "hero_image_concept": "Diverse community members accessing resources via phone and digital platforms",
+      "color_scheme": "Professional blue with warm orange accents (trust + warmth)",
+      "photography_style": "Real community members, welcoming, inclusive"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with 211's helpful, accessible, 24/7 service mission",
+    "key_features_needed": [
+      "Multi-benefit eligibility screener (SNAP, Medicaid, WIC, LIHEAP)",
+      "Document checklist generator",
+      "Application progress tracker",
+      "Integration with 211 resource portal",
+      "24/7 self-service option complementing live operators"
+    ],
+    "differentiators_based_on_research": [
+      "211 brand recognition and trust",
+      "24/7 live operator backup",
+      "United Way affiliation",
+      "Existing resource database integration"
+    ]
+  }
+}

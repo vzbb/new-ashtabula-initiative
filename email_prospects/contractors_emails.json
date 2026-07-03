@@ -1,0 +1,41 @@
+{
+  "mvp": "contractors",
+  "research_date": "2026-03-24",
+  "target_description": "General contractors in Ashtabula OR Home Builders Association",
+  "leads": [
+    {
+      "priority": 1,
+      "category": "Established General Contractor",
+      "company_name": "JCI Contractors Inc.",
+      "contact_name": "Charlie Borsukoff",
+      "title": "Owner/Manager",
+      "email": "charlieb@jcibuilds.com",
+      "phone": "440-998-0609",
+      "address": "529 W. Prospect Road, Ashtabula, Ohio 44004",
+      "website": "https://www.jcibuilds.com",
+      "verification_notes": "Active member of Ashtabula County Builders Association. Established commercial and industrial construction company serving Northeast Ohio.",
+      "confidence": "high"
+    },
+    {
+      "priority": 2,
+      "category": "Home Builders Association",
+      "organization_name": "Home Builders Association of Greater Cleveland",
+      "contact_name": "Brenda Callaghan",
+      "title": "Executive Director",
+      "email": "bcallaghan@hbacleveland.com",
+      "alternate_email": "info@hbacleveland.com",
+      "phone": "216-447-8700",
+      "address": "6140 West Creek Rd, Independence, OH 44131",
+      "website": "https://hbacleveland.com",
+      "verification_notes": "Serves Cuyahoga, Geauga, Lake AND Ashtabula counties. Recently merged into Building Industry Association of Northeast Ohio (BIA-NEO) as of Jan 1, 2026, but HBA Cleveland contacts remain active. Executive Director email is the most direct contact for partnership inquiries.",
+      "confidence": "high"
+    }
+  ],
+  "research_notes": "JCI Contractors is an established, verified commercial contractor with direct owner contact. HBA of Greater Cleveland is the primary trade association serving Ashtabula County with confirmed executive leadership contact.",
+  "sources": [
+    "https://ashtabulacountybuilders.com/membership/",
+    "https://www.jcibuilds.com/",
+    "https://hbacleveland.com/leadership/",
+    "https://members.hbacleveland.com/contact"
+  ]
+}

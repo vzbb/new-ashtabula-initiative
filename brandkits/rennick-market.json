@@ -1,0 +1,116 @@
+{
+  "mvp": "rennick-market",
+  "generated_at": "2026-03-22T22:50:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/rennick-market.json",
+  "research_sources": [
+    "https://rennickmeatmarket.com/ (403 error - using research data)",
+    "https://harborgardens.org/"
+  ],
+  "target_buyer_1": {
+    "organization": "Rennick Meat Market",
+    "type": "Butcher Shop / Steakhouse / Restaurant",
+    "website": "https://rennickmeatmarket.com/",
+    "location": "Ashtabula Harbor, Ohio",
+    "why_top_candidate": "Established butcher-inspired steakhouse in Ashtabula Harbor. Could benefit from online ordering, reservation system, and local producer marketplace features. Primary namesake for this MVP - strong local recognition in Ashtabula Harbor area.",
+    "fit_score": 92
+  },
+  "target_buyer_2": {
+    "organization": "Harbor Gardens",
+    "type": "Local Food Market / Demonstration Kitchen / Nonprofit",
+    "website": "https://harborgardens.org/",
+    "location": "1022 Bridge Street, Ashtabula Harbor, OH 44004",
+    "owner": "T Gallo - Nurse Practitioner and Owner",
+    "why_top_candidate": "Community-focused food market and demonstration kitchen in Ashtabula Harbor. Mission: 'A general store building community around self-reliance and food security, appreciation for our local ecosystems and sell items sustainably grown and made in Ashtabula County.' Over 50 local vendors (many in Ashtabula County). Products: Local produce, grains, beans, cheeses from Mayfield Creamery, sourdough breads, handmade items by local artists, books by local authors, maple syrup, honey, eggs, soaps, local artisans. Offers classes (cooking, canning, fermenting), urban food forest tours. Publishes 'Homegrown: Spotlight on Local Food' column in North Coast Voice. An online marketplace with producer profiles would expand their reach significantly.",
+    "fit_score": 95
+  },
+  "actual_brand_research": {
+    "rennick_meat_market": {
+      "type": "Butcher Shop / Steakhouse / Restaurant",
+      "location": "Ashtabula Harbor, Ohio",
+      "positioning": "Butcher-inspired steakhouse",
+      "fit_for_mvp": "Online ordering, reservation system, local producer marketplace",
+      "note": "Primary namesake for this MVP - strong local recognition"
+    },
+    "harbor_gardens": {
+      "name": "Harbor Gardens",
+      "owner": "T Gallo - Nurse Practitioner",
+      "location": "1022 Bridge Street, Ashtabula Harbor, OH 44004",
+      "mission": "A general store building community around self-reliance and food security, appreciation for our local ecosystems and sell items sustainably grown and made in Ashtabula County",
+      "vendors": "Over 50 local vendors (many in Ashtabula County)",
+      "products": [
+        "Local food - produce (seasonal), garlic, butternut squash, potatoes, scapes, greens, tomatoes, peppers, asparagus",
+        "Buckwheat, spelt, Einkorn, whole grain flours, corn meal, grits, popcorn (Ohio-grown)",
+        "Dry black beans, pinto beans, brown rice, quinoa, purple barley, spelt berries, black lentils, red lentils",
+        "To-go soups, hummus (made with Ohio-grown organic beans)",
+        "Cheeses from Mayfield Creamery in Orwell, Chevre from Mackenzie",
+        "Sourdough breads, sourdough English muffins",
+        "Handmade items by local artists - knit gloves, cutting boards, cat toys, cards, pottery",
+        "Books by local authors and Chelsea Green Publishing",
+        "Maple syrup and honey (local)",
+        "Local eggs",
+        "Soaps, bug repellent, beard oil, sleepy feet, facial cleansers by local artisans",
+        "Shampoo, bamboo toothbrushes, no-plastic dental floss"
+      ],
+      "programs": [
+        "Classes - cooking, canning, fermenting, eating and sharing knowledge",
+        "Urban food forest tours",
+        "Gallo's Health Clinic",
+        "Demonstration kitchen for locally-grown food"
+      ],
+      "media": "'Homegrown: Spotlight on Local Food' column in North Coast Voice (by T Gallo)",
+      "community": "Ashtabula County Local Food Guide distribution point, Harvest in the Harbor festival organizer",
+      "visual_style": "Community-focused, sustainable, local food advocacy, self-reliance, food security"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Fresh from Harbor. Delivered to You.",
+    "positioning": "The local food marketplace for Ashtabula Harbor — connecting Rennick Meat Market's butcher-quality meats with Harbor Gardens' 50+ local vendors and sustainably-grown Ashtabula County products.",
+    "color_palette_derived_from_research": {
+      "primary": "#2F855A",
+      "accent": "#D69E2E",
+      "background": "#FFFAF0",
+      "text": "#2D3748",
+      "secondary": "#718096"
+    },
+    "typography_recommendation": {
+      "heading_font": "Rustic artisan serif",
+      "body_font": "Clean readable sans-serif"
+    },
+    "mood_keywords_from_research": ["local", "sustainable", "community", "self-reliance", "food security", "artisan", "Harbor"],
+    "visual_direction": {
+      "hero_image_concept": "Ashtabula Harbor waterfront with local produce and artisan goods",
+      "color_scheme": "Natural green and gold accents (local food, sustainable)",
+      "photography_style": "Local farms, artisan producers, Ashtabula Harbor, fresh produce, cooking classes"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with Harbor Gardens' community-focused, sustainable food mission and self-reliance values",
+    "key_features_needed": [
+      "Producer profile pages with photos, story, and product listings",
+      "Online ordering with pickup/delivery scheduling",
+      "Local food map showing farm locations and market days",
+      "Seasonality calendar showing what's fresh when",
+      "CSA share signup and management",
+      "Recipe suggestions based on available seasonal products",
+      "Loyalty program for repeat local food buyers",
+      "Producer authentication/verification for trust"
+    ],
+    "differentiators_based_on_research": [
+      "Harbor Gardens: 50+ local vendors (many Ashtabula County)",
+      "Harbor Gardens: Demonstration kitchen for cooking classes",
+      "Harbor Gardens: Urban food forest tours",
+      "Harbor Gardens: 'Homegrown' column in North Coast Voice",
+      "Harbor Gardens: Local Food Guide distribution",
+      "Rennick: Established butcher-inspired steakhouse",
+      "Rennick: Ashtabula Harbor location",
+      "Both: Strong Ashtabula Harbor presence"
+    ],
+    "outreach_strategy": [
+      "Contact T Gallo at Harbor Gardens (tours, classes, local food network)",
+      "Reach out to Rennick Meat Market about online ordering and reservations",
+      "Partner with Ashtabula Local Food Network for county-wide food hub",
+      "Feature at Harvest in the Harbor festival"
+    ]
+  }
+}

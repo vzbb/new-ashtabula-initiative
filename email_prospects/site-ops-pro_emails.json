@@ -1,0 +1,40 @@
+{
+  "mvp": "site-ops-pro",
+  "research_date": "2026-03-24",
+  "target_buyers": [
+    {
+      "rank": 1,
+      "organization": "J. Severino Construction Inc.",
+      "website": "https://severinoconstruction.com/",
+      "why_target": "Commercial, industrial, and municipal contractor specializing in site development, earthwork, and underground utilities. Based in Ashtabula with 50+ employees. The EarthFlow Estimator MVP would directly complement their existing Terra Vantage estimation tool.",
+      "contacts": [
+        {
+          "name": "General Excavating Department",
+          "title": "Commercial Excavating Services",
+          "email": "excavating@severinoconstruction.com",
+          "phone": "440-992-4274",
+          "notes": "Family-owned, 50+ years in business. Primary contact for excavation and earthwork projects."
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "organization": "Koski Construction Company",
+      "website": "https://koskiconstructionco.com/",
+      "why_target": "Heavy highway contractor and asphalt producer based in Ashtabula since 1921. Active member of Ashtabula County Builders Association. Earthwork estimation tools would support their road and infrastructure projects.",
+      "contacts": [
+        {
+          "name": "Sarah Koski-Noufer",
+          "title": "Owner/Manager",
+          "email": "sarah@koskiconstructionco.com",
+          "phone": "440-997-5337",
+          "notes": "Third-generation family business. Contact via website form if email bounces."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://severinoconstruction.com/contact-us/",
+    "https://ashtabulacountybuilders.com/membership/"
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "mvp": "volunteer",
+  "generated_at": "2026-03-23T03:30:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/volunteer.json",
+  "research_sources": [
+    "https://axessfamilyservices.org/services/supportive-services/americorps/rsvp/",
+    "https://accaa.org/"
+  ],
+  "target_buyer_1": {
+    "organization": "RSVP (Retired Senior Volunteer Program) - Axess Family Services",
+    "type": "National Service Program / AmeriCorps Senior Corps",
+    "website": "https://axessfamilyservices.org/services/supportive-services/americorps/rsvp/",
+    "address": "184 E. Walnut Street, Jefferson, Ohio 44047",
+    "why_top_candidate": "One of the largest volunteer networks in the nation for people 55 and over. Mission: engage Americans 55+ in volunteer service to meet critical community needs. Operates in 15 Ohio counties including Ashtabula. Volunteers choose how, where, and how often they want to serve (few hours to 40 hours/week). Services provided: tutoring, meal preparation/delivery, transportation, light cleaning, clerical support, food pantry assistance. Pre-service orientation training provided. Supplemental insurance while on duty. Sponsors include AmeriCorps, Area Agencies on Aging, United Way, and community foundations. Ashtabula location serves as hub for senior volunteer coordination across the county.",
+    "fit_score": 95
+  },
+  "target_buyer_2": {
+    "organization": "Ashtabula County Community Action Agency (ACCAA)",
+    "type": "Community Action Agency (Nonprofit)",
+    "website": "https://accaa.org/",
+    "why_top_candidate": "Major anti-poverty organization in Ashtabula County. Mission: 'Community Action helps people and changes lives. Ashtabula County Community Action will help people achieve self-sufficiency and rise above issues of poverty.' Core value: 'Our volunteers are the backbone of our agency.' Programs: Head Start, HEAP/PIPP (moving to 6920 Austinburg Road), Home Weatherization, meals for seniors/disabled (100,290 meals provided). Impact: 11,763 residents served last year, 99 households weatherized. Values: Customer service, community partnerships, interagency collaboration, continuous improvement. Dedicated volunteer page at /get-involved/volunteer.html. Volunteer scheduling platform would strengthen their 'backbone' volunteer management.",
+    "fit_score": 93
+  },
+  "actual_brand_research": {
+    "rsvp_axess": {
+      "name": "RSVP (Retired Senior Volunteer Program)",
+      "parent_organization": "Axess Family Services",
+      "program_type": "AmeriCorps Senior Corps",
+      "location": "184 E. Walnut Street, Jefferson, Ohio 44047",
+      "mission": "Engage Americans 55 years and older in volunteer service to meet critical community needs and provide a high-quality experience for volunteers",
+      "network_scope": "One of the largest volunteer networks in the nation for people 55+",
+      "service_counties": [
+        "Ashtabula",
+        "Columbiana",
+        "Crawford",
+        "Greene",
+        "Huron",
+        "Jefferson",
+        "Mahoning",
+        "Marion",
+        "Montgomery",
+        "Morrow",
+        "Portage",
+        "Seneca",
+        "Stark",
+        "Trumbull",
+        "Wyandot"
+      ],
+      "volunteer_flexibility": "Choose how, where, and how often - commitments from few hours to 40 hours/week",
+      "services_provided": [
+        "Tutoring and homework assistance",
+        "Meal preparation and delivery",
+        "Transportation services",
+        "Light cleaning and organizing",
+        "Clerical and office support",
+        "Food pantry and clothing assistance"
+      ],
+      "benefits": [
+        "Pre-service orientation training",
+        "Supplemental insurance while on duty"
+      ],
+      "sponsors": [
+        "AmeriCorps",
+        "Area Agencies on Aging (AAA5, AAA9)",
+        "United Way (Cleveland, Jefferson County, North Central Ohio, Portage)",
+        "Community Foundations"
+      ],
+      "visual_style": "National service, senior-focused, flexible volunteering, multi-county network"
+    },
+    "accaa": {
+      "name": "Ashtabula County Community Action Agency",
+      "acronym": "ACCAA",
+      "mission": "Community Action helps people and changes lives. Ashtabula County Community Action will help people achieve self-sufficiency and rise above issues of poverty.",
+      "headquarters": "Jefferson, OH (HEAP/PIPP moving to 6920 Austinburg Road, Ashtabula, OH effective October 22, 2025)",
+      "core_value": "Our volunteers are the backbone of our agency",
+      "values": [
+        "Customer service",
+        "Community partnerships",
+        "Interagency collaboration and integration",
+        "Pleasant and efficient work environment",
+        "Continuous improvement and learning",
+        "Communication"
+      ],
+      "programs": [
+        "Head Start",
+        "HEAP/PIPP (Home Energy Assistance)",
+        "Home Weatherization Assistance Program",
+        "Meals for seniors and disabled"
+      ],
+      "annual_impact": {
+        "residents_served": "11,763",
+        "meals_provided": "100,290",
+        "households_weatherized": "99"
+      },
+      "community_action_promise": "Community Action changes people's lives, embodies the spirit of hope, improves communities, and makes America a better place to live. We care about the entire community, and we are dedicated to helping people help themselves and each other.",
+      "volunteer_page": "https://accaa.org/get-involved/volunteer.html",
+      "funding": "Supported by various Federal grants",
+      "visual_style": "Community-focused, anti-poverty, volunteer backbone, self-sufficiency mission"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Connect Volunteers. Strengthen Community.",
+    "positioning": "The volunteer scheduling platform for Ashtabula County — helping RSVP manage their 15-county senior volunteer network and ACCAA coordinate their volunteer backbone across anti-poverty programs.",
+    "color_palette_derived_from_research": {
+      "primary": "#2C5282",
+      "accent": "#D69E2E",
+      "background": "#F7FAFC",
+      "text": "#2D3748",
+      "secondary": "#4A5568"
+    },
+    "typography_recommendation": {
+      "heading_font": "Professional serif for institutional trust",
+      "body_font": "Clean sans-serif for accessibility"
+    },
+    "mood_keywords_from_research": ["community", "service", "senior-friendly", "flexible", "backbone"],
+    "visual_direction": {
+      "hero_image_concept": "Diverse volunteers serving community - seniors tutoring, meals delivery, weatherization teams",
+      "color_scheme": "Navy blue with gold accents (institutional trust + community warmth)",
+      "photography_style": "Ashtabula community service, senior volunteers, anti-poverty programs, helping hands"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with RSVP's flexible senior volunteer network and ACCAA's volunteer backbone philosophy",
+    "key_features_needed": [
+      "Flexible scheduling (few hours to 40 hrs/week)",
+      "Multi-county service area management",
+      "Senior-friendly interface (accessibility)",
+      "Program-specific volunteer matching",
+      "Pre-service orientation tracking",
+      "Service hour logging and reporting",
+      "Volunteer backbone coordination dashboard",
+      "Interagency collaboration tools",
+      "Impact metrics tracking (meals served, households helped)"
+    ],
+    "differentiators_based_on_research": [
+      "RSVP: Largest 55+ volunteer network in nation",
+      "RSVP: 15-county Ohio coverage",
+      "RSVP: AmeriCorps Senior Corps program",
+      "RSVP: Flexible commitments (hours to full-time)",
+      "RSVP: Supplemental insurance for volunteers",
+      "ACCAA: 11,763 residents served annually",
+      "ACCAA: 100,290 meals provided",
+      "ACCAA: Volunteers are 'the backbone'",
+      "ACCAA: Multi-program coordination (Head Start, HEAP, Weatherization)",
+      "Both: Ashtabula County community focus"
+    ],
+    "outreach_strategy": [
+      "Contact RSVP at 184 E. Walnut Street, Jefferson about multi-county scheduling platform",
+      "Reach out to ACCAA about volunteer backbone management system",
+      "Highlight senior-friendly interface for RSVP's 55+ demographic",
+      "Propose program-specific matching for ACCAA's diverse initiatives",
+      "Demonstrate impact metrics dashboard for federal grant reporting"
+    ]
+  }
+}

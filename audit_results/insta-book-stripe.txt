@@ -1,0 +1,1 @@
+SITE: insta-book-stripe | CENTERING: 9 | BRANDING: 8 | LOREM: false | NOTES: The site uses Tailwind CSS with max-w-7xl mx-auto for horizontal centering. Branding is clear with consistent color scheme, modern fonts, and a clear product name. No Lorem Ipsum found. The UI is self-contained within index.html.

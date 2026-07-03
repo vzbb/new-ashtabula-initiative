@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Thomas Fence Co.">
+  <rect width="64" height="64" rx="12" fill="#14532d"/>
+  <path d="M15 48V18M26 48V12M38 48V18M49 48V12" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M10 28H54M10 40H54" stroke="#4caf50" stroke-width="3" stroke-linecap="round"/>
+</svg>

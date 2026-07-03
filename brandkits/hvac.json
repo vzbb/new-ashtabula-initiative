@@ -1,0 +1,108 @@
+{
+  "mvp": "hvac",
+  "generated_at": "2026-03-22T18:09:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/hvac.json",
+  "research_sources": [
+    "https://have-inc.com/",
+    "https://www.ogramheatingandcooling.com/"
+  ],
+  "target_buyer_1": {
+    "organization": "HAVE Heating and Cooling (HAVE, Inc.)",
+    "type": "HVAC Contractor - Residential/Commercial/Industrial",
+    "website": "https://have-inc.com/",
+    "address": "2101 Aetna Road, Ashtabula, OH 44004",
+    "phone": "440-998-7252",
+    "license": "#28522",
+    "why_top_candidate": "Largest HVAC contractor in Ashtabula County, established 1975. Offers MVP Value Plan maintenance agreements already - demonstrates commitment to proactive service scheduling. 3,000+ sq ft sheet metal fabrication shop shows significant infrastructure investment. 24/7 emergency service. Serves Ashtabula, Lake, Geauga counties including Ashtabula, Concord, Conneaut, Jefferson, Madison, Painesville. Strong tech adoption potential.",
+    "fit_score": 96
+  },
+  "target_buyer_2": {
+    "organization": "Ogram Heating & Cooling, Inc.",
+    "type": "HVAC Contractor - Family-Owned Full Service",
+    "website": "https://www.ogramheatingandcooling.com/",
+    "address": "6059 Stanhope-Kelloggsville Rd, Andover, OH 44003",
+    "phone": "(440) 293-6946",
+    "license": "#13465",
+    "why_top_candidate": "Family-owned since 1980 (40+ years, second generation Ryan Ogram). 4-time Carrier President's Award winner for exceptional customer service. A+ BBB rating. Strong focus on customer experience makes them ideal for scheduling automation MVP. Serves Northeast Ohio & Western Pennsylvania including Ashtabula, Crawford, Geauga, Trumbull, Lake counties.",
+    "fit_score": 93
+  },
+  "actual_brand_research": {
+    "have_heating_cooling": {
+      "established": 1975,
+      "positioning": "Leading contractor in Ashtabula, Ohio & surrounding areas",
+      "services": ["Heating", "AC", "Ventilation", "Engineering", "Industrial", "Commercial", "Residential"],
+      "special_features": [
+        "24/7 emergency service",
+        "NATE certified technicians",
+        "MVP Value Plan (maintenance agreements)",
+        "3,000+ sq ft sheet metal fabrication shop",
+        "Financing available through Optimus",
+        "Services all HVAC brands"
+      ],
+      "service_area": ["Ashtabula", "Concord", "Conneaut", "Jefferson", "Madison", "Painesville", "Rock Creek", "Roaming Shores", "Denmark", "Saybrook", "Dorset", "Austinburg", "Geneva", "Pierpont", "Harpersfield", "Lenox", "Geneva-on-the-Lake", "North Kingsville"],
+      "counties": ["Lake", "Geauga", "Ashtabula"],
+      "visual_style": "Professional HVAC contractor, established 1975, industrial/commercial focus with residential"
+    },
+    "ogram_heating_cooling": {
+      "established": 1980,
+      "positioning": "Family-owned full service HVAC, 4-time Carrier President's Award winner",
+      "ownership": "Second generation (Ryan Ogram)",
+      "awards": ["Carrier President's Award (4-time winner)"],
+      "ratings": "A+ BBB rating",
+      "special_features": [
+        "Geothermal heat pump expertise",
+        "Tax credit guidance (30% federal through 2032)",
+        "ENERGY STAR certified products",
+        "40+ years family ownership"
+      ],
+      "service_area": ["Northeast Ohio", "Western Pennsylvania"],
+      "counties": ["Ashtabula", "Crawford", "Geauga", "Trumbull", "Lake"],
+      "visual_style": "Family-owned, award-winning, customer-focused, energy efficiency specialist"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Stay Comfortable. Schedule Smart.",
+    "positioning": "The intelligent HVAC scheduling platform for Ashtabula County — connecting homeowners and businesses with trusted local contractors like HAVE Heating and Cooling (est. 1975) and Ogram Heating & Cooling (4-time Carrier award winner) for seamless maintenance, repairs, and installations.",
+    "color_palette_derived_from_research": {
+      "primary": "#1E4D8C",
+      "accent": "#E85A24",
+      "background": "#F8F9FA",
+      "text": "#2D3748",
+      "secondary": "#4A90A4"
+    },
+    "typography_recommendation": {
+      "heading_font": "Bold professional sans-serif",
+      "body_font": "Clean modern sans-serif"
+    },
+    "mood_keywords_from_research": ["professional", "established", "reliable", "24/7", "maintenance", "energy-efficient", "family-owned"],
+    "visual_direction": {
+      "hero_image_concept": "Comfortable home interior with efficient HVAC system, Ashtabula County homes",
+      "color_scheme": "Professional blues with warm orange accents (HVAC industry standard)",
+      "photography_style": "Professional technicians, comfortable homes, heating/cooling equipment, family comfort"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with established HVAC contractors' professional service and maintenance plan focus",
+    "key_features_needed": [
+      "Online tune-up scheduling",
+      "MVP maintenance plan integration",
+      "Emergency service request priority",
+      "24/7 availability for HAVE Inc.",
+      "Financing option display",
+      "Service area verification (county-based)",
+      "Energy efficiency recommendations",
+      "Tax credit guidance integration"
+    ],
+    "differentiators_based_on_research": [
+      "HAVE Inc: Largest contractor, est. 1975, 3,000+ sq ft sheet metal shop",
+      "HAVE Inc: MVP Value Plan already exists - maintenance agreement ready",
+      "Ogram: 4-time Carrier President's Award winner",
+      "Ogram: 40+ years family ownership, second generation",
+      "Ogram: A+ BBB rating",
+      "Both: NATE certified technicians",
+      "Both: Service all of Ashtabula County",
+      "Geothermal and energy efficiency expertise (Ogram)"
+    ]
+  }
+}

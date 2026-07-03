@@ -1,0 +1,191 @@
+{
+  "mvp": "volunteer",
+  "run_timestamp_utc": "2026-03-22T13:53:00Z",
+  "visual_analysis_report_path": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "summary": "The 'volunteer' MVP is a 'Volunteer Scheduler' branded as 'Ashtabula County Community Resources' with a professional government-style aesthetic (navy/yellow color scheme, institutional typography, official seal). The visual analysis flags this as needing research because the target entity is unclear—while it uses Ashtabula County branding, it doesn't specify whether this is for the county government managing volunteer programs, a specific volunteer coordination nonprofit, or another community organization. This research identifies 5 qualified leads that could use a white-label volunteer scheduling platform.",
+  "leads": [
+    {
+      "name": "RSVP (Retired Senior Volunteer Program) - Axess Family Services",
+      "type": "National Service Program / AmeriCorps Senior Corps",
+      "website": "https://axessfamilyservices.org/services/supportive-services/americorps/rsvp/",
+      "fit_rationale": "RSVP is one of the largest volunteer networks in the nation for people 55+, operating in 15 Ohio counties including Ashtabula. They specifically need to match thousands of senior volunteers with local nonprofits, food pantries, schools, and hospitals. A volunteer scheduling platform would directly address their core mission of connecting volunteers to opportunities. They already coordinate volunteer placement but may lack modern digital scheduling tools.",
+      "contact_info": {
+        "address": "184 E. Walnut Street, Jefferson, Ohio 44047",
+        "phone": "Not listed on main page",
+        "contact_page": "https://axessfamilyservices.org/contact-us/"
+      },
+      "source": "Web Search / SearXNG"
+    },
+    {
+      "name": "Ashtabula County Community Action Agency (ACCAA)",
+      "type": "Community Action Agency (Nonprofit)",
+      "website": "https://accaa.org/",
+      "fit_rationale": "ACCAA is a major anti-poverty organization in Ashtabula County with the mission 'to empower participants through service and referrals to attain skills, knowledge, motivation and assistance to become self-sufficient.' They explicitly state 'Our volunteers are the backbone of our agency.' They run Head Start, emergency services, and housing programs—all requiring coordinated volunteer efforts. A scheduling tool would help them manage their volunteer backbone more efficiently.",
+      "contact_info": {
+        "headquarters": "Jefferson, OH",
+        "contact_page": "https://accaa.org/contact-us.html",
+        "volunteer_page": "https://accaa.org/get-involved/volunteer.html"
+      },
+      "source": "Web Search / Brave Search"
+    },
+    {
+      "name": "Ashtabula County Metroparks",
+      "type": "Parks and Recreation District",
+      "website": "https://www.ashtabulametroparks.com/",
+      "fit_rationale": "Metroparks operates multiple parks, trails, and outdoor programs across Ashtabula County. Their volunteer page lists specific needs: Nature & Recreation Programs (guided hikes, children's programs, senior activities), Events & Community Outreach (festivals, special events), and Creative & Administrative Support. They have recurring events like 'Seniors Walk' every other week. This structured programming makes them ideal candidates for a volunteer scheduling platform that can handle recurring shifts, event staffing, and program coordination.",
+      "contact_info": {
+        "phone": "(440) 576-0717",
+        "volunteer_page": "https://www.ashtabulametroparks.com/volunteer",
+        "events_page": "https://ashtabulametroparks.com/category/events/"
+      },
+      "source": "Web Search / SearXNG"
+    },
+    {
+      "name": "Ashtabula County Animal Protective League (ACAPL)",
+      "type": "Animal Welfare Nonprofit (501c3)",
+      "website": "https://www.acapl.org/",
+      "fit_rationale": "ACAPL is the county's primary animal shelter, caring for homeless and abused animals. They have an active volunteer program with an online application process. Volunteer activities include dog walking, kennel cleaning, pet care, and event support. Animal shelters require strict scheduling for volunteer shifts to ensure adequate coverage for animal care. The MVP's scheduling features would help them manage volunteer shifts, track hours, and ensure proper staffing ratios for animal welfare.",
+      "contact_info": {
+        "address": "5970 Green Road, Ashtabula, OH 44004",
+        "volunteer_page": "https://www.acapl.org/volunteer.html",
+        "get_involved": "https://www.acapl.org/get-involved.html"
+      },
+      "source": "Web Search / Brave Search"
+    },
+    {
+      "name": "United Way of Ashtabula County",
+      "type": "Community Foundation / Federated Giving Organization",
+      "website": "https://unitedwayashtabula.org/",
+      "fit_rationale": "United Way supports 21 partner charities and 32 outreach programs, impacting over 60,000 local individuals annually. They serve as the central coordinating body for many nonprofits in the county. Rather than being a direct user, they could be a DISTRIBUTION PARTNER—offering the volunteer scheduling platform to their 21 partner agencies as a value-add service. This creates a multiplier effect where one sale reaches multiple organizations. Their HALO program and community resource guide demonstrate their appetite for tech-enabled community coordination.",
+      "contact_info": {
+        "phone": "440-998-4141",
+        "office": "Ashtabula, Ohio",
+        "partner_charities": "https://www.unitedwayashtabula.org/uwac-partner-charities"
+      },
+      "source": "Web Search / Brave Search"
+    }
+  ],
+  "branding_quality_assessment": {
+    "current_state": "The volunteer MVP presents a professional government-adjacent aesthetic with navy/yellow institutional colors, serif typography, and an 'OFFICIAL' badge. However, it lacks specific entity branding—using generic 'Ashtabula County Community Resources' text rather than a specific organization's name, logo, or contact information.",
+    "target_buyer_clarity": "UNCLEAR. The MVP suggests municipal/government use but doesn't specify whether the target is: (1) Ashtabula County government managing county-wide volunteer coordination, (2) a specific nonprofit like those identified in this research, or (3) a white-label SaaS product for any of the above.",
+    "whitelabel_readiness": "HIGH. The generic institutional styling makes it easy to rebrand for any of the identified organizations. The navy/yellow palette can be swapped for organizational colors (ACAPL's branding, Metroparks' green outdoor theme, United Way's red/blue, etc.)."
+  },
+  "site_improvements": [
+    "Replace generic 'Ashtabula County Community Resources' header with specific target organization name and logo",
+    "Add contact information section (phone, email, physical address) for the target organization",
+    "Implement actual form submission logic to connect volunteer applications to a backend database",
+    "Add volunteer opportunity listings/descriptions specific to the target organization",
+    "Remove 'AI GENERATED' badge or move to footer for production use",
+    "Add footer with organizational details, privacy policy, and social media links",
+    "Implement email notification system for volunteer coordinators when new applications are submitted"
+  ],
+  "aesthetics_and_layout_notes": {
+    "strengths": [
+      "Professional institutional color palette (navy/yellow) conveys trust and authority",
+      "Clean, centered layout with good visual hierarchy",
+      "Card-based form design is modern and user-friendly",
+      "Generous whitespace creates breathable, uncluttered interface",
+      "Serif typography for headings adds institutional gravitas"
+    ],
+    "weaknesses": [
+      "Page content is left-aligned rather than centered, creating awkward empty space on right side",
+      "'OFFICIAL' badge feels disconnected from header—needs better visual integration",
+      "Footer is minimal and lacks organizational details",
+      "Form lacks visual indicators for required fields",
+      "No imagery or photos to create emotional connection with volunteering mission"
+    ],
+    "layout_fixes": [
+      "Center main content container with max-width constraint",
+      "Integrate 'OFFICIAL' badge into header row with consistent padding",
+      "Add hero section with mission statement and impact statistics",
+      "Include volunteer testimonial or photo gallery section",
+      "Expand footer with full organizational contact info and navigation links"
+    ]
+  },
+  "whitelabel_potential": {
+    "rating": "high",
+    "applicable_verticals": [
+      "Community Action Agencies (like ACCAA)",
+      "Parks and Recreation Districts (like Metroparks)",
+      "Animal Welfare Organizations (like ACAPL)",
+      "Senior Volunteer Programs (like RSVP)",
+      "Community Foundations (like United Way)",
+      "Food Banks and Pantries",
+      "Youth Mentoring Organizations",
+      "Hospice and Healthcare Volunteers"
+    ],
+    "customization_requirements": [
+      "Logo replacement in header",
+      "Color palette swap (CSS variable-based theming)",
+      "Organization name and contact info update",
+      "Volunteer opportunity descriptions customized to organization's programs",
+      "Email notification routing to organization's coordinators",
+      "Form field customization based on organization's intake requirements"
+    ],
+    "estimated_rebranding_effort": "Low to Medium. The modular card-based design and clean typography make it straightforward to rebrand. Primary work involves: (1) swapping logo and colors, (2) updating organizational details, (3) customizing form fields, (4) configuring backend routing. Estimated 2-4 hours per organization with proper theming system."
+  },
+  "action_next": [
+    "PRIORITY 1: Determine specific target entity—is this MVP intended for Ashtabula County government, a specific nonprofit, or as a white-label SaaS product?",
+    "PRIORITY 2: Reach out to RSVP Ashtabula (Axess Family Services) as highest-fit lead—they coordinate volunteers across 15 counties and have established infrastructure",
+    "PRIORITY 3: Contact United Way of Ashtabula County about partnership/distribution opportunity to reach their 21 partner charities",
+    "PRIORITY 4: Schedule demo with Ashtabula County Metroparks—they have structured, recurring volunteer programs that align well with scheduling functionality",
+    "PRIORITY 5: Approach ACCAA and ACAPL as secondary leads with more targeted pitch based on their specific volunteer needs",
+    "DEV TASK: Implement centered layout container to fix left-alignment issue",
+    "DEV TASK: Add theming system (CSS variables) for easy color/logo customization",
+    "DEV TASK: Create backend integration for form submission and email notifications"
+  ],
+  "sources": [
+    {
+      "name": "RSVP Ashtabula - Axess Family Services",
+      "url": "https://axessfamilyservices.org/services/supportive-services/americorps/rsvp/",
+      "type": "primary"
+    },
+    {
+      "name": "211 Ashtabula County Volunteer Opportunities",
+      "url": "https://www.211ashtabula.org/volunteer-opps",
+      "type": "primary"
+    },
+    {
+      "name": "Ashtabula County Community Action Agency",
+      "url": "https://accaa.org/",
+      "type": "primary"
+    },
+    {
+      "name": "Ashtabula County Metroparks Volunteer Page",
+      "url": "https://www.ashtabulametroparks.com/volunteer",
+      "type": "primary"
+    },
+    {
+      "name": "Ashtabula County Animal Protective League",
+      "url": "https://www.acapl.org/volunteer.html",
+      "type": "primary"
+    },
+    {
+      "name": "United Way of Ashtabula County",
+      "url": "https://unitedwayashtabula.org/",
+      "type": "primary"
+    },
+    {
+      "name": "AshtaBeautiful Volunteering Directory",
+      "url": "https://www.ashtabeautiful.org/volunteering",
+      "type": "reference"
+    },
+    {
+      "name": "Catholic Charities Ashtabula County",
+      "url": "https://www.ccdoy.org/locations/catholic-charities-of-ashtabula-county/",
+      "type": "reference"
+    }
+  ],
+  "research_metadata": {
+    "tools_used": ["web_search (Brave)", "SearXNG (local)", "web_fetch"],
+    "search_queries": [
+      "volunteer organizations Ashtabula County Ohio",
+      "RSVP Ashtabula volunteer program",
+      "Ashtabula County Community Action Agency volunteer",
+      "United Way Ashtabula County volunteer coordination"
+    ],
+    "completion_status": "complete",
+    "leads_identified": 5,
+    "research_date": "2026-03-22"
+  }
+}

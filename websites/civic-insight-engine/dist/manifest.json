@@ -1,0 +1,16 @@
+{
+  "name": "Ashtabula County Transparency Portal",
+  "short_name": "County Portal",
+  "description": "Searchable county records, board summaries, budget visibility, and resident issue reporting for Ashtabula County.",
+  "start_url": "/civic-insight/",
+  "display": "standalone",
+  "background_color": "#f8f6f0",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    {
+      "src": "county-favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

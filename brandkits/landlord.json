@@ -1,0 +1,111 @@
+{
+  "mvp": "landlord",
+  "generated_at": "2026-03-22T18:50:00Z",
+  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/landlord.json",
+  "research_sources": [
+    "https://www.ashtabulamha.com/",
+    "https://www.cityofashtabula.com/housing"
+  ],
+  "target_buyer_1": {
+    "organization": "Ashtabula Metropolitan Housing Authority (AMHA)",
+    "type": "Public Housing Authority",
+    "website": "https://www.ashtabulamha.com/",
+    "why_top_candidate": "Manages public housing and Section 8 Housing Choice Voucher (HCV) Program for Ashtabula County. Mission is to provide clean and safe affordable housing with strong resident and community stakeholder relationships. Already partners with AffordableHousing.com for listings. Offers USDA Housing and Capital Fund programs. Needs landlord onboarding tools, tenant screening integration, and compliance tracking for voucher program participation.",
+    "fit_score": 95
+  },
+  "target_buyer_2": {
+    "organization": "City of Ashtabula Housing Department",
+    "type": "Municipal Housing Office",
+    "website": "https://www.cityofashtabula.com/housing",
+    "contact": "PCD@cityofashtabula.com",
+    "why_top_candidate": "Responsible for all residential housing within city limits. Housing Inspector conducts yearly inspections of rental units, exterior inspections of owner-occupied homes, and code enforcement. Requires landlord registration, yearly Occupancy Permit fees, and inspections to International Property Maintenance Code (IPMC) standards. Currently manual process via email - perfect for digital landlord portal with registration and inspection scheduling.",
+    "fit_score": 92
+  },
+  "actual_brand_research": {
+    "ashtabula_mha": {
+      "mission": "Provide Ashtabula county residents clean and safe affordable housing",
+      "values": ["Honesty", "Dignity", "Respect", "Exceptional communication", "Care", "Responsiveness"],
+      "programs": [
+        "HCV Program (Housing Choice Vouchers / Section 8)",
+        "Public Housing",
+        "USDA Housing",
+        "Capital Fund"
+      ],
+      "stakeholder_focus": "Strong relationships with residents and community stakeholders",
+      "resident_opportunity": "Actively participate in building the future of AMHA",
+      "partner": "AffordableHousing.com",
+      "visual_style": "Community-focused, affordable housing mission, professional public authority"
+    },
+    "city_of_ashtabula_housing": {
+      "responsibilities": [
+        "All residential housing within city limits",
+        "Yearly rental unit inspections",
+        "Exterior inspections of owner-occupied homes",
+        "Code enforcement of City Ordinances"
+      ],
+      "standards": [
+        "City of Ashtabula Codified Ordinance Chapter 13",
+        "International Property Maintenance Code (IPMC)"
+      ],
+      "landlord_requirements": [
+        "Property registration with City",
+        "Yearly Occupancy Permit fee",
+        "Property inspections for code compliance"
+      ],
+      "agent_requirement": "Local agent required if owner resides more than 25 miles from property",
+      "vacant_property": "Registration required, criminal charges for non-compliance (Section 1369)",
+      "contact": "PCD@cityofashtabula.com",
+      "process": "Email-based registration with mailed documentation",
+      "visual_style": "Municipal government, code enforcement, property maintenance standards"
+    }
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Manage Properties. Stay Compliant. Keep Tenants.",
+    "positioning": "The comprehensive property management platform for Ashtabula County landlords — streamlining AMHA voucher program participation, City of Ashtabula registration and inspections, and day-to-day property operations.",
+    "color_palette_derived_from_research": {
+      "primary": "#2C5282",
+      "accent": "#38A169",
+      "background": "#F7FAFC",
+      "text": "#1A202C",
+      "secondary": "#718096"
+    },
+    "typography_recommendation": {
+      "heading_font": "Professional government-style sans-serif",
+      "body_font": "Clean readable sans-serif"
+    },
+    "mood_keywords_from_research": ["affordable", "compliant", "professional", "community", "inspection", "registration", "safe"],
+    "visual_direction": {
+      "hero_image_concept": "Well-maintained Ashtabula rental properties with families",
+      "color_scheme": "Professional blues with compliance green accents",
+      "photography_style": "Safe housing, community residents, property inspections, Ashtabula neighborhoods"
+    }
+  },
+  "implementation_recommendations": {
+    "priority": 1,
+    "brand_alignment": "Align with AMHA's affordable housing mission and City of Ashtabula's code enforcement standards",
+    "key_features_needed": [
+      "Landlord registration portal (City of Ashtabula)",
+      "Occupancy permit renewal tracking",
+      "Inspection scheduling (yearly rental inspections)",
+      "IPMC compliance checklist",
+      "Section 8/HCV program integration (AMHA)",
+      "Tenant screening with background checks",
+      "Online rent collection",
+      "Maintenance request ticketing",
+      "Document storage (leases, inspection reports)",
+      "Ohio ORC Chapter 5321 compliant lease templates",
+      "Local agent assignment (25-mile rule)",
+      "Vacant property registration"
+    ],
+    "differentiators_based_on_research": [
+      "AMHA: Section 8 Housing Choice Voucher program integration",
+      "AMHA: USDA Housing and Capital Fund programs",
+      "AMHA: AffordableHousing.com partnership",
+      "City Housing: Yearly rental inspection requirements",
+      "City Housing: International Property Maintenance Code (IPMC) compliance",
+      "City Housing: 25-mile local agent rule",
+      "City Housing: Vacant property registration with criminal charges for non-compliance",
+      "Combined: Cover both public housing authority and municipal housing department"
+    ]
+  }
+}
