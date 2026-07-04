@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 const assetBase = import.meta.env.BASE_URL;
 
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 const API_CONFIG = {
   TIMEOUT_MS: 30000,
   MAX_RETRIES: 3,
@@ -154,25 +154,34 @@ const isRetryable = (errorOrResponse) => {
   );
 };
 
-const callGeminiAPI = async (prompt, model = "gemini-1.5-flash", retryCount = 0) => {
+const callOpenRouterAPI = async (prompt, model = "google/gemini-2.5-flash-lite", retryCount = 0) => {
+  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
+
   if (!apiKey) {
     throw new Error("API key not configured.");
   }
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
   const options = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+      "HTTP-Referer": window.location.origin,
+      "X-Title": "NAI - Zoning Clerk",
+    },
+    body: JSON.stringify({
+      model: model,
+      messages: [{ role: "user", content: prompt }],
+    }),
   };
 
   try {
-    const response = await fetchWithTimeout(url, options, API_CONFIG.TIMEOUT_MS);
+    const response = await fetchWithTimeout(OPENROUTER_URL, options, API_CONFIG.TIMEOUT_MS);
 
     if (response.status === API_CONFIG.RATE_LIMIT_STATUS) {
       if (retryCount < API_CONFIG.MAX_RETRIES) {
         await delay(getBackoffDelay(retryCount));
-        return callGeminiAPI(prompt, model, retryCount + 1);
+        return callOpenRouterAPI(prompt, model, retryCount + 1);
       }
       throw new Error("Rate limit exceeded. Please wait a moment and try again.");
     }
@@ -186,14 +195,14 @@ const callGeminiAPI = async (prompt, model = "gemini-1.5-flash", retryCount = 0)
         retryCount < API_CONFIG.MAX_RETRIES
       ) {
         await delay(getBackoffDelay(retryCount));
-        return callGeminiAPI(prompt, model, retryCount + 1);
+        return callOpenRouterAPI(prompt, model, retryCount + 1);
       }
 
       throw new Error(errorMessage);
     }
 
     const data = await response.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    const text = data?.choices?.[0]?.message?.content;
 
     if (!text) {
       throw new Error("No response content received from API.");
@@ -203,7 +212,7 @@ const callGeminiAPI = async (prompt, model = "gemini-1.5-flash", retryCount = 0)
   } catch (error) {
     if (isRetryable(error) && retryCount < API_CONFIG.MAX_RETRIES) {
       await delay(getBackoffDelay(retryCount));
-      return callGeminiAPI(prompt, model, retryCount + 1);
+      return callOpenRouterAPI(prompt, model, retryCount + 1);
     }
 
     throw error;
@@ -270,16 +279,14 @@ Include:
 4. A final next step with phone guidance
 Do not invent parcel-specific zoning districts or legal determinations.`;
 
-      const text = await callGeminiAPI(prompt);
+      const text = await callOpenRouterAPI(prompt);
       setGuidance(text);
       setGuidanceSource("AI-assisted county briefing");
     } catch (requestError) {
       setGuidance(fallback);
       setGuidanceSource("Local demo guidance");
       setError(
-        apiKey
-          ? "Live AI was unavailable, so the tool switched to a local county demo summary."
-          : "No API key was configured, so the tool is showing a local county demo summary."
+        "AI briefing was unavailable, so the tool switched to a local county demo summary."
       );
     } finally {
       setLoading(false);

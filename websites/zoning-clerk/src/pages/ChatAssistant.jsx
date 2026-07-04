@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, User, Bot, Loader2, AlertCircle, Building2 } from 'lucide-react';
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import { QuickQuestions } from '../components/QuickQuestions';
 import { CitationsList } from '../components/CitationCard';
 import { 
@@ -72,14 +71,13 @@ export function ChatAssistant() {
     setIsLoading(true);
 
     try {
-      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
       let contextChunks = [];
       let systemPrompt;
 
       // Attempt RAG retrieval if connected
       if (ragStatus === 'connected') {
         try {
-          const queryEmbedding = await generateQueryEmbedding(messageText, apiKey);
+          const queryEmbedding = await generateQueryEmbedding(messageText);
           contextChunks = await searchContext(queryEmbedding, 5, 0.7);
         } catch (ragError) {
           console.warn('RAG retrieval failed, using fallback:', ragError);
@@ -101,26 +99,33 @@ Instructions:
 4. Include the disclaimer about seeking official guidance`;
       }
 
-      const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-
-      const chat = model.startChat({
-        history: messages.slice(1).map(m => ({
-          role: m.role === 'assistant' ? 'model' : 'user',
-          parts: [{ text: m.content }],
-        })),
-        generationConfig: {
-          maxOutputTokens: 1500,
-          temperature: 0.3,
+      const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_OPENROUTER_API_KEY}`,
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({
+          model: 'google/gemini-2.5-flash-lite',
+          messages: [
+            { role: 'system', content: systemPrompt },
+            ...messages.slice(1).map(m => ({
+              role: m.role,
+              content: m.content,
+            })),
+            { role: 'user', content: messageText },
+          ],
+          max_tokens: 1500,
+          temperature: 0.3,
+        }),
       });
 
-      const result = await chat.sendMessage([
-        { text: systemPrompt },
-        { text: messageText }
-      ]);
-      const response = await result.response;
-      const rawText = response.text();
+      if (!response.ok) {
+        throw new Error(`OpenRouter request failed: ${response.status}`);
+      }
+
+      const data = await response.json();
+      const rawText = data.choices?.[0]?.message?.content ?? '';
 
       // Extract citations from response
       const { text: cleanText, citations } = extractCitations(rawText, contextChunks);
@@ -131,7 +136,7 @@ Instructions:
         citations: citations.length > 0 ? citations : undefined
       }]);
     } catch (error) {
-      console.error("Gemini API Error:", error);
+      console.error("OpenRouter API Error:", error);
       setMessages(prev => [...prev, { 
         role: 'assistant', 
         content: "I'm sorry, I'm having trouble connecting to my knowledge base. Please try again or contact the Planning Department at (440) 992-7125.",

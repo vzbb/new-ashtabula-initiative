@@ -8,23 +8,25 @@
 
 const QDRANT_URL = 'http://192.168.1.223:6333';
 const COLLECTION_NAME = 'zoning_ashtabula';
-const EMBEDDING_DIMENSIONS = 768; // Gemini text-embedding-004
+const EMBEDDING_DIMENSIONS = 1536; // OpenAI text-embedding-3-small
 
 /**
- * Generate embedding for a query using Gemini API
- * Note: This should be done server-side in production
+ * Generate embedding for a query using OpenRouter API
  */
-export async function generateQueryEmbedding(query, apiKey) {
+export async function generateQueryEmbedding(query) {
   try {
+    const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/text-embedding-004:embedContent?key=${apiKey}`,
+      'https://openrouter.ai/api/v1/embeddings',
       {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`,
+        },
         body: JSON.stringify({
-          content: {
-            parts: [{ text: query }]
-          }
+          model: 'openai/text-embedding-3-small',
+          input: query
         })
       }
     );
@@ -34,7 +36,7 @@ export async function generateQueryEmbedding(query, apiKey) {
     }
     
     const data = await response.json();
-    return data.embedding.values;
+    return data.data[0].embedding;
   } catch (error) {
     console.error('Failed to generate embedding:', error);
     throw error;
