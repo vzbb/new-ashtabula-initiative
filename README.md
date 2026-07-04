@@ -192,6 +192,7 @@ Each MVP has a `{mvp_slug}_emails.json` file in `email_prospects/` with this req
 |----------|---------|
 | [README.md](README.md) | 📖 Project overview (this file) |
 | [SESSION_HANDBOOK.md](SESSION_HANDBOOK.md) | 🧠 Current project memory + target mapping |
+| [OPERATOR_RUNBOOK.md](OPERATOR_RUNBOOK.md) | 🧭 Safe local, verification, and production operating procedures |
 | [ARTIFACT_PIPELINE.md](ARTIFACT_PIPELINE.md) | 🧩 Canonical artifact chain + generation order |
 | [SWARM_KICKOFF.md](SWARM_KICKOFF.md) | 🐝 Codex worker swarm operating brief |
 | [MEMORY_PROTOCOL.md](MEMORY_PROTOCOL.md) | 🧠 Mem0 memory rules, stable IDs, and restart behavior |
@@ -260,11 +261,11 @@ cd /home/tt/.openclaw/workspace/projects/new-ashtabula-initiative
 # Start with the scan
 ./nai scan
 
-# Then use the workflow command
-./nai deploy
+# Then use the workflow command when you intend to publish production
+./nai deploy --confirm-production
 
-# Or manual deployment
-vercel --prod
+# Manual Vercel commands bypass the NAI production guard; avoid them unless you
+# are deliberately debugging the platform layer.
 ```
 
 ### Use The Friendly Wrapper
@@ -373,7 +374,7 @@ If you just want to change one MVP and ship it live, use this loop:
 2. Edit only that app under [`websites/<site-name>/`](websites/).
 3. Build that site locally with `npm run build`.
 4. Check it in the browser with `./nai screenshots --live` or `./nai browse`.
-5. Deploy with `./nai deploy` when it looks right.
+5. Deploy with `./nai deploy --confirm-production` when it looks right and you intend to publish production.
 
 If the change affects shared behavior, move it into [`shared/`](shared/) or [`siteflow.py`](siteflow.py) instead of duplicating it inside one app.
 If the site is already clearly branded, keep the slug and tighten the presentation. If it still needs target research, do that before trying to “finish” the branding.
@@ -391,14 +392,14 @@ When an AI agent is assigned to one MVP, follow this order:
 7. Do not use external task trackers as canonical portfolio metadata.
 8. Use [`./nai scan`](nai) to confirm the site path, build root, and shim status.
 9. Use [`./nai routes`](nai) if the route map changed.
-10. Use [`./nai deploy`](nai) when you are ready to publish production.
+10. Use [`./nai deploy --confirm-production`](nai) when you are ready to publish production.
 
 Rules of thumb:
 
 - Prefer source fixes over one-off deploy hacks.
 - Rebuild only the site you changed unless you touched shared code.
 - If a page looks blank, check the built `dist/index.html`, the active `vercel.json`, and the deploy target.
-- Treat [`SITEMAP.md`](SITEMAP.md) as the source of truth for live routes.
+- Treat [`SITEMAP.json`](SITEMAP.json) as the source of truth for live routes, and [`SITEMAP.md`](SITEMAP.md) as the rendered human reference.
 
 ---
 

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="License Wizard">
+  <rect width="64" height="64" rx="12" fill="#17324d"/>
+  <rect x="14" y="12" width="36" height="40" rx="4" fill="#f7fbff"/>
+  <path d="M22 28h20M22 36h16" stroke="#17324d" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="44" cy="45" r="8" fill="#2f80ed"/>
+</svg>

@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/truck-wash/
+title: Quick Clean Car and Truck Wash | Ashtabula Truck Wash
+body_chars: 2994
+screenshot: sitemap_screenshots/031_truck-wash.png
+source: live
+warnings: none

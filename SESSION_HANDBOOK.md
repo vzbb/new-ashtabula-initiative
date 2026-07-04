@@ -4,8 +4,8 @@ This file captures the current working truth for the New Ashtabula Initiative re
 
 ## Current Truth
 
-- `SITEMAP.json` currently defines 74 public routes.
-- 74 of those routes are currently backed by source folders and build output.
+- `SITEMAP.json` currently defines 75 public routes.
+- 75 of those routes are currently backed by source folders and build output.
 - the canonical route map has been scrubbed of retired ghost entries that no longer have source folders.
 - `SITEMAP.json` is the canonical route source of truth.
 - `SITEMAP.md` is the rendered human-readable route reference.
@@ -82,7 +82,7 @@ Known canonical drift:
 3. Make the smallest source change in `websites/<site-name>/`.
 4. Build the site and verify it in the browser.
 5. If the route map changed, run `./nai routes`.
-6. If the change is ready to publish, run `./nai deploy`.
+6. If the change is ready to publish, run `./nai deploy --confirm-production`.
 7. If the change is visual or branding-related, re-run `./nai screenshots` or `./nai analyze-screenshots` as needed.
 
 ## Canonical Mapping Rule

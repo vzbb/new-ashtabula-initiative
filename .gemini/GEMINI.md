@@ -7,7 +7,7 @@ This file is a **project-specific supplement** for Gemini agents working in the 
 - One landing page.
 - Many independent MVPs under `websites/`.
 - Shared helpers for route generation, screenshot analysis, and deployment.
-- A single route source of truth in `SITEMAP.md`.
+- A single route source of truth in `SITEMAP.json`, with `SITEMAP.md` rendered for humans and agents.
 - A single workflow entrypoint in `nai`.
 
 ## Canonical Sources
@@ -19,12 +19,13 @@ Read these first:
 3. `MONOREPO_PROTOCOL.md`
 4. `WORKFLOW.md`
 5. `SESSION_HANDBOOK.md`
-6. `SITEMAP.md`
-7. `visual_report_summary.py`
-8. `sitemap_screenshots/visual_analysis_report.json`
-9. `lead_research_json/`
-10. `brandkits/`
-11. `ARTIFACT_PIPELINE.md`
+6. `SITEMAP.json`
+7. rendered `SITEMAP.md`
+8. `visual_report_summary.py`
+9. `sitemap_screenshots/visual_analysis_report.json`
+10. `lead_research_json/`
+11. `brandkits/`
+12. `ARTIFACT_PIPELINE.md`
 
 The `lead_research_json/` directory contains JSON research files for lead/brand decisions on MVPs that still need target work. It is being populated over time, but it already contains enough research to move several MVPs forward now. When you need brand or buyer context, check that directory before inventing a target from scratch.
 
@@ -101,7 +102,7 @@ Use `visual_report_summary.py` to find the current deep-help queue before editin
 5. Verify it in the browser.
 6. If the change is branding-related, confirm the title, hero, metadata, and visible UI all agree.
 7. If the change affects routing, regenerate the route table with `./nai routes`.
-8. If the change is ready to ship, use `./nai deploy`.
+8. If the change is ready to ship, use `./nai deploy --confirm-production`.
 
 ## Visual Verification
 

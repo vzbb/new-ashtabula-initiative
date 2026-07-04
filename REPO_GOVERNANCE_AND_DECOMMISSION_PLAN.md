@@ -18,7 +18,8 @@ The goal now is:
 - `README.md` = project overview and human-facing entrypoint
 - `AGENTS.md` = project-specific rules for all agents working in this repo
 - `MONOREPO_PROTOCOL.md` = short, fast-scan workflow rules
-- `SITEMAP.md` = live route source of truth
+- `SITEMAP.json` = live route source of truth
+- `SITEMAP.md` = rendered human-readable route reference
 - `vercel.json` = generated route target map
 - `nai` = primary workflow entrypoint
 - `siteflow.py` = shared build / route / verification helpers

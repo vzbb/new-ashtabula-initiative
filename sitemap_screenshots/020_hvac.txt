@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/hvac/
+title: Schedule Service with HAVE Heating and Cooling
+body_chars: 2673
+screenshot: sitemap_screenshots/020_hvac.png
+source: live
+warnings: none

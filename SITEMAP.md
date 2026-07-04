@@ -7,7 +7,7 @@
 > Use the structured sitemap workflow instead.
 
 - Base URL: `https://new-ashtabula-initiative.vercel.app/`
-- Public routes: `75`
+- Public routes: `76`
 - Target-ledger entries: `13`
 
 ## Structured Workflow
@@ -72,6 +72,7 @@
 | 32 | Service Scheduler | [/scheduler/](https://new-ashtabula-initiative.vercel.app/scheduler/) | Blank Heating Company Inc | Appointment booking |
 | 33 | Service Scheduler SMS | [/scheduler-sms/](https://new-ashtabula-initiative.vercel.app/scheduler-sms/) | Blank Heating Company Inc | SMS-based scheduling |
 | 34 | Insta Book | [/insta-book/](https://new-ashtabula-initiative.vercel.app/insta-book/) | The Lakehouse Inn | Instant booking system |
+| 35 | Compassionate Planner | [/compassionate/](https://new-ashtabula-initiative.vercel.app/compassionate/) | Ducro Funeral Services | Compassionate end-of-life planning assistant |
 | 36 | Virtual Concierge | [/concierge/](https://new-ashtabula-initiative.vercel.app/concierge/) | The Lodge at Geneva-on-the-Lake | Visitor assistance |
 | 37 | Visitor Parking Finder | [/parking/](https://new-ashtabula-initiative.vercel.app/parking/) | City of Ashtabula | Downtown parking guide |
 | 38 | MyTrip Planner | [/mytrip/](https://new-ashtabula-initiative.vercel.app/mytrip/) | Visit Ashtabula County (Official Tourism Site) | Trip itinerary builder |
@@ -96,53 +97,53 @@
 |---|------|-------|--------------|-------------|
 | 48 | Boat Storage Waitlist | [/boat-storage/](https://new-ashtabula-initiative.vercel.app/boat-storage/) | Geneva Marina | Storage management |
 | 49 | Harvest Alert | [/harvest/](https://new-ashtabula-initiative.vercel.app/harvest/) | Ashtabula Farmers Market | Agricultural alerts |
-| 51 | AI Docent Pro | [/ai-docent-pro/](https://new-ashtabula-initiative.vercel.app/ai-docent-pro/) | Ashtabula County Historical Society (ACHS) | Advanced museum AI |
-| 52 | Artist Commission Form | [/artist-commission/](https://new-ashtabula-initiative.vercel.app/artist-commission/) | Ashtabula Arts Center | Commission system |
-| 53 | Pocket Historian | [/historian/](https://new-ashtabula-initiative.vercel.app/historian/) | Ashtabula County Historical Society | Local history guide |
-| 54 | Pocket Historian Pro | [/historian-pro/](https://new-ashtabula-initiative.vercel.app/historian-pro/) | Ashtabula County Historical Society | History archives |
+| 50 | AI Docent Pro | [/ai-docent-pro/](https://new-ashtabula-initiative.vercel.app/ai-docent-pro/) | Ashtabula County Historical Society (ACHS) | Advanced museum AI |
+| 51 | Artist Commission Form | [/artist-commission/](https://new-ashtabula-initiative.vercel.app/artist-commission/) | Ashtabula Arts Center | Commission system |
+| 52 | Pocket Historian | [/historian/](https://new-ashtabula-initiative.vercel.app/historian/) | Ashtabula County Historical Society | Local history guide |
+| 53 | Pocket Historian Pro | [/historian-pro/](https://new-ashtabula-initiative.vercel.app/historian-pro/) | Ashtabula County Historical Society | History archives |
 
 ### 🎨 Arts & Culture (7 sites)
 
 | # | Site | Route | Buyer/Target | Description |
 |---|------|-------|--------------|-------------|
-| 55 | Pocket Sommelier | [/sommelier/](https://new-ashtabula-initiative.vercel.app/sommelier/) | Ferrante Winery & Ristorante | Wine pairing guide |
-| 56 | Pocket Sommelier Pro | [/sommelier-pro/](https://new-ashtabula-initiative.vercel.app/sommelier-pro/) | Ferrante Winery & Ristorante | Advanced wine AI |
-| 57 | GOTL Weekend Planner | [/gotl/](https://new-ashtabula-initiative.vercel.app/gotl/) | Geneva-on-the-Lake Convention and Visitors Bureau | Geneva-on-the-Lake planner |
-| 58 | Harbor Cam Dashboard | [/harbor/](https://new-ashtabula-initiative.vercel.app/harbor/) | Ashtabula Yacht Club | Live harbor conditions |
-| 59 | Pet Matchmaker | [/pet-match/](https://new-ashtabula-initiative.vercel.app/pet-match/) | Ashtabula County Animal Protective League (ACAPL) | Pet adoption matching |
-| 60 | Visual Portfolio | [/portfolio/](https://new-ashtabula-initiative.vercel.app/portfolio/) | PIPE! Creative | Portfolio showcase |
-| 61 | Volunteer Scheduler | [/volunteer/](https://new-ashtabula-initiative.vercel.app/volunteer/) | RSVP (Retired Senior Volunteer Program) - Axess Family Services | Volunteer coordination |
+| 54 | Pocket Sommelier | [/sommelier/](https://new-ashtabula-initiative.vercel.app/sommelier/) | Ferrante Winery & Ristorante | Wine pairing guide |
+| 55 | Pocket Sommelier Pro | [/sommelier-pro/](https://new-ashtabula-initiative.vercel.app/sommelier-pro/) | Ferrante Winery & Ristorante | Advanced wine AI |
+| 56 | GOTL Weekend Planner | [/gotl/](https://new-ashtabula-initiative.vercel.app/gotl/) | Geneva-on-the-Lake Convention and Visitors Bureau | Geneva-on-the-Lake planner |
+| 57 | Harbor Cam Dashboard | [/harbor/](https://new-ashtabula-initiative.vercel.app/harbor/) | Ashtabula Yacht Club | Live harbor conditions |
+| 58 | Pet Matchmaker | [/pet-match/](https://new-ashtabula-initiative.vercel.app/pet-match/) | Ashtabula County Animal Protective League (ACAPL) | Pet adoption matching |
+| 59 | Visual Portfolio | [/portfolio/](https://new-ashtabula-initiative.vercel.app/portfolio/) | PIPE! Creative | Portfolio showcase |
+| 60 | Volunteer Scheduler | [/volunteer/](https://new-ashtabula-initiative.vercel.app/volunteer/) | RSVP (Retired Senior Volunteer Program) - Axess Family Services | Volunteer coordination |
 
 ### 🎉 Events & Community (6 sites)
 
 | # | Site | Route | Buyer/Target | Description |
 |---|------|-------|--------------|-------------|
-| 62 | Wedding Lead Form | [/wedding/](https://new-ashtabula-initiative.vercel.app/wedding/) | Elks Lodge #208 | Wedding vendor connector |
-| 63 | Ashtabula Fence | [/ashtabula-fence/](https://new-ashtabula-initiative.vercel.app/ashtabula-fence/) | Thomas Fence Co. | Fence company site |
-| 64 | Thomas Fence | [/thomas-fence/](https://new-ashtabula-initiative.vercel.app/thomas-fence/) | Thomas Fence Co. | Thomas Fence site |
-| 65 | Cut Custom | [/cut-custom/](https://new-ashtabula-initiative.vercel.app/cut-custom/) | Trumbull Locker Plant | Custom cutting service |
-| 66 | Rennick Market | [/rennick-market/](https://new-ashtabula-initiative.vercel.app/rennick-market/) | Rennick Meat Market | Rennick Market site |
-| 67 | Trumbull Locker | [/trumbull-locker/](https://new-ashtabula-initiative.vercel.app/trumbull-locker/) | Trumbull Locker Plant | Trumbull Locker site |
+| 61 | Wedding Lead Form | [/wedding/](https://new-ashtabula-initiative.vercel.app/wedding/) | Elks Lodge #208 | Wedding vendor connector |
+| 62 | Ashtabula Fence | [/ashtabula-fence/](https://new-ashtabula-initiative.vercel.app/ashtabula-fence/) | Thomas Fence Co. | Fence company site |
+| 63 | Thomas Fence | [/thomas-fence/](https://new-ashtabula-initiative.vercel.app/thomas-fence/) | Thomas Fence Co. | Thomas Fence site |
+| 64 | Cut Custom | [/cut-custom/](https://new-ashtabula-initiative.vercel.app/cut-custom/) | Trumbull Locker Plant | Custom cutting service |
+| 65 | Rennick Market | [/rennick-market/](https://new-ashtabula-initiative.vercel.app/rennick-market/) | Rennick Meat Market | Rennick Market site |
+| 66 | Trumbull Locker | [/trumbull-locker/](https://new-ashtabula-initiative.vercel.app/trumbull-locker/) | Trumbull Locker Plant | Trumbull Locker site |
 
 ### 🏪 Additional Business Sites (14 sites)
 
 | # | Site | Route | Buyer/Target | Description |
 |---|------|-------|--------------|-------------|
-| 68 | Terra Vantage | [/terra-vantage/](https://new-ashtabula-initiative.vercel.app/terra-vantage/) | Severino Construction | Terra Vantage site |
-| 69 | ParcelVisor | [/parcelvisor/](https://new-ashtabula-initiative.vercel.app/parcelvisor/) | Ashtabula County Land Reutilization Corporation (AC Land Bank) | Parcel management |
-| 70 | RoofQuote | [/roofquote/](https://new-ashtabula-initiative.vercel.app/roofquote/) | A & R Roofing | Roofing quotes |
-| 71 | Site Ops Pro | [/site-ops-pro/](https://new-ashtabula-initiative.vercel.app/site-ops-pro/) | Brobst Earthworks, LTD | Site operations |
-| 72 | SBDC Business Counseling | [/sbdc-business-counseling/](https://new-ashtabula-initiative.vercel.app/sbdc-business-counseling/) | Ohio SBDC at Lakeland Community College | SBDC counseling |
-| 73 | SBDC Business Planning | [/sbdc-business-planning/](https://new-ashtabula-initiative.vercel.app/sbdc-business-planning/) | Ohio Small Business Development Centers (State Network) | Business planning |
-| 74 | SBDC Educational Resources | [/sbdc-educational-resources/](https://new-ashtabula-initiative.vercel.app/sbdc-educational-resources/) | Ohio Small Business Development Centers (Statewide Network) | Educational content |
-| 75 | SBDC Learning Modules | [/sbdc-learning-modules/](https://new-ashtabula-initiative.vercel.app/sbdc-learning-modules/) | Ohio Small Business Development Centers (Statewide Network) | Learning platform |
-| 76 | SBDC Support Tools | [/sbdc-support-tools/](https://new-ashtabula-initiative.vercel.app/sbdc-support-tools/) | Ohio Small Business Development Centers (State Network) | Support resources |
+| 67 | Terra Vantage | [/terra-vantage/](https://new-ashtabula-initiative.vercel.app/terra-vantage/) | Severino Construction | Terra Vantage site |
+| 68 | ParcelVisor | [/parcelvisor/](https://new-ashtabula-initiative.vercel.app/parcelvisor/) | Ashtabula County Land Reutilization Corporation (AC Land Bank) | Parcel management |
+| 69 | RoofQuote | [/roofquote/](https://new-ashtabula-initiative.vercel.app/roofquote/) | A & R Roofing | Roofing quotes |
+| 70 | Site Ops Pro | [/site-ops-pro/](https://new-ashtabula-initiative.vercel.app/site-ops-pro/) | Brobst Earthworks, LTD | Site operations |
+| 71 | SBDC Business Counseling | [/sbdc-business-counseling/](https://new-ashtabula-initiative.vercel.app/sbdc-business-counseling/) | Ohio SBDC at Lakeland Community College | SBDC counseling |
+| 72 | SBDC Business Planning | [/sbdc-business-planning/](https://new-ashtabula-initiative.vercel.app/sbdc-business-planning/) | Ohio Small Business Development Centers (State Network) | Business planning |
+| 73 | SBDC Educational Resources | [/sbdc-educational-resources/](https://new-ashtabula-initiative.vercel.app/sbdc-educational-resources/) | Ohio Small Business Development Centers (Statewide Network) | Educational content |
+| 74 | SBDC Learning Modules | [/sbdc-learning-modules/](https://new-ashtabula-initiative.vercel.app/sbdc-learning-modules/) | Ohio Small Business Development Centers (Statewide Network) | Learning platform |
+| 75 | SBDC Support Tools | [/sbdc-support-tools/](https://new-ashtabula-initiative.vercel.app/sbdc-support-tools/) | Ohio Small Business Development Centers (State Network) | Support resources |
 
 ### 🏛️ Government & Civic
 
 | # | Site | Route | Buyer/Target | Description |
 |---|------|-------|--------------|-------------|
-| 77 | Saybrook Zoning Clerk | [/saybrook-zoning/](https://new-ashtabula-initiative.vercel.app/saybrook-zoning/) | Saybrook Township Zoning Office | Zoning code assistant and permit guidance |
+| 76 | Saybrook Zoning Clerk | [/saybrook-zoning/](https://new-ashtabula-initiative.vercel.app/saybrook-zoning/) | Saybrook Township Zoning Office | Zoning code assistant and permit guidance |
 
 ## Canonical Target Ledger
 
@@ -151,7 +152,7 @@ Secondary targets are clone / white-label candidates, not automatic promotions.
 
 | Site | Route | Primary target | Clone / secondary candidates | Notes |
 |------|-------|----------------|------------------------------|-------|
-| Compassionate Planner | `/compassionate-planner/` | Ducro Funeral Services | Ducro Funeral Services contacts | Keep Legacy Link as the tool name; this is a settled mapping |
+| Compassionate Planner | `/compassionate/` | Ducro Funeral Services | Ducro Funeral Services contacts | Keep Legacy Link as the tool name; this is a settled mapping |
 | Terra Vantage | `/terra-vantage/` | Severino Construction | JCI Contractors; Koski Construction Co. | Proprietary tool name stays Terra Vantage; keep later white-label / clone potential open |
 | Site Ops Pro | `/site-ops-pro/` | Brobst Earthworks, LTD | Wilkinson Paving & Excavating; J. Severino Construction Inc.; Koski Construction Co. | Keep Brobst as the primary target; Wilkinson is a strong later white-label / clone candidate |
 | Ashtabula Fence | `/ashtabula-fence/` | Ashtabula Fence Co. LLC | Thomas Fence Co. Inc.; Miller's Integrity Construction LLC | Concrete brand; keep polishing |

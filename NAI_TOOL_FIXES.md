@@ -59,7 +59,7 @@ $ ./nai fix-bases
 
 Next steps:
   1. Run './nai build' to rebuild all sites
-  2. Run './nai deploy' to deploy to production
+  2. Run './nai deploy --confirm-production' to deploy to production
 ```
 
 ## Sites Fixed
@@ -96,5 +96,5 @@ The `./nai scan` command now exits with code 1 if mismatches are detected, makin
    ./nai scan          # Check for mismatches
    ./nai fix-bases     # Fix any issues
    ./nai build         # Rebuild all sites
-   ./nai deploy        # Deploy to production
+   ./nai deploy --confirm-production        # Deploy to production
    ```

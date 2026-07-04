@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/wedding/
+title: Elks Lodge #208 Wedding Leads | Lakeside Venue Intake
+body_chars: 2566
+screenshot: sitemap_screenshots/060_wedding.png
+source: live
+warnings: none

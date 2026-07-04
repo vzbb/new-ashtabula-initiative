@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/invest/
+title: Ashtabula County Economic Development — Investment Portal
+body_chars: 1526
+screenshot: sitemap_screenshots/010_invest.png
+source: live
+warnings: none

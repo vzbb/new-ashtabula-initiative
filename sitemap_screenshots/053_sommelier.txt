@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/sommelier/
+title: pocket-sommelier
+body_chars: 417
+screenshot: sitemap_screenshots/053_sommelier.png
+source: live
+warnings: none

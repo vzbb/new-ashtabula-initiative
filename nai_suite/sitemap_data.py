@@ -115,11 +115,14 @@ def validate_sitemap_data(data: dict[str, object]) -> list[str]:
             errors.append(f"route #{index} is not an object")
             continue
 
+        route_index = route.get("index")
         slug = str(route.get("slug", "")).strip()
         site = str(route.get("site", "")).strip()
         url = str(route.get("url", "")).strip()
         target = str(route.get("target", "")).strip()
 
+        if route_index != index:
+            errors.append(f"route position #{index} has canonical index `{route_index}`")
         if not slug:
             errors.append(f"route #{index} missing slug")
         if not site:

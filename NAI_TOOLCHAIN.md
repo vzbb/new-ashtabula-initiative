@@ -22,7 +22,7 @@
 | `nai_suite/screenshots_sitemap.py` | python-script | Captures local or live screenshot galleries for the sitemap routes. | Integral to visual verification. |
 | `nai_suite/analyze_sitemap_screenshots.py` | python-script | Runs vision analysis over screenshot galleries and writes JSON reports. | Integral to visual QA. |
 | `nai_suite/generate_screenshot_progress.py` | python-script | Builds score-oriented progress artifacts from archived screenshot analysis JSON files. | Supportive analytics layer, but part of the official suite. |
-| `deploy.sh` | shell-script | Thin shell wrapper for the main deployment path. | Should stay aligned with `./nai deploy`. |
+| `deploy.sh` | shell-script | Thin shell wrapper for the main deployment path. | Should stay aligned with the guarded `./nai deploy --confirm-production` path. |
 
 ## Support
 
@@ -55,4 +55,3 @@
 | `commit-all-websites.sh` | shell-script | Bulk commit helper. | Potentially risky; not part of the standard workflow. |
 | `invest-ashtabula-scaffold.sh` | shell-script | One-off site scaffold helper. | Not part of the ongoing NAI suite. |
 | `permit-whisperer-outreach-automation.py` | python-script | One-off outreach automation. | Not part of the core product/deploy toolchain. |
-

@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/snow-plow/
+title: MC Snow Tracker | MC Professional Lawn Care and Snow Plowing
+body_chars: 1196
+screenshot: sitemap_screenshots/021_snow-plow.png
+source: live
+warnings: none

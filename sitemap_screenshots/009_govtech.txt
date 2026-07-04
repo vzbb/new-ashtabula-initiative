@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/govtech/
+title: govtech-box
+body_chars: 479
+screenshot: sitemap_screenshots/009_govtech.png
+source: live
+warnings: none

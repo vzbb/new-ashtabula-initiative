@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/adaptive-reuse/
+title: Adaptive Reuse Planner | Ashtabula Chamber of Commerce
+body_chars: 443
+screenshot: sitemap_screenshots/024_adaptive-reuse.png
+source: live
+warnings: none

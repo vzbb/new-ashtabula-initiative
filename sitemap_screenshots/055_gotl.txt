@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/gotl/
+title: Visit Geneva-on-the-Lake | Official Tourism & Planner
+body_chars: 1415
+screenshot: sitemap_screenshots/055_gotl.png
+source: live
+warnings: none

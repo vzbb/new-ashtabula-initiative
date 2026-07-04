@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/artist-commission/
+title: artist-commission-form
+body_chars: 989
+screenshot: sitemap_screenshots/050_artist-commission.png
+source: live
+warnings: none

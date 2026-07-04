@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/event-permit/
+title: Event Permit Express | Ashtabula County Fairgrounds
+body_chars: 1454
+screenshot: sitemap_screenshots/008_event-permit.png
+source: live
+warnings: none

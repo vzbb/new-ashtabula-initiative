@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/rennick-market/
+title: Rennick Meat Market | Historic Bridge Street
+body_chars: 806
+screenshot: sitemap_screenshots/064_rennick-market.png
+source: live
+warnings: none

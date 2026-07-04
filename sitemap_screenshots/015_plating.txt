@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/plating/
+title: plating-tracker
+body_chars: 350
+screenshot: sitemap_screenshots/015_plating.png
+source: live
+warnings: none

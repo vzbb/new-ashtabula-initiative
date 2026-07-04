@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/permits/
+title: Permit Whisperer | City of Ashtabula Permit Guidance Demo
+body_chars: 2781
+screenshot: sitemap_screenshots/002_permits.png
+source: live
+warnings: none

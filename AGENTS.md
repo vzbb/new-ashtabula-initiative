@@ -50,14 +50,14 @@ NAI is a monorepo with:
 6. Escalate to the coordinator only if the upstream inputs are missing, stale, or contradictory.
 7. Build or test only the affected site unless shared code changed.
 8. If the route map changed, run `./nai routes`.
-9. If you need a full publish, run `./nai deploy`.
+9. If you need a full publish, run `./nai deploy --confirm-production`.
 10. If you need visual verification, run `./nai screenshots`.
 
 ## Build And Deploy Rules
 
 - Use `./nai scan` to inspect site status before changing anything major.
 - Use `./nai routes` to regenerate `vercel.json` after route changes.
-- Use `./nai deploy` for the standard production path.
+- Use `./nai deploy --confirm-production` for the standard production path.
 - Do not hand-edit built files to “fix” a page.
 - Do not assume `node_modules/` folders are sites.
 - If you need durable project memory, use [MEMORY_PROTOCOL.md](MEMORY_PROTOCOL.md)
@@ -93,7 +93,7 @@ NAI is a monorepo with:
 - Blank route: check `vercel.json`, the built `dist/index.html`, and the live route target.
 - Missing site: check `SITEMAP.json` and the `websites/` folder name.
 - Build failure: fix the source app first, then rebuild.
-- Weird deploy behavior: run `./nai deploy` rather than relying on legacy helper scripts.
+- Weird deploy behavior: use the guarded `./nai deploy --confirm-production` path rather than relying on legacy helper scripts.
 
 ## References
 

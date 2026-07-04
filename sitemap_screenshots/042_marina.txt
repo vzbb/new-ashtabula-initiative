@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/marina/
+title: Harbor Yacht Club & Marina | Slip Waitlist
+body_chars: 1347
+screenshot: sitemap_screenshots/042_marina.png
+source: live
+warnings: none

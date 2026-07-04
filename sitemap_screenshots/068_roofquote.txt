@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/roofquote/
+title: A & R Roofing | RoofQuote
+body_chars: 2405
+screenshot: sitemap_screenshots/068_roofquote.png
+source: live
+warnings: none

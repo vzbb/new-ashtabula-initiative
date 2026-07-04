@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/charter/
+title: Compensator Lake Erie Fishing Charters | Ashtabula Harbor Trips
+body_chars: 3179
+screenshot: sitemap_screenshots/041_charter.png
+source: live
+warnings: none

@@ -34,7 +34,7 @@ Codex workers should operate on top of the existing pipeline instead of rediscov
 
 Use this exact order:
 
-`SITEMAP.md` -> `lead_research_json/<slug>.json` -> `email_prospects/<slug>_emails.json` -> `brandkits/<slug>.json` -> `branding_research/<slug>/branding.md` -> `branding_research/assets/*` -> `websites/<site-name>/` -> `build/deploy` -> `sitemap_screenshots/` -> `visual_analysis_report.json`
+`SITEMAP.json` -> rendered `SITEMAP.md` -> `lead_research_json/<slug>.json` -> `email_prospects/<slug>_emails.json` -> `brandkits/<slug>.json` -> `branding_research/<slug>/branding.md` -> `branding_research/assets/*` -> `websites/<site-name>/` -> `build/deploy` -> `sitemap_screenshots/` -> `visual_analysis_report.json`
 
 If a step is missing or stale, fix the stale artifact in the chain rather than skipping it.
 
@@ -59,7 +59,7 @@ General worker rule:
 ### 1. Target / Research Worker
 Scope:
 - `lead_research_json/<slug>.json`
-- `SITEMAP.md` target-map rows
+- `SITEMAP.json` and rendered `SITEMAP.md` target-map rows
 - `SITE_PROSPECT_MAPPING.md` when needed
 
 Responsibilities:
@@ -196,7 +196,8 @@ Before editing anything, a worker should read:
 - `ARTIFACT_PIPELINE.md`
 - `.gemini/GEMINI.md`
 - `RESEARCH_STACK.md` if the task touches internet research or asset discovery
-- `SITEMAP.md`
+- `SITEMAP.json`
+- rendered `SITEMAP.md`
 - the task-specific research/brandkit files
 
 ## Handoff Format

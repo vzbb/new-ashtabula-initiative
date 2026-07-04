@@ -11,7 +11,8 @@ Use it when you are:
 ## Canonical Order
 
 ```text
-SITEMAP.md
+SITEMAP.json
+  -> rendered SITEMAP.md
   -> lead_research_json/<slug>.json
   -> email_prospects/<slug>_emails.json
   -> brandkits/<slug>.json
@@ -25,7 +26,8 @@ SITEMAP.md
 ```
 
 The order matters:
-- `SITEMAP.md` tells you which MVP exists, what its current target is, and whether it is a primary or clone candidate.
+- `SITEMAP.json` is the machine-readable route source of truth.
+- rendered `SITEMAP.md` tells humans and agents which MVP exists, what its current target is, and whether it is a primary or clone candidate.
 - `lead_research_json/` answers who the MVP should be for.
 - `email_prospects/` answers who to contact and how.
 - `brandkits/` translates the target decision into visual direction.
@@ -35,8 +37,8 @@ The order matters:
 
 ## File Roles
 
-### `SITEMAP.md`
-The human-readable ledger for the whole project.
+### `SITEMAP.json` and `SITEMAP.md`
+`SITEMAP.json` is the canonical route data used by tooling. `SITEMAP.md` is rendered from it as the human-readable ledger for the whole project.
 
 It should answer:
 - what sites exist
@@ -152,7 +154,7 @@ The screenshot gallery should be treated as the current visual truth, not as a d
 
 ## Generation Sequence for a New MVP
 
-1. Confirm the slug in `SITEMAP.md`.
+1. Confirm the slug in `SITEMAP.json` or the rendered `SITEMAP.md`.
 2. Check whether the MVP already has a settled primary target.
 3. Refresh or create `lead_research_json/<slug>.json`.
 4. Refresh or create `email_prospects/<slug>_emails.json`.

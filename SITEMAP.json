@@ -2,7 +2,7 @@
   "schema_version": 1,
   "generated_from": "SITEMAP.md",
   "base_url": "https://new-ashtabula-initiative.vercel.app",
-  "route_count": 75,
+  "route_count": 76,
   "routes": [
     {
       "index": 1,
@@ -311,6 +311,15 @@
       "category": "\ud83d\uded2 Local Services (12 sites)"
     },
     {
+      "index": 35,
+      "site": "Compassionate Planner",
+      "slug": "compassionate",
+      "url": "https://new-ashtabula-initiative.vercel.app/compassionate/",
+      "target": "Ducro Funeral Services",
+      "description": "Compassionate end-of-life planning assistant",
+      "category": "\ud83d\uded2 Local Services (12 sites)"
+    },
+    {
       "index": 36,
       "site": "Virtual Concierge",
       "slug": "concierge",
@@ -437,7 +446,7 @@
       "category": "\u2764\ufe0f Health & Social Services (6 sites)"
     },
     {
-      "index": 51,
+      "index": 50,
       "site": "AI Docent Pro",
       "slug": "ai-docent-pro",
       "url": "https://new-ashtabula-initiative.vercel.app/ai-docent-pro/",
@@ -446,7 +455,7 @@
       "category": "\u2764\ufe0f Health & Social Services (6 sites)"
     },
     {
-      "index": 52,
+      "index": 51,
       "site": "Artist Commission Form",
       "slug": "artist-commission",
       "url": "https://new-ashtabula-initiative.vercel.app/artist-commission/",
@@ -455,7 +464,7 @@
       "category": "\u2764\ufe0f Health & Social Services (6 sites)"
     },
     {
-      "index": 53,
+      "index": 52,
       "site": "Pocket Historian",
       "slug": "historian",
       "url": "https://new-ashtabula-initiative.vercel.app/historian/",
@@ -464,7 +473,7 @@
       "category": "\u2764\ufe0f Health & Social Services (6 sites)"
     },
     {
-      "index": 54,
+      "index": 53,
       "site": "Pocket Historian Pro",
       "slug": "historian-pro",
       "url": "https://new-ashtabula-initiative.vercel.app/historian-pro/",
@@ -473,7 +482,7 @@
       "category": "\u2764\ufe0f Health & Social Services (6 sites)"
     },
     {
-      "index": 55,
+      "index": 54,
       "site": "Pocket Sommelier",
       "slug": "sommelier",
       "url": "https://new-ashtabula-initiative.vercel.app/sommelier/",
@@ -482,7 +491,7 @@
       "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
     },
     {
-      "index": 56,
+      "index": 55,
       "site": "Pocket Sommelier Pro",
       "slug": "sommelier-pro",
       "url": "https://new-ashtabula-initiative.vercel.app/sommelier-pro/",
@@ -491,7 +500,7 @@
       "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
     },
     {
-      "index": 57,
+      "index": 56,
       "site": "GOTL Weekend Planner",
       "slug": "gotl",
       "url": "https://new-ashtabula-initiative.vercel.app/gotl/",
@@ -500,7 +509,7 @@
       "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
     },
     {
-      "index": 58,
+      "index": 57,
       "site": "Harbor Cam Dashboard",
       "slug": "harbor",
       "url": "https://new-ashtabula-initiative.vercel.app/harbor/",
@@ -509,7 +518,7 @@
       "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
     },
     {
-      "index": 59,
+      "index": 58,
       "site": "Pet Matchmaker",
       "slug": "pet-match",
       "url": "https://new-ashtabula-initiative.vercel.app/pet-match/",
@@ -518,7 +527,7 @@
       "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
     },
     {
-      "index": 60,
+      "index": 59,
       "site": "Visual Portfolio",
       "slug": "portfolio",
       "url": "https://new-ashtabula-initiative.vercel.app/portfolio/",
@@ -527,7 +536,7 @@
       "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
     },
     {
-      "index": 61,
+      "index": 60,
       "site": "Volunteer Scheduler",
       "slug": "volunteer",
       "url": "https://new-ashtabula-initiative.vercel.app/volunteer/",
@@ -536,7 +545,7 @@
       "category": "\ud83c\udfa8 Arts & Culture (7 sites)"
     },
     {
-      "index": 62,
+      "index": 61,
       "site": "Wedding Lead Form",
       "slug": "wedding",
       "url": "https://new-ashtabula-initiative.vercel.app/wedding/",
@@ -545,7 +554,7 @@
       "category": "\ud83c\udf89 Events & Community (6 sites)"
     },
     {
-      "index": 63,
+      "index": 62,
       "site": "Ashtabula Fence",
       "slug": "ashtabula-fence",
       "url": "https://new-ashtabula-initiative.vercel.app/ashtabula-fence/",
@@ -554,7 +563,7 @@
       "category": "\ud83c\udf89 Events & Community (6 sites)"
     },
     {
-      "index": 64,
+      "index": 63,
       "site": "Thomas Fence",
       "slug": "thomas-fence",
       "url": "https://new-ashtabula-initiative.vercel.app/thomas-fence/",
@@ -563,7 +572,7 @@
       "category": "\ud83c\udf89 Events & Community (6 sites)"
     },
     {
-      "index": 65,
+      "index": 64,
       "site": "Cut Custom",
       "slug": "cut-custom",
       "url": "https://new-ashtabula-initiative.vercel.app/cut-custom/",
@@ -572,7 +581,7 @@
       "category": "\ud83c\udf89 Events & Community (6 sites)"
     },
     {
-      "index": 66,
+      "index": 65,
       "site": "Rennick Market",
       "slug": "rennick-market",
       "url": "https://new-ashtabula-initiative.vercel.app/rennick-market/",
@@ -581,7 +590,7 @@
       "category": "\ud83c\udf89 Events & Community (6 sites)"
     },
     {
-      "index": 67,
+      "index": 66,
       "site": "Trumbull Locker",
       "slug": "trumbull-locker",
       "url": "https://new-ashtabula-initiative.vercel.app/trumbull-locker/",
@@ -590,7 +599,7 @@
       "category": "\ud83c\udf89 Events & Community (6 sites)"
     },
     {
-      "index": 68,
+      "index": 67,
       "site": "Terra Vantage",
       "slug": "terra-vantage",
       "url": "https://new-ashtabula-initiative.vercel.app/terra-vantage/",
@@ -599,7 +608,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 69,
+      "index": 68,
       "site": "ParcelVisor",
       "slug": "parcelvisor",
       "url": "https://new-ashtabula-initiative.vercel.app/parcelvisor/",
@@ -608,7 +617,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 70,
+      "index": 69,
       "site": "RoofQuote",
       "slug": "roofquote",
       "url": "https://new-ashtabula-initiative.vercel.app/roofquote/",
@@ -617,7 +626,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 71,
+      "index": 70,
       "site": "Site Ops Pro",
       "slug": "site-ops-pro",
       "url": "https://new-ashtabula-initiative.vercel.app/site-ops-pro/",
@@ -626,7 +635,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 72,
+      "index": 71,
       "site": "SBDC Business Counseling",
       "slug": "sbdc-business-counseling",
       "url": "https://new-ashtabula-initiative.vercel.app/sbdc-business-counseling/",
@@ -635,7 +644,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 73,
+      "index": 72,
       "site": "SBDC Business Planning",
       "slug": "sbdc-business-planning",
       "url": "https://new-ashtabula-initiative.vercel.app/sbdc-business-planning/",
@@ -644,7 +653,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 74,
+      "index": 73,
       "site": "SBDC Educational Resources",
       "slug": "sbdc-educational-resources",
       "url": "https://new-ashtabula-initiative.vercel.app/sbdc-educational-resources/",
@@ -653,7 +662,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 75,
+      "index": 74,
       "site": "SBDC Learning Modules",
       "slug": "sbdc-learning-modules",
       "url": "https://new-ashtabula-initiative.vercel.app/sbdc-learning-modules/",
@@ -662,7 +671,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 76,
+      "index": 75,
       "site": "SBDC Support Tools",
       "slug": "sbdc-support-tools",
       "url": "https://new-ashtabula-initiative.vercel.app/sbdc-support-tools/",
@@ -671,7 +680,7 @@
       "category": "\ud83c\udfea Additional Business Sites (14 sites)"
     },
     {
-      "index": 77,
+      "index": 76,
       "site": "Saybrook Zoning Clerk",
       "slug": "saybrook-zoning",
       "url": "https://new-ashtabula-initiative.vercel.app/saybrook-zoning/",
@@ -683,7 +692,7 @@
   "target_ledger": [
     {
       "site": "Compassionate Planner",
-      "route": "`/compassionate-planner/`",
+      "route": "`/compassionate/`",
       "primary_target": "Ducro Funeral Services",
       "secondary_targets": "Ducro Funeral Services contacts",
       "notes": "Keep Legacy Link as the tool name; this is a settled mapping"

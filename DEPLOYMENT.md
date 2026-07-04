@@ -81,8 +81,8 @@
 #### Vercel Deployment
 
 ```bash
-# One-command deploy
-./nai deploy
+# One-command production deploy
+./nai deploy --confirm-production
 ```
 
 #### Netlify Deployment

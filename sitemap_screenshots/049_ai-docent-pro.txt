@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/ai-docent-pro/
+title: AI Docent | Ashtabula County Historical Society
+body_chars: 1480
+screenshot: sitemap_screenshots/049_ai-docent-pro.png
+source: live
+warnings: none

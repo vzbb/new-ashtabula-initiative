@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -30,6 +31,23 @@ from nai_suite.siteflow import (
 )
 
 ROOT = Path(__file__).resolve().parent
+NAI_TOOLS_VENV = ROOT / ".venv-nai-tools" / "bin" / "python"
+
+
+def tool_python() -> str:
+    override = os.environ.get("NAI_PYTHON")
+    if override:
+        return override
+    if NAI_TOOLS_VENV.exists():
+        return str(NAI_TOOLS_VENV)
+    return sys.executable
+
+
+def vercel_cmd() -> list[str]:
+    vercel_bin = shutil.which("vercel")
+    if vercel_bin:
+        return [vercel_bin]
+    return ["npx", "--yes", "vercel"]
 
 
 def _slugify(value: str) -> str:
@@ -382,7 +400,7 @@ def cmd_build(_: argparse.Namespace) -> int:
             print(f"  - {slug}")
         return 1
 
-    subprocess.run([sys.executable, "-m", "nai_suite.update_vercel"], check=True, cwd=ROOT)
+    subprocess.run([tool_python(), "-m", "nai_suite.update_vercel"], check=True, cwd=ROOT)
     return 0
 
 
@@ -392,7 +410,7 @@ def cmd_routes(_: argparse.Namespace) -> int:
         for error in errors:
             print(f"❌ {error}")
         return 1
-    subprocess.run([sys.executable, "-m", "nai_suite.update_vercel"], check=True, cwd=ROOT)
+    subprocess.run([tool_python(), "-m", "nai_suite.update_vercel"], check=True, cwd=ROOT)
     return 0
 
 
@@ -428,7 +446,7 @@ def cmd_sitemap_validate(_: argparse.Namespace) -> int:
 
 
 def cmd_render_all_mvps(_: argparse.Namespace) -> int:
-    subprocess.run([sys.executable, "-m", "nai_suite.generate_all_mvps_page"], check=True, cwd=ROOT)
+    subprocess.run([tool_python(), "-m", "nai_suite.generate_all_mvps_page"], check=True, cwd=ROOT)
     return 0
 
 
@@ -492,22 +510,33 @@ def cmd_fix_bases(_: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_deploy(_: argparse.Namespace) -> int:
+def cmd_deploy(args: argparse.Namespace) -> int:
+    if not args.confirm_production and os.environ.get("NAI_CONFIRM_PRODUCTION_DEPLOY") != "1":
+        print("Production deploy blocked by default.")
+        print("")
+        print("This command builds every site, runs `vercel build --prod`, and deploys")
+        print("the prebuilt output to production.")
+        print("")
+        print("Run one of these only when you intend to publish production:")
+        print("  ./nai deploy --confirm-production")
+        print("  NAI_CONFIRM_PRODUCTION_DEPLOY=1 ./nai deploy")
+        return 2
+
     if cmd_build(argparse.Namespace()) != 0:
         return 1
 
     print("")
     print("Building Vercel output...")
-    subprocess.run(["vercel", "build", "--prod"], cwd=ROOT, check=True)
+    subprocess.run([*vercel_cmd(), "build", "--prod"], cwd=ROOT, check=True)
 
     print("")
     print("Deploying prebuilt output to production...")
-    subprocess.run(["vercel", "deploy", "--prebuilt", "--prod", "--yes"], cwd=ROOT, check=True)
+    subprocess.run([*vercel_cmd(), "deploy", "--prebuilt", "--prod", "--yes"], cwd=ROOT, check=True)
     return 0
 
 
 def cmd_screenshots(args: argparse.Namespace) -> int:
-    cmd = [sys.executable, "-m", "nai_suite.screenshots_sitemap"]
+    cmd = [tool_python(), "-m", "nai_suite.screenshots_sitemap"]
     if args.live:
         cmd.append("--live")
     if args.headed:
@@ -528,7 +557,7 @@ def cmd_screenshots(args: argparse.Namespace) -> int:
 
 
 def cmd_browse(args: argparse.Namespace) -> int:
-    cmd = [sys.executable, "-m", "nai_suite.screenshots_sitemap", "--live", "--headed", "--browse-only"]
+    cmd = [tool_python(), "-m", "nai_suite.screenshots_sitemap", "--live", "--headed", "--browse-only"]
     linger = args.linger if args.linger is not None else 1
     cmd.extend(["--linger", str(linger)])
     if args.settle_ms is not None:
@@ -540,7 +569,7 @@ def cmd_browse(args: argparse.Namespace) -> int:
 
 
 def cmd_analyze_screenshots(args: argparse.Namespace) -> int:
-    cmd = [sys.executable, "-m", "nai_suite.analyze_sitemap_screenshots"]
+    cmd = [tool_python(), "-m", "nai_suite.analyze_sitemap_screenshots"]
     if args.image_dir is not None:
         cmd.extend(["--image-dir", str(args.image_dir)])
     if args.output is not None:
@@ -573,7 +602,7 @@ def cmd_analyze_screenshots(args: argparse.Namespace) -> int:
 
 
 def cmd_progress(args: argparse.Namespace) -> int:
-    cmd = [sys.executable, "-m", "nai_suite.generate_screenshot_progress"]
+    cmd = [tool_python(), "-m", "nai_suite.generate_screenshot_progress"]
     if args.archive_dir is not None:
         cmd.extend(["--archive-dir", str(args.archive_dir)])
     if args.current_report is not None:
@@ -589,23 +618,23 @@ def cmd_progress(args: argparse.Namespace) -> int:
 
 
 def cmd_hub(_: argparse.Namespace) -> int:
-    subprocess.run([sys.executable, "-m", "nai_suite.nai_hub"], check=True, cwd=ROOT)
+    subprocess.run([tool_python(), "-m", "nai_suite.nai_hub"], check=True, cwd=ROOT)
     return 0
 
 
 def cmd_tooling(_: argparse.Namespace) -> int:
-    subprocess.run([sys.executable, "-m", "nai_suite.tooling_registry"], check=True, cwd=ROOT)
+    subprocess.run([tool_python(), "-m", "nai_suite.tooling_registry"], check=True, cwd=ROOT)
     return 0
 
 
 def cmd_outreach_readiness(_: argparse.Namespace) -> int:
-    subprocess.run([sys.executable, "-m", "nai_suite.generate_outreach_readiness"], check=True, cwd=ROOT)
+    subprocess.run([tool_python(), "-m", "nai_suite.generate_outreach_readiness"], check=True, cwd=ROOT)
     return 0
 
 
 def cmd_saybrook_request_api(args: argparse.Namespace) -> int:
     cmd = [
-        sys.executable,
+        tool_python(),
         "-m",
         "nai_suite.saybrook_request_api",
         "--host",
@@ -632,7 +661,9 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("sitemap-validate", help="validate SITEMAP.json").set_defaults(func=cmd_sitemap_validate)
     sub.add_parser("render-all-mvps", help="generate landing-page/all-mvps.html from canonical sitemap data").set_defaults(func=cmd_render_all_mvps)
     sub.add_parser("fix-bases", help="fix vite.config.js base paths to match routes").set_defaults(func=cmd_fix_bases)
-    sub.add_parser("deploy", help="build everything and deploy with Vercel").set_defaults(func=cmd_deploy)
+    deploy = sub.add_parser("deploy", help="build everything and deploy with Vercel")
+    deploy.add_argument("--confirm-production", action="store_true", help="explicitly allow the production Vercel deploy path")
+    deploy.set_defaults(func=cmd_deploy)
     screenshots = sub.add_parser("screenshots", help="capture sitemap screenshots from local build outputs")
     screenshots.add_argument("--live", action="store_true", help="navigate the live production URLs instead of local previews")
     screenshots.add_argument("--headed", action="store_true", help="show the browser window while capturing")

@@ -1,0 +1,42 @@
+{
+  "archived_at": "2026-07-03T22:35:26.653308+00:00",
+  "generated_at": "2026-07-03T22:35:14.680073+00:00",
+  "image_dir": "/root/new-ashtabula-initiative/sitemap_screenshots",
+  "output_file": "/root/new-ashtabula-initiative/sitemap_screenshots/visual_analysis_report.json",
+  "model": "google/gemini-3.1-flash-lite-preview",
+  "quality": "fast",
+  "selected_slugs": [
+    "saybrook-zoning"
+  ],
+  "item_count": 1,
+  "summary": {
+    "issue_counts_by_category": {
+      "content": 1
+    },
+    "issue_counts_by_severity": {
+      "low": 1
+    },
+    "brand_presence_counts": {
+      "strong": 1
+    },
+    "branding_status_counts": {
+      "branded": 1
+    },
+    "target_brand_status_counts": {
+      "specific": 1
+    },
+    "white_label_fit_counts": {
+      "medium": 1
+    },
+    "shell_like_count": 1,
+    "needs_branding_pass_count": 0,
+    "needs_layout_pass_count": 0,
+    "needs_content_pass_count": 1,
+    "research_needed_count": 0
+  },
+  "artifacts": [
+    "visual_analysis_report.json",
+    "index.html",
+    "manifest.json"
+  ]
+}

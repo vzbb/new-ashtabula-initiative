@@ -1,6 +1,6 @@
 url: https://new-ashtabula-initiative.vercel.app/saybrook-zoning/
 title: Saybrook Zoning Intake
-body_chars: 802
+body_chars: 494
 screenshot: sitemap_screenshots/001_saybrook-zoning.png
-source: preview:dist
+source: live
 warnings: none

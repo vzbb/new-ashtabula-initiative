@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/lawn/
+title: MC Lawn Quote | MC Professional Lawn Care and Snow Plowing
+body_chars: 2494
+screenshot: sitemap_screenshots/019_lawn.png
+source: live
+warnings: none

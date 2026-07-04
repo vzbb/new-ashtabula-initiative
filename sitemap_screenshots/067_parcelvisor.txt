@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/parcelvisor/
+title: ParcelVisor | AC Land Bank Parcel Review Demo
+body_chars: 2535
+screenshot: sitemap_screenshots/067_parcelvisor.png
+source: live
+warnings: none

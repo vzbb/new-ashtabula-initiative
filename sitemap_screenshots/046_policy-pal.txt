@@ -1,0 +1,6 @@
+url: https://new-ashtabula-initiative.vercel.app/policy-pal/
+title: Policy Pal for Kollhoff Insurance Agency
+body_chars: 2838
+screenshot: sitemap_screenshots/046_policy-pal.png
+source: live
+warnings: none

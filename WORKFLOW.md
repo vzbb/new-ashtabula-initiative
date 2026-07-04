@@ -73,7 +73,7 @@ If a site is strong enough to be reused for multiple legitimate buyers, clone it
 
 ## What I Changed
 
-- Rebuilt the route generation flow so it reads from `SITEMAP.md` and the actual site layout.
+- Rebuilt the route generation flow so it reads from canonical `SITEMAP.json` and the actual site layout.
 - Added `siteflow.py` to centralize:
   - sitemap parsing
   - site slug mapping
@@ -152,7 +152,7 @@ This refreshes `vercel.json` from the current sitemap and build-aware route logi
 ### 4. Build and deploy
 
 ```bash
-./nai deploy
+./nai deploy --confirm-production
 ```
 
 This now:
@@ -172,7 +172,7 @@ Run this before a meaningful publish:
 
 If scan is clean enough for the intended publish:
 - resolve any missing route/source mismatches you care about
-- run `./nai deploy`
+- run `./nai deploy --confirm-production`
 - verify the live routes
 - rerun screenshots if you need visual confirmation
 
@@ -219,5 +219,5 @@ The fix was to:
 The current one-command workflow is:
 
 ```bash
-./nai deploy
+./nai deploy --confirm-production
 ```
