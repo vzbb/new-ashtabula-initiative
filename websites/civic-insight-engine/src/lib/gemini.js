@@ -3,7 +3,6 @@
  * Enhanced meeting summarization with robust error handling
  */
 
-import { GoogleGenAI } from '@google/genai';
 import { z } from "zod";
 import { zodToJsonSchema } from "zod-to-json-schema";
 
@@ -26,23 +25,70 @@ const summarySchema = z.object({
   tags: z.array(z.string()).min(3).max(5).describe("Relevant tags for categorization (3-5 tags).")
 });
 
-// Initialize Gemini AI client
+// Initialize OpenRouter API client
 const getAIClient = () => {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
   if (!apiKey) {
     return null;
   }
-  return new GoogleGenAI({ apiKey });
+  return { apiKey };
 };
+
+const OPENROUTER_URL = 'https://openrouter.ai/api/v1/chat/completions';
+const OPENROUTER_MODEL = 'google/gemini-2.5-flash-lite';
+const OPENROUTER_REFERER = 'https://new-ashtabula-initiative.vercel.app';
+const OPENROUTER_TITLE = 'Civic Insight Engine';
+
+async function createChatCompletion(apiKey, prompt, extraBody = {}) {
+  const response = await fetch(OPENROUTER_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+      'HTTP-Referer': OPENROUTER_REFERER,
+      'X-Title': OPENROUTER_TITLE
+    },
+    body: JSON.stringify({
+      model: OPENROUTER_MODEL,
+      messages: [{ role: "user", content: prompt }],
+      ...extraBody
+    })
+  });
+
+  const data = await response.json().catch(() => null);
+
+  if (!response.ok) {
+    throw new GeminiAPIError(
+      data?.error?.message || `OpenRouter request failed with status ${response.status}`,
+      data?.error?.code || 'API_ERROR',
+      data
+    );
+  }
+
+  const content = data?.choices?.[0]?.message?.content;
+  const text = Array.isArray(content)
+    ? content.map((part) => part?.text || '').join('')
+    : content;
+
+  if (!text) {
+    throw new GeminiAPIError(
+      'OpenRouter returned an empty response',
+      'EMPTY_RESPONSE',
+      data
+    );
+  }
+
+  return { text };
+}
 
 /**
  * Check if API key is properly configured
  */
 export function isApiKeyConfigured() {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
   return apiKey && 
-         apiKey !== 'YOUR_GEMINI_API_KEY_HERE' && 
-         apiKey !== 'your_gemini_api_key_here' &&
+         apiKey !== 'YOUR_OPENROUTER_API_KEY_HERE' && 
+         apiKey !== 'your_openrouter_api_key_here' &&
          apiKey.length > 20;
 }
 
@@ -67,10 +113,10 @@ export async function testApiConnection() {
     }
 
     const ai = getAIClient();
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: 'Say "Civic Insight Engine API is working" and nothing else.',
-    });
+    const response = await createChatCompletion(
+      ai.apiKey,
+      'Say "Civic Insight Engine API is working" and nothing else.'
+    );
 
     return {
       success: true,
@@ -87,7 +133,7 @@ export async function testApiConnection() {
 }
 
 /**
- * Summarize meeting minutes using Gemini API
+ * Summarize meeting minutes using OpenRouter API
  */
 export async function summarizeMeeting(text) {
   // Validate input
@@ -129,14 +175,16 @@ MEETING MINUTES:
 ${text.substring(0, 15000)}`; // Limit input size
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: prompt,
-      config: {
-        responseMimeType: "application/json",
-        responseJsonSchema: zodToJsonSchema(summarySchema),
-        temperature: 0.3,
-        maxOutputTokens: 2000
+    const response = await createChatCompletion(ai.apiKey, prompt, {
+      temperature: 0.3,
+      max_tokens: 2000,
+      response_format: {
+        type: "json_schema",
+        json_schema: {
+          name: "meeting_summary",
+          strict: true,
+          schema: zodToJsonSchema(summarySchema)
+        }
       }
     });
     
@@ -180,10 +228,10 @@ ${text.substring(0, 15000)}`; // Limit input size
       throw error;
     }
     
-    // Handle specific Gemini API errors
+    // Handle specific OpenRouter API errors
     if (error.message?.includes('API key not valid')) {
       throw new GeminiAPIError(
-        'Invalid API key. Please check your Gemini API key configuration.',
+        'Invalid API key. Please check your OpenRouter API key configuration.',
         'AUTH_ERROR'
       );
     }
@@ -203,7 +251,7 @@ ${text.substring(0, 15000)}`; // Limit input size
     }
     
     // Generic fallback to mock data
-    console.warn("Gemini API call failed. Returning mock summary for graceful degradation.");
+    console.warn("OpenRouter API call failed. Returning mock summary for graceful degradation.");
     return getMockSummary(text);
   }
 }
@@ -263,7 +311,7 @@ export function getApiStatus() {
     configured: isApiKeyConfigured(),
     mockMode: isMockModeEnabled(),
     keyPrefix: isApiKeyConfigured() 
-      ? import.meta.env.VITE_GEMINI_API_KEY.substring(0, 8) + '...'
+      ? import.meta.env.VITE_OPENROUTER_API_KEY.substring(0, 8) + '...'
       : 'not set'
   };
 }

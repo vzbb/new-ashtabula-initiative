@@ -1,32 +1,18 @@
-import { GoogleGenAI } from "@google/genai";
-
-const GEMINI_API_KEY = (process.env.GEMINI_API_KEY || "").trim();
-let _aiClient: GoogleGenAI | null | undefined;
-
-function getAiClient(): GoogleGenAI | null {
-  if (_aiClient !== undefined) return _aiClient;
-  if (!GEMINI_API_KEY) {
-    _aiClient = null;
-    return _aiClient;
-  }
-  try {
-    _aiClient = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-  } catch {
-    _aiClient = null;
-  }
-  return _aiClient;
-}
+const OPENROUTER_API_KEY = (import.meta.env.VITE_OPENROUTER_API_KEY || "").trim();
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+const OPENROUTER_MODEL = "google/gemini-2.5-flash-lite";
+const HTTP_REFERER = typeof window !== "undefined" ? window.location.origin : "https://openrouter.ai";
+const APP_TITLE = "RoofQuote";
 
 export async function analyzeRoof(images: { base64: string; mimeType: string }[]): Promise<string> {
-  const ai = getAiClient();
-  if (!ai) {
-    return "AI is disabled on this deployment (missing GEMINI_API_KEY).";
+  if (!OPENROUTER_API_KEY) {
+    return "AI is disabled on this deployment (missing VITE_OPENROUTER_API_KEY).";
   }
 
-  const parts = images.map((img) => ({
-    inlineData: {
-      data: img.base64,
-      mimeType: img.mimeType,
+  const content = images.map((img) => ({
+    type: "image_url" as const,
+    image_url: {
+      url: `data:${img.mimeType};base64,${img.base64}`,
     },
   }));
 
@@ -47,12 +33,29 @@ Please analyze this extensive visual dataset to estimate the following:
 
 Explain your spatial reasoning by cross-referencing the various perspectives (e.g., "The street view confirms a steep pitch that was suggested by the southern oblique aerial"). Format your response in Markdown.`;
 
-  const response = await ai.models.generateContent({
-    model: "gemini-3.1-pro-preview",
-    contents: {
-      parts: [...parts, { text: prompt }],
+  const response = await fetch(OPENROUTER_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+      "HTTP-Referer": HTTP_REFERER,
+      "X-Title": APP_TITLE,
     },
+    body: JSON.stringify({
+      model: OPENROUTER_MODEL,
+      messages: [
+        {
+          role: "user",
+          content: [...content, { type: "text", text: prompt }],
+        },
+      ],
+    }),
   });
 
-  return response.text || "No analysis generated.";
+  if (!response.ok) {
+    throw new Error(`OpenRouter request failed with status ${response.status}`);
+  }
+
+  const data = await response.json();
+  return data.choices?.[0]?.message?.content || "No analysis generated.";
 }

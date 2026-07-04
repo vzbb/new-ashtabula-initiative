@@ -55,10 +55,10 @@ export default function ApiStatusPanel() {
           <strong>Demo Mode Active</strong>
           <p>
             The app is using mock data for meeting summaries. 
-            Add a Gemini API key to enable AI-powered summaries.
+            Add an AI API key to enable AI-powered summaries.
           </p>
           <code className="status-code">
-            VITE_GEMINI_API_KEY=your_key_here
+            VITE_OPENROUTER_API_KEY=your_key_here
           </code>
         </div>
       )}

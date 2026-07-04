@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { GoogleGenAI, Type } from "@google/genai";
 import { Button } from "./components/ui/button";
 import { Textarea } from "./components/ui/textarea";
 import { Card } from "./components/ui/card";
@@ -8,8 +7,11 @@ import { Loader2, MapPin, AlertTriangle, CheckCircle2, TrendingDown, Building2, 
 import { motion, AnimatePresence } from "motion/react";
 import { cn } from "./lib/utils";
 
-const GEMINI_API_KEY = (process.env.GEMINI_API_KEY || "").trim();
-let _aiClient: GoogleGenAI | null | undefined;
+const OPENROUTER_API_KEY = (import.meta.env.VITE_OPENROUTER_API_KEY || "").trim();
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
+const OPENROUTER_MODEL = "google/gemini-2.5-flash-lite";
+const HTTP_REFERER = typeof window !== "undefined" ? window.location.origin : "https://openrouter.ai";
+const APP_TITLE = "ParcelVisor";
 
 const LAND_BANK = {
   shortName: "AC Land Bank",
@@ -54,20 +56,6 @@ const DEMO_FALLBACKS = [
   },
 ];
 
-function getAiClient(): GoogleGenAI | null {
-  if (_aiClient !== undefined) return _aiClient;
-  if (!GEMINI_API_KEY) {
-    _aiClient = null;
-    return _aiClient;
-  }
-  try {
-    _aiClient = new GoogleGenAI({ apiKey: GEMINI_API_KEY });
-  } catch {
-    _aiClient = null;
-  }
-  return _aiClient;
-}
-
 interface PropertyAssessment {
   address: string;
   imageUrl: string;
@@ -82,34 +70,35 @@ interface PropertyAssessment {
 }
 
 const responseSchema = {
-  type: Type.OBJECT,
+  type: "object",
   properties: {
     roofCondition: {
-      type: Type.STRING,
+      type: "string",
       description: "Condition of the roof: Good, Fair, Poor, or Unknown",
     },
     windowsCondition: {
-      type: Type.STRING,
+      type: "string",
       description: "Condition of the windows: Good, Fair, Poor, or Unknown",
     },
     exteriorCondition: {
-      type: Type.STRING,
+      type: "string",
       description: "Condition of the exterior walls/siding: Good, Fair, Poor, or Unknown",
     },
     blightScore: {
-      type: Type.NUMBER,
+      type: "number",
       description: "Blight score from 1 to 10. 10 is severely blighted/abandoned, 1 is pristine.",
     },
     estimatedValueImpact: {
-      type: Type.STRING,
+      type: "string",
       description: "Estimated impact on property value, e.g., '-$20,000 due to roof damage', or 'Standard market value'",
     },
     notes: {
-      type: Type.STRING,
+      type: "string",
       description: "Brief summary of visible issues",
     },
   },
   required: ["roofCondition", "windowsCondition", "exteriorCondition", "blightScore", "estimatedValueImpact", "notes"],
+  additionalProperties: false,
 };
 
 export default function App() {
@@ -148,8 +137,7 @@ export default function App() {
       );
 
       try {
-        const ai = getAiClient();
-        if (!ai) {
+        if (!OPENROUTER_API_KEY) {
           const fallback = DEMO_FALLBACKS[i % DEMO_FALLBACKS.length];
           setAssessments((prev) =>
             prev.map((a, idx) =>
@@ -172,33 +160,55 @@ export default function App() {
         }
         const { base64, mimeType } = await res.json();
 
-        const response = await ai.models.generateContent({
-          model: "gemini-3-flash-preview",
-          contents: {
-            parts: [
+        const response = await fetch(OPENROUTER_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+            "HTTP-Referer": HTTP_REFERER,
+            "X-Title": APP_TITLE,
+          },
+          body: JSON.stringify({
+            model: OPENROUTER_MODEL,
+            messages: [
               {
-                inlineData: {
-                  data: base64,
-                  mimeType: mimeType,
-                },
-              },
-              {
-                text: `You are an expert property assessor for ${LAND_BANK.fullName}.
+                role: "user",
+                content: [
+                  {
+                    type: "image_url",
+                    image_url: {
+                      url: `data:${mimeType};base64,${base64}`,
+                    },
+                  },
+                  {
+                    type: "text",
+                    text: `You are an expert property assessor for ${LAND_BANK.fullName}.
 Analyze this Street View image of a parcel in Ashtabula County.
 Focus on roof, windows, exterior condition, and blight risk.
 Use the result to help prioritize demolition, rehab, or deeper review.
 Keep the output concise and field-ready.`,
+                  },
+                ],
               },
             ],
-          },
-          config: {
-            responseMimeType: "application/json",
-            responseSchema: responseSchema,
-          },
+            response_format: {
+              type: "json_schema",
+              json_schema: {
+                name: "property_assessment",
+                strict: true,
+                schema: responseSchema,
+              },
+            },
+          }),
         });
 
-        const text = response.text;
-        if (!text) throw new Error("No response from Gemini");
+        if (!response.ok) {
+          throw new Error(`OpenRouter request failed with status ${response.status}`);
+        }
+
+        const data = await response.json();
+        const text = data.choices?.[0]?.message?.content;
+        if (!text) throw new Error("No response from OpenRouter");
 
         const parsed = JSON.parse(text);
 

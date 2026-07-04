@@ -4,13 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "VITE_GEMINI_API_KEY=$GEMINI_API_KEY vite",
-    "build": "VITE_GEMINI_API_KEY=$GEMINI_API_KEY vite build",
+    "dev": "VITE_OPENROUTER_API_KEY=$OPENROUTER_API_KEY vite",
+    "build": "VITE_OPENROUTER_API_KEY=$OPENROUTER_API_KEY vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/genai": "^1.43.0",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.575.0",
     "react": "^19.2.0",

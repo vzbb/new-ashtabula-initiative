@@ -4,13 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "VITE_GEMINI_API_KEY=$GEMINI_API_KEY vite",
-    "build": "VITE_GEMINI_API_KEY=$GEMINI_API_KEY vite build",
+    "dev": "VITE_OPENROUTER_API_KEY=$OPENROUTER_API_KEY vite",
+    "build": "VITE_OPENROUTER_API_KEY=$OPENROUTER_API_KEY vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
     "@tailwindcss/postcss": "^4.1.18",
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.0",

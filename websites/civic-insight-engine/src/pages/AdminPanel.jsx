@@ -55,8 +55,8 @@ export default function AdminPanel() {
     addLog(`Initiated ${isMedia ? 'media' : 'document'} upload: ${file.name}`);
     
     setTimeout(() => {
-      setProcessingStep(isMedia ? 'Transcribing with Gemini 2.5...' : 'Extracting Text via OCR...');
-      addLog(isMedia ? 'Connecting to Gemini Multimodal Endpoint...' : 'Initializing OCR Engine (Tesseract-v5-WebAssembly)...');
+      setProcessingStep(isMedia ? 'Transcribing media...' : 'Extracting Text via OCR...');
+      addLog(isMedia ? 'Connecting to AI Multimodal Endpoint...' : 'Initializing OCR Engine (Tesseract-v5-WebAssembly)...');
       
       setTimeout(() => {
         setProcessingStep(isMedia ? 'Identifying Speakers...' : 'Preparing for AI Summary...');
