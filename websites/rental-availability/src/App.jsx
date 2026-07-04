@@ -33,6 +33,7 @@ const HIGHLIGHTS = [
   },
 ];
 
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 const API_CONFIG = {
   TIMEOUT_MS: 30000,
   MAX_RETRIES: 3,
@@ -76,26 +77,33 @@ const isRetryable = (errorOrResponse) => {
   );
 };
 
-const callGeminiAPI = async (prompt, model = "gemini-1.5-flash", retryCount = 0) => {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const callOpenRouterAPI = async (prompt, model = "google/gemini-2.5-flash-lite", retryCount = 0) => {
+  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
   if (!apiKey) {
     throw new Error("API key not configured. Please check your environment settings.");
   }
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
   const options = {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+      "HTTP-Referer": window.location.origin,
+      "X-Title": "NAI - Rental Availability",
+    },
+    body: JSON.stringify({
+      model: model,
+      messages: [{ role: "user", content: prompt }],
+    }),
   };
 
   try {
-    const response = await fetchWithTimeout(url, options, API_CONFIG.TIMEOUT_MS);
+    const response = await fetchWithTimeout(OPENROUTER_URL, options, API_CONFIG.TIMEOUT_MS);
 
     if (response.status === API_CONFIG.RATE_LIMIT_STATUS) {
       if (retryCount < API_CONFIG.MAX_RETRIES) {
         await delay(getBackoffDelay(retryCount));
-        return callGeminiAPI(prompt, model, retryCount + 1);
+        return callOpenRouterAPI(prompt, model, retryCount + 1);
       }
       throw new Error("Rate limit exceeded. Please wait a moment and try again.");
     }
@@ -105,13 +113,13 @@ const callGeminiAPI = async (prompt, model = "gemini-1.5-flash", retryCount = 0)
       const errorMessage = errorData.error?.message || `API error: ${response.status}`;
       if (API_CONFIG.RETRYABLE_STATUS_CODES.includes(response.status) && retryCount < API_CONFIG.MAX_RETRIES) {
         await delay(getBackoffDelay(retryCount));
-        return callGeminiAPI(prompt, model, retryCount + 1);
+        return callOpenRouterAPI(prompt, model, retryCount + 1);
       }
       throw new Error(errorMessage);
     }
 
     const data = await response.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    const text = data?.choices?.[0]?.message?.content;
     if (!text) {
       throw new Error("No response content received from API.");
     }
@@ -119,7 +127,7 @@ const callGeminiAPI = async (prompt, model = "gemini-1.5-flash", retryCount = 0)
   } catch (error) {
     if (isRetryable(error) && retryCount < API_CONFIG.MAX_RETRIES) {
       await delay(getBackoffDelay(retryCount));
-      return callGeminiAPI(prompt, model, retryCount + 1);
+      return callOpenRouterAPI(prompt, model, retryCount + 1);
     }
 
     let userMessage = "An error occurred while processing your request.";
@@ -136,7 +144,7 @@ const callGeminiAPI = async (prompt, model = "gemini-1.5-flash", retryCount = 0)
   }
 };
 
-const extractResponseText = (responseData) => responseData?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+const extractResponseText = (responseData) => responseData?.choices?.[0]?.message?.content || "";
 
 const RidgeviewMark = () => (
   <svg className="logo" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -210,7 +218,7 @@ Use the real brand cues only:
 Write exactly 3 short bullets and one short CTA. Keep it under 90 words. Make it practical and buyer-specific.
 Budget context: maximum monthly rent is $${max}.`;
 
-      const data = await callGeminiAPI(prompt);
+      const data = await callOpenRouterAPI(prompt);
       const text = extractResponseText(data);
       setSummary(text || buildLocalSummary(max));
     } catch (e) {
