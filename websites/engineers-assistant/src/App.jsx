@@ -170,16 +170,16 @@ function App() {
       </header>
 
       <main className="content">
-        <div className="hero">
+        <div className="hero" style={{ '--hero-image-url': 'url(/hero.webp)' }}>
           <h1>Fast technical summaries for clients</h1>
-          <p className="sub">Gemini‑powered engineering insights that communicate complexity with clarity.</p>
+          <p className="sub">AI‑powered engineering insights that communicate complexity with clarity.</p>
           
           <div className="trust-badges">
             <div className="badge">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
               </svg>
-              Gemini API
+              AI-Powered
             </div>
             <div className="badge">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -250,7 +250,7 @@ function App() {
                 </svg>
               </div>
               <h3>Analysis Summary</h3>
-              <span className="version-badge">Gemini 1.5 Flash</span>
+              <span className="version-badge">AI-Powered</span>
             </div>
             {summary ? (
               <div className="result-content">
