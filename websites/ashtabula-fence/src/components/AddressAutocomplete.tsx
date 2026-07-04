@@ -4,7 +4,7 @@ import { MapPin } from 'lucide-react';
 interface AddressAutocompleteProps {
   onSelect: (lat: number, lon: number, address: string) => void;
   placeholder?: string;
-  theme?: 'indigo' | 'emerald' | 'amber';
+  theme?: 'indigo' | 'emerald' | 'amber' | 'tf';
   value?: string;
   onChange?: (val: string) => void;
 }
@@ -35,6 +35,10 @@ export default function AddressAutocomplete({ onSelect, placeholder = "Enter add
     amber: {
       input: 'focus:ring-amber-500/20 focus:border-amber-500',
       spinner: 'border-amber-500',
+    },
+    tf: {
+      input: 'focus:ring-[#017f01]/20 focus:border-[#017f01]',
+      spinner: 'border-[#017f01]',
     }
   };
 
