@@ -176,34 +176,31 @@ export default function SnapToQuoteFence() {
       <div className="lg:col-span-4 lg:row-start-1 flex flex-col gap-6">
         <div className="space-y-3">
           <div>
-            <div className="flex items-center gap-3 mb-2">
-              <img src="/logo.svg" alt="Thomas Fence Co." className="h-10 w-auto" />
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-tf-primary">Thomas Fence Co. &mdash; Since the 1970s</p>
-            </div>
-            <h2 className="text-2xl font-bold text-tf-primary-dark tracking-tight" style={{fontFamily: "var(--font-heading)"}}>40+ Years of Family-Owned Fencing. No Subcontractors. No Shortcuts.</h2>
-            <p className="text-tf-primary-dark/80 mt-2 text-sm">
-              Thomas Fence Co. serves Ashtabula and 8 counties across Northeast Ohio and northern Pennsylvania with employee-only crews and in-house fabrication. Plan your layout, measure footage, and get a cleaner project brief.
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">Ashtabula Fence Co. LLC</p>
+            <h2 className="text-2xl font-bold text-emerald-900 tracking-tight">Fence quotes for privacy, gates, and repair-ready installs</h2>
+            <p className="text-emerald-700/80 mt-1 text-sm">
+              Plan your layout, measure footage, and hand off a cleaner project brief for a local Ashtabula fence crew.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
-            <div className="rounded-xl border border-tf-border bg-white px-3 py-2 text-xs text-slate-600 shadow-sm">
-              <div className="font-semibold text-tf-primary-dark">Built by Thomas</div>
-              <div>Every fence installed by our own employees &mdash; never subcontracted.</div>
+            <div className="rounded-xl border border-emerald-100 bg-white px-3 py-2 text-xs text-slate-600 shadow-sm">
+              <div className="font-semibold text-emerald-900">Residential focus</div>
+              <div>Privacy fences, driveway gates, and repair calls.</div>
             </div>
-            <div className="rounded-xl border border-tf-border bg-white px-3 py-2 text-xs text-slate-600 shadow-sm">
-              <div className="font-semibold text-tf-primary-dark">Custom Fabrication</div>
-              <div>Custom gates, cantilever slides, and dog kennels designed in our own shop.</div>
+            <div className="rounded-xl border border-emerald-100 bg-white px-3 py-2 text-xs text-slate-600 shadow-sm">
+              <div className="font-semibold text-emerald-900">Local field quoting</div>
+              <div>Map-based measurements for cleaner first conversations.</div>
             </div>
-            <div className="rounded-xl border border-tf-border bg-white px-3 py-2 text-xs text-slate-600 shadow-sm">
-              <div className="font-semibold text-tf-primary-dark">8-County Coverage</div>
-              <div>From Ashtabula to Cuyahoga, plus northern PA. We know the terrain and codes.</div>
+            <div className="rounded-xl border border-emerald-100 bg-white px-3 py-2 text-xs text-slate-600 shadow-sm">
+              <div className="font-semibold text-emerald-900">Permit-aware</div>
+              <div>Designed to tee up zoning and county follow-up when needed.</div>
             </div>
           </div>
         </div>
 
-        <div className="bg-white p-5 rounded-2xl shadow-sm border border-tf-border space-y-4">
-          <h3 className="font-semibold text-tf-primary-dark flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-tf-primary" />
+        <div className="bg-white p-5 rounded-2xl shadow-sm border border-emerald-100 space-y-4">
+          <h3 className="font-semibold text-emerald-900 flex items-center gap-2">
+            <MapPin className="w-4 h-4 text-emerald-500" />
             Find Your Property
           </h3>
           <div className="flex gap-2">
@@ -212,17 +209,17 @@ export default function SnapToQuoteFence() {
               onChange={setAddress} 
               onSelect={handleAddressSelect} 
               placeholder="Enter your address or street..." 
-              theme="tf" 
+              theme="emerald" 
             />
           </div>
         </div>
       </div>
 
-      <div className="lg:col-span-8 lg:row-span-2 lg:col-start-5 lg:row-start-1 h-[500px] lg:h-full bg-tf-surface rounded-2xl overflow-hidden shadow-sm border border-tf-border relative">
+      <div className="lg:col-span-8 lg:row-span-2 lg:col-start-5 lg:row-start-1 h-[500px] lg:h-full bg-emerald-50 rounded-2xl overflow-hidden shadow-sm border border-emerald-100 relative">
         {isLocationLocked && (
           <div className="absolute inset-0 z-[1000] bg-black/40 backdrop-blur-[2px] flex items-center justify-center p-4">
             <div className="bg-white p-6 rounded-2xl shadow-2xl max-w-md w-full text-center">
-              <div className="w-12 h-12 bg-tf-surface text-tf-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold text-slate-900 mb-2">Where should we start the quote?</h3>
@@ -234,7 +231,7 @@ export default function SnapToQuoteFence() {
                   onChange={setAddress} 
                   onSelect={handleAddressSelect} 
                   placeholder="Enter address..." 
-                  theme="tf" 
+                  theme="emerald" 
                 />
               </div>
             </div>
@@ -254,21 +251,21 @@ export default function SnapToQuoteFence() {
       </div>
 
       <div className="lg:col-span-4 lg:row-start-2 flex flex-col gap-6 overflow-y-auto pr-2 pb-8">
-        <div className="bg-white p-5 rounded-2xl shadow-sm border border-tf-border space-y-5">
+        <div className="bg-white p-5 rounded-2xl shadow-sm border border-emerald-100 space-y-5">
           <div className="flex items-center justify-between">
-          <h3 className="font-semibold text-tf-primary-dark flex items-center gap-2">
-            <Shield className="w-4 h-4 text-tf-primary" />
+          <h3 className="font-semibold text-emerald-900 flex items-center gap-2">
+            <Shield className="w-4 h-4 text-emerald-500" />
             Build Structure
           </h3>
           </div>
 
-          <div className="flex bg-tf-surface/50 rounded-xl p-1 border border-tf-border">
+          <div className="flex bg-emerald-50/50 rounded-xl p-1 border border-emerald-100">
             <button
               onClick={() => { setDrawingCategory('fence'); setPoints([]); }}
               className={`flex-1 py-2 text-sm font-medium rounded-lg transition-all flex items-center justify-center gap-2 ${
                 drawingCategory === 'fence'
-                  ? 'bg-white shadow-sm text-tf-primary-dark border border-tf-border'
-                  : 'text-tf-primary/70 hover:text-tf-primary-dark'
+                  ? 'bg-white shadow-sm text-emerald-900 border border-emerald-200'
+                  : 'text-emerald-600/70 hover:text-emerald-900'
               }`}
             >
               <Shield className="w-4 h-4" /> Fence
@@ -277,8 +274,8 @@ export default function SnapToQuoteFence() {
               onClick={() => { setDrawingCategory('gate'); setPoints([]); }}
               className={`flex-1 py-2 text-sm font-medium rounded-lg transition-all flex items-center justify-center gap-2 ${
                 drawingCategory === 'gate'
-                  ? 'bg-white shadow-sm text-tf-primary-dark border border-tf-border'
-                  : 'text-tf-primary/70 hover:text-tf-primary-dark'
+                  ? 'bg-white shadow-sm text-emerald-900 border border-emerald-200'
+                  : 'text-emerald-600/70 hover:text-emerald-900'
               }`}
             >
               <DoorOpen className="w-4 h-4" /> Gate
@@ -294,7 +291,7 @@ export default function SnapToQuoteFence() {
               ) : (
                 <>
                   <div className="space-y-2">
-                    <label className="text-xs font-medium text-tf-primary uppercase tracking-wider">Material Style</label>
+                    <label className="text-xs font-medium text-emerald-400 uppercase tracking-wider">Material Style</label>
                     <div className="grid grid-cols-2 gap-2">
                       {[
                         { id: 'chainlink', label: 'Chainlink' },
@@ -307,8 +304,8 @@ export default function SnapToQuoteFence() {
                           onClick={() => setFenceType(m.id as any)}
                           className={`py-2 px-2 text-sm font-medium rounded-xl border transition-all ${
                             fenceType === m.id
-                              ? 'bg-tf-surface border-tf-primary text-tf-primary-dark shadow-sm'
-                              : 'bg-white border-tf-border text-tf-primary/70 hover:border-tf-accent hover:bg-tf-surface/50'
+                              ? 'bg-emerald-50 border-emerald-500 text-emerald-700 shadow-sm'
+                              : 'bg-white border-emerald-100 text-emerald-600/70 hover:border-emerald-300 hover:bg-emerald-50/50'
                           }`}
                         >
                           {m.label}
@@ -318,16 +315,16 @@ export default function SnapToQuoteFence() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-medium text-tf-primary uppercase tracking-wider">Height</label>
-                    <div className="flex bg-tf-surface/50 rounded-xl p-1 border border-tf-border">
+                    <label className="text-xs font-medium text-emerald-400 uppercase tracking-wider">Height</label>
+                    <div className="flex bg-emerald-50/50 rounded-xl p-1 border border-emerald-100">
                       {['4', '6', '8'].map((h) => (
                         <button
                           key={h}
                           onClick={() => setHeight(h as any)}
                           className={`flex-1 py-2 text-sm font-medium rounded-lg transition-all ${
                             height === h
-                              ? 'bg-white shadow-sm text-tf-primary-dark border border-tf-border'
-                              : 'text-tf-primary/70 hover:text-tf-primary-dark'
+                              ? 'bg-white shadow-sm text-emerald-900 border border-emerald-200'
+                              : 'text-emerald-600/70 hover:text-emerald-900'
                           }`}
                         >
                           {h} ft
@@ -343,7 +340,7 @@ export default function SnapToQuoteFence() {
           {drawingCategory === 'gate' && (
             <>
               <div className="space-y-2">
-                <label className="text-xs font-medium text-tf-primary uppercase tracking-wider">Gate Type</label>
+                <label className="text-xs font-medium text-emerald-400 uppercase tracking-wider">Gate Type</label>
                 <div className="grid grid-cols-2 gap-2">
                   {[
                     { id: 'swinging', label: 'Swinging' },
@@ -354,8 +351,8 @@ export default function SnapToQuoteFence() {
                       onClick={() => setGateType(m.id as any)}
                       className={`py-2 px-2 text-sm font-medium rounded-xl border transition-all ${
                         gateType === m.id
-                          ? 'bg-tf-surface border-tf-primary text-tf-primary-dark shadow-sm'
-                          : 'bg-white border-tf-border text-tf-primary/70 hover:border-tf-accent hover:bg-tf-surface/50'
+                          ? 'bg-emerald-50 border-emerald-500 text-emerald-700 shadow-sm'
+                          : 'bg-white border-emerald-100 text-emerald-600/70 hover:border-emerald-300 hover:bg-emerald-50/50'
                       }`}
                     >
                       {m.label}
@@ -365,7 +362,7 @@ export default function SnapToQuoteFence() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-medium text-tf-primary uppercase tracking-wider">Material</label>
+                <label className="text-xs font-medium text-emerald-400 uppercase tracking-wider">Material</label>
                 <div className="grid grid-cols-3 gap-2">
                   {[
                     { id: 'wood', label: 'Wood' },
@@ -377,8 +374,8 @@ export default function SnapToQuoteFence() {
                       onClick={() => setGateMaterial(m.id as any)}
                       className={`py-2 px-1 text-xs font-medium rounded-xl border transition-all ${
                         gateMaterial === m.id
-                          ? 'bg-tf-surface border-tf-primary text-tf-primary-dark shadow-sm'
-                          : 'bg-white border-tf-border text-tf-primary/70 hover:border-tf-accent hover:bg-tf-surface/50'
+                          ? 'bg-emerald-50 border-emerald-500 text-emerald-700 shadow-sm'
+                          : 'bg-white border-emerald-100 text-emerald-600/70 hover:border-emerald-300 hover:bg-emerald-50/50'
                       }`}
                     >
                       {m.label}
@@ -388,7 +385,7 @@ export default function SnapToQuoteFence() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-xs font-medium text-tf-primary uppercase tracking-wider">Width</label>
+                <label className="text-xs font-medium text-emerald-400 uppercase tracking-wider">Width</label>
                 <div className="grid grid-cols-3 gap-2">
                   {[
                     { id: 'walkway', label: 'Walkway' },
@@ -400,8 +397,8 @@ export default function SnapToQuoteFence() {
                       onClick={() => setGateWidth(m.id as any)}
                       className={`py-2 px-1 text-xs font-medium rounded-xl border transition-all ${
                         gateWidth === m.id
-                          ? 'bg-tf-surface border-tf-primary text-tf-primary-dark shadow-sm'
-                          : 'bg-white border-tf-border text-tf-primary/70 hover:border-tf-accent hover:bg-tf-surface/50'
+                          ? 'bg-emerald-50 border-emerald-500 text-emerald-700 shadow-sm'
+                          : 'bg-white border-emerald-100 text-emerald-600/70 hover:border-emerald-300 hover:bg-emerald-50/50'
                       }`}
                     >
                       {m.label}
@@ -415,7 +412,7 @@ export default function SnapToQuoteFence() {
           {points.length >= 2 && (
             <button 
               onClick={handleSaveStructure} 
-              className="w-full bg-tf-primary text-white py-2.5 rounded-xl text-sm font-medium hover:bg-tf-primary-dark transition-colors flex items-center justify-center gap-2"
+              className="w-full bg-emerald-600 text-white py-2.5 rounded-xl text-sm font-medium hover:bg-emerald-700 transition-colors flex items-center justify-center gap-2"
             >
               <Plus className="w-4 h-4" />
               Save {drawingCategory === 'fence' ? 'Fence Line' : 'Gate'}
@@ -425,16 +422,16 @@ export default function SnapToQuoteFence() {
 
         {structures.length > 0 && (
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold text-tf-primary-dark px-1">Saved Structures</h4>
+            <h4 className="text-sm font-semibold text-emerald-900 px-1">Saved Structures</h4>
             {structures.map(s => (
-              <div key={s.id} className="bg-white p-3 rounded-xl border border-tf-border flex items-center justify-between shadow-sm">
+              <div key={s.id} className="bg-white p-3 rounded-xl border border-emerald-100 flex items-center justify-between shadow-sm">
                 <div className="flex items-center gap-3">
                   <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: s.color }}></div>
                   <div>
-                    <div className="text-sm font-medium text-tf-primary-dark capitalize leading-tight">
+                    <div className="text-sm font-medium text-emerald-900 capitalize leading-tight">
                       {s.category === 'fence' ? `${s.fenceType} Fence (${s.height}ft)` : `${s.gateType} Gate`}
                     </div>
-                    <div className="text-xs text-tf-primary mt-0.5 capitalize">
+                    <div className="text-xs text-emerald-500 mt-0.5 capitalize">
                       {s.category === 'fence' ? `${s.linearFootage?.toFixed(1)} ft` : `${s.gateWidth} • ${s.gateMaterial}`}
                     </div>
                   </div>
@@ -450,51 +447,51 @@ export default function SnapToQuoteFence() {
         <motion.div 
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-br from-tf-primary-dark to-blue-900 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden"
+          className="bg-gradient-to-br from-emerald-900 to-blue-900 text-white p-6 rounded-2xl shadow-lg relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full blur-3xl -mr-10 -mt-10"></div>
           
-          <h3 className="text-tf-primary-dark text-sm font-medium mb-4 flex items-center gap-2">
+          <h3 className="text-emerald-200 text-sm font-medium mb-4 flex items-center gap-2">
             <Ruler className="w-4 h-4" />
             Draft Quote Range
           </h3>
           
           <div className="mb-6">
             <div className="text-4xl font-light tracking-tight">
-              ${Math.round(totalMin).toLocaleString()} <span className="text-2xl text-tf-accent">-</span> ${Math.round(totalMax).toLocaleString()}
+              ${Math.round(totalMin).toLocaleString()} <span className="text-2xl text-emerald-300">-</span> ${Math.round(totalMax).toLocaleString()}
             </div>
-            <div className="text-tf-accent text-sm mt-2 font-mono flex items-center gap-2">
+            <div className="text-emerald-300 text-sm mt-2 font-mono flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4" />
               {totalFeet.toFixed(1)} Total Linear Feet
             </div>
           </div>
 
-          <div className="space-y-2 text-sm border-t border-white/20 pt-4">
-            <div className="flex justify-between text-tf-accent/80">
+          <div className="space-y-2 text-sm border-t border-emerald-800/50 pt-4">
+            <div className="flex justify-between text-emerald-200">
               <span>Structures</span>
               <span className="text-white">{structures.length + (points.length >= 2 ? 1 : 0)}</span>
             </div>
-            <div className="flex justify-between text-tf-accent/80">
+            <div className="flex justify-between text-emerald-200">
               <span>Installation</span>
               <span className="text-white">Included</span>
             </div>
-            <div className="flex justify-between text-tf-accent/80">
+            <div className="flex justify-between text-emerald-200">
               <span>Best fit</span>
               <span className="text-white">Residential + gate work</span>
             </div>
           </div>
 
-          <button className="w-full mt-6 bg-white text-tf-primary-dark hover:bg-tf-surface font-semibold py-3 rounded-xl transition-colors shadow-md">
+          <button className="w-full mt-6 bg-white text-emerald-900 hover:bg-emerald-50 font-semibold py-3 rounded-xl transition-colors shadow-md">
             Request Site Visit
           </button>
         </motion.div>
       </div>
 
-      <div className="lg:col-span-8 h-[500px] lg:h-full bg-tf-surface rounded-2xl overflow-hidden shadow-sm border border-tf-border relative">
+      <div className="lg:col-span-8 h-[500px] lg:h-full bg-emerald-50 rounded-2xl overflow-hidden shadow-sm border border-emerald-100 relative">
         {isLocationLocked && (
           <div className="absolute inset-0 z-[1000] bg-black/40 backdrop-blur-[2px] flex items-center justify-center p-4">
             <div className="bg-white p-6 rounded-2xl shadow-2xl max-w-md w-full text-center">
-              <div className="w-12 h-12 bg-tf-surface text-tf-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold text-slate-900 mb-2">Where should we start the quote?</h3>
@@ -506,7 +503,7 @@ export default function SnapToQuoteFence() {
                   onChange={setAddress} 
                   onSelect={handleAddressSelect} 
                   placeholder="Enter address..." 
-                  theme="tf" 
+                  theme="emerald" 
                 />
               </div>
             </div>
