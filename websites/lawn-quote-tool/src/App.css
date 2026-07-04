@@ -408,6 +408,76 @@ body {
   background: linear-gradient(180deg, rgba(220, 237, 242, 0.6), rgba(255, 255, 255, 0.96));
 }
 
+/* ===== Photography background overlays ===== */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: url(./assets/photos/mc-lawn-hero-manicured-lawn.jpg);
+  background-size: cover;
+  background-position: center 25%;
+  opacity: 0.5;
+}
+
+.builder-panel {
+  position: relative;
+  isolation: isolate;
+}
+
+.builder-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: url(./assets/photos/mc-lawn-crew-working.jpg);
+  background-size: cover;
+  background-position: 30% center;
+  opacity: 0.35;
+}
+
+.estimate-panel {
+  position: relative;
+  isolation: isolate;
+}
+
+.estimate-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: url(./assets/photos/mc-lawn-lake-erie-property.jpg);
+  background-size: cover;
+  background-position: center 35%;
+  opacity: 0.28;
+}
+
+.note-panel.warm {
+  position: relative;
+  isolation: isolate;
+}
+
+.note-panel.warm::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: url(./assets/photos/mc-lawn-garden-showcase.jpg);
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.3;
+}
+
 @media (max-width: 1040px) {
   .hero,
   .quote-grid,
