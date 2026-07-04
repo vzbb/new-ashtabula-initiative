@@ -1,127 +1,39 @@
 import { useState, useEffect } from "react";
+import { callOpenRouterAPI, isOpenRouterConfigured } from "../../../shared/api-client";
 import "./App.css";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-
-// === NAI API Client - Robust Error Handling & Retry Logic ===
-const API_CONFIG = {
-  TIMEOUT_MS: 30000,
-  MAX_RETRIES: 3,
-  INITIAL_RETRY_DELAY_MS: 1000,
-  MAX_RETRY_DELAY_MS: 10000,
-  RATE_LIMIT_STATUS: 429,
-  RETRYABLE_STATUS_CODES: [408, 429, 500, 502, 503, 504],
-};
-
-const delay = (ms) => {
-  const jitter = Math.random() * 200;
-  return new Promise(resolve => setTimeout(resolve, ms + jitter));
-};
-
-const getBackoffDelay = (retryCount) => {
-  const exponentialDelay = API_CONFIG.INITIAL_RETRY_DELAY_MS * Math.pow(2, retryCount);
-  return Math.min(exponentialDelay, API_CONFIG.MAX_RETRY_DELAY_MS);
-};
-
-const fetchWithTimeout = async (url, options = {}, timeoutMs = API_CONFIG.TIMEOUT_MS) => {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    const response = await fetch(url, { ...options, signal: controller.signal });
-    return response;
-  } catch (error) {
-    if (error.name === 'AbortError') {
-      throw new Error('Request timed out. Please try again.');
-    }
-    throw error;
-  } finally {
-    clearTimeout(timeoutId);
-  }
-};
-
-const isRetryable = (errorOrResponse) => {
-  if (errorOrResponse instanceof Response) {
-    return API_CONFIG.RETRYABLE_STATUS_CODES.includes(errorOrResponse.status);
-  }
-  const errorMessage = errorOrResponse.message?.toLowerCase() || '';
-  return (
-    errorOrResponse.name === 'TypeError' ||
-    errorMessage.includes('fetch') ||
-    errorMessage.includes('network') ||
-    errorMessage.includes('failed to fetch') ||
-    errorMessage.includes('timeout')
-  );
-};
-
-const callGeminiAPI = async (prompt, model = 'gemini-1.5-flash', retryCount = 0) => {
-  if (!apiKey || apiKey === 'undefined') {
-    throw new Error('API key not configured. Please check your environment settings.');
-  }
-
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-  const options = {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-  };
-
-  try {
-    const response = await fetchWithTimeout(url, options, API_CONFIG.TIMEOUT_MS);
-
-    if (response.status === API_CONFIG.RATE_LIMIT_STATUS) {
-      if (retryCount < API_CONFIG.MAX_RETRIES) {
-        await delay(getBackoffDelay(retryCount));
-        return callGeminiAPI(prompt, model, retryCount + 1);
-      }
-      throw new Error('Rate limit exceeded. Please wait a moment and try again.');
-    }
-
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      const errorMessage = errorData.error?.message || `API error: ${response.status}`;
-      if (API_CONFIG.RETRYABLE_STATUS_CODES.includes(response.status) && retryCount < API_CONFIG.MAX_RETRIES) {
-        await delay(getBackoffDelay(retryCount));
-        return callGeminiAPI(prompt, model, retryCount + 1);
-      }
-      throw new Error(errorMessage);
-    }
-
-    const data = await response.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-    if (!text) {
-      throw new Error('No response content received from API.');
-    }
-    return text;
-  } catch (error) {
-    if (isRetryable(error) && retryCount < API_CONFIG.MAX_RETRIES) {
-      await delay(getBackoffDelay(retryCount));
-      return callGeminiAPI(prompt, model, retryCount + 1);
-    }
-
-    let userMessage = 'An error occurred while processing your request.';
-    if (error.message?.includes('timeout')) {
-      userMessage = 'Request timed out. Please check your connection and try again.';
-    } else if (error.message?.includes('Rate limit') || error.message?.includes('API key') || error.message?.includes('No response content')) {
-      userMessage = error.message;
-    }
-    throw new Error(userMessage);
-  }
-};
-// === End NAI API Client ===
-
-const geminiService = {
-  async generateContent(prompt) {
-    return await callGeminiAPI(prompt);
-  }
-};
-
-// Engineering logo - gear with blueprint style
-const LogoIcon = () => (
-  <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="25" cy="25" r="22" stroke="#475569" strokeWidth="2" fill="#f8fafc" strokeDasharray="4 2"/>
-    <circle cx="25" cy="25" r="16" stroke="#3b82f6" strokeWidth="2.5" fill="none"/>
-    <path d="M25 9v6M25 35v6M9 25h6M35 25h6M13.6 13.6l4.2 4.2M32.2 32.2l4.2 4.2M13.6 36.4l4.2-4.2M32.2 17.8l4.2-4.2" stroke="#475569" strokeWidth="2.5" strokeLinecap="round"/>
-    <circle cx="25" cy="25" r="6" fill="#3b82f6"/>
+// === City of Ashtabula Seal ===
+const CitySeal = ({ size = 48 }) => (
+  <svg width={size} height={size} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="City of Ashtabula Seal">
+    <defs>
+      <linearGradient id="seal-bg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#1B3A5C"/>
+        <stop offset="100%" stopColor="#0F2440"/>
+      </linearGradient>
+    </defs>
+    {/* Outer ring */}
+    <circle cx="100" cy="100" r="98" fill="url(#seal-bg)" stroke="#C8A84E" strokeWidth="3"/>
+    <circle cx="100" cy="100" r="88" fill="none" stroke="#C8A84E" strokeWidth="1.5"/>
+    {/* Inner ring */}
+    <circle cx="100" cy="100" r="68" fill="none" stroke="#C8A84E" strokeWidth="1" opacity="0.6"/>
+    {/* Bridge icon */}
+    <path d="M60 120 L60 85 Q60 75 70 75 L80 75 L80 120 M120 120 L120 85 Q120 75 130 75 L140 75 L140 120" stroke="#C8A84E" strokeWidth="2.5" fill="none"/>
+    <path d="M70 120 L130 120" stroke="#C8A84E" strokeWidth="2"/>
+    <path d="M60 120 L55 130 M140 120 L145 130" stroke="#C8A84E" strokeWidth="2"/>
+    {/* Water waves */}
+    <path d="M55 125 Q65 118 75 125 Q85 132 95 125 Q105 118 115 125 Q125 132 135 125 Q145 118 145 125" stroke="#C8A84E" strokeWidth="1" fill="none" opacity="0.5"/>
+    {/* Center star */}
+    <polygon points="100,38 104,50 117,50 107,58 110,70 100,62 90,70 93,58 83,50 96,50" fill="#C8A84E"/>
+    {/* Text on outer ring - top */}
+    <text x="100" y="22" textAnchor="middle" fill="#C8A84E" fontSize="11" fontFamily="serif" fontWeight="700" letterSpacing="2">CITY OF ASHTABULA</text>
+    {/* Text on outer ring - bottom */}
+    <text x="100" y="185" textAnchor="middle" fill="#C8A84E" fontSize="8" fontFamily="serif" fontWeight="600" letterSpacing="1.5">EST. 1891</text>
+    {/* Gear teeth on inner ring */}
+    <g stroke="#C8A84E" strokeWidth="1" opacity="0.4">
+      {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map(angle => (
+        <line key={angle} x1={100 + 80 * Math.cos(angle * Math.PI / 180)} y1={100 + 80 * Math.sin(angle * Math.PI / 180)} x2={100 + 75 * Math.cos(angle * Math.PI / 180)} y2={100 + 75 * Math.sin(angle * Math.PI / 180)}/>
+      ))}
+    </g>
   </svg>
 );
 
@@ -130,72 +42,77 @@ function App() {
   const [summary, setSummary] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [apiConfigured, setApiConfigured] = useState(true);
+  const [apiConfigured, setApiConfigured] = useState(false);
 
   useEffect(() => {
-    if (!apiKey || apiKey === 'undefined') setApiConfigured(false);
+    setApiConfigured(isOpenRouterConfigured());
   }, []);
 
   const analyze = async () => {
-    if (!apiConfigured) { setError("API key not configured."); return; }
+    if (!apiConfigured) { setError("API key not configured. Contact the Engineering Division for access."); return; }
     setLoading(true); setError(""); setSummary("");
     try {
-      const prompt = `Summarize key engineering considerations for: ${brief}. Provide 3 bullets and a CTA to schedule review. 90 words max.`;
-      const text = await geminiService.generateContent(prompt);
+      const text = await callOpenRouterAPI({
+        prompt: `You are the City of Ashtabula Engineering Division. Summarize key engineering considerations for: ${brief}. Provide 3 professional bullet points and a recommended next step. 90 words max.`,
+        system: "You are a municipal engineering assistant for the City of Ashtabula. Respond in a clear, professional, public-service tone. Use 'we' for the Engineering Division.",
+        model: "google/gemini-2.5-flash-lite"
+      });
       setSummary(text);
     } catch (e) { setError(e.message); } finally { setLoading(false); }
   };
 
   return (
     <div className="page">
-      <div className="bg-grid" aria-hidden="true">
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-          <defs>
-            <pattern id="blueprint" width="20" height="20" patternUnits="userSpaceOnUse">
-              <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" strokeWidth="0.5"/>
-            </pattern>
-          </defs>
-          <rect width="100" height="100" fill="url(#blueprint)"/>
-        </svg>
-      </div>
-
-      <header className="header">
-        <div className="logo">
-          <LogoIcon />
-          <div className="logo-text">
-            <span className="logo-title">Engineer's Assistant</span>
-            <span className="logo-subtitle">AI-Powered Technical Analysis</span>
+      {/* Hero Section */}
+      <section className="hero" style={{ '--hero-image': 'url(/hero.webp)' }}>
+        <div className="hero-overlay" />
+        <div className="hero-grid" aria-hidden="true" />
+        
+        <header className="header">
+          <div className="logo">
+            <CitySeal size={48} />
+            <div className="logo-text">
+              <span className="logo-title">City of Ashtabula Engineering Division</span>
+              <span className="logo-subtitle">Building a Better Ashtabula</span>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <main className="content">
-        <div className="hero">
-          <h1>Fast technical summaries for clients</h1>
-          <p className="sub">Gemini‑powered engineering insights that communicate complexity with clarity.</p>
-          
+        <div className="hero-content">
+          <div className="jurisdiction-badges">
+            <span className="jurisdiction-badge">City</span>
+            <span className="jurisdiction-badge">County</span>
+            <span className="jurisdiction-badge">Zoning</span>
+          </div>
+          <h1>Fast technical summaries for residents &amp; contractors</h1>
+          <p className="hero-subtitle">
+            AI‑powered engineering insights that communicate complexity with clarity.
+          </p>
           <div className="trust-badges">
-            <div className="badge">
+            <div className="badge badge-glass">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
               </svg>
-              Gemini API
+              AI‑Powered Guidance
             </div>
-            <div className="badge">
+            <div className="badge badge-glass">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
               </svg>
-              5‑second output
+              Fast Response
             </div>
-            <div className="badge">
+            <div className="badge badge-glass">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <polyline points="20 6 9 17 4 12"/>
               </svg>
-              Clear guidance
+              Clear Guidance
             </div>
           </div>
         </div>
+      </section>
 
+      {/* Main Content */}
+      <main className="content">
         <div className="input-section">
           <div className="input-card">
             <div className="input-header">
@@ -207,7 +124,7 @@ function App() {
                 </svg>
               </div>
               <label>Project Brief</label>
-            </div>            
+            </div>
             <textarea 
               value={brief} 
               onChange={(e) => setBrief(e.target.value)}
@@ -227,15 +144,10 @@ function App() {
                   <>Generate Summary →</>
                 )}
               </button>
-              <button className="secondary">Book Consult</button>
+              <button className="secondary" onClick={() => window.location.href = "tel:4409927132"}>Call Engineering Division</button>
             </div>
           </div>
 
-          {!apiConfigured && (
-            <div className="alert alert-warning">
-              <strong>⚠️ Setup Required:</strong> Copy .env.example to .env and add your Gemini API key.
-            </div>
-          )}
           {error && <div className="alert alert-error">{error}</div>}
 
           <div className="result-card">
@@ -249,8 +161,8 @@ function App() {
                   <polyline points="10 9 9 9 8 9"/>
                 </svg>
               </div>
-              <h3>Analysis Summary</h3>
-              <span className="version-badge">Gemini 1.5 Flash</span>
+              <h3>Engineering Analysis</h3>
+              <span className="version-badge">AI Guidance</span>
             </div>
             {summary ? (
               <div className="result-content">
@@ -262,34 +174,45 @@ function App() {
                   <rect x="3" y="3" width="18" height="18" rx="2"/>
                   <path d="M9 12h6M9 16h6M9 8h3" strokeLinecap="round"/>
                 </svg>
-                <p>Enter your project brief and click "Generate Summary" to see AI-powered analysis.</p>
+                <p>Enter your project brief and click "Generate Summary" to receive AI-powered guidance from the Engineering Division.</p>
               </div>
             )}
           </div>
         </div>
 
         <div className="features">
-          <div className="feature">
+          <div className="feature" style={{'--accent-color': 'var(--signal-blue)'}}>
             <div className="feature-num">01</div>
-            <h4>Clarity</h4>
-            <p>Short, client‑ready notes that translate technical complexity.</p>
+            <h4>Permit Clarity</h4>
+            <p>We help you understand which permits apply to your project and how to navigate city requirements.</p>
           </div>
-          <div className="feature">
+          <div className="feature" style={{'--accent-color': 'var(--signal-blue)'}}>
             <div className="feature-num">02</div>
             <h4>Faster Reviews</h4>
-            <p>Reduce back‑and‑forth with stakeholders and approval boards.</p>
+            <p>Reduce back‑and‑forth with stakeholders and approval boards using clear, structured summaries.</p>
           </div>
-          <div className="feature">
+          <div className="feature" style={{'--accent-color': 'var(--teal)'}}>
             <div className="feature-num">03</div>
-            <h4>More Projects</h4>
-            <p>Clear next steps help you move from proposal to execution.</p>
+            <h4>Infrastructure Guidance</h4>
+            <p>From driveways to drainage, we provide next steps to move your project from plan to execution.</p>
           </div>
+        </div>
+
+        <div className="disclaimer">
+          <p><strong>Disclaimer:</strong> This AI-powered guidance is provided as a courtesy by the City of Ashtabula Engineering Division. It is not a substitute for official engineering review or legal advice. Always consult with a licensed engineer for your specific project.</p>
         </div>
       </main>
 
       <footer className="footer">
         <div className="footer-line" />
-        <p>Local Engineers • Ashtabula County, OH</p>
+        <div className="footer-content">
+          <CitySeal size={32} />
+          <div className="footer-text">
+            <p className="footer-name">City of Ashtabula Engineering Division</p>
+            <p className="footer-address">123 W 44th St, Ashtabula, OH 44004 | (440) 992-7132</p>
+            <p className="footer-hours">Mon-Fri 7:30 AM - 4:00 PM</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
