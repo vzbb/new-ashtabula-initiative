@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 // API Configuration
 const API_TIMEOUT = 30000; // 30 seconds
@@ -29,14 +30,22 @@ const fetchWithTimeout = async (url, options, timeoutMs) => {
 };
 
 // Helper: API call with retry logic
-const callGeminiAPI = async (prompt, retryCount = 0) => {
+const callOpenRouterAPI = async (prompt, retryCount = 0) => {
   try {
     const res = await fetchWithTimeout(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+      OPENROUTER_URL,
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+          "HTTP-Referer": window.location.origin,
+          "X-Title": "NAI - adaptive-reuse-planner",
+        },
+        body: JSON.stringify({
+          model: "google/gemini-1.5-flash",
+          messages: [{ role: "user", content: prompt }],
+        }),
       },
       API_TIMEOUT
     );
@@ -46,7 +55,7 @@ const callGeminiAPI = async (prompt, retryCount = 0) => {
       if (retryCount < MAX_RETRIES) {
         const backoffDelay = INITIAL_RETRY_DELAY * Math.pow(2, retryCount);
         await delay(backoffDelay);
-        return callGeminiAPI(prompt, retryCount + 1);
+        return callOpenRouterAPI(prompt, retryCount + 1);
       }
       throw new Error('Rate limit exceeded. Please wait a moment and try again.');
     }
@@ -63,7 +72,7 @@ const callGeminiAPI = async (prompt, retryCount = 0) => {
     if (retryCount < MAX_RETRIES && (error.message.includes('fetch') || error.message.includes('network') || error.name === 'TypeError')) {
       const backoffDelay = INITIAL_RETRY_DELAY * Math.pow(2, retryCount);
       await delay(backoffDelay);
-      return callGeminiAPI(prompt, retryCount + 1);
+      return callOpenRouterAPI(prompt, retryCount + 1);
     }
     throw error;
   }
@@ -103,12 +112,12 @@ function App() {
     setIdeas("");
     try {
       if (!apiKey) {
-        throw new Error("API key not configured. Add VITE_GEMINI_API_KEY to your environment.");
+        throw new Error("API key not configured. Add VITE_OPENROUTER_API_KEY to your environment.");
       }
       const prompt = `Suggest 3 adaptive reuse concepts for: ${building}. Include a short feasibility note for zoning. 90 words max.`;
-      const data = await callGeminiAPI(prompt);
-      const text = data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
-      if (!text) throw new Error("No response from Gemini.");
+      const data = await callOpenRouterAPI(prompt);
+      const text = data?.choices?.[0]?.message?.content || "";
+      if (!text) throw new Error("No response from OpenRouter.");
       setIdeas(text);
     } catch (e) {
       setError(e.message || "Failed to generate. Please check your connection and try again.");

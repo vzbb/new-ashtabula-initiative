@@ -1,18 +1,26 @@
 import { useState } from "react";
 import "./App.css";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
+const OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 // === NAI API Client ===
-const callGeminiAPI = async (prompt) => {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
-  const res = await fetch(url, {
+const callOpenRouterAPI = async (prompt) => {
+  const res = await fetch(OPENROUTER_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+      "HTTP-Referer": window.location.origin,
+      "X-Title": "NAI - cashflow-tracker",
+    },
+    body: JSON.stringify({
+      model: "google/gemini-1.5-flash",
+      messages: [{ role: "user", content: prompt }],
+    }),
   });
   const data = await res.json();
-  return data?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+  return data?.choices?.[0]?.message?.content || "";
 };
 
 // Icons
@@ -62,7 +70,7 @@ Given:
 
 Provide 3 specific, actionable tips to improve cash flow. Be practical and tailored to a small business owner. 80 words max. Professional but friendly tone.`;
 
-      const text = await callGeminiAPI(prompt);
+      const text = await callOpenRouterAPI(prompt);
       setInsight(text); // <-- FIXED: was missing
     } catch (e) {
       setError(e.message || "Failed to generate insights.");

@@ -4,8 +4,8 @@
  */
 
 const API_CONFIG = {
-  GEMINI_API_KEY: import.meta.env.VITE_GEMINI_API_KEY,
-  GEMINI_API_URL: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',
+  OPENROUTER_API_KEY: import.meta.env.VITE_OPENROUTER_API_KEY,
+  OPENROUTER_URL: 'https://openrouter.ai/api/v1/chat/completions',
   TIMEOUT_MS: 30000,
 };
 
@@ -14,17 +14,17 @@ const API_CONFIG = {
  * @returns {Object} Validation result with status and error message if applicable
  */
 export function validateApiConfig() {
-  if (!API_CONFIG.GEMINI_API_KEY) {
+  if (!API_CONFIG.OPENROUTER_API_KEY) {
     return {
       valid: false,
-      error: 'Gemini API key is not configured. Please set VITE_GEMINI_API_KEY in your .env file.',
+      error: 'OpenRouter API key is not configured. Please set VITE_OPENROUTER_API_KEY in your .env file.',
     };
   }
   
-  if (API_CONFIG.GEMINI_API_KEY === 'your_gemini_api_key_here') {
+  if (API_CONFIG.OPENROUTER_API_KEY === 'your_openrouter_api_key_here') {
     return {
       valid: false,
-      error: 'Please replace the placeholder API key with your actual Gemini API key.',
+      error: 'Please replace the placeholder API key with your actual OpenRouter API key.',
     };
   }
   
@@ -60,14 +60,18 @@ export async function generateItinerary(theme, days) {
   
   try {
     const response = await fetch(
-      `${API_CONFIG.GEMINI_API_URL}?key=${API_CONFIG.GEMINI_API_KEY}`,
+      API_CONFIG.OPENROUTER_URL,
       {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${API_CONFIG.OPENROUTER_API_KEY}`,
+          'HTTP-Referer': window.location.origin,
+          'X-Title': 'NAI - mytrip-planner-export',
         },
         body: JSON.stringify({ 
-          contents: [{ parts: [{ text: prompt }] }] 
+          model: 'google/gemini-1.5-flash',
+          messages: [{ role: 'user', content: prompt }],
         }),
         signal: controller.signal,
       }
@@ -80,11 +84,11 @@ export async function generateItinerary(theme, days) {
       if (response.status === 400) {
         throw new Error('Invalid request. Please check your inputs and try again.');
       } else if (response.status === 401 || response.status === 403) {
-        throw new Error('API authentication failed. Please check your Gemini API key.');
+        throw new Error('API authentication failed. Please check your OpenRouter API key.');
       } else if (response.status === 429) {
         throw new Error('Rate limit exceeded. Please wait a moment and try again.');
       } else if (response.status >= 500) {
-        throw new Error('Gemini API service is temporarily unavailable. Please try again later.');
+        throw new Error('OpenRouter API service is temporarily unavailable. Please try again later.');
       } else {
         throw new Error(`API error (${response.status}): ${response.statusText}`);
       }
@@ -93,11 +97,11 @@ export async function generateItinerary(theme, days) {
     const data = await response.json();
     
     // Validate response structure
-    if (!data?.candidates || data.candidates.length === 0) {
+    if (!data?.choices || data.choices.length === 0) {
       throw new Error('Received empty response from AI service. Please try again.');
     }
     
-    const text = data.candidates[0]?.content?.parts?.[0]?.text?.trim();
+    const text = data.choices[0]?.message?.content?.trim();
     
     if (!text) {
       throw new Error('AI service returned empty content. Please try again.');
