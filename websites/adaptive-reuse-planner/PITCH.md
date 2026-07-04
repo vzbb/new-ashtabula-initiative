@@ -4,7 +4,7 @@
 
 "Imagine you're a city planner with a vacant warehouse sitting empty for two years. Every month it sits there, you're losing tax revenue and dealing with complaints from neighbors.
 
-Watch this. I enter the building details—historic warehouse, 18,000 square feet—and click Generate Concepts. In 10 seconds, Gemini gives me three viable reuse options: mixed-use retail with housing above, co-working space for remote workers, or a community arts center. Each comes with zoning feasibility notes.
+Watch this. I enter the building details—historic warehouse, 18,000 square feet—and click Generate Concepts. In 10 seconds, the AI gives me three viable reuse options: mixed-use retail with housing above, co-working space for remote workers, or a community arts center. Each comes with zoning feasibility notes.
 
 Instead of months of studies, you have actionable concepts to present to council today. That's the Adaptive Reuse Planner—turning vacant buildings into revenue-ready concepts."
 
@@ -26,7 +26,7 @@ Instead of months of studies, you have actionable concepts to present to council
 2. **Zoning Feasibility Notes** — Each concept includes preliminary zoning considerations
 3. **Shareable Summaries** — Clear, professional output ready for council or stakeholder presentations
 4. **Economic Impact Focus** — Concepts prioritize tax base improvement and community benefit
-5. **Gemini AI Powered** — Leverages Google's latest AI for accurate, contextual suggestions
+5. **AI Powered** — Leverages the latest AI models for accurate, contextual suggestions
 6. **Customizable Inputs** — Adjust building specs, location details, and community priorities
 
 ---
@@ -49,6 +49,6 @@ For cities struggling with vacant commercial properties, the Adaptive Reuse Plan
 
 ## Technical Notes
 
-- **API:** Google Gemini 1.5 Flash
-- **Setup:** VITE_GEMINI_API_KEY environment variable required
+- **API:** OpenRouter (configurable model, defaults to gpt-4o-mini)
+- **Setup:** VITE_OPENROUTER_API_KEY environment variable required
 - **No data storage** — All processing happens via API, no building data retained

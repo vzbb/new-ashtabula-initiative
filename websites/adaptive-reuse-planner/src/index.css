@@ -1,22 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --chamber-navy: #003366;
-  --chamber-navy-light: #004080;
-  --chamber-white: #ffffff;
-  --chamber-gold: #d4af37;
-  --chamber-gold-light: #e5c158;
-  --chamber-green: #27ae60;
-  --chamber-charcoal: #2c3e50;
-  --chamber-grey: #f5f7fa;
-  --chamber-grey-dark: #e8ecf1;
-  
-  --bg-primary: var(--chamber-grey);
-  --text-primary: var(--chamber-charcoal);
-  --text-secondary: #5a6c7d;
-  --font-heading: 'Merriweather', Georgia, serif;
-  --font-body: 'Lato', system-ui, sans-serif;
-  
+  --brand-red: #811519;
+  --brand-red-dark: #6a1015;
+  --accent-red: #B91F24;
+  --logo-red: #B01020;
+  --secondary-red: #C03539;
+  --tertiary-red: #8E2D30;
+  --logo-gray: #606060;
+  --medium-gray: #666666;
+  --dark-gray: #555555;
+  --light-gray: #EFEFEF;
+  --white: #FFFFFF;
+
+  --bg-primary: var(--light-gray);
+  --text-primary: var(--dark-gray);
+  --text-secondary: var(--medium-gray);
+  --font-heading: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --font-body: 'Open Sans', Arial, Helvetica, sans-serif;
+
   font-family: var(--font-body);
   line-height: 1.6;
   font-weight: 400;
@@ -42,11 +44,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  color: var(--chamber-navy);
+  color: var(--brand-red);
 }
 
-a { color: var(--chamber-navy); text-decoration: none; transition: color 0.2s ease; }
-a:hover { color: var(--chamber-gold); }
+a { color: var(--brand-red); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--accent-red); }
 
 button {
   border-radius: 8px;
@@ -55,19 +57,19 @@ button {
   font-size: 0.9375rem;
   font-weight: 600;
   font-family: var(--font-body);
-  background: var(--chamber-navy);
-  color: var(--chamber-white);
+  background: var(--brand-red);
+  color: var(--white);
   cursor: pointer;
   transition: all 0.2s ease;
 }
+
 button:hover {
-  background: var(--chamber-gold);
-  color: var(--chamber-navy);
+  background: var(--accent-red);
 }
 
 input, select, textarea {
-  background: var(--chamber-white);
-  border: 1px solid var(--chamber-grey-dark);
+  background: var(--white);
+  border: 1px solid var(--light-gray);
   border-radius: 8px;
   padding: 12px 16px;
   color: var(--text-primary);
@@ -75,8 +77,9 @@ input, select, textarea {
   font-size: 14px;
   transition: all 0.2s ease;
 }
+
 input:focus, select:focus, textarea:focus {
   outline: none;
-  border-color: var(--chamber-navy);
-  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+  border-color: var(--brand-red);
+  box-shadow: 0 0 0 3px rgba(129, 21, 25, 0.1);
 }
