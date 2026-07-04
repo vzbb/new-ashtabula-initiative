@@ -1,5 +1,39 @@
-import { useState } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import './App.css';
+
+const SBDC_SITES = [
+  { slug: 'sbdc-business-counseling', name: 'Business Counseling', desc: 'Free one-on-one advising' },
+  { slug: 'sbdc-business-planning', name: 'Business Planning', desc: 'Structured plan builder' },
+  { slug: 'sbdc-educational-resources', name: 'Educational Resources', desc: 'Guides, templates & tools' },
+  { slug: 'sbdc-learning-modules', name: 'Learning Modules', desc: 'Self-paced courses' },
+  { slug: 'sbdc-support-tools', name: 'Support Tools', desc: 'Calculators & checklists' },
+];
+
+const CURRENT_SLUG = 'sbdc-educational-resources';
+
+// Live download counter — localStorage backed, persists across sessions
+const STORAGE_KEY = 'sbdc_educational_downloads';
+const BASE_COUNT = 12047;
+
+function getInitialCount() {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    const val = stored ? parseInt(stored, 10) : BASE_COUNT;
+    return isNaN(val) || val < BASE_COUNT ? BASE_COUNT : val;
+  } catch {
+    return BASE_COUNT;
+  }
+}
+
+function formatCount(n) {
+  return n.toLocaleString();
+}
+
+function formatCompact(n) {
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'k';
+  return n.toString();
+}
 
 // Book with Graduation Cap Logo - Lakeland SBDC
 const LogoIcon = () => (
@@ -83,6 +117,22 @@ const resources = [
 function App() {
   const [activeCategory, setActiveCategory] = useState(0);
   const [saved, setSaved] = useState([]);
+  const [downloadCount, setDownloadCount] = useState(getInitialCount);
+  const [animating, setAnimating] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const animTimer = useRef(null);
+
+  const handleDownload = useCallback(() => {
+    setDownloadCount(prev => {
+      const next = prev + 1;
+      try { localStorage.setItem(STORAGE_KEY, String(next)); } catch {}
+      return next;
+    });
+    // Trigger pulse animation
+    setAnimating(true);
+    if (animTimer.current) clearTimeout(animTimer.current);
+    animTimer.current = setTimeout(() => setAnimating(false), 600);
+  }, []);
 
   const toggleSave = (title) => {
     if (saved.includes(title)) {
@@ -105,12 +155,21 @@ function App() {
               <span className="logo-subtitle">SBDC</span>
             </div>
           </div>
-          <nav className="nav">
-            <a href="#">Resources</a>
-            <a href="#">Library</a>
-            <a href="#">Workshops</a>
-            <button className="nav-btn">Get Help</button>
+          <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}>
+            <a href="#" onClick={() => setMobileMenuOpen(false)}>Resources</a>
+            <a href="#" onClick={() => setMobileMenuOpen(false)}>Library</a>
+            <a href="#" onClick={() => setMobileMenuOpen(false)}>Workshops</a>
+            <button className="nav-btn" onClick={() => setMobileMenuOpen(false)}>Get Help</button>
           </nav>
+          <button
+            className="hamburger"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            <span className={`hamburger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+            <span className={`hamburger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+            <span className={`hamburger-line ${mobileMenuOpen ? 'open' : ''}`}></span>
+          </button>
         </div>
       </header>
 
@@ -136,8 +195,8 @@ function App() {
               <strong>50+</strong>
               <span>Resources</span>
             </div>
-            <div className="stat">
-              <strong>12k+</strong>
+            <div className={`stat ${animating ? 'count-pop' : ''}`}>
+              <strong className="download-count">{formatCount(downloadCount)}</strong>
               <span>Downloads</span>
             </div>
             <div className="stat">
@@ -179,7 +238,7 @@ function App() {
                   >
                     {saved.includes(item.title) ? '★' : '☆'}
                   </button>
-                  <button className="download-btn">Download</button>
+                  <button className="download-btn" onClick={handleDownload}>Download</button>
                 </div>
               </div>
             ))}
@@ -207,6 +266,32 @@ function App() {
             <div>
               <strong>Lakeland SBDC</strong>
               <p>Empowering entrepreneurs through education</p>
+            </div>
+          </div>
+          <div className="sbdc-cross-sell">
+            <div className="sbdc-cross-sell-title">SBDC Resource Network</div>
+            <div className="sbdc-cross-sell-grid">
+              {SBDC_SITES.map(site => {
+                const isActive = site.slug === CURRENT_SLUG;
+                return isActive ? (
+                  <div className="sbdc-cross-sell-link active" key={site.slug} aria-label={`${site.name} — current page`}>
+                    <span className="sbdc-cross-sell-link-name">{site.name}</span>
+                    <span className="sbdc-cross-sell-link-desc">{site.desc}</span>
+                    <span className="active-label">You are here</span>
+                  </div>
+                ) : (
+                  <a 
+                    href={`https://new-ashtabula-initiative.vercel.app/${site.slug}/`}
+                    className="sbdc-cross-sell-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit ${site.name} — opens in new tab`}
+                  >
+                    <span className="sbdc-cross-sell-link-name">{site.name}</span>
+                    <span className="sbdc-cross-sell-link-desc">{site.desc}</span>
+                  </a>
+                );
+              })}
             </div>
           </div>
           <p className="footer-network">Part of the Ohio SBDC Network</p>
