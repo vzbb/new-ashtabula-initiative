@@ -148,7 +148,7 @@ function DrawingToolbar({
   return (
     <>
       {/* Drawing mode toolbar — top center */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-[1000] flex items-center gap-1 bg-white/95 backdrop-blur-md rounded-xl shadow-lg border border-stone-200/60 p-1 transition-all duration-300">
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-[1001] flex items-center gap-1 bg-white/95 backdrop-blur-md rounded-xl shadow-lg border border-stone-200/60 p-1 transition-all duration-300">
         <button
           onClick={() => onModeChange('none')}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
@@ -213,7 +213,7 @@ function DrawingToolbar({
 
       {/* Point counter badge */}
       {hasPoints && (
-        <div className="absolute top-16 left-1/2 -translate-x-1/2 z-[1000] bg-stone-900/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full border border-white/10 transition-all duration-300">
+        <div className="absolute top-16 left-1/2 -translate-x-1/2 z-[1001] bg-stone-900/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full border border-white/10 transition-all duration-300">
           {points.length} point{points.length !== 1 ? 's' : ''} placed
           {mode === 'polygon' && points.length >= 3 && ' · polygon ready'}
         </div>
@@ -221,7 +221,7 @@ function DrawingToolbar({
 
       {/* Instruction tooltip */}
       {showTooltip && (
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[1000] transition-all duration-300">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[1001] transition-all duration-300">
           <div className="bg-black/75 text-white px-4 py-2 rounded-full text-xs font-medium backdrop-blur-md whitespace-nowrap shadow-lg">
             {canDraw
               ? `Click on the map to place ${mode === 'line' ? 'line' : 'polygon'} points`
@@ -391,7 +391,7 @@ export default function Map({
       />
 
       {/* Labels toggle — top right */}
-      <div className="absolute top-4 right-4 z-[1000] flex flex-col gap-2 transition-all duration-300">
+      <div className="absolute top-4 right-4 z-[1001] flex flex-col gap-2 transition-all duration-300">
         <button
           onClick={() => setShowLabels(!showLabels)}
           className={`flex items-center gap-2 px-3 py-2 rounded-lg shadow-md text-xs font-medium transition-all backdrop-blur-sm border ${
