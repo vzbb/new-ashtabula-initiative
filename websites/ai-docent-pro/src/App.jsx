@@ -248,12 +248,19 @@ Tags: tag1, tag2, tag3, tag4, tag5`;
 
             <div className="action-row">
               <button
-                className="btn btn-primary"
+                className={`btn btn-primary${loading ? " is-loading" : ""}`}
                 type="button"
                 onClick={generateNarration}
                 disabled={loading || !artifact.trim()}
               >
-                {loading ? "Generating guide..." : "Generate Museum Narration"}
+                {loading ? (
+                  <span className="btn-loading-content">
+                    <span className="btn-loading-dots">
+                      <span className="dot" /><span className="dot" /><span className="dot" />
+                    </span>
+                    Generating guide
+                  </span>
+                ) : "Generate Museum Narration"}
               </button>
               <button className="btn btn-secondary" type="button" onClick={toggleSpeech} disabled={!story}>
                 {speaking ? "Stop Audio" : "Play Audio Preview"}
@@ -291,7 +298,7 @@ Tags: tag1, tag2, tag3, tag4, tag5`;
             </div>
           </section>
 
-          <section className="output-section">
+          <div className={`output-section${loading ? " is-loading" : ""}`}>
             <div className="output-header">
               <h2 className="output-title">Narration output</h2>
               <span className="badge">{apiKey ? "Live AI + fallback" : "Local demo fallback"}</span>
@@ -304,7 +311,7 @@ Tags: tag1, tag2, tag3, tag4, tag5`;
                 Narration appears here once a museum stop is generated.
               </div>
             )}
-          </section>
+          </div>
         </div>
       </main>
 

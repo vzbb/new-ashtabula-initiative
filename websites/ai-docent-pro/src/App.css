@@ -455,6 +455,90 @@ body {
   border-left: 3px solid #e74c3c;
 }
 
+/* Button Shimmer — subtle gradient sweep during generation */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.btn-primary.is-loading {
+  position: relative;
+  overflow: hidden;
+  cursor: wait;
+}
+
+.btn-primary.is-loading .btn-loading-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--white) 0%,
+    var(--white) 30%,
+    rgba(254, 202, 87, 0.9) 50%,
+    var(--white) 70%,
+    var(--white) 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 1.6s ease-in-out infinite;
+  font-weight: 700;
+}
+
+/* Loading Dots */
+.btn-loading-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  -webkit-text-fill-color: initial;
+}
+
+.btn-loading-dots .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.3;
+  animation: dot-pulse 1.2s ease-in-out infinite;
+}
+
+.btn-loading-dots .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.btn-loading-dots .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes dot-pulse {
+  0%, 80%, 100% { 
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  40% { 
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* Output section pulse during generation */
+.output-section.is-loading .badge {
+  position: relative;
+  animation: badge-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(254, 202, 87, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(254, 202, 87, 0);
+  }
+}
+
 /* Loading */
 @keyframes spin {
   to { transform: rotate(360deg); }
