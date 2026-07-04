@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 535" width="1800" height="535">
+  <!-- Logo bounds: 1800x535 (scaled from original) -->
+  
+  <!-- Background is transparent -->
+
+  <!-- ===== ICON AREA (LEFT) ===== -->
+
+  <!-- White outline border around the whole icon block group -->
+  <rect x="76" y="93" width="144" height="357" rx="2" ry="2" fill="#B3D7F2" stroke="#F7F9F9" stroke-width="2"/>
+  
+  <!-- Light blue block: x=81-194, y=97-445 -->
+  <rect x="81" y="97" width="114" height="348" rx="1" ry="1" fill="#B3D7F2" stroke="none"/>
+
+  <!-- White separator zone between blocks (gap ~10px) -->
+  
+  <!-- Navy block: x=206-320, y=1-533 (full height) -->
+  <rect x="200" y="1" width="126" height="533" rx="1" ry="1" fill="#1A124C" stroke="#F7F9F9" stroke-width="2"/>
+
+  <!-- White separator zone between blocks -->
+  
+  <!-- Terracotta/reddish-brown block: x=331-445, y=97-445 -->
+  <rect x="325" y="97" width="126" height="348" rx="1" ry="1" fill="#BC4530" stroke="#F7F9F9" stroke-width="2"/>
+
+  <!-- Teal horizontal bar running across all icon blocks, y=268-332 (64px thick) -->
+  <rect x="81" y="268" width="370" height="64" rx="0" ry="0" fill="#36796A" opacity="0.85"/>
+  
+  <!-- Teal bar outline -->
+  <rect x="81" y="268" width="370" height="64" rx="0" ry="0" fill="none" stroke="#F7F9F9" stroke-width="1.5"/>
+
+  <!-- ===== TEXT AREA (RIGHT) ===== -->
+
+  <!-- Horizontal teal divider line under text area -->
+  <rect x="460" y="268" width="1310" height="64" rx="0" ry="0" fill="#00614B"/>
+
+  <!-- "ASHTABULA COUNTY" text -->
+  <text x="480" y="195" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="700" letter-spacing="4" fill="#00614B" text-anchor="start">
+    ASHTABULA COUNTY
+  </text>
+
+  <!-- "HISTORICAL SOCIETY" text -->
+  <text x="480" y="460" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="400" letter-spacing="6" fill="#00614B" text-anchor="start">
+    HISTORICAL SOCIETY
+  </text>
+
+</svg>

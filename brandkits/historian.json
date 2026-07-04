@@ -1,76 +1,124 @@
 {
   "mvp": "historian",
-  "generated_at": "2026-03-22T14:09:00Z",
-  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/historian.json",
+  "organization": "Ashtabula County Historical Society (ACHS)",
+  "generated_at": "2026-07-04",
+  "based_on_website": "https://ashtabulahistory.com/",
+  "based_on_research": "lead_research_json/historian.json",
   "research_sources": [
     "https://ashtabulahistory.com/",
-    "https://www.acdl.info/genealogy-archives",
-    "https://www.ashtabulagen.org/"
+    "https://commons.wikimedia.org/",
+    "https://dp.la/"
   ],
   "target_buyer": {
     "organization": "Ashtabula County Historical Society (ACHS)",
     "type": "Historical Preservation Organization",
     "website": "https://ashtabulahistory.com/",
-    "why_top_candidate": "Founded in 1838, second oldest historical society in Ohio. 185+ years of preserving Ashtabula County history. All-volunteer organization with museums, research library, and active preservation programs. Digital archiving and genealogy tools would enhance their mission.",
-    "fit_score": 92
-  },
-  "actual_brand_research": {
-    "existing_brand_name": "Ashtabula County Historical Society (ACHS)",
     "founded": 1838,
-    "history": "185+ years preserving Ashtabula County history",
     "distinction": "Second oldest historical society in Ohio",
     "organization_type": "All-volunteer organization",
     "phone": "866.533.3277",
+    "email": "ashcohs@gmail.com",
     "key_themes": ["Roots", "Bloom", "Bridge (past to present)", "Discover"],
-    "mission": "Preserve the history of Ashtabula County through research, preservation, and restoration",
-    "programs": [
-      "Museum properties",
-      "Research library",
-      "Preservation programs",
-      "Membership opportunities",
-      "Volunteer programs"
-    ],
-    "visual_style": "Heritage, scholarly, community-focused, timeless"
+    "mission": "Preserve the history of Ashtabula County through research, preservation, and restoration"
   },
-  "brandkit_for_mvp": {
-    "proposed_tagline": "Preserve the Past. Discover Your Roots. Share the Story.",
-    "positioning": "The digital history and genealogy platform for Ashtabula County Historical Society — connecting 185 years of heritage with modern research tools.",
-    "color_palette_derived_from_research": {
-      "primary": "#5D4037",
-      "accent": "#8D6E63",
-      "background": "#F5F5DC",
-      "text": "#3E2723",
-      "secondary": "#A1887F"
-    },
-    "typography_recommendation": {
-      "heading_font": "Classic serif with heritage feel",
-      "body_font": "Readable serif or clean sans-serif"
-    },
-    "mood_keywords_from_research": ["heritage", "timeless", "scholarly", "community", "preservation"],
-    "visual_direction": {
-      "hero_image_concept": "Historical photographs fading into modern research interface",
-      "color_scheme": "Warm browns and creams evoking aged paper and history",
-      "photography_style": "Historical archives, museum artifacts, genealogy research"
+  "logo_paths": {
+    "png": "branding_research/historian/logo.png",
+    "svg": "branding_research/historian/logo.svg",
+    "light": "branding_research/historian/logo-light.png",
+    "bridge_logo": "branding_research/historian/bridge-logo.png"
+  },
+  "colors": {
+    "primary": "#00614B",
+    "primary_name": "Deep Teal/Green",
+    "primary_usage": "Nav background, buttons, section backgrounds, image borders, CTA backgrounds",
+    "secondary": "#B3D6F1",
+    "secondary_name": "Light Sky Blue",
+    "secondary_usage": "Footer headings, icon lists, secondary brand elements",
+    "accent": "#BB4430",
+    "accent_name": "Terra Cotta/Brick Red",
+    "accent_usage": "Hover states, active nav, button hover, CTA hover",
+    "gold_accent": "#c1b696",
+    "gold_accent_name": "Warm Beige/Gold",
+    "gold_accent_usage": "Theme hover accent, date markers, event booking buttons",
+    "dark": "#2A2A2A",
+    "dark_name": "Dark Charcoal",
+    "dark_usage": "Footer background",
+    "light_text": "#F5F5F5",
+    "light_text_name": "Off-White",
+    "light_text_usage": "Text on dark backgrounds (nav, footer)",
+    "body_text": "#555555",
+    "body_text_name": "Body Gray",
+    "body_text_usage": "Paragraph text on light backgrounds",
+    "heading_text": "#25282e",
+    "heading_text_name": "Dark Slate",
+    "heading_text_usage": "Section heading text on light backgrounds",
+    "logo_dark_teal": "#005048",
+    "logo_light_blue": "#A8D0E6",
+    "logo_navy": "#2A3A7C",
+    "logo_brick_red": "#C85A4E",
+    "logo_forest_green": "#2E6B5A"
+  },
+  "typography": {
+    "heading_font": "Lora",
+    "heading_category": "Serif (slab-serif)",
+    "heading_weights": [400, 700],
+    "heading_fallback": "'Georgia', 'Times New Roman', serif",
+    "body_font": "Archivo",
+    "body_category": "Sans-serif (grotesque)",
+    "body_weights": [400, 500, 600, 700],
+    "body_fallback": "'Helvetica Neue', 'Arial', sans-serif",
+    "navigation_font": "Zilla Slab",
+    "navigation_weight": 400,
+    "navigation_size_px": 17,
+    "body_size": "16px",
+    "body_line_height": "28px (1.75)",
+    "body_letter_spacing": "0.2px",
+    "body_color": "#555555",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Lora:wght@400;700&display=swap",
+    "total_weights_loaded": 6
+  },
+  "imagery_path": "branding_research/historian/assets/",
+  "imagery_themes": [
+    "maritime & lighthouses",
+    "covered bridges",
+    "underground railroad",
+    "historic industrial",
+    "scenic & river views"
+  ],
+  "imagery_count": 10,
+  "imagery_credits_doc": "branding_research/historian/assets/README.md",
+  "brand_narrative": {
+    "tagline": "Preserve the Past. Discover Your Roots. Share the Story.",
+    "slogan_ideas": [
+      "Preserving Ashtabula County's Story Since 1838",
+      "Where the Past Meets the Present",
+      "Your Story. Our History. Ashtabula County.",
+      "Ashtabula County Has a Story Worth Telling"
+    ],
+    "positioning": "The digital history and genealogy platform for Ashtabula County Historical Society — connecting 185+ years of heritage with modern research tools.",
+    "brand_voice": "Scholarly but warm, knowledgeable but accessible. An enthusiastic archivist who loves sharing stories.",
+    "visual_style": {
+      "mood": ["heritage", "preservation", "timeless", "community", "scholarly"],
+      "color_scheme": "Deep teal dominant, with terra cotta accents and sky blue highlights",
+      "photography_style": "Historical photographs, museum interiors, local landmarks (harbor, bridges, covered bridges)"
     }
   },
-  "implementation_recommendations": {
-    "priority": 1,
-    "brand_alignment": "Align with ACHS heritage and preservation mission",
-    "key_features_needed": [
-      "Searchable digital archive for documents and photographs",
-      "Family tree builder with local record integration",
-      "Interactive timeline of Ashtabula County history",
-      "Cemetery and burial records mapping",
-      "Historical map overlays",
-      "Oral history recording tools",
-      "Educational modules for schools"
-    ],
-    "differentiators_based_on_research": [
-      "Second oldest historical society in Ohio (founded 1838)",
-      "185+ years of continuous operation",
-      "All-volunteer community organization",
-      "Multiple museum properties",
-      "Active preservation and restoration focus"
-    ]
-  }
+  "design_tokens": {
+    "spacing_scale": "theme default (based on 4px grid)",
+    "border_radius": "0px (Elementor buttons: square, theme uses 0px throughout)",
+    "button_css": {
+      "default": "background-color: #00614B; color: #FFFFFF; border: 2px solid #e5e5e5; padding: 13px 40px;",
+      "hover": "background-color: #BB4430; color: #ffffff; border-color: #BB4430;"
+    }
+  },
+  "implementation_notes": [
+    "Use Elementor global palette for primary brand fidelity",
+    "Use logo colors (#005048, #A8D0E6, #C85A4E) only when replicating the logo itself or creating print-adjacent materials",
+    "Lora at 0 letter-spacing for headings — natural width gives authority without tracking",
+    "Archivo at 16px/28px (1.75 line-height) is critical for readability with historical/archive text content",
+    "No variable fonts needed — site only loads 4 fixed weights of Archivo and 2 of Lora",
+    "On dark backgrounds (nav #00614B, footer #2A2A2A), text is always #F5F5F5",
+    "On light backgrounds, headings are #25282e, body text is #555555",
+    "For accessibility: Archivo at 16px/28px with #555555 passes WCAG AA (~5.3:1 contrast). For <14px text, bump to #444444"
+  ]
 }
