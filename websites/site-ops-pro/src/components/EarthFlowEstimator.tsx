@@ -192,7 +192,7 @@ export default function EarthFlowEstimator() {
             </div>
           </div>
         )}
-        <Map mode="polygon" points={points} onPointsChange={setPoints} center={center} zoom={zoom} isLocked={isLocationLocked} />
+        <Map mode="polygon" points={points} onPointsChange={setPoints} center={center} zoom={zoom} isLocked={isLocationLocked} drawingColor="#d97706" />
       </div>
 
       <div className="lg:col-span-4 lg:row-start-2 flex flex-col gap-6 overflow-y-auto pr-2 pb-8">
