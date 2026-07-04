@@ -1,15 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "tailwindcss";
 
+/* Thomas Fence Co. Brand Custom Properties */
+:root {
+  --tf-primary: #017f01;
+  --tf-primary-dark: #14532d;
+  --tf-accent: #4caf50;
+  --tf-surface: #f3faf3;
+  --tf-border: #cfe7cf;
+  --tf-text: #333333;
+  --tf-white: #ffffff;
+}
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Roboto", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Oswald", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-tf-primary: #017f01;
+  --color-tf-primary-dark: #14532d;
+  --color-tf-accent: #4caf50;
+  --color-tf-surface: #f3faf3;
+  --color-tf-border: #cfe7cf;
 }
 
 /* Leaflet Map Overrides */
 .leaflet-container {
   font-family: var(--font-sans);
-  background: #f1f5f9;
+  background: var(--tf-surface);
 }
 
 .leaflet-control-attribution {
