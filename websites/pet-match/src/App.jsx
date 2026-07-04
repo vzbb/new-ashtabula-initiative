@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { callOpenRouterAPI, extractOpenRouterText } from "../../../shared/api-client.js";
 import "./App.css";
 
 const ACAPL = {
@@ -32,108 +33,6 @@ const SAMPLE_PETS = [
   { name: "Maple", type: "Cat", note: "Gentle adult cat who wants a calm, affectionate home." },
   { name: "Juniper", type: "Dog", note: "Family-friendly medium dog with a soft spot for yard time." },
 ];
-
-const API_CONFIG = {
-  TIMEOUT_MS: 30000,
-  MAX_RETRIES: 3,
-  INITIAL_RETRY_DELAY_MS: 1000,
-  MAX_RETRY_DELAY_MS: 10000,
-  RATE_LIMIT_STATUS: 429,
-  RETRYABLE_STATUS_CODES: [408, 429, 500, 502, 503, 504],
-};
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms + Math.random() * 200));
-const getBackoffDelay = (retryCount) =>
-  Math.min(API_CONFIG.INITIAL_RETRY_DELAY_MS * Math.pow(2, retryCount), API_CONFIG.MAX_RETRY_DELAY_MS);
-
-const fetchWithTimeout = async (url, options = {}, timeoutMs = API_CONFIG.TIMEOUT_MS) => {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-  try {
-    return await fetch(url, { ...options, signal: controller.signal });
-  } catch (error) {
-    if (error.name === "AbortError") {
-      throw new Error("Request timed out. Please try again.");
-    }
-    throw error;
-  } finally {
-    clearTimeout(timeoutId);
-  }
-};
-
-const isRetryable = (errorOrResponse) => {
-  if (errorOrResponse instanceof Response) {
-    return API_CONFIG.RETRYABLE_STATUS_CODES.includes(errorOrResponse.status);
-  }
-  const errorMessage = errorOrResponse.message?.toLowerCase() || "";
-  return (
-    errorOrResponse.name === "TypeError" ||
-    errorMessage.includes("fetch") ||
-    errorMessage.includes("network") ||
-    errorMessage.includes("failed to fetch") ||
-    errorMessage.includes("timeout")
-  );
-};
-
-const callGeminiAPI = async (prompt, model = "gemini-1.5-flash", retryCount = 0) => {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-  if (!apiKey) {
-    throw new Error("API key not configured. Please check your environment settings.");
-  }
-
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-  const options = {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
-  };
-
-  try {
-    const response = await fetchWithTimeout(url, options, API_CONFIG.TIMEOUT_MS);
-    if (response.status === API_CONFIG.RATE_LIMIT_STATUS) {
-      if (retryCount < API_CONFIG.MAX_RETRIES) {
-        await delay(getBackoffDelay(retryCount));
-        return callGeminiAPI(prompt, model, retryCount + 1);
-      }
-      throw new Error("Rate limit exceeded. Please wait a moment and try again.");
-    }
-
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      const errorMessage = errorData.error?.message || `API error: ${response.status}`;
-      if (API_CONFIG.RETRYABLE_STATUS_CODES.includes(response.status) && retryCount < API_CONFIG.MAX_RETRIES) {
-        await delay(getBackoffDelay(retryCount));
-        return callGeminiAPI(prompt, model, retryCount + 1);
-      }
-      throw new Error(errorMessage);
-    }
-
-    const data = await response.json();
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-    if (!text) {
-      throw new Error("No response content received from API.");
-    }
-    return data;
-  } catch (error) {
-    if (isRetryable(error) && retryCount < API_CONFIG.MAX_RETRIES) {
-      await delay(getBackoffDelay(retryCount));
-      return callGeminiAPI(prompt, model, retryCount + 1);
-    }
-    let userMessage = "An error occurred while processing your request.";
-    if (error.message?.includes("timeout")) {
-      userMessage = "Request timed out. Please check your connection and try again.";
-    } else if (
-      error.message?.includes("Rate limit") ||
-      error.message?.includes("API key") ||
-      error.message?.includes("No response content")
-    ) {
-      userMessage = error.message;
-    }
-    throw new Error(userMessage);
-  }
-};
-
-const extractResponseText = (responseData) => responseData?.candidates?.[0]?.content?.parts?.[0]?.text || "";
 
 const ACAPLMark = () => (
   <svg className="logo" viewBox="0 0 88 88" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -217,8 +116,8 @@ Write exactly 3 short bullets and 1 short CTA that sound like a compassionate sh
 
 Keep it warm, practical, and demo-ready. Under 90 words.`;
 
-      const data = await callGeminiAPI(prompt);
-      const text = extractResponseText(data);
+      const data = await callOpenRouterAPI(prompt, 'openai/gpt-4o-mini');
+      const text = extractOpenRouterText(data);
       setSummary(text || buildFallbackSummary(formData.petType, formData.experience, formData.yard));
     } catch (err) {
       setError(err.message || "Failed to generate.");
