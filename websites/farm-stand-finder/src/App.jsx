@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { callGeminiAPI, extractResponseText } from "./api-client.js";
 import "./App.css";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
 
 const geminiService = {
   async generateContent(prompt) {

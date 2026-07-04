@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "VITE_GEMINI_API_KEY=$GEMINI_API_KEY vite",
-    "build": "VITE_GEMINI_API_KEY=$GEMINI_API_KEY vite build",
+    "dev": "VITE_OPENROUTER_API_KEY=$OPENROUTER_API_KEY vite",
+    "build": "VITE_OPENROUTER_API_KEY=$OPENROUTER_API_KEY vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
