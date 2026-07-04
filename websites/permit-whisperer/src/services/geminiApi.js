@@ -3,8 +3,8 @@
  * Handles all AI interactions with proper error handling and fallbacks
  */
 
-const API_BASE_URL = 'https://generativelanguage.googleapis.com/v1beta';
-const DEFAULT_MODEL = import.meta.env.VITE_GEMINI_MODEL || 'gemini-1.5-flash';
+const API_BASE_URL = 'https://openrouter.ai/api/v1/chat/completions';
+const DEFAULT_MODEL = 'google/gemini-2.5-flash-lite';
 
 /**
  * Custom error class for API errors
@@ -22,7 +22,7 @@ export class GeminiAPIError extends Error {
  * Check if the Gemini API key is configured
  */
 export function isApiKeyConfigured() {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
   return apiKey && apiKey !== 'your_gemini_api_key_here' && apiKey.length > 10;
 }
 
@@ -55,48 +55,34 @@ function getErrorMessage(error, fallbackMessage = 'Unable to get an answer. Plea
  * Generate a permit-related answer using Gemini API
  */
 export async function generatePermitAnswer(question, context = {}) {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
   
   if (!isApiKeyConfigured()) {
     throw new GeminiAPIError(
       'API key not configured',
       'AUTH_ERROR',
-      { message: 'Please add your Gemini API key to the .env file' }
+      { message: 'Please add your OpenRouter API key to the .env file' }
     );
   }
 
   const prompt = buildPrompt(question, context);
   
   try {
-    const response = await fetch(
-      `${API_BASE_URL}/models/${DEFAULT_MODEL}:generateContent?key=${apiKey}`,
-      {
-        method: 'POST',
-        headers: { 
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          contents: [{ 
-            role: 'user',
-            parts: [{ text: prompt }] 
-          }],
-          generationConfig: {
-            temperature: 0.3,
-            maxOutputTokens: 500,
-          },
-          safetySettings: [
-            {
-              category: 'HARM_CATEGORY_HARASSMENT',
-              threshold: 'BLOCK_MEDIUM_AND_ABOVE'
-            },
-            {
-              category: 'HARM_CATEGORY_HATE_SPEECH',
-              threshold: 'BLOCK_MEDIUM_AND_ABOVE'
-            }
-          ]
-        }),
-      }
-    );
+    const response = await fetch(API_BASE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`,
+        'HTTP-Referer': window.location.origin,
+        'X-Title': 'Permit Whisperer',
+      },
+      body: JSON.stringify({
+        model: DEFAULT_MODEL,
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.3,
+        max_tokens: 500,
+      }),
+    });
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
@@ -134,16 +120,15 @@ export async function generatePermitAnswer(question, context = {}) {
 
     const data = await response.json();
     
-    // Check for blocked content
-    if (data.promptFeedback?.blockReason) {
+    if (data?.choices?.[0]?.finish_reason === 'content_filter') {
       throw new GeminiAPIError(
         'Request blocked by safety filters',
         'SAFETY_BLOCKED',
-        { reason: data.promptFeedback.blockReason }
+        { reason: data?.choices?.[0]?.finish_reason }
       );
     }
     
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    const text = data?.choices?.[0]?.message?.content;
     
     if (!text) {
       throw new GeminiAPIError(
@@ -186,6 +171,7 @@ GUIDELINES:
 - If you're uncertain, acknowledge it and suggest contacting the permits office
 - Be professional but conversational
 - Focus on actionable information
+- Do not generate harassing, hateful, or abusive content
 
 COMMON ASHTABULA PERMIT RULES (for reference):
 - Fences under 6ft: No permit required
