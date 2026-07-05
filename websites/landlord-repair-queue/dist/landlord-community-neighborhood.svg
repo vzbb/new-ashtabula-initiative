@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <defs>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bee3f8"/>
+      <stop offset="100%" stop-color="#f7fafc"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2c5282"/>
+      <stop offset="100%" stop-color="#1f3d63"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38a169"/>
+      <stop offset="100%" stop-color="#2f855a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="600" height="400" fill="url(#skyGrad)"/>
+
+  <!-- Ground -->
+  <rect x="0" y="300" width="600" height="100" fill="#e6ffed" opacity="0.5"/>
+
+  <!-- Curved street -->
+  <path d="M0 340 Q200 330 400 350 Q500 360 600 330" stroke="#617285" stroke-width="3" fill="none" opacity="0.15"/>
+  <path d="M0 348 Q200 338 400 358 Q500 368 600 338" stroke="#617285" stroke-width="3" fill="none" opacity="0.10"/>
+
+  <!-- Tree 1 -->
+  <g transform="translate(60, 200)">
+    <rect x="-4" y="40" width="8" height="40" rx="3" fill="#617285" opacity="0.5"/>
+    <ellipse cx="0" cy="20" rx="28" ry="32" fill="#38a169" opacity="0.7"/>
+    <ellipse cx="-8" cy="15" rx="18" ry="22" fill="#2f855a" opacity="0.5"/>
+  </g>
+
+  <!-- Building 1 -->
+  <g transform="translate(125, 130)">
+    <rect x="0" y="50" width="100" height="160" rx="6" fill="white" stroke="#2c5282" stroke-width="2"/>
+    <path d="M-6 50 L50 -10 L106 50" fill="none" stroke="#2c5282" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Windows -->
+    <rect x="12" y="70" width="32" height="36" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="56" y="70" width="32" height="36" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="12" y="116" width="32" height="36" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="56" y="116" width="32" height="36" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <!-- Door -->
+    <rect x="35" y="170" width="30" height="40" rx="3" fill="#1f3d63"/>
+    <circle cx="58" cy="194" r="3" fill="#38a169"/>
+    <!-- Warm window lights -->
+    <rect x="15" y="73" width="26" height="30" rx="3" fill="#fefcbf" opacity="0.4"/>
+    <rect x="59" y="73" width="26" height="30" rx="3" fill="#fefcbf" opacity="0.4"/>
+  </g>
+
+  <!-- Tree 2 -->
+  <g transform="translate(240, 180)">
+    <rect x="-3" y="35" width="6" height="30" rx="3" fill="#617285" opacity="0.5"/>
+    <ellipse cx="0" cy="18" rx="22" ry="26" fill="#38a169" opacity="0.8"/>
+  </g>
+
+  <!-- Building 2 -->
+  <g transform="translate(280, 100)">
+    <rect x="0" y="70" width="110" height="200" rx="6" fill="white" stroke="#2c5282" stroke-width="2"/>
+    <path d="M-6 70 L55 10 L116 70" fill="none" stroke="#2c5282" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Windows -->
+    <rect x="14" y="88" width="36" height="42" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="60" y="88" width="36" height="42" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="14" y="140" width="36" height="42" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="60" y="140" width="36" height="42" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="14" y="192" width="36" height="42" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="60" y="192" width="36" height="42" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <!-- Door -->
+    <rect x="40" y="230" width="30" height="40" rx="3" fill="#1f3d63"/>
+    <circle cx="63" cy="254" r="3" fill="#38a169"/>
+    <!-- Warm window lights -->
+    <rect x="17" y="91" width="30" height="36" rx="3" fill="#fefcbf" opacity="0.5"/>
+    <rect x="17" y="143" width="30" height="36" rx="3" fill="#fefcbf" opacity="0.3"/>
+  </g>
+
+  <!-- Tree 3 -->
+  <g transform="translate(410, 190)">
+    <rect x="-3" y="30" width="6" height="35" rx="3" fill="#617285" opacity="0.5"/>
+    <ellipse cx="0" cy="14" rx="20" ry="25" fill="#2f855a" opacity="0.6"/>
+    <ellipse cx="-6" cy="10" rx="14" ry="18" fill="#38a169" opacity="0.5"/>
+  </g>
+
+  <!-- Building 3 (smaller) -->
+  <g transform="translate(440, 150)">
+    <rect x="0" y="40" width="80" height="140" rx="6" fill="white" stroke="#2c5282" stroke-width="2"/>
+    <path d="M-5 40 L40 -10 L85 40" fill="none" stroke="#2c5282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Windows -->
+    <rect x="10" y="56" width="26" height="30" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="44" y="56" width="26" height="30" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <rect x="10" y="96" width="26" height="30" rx="4" fill="#edf3f7" stroke="#2c5282" stroke-width="1"/>
+    <!-- Door -->
+    <rect x="25" y="135" width="30" height="45" rx="3" fill="#1f3d63"/>
+    <circle cx="48" cy="162" r="3" fill="#38a169"/>
+    <!-- Warm window lights -->
+    <rect x="13" y="59" width="20" height="24" rx="3" fill="#fefcbf" opacity="0.4"/>
+    <rect x="47" y="59" width="20" height="24" rx="3" fill="#fefcbf" opacity="0.4"/>
+  </g>
+
+  <!-- Community connection lines -->
+  <g opacity="0.12">
+    <path d="M175 220 Q220 180 275 210" stroke="#38a169" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+    <path d="M345 210 Q395 160 440 190" stroke="#38a169" stroke-width="2" fill="none" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- AMHA leaf motif -->
+  <g transform="translate(300, 310)" opacity="0.08">
+    <path d="M0 30 Q8 15 24 8 Q16 22 8 30 Z" fill="#38a169"/>
+    <path d="M24 8 Q32 16 32 30 Q24 24 8 30 Z" fill="#2c5282"/>
+    <line x1="16" y1="22" x2="16" y2="40" stroke="#38a169" stroke-width="2"/>
+  </g>
+
+  <!-- Small decorative leaves -->
+  <g opacity="0.06">
+    <path d="M80 360 Q88 350 96 360 Q88 355 80 360 Z" fill="#38a169"/>
+    <path d="M500 350 Q506 342 512 350 Q506 346 500 350 Z" fill="#38a169"/>
+  </g>
+</svg>

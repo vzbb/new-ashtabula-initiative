@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-"""Score all 76 NAI MVPs and generate pipeline_priority.json."""
+"""Score all 76 NAI MVPs and generate pipeline_priority.json.
+
+Weights: Revenue 25%, Community 20%, Brand 15%, Design 15%, Simplicity 15%, Urgency 10%.
+Design defaults to 5 and is updated by vision assessment — NOT guessed by this script.
+"""
 
 import json
 import re
 import sys
+from datetime import datetime, timezone
+
 
 def parse_sitemap(path):
     with open(path) as f:
@@ -13,12 +19,16 @@ def parse_sitemap(path):
     matches = re.findall(pattern, content)
 
     mvps = []
+    seen = set()
     for m in matches:
         num, site_name, route_cell, buyer, desc = m
         route_match = re.search(r'\[/([^/\]]+)/?\]', route_cell)
         if not route_match:
             route_match = re.search(r'/([a-zA-Z0-9_-]+)/?', route_cell)
         route = route_match.group(1) if route_match else route_cell.strip().strip('/')
+        if route in seen:
+            continue
+        seen.add(route)
         site_name = site_name.strip()
         buyer = buyer.strip()
         desc = desc.strip()
@@ -37,7 +47,7 @@ def parse_sitemap(path):
 def score_mvp(mvp):
     route = mvp["route"]
 
-    # --- REVENUE (0-10) ---
+    # --- REVENUE (0-10): 25% ---
     high_rev = {"hvac", "roofquote", "fence-quote", "ashtabula-fence", "thomas-fence",
                 "dirt-quote", "blueprint", "boxflow", "parts", "parts-request",
                 "plating", "plating-pro", "site-ops-pro", "terra-vantage",
@@ -45,11 +55,10 @@ def score_mvp(mvp):
     med_high_rev = {"scheduler", "scheduler-sms", "insta-book", "charter", "marina",
                     "landlord", "rental", "notary", "adaptive-reuse", "engineers",
                     "cut-custom", "rennick-market", "trumbull-locker", "compassionate",
-                    "wedding", "boat-storage", "concierge",
-                    "historian", "historian-pro", "ai-docent-pro"}
+                    "wedding", "boat-storage", "concierge"}
     med_rev = {"gotl", "sommelier", "sommelier-pro", "mytrip", "mytrip-export",
                "grocer", "curbside", "farm-stand", "harbor", "pet-match",
-               "portfolio", "harvest",
+               "portfolio", "harvest", "ai-docent-pro", "historian", "historian-pro",
                "artist-commission", "volunteer", "parking", "ride-ready", "routes"}
     low_rev = {"civic-insight", "permits", "zoning", "saybrook-zoning",
                "eligibility", "eligibility-lite", "eligibility-pro",
@@ -64,19 +73,18 @@ def score_mvp(mvp):
     elif route in low_rev: revenue = 3
     else: revenue = 4
 
-    # --- COMMUNITY (0-10) ---
+    # --- COMMUNITY (0-10): 20% ---
     critical = {"permits", "zoning", "saybrook-zoning", "civic-insight",
                 "eligibility", "eligibility-lite", "eligibility-pro",
                 "license", "event-permit", "govtech", "aidflow",
-                "resource", "resource-pro", "engineers", "parcelvisor",
-                "historian", "historian-pro", "ai-docent-pro"}
+                "resource", "resource-pro", "engineers", "parcelvisor"}
     high_comm = {"landlord", "rental", "invest", "ride-ready", "routes",
                  "blueprint", "compassionate", "volunteer", "pet-match",
                  "sbdc-business-counseling", "sbdc-business-planning",
                  "sbdc-educational-resources", "sbdc-learning-modules", "sbdc-support-tools"}
     med_comm = {"gotl", "mytrip", "mytrip-export", "farm-stand", "grocer",
-                "curbside", "harvest", "harbor",
-                "artist-commission", "portfolio", "sommelier",
+                "curbside", "harvest", "harbor", "historian", "historian-pro",
+                "ai-docent-pro", "artist-commission", "portfolio", "sommelier",
                 "sommelier-pro", "concierge", "parking", "charter", "marina",
                 "boat-storage", "wedding", "adaptive-reuse"}
 
@@ -85,9 +93,9 @@ def score_mvp(mvp):
     elif route in med_comm: community = 5
     else: community = 3
 
-    # --- BRAND (0-10) ---
+    # --- BRAND (0-10): 15% ---
     known_branded = {"hvac", "landlord", "permits", "ashtabula-fence", "thomas-fence",
-                     "rennick-market", "trumbull-locker", "cut-custom", "compassionate", "roofquote",
+                     "rennick-market", "trumbull-locker", "compassionate", "roofquote",
                      "terra-vantage", "site-ops-pro", "fence-quote", "lawn", "snow-plow"}
     some_brand = {"gotl", "sommelier", "sommelier-pro", "mytrip", "mytrip-export",
                   "harbor", "marina", "charter", "insta-book", "concierge",
@@ -96,7 +104,7 @@ def score_mvp(mvp):
                   "pet-match", "volunteer", "wedding", "boat-storage",
                   "auto-detail", "truck-wash", "scheduler", "scheduler-sms",
                   "notary", "adaptive-reuse", "engineers", "dirt-quote",
-                  "portfolio", "parking", "ride-ready", "routes",
+                  "cut-custom", "portfolio", "parking", "ride-ready", "routes",
                   "blueprint", "boxflow", "parts", "parts-request", "plating", "plating-pro"}
     generic_br = {"civic-insight", "zoning", "saybrook-zoning",
                   "eligibility", "eligibility-lite", "eligibility-pro",
@@ -111,7 +119,10 @@ def score_mvp(mvp):
     elif route in generic_br: brand = 3
     else: brand = 4
 
-    # --- SIMPLICITY (0-10) ---
+    # --- DESIGN (0-10): 15% — DEFAULT 5, updated by vision assessment ---
+    design = 5
+
+    # --- SIMPLICITY (0-10): 15% ---
     simple = {"ashtabula-fence", "thomas-fence", "rennick-market", "trumbull-locker",
               "cut-custom", "farm-stand", "notary", "parking", "portfolio",
               "wedding", "harbor", "harvest", "pet-match", "volunteer",
@@ -137,27 +148,22 @@ def score_mvp(mvp):
     elif route in complex_r: simplicity = 3
     else: simplicity = 5
 
-    # --- URGENCY (0-10) ---
+    # --- URGENCY (0-10): 10% ---
     hi_urg = {"hvac", "permits", "zoning", "saybrook-zoning", "landlord",
-              "roofquote", "eligibility", "eligibility-lite", "eligibility-pro",
-              "dirt-quote", "site-ops-pro", "terra-vantage",
-              "rennick-market", "trumbull-locker", "cut-custom",
-              "historian", "historian-pro", "ai-docent-pro"}
+              "roofquote", "eligibility", "eligibility-lite", "eligibility-pro"}
     med_urg = {"lawn", "snow-plow", "gotl", "mytrip", "mytrip-export",
                "charter", "marina", "boat-storage", "farm-stand", "harvest",
                "auto-detail", "truck-wash", "ashtabula-fence", "thomas-fence",
-               "fence-quote", "insta-book", "concierge",
+               "fence-quote", "dirt-quote", "insta-book", "concierge",
                "wedding", "compassionate", "scheduler", "scheduler-sms",
-               "grocer", "curbside", "volunteer", "pet-match"}
+               "grocer", "curbside", "rennick-market", "trumbull-locker",
+               "cut-custom", "volunteer", "pet-match"}
 
     if route in hi_urg: urgency = 8
     elif route in med_urg: urgency = 5
     else: urgency = 3
 
-    # --- DESIGN (0-10): visual quality — evaluated by vision cron, not guessed ---
-    # Default 5 = unknown until visually assessed. Cron updates this.
-    design = 5
-
+    # Composite: Revenue 25%, Community 20%, Brand 15%, Design 15%, Simplicity 15%, Urgency 10%
     composite = round(
         revenue * 0.25 +
         community * 0.20 +
@@ -201,8 +207,8 @@ def main():
     print(f"\nScore range: {scored[-1]['scores']['composite']:.1f} – {scored[0]['scores']['composite']:.1f}")
 
     output = {
-        "version": "1.0",
-        "generated": "2026-07-04",
+        "version": "2.0",
+        "generated": datetime.now(timezone.utc).isoformat(),
         "total_mvps": len(scored),
         "scoring_formula": {
             "revenue_weight": 0.25,

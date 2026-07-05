@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "generated": "2026-07-04",
+  "version": "2.0",
+  "generated": "2026-07-05T02:50:53.654990+00:00",
   "total_mvps": 76,
   "scoring_formula": {
     "revenue_weight": 0.25,
@@ -27,8 +27,8 @@
         "composite": 6.95
       },
       "state": "assessed",
-      "assessed_at": "2026-07-05T01:26:00.543163+00:00",
-      "notes": "RENDER: clean, no errors. BRAND: AMHA logo + colors, specific to buyer. DESIGN: 6/10 \u2014 functional, decent hierarchy, uses brand palette but flat \u2014 no photography, no depth/shadows, no modern patterns. SELLABLE: yes, demo-ready with strong value prop."
+      "assessed_at": "2026-07-05T02:51:38.855530+00:00",
+      "notes": "RENDER: Clean load, no broken elements. Professional layout with AMHA logo, tree-lined neighborhood imagery. BRAND: Strong AMHA branding \u2014 logo present, program-specific content (HCV, public housing, USDA), mission-aligned keywords (Honesty, Dignity, Respect). DESIGN: 6/10. Clean and functional but flat \u2014 no shadows, gradients, glassmorphism, or animations. Background photography is effective but no hero imagery or illustrative graphics. Visual hierarchy is good but lacks 'wow' factor. SELLABLE: NEEDS-WORK \u2014 branding is excellent and render is clean, but design needs visual elevation for pitch-readiness. Not far from ready."
     },
     {
       "num": 20,
@@ -126,63 +126,6 @@
       "notes": ""
     },
     {
-      "num": 64,
-      "site": "Cut Custom",
-      "route": "cut-custom",
-      "buyer": "Trumbull Locker Plant",
-      "desc": "Custom cutting service",
-      "scores": {
-        "revenue": 7,
-        "community": 3,
-        "brand": 8,
-        "design": 5,
-        "simplicity": 9,
-        "urgency": 8,
-        "composite": 6.45
-      },
-      "state": "unscanned",
-      "assessed_at": null,
-      "notes": ""
-    },
-    {
-      "num": 65,
-      "site": "Rennick Market",
-      "route": "rennick-market",
-      "buyer": "Rennick Meat Market",
-      "desc": "Rennick Market site",
-      "scores": {
-        "revenue": 7,
-        "community": 3,
-        "brand": 8,
-        "design": 5,
-        "simplicity": 9,
-        "urgency": 8,
-        "composite": 6.45
-      },
-      "state": "unscanned",
-      "assessed_at": null,
-      "notes": ""
-    },
-    {
-      "num": 66,
-      "site": "Trumbull Locker",
-      "route": "trumbull-locker",
-      "buyer": "Trumbull Locker Plant",
-      "desc": "Trumbull Locker site",
-      "scores": {
-        "revenue": 7,
-        "community": 3,
-        "brand": 8,
-        "design": 5,
-        "simplicity": 9,
-        "urgency": 8,
-        "composite": 6.45
-      },
-      "state": "unscanned",
-      "assessed_at": null,
-      "notes": ""
-    },
-    {
       "num": 25,
       "site": "Engineer's Assistant",
       "route": "engineers",
@@ -259,76 +202,38 @@
       "notes": ""
     },
     {
-      "num": 50,
-      "site": "AI Docent Pro",
-      "route": "ai-docent-pro",
-      "buyer": "Ashtabula County Historical Society (ACHS)",
-      "desc": "Advanced museum AI",
+      "num": 65,
+      "site": "Rennick Market",
+      "route": "rennick-market",
+      "buyer": "Rennick Meat Market",
+      "desc": "Rennick Market site",
       "scores": {
         "revenue": 7,
-        "community": 9,
-        "brand": 5,
-        "design": 5,
-        "simplicity": 3,
-        "urgency": 8,
-        "composite": 6.3
-      },
-      "state": "unscanned",
-      "assessed_at": null,
-      "notes": ""
-    },
-    {
-      "num": 52,
-      "site": "Pocket Historian",
-      "route": "historian",
-      "buyer": "Ashtabula County Historical Society",
-      "desc": "Local history guide",
-      "scores": {
-        "revenue": 7,
-        "community": 9,
-        "brand": 5,
-        "design": 5,
-        "simplicity": 3,
-        "urgency": 8,
-        "composite": 6.3
-      },
-      "state": "unscanned",
-      "assessed_at": null,
-      "notes": ""
-    },
-    {
-      "num": 53,
-      "site": "Pocket Historian Pro",
-      "route": "historian-pro",
-      "buyer": "Ashtabula County Historical Society",
-      "desc": "History archives",
-      "scores": {
-        "revenue": 7,
-        "community": 9,
-        "brand": 5,
-        "design": 5,
-        "simplicity": 3,
-        "urgency": 8,
-        "composite": 6.3
-      },
-      "state": "unscanned",
-      "assessed_at": null,
-      "notes": ""
-    },
-    {
-      "num": 22,
-      "site": "Instant Dirt Quote",
-      "route": "dirt-quote",
-      "buyer": "Brockway's Topsoil",
-      "desc": "Excavation quotes",
-      "scores": {
-        "revenue": 9,
         "community": 3,
-        "brand": 5,
+        "brand": 8,
         "design": 5,
-        "simplicity": 7,
-        "urgency": 8,
-        "composite": 6.2
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 6.15
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 66,
+      "site": "Trumbull Locker",
+      "route": "trumbull-locker",
+      "buyer": "Trumbull Locker Plant",
+      "desc": "Trumbull Locker site",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 6.15
       },
       "state": "unscanned",
       "assessed_at": null,
@@ -348,44 +253,6 @@
         "simplicity": 9,
         "urgency": 5,
         "composite": 6.1
-      },
-      "state": "unscanned",
-      "assessed_at": null,
-      "notes": ""
-    },
-    {
-      "num": 67,
-      "site": "Terra Vantage",
-      "route": "terra-vantage",
-      "buyer": "Severino Construction",
-      "desc": "Terra Vantage site",
-      "scores": {
-        "revenue": 9,
-        "community": 3,
-        "brand": 8,
-        "design": 5,
-        "simplicity": 3,
-        "urgency": 8,
-        "composite": 6.05
-      },
-      "state": "unscanned",
-      "assessed_at": null,
-      "notes": ""
-    },
-    {
-      "num": 70,
-      "site": "Site Ops Pro",
-      "route": "site-ops-pro",
-      "buyer": "Brobst Earthworks, LTD",
-      "desc": "Site operations",
-      "scores": {
-        "revenue": 9,
-        "community": 3,
-        "brand": 8,
-        "design": 5,
-        "simplicity": 3,
-        "urgency": 8,
-        "composite": 6.05
       },
       "state": "unscanned",
       "assessed_at": null,
@@ -442,6 +309,25 @@
         "design": 5,
         "simplicity": 3,
         "urgency": 3,
+        "composite": 5.9
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 22,
+      "site": "Instant Dirt Quote",
+      "route": "dirt-quote",
+      "buyer": "Brockway's Topsoil",
+      "desc": "Excavation quotes",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
         "composite": 5.9
       },
       "state": "unscanned",
@@ -601,6 +487,25 @@
       "notes": ""
     },
     {
+      "num": 64,
+      "site": "Cut Custom",
+      "route": "cut-custom",
+      "buyer": "Trumbull Locker Plant",
+      "desc": "Custom cutting service",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 5.7
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
       "num": 24,
       "site": "Adaptive Reuse Planner",
       "route": "adaptive-reuse",
@@ -642,8 +547,8 @@
       "num": 49,
       "site": "Harvest Alert",
       "route": "harvest",
-      "buyer": "Ashtabula County Board of Commissioners",
-      "desc": "County agricultural alert system",
+      "buyer": "Ashtabula Farmers Market",
+      "desc": "Agricultural alerts",
       "scores": {
         "revenue": 5,
         "community": 5,
@@ -652,6 +557,44 @@
         "simplicity": 9,
         "urgency": 5,
         "composite": 5.6
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 67,
+      "site": "Terra Vantage",
+      "route": "terra-vantage",
+      "buyer": "Severino Construction",
+      "desc": "Terra Vantage site",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 5.55
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 70,
+      "site": "Site Ops Pro",
+      "route": "site-ops-pro",
+      "buyer": "Brobst Earthworks, LTD",
+      "desc": "Site operations",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 5.55
       },
       "state": "unscanned",
       "assessed_at": null,
@@ -1380,11 +1323,68 @@
       "notes": ""
     },
     {
+      "num": 50,
+      "site": "AI Docent Pro",
+      "route": "ai-docent-pro",
+      "buyer": "Ashtabula County Historical Society (ACHS)",
+      "desc": "Advanced museum AI",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
       "num": 51,
       "site": "Artist Commission Form",
       "route": "artist-commission",
       "buyer": "Ashtabula Arts Center",
       "desc": "Commission system",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 52,
+      "site": "Pocket Historian",
+      "route": "historian",
+      "buyer": "Ashtabula County Historical Society",
+      "desc": "Local history guide",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 53,
+      "site": "Pocket Historian Pro",
+      "route": "historian-pro",
+      "buyer": "Ashtabula County Historical Society",
+      "desc": "History archives",
       "scores": {
         "revenue": 5,
         "community": 5,

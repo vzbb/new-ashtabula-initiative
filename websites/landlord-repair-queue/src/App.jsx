@@ -110,8 +110,17 @@ function App() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [sourceNote, setSourceNote] = useState("Demo-ready local response");
+  const [showPulse, setShowPulse] = useState(false);
 
   useScrollReveal();
+
+  useEffect(() => {
+    if (reply) {
+      setShowPulse(true);
+      const timer = setTimeout(() => setShowPulse(false), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [reply]);
 
   const apiConfigured = isAPIConfigured();
 
@@ -165,7 +174,7 @@ Requirements:
   return (
     <div className="page-shell">
       <div className="page">
-        <header className="hero-card">
+        <header className="hero-card hero-entrance">
           <div className="hero-copy">
             <div className="eyebrow">AMHA Landlord Portal</div>
             <div className="brand-row">
@@ -184,6 +193,12 @@ Requirements:
               repair follow-up, and inspection-aware unit readiness across public
               housing and Housing Choice Voucher workflows.
             </p>
+
+            <img
+              src={`${assetBase}landlord-repair-portal-hero.svg`}
+              alt="AMHA Landlord Portal — staff connecting with housing complex"
+              className="hero-illustration"
+            />
 
             <div className="hero-stats">
               <div className="fade-in-section">
@@ -306,7 +321,7 @@ Requirements:
               <span className="source-tag">{sourceNote}</span>
             </div>
 
-            <div className="reply-body">
+            <div className={`reply-body${showPulse ? ' has-response' : ''}`}>
               {reply ? (
                 <pre>{reply}</pre>
               ) : (
@@ -318,6 +333,16 @@ Requirements:
                   </p>
                 </div>
               )}
+            </div>
+          </section>
+
+          <section className="status-cards-section fade-in-section">
+            <div className="status-cards-visual">
+              <img
+                src={`${assetBase}landlord-repair-status-cards.svg`}
+                alt="Repair status overview — Pending, In Progress, Completed"
+                className="status-cards-image"
+              />
             </div>
           </section>
 
@@ -340,6 +365,11 @@ Requirements:
                 <p>Supports clearer coordination across landlords, residents, and AMHA staff without sounding generic.</p>
               </article>
             </div>
+            <img
+              src={`${assetBase}landlord-community-neighborhood.svg`}
+              alt="Ashtabula community"
+              className="community-accent"
+            />
           </section>
 
           <section className="journey-card">
@@ -354,6 +384,13 @@ Requirements:
                   <p>{card.detail}</p>
                 </article>
               ))}
+            </div>
+            <div className="workflow-flow-visual fade-in-section">
+              <img
+                src={`${assetBase}landlord-workflow-flow.svg`}
+                alt="Workflow: Intake → Compliance → Reply"
+                className="workflow-flow-image"
+              />
             </div>
           </section>
         </main>

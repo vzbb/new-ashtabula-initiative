@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" fill="none">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2c5282"/>
+      <stop offset="100%" stop-color="#1f3d63"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38a169"/>
+      <stop offset="100%" stop-color="#2f855a"/>
+    </linearGradient>
+    <linearGradient id="mixedGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38a169"/>
+      <stop offset="100%" stop-color="#2c5282"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="320" rx="24" fill="#f7fafc"/>
+
+  <!-- Step 1: Landlord Update Intake -->
+  <g transform="translate(40, 60)">
+    <!-- Card -->
+    <rect x="0" y="0" width="200" height="200" rx="20" fill="white" stroke="#2c5282" stroke-width="1.5" opacity="0.9"/>
+    <!-- Number badge -->
+    <circle cx="100" cy="-16" r="22" fill="url(#blueGrad)"/>
+    <text x="100" y="-10" font-family="sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">1</text>
+
+    <!-- Clipboard icon -->
+    <g transform="translate(75, 30)">
+      <rect x="0" y="8" width="50" height="62" rx="8" fill="white" stroke="#2c5282" stroke-width="2.5"/>
+      <rect x="10" y="2" width="30" height="12" rx="3" fill="#2c5282"/>
+      <rect x="10" y="30" width="30" height="4" rx="2" fill="#2c5282" opacity="0.25"/>
+      <rect x="10" y="40" width="30" height="4" rx="2" fill="#38a169" opacity="0.25"/>
+      <rect x="10" y="50" width="20" height="4" rx="2" fill="#2c5282" opacity="0.2"/>
+    </g>
+
+    <!-- House icon below -->
+    <g transform="translate(85, 140)">
+      <path d="M0 15 L15 0 L30 15" stroke="#38a169" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="8" y="13" width="14" height="12" rx="2" fill="#f7fafc" stroke="#38a169" stroke-width="1.5"/>
+    </g>
+
+    <!-- Label -->
+    <text x="100" y="180" font-family="sans-serif" font-size="14" font-weight="700" fill="#1f3d63" text-anchor="middle">Intake</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <g transform="translate(250, 150)">
+    <line x1="0" y1="10" x2="50" y2="10" stroke="#38a169" stroke-width="3" stroke-dasharray="6 4"/>
+    <polygon points="54,10 44,4 44,16" fill="#38a169"/>
+  </g>
+
+  <!-- Step 2: Inspection & Repair -->
+  <g transform="translate(300, 60)">
+    <!-- Card -->
+    <rect x="0" y="0" width="200" height="200" rx="20" fill="white" stroke="#2c5282" stroke-width="1.5" opacity="0.9"/>
+    <!-- Number badge -->
+    <circle cx="100" cy="-16" r="22" fill="url(#greenGrad)"/>
+    <text x="100" y="-10" font-family="sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">2</text>
+
+    <!-- Magnifying glass -->
+    <g transform="translate(70, 30)">
+      <circle cx="25" cy="25" r="22" fill="none" stroke="#2c5282" stroke-width="3"/>
+      <line x1="42" y1="42" x2="55" y2="55" stroke="#2c5282" stroke-width="4" stroke-linecap="round"/>
+      <!-- Document inside -->
+      <rect x="13" y="18" width="24" height="18" rx="2" fill="#f7fafc" stroke="#617285" stroke-width="1"/>
+      <rect x="17" y="22" width="16" height="2" rx="1" fill="#38a169"/>
+      <rect x="17" y="27" width="16" height="2" rx="1" fill="#2c5282" opacity="0.3"/>
+      <rect x="17" y="31" width="10" height="2" rx="1" fill="#2c5282" opacity="0.2"/>
+    </g>
+
+    <!-- Gear icon -->
+    <g transform="translate(145, 100)">
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#38a169" stroke-width="2.5"/>
+      <circle cx="0" cy="0" r="5" fill="#38a169"/>
+      <line x1="0" y1="-17" x2="0" y2="-14" stroke="#38a169" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="17" y1="0" x2="14" y2="0" stroke="#38a169" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="0" y1="17" x2="0" y2="14" stroke="#38a169" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="-17" y1="0" x2="-14" y2="0" stroke="#38a169" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- Label -->
+    <text x="100" y="180" font-family="sans-serif" font-size="14" font-weight="700" fill="#1f3d63" text-anchor="middle">Compliance</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <g transform="translate(510, 150)">
+    <line x1="0" y1="10" x2="50" y2="10" stroke="#38a169" stroke-width="3" stroke-dasharray="6 4"/>
+    <polygon points="54,10 44,4 44,16" fill="#38a169"/>
+  </g>
+
+  <!-- Step 3: Reply & Follow-up -->
+  <g transform="translate(560, 60)">
+    <!-- Card -->
+    <rect x="0" y="0" width="200" height="200" rx="20" fill="white" stroke="#2c5282" stroke-width="1.5" opacity="0.9"/>
+    <!-- Number badge -->
+    <circle cx="100" cy="-16" r="22" fill="url(#mixedGrad)"/>
+    <text x="100" y="-10" font-family="sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">3</text>
+
+    <!-- Speech bubble -->
+    <g transform="translate(65, 35)">
+      <rect x="0" y="0" width="70" height="55" rx="12" fill="white" stroke="#38a169" stroke-width="2.5"/>
+      <polygon points="18,55 25,70 35,55" fill="white" stroke="#38a169" stroke-width="2.5" stroke-linejoin="round"/>
+      <line x1="10" y1="15" x2="35" y2="15" stroke="#38a169" stroke-width="1" opacity="0.5"/>
+      <line x1="10" y1="23" x2="45" y2="23" stroke="#2c5282" stroke-width="2" opacity="0.6"/>
+      <line x1="10" y1="32" x2="60" y2="32" stroke="#38a169" stroke-width="2"/>
+      <line x1="10" y1="42" x2="50" y2="42" stroke="#2c5282" stroke-width="1" opacity="0.3"/>
+    </g>
+
+    <!-- Checkmark -->
+    <g transform="translate(145, 130)">
+      <circle cx="0" cy="0" r="18" fill="#38a169"/>
+      <path d="M-7 0 L-2 6 L8 -6" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Label -->
+    <text x="100" y="180" font-family="sans-serif" font-size="14" font-weight="700" fill="#1f3d63" text-anchor="middle">Reply</text>
+  </g>
+</svg>

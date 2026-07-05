@@ -1,0 +1,63 @@
+{
+  "slug": "landlord",
+  "site_name": "AMHA Landlord Repair Queue",
+  "live_url": "https://new-ashtabula-initiative.com/landlord/",
+  "target_organization": "Ashtabula Metropolitan Housing Authority (AMHA)",
+  "organization_type": "Public Housing Authority (PHA)",
+  "hud_id": "OH001",
+  "jurisdiction": "Ashtabula County, OH",
+  "decision_maker": {
+    "name": "T. Sean Adams",
+    "title": "Executive Director",
+    "email": "sadams@ashtabulamha.com",
+    "phone": "440-992-3156",
+    "address": "4717 Main Ave, Ashtabula, OH 44004",
+    "background": "Former Ashtabula City Manager (2016-2023). Appointed AMHA Executive Director Feb 2024. Deep operational and municipal budget experience. Responds to efficiency and compliance arguments.",
+    "role_in_decision": "Primary decision-maker — ED has authority to sign contracts under $25K without board approval under HUD sole-source rules."
+  },
+  "secondary_contacts": [
+    {
+      "name": "Mary Church",
+      "title": "Assistant Director, Planning & Community Development",
+      "email": "mchurch@cityofashtabula.com",
+      "phone": "440-992-7118",
+      "note": "City PCD — cross-over stakeholder for housing/community development alignment"
+    }
+  ],
+  "organization_structure": {
+    "programs": ["Housing Choice Voucher (Section 8)", "Public Housing", "USDA Rural Housing", "Capital Fund"],
+    "values": ["Honesty", "Dignity", "Respect", "Exceptional communication", "Care", "Responsiveness"],
+    "mission": "Provide Ashtabula County residents clean and safe affordable housing while keeping landlord communication responsive and program-ready."
+  },
+  "pain_points": [
+    "Paper-based repair request tracking across multiple programs",
+    "Inefficient landlord communication — phone tag and voicemail",
+    "Inspection scheduling bottlenecks delaying voucher readiness",
+    "No centralized digital record of maintenance requests and resolutions",
+    "Staff time consumed by manual follow-up instead of program management"
+  ],
+  "fit_score": {
+    "overall": 94,
+    "mission_alignment": 97,
+    "operational_need": 95,
+    "budget_fit": 90,
+    "brand_accuracy": 98
+  },
+  "pricing": {
+    "pilot": "Free 30-60 day hosted pilot — no infrastructure cost, no IT burden",
+    "annual_subscription": "$5,000 - $15,000/year depending on modules and support tier",
+    "hud_compliance": "Under $25K fits HUD sole-source procurement rules — can use Capital Fund or admin fee reserves"
+  },
+  "competitive_landscape": {
+    "direct_competitors": ["Yardi", "Tenmast", "Emphasis"],
+    "differentiators": [
+      "AMHA-branded — not generic property tech",
+      "Zero deployment overhead — already live at https://new-ashtabula-initiative.com/landlord/",
+      "No staff training required — intuitive web interface",
+      "Fallback code paths work without API keys — 100% uptime resilience",
+      "Landlord-facing portal reduces support call volume to AMHA staff"
+    ]
+  },
+  "last_updated": "2026-07-05",
+  "research_source": "Honcho context synthesis from prior NAI sales tasks, coordination-sales.md, landing page review via vision analysis"
+}

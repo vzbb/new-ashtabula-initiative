@@ -34,6 +34,10 @@
       "dest": "/websites/saybrook-zoning/dist/$1"
     },
     {
+      "src": "/adaptive-reuse/?(.*)",
+      "dest": "/websites/adaptive-reuse-planner/dist/$1"
+    },
+    {
       "src": "/rennick-market/?(.*)",
       "dest": "/websites/rennick-market/dist/$1"
     },
@@ -44,6 +48,10 @@
     {
       "src": "/scheduler-sms/?(.*)",
       "dest": "/websites/service-scheduler-sms/dist/$1"
+    },
+    {
+      "src": "/compassionate/?(.*)",
+      "dest": "/websites/compassionate-planner/dist/$1"
     },
     {
       "src": "/mytrip-export/?(.*)",
@@ -60,6 +68,10 @@
     {
       "src": "/terra-vantage/?(.*)",
       "dest": "/websites/terra-vantage/dist/$1"
+    },
+    {
+      "src": "/event-permit/?(.*)",
+      "dest": "/websites/event-permit-express/dist/$1"
     },
     {
       "src": "/resource-pro/?(.*)",

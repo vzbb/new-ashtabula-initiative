@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-label="Rennick Meat Market wordmark">
-  <rect width="1200" height="400" rx="48" fill="#2e1010"/>
-  <circle cx="180" cy="200" r="92" fill="#c8a25a"/>
-  <path d="M140 200c0-22 18-40 40-40s40 18 40 40-18 40-40 40-40-18-40-40Zm16-58 24-30 24 30" fill="none" stroke="#2e1010" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="310" y="178" fill="#f7efe6" font-family="Georgia, serif" font-size="88" font-weight="700" letter-spacing="1.5">Rennick Meat Market</text>
-  <text x="310" y="250" fill="#d8c7ad" font-family="Arial, sans-serif" font-size="30" letter-spacing="5">HISTORIC BRIDGE STREET • ASHTABULA</text>
-  <text x="310" y="302" fill="#f2eadf" font-family="Arial, sans-serif" font-size="24">Butcher-inspired cuts, freezer orders, and custom prep.</text>
-</svg>

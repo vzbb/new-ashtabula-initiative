@@ -1,0 +1,42 @@
+{
+  "slug": "landlord",
+  "site": "AMHA Landlord Repair Queue",
+  "contacts": [
+    {
+      "name": "T. Sean Adams",
+      "title": "Executive Director",
+      "organization": "Ashtabula Metropolitan Housing Authority",
+      "email": "sadams@ashtabulamha.com",
+      "phone": "440-992-3156",
+      "address": "4717 Main Ave, Ashtabula, OH 44004",
+      "role": "primary_decision_maker",
+      "priority": 1,
+      "notes": "Primary target. Former Ashtabula City Manager (2016-2023). Appointed Feb 2024. Responds to operational efficiency and compliance arguments.",
+      "best_time_to_call": "Weekdays 9:00 AM - 11:30 AM",
+      "email_verified": true,
+      "phone_verified": true
+    },
+    {
+      "name": "Mary Church",
+      "title": "Assistant Director, Planning & Community Development",
+      "organization": "City of Ashtabula",
+      "email": "mchurch@cityofashtabula.com",
+      "phone": "440-992-7118",
+      "role": "secondary_stakeholder",
+      "priority": 2,
+      "notes": "Cross-over stakeholder — City PCD role connects housing authority to municipal planning. May influence Adams on community development alignment.",
+      "best_time_to_call": "Weekdays 10:00 AM - 12:00 PM",
+      "email_verified": true,
+      "phone_verified": true
+    }
+  ],
+  "outreach_status": {
+    "global_send_hold": true,
+    "hold_lifted": false,
+    "emails_sent": 0,
+    "calls_made": 0,
+    "last_contact": null,
+    "pitch_package_location": "/root/new-ashtabula-initiative/landlord-amha-pitch-package.md"
+  },
+  "last_updated": "2026-07-05"
+}

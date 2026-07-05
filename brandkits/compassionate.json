@@ -1,0 +1,175 @@
+{
+  "mvp": "compassionate-planner",
+  "slug": "compassionate",
+  "route": "/compassionate/",
+  "generated_at": "2026-07-05T02:30:00Z",
+  "based_on_research": [
+    "lead_research_json/compassionate.json",
+    "lead_research_json/ducro.json",
+    "branding_research/compassionate/branding.md",
+    "branding_research/ducro/branding.md"
+  ],
+  "target_buyer": {
+    "organization": "Ducro Funeral Services and Crematory",
+    "type": "Fifth-generation family-owned funeral home",
+    "website": "https://www.ducro.com",
+    "preplanning_portal": "https://preplanning.ducro.com",
+    "location": "4524 Elm Ave, Ashtabula, OH 44004",
+    "phone": "(440) 992-2191",
+    "founded": 1853,
+    "generation": "5th generation",
+    "claim": "Oldest continuous family-owned funeral firm in Ashtabula County",
+    "locations": [
+      { "name": "Ducro Funeral Services & Crematory", "address": "4524 Elm Ave, Ashtabula", "phone": "(440) 992-2191" },
+      { "name": "Walker Funeral Home", "address": "828 Sherman St, Geneva", "phone": "(440) 466-1108" },
+      { "name": "Childs-Williams-Ducro Funeral Home", "address": "1071 State Route 7N, Pierpont", "phone": "(440) 577-1311" },
+      { "name": "Zaback-Williams-Ducro Funeral Home", "address": "500 W. Prospect Rd, Ashtabula", "phone": "(440) 998-1234" },
+      { "name": "Greenlawn Memory Gardens", "address": "3140 E. Center St, North Kingsville", "phone": "(440) 224-1155", "type": "Cemetery" }
+    ],
+    "decision_maker": {
+      "name": "J.P. Ducro IV",
+      "title": "Owner / President / Funeral Director / County Commissioner",
+      "email": "jpducro@ducro.com",
+      "phone": "(440) 992-2191",
+      "background": "Fifth-generation funeral director (licensed since 1995), Ashtabula County Commissioner (2017–present), founder of Broadband Taskforce",
+      "key_traits": ["civic leader", "tech-forward", "community-rooted", "multi-location operator"]
+    }
+  },
+  "product_brand": {
+    "name": "Legacy Link",
+    "tagline": "Plan with dignity, peace, and clarity.",
+    "eyebrow": "Compassionate planning support",
+    "subtitle": "Guiding Ashtabula County families through end-of-life arrangements with a gentle, step-by-step approach.",
+    "footnote": "Serving Ashtabula County Families for 170+ Years",
+    "parent_brand": "Ducro Funeral Services"
+  },
+  "design_tokens": {
+    "color": {
+      "primary": {
+        "navy": "#22314f",
+        "name": "Sage Navy",
+        "usage": "Primary dark, backgrounds, feature icons, headers"
+      },
+      "primary_dark": {
+        "navy_dark": "#15253d",
+        "name": "Sage Dark",
+        "usage": "Button hover, deeper accents, footer backgrounds"
+      },
+      "accent": {
+        "gold": "#c7a45a",
+        "name": "Legacy Gold",
+        "usage": "Primary accent, CTAs, gold trim, decorative elements"
+      },
+      "accent_dark": {
+        "gold_dark": "#7a5a1d",
+        "name": "Legacy Gold Dark",
+        "usage": "CTA hover, text highlights, hover states"
+      },
+      "background": {
+        "cream": "#f7f3ea",
+        "name": "Warm Cream",
+        "usage": "Page background, subtle contrast sections"
+      },
+      "text": {
+        "body": "#2f3f59",
+        "name": "Warm Gray",
+        "usage": "Body text, footer bg, primary text color"
+      },
+      "text_muted": "#6f7888",
+      "white": "#ffffff",
+      "cards": "#ffffff",
+      "success": "#2d6a4f",
+      "error": "#c0392b",
+      "shadow": "0 15px 50px -10px rgba(39, 55, 84, 0.16)",
+      "shadow_lg": "0 25px 80px -15px rgba(199, 164, 90, 0.2)"
+    },
+    "typography": {
+      "heading": {
+        "font_family": "'Crimson Pro', serif",
+        "weights": [400, 600],
+        "usage": "All headings, logo text, feature titles, card titles",
+        "fallback": "Georgia, serif"
+      },
+      "body": {
+        "font_family": "'Inter', system-ui, sans-serif",
+        "weights": [400, 500, 600],
+        "usage": "Body copy, navigation, form labels, buttons",
+        "fallback": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      },
+      "logo_treatment": {
+        "style": "Crimson Pro serif for 'Ducro Funeral Services', uppercase sans-serif with letter-spacing for 'Legacy Link'"
+      }
+    },
+    "spacing": {
+      "base_unit": "4px",
+      "card_padding": "36px",
+      "section_gap": "24px",
+      "feature_gap": "20px",
+      "hero_padding": "56px"
+    },
+    "border_radius": {
+      "card": "32px",
+      "button": "24px",
+      "input": "16px",
+      "pill": "999px",
+      "icon_container": "50%"
+    },
+    "animation": {
+      "transition_speed": "0.2s",
+      "hover_lift": "translateY(-2px)",
+      "hover_lift_card": "translateY(-4px)",
+      "fade_duration": "0.4s ease-out"
+    }
+  },
+  "imagery_direction": {
+    "hero_concept": "Lake Erie shoreline at golden hour — peaceful water, wooden bench, autumn trees. Conveys peace and tranquility without being morbid. Grounds the site in Ashtabula's natural landscape.",
+    "secondary_concept": "Warm funeral home chapel interior — wooden pews, floral arrangements, tree of life emblem.",
+    "photography_style": "Warm, natural light. Local Ashtabula landmarks. Human-centered without being intrusive. Celebrating life and memory.",
+    "pattern_style": "Subtle warm gold/cream watercolor patterns at 12% opacity for visual richness without distraction."
+  },
+  "voice_and_tone": {
+    "tone": "Compassionate, dignified, clear, local",
+    "description": "Gentle and understanding, never pushy. Respectful of grief while being straightforward with information. Grounded in Ashtabula County with local references.",
+    "do": [
+      "Use warm, inclusive language",
+      "Acknowledge the difficulty of planning",
+      "Reference local community and landmarks",
+      "Keep sentences short and clear",
+      "Offer reassurance and hope"
+    ],
+    "dont": [
+      "Use aggressive sales language",
+      "Be morbid or clinical",
+      "Talk down to the user",
+      "Use industry jargon without explanation"
+    ]
+  },
+  "feature_highlights": [
+    "Step-by-step guided planning wizard",
+    "Document storage and organization",
+    "Family sharing with permission levels",
+    "Local Ashtabula County resource directory",
+    "Printable plan export (full binder + wallet card)",
+    "Progress tracking across planning modules"
+  ],
+  "logo_assets": {
+    "svg": "branding_research/compassionate/logo.svg",
+    "png_512": "branding_research/compassionate/logo-512.png",
+    "png_192": "branding_research/compassionate/logo-192.png",
+    "png_default": "branding_research/compassionate/logo.png",
+    "favicon_ico": "branding_research/compassionate/favicon.ico",
+    "favicon_16": "branding_research/compassionate/favicon-16x16.png",
+    "favicon_32": "branding_research/compassionate/favicon-32x32.png",
+    "apple_touch_icon": "branding_research/compassionate/apple-touch-icon.png"
+  },
+  "implementation_notes": {
+    "framework": "React + Vite",
+    "route": "/compassionate/",
+    "asset_paths": "All assets use import.meta.env.BASE_URL prefix",
+    "hero_rendering": "Gradient overlay (navy-to-cream) over hero image for text readability",
+    "pattern_rendering": "CSS background-image with inline style at 12% opacity",
+    "form_styling": "Warm cream inputs with navy focus border, 16px border-radius",
+    "card_styling": "White cards with large border-radius (32px), subtle shadow, gold-top accent border",
+    "ai_dependency": "None (self-contained static planner)"
+  }
+}

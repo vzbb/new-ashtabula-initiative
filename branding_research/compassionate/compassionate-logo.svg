@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <linearGradient id="navyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2d4a"/>
+      <stop offset="100%" style="stop-color:#22314f"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c7a45a"/>
+      <stop offset="100%" style="stop-color:#b8943f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- === INFINITY RINGS === -->
+  <!-- Left ring -->
+  <path d="M 300 200
+           C 300 140, 240 100, 180 100
+           C 110 100, 70 150, 70 200
+           C 70 250, 110 290, 160 295
+           C 200 299, 240 280, 270 250
+           C 290 230, 297 215, 300 200"
+        fill="none" stroke="url(#navyGrad)" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Right ring -->
+  <path d="M 300 200
+           C 300 140, 360 100, 420 100
+           C 490 100, 530 150, 530 200
+           C 530 250, 490 290, 440 295
+           C 400 299, 360 280, 330 250
+           C 310 230, 303 215, 300 200"
+        fill="none" stroke="url(#navyGrad)" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Ring highlight accents - gold -->
+  <path d="M 180 100
+           C 240 100, 300 140, 300 200"
+        fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+
+  <path d="M 420 100
+           C 360 100, 300 140, 300 200"
+        fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- === TREE OF LIFE === -->
+  <!-- Trunk - gold -->
+  <path d="M 300 200
+           C 296 195, 290 185, 288 175
+           C 286 165, 290 155, 294 148"
+        fill="none" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 300 200
+           C 304 195, 310 185, 312 175
+           C 314 165, 310 155, 306 148"
+        fill="none" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Roots -->
+  <path d="M 294 195 C 280 200, 265 205, 255 210" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 306 195 C 320 200, 335 205, 345 210" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 298 200 C 285 208, 275 215, 268 218" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 302 200 C 315 208, 325 215, 332 218" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Main branches -->
+  <path d="M 294 148 C 280 140, 260 130, 240 125" fill="none" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 306 148 C 320 140, 340 130, 360 125" fill="none" stroke="url(#goldGrad)" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 290 158 C 270 150, 250 145, 230 148" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 310 158 C 330 150, 350 145, 370 148" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 296 142 C 285 132, 268 125, 255 120" fill="none" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M 304 142 C 315 132, 332 125, 345 120" fill="none" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Small branchlets -->
+  <path d="M 270 135 C 262 128, 252 122, 245 118" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 330 135 C 338 128, 348 122, 355 118" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 250 128 C 242 120, 232 115, 225 112" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M 350 128 C 358 120, 368 115, 375 112" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Leaves -->
+  <ellipse cx="240" cy="123" rx="8" ry="5" fill="url(#goldGrad)" opacity="0.8"/>
+  <ellipse cx="360" cy="123" rx="8" ry="5" fill="url(#goldGrad)" opacity="0.8"/>
+  <ellipse cx="230" cy="146" rx="7" ry="5" fill="url(#goldGrad)" opacity="0.8"/>
+  <ellipse cx="370" cy="146" rx="7" ry="5" fill="url(#goldGrad)" opacity="0.8"/>
+  <ellipse cx="255" cy="118" rx="6" ry="4" fill="url(#goldGrad)" opacity="0.7"/>
+  <ellipse cx="345" cy="118" rx="6" ry="4" fill="url(#goldGrad)" opacity="0.7"/>
+  <ellipse cx="245" cy="116" rx="6" ry="4" fill="url(#goldGrad)" opacity="0.7"/>
+  <ellipse cx="355" cy="116" rx="6" ry="4" fill="url(#goldGrad)" opacity="0.7"/>
+  <ellipse cx="225" cy="110" rx="6" ry="4" fill="url(#goldGrad)" opacity="0.6"/>
+  <ellipse cx="375" cy="110" rx="6" ry="4" fill="url(#goldGrad)" opacity="0.6"/>
+  <ellipse cx="235" cy="112" rx="5" ry="3.5" fill="url(#goldGrad)" opacity="0.6"/>
+  <ellipse cx="365" cy="112" rx="5" ry="3.5" fill="url(#goldGrad)" opacity="0.6"/>
+  <ellipse cx="265" cy="130" rx="6" ry="4" fill="url(#goldGrad)" opacity="0.7"/>
+  <ellipse cx="335" cy="130" rx="6" ry="4" fill="url(#goldGrad)" opacity="0.7"/>
+  <ellipse cx="252" cy="122" rx="5" ry="3.5" fill="url(#goldGrad)" opacity="0.7"/>
+  <ellipse cx="348" cy="122" rx="5" ry="3.5" fill="url(#goldGrad)" opacity="0.7"/>
+
+  <!-- === TEXT === -->
+  <!-- "LEGACY LINK" - serif -->
+  <text x="300" y="355"
+        font-family="'Crimson Pro', 'Georgia', 'Times New Roman', serif"
+        font-size="46" font-weight="700" fill="#22314f"
+        text-anchor="middle" letter-spacing="8">
+    LEGACY LINK
+  </text>
+
+  <!-- Gold separator line -->
+  <line x1="200" y1="380" x2="400" y2="380" stroke="#c7a45a" stroke-width="2"/>
+  <!-- Leaf accent on separator - left -->
+  <path d="M 285 380 C 282 376, 278 376, 275 378 C 272 380, 274 384, 278 384 C 282 384, 285 382, 285 380 Z"
+        fill="#c7a45a"/>
+  <path d="M 282 380 C 284 377, 280 376, 278 378 C 276 380, 278 383, 280 383 C 282 383, 283 381, 282 380 Z"
+        fill="#c7a45a" opacity="0.6"/>
+  <!-- Leaf accent on separator - right -->
+  <path d="M 315 380 C 318 376, 322 376, 325 378 C 328 380, 326 384, 322 384 C 318 384, 315 382, 315 380 Z"
+        fill="#c7a45a"/>
+  <path d="M 318 380 C 316 377, 320 376, 322 378 C 324 380, 322 383, 320 383 C 318 383, 317 381, 318 380 Z"
+        fill="#c7a45a" opacity="0.6"/>
+
+  <!-- "DUCRO FUNERAL SERVICES" - sans-serif -->
+  <text x="300" y="420"
+        font-family="'Inter', 'Helvetica', 'Arial', sans-serif"
+        font-size="18" font-weight="500" fill="#22314f"
+        text-anchor="middle" letter-spacing="6">
+    DUCRO FUNERAL SERVICES
+  </text>
+
+  <!-- "EST. 1853" -->
+  <text x="300" y="450"
+        font-family="'Inter', 'Helvetica', 'Arial', sans-serif"
+        font-size="13" font-weight="400" fill="#c7a45a"
+        text-anchor="middle" letter-spacing="4">
+    EST. 1853
+  </text>
+</svg>
