@@ -6,3 +6,4 @@ node_modules/
 **/node_modules/
 .venv-nai-tools/
 .env*
+websites/*/dist/assets/*.js
