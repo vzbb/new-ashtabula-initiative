@@ -24,6 +24,7 @@ Immediate focus:
 Current scan truth:
 - `SITEMAP.json` defines 75 public routes
 - 75 are currently source-backed
+- production is served from `https://new-ashtabula-initiative.com`
 - retired routes should be removed from `SITEMAP.json`, rerendered into `SITEMAP.md`, and scrubbed from active screenshot/report surfaces together
 
 Canonical data note:
@@ -97,9 +98,9 @@ If a site is strong enough to be reused for multiple legitimate buyers, clone it
   - `dist`
   - `build`
   - `out`
-- Updated deploy logic to use a production build before pushing prebuilt output:
-  - `vercel build --prod`
-  - `vercel deploy --prebuilt --prod --yes`
+- Updated deploy logic to prepare a pruned Vercel Build Output API directory before pushing prebuilt output:
+  - local `./nai build` across the canonical route set
+  - `vercel deploy --prebuilt --archive=tgz --prod --yes`
 - Added missing local API-client shims for affected apps.
 - Removed duplicate inline Gemini fetch code from the apps that had been refactored to use the shared client.
 - Removed the stale `/wine/` route from the source of truth.
@@ -151,16 +152,29 @@ This refreshes `vercel.json` from the current sitemap and build-aware route logi
 
 ### 4. Build and deploy
 
+For one MVP, build only that route first:
+
+```bash
+./nai build --slugs saybrook-zoning
+```
+
+Use the slug from `SITEMAP.json`, not the folder name. This installs missing or corrupted dependencies for the selected site, rebuilds its source output, and leaves the rest of the portfolio alone.
+
+For a production publish:
+
 ```bash
 ./nai deploy --confirm-production
 ```
 
 This now:
 - builds each site
-- skips dependency-folder noise
+- skips dependency-folder noise and repairs corrupted recovered installs when possible
 - regenerates route config
-- runs `vercel build --prod`
-- deploys the production prebuilt output
+- prepares a pruned `.vercel/output` Build Output API directory
+- copies only route-backed build outputs and the landing page into that directory
+- deploys with `vercel deploy --prebuilt --archive=tgz --prod --yes`
+
+Do not run production deploys for every small edit. Batch coherent changes and deploy once when the live site needs to move.
 
 ### Pre-deploy gate
 
@@ -178,17 +192,89 @@ If scan is clean enough for the intended publish:
 
 ### 5. Capture screenshots
 
+Local/current-build capture:
+
 ```bash
 ./nai screenshots
 ```
 
-Use this for progress tracking and visual verification.
+Production capture:
+
+```bash
+./nai screenshots --live
+```
+
+Single-MVP local capture:
+
+```bash
+./nai screenshots --slugs saybrook-zoning
+```
+
+Single-MVP production capture:
+
+```bash
+./nai screenshots --live --slugs saybrook-zoning
+```
+
+Artifacts:
+- PNG files: `sitemap_screenshots/<index>_<slug>.png`
+- capture metadata: `sitemap_screenshots/<index>_<slug>.txt`
+- browser gallery: `sitemap_screenshots/index.html`
+
+Full screenshot runs reset the screenshot output directory. Filtered `--slugs` runs only replace the selected slug files and preserve the rest of the gallery context.
+
+### 6. Analyze screenshots
+
+Run the visual analysis after screenshots exist:
+
+```bash
+./nai analyze-screenshots
+```
+
+Analyze one MVP:
+
+```bash
+./nai analyze-screenshots --slugs saybrook-zoning
+```
+
+Common options:
+- `--quality fast` or `--quality deep`
+- `--model <openrouter-model-id>`
+- `--slugs-file path.txt`
+- `--focus`
+- `--branding-only`
+
+Artifacts:
+- main JSON report: `sitemap_screenshots/visual_analysis_report.json`
+- archived runs: `.sitemap_screenshots_analysis_archive/<timestamp>/`
 
 For score-only trend visualization across archived analysis runs, use:
 
 ```bash
 ./nai progress
 ```
+
+### 7. Live verification gate
+
+After deploy, verify the live route, not only the local build:
+
+```bash
+./nai screenshots --live --slugs <slug>
+./nai analyze-screenshots --slugs <slug>
+```
+
+For route/config work, run:
+
+```bash
+./nai sitemap-validate
+./nai scan
+```
+
+If a route returns the public landing page instead of the MVP, check:
+- whether the slug exists in `SITEMAP.json`
+- whether `vercel.json` has a route for `/<slug>/`
+- whether the site has a non-empty built `dist/index.html`
+- whether `./nai routes` has been run after route/build changes
 
 ## Practical Rules Going Forward
 

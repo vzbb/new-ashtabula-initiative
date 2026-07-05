@@ -8,8 +8,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITEMAP_MD_PATH = ROOT / "SITEMAP.md"
 SITEMAP_JSON_PATH = ROOT / "SITEMAP.json"
-BASE_URL = "https://new-ashtabula-initiative.vercel.app"
-ROUTE_URL_RE = re.compile(r"\[/([a-z0-9-]+)/\]\((https://new-ashtabula-initiative\.vercel\.app/[^)]+)\)")
+BASE_URL = "https://new-ashtabula-initiative.com"
+ROUTE_URL_RE = re.compile(r"\[/([a-z0-9-]+)/\]\((https://new-ashtabula-initiative\.com/[^)]+)\)")
 
 
 def _normalize_markdown_text(text: str) -> str:
@@ -23,7 +23,7 @@ def _parse_table_cells(line: str) -> list[str]:
 
 
 def _parse_site_row(line: str, category: str | None) -> dict[str, object] | None:
-    if "https://new-ashtabula-initiative.vercel.app/" not in line:
+    if "https://new-ashtabula-initiative.com/" not in line:
         return None
 
     cells = _parse_table_cells(line)

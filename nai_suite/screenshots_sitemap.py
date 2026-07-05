@@ -19,14 +19,14 @@ from playwright.sync_api import sync_playwright
 from nai_suite.siteflow import detect_asset_aliases, find_best_build_root, site_dir_for_slug
 from nai_suite.sitemap_data import load_public_urls
 
-SITEMAP_FILE = Path("SITEMAP.md")
+SITEMAP_FILE = Path("SITEMAP.json")
 OUTPUT_DIR = Path("sitemap_screenshots")
 SNAPSHOT_ROOT = OUTPUT_DIR.parent / f".{OUTPUT_DIR.name}_snapshot"
 SNAPSHOT_PREVIOUS = SNAPSHOT_ROOT / "previous"
 BASE_TITLE = "New Ashtabula Initiative | Full-Scale Infrastructure Modernization"
 NAI_HOSTS = (
-    "https://new-ashtabula-initiative.vercel.app",
-    "https://newashtabula.vercel.app",
+    "https://new-ashtabula-initiative.com",
+    "https://newashtabula.com",
 )
 
 
@@ -53,8 +53,81 @@ def load_analysis_report() -> dict[str, object] | None:
 
 def reset_output_dir(output_dir: Path) -> None:
     if output_dir.exists():
-        shutil.rmtree(output_dir)
+        for child in sorted(output_dir.iterdir(), key=lambda p: p.name, reverse=True):
+            if child.is_dir() and not child.is_symlink():
+                shutil.rmtree(child)
+            else:
+                child.unlink()
     output_dir.mkdir(parents=True, exist_ok=True)
+
+
+def clear_selected_slug_artifacts(output_dir: Path, selected_slugs: set[str]) -> None:
+    if not output_dir.exists():
+        output_dir.mkdir(parents=True, exist_ok=True)
+        return
+
+    for image_path in sorted(output_dir.glob("[0-9][0-9][0-9]_*.png")):
+        slug = image_path.stem.split("_", 1)[1] if "_" in image_path.stem else ""
+        if slug not in selected_slugs:
+            continue
+        meta_path = output_dir / f"{image_path.stem}.txt"
+        image_path.unlink(missing_ok=True)
+        meta_path.unlink(missing_ok=True)
+
+
+def load_meta(meta_path: Path) -> dict[str, object]:
+    data: dict[str, object] = {
+        "url": "",
+        "title": "",
+        "body_chars": 0,
+        "screenshot": "",
+        "source": "",
+        "warnings": [],
+    }
+    if not meta_path.exists():
+        return data
+    for line in meta_path.read_text().splitlines():
+        if ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        key = key.strip()
+        value = value.strip()
+        if key == "body_chars":
+            try:
+                data[key] = int(value)
+            except ValueError:
+                data[key] = 0
+        elif key == "warnings":
+            data[key] = [item.strip() for item in value.split(",") if item.strip() and item.strip() != "none"]
+        else:
+            data[key] = value
+    return data
+
+
+def load_existing_results(output_dir: Path) -> list[ShotResult]:
+    results: list[ShotResult] = []
+    seen_slugs: set[str] = set()
+    for image_path in sorted(output_dir.glob("[0-9][0-9][0-9]_*.png")):
+        if "_" not in image_path.stem:
+            continue
+        slug = image_path.stem.split("_", 1)[1]
+        if slug in seen_slugs:
+            continue
+        seen_slugs.add(slug)
+        meta_path = output_dir / f"{image_path.stem}.txt"
+        meta = load_meta(meta_path)
+        results.append(
+            ShotResult(
+                url=str(meta.get("url", "")),
+                slug=slug,
+                screenshot_path=image_path,
+                title=str(meta.get("title", "")),
+                body_chars=int(meta.get("body_chars", 0) or 0),
+                warnings=list(meta.get("warnings", [])),
+                source=str(meta.get("source", "")),
+            )
+        )
+    return results
 
 
 def backup_output_dir(output_dir: Path) -> None:
@@ -69,6 +142,10 @@ def backup_output_dir(output_dir: Path) -> None:
 
 def parse_sitemap() -> list[str]:
     return load_public_urls()
+
+
+def build_slug_index_map(urls: list[str]) -> dict[str, int]:
+    return {slug_from_url(url): index for index, url in enumerate(urls, start=1)}
 
 
 def slug_from_url(url: str) -> str:
@@ -589,7 +666,7 @@ def generate_gallery_index(results: list[ShotResult]) -> None:
       {''.join(cards)}
     </main>
     <footer>
-      Generated from <code>{escape(str(SITEMAP_FILE))}</code>
+      Generated from canonical <code>{escape(str(SITEMAP_FILE))}</code>
       {"and <code>sitemap_screenshots/visual_analysis_report.json</code>." if report_by_slug else "."}
     </footer>
   </body>
@@ -628,15 +705,25 @@ def main() -> None:
     )
     args = parser.parse_args()
 
+    slugs_mode = args.slugs is not None
+    selected_slugs = set(args.slugs or [])
+
     if args.live:
         backup_output_dir(OUTPUT_DIR)
-    reset_output_dir(OUTPUT_DIR)
-    urls = parse_sitemap()
-    if args.slugs:
-        slug_set = set(args.slugs)
-        urls = [u for u in urls if slug_from_url(u) in slug_set]
+    if slugs_mode:
+        clear_selected_slug_artifacts(OUTPUT_DIR, selected_slugs)
+    else:
+        reset_output_dir(OUTPUT_DIR)
+    all_urls = parse_sitemap()
+    slug_index_map = build_slug_index_map(all_urls)
+    urls = all_urls
+    if slugs_mode:
+        if not selected_slugs:
+            print("No slugs provided. Exiting without changing the output directory.")
+            return
+        urls = [u for u in all_urls if slug_from_url(u) in selected_slugs]
         if not urls:
-            print(f"No URLs matching slugs: {', '.join(args.slugs)}")
+            print(f"No URLs matching slugs: {', '.join(args.slugs or [])}")
             return
     print(f"Found {len(urls)} URLs in {SITEMAP_FILE}")
 
@@ -654,9 +741,10 @@ def main() -> None:
             slug = slug_from_url(url)
             site_dir = site_dir_for_slug(slug)
             build_root = find_best_build_root(site_dir)
+            canonical_index = slug_index_map.get(slug, index)
 
-            filename = OUTPUT_DIR / f"{index:03d}_{slug}.png"
-            meta_file = OUTPUT_DIR / f"{index:03d}_{slug}.txt"
+            filename = OUTPUT_DIR / f"{canonical_index:03d}_{slug}.png"
+            meta_file = OUTPUT_DIR / f"{canonical_index:03d}_{slug}.txt"
 
             if args.browse_only:
                 print(f"Browsing ({index}/{len(urls)}): {url}")
@@ -757,7 +845,8 @@ def main() -> None:
 
     warned = sum(1 for r in results if r.warnings)
     if not args.browse_only:
-        generate_gallery_index(results)
+        gallery_results = load_existing_results(OUTPUT_DIR) if slugs_mode else results
+        generate_gallery_index(gallery_results)
     print("\nDone.")
     print(f"Captured: {len(results)}/{len(urls)}")
     print(f"Warnings: {warned}")

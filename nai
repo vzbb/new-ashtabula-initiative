@@ -19,6 +19,7 @@ from nai_suite.sitemap_data import (
     validate_sitemap_data,
     write_sitemap_json,
 )
+from nai_suite.generate_all_mvps_page import write_all_mvps_page
 from nai_suite.siteflow import (
     find_best_build_root,
     load_public_slugs,
@@ -177,7 +178,7 @@ def cmd_clone_mvp(args: argparse.Namespace) -> int:
 
     parent_target = str(parent_route.get("target", "")).strip()
     route_index = args.index if args.index is not None else next_route_index()
-    route_url = f"https://new-ashtabula-initiative.vercel.app/{new_slug}/"
+    route_url = f"https://new-ashtabula-initiative.com/{new_slug}/"
     route_path = f"/{new_slug}/"
 
     route_record = {
@@ -366,8 +367,18 @@ def cmd_scan(_: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_build(_: argparse.Namespace) -> int:
-    slugs = load_public_slugs()
+def cmd_build(args: argparse.Namespace) -> int:
+    all_slugs = load_public_slugs()
+    selected_slugs = getattr(args, "slugs", None)
+    if selected_slugs:
+        unknown = [slug for slug in selected_slugs if slug not in all_slugs]
+        if unknown:
+            print(f"Unknown slug(s): {', '.join(unknown)}")
+            return 2
+        slugs = selected_slugs
+    else:
+        slugs = all_slugs
+
     ready = 0
     failed: list[str] = []
 
@@ -400,8 +411,49 @@ def cmd_build(_: argparse.Namespace) -> int:
             print(f"  - {slug}")
         return 1
 
-    subprocess.run([tool_python(), "-m", "nai_suite.update_vercel"], check=True, cwd=ROOT)
+    if selected_slugs:
+        print("Filtered build complete; run './nai routes' if route output should be regenerated.")
+    else:
+        subprocess.run([tool_python(), "-m", "nai_suite.update_vercel"], check=True, cwd=ROOT)
     return 0
+
+
+def prepare_vercel_output() -> Path:
+    write_all_mvps_page()
+
+    vercel_config_path = ROOT / "vercel.json"
+    output_root = ROOT / ".vercel" / "output"
+    static_root = output_root / "static"
+
+    if output_root.exists():
+        shutil.rmtree(output_root)
+    static_root.mkdir(parents=True, exist_ok=True)
+
+    vercel_config = json.loads(vercel_config_path.read_text())
+    routes = [route for route in vercel_config.get("routes", []) if isinstance(route, dict)]
+
+    copied: set[Path] = set()
+    for route in routes:
+        dest = str(route.get("dest", "")).strip()
+        if not dest.startswith("/websites/"):
+            continue
+        source_rel = Path(dest.lstrip("/").split("/$1", 1)[0])
+        source_root = ROOT / source_rel
+        if not source_root.exists() or source_root.resolve() in copied:
+            continue
+        target_root = static_root / source_rel
+        shutil.copytree(source_root, target_root, symlinks=True)
+        copied.add(source_root.resolve())
+
+    landing_page = ROOT / "landing-page"
+    if landing_page.exists():
+        shutil.copytree(landing_page, static_root / "landing-page", symlinks=True)
+
+    output_root.mkdir(parents=True, exist_ok=True)
+    (output_root / "config.json").write_text(
+        json.dumps({"version": 3, "routes": routes}, indent=2) + "\n"
+    )
+    return output_root
 
 
 def cmd_routes(_: argparse.Namespace) -> int:
@@ -446,7 +498,8 @@ def cmd_sitemap_validate(_: argparse.Namespace) -> int:
 
 
 def cmd_render_all_mvps(_: argparse.Namespace) -> int:
-    subprocess.run([tool_python(), "-m", "nai_suite.generate_all_mvps_page"], check=True, cwd=ROOT)
+    path = write_all_mvps_page()
+    print(f"Rendered {path.relative_to(ROOT)} from canonical SITEMAP.json")
     return 0
 
 
@@ -514,8 +567,8 @@ def cmd_deploy(args: argparse.Namespace) -> int:
     if not args.confirm_production and os.environ.get("NAI_CONFIRM_PRODUCTION_DEPLOY") != "1":
         print("Production deploy blocked by default.")
         print("")
-        print("This command builds every site, runs `vercel build --prod`, and deploys")
-        print("the prebuilt output to production.")
+        print("This command builds every site, prepares a pruned Vercel Build Output")
+        print("directory, and deploys the prebuilt output to production.")
         print("")
         print("Run one of these only when you intend to publish production:")
         print("  ./nai deploy --confirm-production")
@@ -526,12 +579,12 @@ def cmd_deploy(args: argparse.Namespace) -> int:
         return 1
 
     print("")
-    print("Building Vercel output...")
-    subprocess.run([*vercel_cmd(), "build", "--prod"], cwd=ROOT, check=True)
+    print("Preparing pruned Vercel output...")
+    prepare_vercel_output()
 
     print("")
     print("Deploying prebuilt output to production...")
-    subprocess.run([*vercel_cmd(), "deploy", "--prebuilt", "--prod", "--yes"], cwd=ROOT, check=True)
+    subprocess.run([*vercel_cmd(), "deploy", "--prebuilt", "--archive=tgz", "--prod", "--yes"], cwd=ROOT, check=True)
     return 0
 
 
@@ -653,7 +706,9 @@ def build_parser() -> argparse.ArgumentParser:
     sub = parser.add_subparsers(dest="command", required=True)
 
     sub.add_parser("scan", help="inspect site build status").set_defaults(func=cmd_scan)
-    sub.add_parser("build", help="install dependencies and build every site").set_defaults(func=cmd_build)
+    build = sub.add_parser("build", help="install dependencies and build sites")
+    build.add_argument("--slugs", nargs="+", help="build only the listed canonical slug(s)")
+    build.set_defaults(func=cmd_build)
     sub.add_parser("routes", help="regenerate vercel.json").set_defaults(func=cmd_routes)
     sub.add_parser("sitemap-sync", help="validate SITEMAP.json and render SITEMAP.md").set_defaults(func=cmd_sitemap_sync)
     sub.add_parser("sitemap-render-md", help="render SITEMAP.md from canonical SITEMAP.json").set_defaults(func=cmd_sitemap_render_md)

@@ -1,46 +1,39 @@
 #!/usr/bin/env python3
-"""Score all 76 NAI MVPs and generate pipeline_priority.json.
+"""Score all NAI MVPs and generate pipeline_priority.json.
 
 Weights: Revenue 25%, Community 20%, Brand 15%, Design 15%, Simplicity 15%, Urgency 10%.
 Design defaults to 5 and is updated by vision assessment — NOT guessed by this script.
 """
 
 import json
-import re
 import sys
 from datetime import datetime, timezone
+from pathlib import Path
 
 
-def parse_sitemap(path):
-    with open(path) as f:
-        content = f.read()
+ROOT = Path(__file__).resolve().parents[1]
+SITEMAP_JSON = ROOT / "SITEMAP.json"
 
-    pattern = r'\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|([^|]+)\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|'
-    matches = re.findall(pattern, content)
+
+def parse_sitemap(path: Path):
+    with path.open() as f:
+        data = json.load(f)
 
     mvps = []
-    seen = set()
-    for m in matches:
-        num, site_name, route_cell, buyer, desc = m
-        route_match = re.search(r'\[/([^/\]]+)/?\]', route_cell)
-        if not route_match:
-            route_match = re.search(r'/([a-zA-Z0-9_-]+)/?', route_cell)
-        route = route_match.group(1) if route_match else route_cell.strip().strip('/')
-        if route in seen:
+    for route in data.get("routes", []):
+        if not isinstance(route, dict):
             continue
-        seen.add(route)
-        site_name = site_name.strip()
-        buyer = buyer.strip()
-        desc = desc.strip()
+        mvps.append(
+            {
+                "num": int(route.get("index", 0) or 0),
+                "site": str(route.get("site", "")).strip(),
+                "route": str(route.get("slug", "")).strip(),
+                "buyer": str(route.get("target", "")).strip(),
+                "desc": str(route.get("description", "")).strip(),
+            }
+        )
 
-        mvps.append({
-            "num": int(num),
-            "site": site_name,
-            "route": route,
-            "buyer": buyer,
-            "desc": desc
-        })
-
+    mvps.sort(key=lambda item: item["num"])
     return mvps
 
 
@@ -192,8 +185,8 @@ def score_mvp(mvp):
 
 
 def main():
-    mvps = parse_sitemap("/root/new-ashtabula-initiative/SITEMAP.md")
-    print(f"Parsed {len(mvps)} MVPs from SITEMAP.md")
+    mvps = parse_sitemap(SITEMAP_JSON)
+    print(f"Parsed {len(mvps)} MVPs from SITEMAP.json")
 
     scored = [score_mvp(m) for m in mvps]
     scored.sort(key=lambda x: x["scores"]["composite"], reverse=True)

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>New Ashtabula Initiative</title>
+    <meta
+      name="description"
+      content="Local AI prototypes and practical digital tools built for Ashtabula County organizations, operators, and civic teams."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #15201b;
+        --muted: #526159;
+        --line: rgba(21, 32, 27, 0.14);
+        --paper: #f7f3ea;
+        --field: #dfe9df;
+        --lake: #204f64;
+        --brick: #9a4d32;
+        --gold: #c89b3c;
+        --white: #fffdf8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          linear-gradient(180deg, rgba(255, 253, 248, 0.86), rgba(247, 243, 234, 0.96)),
+          url("/landing-page/have-service-van.jpg") center / cover fixed;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        width: min(1120px, calc(100% - 36px));
+        margin: 0 auto;
+      }
+
+      header {
+        min-height: 82vh;
+        display: grid;
+        align-items: end;
+        padding: 26px 0 54px;
+      }
+
+      .topbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 18px 0;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+      }
+
+      .mark {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, var(--lake), var(--brick));
+        border: 2px solid rgba(255, 253, 248, 0.9);
+        box-shadow: 0 10px 28px rgba(21, 32, 27, 0.2);
+      }
+
+      .hero {
+        max-width: 780px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--lake);
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(44px, 8vw, 96px);
+        line-height: 0.94;
+        letter-spacing: 0;
+        max-width: 10ch;
+      }
+
+      .lede {
+        margin: 22px 0 0;
+        max-width: 62ch;
+        color: #26362f;
+        font-size: clamp(18px, 2vw, 23px);
+        line-height: 1.45;
+      }
+
+      .signal-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        border: 1px solid var(--line);
+        background: var(--line);
+        margin-top: -1px;
+      }
+
+      .signal {
+        background: rgba(255, 253, 248, 0.94);
+        padding: 22px;
+      }
+
+      .signal strong {
+        display: block;
+        font-size: 30px;
+        line-height: 1;
+      }
+
+      .signal span {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        line-height: 1.35;
+      }
+
+      main {
+        background: var(--paper);
+      }
+
+      .band {
+        padding: 64px 0;
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 42px;
+        align-items: start;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(30px, 4vw, 52px);
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .body-copy {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .work-item {
+        min-height: 154px;
+        padding: 20px;
+        border: 1px solid var(--line);
+        background: var(--white);
+        border-radius: 8px;
+      }
+
+      .work-item b {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      .work-item p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .proof {
+        background: #162922;
+        color: #f4efe3;
+      }
+
+      .proof .body-copy {
+        color: #cfdbd1;
+      }
+
+      .proof-list {
+        display: grid;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .proof-list li {
+        list-style: none;
+        padding: 16px 0;
+        border-top: 1px solid rgba(244, 239, 227, 0.18);
+        color: #e7eee7;
+        line-height: 1.45;
+      }
+
+      footer {
+        padding: 28px 0;
+        background: #101914;
+        color: #c8d2ca;
+        font-size: 13px;
+      }
+
+      @media (max-width: 820px) {
+        body {
+          background-attachment: scroll;
+        }
+
+        header {
+          min-height: 76vh;
+        }
+
+        .signal-row,
+        .split,
+        .work-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="wrap">
+        <div class="brand"><span class="mark" aria-hidden="true"></span><span>New Ashtabula Initiative</span></div>
+      </div>
+    </div>
+
+    <header>
+      <div class="wrap hero">
+        <p class="eyebrow">Applied AI for local operators</p>
+        <h1>Tools for the county we actually have.</h1>
+        <p class="lede">
+          New Ashtabula Initiative builds focused prototypes for civic offices, small businesses,
+          service companies, cultural groups, and community organizations across Ashtabula County.
+        </p>
+      </div>
+    </header>
+
+    <section class="signal-row" aria-label="Project signals">
+      <div class="signal"><strong>75</strong><span>working MVP routes maintained from one canonical map</span></div>
+      <div class="signal"><strong>Local</strong><span>buyer-specific demos shaped around real regional organizations</span></div>
+      <div class="signal"><strong>Fast</strong><span>small, inspectable tools that can be cloned, rebranded, and improved</span></div>
+    </section>
+
+    <main>
+      <section class="band">
+        <div class="wrap split">
+          <h2>Software experiments with a practical sales target.</h2>
+          <p class="body-copy">
+            The project is a live workshop for turning local friction into useful software: permit guidance,
+            quote tools, scheduling flows, visual planners, service dashboards, document assistants, and
+            outreach-ready demos. Each MVP is intentionally narrow enough to understand, test, and improve
+            without losing the buyer context that made it worth building.
+          </p>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap work-grid" aria-label="Focus areas">
+          <article class="work-item">
+            <b>Civic and public service</b>
+            <p>Tools for permits, zoning, eligibility, public information, and service navigation.</p>
+          </article>
+          <article class="work-item">
+            <b>Trades and local services</b>
+            <p>Estimators, booking flows, repair queues, and customer intake for service businesses.</p>
+          </article>
+          <article class="work-item">
+            <b>Industrial and logistics</b>
+            <p>Parts requests, quote workflows, tracking tools, and operational assistants.</p>
+          </article>
+          <article class="work-item">
+            <b>Tourism and culture</b>
+            <p>Guides, planners, docent concepts, creative portfolios, and visitor-facing experiments.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band proof">
+        <div class="wrap split">
+          <h2>Built to be inspected, not hidden behind pitch language.</h2>
+          <ul class="proof-list">
+            <li>Routes are managed from a structured sitemap so deployment, screenshots, and analysis stay aligned.</li>
+            <li>Each MVP remains independently editable under the monorepo instead of being trapped in one large app.</li>
+            <li>Visual review and AI analysis workflows help triage the full portfolio without manually opening every route.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">New Ashtabula Initiative. Local prototypes, practical workflows, and buyer-specific demos.</div>
+    </footer>
+  </body>
+</html>

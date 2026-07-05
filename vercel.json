@@ -22,8 +22,16 @@
       "dest": "/websites/sbdc-support-tools/dist/$1"
     },
     {
+      "src": "/artist-commission/?(.*)",
+      "dest": "/websites/artist-commission-form/dist/$1"
+    },
+    {
       "src": "/eligibility-lite/?(.*)",
       "dest": "/websites/eligibility-lite/dist/$1"
+    },
+    {
+      "src": "/ashtabula-fence/?(.*)",
+      "dest": "/websites/ashtabula-fence/dist/$1"
     },
     {
       "src": "/trumbull-locker/?(.*)",
@@ -42,6 +50,10 @@
       "dest": "/websites/rennick-market/dist/$1"
     },
     {
+      "src": "/civic-insight/?(.*)",
+      "dest": "/websites/civic-insight-engine/dist/$1"
+    },
+    {
       "src": "/parts-request/?(.*)",
       "dest": "/websites/parts-finder-request/dist/$1"
     },
@@ -56,6 +68,10 @@
     {
       "src": "/mytrip-export/?(.*)",
       "dest": "/websites/mytrip-planner-export/dist/$1"
+    },
+    {
+      "src": "/ai-docent-pro/?(.*)",
+      "dest": "/websites/ai-docent-pro/dist/$1"
     },
     {
       "src": "/historian-pro/?(.*)",
@@ -78,6 +94,10 @@
       "dest": "/websites/resource-compass-pro/dist/$1"
     },
     {
+      "src": "/boat-storage/?(.*)",
+      "dest": "/websites/boat-storage-waitlist/dist/$1"
+    },
+    {
       "src": "/thomas-fence/?(.*)",
       "dest": "/websites/thomas-fence/dist/$1"
     },
@@ -96,6 +116,10 @@
     {
       "src": "/fence-quote/?(.*)",
       "dest": "/websites/fence-quote/dist/$1"
+    },
+    {
+      "src": "/auto-detail/?(.*)",
+      "dest": "/websites/auto-detail-booking/dist/$1"
     },
     {
       "src": "/parcelvisor/?(.*)",
@@ -128,6 +152,10 @@
     {
       "src": "/cut-custom/?(.*)",
       "dest": "/websites/cut-custom/dist/$1"
+    },
+    {
+      "src": "/blueprint/?(.*)",
+      "dest": "/websites/blueprint-analyzer/dist/$1"
     },
     {
       "src": "/snow-plow/?(.*)",
@@ -208,6 +236,10 @@
     {
       "src": "/charter/?(.*)",
       "dest": "/websites/charter-booking/dist/$1"
+    },
+    {
+      "src": "/aidflow/?(.*)",
+      "dest": "/websites/aidflow-navigator/dist/$1"
     },
     {
       "src": "/harvest/?(.*)",

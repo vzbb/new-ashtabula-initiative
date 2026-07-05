@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All MVPs | New Ashtabula Initiative</title>
+  <meta name="description" content="Canonical index of all MVP routes from SITEMAP.json.">
+  <meta name="robots" content="noindex,nofollow">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8f6;
+      --panel: #ffffff;
+      --text: #18201c;
+      --muted: #5c6761;
+      --line: #d8ddd8;
+      --accent: #1b5e4b;
+      --accent-soft: #e5f0eb;
+      --shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+    a { color: inherit; }
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    header {
+      padding: 28px 0 20px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.05;
+    }
+    .lede {
+      max-width: 78ch;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0 18px;
+      padding: 0;
+    }
+    .stats li {
+      list-style: none;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+      padding: 14px 16px;
+      display: grid;
+      gap: 4px;
+    }
+    .metric-value {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    .metric-label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 8px;
+    }
+    nav a {
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--text);
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    nav a span {
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    main {
+      padding: 10px 0 32px;
+    }
+    section {
+      margin: 18px 0 26px;
+    }
+    h2 {
+      margin: 0 0 4px;
+      font-size: 24px;
+    }
+    .section-meta {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: auto;
+      box-shadow: var(--shadow);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 920px;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+    th {
+      background: #f2f5f3;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    tbody tr:hover {
+      background: #f9fbf9;
+    }
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      padding: 18px 0 30px;
+    }
+    .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    @media (max-width: 780px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell">
+    <p class="eyebrow">Canonical MVP index</p>
+    <h1>All MVPs</h1>
+    <p class="lede">
+      Generated from <code>SITEMAP.json</code>. This page mirrors the canonical route set,
+      grouped by category and kept in route order so the deploy output stays honest.
+    </p>
+    <ul class="stats">
+      <li><span class="metric-value">75</span><span class="metric-label">MVPs</span></li>
+<li><span class="metric-value">10</span><span class="metric-label">Categories</span></li>
+<li><span class="metric-value">13</span><span class="metric-label">Target ledger entries</span></li>
+    </ul>
+    <nav aria-label="Route categories">
+      <a href="#government-civic-9-sites">🏛️ Government &amp; Civic (9 sites) <span>9</span></a><a href="#business-investment-7-sites">💼 Business &amp; Investment (7 sites) <span>9</span></a><a href="#home-property-9-sites">🏠 Home &amp; Property (9 sites) <span>10</span></a><a href="#local-services-12-sites">🛒 Local Services (12 sites) <span>12</span></a><a href="#transportation-logistics-6-sites">🚛 Transportation &amp; Logistics (6 sites) <span>6</span></a><a href="#health-social-services-6-sites">❤️ Health &amp; Social Services (6 sites) <span>6</span></a><a href="#arts-culture-7-sites">🎨 Arts &amp; Culture (7 sites) <span>7</span></a><a href="#events-community-6-sites">🎉 Events &amp; Community (6 sites) <span>6</span></a><a href="#additional-business-sites-14-sites">🏪 Additional Business Sites (14 sites) <span>9</span></a><a href="#government-civic">🏛️ Government &amp; Civic <span>1</span></a>
+    </nav>
+  </header>
+  <main class="shell">
+    <section id="government-civic-9-sites">
+<h2>🏛️ Government &amp; Civic (9 sites)</h2>
+<p class="section-meta">9 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Civic Insight Engine</td><td><a href="https://new-ashtabula-initiative.com/civic-insight/">/civic-insight/</a></td><td>Ashtabula County Government (Transparency Portal)</td><td>Municipal transparency dashboard</td></tr>
+<tr><td>2</td><td>Permit Whisperer</td><td><a href="https://new-ashtabula-initiative.com/permits/">/permits/</a></td><td>City of Ashtabula</td><td>AI permit guidance assistant</td></tr>
+<tr><td>3</td><td>Zoning Clerk</td><td><a href="https://new-ashtabula-initiative.com/zoning/">/zoning/</a></td><td>Ashtabula County Planning &amp; Development Department</td><td>Zoning guidance tool</td></tr>
+<tr><td>4</td><td>Eligibility Screener</td><td><a href="https://new-ashtabula-initiative.com/eligibility/">/eligibility/</a></td><td>Ashtabula County Department of Job and Family Services</td><td>Benefits eligibility wizard</td></tr>
+<tr><td>5</td><td>Eligibility Lite</td><td><a href="https://new-ashtabula-initiative.com/eligibility-lite/">/eligibility-lite/</a></td><td>Ashtabula County Department of Job and Family Services</td><td>Streamlined benefits check</td></tr>
+<tr><td>6</td><td>License Wizard</td><td><a href="https://new-ashtabula-initiative.com/license/">/license/</a></td><td>City of Ashtabula</td><td>Business licensing guide</td></tr>
+<tr><td>7</td><td>Event Permit Express</td><td><a href="https://new-ashtabula-initiative.com/event-permit/">/event-permit/</a></td><td>Ashtabula County Fairgrounds</td><td>Special event permits</td></tr>
+<tr><td>8</td><td>GovTech Box</td><td><a href="https://new-ashtabula-initiative.com/govtech/">/govtech/</a></td><td>Ashtabula County Data Board / IT Services</td><td>Government tech portal</td></tr>
+<tr><td>9</td><td>Invest Ashtabula</td><td><a href="https://new-ashtabula-initiative.com/invest/">/invest/</a></td><td>Ashtabula Area Chamber of Commerce</td><td>Investment attraction portal</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="business-investment-7-sites">
+<h2>💼 Business &amp; Investment (7 sites)</h2>
+<p class="section-meta">9 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>10</td><td>Blueprint Analyzer</td><td><a href="https://new-ashtabula-initiative.com/blueprint/">/blueprint/</a></td><td>Ashtabula County Building Department</td><td>Construction document AI</td></tr>
+<tr><td>11</td><td>BoxFlow Estimator</td><td><a href="https://new-ashtabula-initiative.com/boxflow/">/boxflow/</a></td><td>World Shipping, Inc. (Port of Ashtabula)</td><td>Logistics cost estimator</td></tr>
+<tr><td>12</td><td>Parts Finder</td><td><a href="https://new-ashtabula-initiative.com/parts/">/parts/</a></td><td>Grand River Rubber &amp; Plastics Co.</td><td>Industrial parts locator</td></tr>
+<tr><td>13</td><td>Parts Request</td><td><a href="https://new-ashtabula-initiative.com/parts-request/">/parts-request/</a></td><td>Grand River Rubber &amp; Plastics Co.</td><td>Custom parts sourcing</td></tr>
+<tr><td>14</td><td>Plating Tracker</td><td><a href="https://new-ashtabula-initiative.com/plating/">/plating/</a></td><td>Lake City Plating</td><td>Quality tracking system</td></tr>
+<tr><td>15</td><td>Plating Tracker Pro</td><td><a href="https://new-ashtabula-initiative.com/plating-pro/">/plating-pro/</a></td><td>Lake City Plating</td><td>Advanced plating analytics</td></tr>
+<tr><td>16</td><td>Fence Quote</td><td><a href="https://new-ashtabula-initiative.com/fence-quote/">/fence-quote/</a></td><td>Miller&#x27;s Integrity Construction LLC</td><td>Instant fence estimates</td></tr>
+<tr><td>17</td><td>Landlord Repair Queue</td><td><a href="https://new-ashtabula-initiative.com/landlord/">/landlord/</a></td><td>Ashtabula Metropolitan Housing Authority (AMHA)</td><td>Maintenance management</td></tr>
+<tr><td>18</td><td>Lawn Quote Tool</td><td><a href="https://new-ashtabula-initiative.com/lawn/">/lawn/</a></td><td>MC Professional Lawn Care and Snow Plowing</td><td>Landscaping estimates</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="home-property-9-sites">
+<h2>🏠 Home &amp; Property (9 sites)</h2>
+<p class="section-meta">10 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>19</td><td>HVAC Tuneup</td><td><a href="https://new-ashtabula-initiative.com/hvac/">/hvac/</a></td><td>HAVE Heating and Cooling (HAVE, Inc.)</td><td>HVAC service scheduler</td></tr>
+<tr><td>20</td><td>Snow Plow Tracker</td><td><a href="https://new-ashtabula-initiative.com/snow-plow/">/snow-plow/</a></td><td>MC Professional Lawn Care and Snow Plowing</td><td>Snow removal coordination</td></tr>
+<tr><td>21</td><td>Instant Dirt Quote</td><td><a href="https://new-ashtabula-initiative.com/dirt-quote/">/dirt-quote/</a></td><td>Brockway&#x27;s Topsoil</td><td>Excavation quotes</td></tr>
+<tr><td>22</td><td>Rental Availability</td><td><a href="https://new-ashtabula-initiative.com/rental/">/rental/</a></td><td>Ridgeview Estates</td><td>Housing portal</td></tr>
+<tr><td>23</td><td>Adaptive Reuse Planner</td><td><a href="https://new-ashtabula-initiative.com/adaptive-reuse/">/adaptive-reuse/</a></td><td>Renew Partners LLC</td><td>Historic building reuse</td></tr>
+<tr><td>24</td><td>Engineer&#x27;s Assistant</td><td><a href="https://new-ashtabula-initiative.com/engineers/">/engineers/</a></td><td>City of Ashtabula Engineering Division</td><td>Engineering document AI</td></tr>
+<tr><td>25</td><td>Local Grocer Go</td><td><a href="https://new-ashtabula-initiative.com/grocer/">/grocer/</a></td><td>Harbor Gardens</td><td>Local food marketplace</td></tr>
+<tr><td>26</td><td>Curbside Pickup Tracker</td><td><a href="https://new-ashtabula-initiative.com/curbside/">/curbside/</a></td><td>Harbor Gardens</td><td>Order coordination</td></tr>
+<tr><td>27</td><td>Farm Stand Finder</td><td><a href="https://new-ashtabula-initiative.com/farm-stand/">/farm-stand/</a></td><td>Ashtabula Farmers Market</td><td>Local farm locator</td></tr>
+<tr><td>28</td><td>Mobile Notary</td><td><a href="https://new-ashtabula-initiative.com/notary/">/notary/</a></td><td>Notes and Prints Mobile</td><td>Notary booking service</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="local-services-12-sites">
+<h2>🛒 Local Services (12 sites)</h2>
+<p class="section-meta">12 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>29</td><td>Auto Detail Booking</td><td><a href="https://new-ashtabula-initiative.com/auto-detail/">/auto-detail/</a></td><td>Flawless Coating &amp; Detailing</td><td>Detailing scheduler</td></tr>
+<tr><td>30</td><td>Truck Wash Booking</td><td><a href="https://new-ashtabula-initiative.com/truck-wash/">/truck-wash/</a></td><td>Quick Clean Car and Truck Wash</td><td>Fleet wash scheduling</td></tr>
+<tr><td>31</td><td>Service Scheduler</td><td><a href="https://new-ashtabula-initiative.com/scheduler/">/scheduler/</a></td><td>Blank Heating Company Inc</td><td>Appointment booking</td></tr>
+<tr><td>32</td><td>Service Scheduler SMS</td><td><a href="https://new-ashtabula-initiative.com/scheduler-sms/">/scheduler-sms/</a></td><td>Blank Heating Company Inc</td><td>SMS-based scheduling</td></tr>
+<tr><td>33</td><td>Insta Book</td><td><a href="https://new-ashtabula-initiative.com/insta-book/">/insta-book/</a></td><td>The Lakehouse Inn</td><td>Instant booking system</td></tr>
+<tr><td>34</td><td>Compassionate Planner</td><td><a href="https://new-ashtabula-initiative.com/compassionate/">/compassionate/</a></td><td>Ducro Funeral Services</td><td>Compassionate end-of-life planning assistant</td></tr>
+<tr><td>35</td><td>Virtual Concierge</td><td><a href="https://new-ashtabula-initiative.com/concierge/">/concierge/</a></td><td>The Lodge at Geneva-on-the-Lake</td><td>Visitor assistance</td></tr>
+<tr><td>36</td><td>Visitor Parking Finder</td><td><a href="https://new-ashtabula-initiative.com/parking/">/parking/</a></td><td>City of Ashtabula</td><td>Downtown parking guide</td></tr>
+<tr><td>37</td><td>MyTrip Planner</td><td><a href="https://new-ashtabula-initiative.com/mytrip/">/mytrip/</a></td><td>Visit Ashtabula County (Official Tourism Site)</td><td>Trip itinerary builder</td></tr>
+<tr><td>38</td><td>MyTrip Export</td><td><a href="https://new-ashtabula-initiative.com/mytrip-export/">/mytrip-export/</a></td><td>Ashtabula County Convention &amp; Visitors Bureau</td><td>Trip plan export</td></tr>
+<tr><td>39</td><td>Route Optimizer</td><td><a href="https://new-ashtabula-initiative.com/routes/">/routes/</a></td><td>Ashtabula County Transportation System (ACTS)</td><td>Delivery route planning</td></tr>
+<tr><td>40</td><td>Ride Ready</td><td><a href="https://new-ashtabula-initiative.com/ride-ready/">/ride-ready/</a></td><td>Ashtabula County Transportation System (ACTS)</td><td>Transportation access</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="transportation-logistics-6-sites">
+<h2>🚛 Transportation &amp; Logistics (6 sites)</h2>
+<p class="section-meta">6 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>41</td><td>Charter Booking</td><td><a href="https://new-ashtabula-initiative.com/charter/">/charter/</a></td><td>Compensator Lake Erie Fishing Charters</td><td>Charter service portal</td></tr>
+<tr><td>42</td><td>Marina Slip Waitlist</td><td><a href="https://new-ashtabula-initiative.com/marina/">/marina/</a></td><td>Harbor Yacht Club &amp; Marina</td><td>Marina management</td></tr>
+<tr><td>43</td><td>AidFlow Navigator</td><td><a href="https://new-ashtabula-initiative.com/aidflow/">/aidflow/</a></td><td>211 Ashtabula County / United Way of Ashtabula County</td><td>Benefits navigation</td></tr>
+<tr><td>44</td><td>Resource Compass</td><td><a href="https://new-ashtabula-initiative.com/resource/">/resource/</a></td><td>211 Ashtabula County / United Way of Ashtabula County</td><td>Resource directory</td></tr>
+<tr><td>45</td><td>Resource Compass Pro</td><td><a href="https://new-ashtabula-initiative.com/resource-pro/">/resource-pro/</a></td><td>OhioMeansJobs Ashtabula County</td><td>Advanced resource matching</td></tr>
+<tr><td>46</td><td>Policy Pal</td><td><a href="https://new-ashtabula-initiative.com/policy-pal/">/policy-pal/</a></td><td>Kollhoff Insurance Agency</td><td>Insurance guidance</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="health-social-services-6-sites">
+<h2>❤️ Health &amp; Social Services (6 sites)</h2>
+<p class="section-meta">6 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>47</td><td>Boat Storage Waitlist</td><td><a href="https://new-ashtabula-initiative.com/boat-storage/">/boat-storage/</a></td><td>Geneva Marina</td><td>Storage management</td></tr>
+<tr><td>48</td><td>Harvest Alert</td><td><a href="https://new-ashtabula-initiative.com/harvest/">/harvest/</a></td><td>Ashtabula Farmers Market</td><td>Agricultural alerts</td></tr>
+<tr><td>49</td><td>AI Docent Pro</td><td><a href="https://new-ashtabula-initiative.com/ai-docent-pro/">/ai-docent-pro/</a></td><td>Ashtabula County Historical Society (ACHS)</td><td>Advanced museum AI</td></tr>
+<tr><td>50</td><td>Artist Commission Form</td><td><a href="https://new-ashtabula-initiative.com/artist-commission/">/artist-commission/</a></td><td>Ashtabula Arts Center</td><td>Commission system</td></tr>
+<tr><td>51</td><td>Pocket Historian</td><td><a href="https://new-ashtabula-initiative.com/historian/">/historian/</a></td><td>Ashtabula County Historical Society</td><td>Local history guide</td></tr>
+<tr><td>52</td><td>Pocket Historian Pro</td><td><a href="https://new-ashtabula-initiative.com/historian-pro/">/historian-pro/</a></td><td>Ashtabula County Historical Society</td><td>History archives</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="arts-culture-7-sites">
+<h2>🎨 Arts &amp; Culture (7 sites)</h2>
+<p class="section-meta">7 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>53</td><td>Pocket Sommelier</td><td><a href="https://new-ashtabula-initiative.com/sommelier/">/sommelier/</a></td><td>Ferrante Winery &amp; Ristorante</td><td>Wine pairing guide</td></tr>
+<tr><td>54</td><td>Pocket Sommelier Pro</td><td><a href="https://new-ashtabula-initiative.com/sommelier-pro/">/sommelier-pro/</a></td><td>Ferrante Winery &amp; Ristorante</td><td>Advanced wine AI</td></tr>
+<tr><td>55</td><td>GOTL Weekend Planner</td><td><a href="https://new-ashtabula-initiative.com/gotl/">/gotl/</a></td><td>Geneva-on-the-Lake Convention and Visitors Bureau</td><td>Geneva-on-the-Lake planner</td></tr>
+<tr><td>56</td><td>Harbor Cam Dashboard</td><td><a href="https://new-ashtabula-initiative.com/harbor/">/harbor/</a></td><td>Ashtabula Yacht Club</td><td>Live harbor conditions</td></tr>
+<tr><td>57</td><td>Pet Matchmaker</td><td><a href="https://new-ashtabula-initiative.com/pet-match/">/pet-match/</a></td><td>Ashtabula County Animal Protective League (ACAPL)</td><td>Pet adoption matching</td></tr>
+<tr><td>58</td><td>Visual Portfolio</td><td><a href="https://new-ashtabula-initiative.com/portfolio/">/portfolio/</a></td><td>PIPE! Creative</td><td>Portfolio showcase</td></tr>
+<tr><td>59</td><td>Volunteer Scheduler</td><td><a href="https://new-ashtabula-initiative.com/volunteer/">/volunteer/</a></td><td>RSVP (Retired Senior Volunteer Program) - Axess Family Services</td><td>Volunteer coordination</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="events-community-6-sites">
+<h2>🎉 Events &amp; Community (6 sites)</h2>
+<p class="section-meta">6 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>60</td><td>Wedding Lead Form</td><td><a href="https://new-ashtabula-initiative.com/wedding/">/wedding/</a></td><td>Elks Lodge #208</td><td>Wedding vendor connector</td></tr>
+<tr><td>61</td><td>Ashtabula Fence</td><td><a href="https://new-ashtabula-initiative.com/ashtabula-fence/">/ashtabula-fence/</a></td><td>Thomas Fence Co.</td><td>Fence company site</td></tr>
+<tr><td>62</td><td>Thomas Fence</td><td><a href="https://new-ashtabula-initiative.com/thomas-fence/">/thomas-fence/</a></td><td>Thomas Fence Co.</td><td>Thomas Fence site</td></tr>
+<tr><td>63</td><td>Cut Custom</td><td><a href="https://new-ashtabula-initiative.com/cut-custom/">/cut-custom/</a></td><td>Trumbull Locker Plant</td><td>Custom cutting service</td></tr>
+<tr><td>64</td><td>Rennick Market</td><td><a href="https://new-ashtabula-initiative.com/rennick-market/">/rennick-market/</a></td><td>Rennick Meat Market</td><td>Rennick Market site</td></tr>
+<tr><td>65</td><td>Trumbull Locker</td><td><a href="https://new-ashtabula-initiative.com/trumbull-locker/">/trumbull-locker/</a></td><td>Trumbull Locker Plant</td><td>Trumbull Locker site</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="additional-business-sites-14-sites">
+<h2>🏪 Additional Business Sites (14 sites)</h2>
+<p class="section-meta">9 routes</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>66</td><td>Terra Vantage</td><td><a href="https://new-ashtabula-initiative.com/terra-vantage/">/terra-vantage/</a></td><td>Severino Construction</td><td>Terra Vantage site</td></tr>
+<tr><td>67</td><td>ParcelVisor</td><td><a href="https://new-ashtabula-initiative.com/parcelvisor/">/parcelvisor/</a></td><td>Ashtabula County Land Reutilization Corporation (AC Land Bank)</td><td>Parcel management</td></tr>
+<tr><td>68</td><td>RoofQuote</td><td><a href="https://new-ashtabula-initiative.com/roofquote/">/roofquote/</a></td><td>A &amp; R Roofing</td><td>Roofing quotes</td></tr>
+<tr><td>69</td><td>Site Ops Pro</td><td><a href="https://new-ashtabula-initiative.com/site-ops-pro/">/site-ops-pro/</a></td><td>Brobst Earthworks, LTD</td><td>Site operations</td></tr>
+<tr><td>70</td><td>SBDC Business Counseling</td><td><a href="https://new-ashtabula-initiative.com/sbdc-business-counseling/">/sbdc-business-counseling/</a></td><td>Ohio SBDC at Lakeland Community College</td><td>SBDC counseling</td></tr>
+<tr><td>71</td><td>SBDC Business Planning</td><td><a href="https://new-ashtabula-initiative.com/sbdc-business-planning/">/sbdc-business-planning/</a></td><td>Ohio Small Business Development Centers (State Network)</td><td>Business planning</td></tr>
+<tr><td>72</td><td>SBDC Educational Resources</td><td><a href="https://new-ashtabula-initiative.com/sbdc-educational-resources/">/sbdc-educational-resources/</a></td><td>Ohio Small Business Development Centers (Statewide Network)</td><td>Educational content</td></tr>
+<tr><td>73</td><td>SBDC Learning Modules</td><td><a href="https://new-ashtabula-initiative.com/sbdc-learning-modules/">/sbdc-learning-modules/</a></td><td>Ohio Small Business Development Centers (Statewide Network)</td><td>Learning platform</td></tr>
+<tr><td>74</td><td>SBDC Support Tools</td><td><a href="https://new-ashtabula-initiative.com/sbdc-support-tools/">/sbdc-support-tools/</a></td><td>Ohio Small Business Development Centers (State Network)</td><td>Support resources</td></tr>
+</tbody>
+</table>
+</div>
+</section><section id="government-civic">
+<h2>🏛️ Government &amp; Civic</h2>
+<p class="section-meta">1 route</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>#</th><th>Site</th><th>Route</th><th>Target</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>75</td><td>Saybrook Zoning Clerk</td><td><a href="https://new-ashtabula-initiative.com/saybrook-zoning/">/saybrook-zoning/</a></td><td>Saybrook Township Zoning Office</td><td>Zoning code assistant and permit guidance</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+    <section id="target-ledger">
+      <h2>Canonical Target Ledger</h2>
+      <p class="section-meta">Primary targets stay canonical. Secondary targets are reference points, not automatic promotions.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Site</th>
+              <th>Route</th>
+              <th>Primary target</th>
+              <th>Secondary targets</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Compassionate Planner</td><td>`/compassionate/`</td><td>Ducro Funeral Services</td><td>Ducro Funeral Services contacts</td><td>Keep Legacy Link as the tool name; this is a settled mapping</td></tr>
+<tr><td>Terra Vantage</td><td>`/terra-vantage/`</td><td>Severino Construction</td><td>JCI Contractors; Koski Construction Co.</td><td>Proprietary tool name stays Terra Vantage; keep later white-label / clone potential open</td></tr>
+<tr><td>Site Ops Pro</td><td>`/site-ops-pro/`</td><td>Brobst Earthworks, LTD</td><td>Wilkinson Paving &amp; Excavating; J. Severino Construction Inc.; Koski Construction Co.</td><td>Keep Brobst as the primary target; Wilkinson is a strong later white-label / clone candidate</td></tr>
+<tr><td>Ashtabula Fence</td><td>`/ashtabula-fence/`</td><td>Ashtabula Fence Co. LLC</td><td>Thomas Fence Co. Inc.; Miller&#x27;s Integrity Construction LLC</td><td>Concrete brand; keep polishing</td></tr>
+<tr><td>Thomas Fence</td><td>`/thomas-fence/`</td><td>Thomas Fence Co. Inc.</td><td>Ashtabula Fence Co. LLC; Miller&#x27;s Integrity Construction LLC</td><td>Concrete brand; keep polishing</td></tr>
+<tr><td>Fence Quote</td><td>`/fence-quote/`</td><td>Miller&#x27;s Integrity Construction LLC</td><td>Lion Fence Builders; Residence Artists Inc.</td><td>Generic MVP, now anchored to a distinct fence buyer; Ashtabula Fence Co. and Thomas Fence Co. are separate MVPs and not clone candidates here</td></tr>
+<tr><td>Farm Stand Finder</td><td>`/farm-stand/`</td><td>Ashtabula Farmers Market</td><td>Harbor Gardens; 2140 Farm Market; Conneaut Farmers Market</td><td>Generic MVP, use the most concrete farm/market buyer available</td></tr>
+<tr><td>Rennick Market</td><td>`/rennick-market/`</td><td>Rennick Meat Market</td><td>Harbor Gardens; Ashtabula Local Food Network; Ashtabula County Farm Bureau</td><td>Brand is concrete; polish the identity</td></tr>
+<tr><td>Trumbull Locker</td><td>`/trumbull-locker/`</td><td>Trumbull Locker Plant</td><td>NaKyrsie Meats; Miles Farmers Market; Don&#x27;s Custom Meats</td><td>Brand is concrete; polish the identity</td></tr>
+<tr><td>AidFlow Navigator</td><td>`/aidflow/`</td><td>211 Ashtabula County / United Way of Ashtabula County</td><td>Ashtabula County Community Action Agency; ACDJFS</td><td>Shared social-service body is acceptable here</td></tr>
+<tr><td>Resource Compass</td><td>`/resource/`</td><td>211 Ashtabula County / United Way of Ashtabula County</td><td>Ashtabula County Community Action Agency; ACDJFS</td><td>Shared social-service body is acceptable here</td></tr>
+<tr><td>Resource Compass Pro</td><td>`/resource-pro/`</td><td>OhioMeansJobs Ashtabula County</td><td>Growth Partnership for Ashtabula County; ROA Group</td><td>Advanced resource matching</td></tr>
+<tr><td>Saybrook Zoning Clerk</td><td>/saybrook-zoning/</td><td>Saybrook Township Zoning Office</td><td></td><td>Child clone of Zoning Clerk for Saybrook Township Zoning Office; parent route zoning remains canonical.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer class="shell">
+    <div class="footer-grid">
+      <span>Source: <code>SITEMAP.json</code></span>
+      <span>Generated: <time datetime="2026-07-05T22:43:30Z">2026-07-05T22:43:30Z</time></span>
+    </div>
+  </footer>
+</body>
+</html>
+

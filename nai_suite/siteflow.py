@@ -122,14 +122,16 @@ def package_has_build_script(package_dir: str) -> bool:
 
 def ensure_node_modules(package_dir: Path) -> None:
     node_modules = package_dir / "node_modules"
-    if node_modules.exists():
+    if node_modules.exists() and node_modules_looks_usable(package_dir):
         return
+    if node_modules.exists():
+        shutil.rmtree(node_modules)
 
     lockfile = package_dir / "package-lock.json"
     ci_cmd = ["npm", "ci", "--include=dev", "--no-audit", "--no-fund", "--ignore-scripts", "--legacy-peer-deps"]
     install_cmd = ["npm", "install", "--include=dev", "--no-audit", "--no-fund", "--ignore-scripts", "--legacy-peer-deps"]
 
-    if lockfile.exists():
+    if lockfile_looks_usable(lockfile):
         try:
             subprocess.run(ci_cmd, cwd=package_dir, check=True)
             return
@@ -137,6 +139,44 @@ def ensure_node_modules(package_dir: Path) -> None:
             pass
 
     subprocess.run(install_cmd, cwd=package_dir, check=True)
+
+
+def lockfile_looks_usable(lockfile: Path) -> bool:
+    if not lockfile.exists() or lockfile.stat().st_size == 0:
+        return False
+    try:
+        data = json.loads(lockfile.read_text())
+    except Exception:
+        return False
+    version = data.get("lockfileVersion")
+    return isinstance(version, int) and version >= 1
+
+
+def node_modules_looks_usable(package_dir: Path) -> bool:
+    """Catch recovered/corrupted installs with zero-byte package files."""
+    pkg = package_dir / "package.json"
+    if not pkg.exists():
+        return False
+
+    try:
+        data = read_json(pkg)
+    except Exception:
+        return False
+
+    scripts = data.get("scripts", {})
+    build_script = str(scripts.get("build", ""))
+    if "vite" in build_script:
+        required = [
+            package_dir / "node_modules" / ".bin" / "vite",
+            package_dir / "node_modules" / "vite" / "package.json",
+            package_dir / "node_modules" / "vite" / "bin" / "vite.js",
+            package_dir / "node_modules" / "vite" / "dist" / "node" / "cli.js",
+        ]
+        for path in required:
+            if not path.exists() or path.stat().st_size == 0:
+                return False
+
+    return True
 
 
 def build_workdir(site_dir: Path) -> Path | None:
@@ -185,6 +225,8 @@ def run_site_build(site_dir: Path) -> Path:
 
 
 def index_kind(index_html: Path) -> str:
+    if not index_html.exists() or index_html.stat().st_size == 0:
+        return "empty"
     text = index_html.read_text(errors="ignore")
     if "/src/main.jsx" in text or "/src/main.tsx" in text:
         return "shell"
