@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/eligibility-pro/
-title: ACCAA ClientStream Optimizer - Helping People. Changing Lives.
-body_chars: 502
-screenshot: sitemap_screenshots/006_eligibility-pro.png
-source: live
-warnings: none

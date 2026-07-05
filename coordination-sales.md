@@ -1,23 +1,24 @@
-# Sales & Outreach — Coordination Log
+# Sales Coordination — Cyrus Satterlee
 
-**Last Updated:** Turn 1, July 3 2026  
-**Status:** Not yet activated — awaiting Chief of Staff assignment
+## Active Pipeline: AMHA Landlord Portal (/landlord/)
 
-## Hot Prospects
+**Status:** DEMO-READY — Full sales package compiled 2026-07-05
+**Composite Score:** 6.95 | **QA Greenlight:** 9.3/10
+**Live URL:** https://new-ashtabula-initiative.vercel.app/landlord/
 
-| Prospect | Contact | Phone | Assigned Sites | Status |
-|----------|---------|-------|----------------|--------|
-| City Building Dept | TBD | 440-992-7115 | 18 gov sites | Not contacted |
-| Chamber of Commerce | TBD | 440-998-4741 | 23 business sites | Not contacted |
-| Lakeland SBDC | TBD | 440-525-7450 | 12 SBDC sites | Not contacted |
-| County Commissioners | TBD | TBD | 15 county sites | Not contacted |
+### Artifacts in workspace t_659f1b50
+- `amha-landlord-demo-script.md` — Full walkthrough script (6 sections, ~6 min)
+- `amha-talking-points.md` — Mission-aligned talking points, objection handling, one-liners
 
-## Current Assignment
-None yet.
+### Key Facts for Pitch
+- **Target:** Ashtabula Metropolitan Housing Authority (AMHA)
+- **Strengths:** Perfect rendering (7/7 assets 200), strong AMHA branding (logo, colors, mission, values, programs all match brandkit), 3 fallback code paths — demo never breaks
+- **QA Caveats:** Flat design (not a blocker), IrresistibleOffer.css dead import (trivial), minor hex discrepancy in text/muted colors (negligible)
+- **Interactive feature:** Landlord Case Workspace — property input, issue type pills, priority pills, case detail textarea, one-click response generation
+- **Fallback:** Works with or without API key — polished local response when API unavailable
 
-## Outreach Queue
-Not yet queued.
-
-## Handoff Notes
-Sales materials are complete (SALES_OUTREACH_BIBLE, THE_CLOSER, LEAD_RESEARCH_REPORT, email_prospects/).
-Ready to activate when Chief of Staff gives the green light.
+### Next Steps
+1. [ ] Contact AMHA to schedule demo
+2. [ ] Walk through demo script (6 min)
+3. [ ] Deploy talking points focus: mission alignment, operational efficiency
+4. [ ] Close: "It's already yours — let's make it official"

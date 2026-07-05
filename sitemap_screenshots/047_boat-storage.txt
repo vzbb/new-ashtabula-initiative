@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/boat-storage/
-title: Geneva Marina | Boat Storage Waitlist
-body_chars: 1348
-screenshot: sitemap_screenshots/047_boat-storage.png
-source: live
-warnings: none

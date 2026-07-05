@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/ashtabula-fence/
-title: Ashtabula Fence Co. | Fence Quote & Site Planning
-body_chars: 1000
-screenshot: sitemap_screenshots/061_ashtabula-fence.png
-source: live
-warnings: none

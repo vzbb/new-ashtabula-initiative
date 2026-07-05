@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/civic-insight/
-title: Ashtabula County Transparency Portal — Official Government Dashboard
-body_chars: 5399
-screenshot: sitemap_screenshots/001_civic-insight.png
-source: live
-warnings: none

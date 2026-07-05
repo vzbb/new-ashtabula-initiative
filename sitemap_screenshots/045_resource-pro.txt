@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/resource-pro/
-title: G.O. Benevolence Engine - Growth & Opportunity
-body_chars: 721
-screenshot: sitemap_screenshots/045_resource-pro.png
-source: live
-warnings: none

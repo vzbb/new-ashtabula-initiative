@@ -1,0 +1,67 @@
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Status: Salted">
+  <defs>
+    <style>
+      @keyframes salt-shimmer {
+        0% { transform: translateX(-100%); opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { transform: translateX(100px); opacity: 0; }
+      }
+      @keyframes salt-particle-1 {
+        0%, 100% { opacity: 0; transform: translate(0, 0); }
+        20% { opacity: 1; }
+        60% { opacity: 1; }
+        100% { opacity: 0; transform: translate(12px, -18px); }
+      }
+      @keyframes salt-particle-2 {
+        0%, 100% { opacity: 0; transform: translate(0, 0); }
+        30% { opacity: 0.8; }
+        70% { opacity: 0.8; }
+        100% { opacity: 0; transform: translate(-10px, -15px); }
+      }
+      @keyframes salt-particle-3 {
+        0%, 100% { opacity: 0; transform: translate(0, 0); }
+        40% { opacity: 0.6; }
+        80% { opacity: 0.6; }
+        100% { opacity: 0; transform: translate(8px, -20px); }
+      }
+      .shimmer { animation: salt-shimmer 2.5s ease-in-out infinite; }
+      .particle-1 { animation: salt-particle-1 2.5s ease-out infinite; }
+      .particle-2 { animation: salt-particle-2 2.5s ease-out infinite 0.4s; }
+      .particle-3 { animation: salt-particle-3 2.5s ease-out infinite 0.8s; }
+      @media (prefers-reduced-motion: reduce) {
+        .shimmer, .particle-1, .particle-2, .particle-3 { animation: none !important; opacity: 0 !important; }
+      }
+    </style>
+  </defs>
+  <!-- Glass background circle -->
+  <circle cx="20" cy="20" r="18" fill="rgba(212,154,53,0.12)" stroke="rgba(212,154,53,0.25)" stroke-width="1.5"/>
+  
+  <!-- Salt crystal shape (diamond) -->
+  <polygon points="20,8 28,20 20,32 12,20" fill="none" stroke="#d49a35" stroke-width="1.8"/>
+  <!-- Inner crystal lines -->
+  <line x1="20" y1="14" x2="20" y2="26" stroke="#d49a35" stroke-width="1" opacity="0.5"/>
+  <line x1="14" y1="20" x2="26" y2="20" stroke="#d49a35" stroke-width="1" opacity="0.5"/>
+  <!-- Cross grain -->
+  <line x1="16" y1="16" x2="24" y2="24" stroke="#d49a35" stroke-width="0.7" opacity="0.3"/>
+  <line x1="16" y1="24" x2="24" y2="16" stroke="#d49a35" stroke-width="0.7" opacity="0.3"/>
+  
+  <!-- Shimmer sweep across crystal -->
+  <rect x="-10" y="12" width="15" height="16" fill="url(#shimmer-grad)" class="shimmer" clip-path="url(#crystal-clip)"/>
+  
+  <!-- Floating salt particles -->
+  <circle cx="22" cy="22" r="1.5" fill="rgba(212,154,53,0.8)" class="particle-1"/>
+  <circle cx="16" cy="18" r="1.2" fill="rgba(212,154,53,0.6)" class="particle-2"/>
+  <circle cx="24" cy="15" r="1" fill="rgba(212,154,53,0.7)" class="particle-3"/>
+  
+  <defs>
+    <linearGradient id="shimmer-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(212,154,53,0)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.4)"/>
+      <stop offset="100%" stop-color="rgba(212,154,53,0)"/>
+    </linearGradient>
+    <clipPath id="crystal-clip">
+      <polygon points="20,8 28,20 20,32 12,20"/>
+    </clipPath>
+  </defs>
+</svg>

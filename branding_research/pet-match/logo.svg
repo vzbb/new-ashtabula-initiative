@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100" width="340" height="100">
+  <defs>
+    <style>
+      .pm-heart { fill: #ED8936; }
+      .pm-pad { fill: #FFFAF0; }
+    </style>
+  </defs>
+
+  <!--
+    Pet Match Primary Logo
+    ──────────────────────
+    Horizontal lockup: [Heart-Paw Icon] + "Pet Match" wordmark + "ADOPTION MATCHING" tagline
+    
+    Icon concept: A Friendly Orange heart (#ED8936) with a white paw print integrated
+    as negative space. The paw consists of four elongated oval toe pads in a wide
+    arc above a kidney-shaped main pad. The arrangement reads clearly as a paw print
+    at all sizes while the overall silhouette remains unmistakably a heart.
+    
+    Colors:
+      Heart:        #ED8936 (Friendly Orange)
+      Paw pads:     #FFFAF0 (Warm Cream — background color, creates cutout illusion)
+      Wordmark:     #4A5568 (Warm Gray)
+      Tagline:      #718096 (Muted Gray)
+    
+    Typography:
+      Wordmark:     Fredoka 700 (fallback: rounded sans-serif stack)
+      Tagline:      Nunito 600 (fallback: sans-serif stack)
+    
+    Clear space: 16px minimum on all sides
+    Background:  Designed for Warm Cream (#FFFAF0) and light backgrounds
+  -->
+
+  <!-- Icon: Heart silhouette with integrated paw print (80×80) -->
+  <g transform="translate(10, 10)" aria-label="Pet Match icon">
+    <!-- Heart silhouette — classic two-lobe heart -->
+    <path d="M 40 78 
+             C 40 78, 4 50, 4 30 
+             C 4 14, 18 2, 26 14 
+             C 32 20, 36 26, 40 30 
+             C 44 26, 48 20, 54 14 
+             C 62 2, 76 14, 76 30 
+             C 76 50, 40 78, 40 78 Z" 
+          class="pm-heart"/>
+    
+    <!-- Main paw pad (palm) — kidney/bean shaped for natural paw look -->
+    <path d="M 27 46 
+             C 27 40, 32 37, 40 37 
+             C 48 37, 53 40, 53 46 
+             C 53 54, 47 58, 40 58 
+             C 33 58, 27 54, 27 46 Z" 
+          class="pm-pad"/>
+    
+    <!-- Toe pad 1 — leftmost, elongated oval -->
+    <ellipse cx="18" cy="34" rx="5" ry="3.5" class="pm-pad" transform="rotate(-15, 18, 34)"/>
+    
+    <!-- Toe pad 2 — inner left, elongated oval -->
+    <ellipse cx="30" cy="24" rx="5.5" ry="3.5" class="pm-pad" transform="rotate(-5, 30, 24)"/>
+    
+    <!-- Toe pad 3 — inner right, elongated oval -->
+    <ellipse cx="50" cy="24" rx="5.5" ry="3.5" class="pm-pad" transform="rotate(5, 50, 24)"/>
+    
+    <!-- Toe pad 4 — rightmost, elongated oval -->
+    <ellipse cx="62" cy="34" rx="5" ry="3.5" class="pm-pad" transform="rotate(15, 62, 34)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g transform="translate(106, 0)" aria-label="Pet Match wordmark">
+    <!-- "Pet Match" — Fredoka 700, Warm Gray -->
+    <text x="0" y="50" 
+          font-family="'Fredoka', 'Nunito', 'Segoe UI', 'Arial Rounded MT Bold', 'Helvetica Rounded', Arial, sans-serif" 
+          font-weight="700" font-size="36" fill="#4A5568" letter-spacing="-0.5">
+      Pet Match
+    </text>
+    
+    <!-- "ADOPTION MATCHING" tagline — uppercase, tracked out, Muted Gray -->
+    <text x="2" y="68" 
+          font-family="'Nunito', 'Segoe UI', Arial, sans-serif" 
+          font-weight="600" font-size="10.5" fill="#718096" letter-spacing="4.2">
+      ADOPTION MATCHING
+    </text>
+  </g>
+</svg>

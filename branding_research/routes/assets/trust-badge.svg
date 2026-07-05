@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" width="400" height="140">
+  <defs>
+    <linearGradient id="badgeBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#003366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002244;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E88121;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4721E;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+    <style>
+      .sans { font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+      .serif { font-family: 'Georgia', 'Times New Roman', serif; }
+    </style>
+  </defs>
+
+  <!-- Outer shield shape -->
+  <g filter="url(#shadow)">
+    <path d="M 200,5 L 380,30 L 380,105 Q 380,125 200,135 Q 20,125 20,105 L 20,30 Z" fill="url(#badgeBg)" stroke="#E88121" stroke-width="2"/>
+  </g>
+
+  <!-- Inner decorative border -->
+  <path d="M 200,15 L 365,37 L 365,102 Q 365,118 200,127 Q 35,118 35,102 L 35,37 Z" fill="none" stroke="#E88121" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Top decorative bar -->
+  <rect x="80" y="28" width="240" height="2" rx="1" fill="url(#orangeAccent)" opacity="0.6"/>
+
+  <!-- "Proudly Serving" -->
+  <text x="200" y="55" class="sans" font-size="12" fill="#FFFFFF" text-anchor="middle" letter-spacing="3" opacity="0.9">PROUDLY SERVING</text>
+
+  <!-- "Ashtabula County" - main headline -->
+  <text x="200" y="82" class="serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">Ashtabula County</text>
+
+  <!-- Bottom decorative bar -->
+  <rect x="100" y="92" width="200" height="2" rx="1" fill="url(#orangeAccent)" opacity="0.6"/>
+
+  <!-- "Since 1976" -->
+  <text x="200" y="110" class="sans" font-size="13" font-weight="600" fill="#E88121" text-anchor="middle" letter-spacing="4">SINCE 1976</text>
+
+  <!-- Star accents -->
+  <polygon points="40,45 43,53 52,53 45,58 48,67 40,61 32,67 35,58 28,53 37,53" fill="#E88121" opacity="0.4"/>
+  <polygon points="360,45 363,53 372,53 365,58 368,67 360,61 352,67 355,58 348,53 357,53" fill="#E88121" opacity="0.4"/>
+</svg>

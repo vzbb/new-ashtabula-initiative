@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 580" width="500" height="580">
+  <defs>
+    <!-- Warm Coral Gradient -->
+    <linearGradient id="coralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E87461"/>
+      <stop offset="100%" style="stop-color:#D15B4A"/>
+    </linearGradient>
+    <!-- Cream BG Gradient -->
+    <radialGradient id="creamGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" style="stop-color:#FFFFFF"/>
+      <stop offset="100%" style="stop-color:#FFF8F0"/>
+    </radialGradient>
+    <!-- Soft shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#3D3D3D" flood-opacity="0.15"/>
+    </filter>
+    <!-- Inner glow -->
+    <filter id="innerGlow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#D15B4A" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- === BADGE / EMBLEM === -->
+
+  <!-- Outer ring -->
+  <circle cx="250" cy="230" r="185" fill="url(#coralGrad)" filter="url(#shadow)"/>
+
+  <!-- Inner ring — cream background -->
+  <circle cx="250" cy="230" r="170" fill="url(#creamGrad)"/>
+
+  <!-- Thin teal accent ring -->
+  <circle cx="250" cy="230" r="170" fill="none" stroke="#5CBCC0" stroke-width="3" opacity="0.5"/>
+
+  <!-- Inner thin coral ring -->
+  <circle cx="250" cy="230" r="162" fill="none" stroke="#E87461" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- === SHELTER/ROOF MOTIF === -->
+  <!-- Warm coral roofline arching over the animals -->
+  <path d="M 120 260 Q 120 115 250 100 Q 380 115 380 260"
+        fill="none" stroke="#E87461" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Roof interior fill (subtle warm glow) -->
+  <path d="M 140 260 Q 140 140 250 120 Q 360 140 360 260 Z"
+        fill="#FDE8D0" opacity="0.4"/>
+
+  <!-- === DOG SILHOUETTE (left, facing right) === -->
+  <g transform="translate(145, 185)" fill="#3D3D3D">
+    <!-- Dog body -->
+    <ellipse cx="50" cy="48" rx="38" ry="24"/>
+    <!-- Dog head -->
+    <circle cx="82" cy="28" r="18"/>
+    <!-- Dog ear (floppy) -->
+    <ellipse cx="72" cy="14" rx="8" ry="16" transform="rotate(-15, 72, 14)"/>
+    <!-- Dog snout -->
+    <ellipse cx="98" cy="32" rx="12" ry="8"/>
+    <!-- Dog nose -->
+    <circle cx="107" cy="30" r="3" fill="#3D3D3D"/>
+    <!-- Dog tail -->
+    <path d="M 12 42 Q 0 28 8 14 Q 14 4 6 0"
+          fill="none" stroke="#3D3D3D" stroke-width="5" stroke-linecap="round"/>
+    <!-- Dog legs -->
+    <rect x="28" y="66" width="6" height="18" rx="3"/>
+    <rect x="42" y="66" width="6" height="18" rx="3"/>
+    <rect x="56" y="66" width="6" height="18" rx="3"/>
+    <rect x="68" y="66" width="6" height="18" rx="3"/>
+    <!-- Dog collar -->
+    <path d="M 72 42 L 90 38" stroke="#E87461" stroke-width="3" fill="none"/>
+    <!-- Dog eye -->
+    <circle cx="88" cy="25" r="2" fill="#ffffff"/>
+  </g>
+
+  <!-- === CAT SILHOUETTE (right, facing left) === -->
+  <g transform="translate(270, 187)" fill="#3D3D3D">
+    <!-- Cat body -->
+    <ellipse cx="35" cy="44" rx="32" ry="20"/>
+    <!-- Cat head -->
+    <circle cx="18" cy="24" r="16"/>
+    <!-- Cat ears (pointed) -->
+    <polygon points="6,12 2,-2 16,10"/>
+    <polygon points="20,8 30,-2 30,10"/>
+    <!-- Cat tail (curved up) -->
+    <path d="M 65 40 Q 82 38 80 18 Q 78 6 85 4"
+          fill="none" stroke="#3D3D3D" stroke-width="5" stroke-linecap="round"/>
+    <!-- Cat legs -->
+    <rect x="18" y="60" width="5" height="15" rx="2.5"/>
+    <rect x="30" y="60" width="5" height="15" rx="2.5"/>
+    <rect x="42" y="60" width="5" height="15" rx="2.5"/>
+    <rect x="52" y="60" width="5" height="15" rx="2.5"/>
+    <!-- Cat collar with bell -->
+    <path d="M 24 36 L 8 32" stroke="#F5A623" stroke-width="2.5" fill="none"/>
+    <circle cx="16" cy="36" r="3" fill="#F5A623"/>
+    <!-- Cat eye -->
+    <circle cx="12" cy="21" r="2" fill="#ffffff"/>
+    <!-- Cat whiskers -->
+    <line x1="6" y1="28" x2="-8" y2="25" stroke="#3D3D3D" stroke-width="1" opacity="0.5"/>
+    <line x1="6" y1="30" x2="-10" y2="32" stroke="#3D3D3D" stroke-width="1" opacity="0.5"/>
+    <line x1="6" y1="32" x2="-6" y2="38" stroke="#3D3D3D" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- === HEART between dog and cat === -->
+  <path d="M 237 200 Q 237 188 248 188 Q 260 188 260 200 L 248 216 Z"
+        fill="#E87461" opacity="0.85"/>
+
+  <!-- === TYPOGRAPHY === -->
+
+  <!-- ACAPL — bold lockup -->
+  <text x="250" y="390" text-anchor="middle"
+        font-family="'Montserrat', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="52" font-weight="800" letter-spacing="8"
+        fill="#E87461">ACAPL</text>
+
+  <!-- Full organization name -->
+  <text x="250" y="420" text-anchor="middle"
+        font-family="'Open Sans', 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="400" letter-spacing="3"
+        fill="#3D3D3D">ASHTABULA COUNTY</text>
+
+  <text x="250" y="440" text-anchor="middle"
+        font-family="'Open Sans', 'Segoe UI', Arial, sans-serif"
+        font-size="14" font-weight="400" letter-spacing="3"
+        fill="#3D3D3D">ANIMAL PROTECTIVE LEAGUE</text>
+
+  <!-- Decorative line under the acronym -->
+  <line x1="150" y1="398" x2="350" y2="398"
+        stroke="#FDE8D0" stroke-width="2"/>
+
+  <!-- Small teal accent dot -->
+  <circle cx="250" cy="453" r="3" fill="#5CBCC0" opacity="0.6"/>
+
+  <!-- === FOUNDATION/TAIL LINE === -->
+  <!-- Subtle ground line at the base of the badge -->
+  <path d="M 160 275 Q 250 285 340 275"
+        fill="none" stroke="#FDE8D0" stroke-width="2" opacity="0.5"/>
+
+</svg>

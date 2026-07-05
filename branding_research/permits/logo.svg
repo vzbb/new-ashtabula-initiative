@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="cta-navy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#003366"/>
+      <stop offset="100%" stop-color="#002244"/>
+    </linearGradient>
+    <linearGradient id="cta-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E67E22"/>
+      <stop offset="100%" stop-color="#d4701e"/>
+    </linearGradient>
+    <linearGradient id="cta-light" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4E6F1"/>
+      <stop offset="100%" stop-color="#b8d4e8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: City Hall / Municipal Building with lake -->
+  <g transform="translate(10, 8)">
+    <!-- Circular seal background -->
+    <circle cx="50" cy="52" r="45" fill="url(#cta-navy)" opacity="0.06"/>
+    <circle cx="50" cy="52" r="42" fill="none" stroke="url(#cta-navy)" stroke-width="1.5"/>
+
+    <!-- Lake Erie wave -->
+    <path d="M15 70 Q25 65, 35 70 Q45 75, 55 70 Q65 65, 75 70 Q85 75, 90 68"
+          fill="none" stroke="#003366" stroke-width="1.5" opacity="0.3"/>
+
+    <!-- City building -->
+    <rect x="30" y="35" width="40" height="35" rx="2" fill="url(#cta-navy)" opacity="0.7"/>
+
+    <!-- Columns -->
+    <rect x="34" y="38" width="5" height="28" fill="#F8F9FA" opacity="0.8" rx="0.5"/>
+    <rect x="46" y="38" width="5" height="28" fill="#F8F9FA" opacity="0.8" rx="0.5"/>
+    <rect x="58" y="38" width="5" height="28" fill="#F8F9FA" opacity="0.8" rx="0.5"/>
+
+    <!-- Roof line -->
+    <rect x="28" y="32" width="44" height="5" rx="1" fill="url(#cta-orange)" opacity="0.8"/>
+
+    <!-- Sun/beacon -->
+    <circle cx="75" cy="30" r="8" fill="url(#cta-orange)" opacity="0.4"/>
+    <circle cx="75" cy="30" r="5" fill="url(#cta-orange)" opacity="0.6"/>
+    <circle cx="75" cy="30" r="2.5" fill="#E67E22" opacity="0.9"/>
+  </g>
+
+  <!-- City name -->
+  <text x="115" y="42" font-family="'Merriweather', 'Georgia', 'Times New Roman', serif" font-size="26" font-weight="700" fill="#003366" letter-spacing="1.5">City of Ashtabula</text>
+
+  <!-- Subtitle -->
+  <text x="115" y="62" font-family="'Inter', 'Open Sans', Arial, sans-serif" font-size="12" font-weight="500" fill="#1A5276" letter-spacing="2">PLANNING &amp; COMMUNITY DEVELOPMENT</text>
+
+  <!-- Tagline -->
+  <text x="115" y="82" font-family="'Inter', Arial, sans-serif" font-size="10" fill="#E67E22" font-weight="600" letter-spacing="1.5">KNOW BEFORE YOU BUILD</text>
+
+  <!-- Divider -->
+  <line x1="115" y1="52" x2="380" y2="52" stroke="#E67E22" stroke-width="1" opacity="0.3"/>
+</svg>

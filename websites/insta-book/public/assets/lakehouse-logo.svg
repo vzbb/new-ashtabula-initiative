@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" width="500" height="160">
+  <defs>
+    <linearGradient id="horizLakeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2A4A"/>
+      <stop offset="50%" stop-color="#2E6F95"/>
+      <stop offset="100%" stop-color="#1B2A4A"/>
+    </linearGradient>
+    <linearGradient id="horizGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8A87C"/>
+      <stop offset="100%" stop-color="#C4964A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon mark -->
+  <g transform="translate(8, 5)">
+    <!-- Outer ring -->
+    <circle cx="75" cy="75" r="72" fill="none" stroke="#1B2A4A" stroke-width="1.2" opacity="0.12"/>
+    <!-- Horizon -->
+    <line x1="30" y1="93" x2="120" y2="93" stroke="url(#horizLakeGrad)" stroke-width="1.5" opacity="0.2"/>
+    <!-- Sun -->
+    <circle cx="75" cy="84" r="14" fill="url(#horizGoldGrad)" opacity="0.3"/>
+    <circle cx="75" cy="84" r="8" fill="url(#horizGoldGrad)" opacity="0.5"/>
+    <circle cx="75" cy="84" r="4" fill="url(#horizGoldGrad)" opacity="0.8"/>
+    <!-- L -->
+    <path d="M52 42 L52 98 L88 98" stroke="#1B2A4A" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- H interlocking -->
+    <path d="M66 42 L66 75 M99 42 L99 75 M66 58 L99 58" stroke="#2E6F95" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Wave -->
+    <path d="M38 108 Q52 104 66 108 Q80 112 94 108 Q108 104 120 108" stroke="#2E6F95" stroke-width="1" fill="none" opacity="0.25"/>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="175" y1="15" x2="175" y2="145" stroke="#D4C5A9" stroke-width="1" opacity="0.5"/>
+
+  <!-- Wordmark: "THE LAKEHOUSE INN" -->
+  <text x="195" y="68" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-size="16" font-weight="400" fill="#1B2A4A" letter-spacing="4" opacity="0.6">THE</text>
+  <text x="195" y="100" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-size="44" font-weight="600" fill="#1B2A4A" letter-spacing="4">LAKEHOUSE</text>
+  <text x="195" y="130" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-size="22" font-weight="400" font-style="italic" fill="#2E6F95" letter-spacing="10">INN</text>
+
+  <!-- Tagline -->
+  <text x="195" y="148" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="400" fill="#5B7B5A" letter-spacing="3">GENEVA-ON-THE-LAKE · OHIO</text>
+</svg>

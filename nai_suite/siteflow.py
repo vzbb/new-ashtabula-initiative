@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -65,7 +66,7 @@ SHORT_MAPPINGS: dict[str, str] = {
     "resource-pro": "resource-compass-pro",
     "resource": "resource-compass",
     "scheduler-sms": "service-scheduler-sms",
-    "scheduler": "service-scheduler",
+    "scheduler": "scheduler",
     "plating-pro": "plating-tracker-pro",
     "parts-request": "parts-finder-request",
     "mytrip-export": "mytrip-planner-export",
@@ -169,7 +170,17 @@ def run_site_build(site_dir: Path) -> Path:
     for package_dir in package_dirs(site_dir):
         ensure_node_modules(package_dir)
 
-    subprocess.run(["npm", "run", "build"], cwd=workdir, check=True)
+    env = os.environ.copy()
+    dotenv_path = ROOT / ".env"
+    if dotenv_path.exists():
+        for line in dotenv_path.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, val = line.partition("=")
+            env.setdefault(key.strip(), val.strip())
+
+    subprocess.run(["npm", "run", "build"], cwd=workdir, env=env, check=True)
     return normalize_build_output(site_dir) or workdir
 
 

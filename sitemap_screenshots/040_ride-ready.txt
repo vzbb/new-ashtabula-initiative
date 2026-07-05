@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/ride-ready/
-title: Ride Ready | ACTS Transportation Scheduling Demo
-body_chars: 2457
-screenshot: sitemap_screenshots/040_ride-ready.png
-source: live
-warnings: none

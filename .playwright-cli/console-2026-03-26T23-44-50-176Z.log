@@ -1,8 +1,0 @@
-[      33ms] ReferenceError: median is not defined
-    at renderScatterChart (http://127.0.0.1:8001/sitemap_screenshots/progress.html:896:117)
-    at renderAll (http://127.0.0.1:8001/sitemap_screenshots/progress.html:959:7)
-    at http://127.0.0.1:8001/sitemap_screenshots/progress.html:974:7
-[      37ms] [ERROR] Failed to load resource: the server responded with a status of 404 (File not found) @ http://127.0.0.1:8001/favicon.ico:0
-[   14674ms] ReferenceError: median is not defined
-    at renderScatterChart (http://127.0.0.1:8001/sitemap_screenshots/progress.html:896:117)
-    at select.onchange (http://127.0.0.1:8001/sitemap_screenshots/progress.html:547:11)

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/parts/
-title: Parts Finder
-body_chars: 582
-screenshot: sitemap_screenshots/013_parts.png
-source: live
-warnings: none

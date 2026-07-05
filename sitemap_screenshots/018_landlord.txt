@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/landlord/
-title: AMHA Landlord Portal
-body_chars: 2735
-screenshot: sitemap_screenshots/018_landlord.png
-source: live
-warnings: none

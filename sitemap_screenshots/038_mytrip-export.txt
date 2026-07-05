@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/mytrip-export/
-title: MyTrip Planner Export
-body_chars: 630
-screenshot: sitemap_screenshots/038_mytrip-export.png
-source: live
-warnings: none

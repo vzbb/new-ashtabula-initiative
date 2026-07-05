@@ -1,0 +1,63 @@
+{
+  "mvp": "permits",
+  "generated_at": "2026-07-04T15:35:00Z",
+  "based_on_research": "lead_research_json/permits.json",
+  "target_buyer_1": {
+    "organization": "City of Ashtabula — City Manager's Office",
+    "type": "Municipal Government",
+    "website": "https://www.cityofashtabula.com/",
+    "why_top_candidate": "City Manager James Timonere has authority over Planning & Community Development which handles zoning permits. City of Ashtabula has budget authority for technology investments. The city contracts building permits to the county, creating a confusing two-step process that Permit Whisperer clarifies.",
+    "fit_score": 95
+  },
+  "brandkit_for_mvp": {
+    "proposed_tagline": "Know Before You Build.",
+    "positioning": "The official AI-powered permit guidance tool for the City of Ashtabula — answering zoning and building permit questions for residents, contractors, and developers before they break ground.",
+    "color_palette_derived_from_research": {
+      "primary": "#003366",
+      "secondary": "#1A5276",
+      "accent": "#E67E22",
+      "background": "#F8F9FA",
+      "text": "#1A202C",
+      "light_accent": "#D4E6F1"
+    },
+    "typography_recommendation": {
+      "heading_font": "Merriweather or Georgia (serif — government authoritative)",
+      "body_font": "Inter or Open Sans (clean sans-serif for readability)",
+      "mono_font": "JetBrains Mono (for code references and permit numbers)"
+    },
+    "mood_keywords_from_research": ["municipal", "authoritative", "helpful", "local", "compliant", "modern", "accessible"],
+    "visual_direction": {
+      "hero_image_concept": "Aerial view of downtown Ashtabula with Lake Erie shoreline — showing the community that permitting helps build",
+      "color_scheme": "Deep government navy blue with warm orange accents for CTA buttons and highlights",
+      "photography_style": "Real Ashtabula locations, construction projects, community development imagery"
+    }
+  },
+  "design_tokens": {
+    "border_radius": "4px (official/square — government standard)",
+    "shadow": "subtle (0 1px 3px rgba(0,0,0,0.1))",
+    "max_content_width": "1200px",
+    "button_style": "solid navy with white text, orange for primary CTAs",
+    "form_style": "clean bordered inputs with navy focus ring",
+    "spacing_scale": ["4px", "8px", "16px", "24px", "32px", "48px", "64px"]
+  },
+  "implementation_recommendations": {
+    "priority": 2,
+    "brand_alignment": "Align with City of Ashtabula's municipal identity — professional, trustworthy, community-focused",
+    "key_features_needed": [
+      "AI-powered 'Do I need a permit?' Q&A interface",
+      "Zoning vs Building permit distinction (two-step process clarification)",
+      "City of Ashtabula specific code references",
+      "Fee schedule integration",
+      "Inspection scheduling",
+      "Common permit types: fences, sheds, decks, additions, driveways, signs, food trucks",
+      "Contact info for City Planning Dept and County Building Dept"
+    ],
+    "differentiators_based_on_research": [
+      "City of Ashtabula is specific, named buyer — not generic",
+      "Two-step process (City zoning → County building) is a unique pain point",
+      "AI eliminates 10-15 hrs/week of repetitive phone inquiries",
+      "Already has 48-hour go-live promise and ROI data on page",
+      "County recently refreshed building software — timing is right"
+    ]
+  }
+}

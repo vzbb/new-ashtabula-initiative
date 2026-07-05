@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="presentation">
+  <defs>
+    <linearGradient id="hero-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(74,144,164,0.15)"/>
+      <stop offset="30%" stop-color="rgba(45,95,63,0.05)"/>
+      <stop offset="70%" stop-color="rgba(212,154,53,0.08)"/>
+      <stop offset="100%" stop-color="rgba(74,144,164,0.1)"/>
+    </linearGradient>
+    <radialGradient id="spot-glow" cx="20%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.02)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="edge-vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.08)"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Ambient background glow sweep -->
+  <rect width="800" height="500" fill="url(#hero-glow)"/>
+  
+  <!-- Soft spot highlight -->
+  <rect width="800" height="500" fill="url(#spot-glow)"/>
+  
+  <!-- Edge vignette for depth -->
+  <rect width="800" height="500" fill="url(#edge-vignette)"/>
+</svg>

@@ -1,0 +1,38 @@
+{
+  "business": "The Lakehouse Inn",
+  "slug": "lakehouse-inn",
+  "contacts": [
+    {
+      "role": "General Inquiries / Front Desk",
+      "email": "inquiries@thelakehouseinn.com",
+      "phone": "(440) 466-8668",
+      "source": "thelakehouseinn.com/contact-us/",
+      "confidence": "VERIFIED",
+      "notes": "Primary contact email for all departments. Routes to front desk."
+    },
+    {
+      "role": "Spa Reservations",
+      "phone": "(440) 466-8668 x2",
+      "source": "thelakehouseinn.com/spa/",
+      "confidence": "VERIFIED",
+      "notes": "Extension 2. Spa is separate location at 5654 Lake Rd. East."
+    },
+    {
+      "role": "Crosswinds Grille Reservations",
+      "phone": "(440) 466-8668 x3",
+      "source": "thelakehouseinn.com/crosswinds-grille/",
+      "confidence": "VERIFIED",
+      "notes": "Extension 3. Restaurant reservations. Also accepts reservations through website form."
+    }
+  ],
+  "social_profiles": {
+    "facebook": "facebook.com/thelakehouseinn (likely — search to confirm exact handle)",
+    "instagram": "@thelakehouseinn (likely — search to confirm exact handle)",
+    "tripadvisor": "Listed as The Lakehouse Inn, Geneva-on-the-Lake"
+  },
+  "physical_address": {
+    "inn": "5653 Lake Rd. East, Geneva-on-the-Lake, OH 44041",
+    "spa": "5654 Lake Road East, Geneva-on-the-Lake, OH 44041",
+    "notes": "Spa is directly across the street from the main inn."
+  }
+}

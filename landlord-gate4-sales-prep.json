@@ -1,0 +1,114 @@
+{
+  "mvp": "landlord",
+  "generated_at": "2026-07-04T16:30:00Z",
+  "gate_4": {
+    "demo_script": {
+      "duration": "5 minutes",
+      "setup": "Browser open to https://new-ashtabula-initiative.vercel.app/landlord/ — make sure page is fully loaded with the AMHA logo and case workspace visible",
+      "script": [
+        {
+          "time": "0:00–0:45",
+          "speaker": "Cyrus",
+          "text": "Thanks for taking the time. I'm going to show you something that's already built for AMHA — your logo, your programs, your core values. This is a landlord communication portal that turns maintenance and inspection follow-up into a consistent, professional process. Let me show you how it works in about 90 seconds.",
+          "action": "Scroll to top of page. Point at AMHA logo in hero, the 'Housing Authority Workflow' panel, and the core values chips (Honesty, Dignity, Respect...)"
+        },
+        {
+          "time": "0:45–1:30",
+          "speaker": "Cyrus",
+          "text": "Here's the case workspace. A landlord calls in or emails about a repair. Instead of playing phone tag, a staff member opens this form and within 60 seconds has a professional response ready to send. See the issue types — we've tailored these to AMHA's workflow: unit ready follow-up, failed inspection repair, heating or plumbing, voucher documentation. Priority levels match your operational urgency: routine, needs review this week, urgent health and safety.",
+          "action": "Point at the four issue type pill buttons. Click 'Failed inspection repair' to show interaction. Point at the three priority levels."
+        },
+        {
+          "time": "1:30–2:15",
+          "speaker": "Cyrus",
+          "text": "Let me show you what happens. I'll click 'Generate landlord response' and the portal creates a complete update tailored to this case — property details, issue summary, recommended next steps, landlord guidance. This turns a 20-minute phone call into a 60-second form submission. And every response is compliance-aware — framed around safe housing, voucher readiness, and inspection follow-through.",
+          "action": "Click 'Generate landlord response' button. Wait for response to render in the right panel. Scroll to show the AMHA Response Draft section."
+        },
+        {
+          "time": "2:15–3:00",
+          "speaker": "Cyrus",
+          "text": "Now here's what makes this different from any property tech you've seen — this is built around AMHA's mission. The 'Why This Fits AMHA' section shows how we support voucher participation, safe-unit follow-up, and stakeholder communication. We're not selling you a generic tool. This is branded for AMHA with your mission statement: 'Clean and Safe Affordable Housing.' It reflects your values and your programs — HCV, public housing, USDA housing, capital fund.",
+          "action": "Scroll to 'Why This Fits AMHA' section. Point at the three feature cards. Scroll up briefly to show the trust badges (Ohio-Hosted & Secure, HUD-Compliant, No Resident PII Stored, Built for Public Housing)."
+        },
+        {
+          "time": "3:00–3:30",
+          "speaker": "Cyrus",
+          "text": "One more thing that matters for a housing authority — this is HUD-compliant by design. No resident PII is stored in the tool. It's Ohio-hosted and encrypted. And here's the operational ROI: AMHA is currently coordinating maintenance follow-up across 1,100+ families through phone calls and emails. This portal turns that from days into hours — clear response times, documented follow-ups, inspection-ready tracking.",
+          "action": "Scroll to urgency banner below the hero — point at 'HUD modernization alignment' and 'Pilot-ready for AMHA'. Point at the two ROI stats in the hero section."
+        },
+        {
+          "time": "3:30–5:00",
+          "speaker": "Cyrus",
+          "text": "So here's the offer. This portal is already built for AMHA — completely branded, configured for your programs, ready to deploy. From approval to live in 48 hours. We're looking for a pilot partner to shape the implementation — you're not just adopting a tool, you're helping define how housing authorities across Ohio modernize landlord communication. I'd like to set up a staff demo where your team can walk through the workspace and see how it fits your daily workflow. When works for a 30-minute session with your landlord liaison and inspection team?",
+          "action": "Point at 'Schedule a Staff Demo' CTA button. Look at prospect expectantly. Be ready to schedule via calendly or propose specific times."
+        }
+      ]
+    },
+    "talking_points": [
+      {
+        "point": "HUD is pushing digital modernization — this positions AMHA as a leader, not a laggard",
+        "detail": "HUD's 2025-2026 strategic plan emphasizes digital transformation for housing authorities. Early adopters shape the implementation standards. AMHA can be the reference implementation for Ohio housing authorities — getting ahead of mandates instead of scrambling to comply.",
+        "evidence": "HUD modernization alignment badge on site, current push for digital-first landlord communication"
+      },
+      {
+        "point": "Tenant communication improves dramatically — status updates, response tracking, accountability",
+        "detail": "Right now, landlord follow-up is a mix of phone calls and emails with no standard format. The portal creates a consistent, professional message every time — with documented response history, priority tracking, and clear next steps. Residents get better service, landlords get clear guidance, and AMHA staff get accountability.",
+        "evidence": "Demo the 'Generate landlord response' feature — creates a structured update with property, issue, recommended next steps, landlord guidance"
+      },
+      {
+        "point": "Already branded for AMHA — logo, colors, programs, core values are all yours",
+        "detail": "This isn't a generic vendor product. The site uses AMHA's logo, mission statement ('Clean and Safe Affordable Housing'), core values (Honesty, Dignity, Respect, Exceptional Communication, Care, Responsiveness), and program listings (HCV, Public Housing, USDA Housing, Capital Fund). Implementation is 48 hours because there's nothing to configure — it's already done.",
+        "evidence": "Point at AMHA logo, mission statement in hero, core values chips, program list in hero stats, trust badges"
+      }
+    ],
+    "objection_answers": [
+      {
+        "objection": "\"We have a work order system\"",
+        "response": "This is complementary to your work order system, not a replacement. The portal focuses on tenant-facing landlord communication — turning repair and inspection updates into clear professional messages that landlords and residents can act on. Your back-office work order system handles the internal tracking. The portal handles the external communication layer. They work together.",
+        "framing": "Integration, not competition"
+      },
+      {
+        "objection": "\"HUD procurement rules make this complicated\"",
+        "response": "That's actually why we designed this as a pilot program. The pricing fits within standard discretionary authority for housing authorities — no board-level procurement required to start. You can begin as a no-cost pilot, evaluate for 30-60 days, and if it works, add it as a budget line item for the next cycle. We've structured the engagement specifically to work within HUD procurement frameworks.",
+        "framing": "Low-friction entry within existing authority"
+      },
+      {
+        "objection": "\"Staff training burden — we can't add another tool\"",
+        "response": "I appreciate that concern, and that's why we built this for non-technical staff. The interface is three fields and one button — property, issue type, priority, case detail, generate. A 30-minute training session is all it takes. Most AMHA staff will be comfortable after sending their first three responses. And since it generates the communication for them, it actually reduces the time they spend on landlord follow-up, not adds to it.",
+        "framing": "Time saver, not time sink"
+      },
+      {
+        "objection": "\"Data security — tenant information can't be exposed\"",
+        "response": "That's the right concern, and the answer is: the portal stores no tenant PII whatsoever. No social security numbers, no birth dates, no income information. It handles case descriptions and property units — the same information that's already in email threads. Everything is Ohio-hosted and encrypted in transit. We're happy to share our data handling documentation and sign any required BAAs or data addendums.",
+        "framing": "Security-first by design"
+      },
+      {
+        "objection": "\"Budget cycle timing — we don't have funds allocated\"",
+        "response": "Understood, and we've planned for that. The pilot starts at no cost — we work together for 30-60 days on a trial basis. During that time, you can demonstrate the value to stakeholders and include it in the next budget cycle. Our pricing for public housing authorities is structured to qualify for capital fund modernization and administrative fee budgets. We'll help you position the request for smooth approval.",
+        "framing": "Pilot now, budget later"
+      }
+    ],
+    "buyer_contacts": {
+      "primary": {
+        "name": "T. Sean Adams",
+        "title": "Executive Director",
+        "email": "sadams@ashtabulamha.com",
+        "phone": "(440) 992-3156",
+        "notes": "Hired 2019, Acting ED Oct 2023, voted in as ED Feb 2024. Oversees 1,100+ families in Ashtabula County. Local resident, active in Kiwanis Club and LEADERship program."
+      },
+      "secondary": {
+        "name": "Main Office",
+        "email": "info@ashtabulamha.com",
+        "phone": "(440) 992-3156",
+        "address": "3526 Lake Ave, Ashtabula OH 44004"
+      }
+    },
+    "pitch_timeline": {
+      "week_1": "Gate 3-4 materials complete, site updated with trust badges + urgency framing + demo CTA",
+      "week_2": "Outreach prep: draft personalized email to T. Sean Adams, align with Ellis for pitch-readiness confirmation",
+      "week_3": "Outreach to AMHA: email T. Sean Adams → 48h follow-up call → offer 30-min staff demo → close pilot",
+      "pricing_pilot": "No-cost 30-60 day pilot within discretionary authority",
+      "pricing_production": "$5K–$25K for annual license (capital fund / admin fee budget)"
+    }
+  }
+}

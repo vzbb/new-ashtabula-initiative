@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/boxflow/
-title: BoxFlow Estimator | World Shipping Inventory Flow
-body_chars: 3055
-screenshot: sitemap_screenshots/012_boxflow.png
-source: live
-warnings: none

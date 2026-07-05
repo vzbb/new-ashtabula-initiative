@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/thomas-fence/
-title: Thomas Fence Co. | Instant Fence Quote
-body_chars: 1126
-screenshot: sitemap_screenshots/062_thomas-fence.png
-source: live
-warnings: none

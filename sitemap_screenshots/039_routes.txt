@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/routes/
-title: Route Optimizer | Ashtabula Efficiency
-body_chars: 575
-screenshot: sitemap_screenshots/039_routes.png
-source: live
-warnings: none

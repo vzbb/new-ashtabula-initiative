@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/farm-stand/
-title: farm-stand-finder
-body_chars: 849
-screenshot: sitemap_screenshots/028_farm-stand.png
-source: live
-warnings: none

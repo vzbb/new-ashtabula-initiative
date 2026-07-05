@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- Bottom-to-top dark gradient overlay -->
+    <linearGradient id="bottomUp" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1B2A4A" stop-opacity="0.85"/>
+      <stop offset="30%" stop-color="#1B2A4A" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#1B2A4A" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#1B2A4A" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Gold accent glow (bottom-center) -->
+    <radialGradient id="goldGlow" cx="50%" cy="85%" r="35%">
+      <stop offset="0%" stop-color="#E8A87C" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#E8A87C" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#E8A87C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Vignette (all edges) -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="80%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1B2A4A" stop-opacity="0.4"/>
+    </radialGradient>
+
+    <!-- Top accent line -->
+    <linearGradient id="topLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2E6F95" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#2E6F95" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#2E6F95" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Layer 1: Bottom-up navy overlay -->
+  <rect width="1920" height="1080" fill="url(#bottomUp)"/>
+
+  <!-- Layer 2: Gold glow accent -->
+  <rect width="1920" height="1080" fill="url(#goldGlow)"/>
+
+  <!-- Layer 3: Vignette -->
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+
+  <!-- Layer 4: Top accent line -->
+  <rect x="860" y="0" width="200" height="2" fill="url(#topLine)" opacity="0.5"/>
+</svg>

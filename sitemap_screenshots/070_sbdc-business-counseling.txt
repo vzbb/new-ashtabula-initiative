@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/sbdc-business-counseling/
-title: Business Counseling | Lakeland SBDC
-body_chars: 923
-screenshot: sitemap_screenshots/070_sbdc-business-counseling.png
-source: live
-warnings: none

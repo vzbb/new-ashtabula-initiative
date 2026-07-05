@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" width="600" height="180">
+  <defs>
+    <linearGradient id="routeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C5282;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .route-text { font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+      .acts-text { font-family: 'Georgia', 'Times New Roman', serif; }
+    </style>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect x="0" y="0" width="600" height="180" rx="16" ry="16" fill="#F7FAFC" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Left panel: Route Optimizer -->
+  <!-- Route icon: stylized route line with pins -->
+  <g transform="translate(40, 50)">
+    <!-- Route path -->
+    <path d="M 0,40 Q 20,10 40,30 T 80,10 T 120,40" fill="none" stroke="#2C5282" stroke-width="3" stroke-linecap="round"/>
+    <!-- Start pin -->
+    <circle cx="0" cy="40" r="6" fill="#38A169"/>
+    <!-- Waypoint pin -->
+    <circle cx="42" cy="26" r="4" fill="#2C5282"/>
+    <!-- End pin -->
+    <circle cx="120" cy="40" r="6" fill="#E88121"/>
+
+    <!-- Route Optimizer wordmark -->
+    <text x="0" y="80" class="route-text" font-size="28" font-weight="700" fill="#003366" letter-spacing="-0.5">Route</text>
+    <text x="68" y="80" class="route-text" font-size="28" font-weight="300" fill="#2C5282" letter-spacing="-0.5">Optimizer</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="102" class="route-text" font-size="11" fill="#718096" letter-spacing="1.5">TRANSIT &amp; DELIVERY ROUTING</text>
+  </g>
+
+  <!-- Vertical divider -->
+  <line x1="285" y1="30" x2="285" y2="150" stroke="#CBD5E0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Right panel: ACTS badge -->
+  <g transform="translate(320, 45)">
+    <!-- ACTS icon: shield with "A" -->
+    <g transform="translate(55, 0)">
+      <path d="M 0,35 L 25,0 L 50,35 L 40,60 L 25,55 L 10,60 Z" fill="#003366"/>
+      <text x="25" y="42" class="route-text" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">A</text>
+    </g>
+
+    <!-- ACTS wordmark -->
+    <text x="0" y="42" class="acts-text" font-size="24" font-weight="700" fill="#003366">ACTS</text>
+
+    <!-- Full name -->
+    <text x="0" y="62" class="route-text" font-size="10" fill="#4A5568" letter-spacing="0.5">Ashtabula County Transportation System</text>
+    <text x="0" y="78" class="route-text" font-size="9" fill="#E88121" letter-spacing="1">COUNTY TRANSIT · SINCE 1976</text>
+
+    <!-- Trust line -->
+    <line x1="0" y1="88" x2="230" y2="88" stroke="#E88121" stroke-width="1" opacity="0.5"/>
+  </g>
+</svg>

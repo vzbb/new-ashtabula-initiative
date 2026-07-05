@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/eligibility/
-title: Ashtabula County Eligibility Screener | ACDJFS
-body_chars: 2515
-screenshot: sitemap_screenshots/004_eligibility.png
-source: live
-warnings: none

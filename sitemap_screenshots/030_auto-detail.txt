@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/auto-detail/
-title: Flawless Coating & Detailing | Premium Booking Demo
-body_chars: 2554
-screenshot: sitemap_screenshots/030_auto-detail.png
-source: live
-warnings: none

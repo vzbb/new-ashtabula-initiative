@@ -1,0 +1,45 @@
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Status: Plowing">
+  <defs>
+    <style>
+      @keyframes plow-sweep {
+        from { transform: rotate(0deg); transform-origin: 20px 20px; }
+        to { transform: rotate(360deg); transform-origin: 20px 20px; }
+      }
+      @keyframes plow-pulse {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; }
+      }
+      .sweep-arm { animation: plow-sweep 3s linear infinite; }
+      .pulse-dot { animation: plow-pulse 1.5s ease-in-out infinite; }
+      @media (prefers-reduced-motion: reduce) {
+        .sweep-arm, .pulse-dot { animation: none !important; }
+        .static-label { display: block; }
+      }
+    </style>
+  </defs>
+  <!-- Glass background circle -->
+  <circle cx="20" cy="20" r="18" fill="rgba(74,144,164,0.12)" stroke="rgba(74,144,164,0.25)" stroke-width="1.5"/>
+  
+  <!-- Outer ring segment (radar sweep) -->
+  <g class="sweep-arm">
+    <path d="M20 20 L20 3 A17 17 0 0 1 35.5 11 Z" fill="rgba(74,144,164,0.15)" stroke="none"/>
+    <circle cx="20" cy="3" r="2" fill="rgba(74,144,164,0.3)"/>
+  </g>
+  
+  <!-- Center pulsing dot -->
+  <circle cx="20" cy="20" r="4" fill="#4a90a4" class="pulse-dot"/>
+  
+  <!-- Static plow blade icon (always visible) -->
+  <g fill="none" stroke="#4a90a4" stroke-width="1.8" stroke-linecap="round">
+    <!-- Plow blade shape -->
+    <path d="M14 26 Q20 22 26 26" stroke-width="2.5"/>
+    <line x1="20" y1="20" x2="20" y2="26"/>
+    <!-- Direction arrow -->
+    <polyline points="17,23 20,20 23,23" fill="none" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Static fallback label (reduced motion) -->
+  <text x="20" y="40" text-anchor="middle" font-size="6" fill="#4a90a4" font-weight="700" class="static-label" style="display:none">
+    PLOWING
+  </text>
+</svg>

@@ -1,0 +1,61 @@
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Status: Delayed">
+  <defs>
+    <style>
+      @keyframes delay-pulse {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50% { transform: scale(1.1); opacity: 1; }
+      }
+      @keyframes delay-warn-glow {
+        0%, 100% { 
+          fill-opacity: 0.12; 
+          stroke-opacity: 0.25;
+        }
+        50% { 
+          fill-opacity: 0.22; 
+          stroke-opacity: 0.45;
+        }
+      }
+      @keyframes shake-in {
+        0% { transform: translateX(0); }
+        20% { transform: translateX(-3px); }
+        40% { transform: translateX(3px); }
+        60% { transform: translateX(-2px); }
+        80% { transform: translateX(2px); }
+        100% { transform: translateX(0); }
+      }
+      .pulse-group { 
+        animation: delay-pulse 1.5s ease-in-out infinite;
+        transform-origin: 20px 20px;
+      }
+      .warn-bg { 
+        animation: delay-warn-glow 1.5s ease-in-out infinite; 
+      }
+      .shake-on-load {
+        animation: shake-in 0.4s ease-out 1;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pulse-group { animation: none !important; transform: scale(1) !important; }
+        .warn-bg { animation: none !important; }
+        .shake-on-load { animation: none !important; }
+      }
+    </style>
+  </defs>
+  <!-- Glass background circle (animated warm-red glow) -->
+  <circle class="warn-bg" cx="20" cy="20" r="16" fill="rgba(192,57,43,0.12)" stroke="rgba(192,57,43,0.25)" stroke-width="1.5"/>
+  
+  <!-- Pulsing warning content -->
+  <g class="pulse-group">
+    <!-- Warning triangle -->
+    <polygon points="20,10 28,28 12,28" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linejoin="round"/>
+    <!-- Exclamation mark -->
+    <line x1="20" y1="17" x2="20" y2="24" stroke="#c0392b" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="20" cy="27" r="1.2" fill="#c0392b"/>
+  </g>
+  
+  <!-- Clock overlay (subtle) -->
+  <g class="shake-on-load" opacity="0.4">
+    <circle cx="20" cy="20" r="12" fill="none" stroke="#c0392b" stroke-width="0.8"/>
+    <line x1="20" y1="20" x2="20" y2="14" stroke="#c0392b" stroke-width="1" stroke-linecap="round"/>
+    <line x1="20" y1="20" x2="25" y2="20" stroke="#c0392b" stroke-width="1" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/harbor/
-title: Ashtabula Harbor Conditions | Ashtabula Yacht Club
-body_chars: 1941
-screenshot: sitemap_screenshots/056_harbor.png
-source: live
-warnings: none

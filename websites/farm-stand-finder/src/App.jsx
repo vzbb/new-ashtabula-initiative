@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { callGeminiAPI, extractResponseText } from "./api-client.js";
 import "./App.css";
 
 const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
 
-const geminiService = {
+const aiService = {
   async generateContent(prompt) {
     if (!apiKey || apiKey === 'undefined') throw new Error("API key not configured.");
       const data = await callGeminiAPI(prompt);
@@ -48,25 +48,80 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [apiConfigured, setApiConfigured] = useState(true);
+  const [loaded, setLoaded] = useState(false);
+  const featuresRef = useRef(null);
+  const footerRef = useRef(null);
 
+  // Add .loaded class after mount for hero load-in sequence
   useEffect(() => {
+    setLoaded(true);
     if (!apiKey || apiKey === 'undefined') setApiConfigured(false);
   }, []);
 
-  const find = async () => {
+  // IntersectionObserver for scroll-triggered feature card entrance
+  useEffect(() => {
+    if (!featuresRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.feature-card');
+            cards.forEach((card, i) => {
+              setTimeout(() => card.classList.add('visible'), i * 120);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -100px 0px" }
+    );
+
+    observer.observe(featuresRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  // IntersectionObserver for footer reveal
+  useEffect(() => {
+    if (!footerRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -50px 0px" }
+    );
+
+    observer.observe(footerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const find = useCallback(async () => {
     if (!apiConfigured) { setError("API key not configured."); return; }
     setLoading(true); setError(""); setSummary("");
+    // Exit the info card (add exiting class)
+    const infoCard = document.querySelector('.info-card');
+    if (infoCard) {
+      infoCard.classList.add('exiting');
+      // Allow exit animation before replacement
+      await new Promise(r => setTimeout(r, 260));
+    }
     try {
       const prompt = `Provide a short farm stand list for ${day} in Ashtabula County, OH. Include 2-3 specific local stands and a friendly CTA. 70 words max. Mention seasonal produce.`;
-      const text = await geminiService.generateContent(prompt);
+      const text = await aiService.generateContent(prompt);
       setSummary(text);
     } catch (e) { setError(e.message); } finally { setLoading(false); }
-  };
+  }, [day, apiConfigured]);
 
   const days = ["Friday", "Saturday", "Sunday"];
 
   return (
-    <div className="page">
+    <div className={`page${loaded ? ' loaded' : ''}`}>
       <div className="bg-vegetables" aria-hidden="true">
         <VegPattern />
       </div>
@@ -84,8 +139,8 @@ function App() {
 
       <main className="content">
         <div className="hero-card">
-          <div className="hero-badge">Local • Fresh • Community</div>          
-          <h1>Fresh from the farm to your table</h1>          
+          <div className="hero-badge">Local • Fresh • Community</div>
+          <h1>Fresh from the farm to your table</h1>
           <p className="hero-desc">Discover local farm stands and CSAs in Ashtabula County. Support our local growers and enjoy the freshest seasonal produce.</p>
 
           <div className="day-selector">
@@ -105,7 +160,7 @@ function App() {
 
           <button className="find-btn" onClick={find} disabled={loading}>
             {loading ? (
-              <>🌽 Finding local stands...</>
+              <><span className="loading-spin">🌽</span> Finding local stands...</>
             ) : (
               <>Find Fresh Stands →</>
             )}
@@ -144,7 +199,7 @@ function App() {
           )
         )}
 
-        <div className="features">
+        <div className="features" ref={featuresRef}>
           <div className="feature-card">
             <div className="feature-icon-wrap">🚜</div>
             <h4>Support Local</h4>
@@ -163,7 +218,7 @@ function App() {
         </div>
       </main>
 
-      <footer className="footer">
+      <footer className="footer" ref={footerRef}>
         <div className="footer-ornament">
           <svg viewBox="0 0 100 20" preserveAspectRatio="none">
             <path d="M0,10 Q25,0 50,10 T100,10" fill="none" stroke="#c0392b" strokeWidth="2"/>

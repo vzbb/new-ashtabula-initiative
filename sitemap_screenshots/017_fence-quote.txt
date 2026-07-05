@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/fence-quote/
-title: Miller's Integrity Construction LLC | Fence Quote
-body_chars: 2180
-screenshot: sitemap_screenshots/017_fence-quote.png
-source: live
-warnings: none

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/cut-custom/
-title: My Google AI Studio App
-body_chars: 449
-screenshot: sitemap_screenshots/063_cut-custom.png
-source: live
-warnings: none

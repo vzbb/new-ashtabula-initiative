@@ -1,0 +1,82 @@
+{
+  "mvp_slug": "compassionate",
+  "target_organization": "Ducro Funeral Services and Crematory",
+  "contacts": [
+    {
+      "rank": 1,
+      "name": "J.P. Ducro IV",
+      "title": "President / Owner / Funeral Director / Ashtabula County Commissioner",
+      "email": "jpducro@ducro.com",
+      "phone_primary": "(440) 992-2191",
+      "phone_secondary": null,
+      "phone_tertiary": null,
+      "address": "4524 Elm Ave, Ashtabula, OH 44004",
+      "social_profiles": {
+        "facebook": "Likely has personal and business Facebook presence"
+      },
+      "notes": "Fifth-generation funeral director, primary decision-maker. Also elected County Commissioner — reachable through county directory. Best reached at funeral home number. Email format verified via website JSON-LD and existing email_prospects record."
+    },
+    {
+      "rank": 2,
+      "name": "Stephanie M. Hall-Nesbitt",
+      "title": "Director of Operations / Funeral Director / Embalmer",
+      "email": "nesbitts@ducro.com",
+      "phone_primary": "(440) 992-2191",
+      "phone_secondary": null,
+      "phone_tertiary": null,
+      "address": "4524 Elm Ave, Ashtabula, OH 44004",
+      "social_profiles": {},
+      "notes": "Operations lead, would manage implementation of new digital tools. Licensed funeral director and embalmer. Email verified via existing email_prospects record."
+    }
+  ],
+  "general_inquiry": {
+    "email": "ducroservices@ducro.com",
+    "phone": "(440) 992-2191",
+    "website": "https://www.ducro.com",
+    "contact_form": "https://www.ducro.com/contact/contact-us",
+    "preplanning_portal": "https://preplanning.ducro.com"
+  },
+  "location_data": [
+    {
+      "name": "Ducro Funeral Services and Crematory (Main)",
+      "address": "4524 Elm Ave, Ashtabula, OH 44004",
+      "phone": "(440) 992-2191",
+      "email": "ducroservices@ducro.com",
+      "google_maps": "https://maps.google.com/?q=4524+Elm+Ave+Ashtabula+OH+44004"
+    },
+    {
+      "name": "Walker Funeral Home",
+      "address": "828 Sherman St, Geneva, OH 44041",
+      "phone": "(440) 466-1108",
+      "email": "ducroservices@ducro.com",
+      "google_maps": "https://maps.google.com/?q=828+Sherman+St+Geneva+OH+44041"
+    },
+    {
+      "name": "Childs-Williams-Ducro Funeral Home",
+      "address": "1071 State Route 7N, Pierpont, OH 44082",
+      "phone": "(440) 577-1311",
+      "email": "ducroservices@ducro.com",
+      "google_maps": "https://maps.google.com/?q=1071+State+Route+7N+Pierpont+OH+44082"
+    },
+    {
+      "name": "Zaback-Williams-Ducro Funeral Home",
+      "address": "500 W. Prospect Rd, Ashtabula, OH 44004",
+      "phone": "(440) 998-1234",
+      "email": "ducroservices@ducro.com",
+      "google_maps": "https://maps.google.com/?q=500+W+Prospect+Rd+Ashtabula+OH+44004"
+    },
+    {
+      "name": "Greenlawn Memory Gardens",
+      "address": "3140 E. Center Street PO Box 570, North Kingsville, OH 44068",
+      "phone": "(440) 224-1155",
+      "email": "ducroservices@ducro.com",
+      "google_maps": "https://maps.google.com/?q=3140+E+Center+Street+North+Kingsville+OH+44068"
+    }
+  ],
+  "source_verification": [
+    "Website JSON-LD structured data extracted from https://www.ducro.com/",
+    "Ashtabula County Commissioner biography: https://www.ashtabulacounty.us/directory.aspx?EID=275",
+    "Existing compassionate_emails.json record (verified against live data)"
+  ],
+  "last_verified": "2026-07-04"
+}

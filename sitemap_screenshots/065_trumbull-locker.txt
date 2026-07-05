@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/trumbull-locker/
-title: Trumbull Meat Locker | Cut Sheet
-body_chars: 838
-screenshot: sitemap_screenshots/065_trumbull-locker.png
-source: live
-warnings: none

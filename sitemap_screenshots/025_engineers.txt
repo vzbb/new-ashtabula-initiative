@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/engineers/
-title: engineers-assistant
-body_chars: 721
-screenshot: sitemap_screenshots/025_engineers.png
-source: live
-warnings: none

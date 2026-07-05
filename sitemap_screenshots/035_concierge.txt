@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/concierge/
-title: virtual-concierge
-body_chars: 581
-screenshot: sitemap_screenshots/035_concierge.png
-source: live
-warnings: none

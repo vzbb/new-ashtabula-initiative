@@ -1,0 +1,67 @@
+<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Status: Completed">
+  <defs>
+    <style>
+      @keyframes check-draw {
+        from { stroke-dashoffset: 36; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes completed-glow {
+        0%, 100% { 
+          r: 16; 
+          fill-opacity: 0.12; 
+          stroke-opacity: 0.25;
+        }
+        50% { 
+          r: 18; 
+          fill-opacity: 0.2; 
+          stroke-opacity: 0.4;
+        }
+      }
+      @keyframes burst-particle {
+        0% { opacity: 1; transform: translate(0, 0) scale(1); }
+        100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0); }
+      }
+      .check-path { 
+        stroke-dasharray: 36; 
+        stroke-dashoffset: 0;
+        animation: check-draw 0.6s ease-out forwards; 
+      }
+      .glow-bg { 
+        animation: completed-glow 3s ease-in-out infinite; 
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .check-path { stroke-dashoffset: 0 !important; animation: none !important; }
+        .glow-bg { animation: none !important; r: 16 !important; }
+        .burst { display: none !important; }
+      }
+    </style>
+  </defs>
+  <!-- Glass background circle (animated glow radius) -->
+  <circle class="glow-bg" cx="20" cy="20" r="16" fill="rgba(45,95,63,0.12)" stroke="rgba(45,95,63,0.25)" stroke-width="1.5"/>
+  
+  <!-- Outer ring -->
+  <circle cx="20" cy="20" r="16" fill="none" stroke="#2d5f3f" stroke-width="1.5" opacity="0.3"/>
+  
+  <!-- Checkmark -->
+  <polyline class="check-path" points="14,20 18.5,24.5 26,16" 
+            fill="none" stroke="#2d5f3f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Celebration burst particles (single shot on completion) -->
+  <g class="burst">
+    <circle cx="20" cy="20" r="1.5" fill="#2d5f3f" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.8s" begin="0.5s" fill="freeze"/>
+      <animate attributeName="cx" values="20;30" dur="0.8s" begin="0.5s" fill="freeze"/>
+      <animate attributeName="cy" values="20;14" dur="0.8s" begin="0.5s" fill="freeze"/>
+    </circle>
+    <circle cx="20" cy="20" r="1" fill="#2d5f3f" opacity="0">
+      <animate attributeName="opacity" values="0;1;0" dur="0.8s" begin="0.6s" fill="freeze"/>
+      <animate attributeName="cx" values="20;12" dur="0.8s" begin="0.6s" fill="freeze"/>
+      <animate attributeName="cy" values="20;16" dur="0.8s" begin="0.6s" fill="freeze"/>
+    </circle>
+    <circle cx="20" cy="20" r="1.2" fill="#2d5f3f" opacity="0">
+      <animate attributeName="opacity" values="0;0.8;0" dur="0.8s" begin="0.55s" fill="freeze"/>
+      <animate attributeName="cx" values="20;26" dur="0.8s" begin="0.55s" fill="freeze"/>
+      <animate attributeName="cy" values="20;26" dur="0.8s" begin="0.55s" fill="freeze"/>
+    </circle>
+  </g>
+</svg>

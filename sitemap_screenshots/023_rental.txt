@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/rental/
-title: Ridgeview Estates Availability | Ashtabula County Rentals
-body_chars: 1612
-screenshot: sitemap_screenshots/023_rental.png
-source: live
-warnings: none

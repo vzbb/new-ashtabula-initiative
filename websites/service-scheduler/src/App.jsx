@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { callGeminiAPI, extractResponseText } from "../../../shared/api-client.js";
+import { callOpenRouterAPI, extractResponseText } from "../../../shared/api-client.js";
 
 
 // Icons
@@ -25,7 +25,7 @@ function App() {
     setReply("");
     try {
       const prompt = `Write a concise HVAC service appointment confirmation for Blank Heating Company Inc. Service: ${service} on ${date || 'the scheduled date'}. Include arrival window and prep note. 70 words max.`;
-      const data = await callGeminiAPI(prompt);
+      const data = await callOpenRouterAPI(prompt);
       const text = extractResponseText(data);
       setReply(text);
     } catch (e) {

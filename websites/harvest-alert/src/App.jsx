@@ -2,62 +2,37 @@ import { useState } from "react";
 import { callGeminiAPI, extractResponseText } from "./api-client.js";
 import "./App.css";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
 
-// Ashtabula County Seal Logo SVG
-const CountySealLogo = () => (
+// Simple barn-inspired logo SVG for the farmers market
+const FarmLogo = () => (
   <svg width="48" height="48" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    {/* Outer Blue Ring */}
-    <circle cx="50" cy="50" r="48" fill="#003f87" />
-    <circle cx="50" cy="50" r="44" fill="none" stroke="#ffd700" strokeWidth="2" />
-    <circle cx="50" cy="50" r="40" fill="#f8f6f0" />
+    {/* Warm cream circle background */}
+    <circle cx="50" cy="50" r="48" fill="#FDF8F0" />
+    <circle cx="50" cy="50" r="44" fill="none" stroke="#1B5E20" strokeWidth="2.5" />
     
-    {/* Gold Text Ring */}
-    <path id="textCurve" d="M 15,50 A 35,35 0 0,1 85,50" fill="none" />
-    <text fill="#003f87" fontSize="7" fontWeight="bold" fontFamily="Open Sans, sans-serif">
-      <textPath href="#textCurve" startOffset="50%" textAnchor="middle">
-        ASHTABULA COUNTY
-      </textPath>
-    </text>
-    
-    {/* Inner Circle */}
-    <circle cx="50" cy="50" r="28" fill="none" stroke="#ffd700" strokeWidth="1.5" />
-    
-    {/* Lighthouse */}
-    <g transform="translate(50, 38)">
-      <path d="M-4 18 L-2 -8 L2 -8 L4 18 Z" fill="#003f87" />
-      <path d="M-2 -8 L-5 -12 L-2 -10 Z" fill="#ffd700" />
-      <path d="M2 -8 L5 -12 L2 -10 Z" fill="#ffd700" />
-      <rect x="-3" y="-10" width="6" height="3" fill="#003f87" />
-      <circle cx="0" cy="-8" r="1.5" fill="#ffd700" />
+    {/* Barn silhouette */}
+    <g transform="translate(50, 44)">
+      <path d="M-24 18 L0 -16 L24 18" fill="#8B2E1A" />
+      <rect x="-18" y="4" width="36" height="22" fill="#8B2E1A" />
+      <rect x="-6" y="10" width="12" height="16" fill="#C75B3A" rx="1" />
+      <line x1="0" y1="-16" x2="0" y2="-20" stroke="#FFC107" strokeWidth="2" />
+      <circle cx="0" cy="-22" r="3" fill="#FFC107" />
     </g>
     
-    {/* Covered Bridge */}
-    <g transform="translate(50, 55)">
-      <path d="M-18 12 Q0 -5 18 12" fill="none" stroke="#8b4513" strokeWidth="3" />
-      <path d="M-18 12 L-18 16 L18 16 L18 12" fill="#8b4513" />
-      <rect x="-20" y="8" width="4" height="10" fill="#654321" />
-      <rect x="16" y="8" width="4" height="10" fill="#654321" />
-      <path d="M-20 8 L0 -2 L20 8" fill="#8b4513" />
+    {/* Wheat stalks left */}
+    <g transform="translate(22, 62)" opacity="0.8">
+      <path d="M0 0 Q-2 -10 0 -18" stroke="#1B5E20" strokeWidth="1.5" fill="none" />
+      <ellipse cx="-2" cy="-10" rx="2.5" ry="5" fill="#FFC107" />
+      <ellipse cx="2" cy="-6" rx="2.5" ry="5" fill="#FFC107" />
     </g>
     
-    {/* Wheat Stalks */}
-    <g transform="translate(28, 65)" opacity="0.8">
-      <path d="M0 0 Q2 -8 0 -15" stroke="#27ae60" strokeWidth="1.5" fill="none" />
-      <ellipse cx="-2" cy="-8" rx="2" ry="4" fill="#ffd700" />
-      <ellipse cx="2" cy="-5" rx="2" ry="4" fill="#ffd700" />
-      <ellipse cx="0" cy="-12" rx="1.5" ry="3" fill="#ffd700" />
+    {/* Wheat stalks right */}
+    <g transform="translate(78, 62)" opacity="0.8">
+      <path d="M0 0 Q2 -10 0 -18" stroke="#1B5E20" strokeWidth="1.5" fill="none" />
+      <ellipse cx="2" cy="-10" rx="2.5" ry="5" fill="#FFC107" />
+      <ellipse cx="-2" cy="-6" rx="2.5" ry="5" fill="#FFC107" />
     </g>
-    <g transform="translate(72, 65)" opacity="0.8">
-      <path d="M0 0 Q-2 -8 0 -15" stroke="#27ae60" strokeWidth="1.5" fill="none" />
-      <ellipse cx="2" cy="-8" rx="2" ry="4" fill="#ffd700" />
-      <ellipse cx="-2" cy="-5" rx="2" ry="4" fill="#ffd700" />
-      <ellipse cx="0" cy="-12" rx="1.5" ry="3" fill="#ffd700" />
-    </g>
-    
-    {/* Lake Erie Wave */}
-    <path d="M25 78 Q35 75 45 78 T65 78 T75 78" fill="none" stroke="#003f87" strokeWidth="1.5" opacity="0.5" />
-    <circle cx="50" cy="50" r="2" fill="#ffd700" />
   </svg>
 );
 
@@ -81,37 +56,63 @@ function App() {
 
   return (
     <div className="page">
-      <div className="bg-grain" aria-hidden="true" />
+      {/* Hero Background */}
+      <div className="hero-bg" aria-hidden="true">
+        <picture>
+          <source srcSet="/harvest/hero.webp" type="image/webp" />
+          <img src="/harvest/hero.jpg" alt="" className="hero-image" />
+        </picture>
+        <div className="hero-overlay" />
+      </div>
 
+      {/* Header */}
       <header className="header">
-        <div className="logo">
-          <CountySealLogo />
-          <div className="logo-text">
-            <span className="logo-title">Agricultural Services</span>
-            <span className="logo-subtitle">Harvest Alert System</span>
+        <div className="header-content">
+          <div className="logo">
+            <FarmLogo />
+            <div className="logo-text">
+              <span className="logo-title">Ashtabula Farmers Market</span>
+              <span className="logo-subtitle">Harvest Alert System</span>
+            </div>
+          </div>
+          <div className="farmers-market-badge">
+            <img src="/harvest/badge-icon.svg" alt="" className="badge-icon" />
+            ASHTABULA COUNTY APPROVED
           </div>
         </div>
-        <div className="official-badge">Official</div>
       </header>
 
       <main className="content">
+        {/* Hero Section */}
         <div className="hero">
-          <h1>Notify Buyers at Peak Freshness</h1>
-          <p className="sub">AI-powered harvest alerts with pickup CTAs for Ashtabula County farmers.</p>
+          <h1>Fresh From the Farm to Your Table</h1>
+          <p className="sub">AI-powered harvest alerts with pickup CTAs for Ashtabula County growers. Notify buyers at peak freshness.</p>
         </div>
 
+        {/* Alert Card with Glassmorphism */}
         <div className="alert-card">
           <div className="crop-section">
-            <label>Select Crop</label>
+            <label>Select Your Crop</label>
             <div className="crop-grid">
               {crops.map(c => (
-                <button key={c} className={crop === c ? 'active' : ''} onClick={() => setCrop(c)}>{c}</button>
+                <button 
+                  key={c} 
+                  className={`crop-btn ${crop === c ? 'active' : ''}`} 
+                  onClick={() => setCrop(c)}
+                >
+                  {c}
+                </button>
               ))}
             </div>
           </div>
 
           <button className="generate-btn" onClick={generate} disabled={loading}>
-            {loading ? 'Generating Alert...' : '🌾 Generate Harvest Alert'}
+            {loading ? (
+              <span className="btn-loading">
+                <span className="spinner" />
+                Generating Alert...
+              </span>
+            ) : '🌾 Generate Harvest Alert'}
           </button>
         </div>
 
@@ -120,7 +121,7 @@ function App() {
         {alert && (
           <div className="result-card">
             <div className="result-header">
-              <span>📢</span>
+              <span className="result-icon">📢</span>
               <h3>Harvest Alert</h3>
               <span className="crop-tag">{crop}</span>
             </div>            
@@ -128,34 +129,37 @@ function App() {
               <pre>{alert}</pre>
             </div>            
             <div className="result-actions">
-              <button className="btn-secondary">📋 Copy</button>
+              <button className="btn-secondary" onClick={() => navigator.clipboard?.writeText(alert)}>📋 Copy</button>
               <button className="btn-primary">📧 Send to Buyers</button>
             </div>
           </div>
         )}
 
+        {/* Feature Cards with Glassmorphism */}
         <div className="features">
-          <div className="feature">
-            <span>💰</span>
+          <div className="feature-card">
+            <div className="feature-icon">💰</div>
             <h4>More Sales</h4>
-            <p>Reach buyers fast</p>
+            <p>Reach buyers fast when your crop is at its peak.</p>
           </div>
-          <div className="feature">
-            <span>🌱</span>
+          <div className="feature-card">
+            <div className="feature-icon">🌱</div>
             <h4>Less Waste</h4>
-            <p>Move product quickly</p>
+            <p>Move product quickly with timely harvest alerts.</p>
           </div>
-          <div className="feature">
-            <span>⚡</span>
+          <div className="feature-card">
+            <div className="feature-icon">⚡</div>
             <h4>Simple Ops</h4>
-            <p>One-click alerts</p>
+            <p>One-click alerts that connect growers with buyers.</p>
           </div>
         </div>
       </main>
 
       <footer className="footer">
-        <p className="county-name">Ashtabula County Agricultural Services</p>
-        <p>© 2026 Ashtabula County Board of Commissioners</p>
+        <div className="footer-divider" />
+        <p className="county-name">Ashtabula Farmers Market</p>
+        <p>Ashtabula County Board of Commissioners</p>
+        <p className="footer-year">© 2026 Ashtabula County, OH</p>
       </footer>
     </div>
   );

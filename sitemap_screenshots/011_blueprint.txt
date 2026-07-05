@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/blueprint/
-title: Blueprint Analyzer | Ashtabula Chamber of Commerce
-body_chars: 718
-screenshot: sitemap_screenshots/011_blueprint.png
-source: live
-warnings: none

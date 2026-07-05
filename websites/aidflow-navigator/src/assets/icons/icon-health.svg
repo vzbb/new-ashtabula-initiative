@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-label="Health">
+  <defs>
+    <linearGradient id="health-accent" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+  <!-- Medical cross -->
+  <rect x="9" y="3" width="6" height="18" rx="1.2" fill="url(#health-accent)"/>
+  <rect x="3" y="9" width="18" height="6" rx="1.2" fill="url(#health-accent)"/>
+  <!-- Subtle circle behind -->
+  <circle cx="12" cy="12" r="10.5" fill="none" stroke="url(#health-accent)" stroke-width="0.5" opacity="0.2"/>
+</svg>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   callGeminiAPI,
   extractResponseText,
@@ -74,6 +74,28 @@ Case note
 - ${detail || "No additional details were provided."}`;
 }
 
+function useScrollReveal() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    document.querySelectorAll(".fade-in-section").forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+}
+
 function App() {
   const assetBase = import.meta.env.BASE_URL;
   const logoSrc = `${assetBase}assets/amha-logo.png`;
@@ -88,6 +110,8 @@ function App() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [sourceNote, setSourceNote] = useState("Demo-ready local response");
+
+  useScrollReveal();
 
   const apiConfigured = isAPIConfigured();
 
@@ -162,15 +186,15 @@ Requirements:
             </p>
 
             <div className="hero-stats">
-              <div>
+              <div className="fade-in-section">
                 <strong>4 AMHA programs</strong>
                 <span>HCV, public housing, USDA housing, capital fund</span>
               </div>
-              <div>
+              <div className="fade-in-section">
                 <strong>Inspection-aware</strong>
                 <span>built for readiness, repairs, and follow-up</span>
               </div>
-              <div>
+              <div className="fade-in-section">
                 <strong>Community-first</strong>
                 <span>designed around residents, landlords, and stakeholders</span>
               </div>
@@ -199,7 +223,7 @@ Requirements:
         </header>
 
         <main className="content-grid">
-          <section className="workspace-card">
+          <section className="workspace-card fade-in-section">
             <div className="section-heading">
               <p className="section-label">Landlord case workspace</p>
               <h2>Prepare a clear AMHA follow-up message.</h2>
@@ -273,7 +297,7 @@ Requirements:
             {error && <div className="alert">{error}</div>}
           </section>
 
-          <section className="reply-card">
+          <section className="reply-card fade-in-section">
             <div className="reply-head">
               <div>
                 <p className="section-label">AMHA response draft</p>
@@ -303,15 +327,15 @@ Requirements:
               <h2>Shaped around housing authority responsibilities and values.</h2>
             </div>
             <div className="feature-grid">
-              <article className="feature-item">
+              <article className="feature-item fade-in-section">
                 <h3>Voucher participation support</h3>
                 <p>Helps landlords stay aligned with HCV readiness, paperwork expectations, and communication flow.</p>
               </article>
-              <article className="feature-item">
+              <article className="feature-item fade-in-section">
                 <h3>Safe-unit follow-up</h3>
                 <p>Keeps repairs and inspection notes framed around safe, clean, affordable housing outcomes.</p>
               </article>
-              <article className="feature-item">
+              <article className="feature-item fade-in-section">
                 <h3>Stakeholder communication</h3>
                 <p>Supports clearer coordination across landlords, residents, and AMHA staff without sounding generic.</p>
               </article>
@@ -325,7 +349,7 @@ Requirements:
             </div>
             <div className="journey-grid">
               {workflowCards.map((card) => (
-                <article key={card.title} className="journey-step">
+                <article key={card.title} className="journey-step fade-in-section">
                   <h3>{card.title}</h3>
                   <p>{card.detail}</p>
                 </article>

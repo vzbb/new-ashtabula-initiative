@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/sommelier-pro/
-title: Sommelier Pro | Ferrante Winery & Ristorante
-body_chars: 2893
-screenshot: sitemap_screenshots/054_sommelier-pro.png
-source: live
-warnings: none

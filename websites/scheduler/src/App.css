@@ -1,14 +1,19 @@
 :root {
-  --ink: #132033;
-  --muted: #55657d;
-  --line: rgba(19, 32, 51, 0.12);
+  --navy: #1B2A4A;           /* Deep Navy - primary brand color */
+  --ink: #1E293B;             /* Slate 800 - body text */
+  --muted: #64748B;           /* Slate 500 - secondary text */
+  --line: rgba(30, 41, 59, 0.12);
   --panel: rgba(255, 255, 255, 0.92);
-  --panel-strong: #fffaf5;
-  --heat: #c2410c;
-  --heat-bright: #f97316;
-  --cool: #2563eb;
-  --cool-soft: #dbeafe;
-  --sand: #fff3e8;
+  --panel-strong: #F8FAFC;    /* Slate 50 - brandkit neutral light */
+  --heat: #C2410C;            /* Deep Rust - secondary accent */
+  --heat-bright: #F97316;     /* Flame Orange - primary accent */
+  --cool: #2563EB;            /* Trust Blue - secondary brand */
+  --cool-soft: #DBEAFE;
+  --warm-amber: #FBBF24;      /* Warm Amber - tertiary accent */
+  --booking-green: #059669;   /* Booking Green - scheduling CTAs */
+  --emergency-red: #DC2626;   /* Emergency Red */
+  --heritage-warm: #FFF3E8;   /* Heritage badge background */
+  --sand: #FFF3E8;
   --shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
 }
 
@@ -194,6 +199,8 @@ body {
   grid-template-columns: 1.45fr 0.9fr;
   gap: 22px;
   padding: 34px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-copy h2,
@@ -571,4 +578,50 @@ body {
   .hero-copy h2 {
     font-size: clamp(1.8rem, 12vw, 3rem);
   }
+}
+
+.hero-image-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 28px;
+  z-index: 0;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.85) 40%,
+    rgba(27, 42, 74, 0.6) 100%
+  );
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.heritage-badge {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #C2410C;
+  background: #FFF3E8;
+  color: #C2410C;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
 }

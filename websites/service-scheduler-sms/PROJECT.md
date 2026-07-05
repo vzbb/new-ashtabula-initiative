@@ -1,23 +1,31 @@
-# PROJECT — Service Scheduler Bot (SMS)
+# PROJECT — Blank Heating SMS Scheduler
 
-## Desired Functionality (from CSV)
-- **Service Scheduler Bot (Albert’s Automotive):** SMS agent that books appointments, confirms times, and sends “car is ready” notifications.
+## Desired Functionality
+- **SMS Scheduler (Blank Heating Company Inc):** SMS agent that generates HVAC appointment confirmations, sends reminders, and drafts service follow-up texts for furnace, AC, and indoor air quality visits.
 
 ## Current Functionality (observed)
-- Inputs for vehicle and issue.
-- Gemini API drafts a concise SMS reply with two proposed time windows.
-- No SMS integration or booking system.
-
-## Gaps
-- No live calendar/slot availability or booking confirmation.
-- No customer record creation or reminders.
+- Inputs for service type and phone number.
+- OpenRouter (via callGeminiAPI wrapper) drafts a concise SMS confirmation with arrival window and prep note, under 160 characters.
 - No SMS gateway integration.
 
+## Gaps
+- No live SMS sending/receiving.
+- No customer record creation or automated reminders.
+- No two-way conversation state.
+
 ## High‑Priority Improvements
-1. Integrate with scheduling calendar (or build a simple slot database).
-2. Add Twilio (or similar) SMS sending/receiving + conversation state.
-3. Capture customer contact details and vehicle info in a CRM table.
-4. Add automated reminders and “car ready” notifications.
+1. Add Twilio (or similar) SMS gateway for actual message sending.
+2. Add automated appointment reminders and follow-up texts.
+3. Capture customer details and service history in a CRM table.
+4. Add confirmation tracking and read receipts.
 
 ## Assumptions
-- Directly mapped to **Albert’s Automotive** CSV entry.
+- Directly mapped to **Blank Heating Company Inc** as target buyer.
+- Branded with Blank Heating identity: Navy #1B2A4A, Blue #2563EB, Orange #f97316.
+- HVAC-specific services: heating repair, AC service, system check-ups, free estimates, indoor air quality.
+
+## Brand
+- **Business:** Blank Heating Company Inc
+- **Location:** Ashtabula, OH
+- **Phone:** 440-969-1760
+- **License:** OH LIC #25138 | NATE-certified | Three generations family-owned

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/volunteer/
-title: RSVP Volunteer Scheduler | Powered by Axess Family Services
-body_chars: 1980
-screenshot: sitemap_screenshots/059_volunteer.png
-source: live
-warnings: none

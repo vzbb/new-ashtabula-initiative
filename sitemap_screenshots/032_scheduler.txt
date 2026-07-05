@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/scheduler/
-title: Service Scheduler
-body_chars: 596
-screenshot: sitemap_screenshots/032_scheduler.png
-source: live
-warnings: none

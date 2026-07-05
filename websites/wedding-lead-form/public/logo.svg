@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 110" width="520" height="110">
+  <defs>
+    <linearGradient id="gld" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e7c77b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c99a3e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- ICON: Antler Crest Mark -->
+  <g transform="translate(10, 6)">
+    <!-- Shield form -->
+    <path d="M50,8 L70,8 L75,40 L50,96 L25,40 Z" fill="none" stroke="#173a5e" stroke-width="1.2" opacity="0.1"/>
+    <path d="M50,14 L67,14 L71,40 L50,88 L29,40 Z" fill="none" stroke="url(#gld)" stroke-width="0.6" opacity="0.3"/>
+
+    <!-- Left antler arcs -->
+    <path d="M36,36 C32,28 24,18 14,20 C8,22 4,28 2,36"
+          fill="none" stroke="#173a5e" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M32,30 C28,22 20,14 12,16"
+          fill="none" stroke="#173a5e" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M38,26 C34,18 26,10 18,12"
+          fill="none" stroke="#173a5e" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- Right antler arcs -->
+    <path d="M64,36 C68,28 76,18 86,20 C92,22 96,28 98,36"
+          fill="none" stroke="#173a5e" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M68,30 C72,22 80,14 88,16"
+          fill="none" stroke="#173a5e" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M62,26 C66,18 74,10 82,12"
+          fill="none" stroke="#173a5e" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- BPOE star -->
+    <polygon points="50,10 53,18 62,18 55,23.5 58,32 50,26.5 42,32 45,23.5 38,18 47,18"
+             fill="url(#gld)" stroke="#173a5e" stroke-width="0.6"/>
+
+    <!-- Gold antler highlights -->
+    <path d="M34,38 C30,30 24,20 14,22"
+          fill="none" stroke="url(#gld)" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+    <path d="M66,38 C70,30 76,20 86,22"
+          fill="none" stroke="url(#gld)" stroke-width="0.8" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Lake Erie wave -->
+    <path d="M30,76 C36,72 42,76 50,76 C58,76 64,72 70,76"
+          fill="none" stroke="url(#gld)" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+    <path d="M34,80 C40,77 44,80 50,80 C56,80 60,77 66,80"
+          fill="none" stroke="url(#gld)" stroke-width="0.8" stroke-linecap="round" opacity="0.25"/>
+  </g>
+
+  <!-- TYPOGRAPHY -->
+  <g transform="translate(118, 22)">
+    <!-- ELKS LODGE #208 in Georgia serif (falls back elegantly from Cormorant Garamond) -->
+    <text x="0" y="32" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+          font-weight="600" font-size="28" fill="#173a5e" letter-spacing="4">
+      ELKS LODGE
+      <tspan fill="url(#gld)" font-weight="700" font-size="30" letter-spacing="3"> #208</tspan>
+    </text>
+
+    <!-- Gold divider line -->
+    <line x1="0" y1="46" x2="220" y2="46" stroke="url(#gld)" stroke-width="0.8" opacity="0.5"/>
+
+    <!-- Location in lighter sans -->
+    <text x="0" y="64" font-family="'Inter', -apple-system, 'Helvetica Neue', sans-serif"
+          font-weight="500" font-size="10" fill="#5d7187" letter-spacing="4">
+      ASHTABULA  OHIO
+    </text>
+
+    <!-- Tagline in gold (consistent with brand) -->
+    <text x="0" y="84" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif"
+          font-weight="500" font-size="14" fill="#5d7187" font-style="italic" letter-spacing="1.2">
+      Lake Erie Waterfront Wedding Venue
+    </text>
+  </g>
+</svg>

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/license/
-title: License Wizard
-body_chars: 897
-screenshot: sitemap_screenshots/007_license.png
-source: live
-warnings: none

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/curbside/
-title: Harbor Gardens | Curbside Pickup Tracker
-body_chars: 2609
-screenshot: sitemap_screenshots/027_curbside.png
-source: live
-warnings: none

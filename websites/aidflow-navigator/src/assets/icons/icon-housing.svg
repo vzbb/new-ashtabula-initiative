@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-label="Housing">
+  <defs>
+    <linearGradient id="house-accent" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <!-- Roof -->
+  <polygon points="2,10 12,2 22,10" fill="url(#house-accent)" stroke="none"/>
+  <!-- Chimney -->
+  <rect x="15" y="3" width="3" height="4" rx="0.6" fill="url(#house-accent)" opacity="0.7"/>
+  <!-- House body -->
+  <rect x="4" y="10" width="16" height="12" rx="1" fill="url(#house-accent)" opacity="0.85"/>
+  <!-- Door -->
+  <rect x="9.5" y="14" width="5" height="8" rx="0.8" fill="#1E1B4B" opacity="0.3"/>
+  <rect x="10.5" y="15" width="3" height="6" rx="0.5" fill="#FFF" opacity="0.15"/>
+  <!-- Door knob -->
+  <circle cx="13" cy="18" r="0.6" fill="#FFF" opacity="0.4"/>
+  <!-- Window -->
+  <rect x="5.5" y="11.5" width="3" height="3" rx="0.4" fill="#FFF" opacity="0.25"/>
+  <line x1="7" y1="11.5" x2="7" y2="14.5" stroke="#FFF" stroke-width="0.4" opacity="0.3"/>
+  <line x1="5.5" y1="13" x2="8.5" y2="13" stroke="#FFF" stroke-width="0.4" opacity="0.3"/>
+</svg>

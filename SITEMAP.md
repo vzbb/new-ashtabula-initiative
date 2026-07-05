@@ -8,7 +8,7 @@
 
 - Base URL: `https://new-ashtabula-initiative.vercel.app/`
 - Public routes: `76`
-- Target-ledger entries: `13`
+- Target-ledger entries: `14`
 
 ## Structured Workflow
 
@@ -96,11 +96,16 @@
 | # | Site | Route | Buyer/Target | Description |
 |---|------|-------|--------------|-------------|
 | 48 | Boat Storage Waitlist | [/boat-storage/](https://new-ashtabula-initiative.vercel.app/boat-storage/) | Geneva Marina | Storage management |
-| 49 | Harvest Alert | [/harvest/](https://new-ashtabula-initiative.vercel.app/harvest/) | Ashtabula Farmers Market | Agricultural alerts |
 | 50 | AI Docent Pro | [/ai-docent-pro/](https://new-ashtabula-initiative.vercel.app/ai-docent-pro/) | Ashtabula County Historical Society (ACHS) | Advanced museum AI |
 | 51 | Artist Commission Form | [/artist-commission/](https://new-ashtabula-initiative.vercel.app/artist-commission/) | Ashtabula Arts Center | Commission system |
 | 52 | Pocket Historian | [/historian/](https://new-ashtabula-initiative.vercel.app/historian/) | Ashtabula County Historical Society | Local history guide |
 | 53 | Pocket Historian Pro | [/historian-pro/](https://new-ashtabula-initiative.vercel.app/historian-pro/) | Ashtabula County Historical Society | History archives |
+
+### 🏛️ Government & Civic (17 sites)
+
+| # | Site | Route | Buyer/Target | Description |
+|---|------|-------|--------------|-------------|
+| 49 | Harvest Alert | [/harvest/](https://new-ashtabula-initiative.vercel.app/harvest/) | Ashtabula County Board of Commissioners | County agricultural alert system |
 
 ### 🎨 Arts & Culture (7 sites)
 
@@ -159,6 +164,7 @@ Secondary targets are clone / white-label candidates, not automatic promotions.
 | Thomas Fence | `/thomas-fence/` | Thomas Fence Co. Inc. | Ashtabula Fence Co. LLC; Miller's Integrity Construction LLC | Concrete brand; keep polishing |
 | Fence Quote | `/fence-quote/` | Miller's Integrity Construction LLC | Lion Fence Builders; Residence Artists Inc. | Generic MVP, now anchored to a distinct fence buyer; Ashtabula Fence Co. and Thomas Fence Co. are separate MVPs and not clone candidates here |
 | Farm Stand Finder | `/farm-stand/` | Ashtabula Farmers Market | Harbor Gardens; 2140 Farm Market; Conneaut Farmers Market | Generic MVP, use the most concrete farm/market buyer available |
+| Harvest Alert | `/harvest/` | Ashtabula County Board of Commissioners | Ashtabula County Agricultural Services; Ohio State University Extension - Ashtabula County | County government agricultural alert system; site already branded with county seal and OFFICIAL badge |
 | Rennick Market | `/rennick-market/` | Rennick Meat Market | Harbor Gardens; Ashtabula Local Food Network; Ashtabula County Farm Bureau | Brand is concrete; polish the identity |
 | Trumbull Locker | `/trumbull-locker/` | Trumbull Locker Plant | NaKyrsie Meats; Miles Farmers Market; Don's Custom Meats | Brand is concrete; polish the identity |
 | AidFlow Navigator | `/aidflow/` | 211 Ashtabula County / United Way of Ashtabula County | Ashtabula County Community Action Agency; ACDJFS | Shared social-service body is acceptable here |

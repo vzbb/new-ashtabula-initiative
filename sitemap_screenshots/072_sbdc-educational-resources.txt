@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/sbdc-educational-resources/
-title: Educational Resources — Lakeland SBDC Resource
-body_chars: 1058
-screenshot: sitemap_screenshots/072_sbdc-educational-resources.png
-source: live
-warnings: none

@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import "./App.css";
 import blankHeatingLogo from "./assets/blank-heating-logo.png";
+import heroImage from "./assets/hero-technician.png";
 
 const serviceOptions = [
   {
@@ -215,8 +216,13 @@ function App() {
 
         <main className="layout">
           <section className="hero panel">
+            <div className="hero-image-wrapper" aria-hidden="true">
+              <img src={heroImage} alt="" className="hero-bg-image" />
+              <div className="hero-image-overlay" />
+            </div>
             <div className="hero-copy">
               <p className="eyebrow">Book service with Blank Heating Company</p>
+              <span className="heritage-badge">Three Generations • Ashtabula OH</span>
               <h2>Schedule heating, cooling, and indoor comfort visits without waiting on a callback.</h2>
               <p className="hero-text">
                 Request a preferred visit window for repair calls, seasonal system check-ups, free in-home estimates,
@@ -288,7 +294,7 @@ function App() {
                   <p className="eyebrow">Appointment request</p>
                   <h3>Reserve a service window</h3>
                 </div>
-                <span className="status-pill">Free estimate available</span>
+                <span className="status-pill" style={{color: "var(--booking-green)"}}>Free estimate available</span>
               </div>
 
               {submitted ? (
@@ -435,7 +441,7 @@ function App() {
                   For urgent comfort issues and same-day dispatch, the office can prioritize active outages and route
                   the right technician faster by phone.
                 </p>
-                <a className="emergency-link" href="tel:4409691760">
+                <a className="emergency-link" href="tel:4409691760" style={{color: "var(--emergency-red)"}}>
                   440-969-1760
                 </a>
               </section>

@@ -2,40 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import { callGeminiAPI, extractResponseText } from "../../../shared/api-client.js";
 
-
-// SVG Logo - Phone with Message Bubbles
-const SMSLogo = () => (
-  <svg className="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    {/* Phone Frame */}
-    <rect x="25" y="10" width="50" height="80" rx="8" fill="#075e54" />
-    <rect x="28" y="18" width="44" height="64" rx="4" fill="#f0f2f5" />
-    {/* Screen Notch */}
-    <rect x="42" y="12" width="16" height="4" rx="2" fill="#128c7e" />
-    {/* Home Button */}
-    <circle cx="50" cy="86" r="3" fill="#128c7e" />
-    {/* Chat Bubbles */}
-    <ellipse cx="45" cy="38" rx="15" ry="10" fill="#dcf8c6" />
-    <path d="M55 45 L58 48 L55 46" fill="#dcf8c6" />
-    <ellipse cx="58" cy="58" rx="14" ry="9" fill="white" stroke="#e0e0e0" strokeWidth="0.5" />
-    <path d="M45 64 L42 67 L45 65" fill="white" />
-    {/* SMS Icon */}
-    <rect x="60" y="65" width="25" height="20" rx="5" fill="#25d366" />
-    <path d="M68 72 L73 77 L78 70" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-    {/* Notification Badge */}
-    <circle cx="75" cy="65" r="8" fill="#e74c3c" />
-    <text x="75" y="68" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">1</text>
-  </svg>
-);
-
-// Icons
-const MessageIcon = () => <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>;
-
-const ZapIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>;
-
-const PhoneIcon = () => <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>;
-
 function App() {
-  const [service, setService] = useState("HVAC Tune-Up");
+  const [service, setService] = useState("Furnace Repair Visit");
   const [phone, setPhone] = useState("");
   const [reply, setReply] = useState("");
   const [loading, setLoading] = useState(false);
@@ -46,7 +14,7 @@ function App() {
     setError("");
     setReply("");
     try {
-      const prompt = `Write a short SMS appointment confirmation for ${service}. Include arrival window and brief prep note. Keep under 160 characters for SMS.`;
+      const prompt = `Write a short SMS appointment confirmation from Blank Heating Company Inc (OH LIC #25138, Ashtabula OH) for ${service}. Include arrival window and brief prep note. Keep under 160 characters for SMS.`;
       const data = await callGeminiAPI(prompt);
       const text = extractResponseText(data);
       setReply(text);
@@ -60,22 +28,30 @@ function App() {
   return (
     <div className="page">
       <div className="header">
-        <SMSLogo />
-        <span className="brand-name">SMS Scheduler</span>
+        <img src="/logo.svg" className="brand-logo" alt="Blank Heating Company Inc" />
+        <div className="brand-group">
+          <span className="brand-title">Blank Heating Company Inc.</span>
+          <span className="brand-sub">SMS Scheduling</span>
+        </div>
       </div>
 
       <header className="hero">
         <div className="hero-content">
-          <span className="eyebrow">📱 SMS-First Scheduling</span>
-          <h1>Send Confirmations via Text</h1>
-          <p className="sub">AI‑powered SMS confirmations for instant customer communication</p>
-          
+          <span className="eyebrow">HVAC SMS Scheduling</span>
+          <h1>Send Appointment Confirmations via Text</h1>
+          <p className="sub">AI-powered SMS confirmations for furnace, AC, and indoor air quality service visits. No apps to download.</p>
+
           <div className="input-card">
-            <h3>✉️ Message Details</h3>
+            <h3>Message Details</h3>
             <div className="form-row">
               <div>
                 <label>Service Type</label>
-                <input value={service} onChange={(e) => setService(e.target.value)} placeholder="HVAC Tune-Up" />
+                <select value={service} onChange={(e) => setService(e.target.value)}>
+                  <option>Furnace Repair Visit</option>
+                  <option>A/C Service Call</option>
+                  <option>Seasonal System Check-Up</option>
+                  <option>Free In-Home Estimate</option>
+                </select>
               </div>
               <div>
                 <label>Phone Number</label>
@@ -83,33 +59,33 @@ function App() {
               </div>
             </div>
           </div>
-          
+
           <div className="hero-actions">
             <button className="primary" onClick={generateSMS} disabled={loading}>
-              {loading ? "⏳ Generating…" : "✉️ Generate SMS"}
+              {loading ? "Generating..." : "Generate SMS"}
             </button>
-            <button className="ghost">📤 Send Now</button>
+            <button className="ghost">Send Now</button>
           </div>
-          
+
           <div className="trust">
-            <span><MessageIcon /> SMS Ready</span>
-            <span><ZapIcon /> AI Powered</span>
-            <span><PhoneIcon /> Instant Delivery</span>
+            <span>HVAC Ready</span>
+            <span>AI Powered</span>
+            <span>Instant Delivery</span>
           </div>
         </div>
       </header>
 
       <section className="card">
         <div className="card-head">
-          <h2>📱 SMS Preview</h2>
+          <h2>SMS Preview</h2>
           <span className="pill">160 chars max</span>
         </div>
-        {error && <div className="error">⚠️ {error}</div>}
+        {error && <div className="error">Error: {error}</div>}
         <div className="chat-preview">
           {reply ? (
             <div className="chat-bubble sent">
               {reply}
-              <div className="chat-time">✓✓ 2:45 PM</div>
+              <div className="chat-time">Sent 2:45 PM</div>
             </div>
           ) : (
             <p className="muted">SMS preview will appear here...</p>
@@ -119,24 +95,32 @@ function App() {
 
       <section className="grid">
         <div className="tile">
-          <div className="tile-icon">📱</div>
-          <h3>High Open Rate</h3>
-          <p>SMS has 98% open rate vs 20% for email</p>
+          <div className="tile-icon">Wrench</div>
+          <h3>HVAC Expertise</h3>
+          <p>NATE-certified technicians draft accurate, professional service messages</p>
         </div>
         <div className="tile">
-          <div className="tile-icon">⚡</div>
-          <h3>Instant Delivery</h3>
-          <p>Messages delivered in seconds, not hours</p>
+          <div className="tile-icon">Phone</div>
+          <h3>98% Open Rate</h3>
+          <p>SMS has 98% open rate - customers actually read their confirmations</p>
         </div>
         <div className="tile">
-          <div className="tile-icon">🎯</div>
-          <h3>No App Needed</h3>
-          <p>Works on every phone, no download required</p>
+          <div className="tile-icon">Home</div>
+          <h3>Family-Owned Service</h3>
+          <p>Three generations keeping Ashtabula comfortable since 1954</p>
         </div>
       </section>
 
+      <section className="differentiators">
+        <span className="diff-pill">Three Generations Serving Ashtabula</span>
+        <span className="diff-pill">OH LIC #25138 - NATE-Certified</span>
+        <span className="diff-pill">FREE In-Home Estimates</span>
+        <span className="diff-pill">24/7 Emergency Service Available</span>
+      </section>
+
       <footer className="footer">
-        <div>SMS Scheduler • Ashtabula County, OH</div>
+        <p>Blank Heating Company Inc - Ashtabula, OH - 440-969-1760</p>
+        <p className="footer-tagline">Heating - Cooling - Air Quality</p>
       </footer>
     </div>
   );

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/terra-vantage/
-title: Severino Construction | Terra Vantage
-body_chars: 1247
-screenshot: sitemap_screenshots/066_terra-vantage.png
-source: live
-warnings: none

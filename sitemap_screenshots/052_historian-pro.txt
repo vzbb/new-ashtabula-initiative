@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/historian-pro/
-title: Historian Pro | Ashtabula County Historical Society
-body_chars: 1813
-screenshot: sitemap_screenshots/052_historian-pro.png
-source: live
-warnings: none

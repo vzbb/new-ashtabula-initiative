@@ -1,3 +1,138 @@
+/* ============================================================
+   Notes & Prints Mobile Notary — Visual Design System
+   Glassmorphism · Scroll-Reveal · Form Micro-Interactions · CTA
+   ============================================================ */
+
+/* ---- Animation timing tokens ---- */
+:root {
+  --anim-fast: 200ms;
+  --anim-base: 300ms;
+  --anim-med: 500ms;
+  --anim-slow: 800ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Glass tokens */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --glass-blur: 12px;
+  --frost-deep: rgba(255, 255, 255, 0.75);
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --frost-deep: #ffffff;
+  }
+}
+
+/* ---- Scroll-Reveal Keyframes ---- */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---- Form Focus Glow ---- */
+@keyframes focus-glow {
+  0%   { box-shadow: 0 0 0 0px rgba(79, 70, 229, 0.15); }
+  50%  { box-shadow: 0 0 0 6px rgba(79, 70, 229, 0.08); }
+  100% { box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12); }
+}
+
+/* ---- CTA Pulse (one-time on load) ---- */
+@keyframes cta-pulse {
+  0%   { box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35); }
+  50%  { box-shadow: 0 4px 32px rgba(79, 70, 229, 0.55), 0 0 0 8px rgba(79, 70, 229, 0.08); }
+  100% { box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35); }
+}
+
+/* ---- Spinner ---- */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Border Shimmer (secondary button hover) ---- */
+@keyframes border-shimmer {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 200%; }
+}
+
+/* ============================================================
+   GLASS SYSTEM
+   ============================================================ */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all var(--anim-base) var(--ease-out);
+}
+
+.glass-light:hover {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-tint {
+  background: rgba(79, 70, 229, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  box-shadow: var(--glass-shadow);
+}
+
+/* ============================================================
+   SCROLL-REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  animation: reveal-up 600ms var(--ease-out) forwards;
+}
+
+.footer.reveal.visible {
+  animation: reveal-fade 400ms var(--ease-out) forwards;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; }
+  .reveal.visible { animation: none; opacity: 1; }
+  .glass-light:hover { transform: none; }
+  .feature:hover { transform: none; }
+  .primary:hover { transform: none; }
+  .primary.initial-pulse { animation: none; box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35); }
+}
+
+/* ============================================================
+   EXISTING TOKENS & BASE
+   ============================================================ */
 :root {
   --primary: #4f46e5;
   --primary-dark: #3730a3;
@@ -31,6 +166,34 @@ html, body {
   justify-content: center;
 }
 
+/* ============================================================
+   HERO BACKGROUND
+   ============================================================ */
+.hero-bg-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 250, 252, 0.92) 0%,
+    rgba(248, 250, 252, 0.7) 50%,
+    rgba(248, 250, 252, 0.95) 100%
+  );
+}
+
 .background-pattern {
   position: fixed;
   inset: 0;
@@ -50,6 +213,9 @@ html, body {
   margin: 0 auto;
 }
 
+/* ============================================================
+   HEADER / BRAND
+   ============================================================ */
 .header {
   text-align: center;
   margin-bottom: 32px;
@@ -59,16 +225,15 @@ html, body {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  background: var(--white);
   padding: 16px 28px;
   border-radius: 12px;
-  box-shadow: 0 4px 24px var(--shadow);
   border-left: 4px solid var(--primary);
 }
 
-.logo-icon {
+.logo-img {
   width: 56px;
   height: 56px;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -98,16 +263,40 @@ html, body {
   gap: 24px;
 }
 
+/* ============================================================
+   HERO CARD
+   ============================================================ */
 .hero-card {
-  background: var(--white);
+  position: relative;
+  overflow: hidden;
   border-radius: 16px;
   padding: 40px;
-  box-shadow: 0 8px 32px var(--shadow-lg);
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 40px;
   align-items: start;
-  border: 1px solid var(--silver);
+}
+
+/* Radial gradient accent behind heading */
+.hero-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 60%;
+  height: 120%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(79, 70, 229, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -155,8 +344,8 @@ h1 {
 }
 
 .input-card {
-  background: linear-gradient(135deg, var(--silver-light) 0%, var(--white) 100%);
-  border: 2px solid var(--silver);
+  position: relative;
+  z-index: 1;
   border-radius: 12px;
   padding: 28px;
   text-align: center;
@@ -175,12 +364,12 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* ============================================================
+   FORM CARD
+   ============================================================ */
 .form-card {
-  background: var(--white);
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 8px 32px var(--shadow-lg);
-  border: 1px solid var(--silver);
 }
 
 .card-header {
@@ -227,45 +416,107 @@ form {
   gap: 16px;
 }
 
-label {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* ============================================================
+   FLOATING LABEL SYSTEM
+   ============================================================ */
+.input-float {
+  position: relative;
+  width: 100%;
 }
 
-label span {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-light);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-input, textarea, select {
-  padding: 14px 16px;
+.input-float input,
+.input-float textarea,
+.input-float select {
+  width: 100%;
+  padding: 18px 16px 8px;
   border-radius: 8px;
   border: 2px solid var(--silver);
   background: var(--white);
   color: var(--text);
   font-size: 1rem;
   font-family: inherit;
-  transition: all 0.3s ease;
-  width: 100%;
-}
-
-input:focus, textarea:focus, select:focus {
+  transition: border-color var(--anim-base) var(--ease-in-out),
+              box-shadow var(--anim-base) var(--ease-in-out);
   outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
 }
 
-textarea {
+.float-select {
+  appearance: auto;
+  padding: 18px 12px 8px !important;
+}
+
+.input-float textarea {
   resize: vertical;
   min-height: 80px;
+  padding: 18px 16px 8px;
 }
 
+/* Focus glow animation */
+.input-float input:focus,
+.input-float textarea:focus,
+.input-float select:focus {
+  border-color: var(--primary);
+  animation: focus-glow 600ms ease-out forwards;
+}
+
+/* Valid entry checkmark */
+.input-float input:valid:not(:placeholder-shown):not([type="date"]):not([type="time"]),
+.input-float textarea:valid:not(:placeholder-shown) {
+  border-color: var(--success);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px;
+  padding-right: 44px;
+  transition: border-color var(--anim-base) ease;
+}
+
+.float-label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  pointer-events: none;
+  transition: all var(--anim-fast) var(--ease-out);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Float label up when input focused or has content */
+.input-float input:focus + .float-label,
+.input-float input:not(:placeholder-shown) + .float-label,
+.input-float textarea:focus + .float-label,
+.input-float textarea:not(:placeholder-shown) + .float-label,
+.input-float select:focus + .float-label,
+.input-float select:not([value=""]) + .float-label {
+  top: 8px;
+  transform: translateY(0);
+  font-size: 0.7rem;
+  color: var(--primary);
+}
+
+/* Textarea label positioning */
+.input-float textarea + .float-label {
+  top: 18px;
+  transform: translateY(0);
+}
+.input-float textarea:focus + .float-label,
+.input-float textarea:not(:placeholder-shown) + .float-label {
+  top: 8px;
+  font-size: 0.7rem;
+}
+
+/* ============================================================
+   BUTTONS / CTA
+   ============================================================ */
+/* Primary button — enhanced 3-stop dynamic gradient */
 .primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, #6366f1 50%, var(--primary-dark) 100%);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
   color: var(--white);
   border: none;
   padding: 16px 32px;
@@ -273,18 +524,54 @@ textarea {
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition:
+    background-position 400ms var(--ease-out),
+    transform 300ms var(--ease-out),
+    box-shadow 300ms var(--ease-out);
   width: 100%;
   box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
 }
 
+/* Directional gradient hover — flows toward cursor */
 .primary:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.45);
+  background-position: 100% 100%;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.4);
 }
 
+.primary:active {
+  transform: scale(0.97);
+}
+
+/* One-time pulse on page load */
+.primary.initial-pulse {
+  animation: cta-pulse 900ms ease-out;
+}
+
+/* Loading state */
+.primary.loading {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  background-size: 200% 200%;
+  background-position: 0% 0%;
+  transform: scale(0.98);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Success state */
+.primary.success {
+  background: linear-gradient(135deg, #34d399, #10b981);
+  background-size: 100% 100%;
+}
+
+/* Secondary button — border flow shimmer */
 .secondary {
-  background: var(--white);
+  background: transparent;
   color: var(--primary-dark);
   border: 2px solid var(--primary);
   padding: 12px 24px;
@@ -292,21 +579,55 @@ textarea {
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 350ms var(--ease-out);
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.secondary::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light), var(--primary));
+  background-size: 200% 200%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 350ms var(--ease-out);
+}
+
+.secondary:hover::before {
+  opacity: 1;
+  animation: border-shimmer 2s linear infinite;
 }
 
 .secondary:hover {
-  background: var(--primary);
   color: var(--white);
+  border-color: transparent;
 }
 
+/* ============================================================
+   SPINNER
+   ============================================================ */
+.spinner {
+  animation: spin 800ms linear infinite;
+}
+
+.spinner circle:last-child {
+  stroke-dasharray: 50;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: spin 800ms linear infinite;
+}
+
+/* ============================================================
+   RESULT CARD
+   ============================================================ */
 .result-card {
-  background: var(--white);
   border-radius: 16px;
   padding: 32px;
-  box-shadow: 0 8px 32px var(--shadow-lg);
-  border: 1px solid var(--silver);
 }
 
 .result-card.success {
@@ -338,6 +659,9 @@ textarea {
   margin-bottom: 24px;
 }
 
+/* ============================================================
+   FEATURE CARDS
+   ============================================================ */
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -345,19 +669,41 @@ textarea {
 }
 
 .feature {
-  background: var(--white);
+  position: relative;
   border-radius: 12px;
   padding: 28px 20px;
   text-align: center;
-  box-shadow: 0 4px 20px var(--shadow);
-  transition: all 0.3s ease;
-  border-bottom: 3px solid var(--silver);
+  transition: all var(--anim-base) var(--ease-out);
+  overflow: hidden;
 }
 
-.feature:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px var(--shadow-lg);
-  border-bottom-color: var(--primary);
+/* Gradient accent bottom border (replaces solid) */
+.feature::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-light) 50%,
+    transparent
+  );
+  border-radius: 2px;
+  transition: all var(--anim-base) var(--ease-out);
+}
+
+.feature:hover::after {
+  width: 80%;
+  left: 10%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary) 50%,
+    transparent
+  );
 }
 
 .feature-icon {
@@ -378,6 +724,93 @@ textarea {
   line-height: 1.6;
 }
 
+/* ============================================================
+   SECTION DIVIDER (Lake Erie)
+   ============================================================ */
+.section-divider {
+  position: relative;
+  height: 240px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 16px 0;
+}
+
+.divider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.divider-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(79, 70, 229, 0.35) 0%,
+    rgba(55, 48, 163, 0.25) 100%
+  );
+}
+
+.divider-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   LOCAL SECTION (Courthouse)
+   ============================================================ */
+.local-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 220px;
+  background: var(--white);
+  box-shadow: 0 8px 32px var(--shadow-lg);
+}
+
+.local-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  min-height: 220px;
+}
+
+.local-content {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.local-content h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.local-content p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .footer {
   text-align: center;
   margin-top: 48px;
@@ -390,18 +823,27 @@ textarea {
   color: var(--primary-dark);
 }
 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 @media (max-width: 900px) {
   .page { padding: 20px; }
   .hero-card { grid-template-columns: 1fr; padding: 28px; }
   .features { grid-template-columns: 1fr; }
   .trust { justify-content: center; }
   .form-row.two-col { grid-template-columns: 1fr; }
+  .section-divider { height: 180px; }
+  .local-section { grid-template-columns: 1fr; }
+  .local-img { min-height: 160px; }
+  .local-content { padding: 24px; }
 }
 
 @media (max-width: 600px) {
   .page { padding: 16px; }
   .hero-card, .form-card, .result-card { padding: 24px; border-radius: 12px; }
   .brand { padding: 12px 20px; }
-  .logo-icon { width: 48px; height: 48px; }
+  .logo-img { width: 48px; height: 48px; }
   .brand-name { font-size: 1.3rem; }
+  .section-divider { height: 140px; }
+  .divider-text { white-space: normal; text-align: center; padding: 0 20px; }
 }

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/harvest/
-title: Ashtabula County Agricultural Services — Harvest Alert System
-body_chars: 436
-screenshot: sitemap_screenshots/048_harvest.png
-source: live
-warnings: none

@@ -51,7 +51,7 @@ ${extras} Reply to this confirmation if you would like us to hold a tasting, din
 
 function App() {
   const assetBase = import.meta.env.BASE_URL;
-  const logoSrc = `${assetBase}assets/lakehouse-logo.png`;
+  const logoSrc = `${assetBase}assets/lakehouse-logo.svg`;
   const [date, setDate] = useState("");
   const [nights, setNights] = useState(2);
   const [guestName, setGuestName] = useState("Megan");
@@ -121,27 +121,34 @@ Requirements:
   return (
     <div className="page-shell">
       <div className="page">
-        <header className="hero-card">
-          <div className="hero-copy">
-            <div className="eyebrow">Book Instantly with The Lakehouse Inn</div>
-            <div className="brand-row">
-              <img
-                src={logoSrc}
-                alt="The Lakehouse Inn"
-                className="lakehouse-mark"
-              />
-              <div>
-                <p className="brand-kicker">Your Ohio Wine Country destination</p>
-                <h1>Booking confirmations that feel like part of the stay.</h1>
+        <section className="hero-section">
+          <div className="hero-bg"></div>
+          <div className="hero-overlay"></div>
+          <header className="hero-card">
+            <div className="hero-copy">
+              <div className="eyebrow">On the Shore. In the Moment.</div>
+              <div className="brand-row">
+                <img
+                  src={logoSrc}
+                  alt="The Lakehouse Inn"
+                  className="lakehouse-mark"
+                />
+                <div>
+                  <p className="brand-kicker">Lake Erie's Boutique Escape</p>
+                  <h1>Booking confirmations that feel like part of the stay.</h1>
+                </div>
               </div>
+              <p className="hero-text">
+                A personalized booking confirmation experience for The Lakehouse Inn —
+                lakeview suites, two-bedroom cottages, winery tasting flights, spa
+                appointments, and dining at Crosswinds Grille. All woven into a single
+                guest-ready message, because the welcome should begin before arrival.
+              </p>
             </div>
-            <p className="hero-text">
-              A pitch-ready booking confirmation experience for The Lakehouse Inn,
-              built around lakeview suites, cottages, winery visits, spa add-ons,
-              and the all-in-one Ohio Wine Country getaway.
-            </p>
-          </div>
-        </header>
+          </header>
+        </section>
+
+        <hr className="horizon-line--sun" aria-hidden="true" />
 
         <main className="content-grid">
           <section className="booking-card">
@@ -203,6 +210,8 @@ Requirements:
               </div>
             </div>
 
+            <hr className="horizon-line" aria-hidden="true" />
+
             <div className="field">
               <span>Suggested add-ons</span>
               <div className="pill-row">
@@ -252,6 +261,18 @@ Requirements:
             </div>
           </section>
         </main>
+
+        <footer className="site-footer">
+          <hr className="footer-horizon" aria-hidden="true" />
+          <p className="footer-brand">The Lakehouse Inn</p>
+          <p className="footer-detail">
+            Geneva-on-the-Lake, Ohio
+            <span>&#183;</span>
+            <a href="tel:+14404668668">(440) 466-8668</a>
+            <span>&#183;</span>
+            <a href="mailto:inquiries@thelakehouseinn.com">inquiries@thelakehouseinn.com</a>
+          </p>
+        </footer>
       </div>
     </div>
   );

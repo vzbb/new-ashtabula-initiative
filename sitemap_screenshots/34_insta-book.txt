@@ -1,0 +1,3 @@
+url: https://new-ashtabula-initiative.vercel.app/insta-book/
+title: Book Instantly with The Lakehouse Inn
+body_chars: 3051

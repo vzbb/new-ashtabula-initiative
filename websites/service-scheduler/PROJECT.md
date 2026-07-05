@@ -5,7 +5,7 @@
 
 ## Current Functionality (observed)
 - Single-page React UI with basic input fields.
-- Uses Gemini API to generate a response based on user inputs.
+- Uses OpenRouter AI (Google Gemini 2.5 Flash via OpenRouter) to generate a response.
 - Output is shown on-screen only; no persistence or backend workflows.
 
 ## Gaps

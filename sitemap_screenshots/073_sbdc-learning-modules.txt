@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/sbdc-learning-modules/
-title: Learning Modules | Lakeland SBDC
-body_chars: 1430
-screenshot: sitemap_screenshots/073_sbdc-learning-modules.png
-source: live
-warnings: none

@@ -1,0 +1,878 @@
+{
+  "scan_timestamp": "2026-07-04T10:34:11.072028Z",
+  "scan_command": "./nai scan",
+  "repository_root": "/root/new-ashtabula-initiative",
+  "summary": {
+    "total_routes": 76,
+    "all_source_dirs_exist": true,
+    "all_dist_built": true,
+    "all_api_client_shims_ok": true,
+    "multi_package_sites_count": 3,
+    "multi_package_sites": [
+      {
+        "slug": "permits",
+        "packages": [
+          ".",
+          "my-app"
+        ]
+      },
+      {
+        "slug": "invest",
+        "packages": [
+          ".",
+          "my-app"
+        ]
+      },
+      {
+        "slug": "grocer",
+        "packages": [
+          ".",
+          "client",
+          "server"
+        ]
+      }
+    ]
+  },
+  "routes": [
+    {
+      "route_slug": "civic-insight",
+      "source_dir": "civic-insight-engine",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "permits",
+      "source_dir": "permit-whisperer",
+      "status": "exists",
+      "packages": [
+        ".",
+        "my-app"
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "zoning",
+      "source_dir": "zoning-clerk",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "eligibility",
+      "source_dir": "eligibility-screener",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "eligibility-lite",
+      "source_dir": "eligibility-lite",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "eligibility-pro",
+      "source_dir": "eligibility-pro",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "license",
+      "source_dir": "license-wizard",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "event-permit",
+      "source_dir": "event-permit-express",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "govtech",
+      "source_dir": "govtech-box",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "invest",
+      "source_dir": "invest-ashtabula",
+      "status": "exists",
+      "packages": [
+        ".",
+        "my-app"
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "blueprint",
+      "source_dir": "blueprint-analyzer",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "boxflow",
+      "source_dir": "boxflow-estimator",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "parts",
+      "source_dir": "parts-finder",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "parts-request",
+      "source_dir": "parts-finder-request",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "plating",
+      "source_dir": "plating-tracker",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "plating-pro",
+      "source_dir": "plating-tracker-pro",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "fence-quote",
+      "source_dir": "fence-quote",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "landlord",
+      "source_dir": "landlord-repair-queue",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "lawn",
+      "source_dir": "lawn-quote-tool",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "hvac",
+      "source_dir": "hvac-tuneup",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "snow-plow",
+      "source_dir": "snow-plow-tracker",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "dirt-quote",
+      "source_dir": "instant-dirt-quote",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "rental",
+      "source_dir": "rental-availability",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "adaptive-reuse",
+      "source_dir": "adaptive-reuse-planner",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "engineers",
+      "source_dir": "engineers-assistant",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "grocer",
+      "source_dir": "local-grocer-go",
+      "status": "exists",
+      "packages": [
+        ".",
+        "client",
+        "server"
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "curbside",
+      "source_dir": "curbside-pickup-tracker",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "farm-stand",
+      "source_dir": "farm-stand-finder",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "notary",
+      "source_dir": "mobile-notary",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "auto-detail",
+      "source_dir": "auto-detail-booking",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "truck-wash",
+      "source_dir": "truck-wash-booking",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "scheduler",
+      "source_dir": "service-scheduler",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "scheduler-sms",
+      "source_dir": "service-scheduler-sms",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "insta-book",
+      "source_dir": "insta-book",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "compassionate",
+      "source_dir": "compassionate-planner",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "concierge",
+      "source_dir": "virtual-concierge",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "parking",
+      "source_dir": "visitor-parking-finder",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "mytrip",
+      "source_dir": "mytrip-planner",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "mytrip-export",
+      "source_dir": "mytrip-planner-export",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "routes",
+      "source_dir": "route-optimizer",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "ride-ready",
+      "source_dir": "ride-ready",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "charter",
+      "source_dir": "charter-booking",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "marina",
+      "source_dir": "marina-slip-waitlist",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "aidflow",
+      "source_dir": "aidflow-navigator",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "resource",
+      "source_dir": "resource-compass",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "resource-pro",
+      "source_dir": "resource-compass-pro",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "policy-pal",
+      "source_dir": "policy-pal",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "boat-storage",
+      "source_dir": "boat-storage-waitlist",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "harvest",
+      "source_dir": "harvest-alert",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "ai-docent-pro",
+      "source_dir": "ai-docent-pro",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "artist-commission",
+      "source_dir": "artist-commission-form",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "historian",
+      "source_dir": "pocket-historian",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "historian-pro",
+      "source_dir": "pocket-historian-pro",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "sommelier",
+      "source_dir": "pocket-sommelier",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "sommelier-pro",
+      "source_dir": "pocket-sommelier-pro",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "gotl",
+      "source_dir": "gotl-weekend-planner",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "harbor",
+      "source_dir": "harbor-cam-dashboard",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "pet-match",
+      "source_dir": "pet-matchmaker",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "portfolio",
+      "source_dir": "visual-portfolio",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "volunteer",
+      "source_dir": "volunteer-scheduler",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "wedding",
+      "source_dir": "wedding-lead-form",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "ashtabula-fence",
+      "source_dir": "ashtabula-fence",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "thomas-fence",
+      "source_dir": "thomas-fence",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "cut-custom",
+      "source_dir": "cut-custom",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "rennick-market",
+      "source_dir": "rennick-market",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "trumbull-locker",
+      "source_dir": "trumbull-locker",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "terra-vantage",
+      "source_dir": "terra-vantage",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "parcelvisor",
+      "source_dir": "parcelvisor",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "roofquote",
+      "source_dir": "roofquote",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "site-ops-pro",
+      "source_dir": "site-ops-pro",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "sbdc-business-counseling",
+      "source_dir": "sbdc-business-counseling",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "sbdc-business-planning",
+      "source_dir": "sbdc-business-planning",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "sbdc-educational-resources",
+      "source_dir": "sbdc-educational-resources",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "sbdc-learning-modules",
+      "source_dir": "sbdc-learning-modules",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "sbdc-support-tools",
+      "source_dir": "sbdc-support-tools",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    },
+    {
+      "route_slug": "saybrook-zoning",
+      "source_dir": "saybrook-zoning",
+      "status": "exists",
+      "packages": [
+        "."
+      ],
+      "build_dir": "dist",
+      "dist_exists": true,
+      "api_client_shim": "ok"
+    }
+  ]
+}

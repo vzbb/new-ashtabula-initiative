@@ -1,29 +1,20 @@
-# Engineering — Coordination Log
+# Dev Coordination — Shaw
 
-**Last Updated:** Turn 1, July 3 2026  
-**Status:** Not yet activated — awaiting Chief of Staff assignment
+## Event Permit Express — Deploy Status
 
-## Active Work
-None yet.
+**State:** Branding applied & verified in source + dist. Deploy SCHEDULED.
 
-## Repair Queue (LAST_MILE_FIXES.md)
-~37 sites flagged. ~9 confirmed fixed. ~28 remaining.
+**5 branding fixes (verified):**
+1. Address: "127 N. Elm St, Jefferson, OH 44047" in footer
+2. Email: ashtafair@windstream.net visible as text link
+3. Contact: Brian Edelman alongside phone 440-858-6667
+4. Accent color: forest green #2E7D32 (was blue-green)
+5. Background: warm off-white #FAF8F5 (was cool off-white)
 
-## Gemini → OpenRouter Migration
-Status: Not started.
-- Need to audit all `callGeminiAPI()` call sites across websites/
-- Need to design provider-agnostic API client in shared/
-- Need to migrate Tier 1 sites first, then remaining
+**Cron job:** `6030bcec49ef` — runs `./nai deploy --confirm-production` at midnight UTC Jul 6
 
-## Build Health
-Current `./nai scan` status: unknown (not yet run in Turn 1).
-
-## Current Site(s) In Progress
-None.
-
-## Handoff Notes
-Key inputs:
-- nai_suite/siteflow.py (build/deploy helpers)
-- shared/ (if exists — shared API client patterns)
-- LAST_MILE_FIXES.md (repair queue)
-- .gemini/GEMINI.md (current Gemini usage patterns)
+**Repairs during deploy attempt:**
+- .vercelignore restored (was zero bytes)
+- Fixed node_modules corruption: blueprint, adaptive-reuse, auto-detail, aidflow, ai-docent-pro, artist-commission, ashtabula-fence
+- Rebuilt missing dist/: pocket-sommelier-pro, eligibility-screener, insta-book
+- Cleaned stale .vercel/output/ directories

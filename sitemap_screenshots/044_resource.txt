@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/resource/
-title: Ashtabula Circles Navigator - Surviving to Thriving
-body_chars: 568
-screenshot: sitemap_screenshots/044_resource.png
-source: live
-warnings: none

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/grocer/
-title: Harbor Gardens | Pickup Confirmation
-body_chars: 3272
-screenshot: sitemap_screenshots/026_grocer.png
-source: live
-warnings: none

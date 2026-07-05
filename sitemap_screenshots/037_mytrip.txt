@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/mytrip/
-title: MyTrip Planner
-body_chars: 803
-screenshot: sitemap_screenshots/037_mytrip.png
-source: live
-warnings: none

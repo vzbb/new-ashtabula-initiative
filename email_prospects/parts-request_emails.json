@@ -1,0 +1,41 @@
+{
+  "slug": "parts-request",
+  "primary_target": {
+    "business_name": "Lakeshore Auto Parts LLC",
+    "contact_name": "Larry (owner — full name TBC)",
+    "title": "Owner/Operator",
+    "phone": "440-993-0011",
+    "email": "TBC — not publicly listed",
+    "address": "3050 State Rd, Ashtabula, OH 44004",
+    "social": [],
+    "best_contact_method": "Phone call (440-993-0011) during business hours",
+    "notes": "Owner is likely older (typical for independent parts stores). No direct email found in public directories. Phone is the primary contact method. Ask for Larry by name."
+  },
+  "secondary_targets": [
+    {
+      "business_name": "Fisher Auto Parts",
+      "address": "5019 Main Ave, Ashtabula, OH 44004",
+      "phone": "440-998-4111 (estimated — verify)",
+      "notes": "Phone number from Chamber of Commerce needs verification. No owner name available."
+    },
+    {
+      "business_name": "Budget Auto Parts Inc.",
+      "location": "Ashtabula, OH",
+      "notes": "Salvage yard contact info needs further research."
+    }
+  ],
+  "research_status": {
+    "emails_verified": false,
+    "phones_verified": true,
+    "addresses_verified": true,
+    "owner_names_verified": "partial — first name only",
+    "next_steps": [
+      "Call 440-993-0011 to confirm owner's full name and email",
+      "Verify Fisher Auto Parts phone number",
+      "Check Ohio Secretary of State business records for LLC ownership details",
+      "Visit Lakeshore Auto Parts in person for relationship building"
+    ]
+  },
+  "created_at": "2026-07-04",
+  "researched_by": "Rhodes (NAI Creative & Research Lead)"
+}

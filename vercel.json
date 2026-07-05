@@ -22,20 +22,8 @@
       "dest": "/websites/sbdc-support-tools/dist/$1"
     },
     {
-      "src": "/artist-commission/?(.*)",
-      "dest": "/websites/artist-commission-form/dist/$1"
-    },
-    {
       "src": "/eligibility-lite/?(.*)",
       "dest": "/websites/eligibility-lite/dist/$1"
-    },
-    {
-      "src": "/eligibility-pro/?(.*)",
-      "dest": "/websites/eligibility-pro/dist/$1"
-    },
-    {
-      "src": "/ashtabula-fence/?(.*)",
-      "dest": "/websites/ashtabula-fence/dist/$1"
     },
     {
       "src": "/trumbull-locker/?(.*)",
@@ -46,16 +34,8 @@
       "dest": "/websites/saybrook-zoning/dist/$1"
     },
     {
-      "src": "/adaptive-reuse/?(.*)",
-      "dest": "/websites/adaptive-reuse-planner/dist/$1"
-    },
-    {
       "src": "/rennick-market/?(.*)",
       "dest": "/websites/rennick-market/dist/$1"
-    },
-    {
-      "src": "/civic-insight/?(.*)",
-      "dest": "/websites/civic-insight-engine/dist/$1"
     },
     {
       "src": "/parts-request/?(.*)",
@@ -66,16 +46,8 @@
       "dest": "/websites/service-scheduler-sms/dist/$1"
     },
     {
-      "src": "/compassionate/?(.*)",
-      "dest": "/websites/compassionate-planner/dist/$1"
-    },
-    {
       "src": "/mytrip-export/?(.*)",
       "dest": "/websites/mytrip-planner-export/dist/$1"
-    },
-    {
-      "src": "/ai-docent-pro/?(.*)",
-      "dest": "/websites/ai-docent-pro/dist/$1"
     },
     {
       "src": "/historian-pro/?(.*)",
@@ -90,16 +62,8 @@
       "dest": "/websites/terra-vantage/dist/$1"
     },
     {
-      "src": "/event-permit/?(.*)",
-      "dest": "/websites/event-permit-express/dist/$1"
-    },
-    {
       "src": "/resource-pro/?(.*)",
       "dest": "/websites/resource-compass-pro/dist/$1"
-    },
-    {
-      "src": "/boat-storage/?(.*)",
-      "dest": "/websites/boat-storage-waitlist/dist/$1"
     },
     {
       "src": "/thomas-fence/?(.*)",
@@ -120,10 +84,6 @@
     {
       "src": "/fence-quote/?(.*)",
       "dest": "/websites/fence-quote/dist/$1"
-    },
-    {
-      "src": "/auto-detail/?(.*)",
-      "dest": "/websites/auto-detail-booking/dist/$1"
     },
     {
       "src": "/parcelvisor/?(.*)",
@@ -158,10 +118,6 @@
       "dest": "/websites/cut-custom/dist/$1"
     },
     {
-      "src": "/blueprint/?(.*)",
-      "dest": "/websites/blueprint-analyzer/dist/$1"
-    },
-    {
       "src": "/snow-plow/?(.*)",
       "dest": "/websites/snow-plow-tracker/dist/$1"
     },
@@ -171,7 +127,7 @@
     },
     {
       "src": "/scheduler/?(.*)",
-      "dest": "/websites/service-scheduler/dist/$1"
+      "dest": "/websites/scheduler/dist/$1"
     },
     {
       "src": "/concierge/?(.*)",
@@ -240,10 +196,6 @@
     {
       "src": "/charter/?(.*)",
       "dest": "/websites/charter-booking/dist/$1"
-    },
-    {
-      "src": "/aidflow/?(.*)",
-      "dest": "/websites/aidflow-navigator/dist/$1"
     },
     {
       "src": "/harvest/?(.*)",

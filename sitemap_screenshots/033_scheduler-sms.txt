@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/scheduler-sms/
-title: service-scheduler-sms
-body_chars: 525
-screenshot: sitemap_screenshots/033_scheduler-sms.png
-source: live
-warnings: none

@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/sbdc-business-planning/
-title: Business Planning Tools — Lakeland SBDC Resource
-body_chars: 1023
-screenshot: sitemap_screenshots/071_sbdc-business-planning.png
-source: live
-warnings: none

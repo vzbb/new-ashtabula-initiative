@@ -1,6 +1,0 @@
-url: https://new-ashtabula-initiative.vercel.app/site-ops-pro/
-title: EarthFlow Estimator | Brobst Earthworks
-body_chars: 1945
-screenshot: sitemap_screenshots/069_site-ops-pro.png
-source: live
-warnings: none

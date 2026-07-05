@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useRef, useCallback } from "react";
 import "./App.css";
 
 const SERVICE_OPTIONS = [
@@ -79,6 +79,14 @@ const PROCESS_STEPS = [
   },
 ];
 
+// Loading spinner
+const Spinner = () => (
+  <svg className="spinner" viewBox="0 0 20 20" width="20" height="20" aria-label="Loading" role="status">
+    <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.3"/>
+    <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="50" strokeDashoffset="0" strokeLinecap="round"/>
+  </svg>
+);
+
 const ICONS = {
   Seal: (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -141,10 +149,14 @@ const ICONS = {
 const assetBase = import.meta.env.BASE_URL;
 
 function App() {
+  // Pricing estimator state
   const [serviceId, setServiceId] = useState("medical");
   const [availabilityId, setAvailabilityId] = useState("extended");
   const [locationId, setLocationId] = useState("care");
   const [name, setName] = useState("");
+
+  // CTA ref for initial pulse
+  const ctaRef = useRef(null);
 
   const service = SERVICE_OPTIONS.find((item) => item.id === serviceId) ?? SERVICE_OPTIONS[0];
   const availability =
@@ -174,11 +186,57 @@ function App() {
     ? `${name.trim()}'s appointment plan`
     : "Sample appointment plan";
 
+  // Check for reduced motion preference
+  const prefersReducedMotion = useCallback(() => {
+    return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }, []);
+
+  // Scroll-reveal IntersectionObserver
+  useEffect(() => {
+    if (prefersReducedMotion()) {
+      document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+      return;
+    }
+
+    const targets = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            observer.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    targets.forEach(t => observer.observe(t));
+    return () => observer.disconnect();
+  }, [prefersReducedMotion]);
+
+  // CTA initial pulse — one-time, 1s after mount
+  useEffect(() => {
+    if (!prefersReducedMotion()) {
+      const timer = setTimeout(() => {
+        if (ctaRef.current) {
+          ctaRef.current.classList.add("initial-pulse");
+        }
+      }, 1000);
+      const removal = setTimeout(() => {
+        if (ctaRef.current) {
+          ctaRef.current.classList.remove("initial-pulse");
+        }
+      }, 2000);
+      return () => { clearTimeout(timer); clearTimeout(removal); };
+    }
+  }, [prefersReducedMotion]);
+
   return (
     <div className="page-shell">
       <div className="aurora" aria-hidden="true" />
 
-      <header className="topbar">
+      <header className="topbar reveal">
         <div className="brand-mark">
           <img
             className="brand-logo"
@@ -190,13 +248,13 @@ function App() {
             <h1 className="brand-name">Notes and Prints Mobile Notary</h1>
           </div>
         </div>
-        <a className="cta-link" href="tel:18666797370">
+        <a className="cta-link" href="tel:18666797370" ref={ctaRef}>
           Call (866) 679-7370
         </a>
       </header>
 
       <main className="layout">
-        <section className="hero panel">
+        <section className="hero panel glass reveal">
           <div className="hero-copy">
             <p className="eyebrow">Convenient notary services at your doorstep</p>
             <h2>Notarized. On Your Schedule. At Your Door.</h2>
@@ -247,7 +305,7 @@ function App() {
             </div>
           </div>
 
-          <aside className="planner">
+          <aside className="planner" style={{ animationDelay: "200ms" }}>
             <p className="planner-kicker">Appointment intake</p>
             <h3>Plan your mobile notary visit</h3>
             <p className="planner-copy">
@@ -325,7 +383,7 @@ function App() {
           </aside>
         </section>
 
-        <section className="brand-spotlight panel">
+        <section className="brand-spotlight panel glass reveal" style={{ animationDelay: "300ms" }}>
           <div className="spotlight-copy">
             <p className="eyebrow">Brand presentation</p>
             <h3>The official Notes and Prints Mobile look is built into the page.</h3>
@@ -342,7 +400,7 @@ function App() {
           </div>
         </section>
 
-        <section className="services panel">
+        <section className="services panel glass reveal" style={{ animationDelay: "400ms" }}>
           <div className="section-heading">
             <p className="eyebrow">Service mix</p>
             <h3>Services shaped around the actual Notes and Prints Mobile offer.</h3>
@@ -358,8 +416,8 @@ function App() {
           </div>
         </section>
 
-        <section className="split-row">
-          <article className="panel narrative-card">
+        <div className="split-row">
+          <article className="panel narrative-card glass reveal" style={{ animationDelay: "500ms" }}>
             <p className="eyebrow">Why clients choose us</p>
             <h3>Built around real doorstep service and a wide appointment mix.</h3>
             <p>
@@ -384,7 +442,7 @@ function App() {
             </div>
           </article>
 
-          <article className="panel process-card">
+          <article className="panel process-card glass reveal" style={{ animationDelay: "600ms" }}>
             <p className="eyebrow">How it works</p>
             <h3>A simple flow for a fast local close.</h3>
             <div className="process-list">
@@ -399,9 +457,9 @@ function App() {
               ))}
             </div>
           </article>
-        </section>
+        </div>
 
-        <section className="panel footer-panel">
+        <section className="panel footer-panel glass reveal" style={{ animationDelay: "700ms" }}>
           <div>
             <p className="eyebrow">Notes and Prints Mobile</p>
             <h3>Professional mobile notary service for Ashtabula appointments.</h3>

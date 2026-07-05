@@ -1,120 +1,69 @@
 {
-  "mvp": "event-permit",
-  "generated_at": "2026-03-22T17:50:00Z",
-  "based_on_research": "/home/tt/.openclaw/workspace/projects/new-ashtabula-initiative/lead_research_json/event-permit.json",
-  "research_sources": [
-    "https://www.ashtabulafair.com/facility-rental-ashtabula-fair.html",
-    "https://jeffersonohio.gov/recreation/"
-  ],
-  "target_buyer_1": {
-    "organization": "Ashtabula County Fairgrounds",
-    "type": "County Fairgrounds & Event Venue",
-    "website": "https://www.ashtabulafair.com/",
-    "address": "127 N. Elm St, Jefferson, OH 44047",
-    "contact": "Brian Edelman, 440-858-6667, ashtafair@windstream.net",
-    "why_top_candidate": "Primary event venue in Ashtabula County with extensive facilities: Expo Center (4-H Building) for 450 people, Commercial Building for auctions, Pavilion for outdoor events, horse arenas, livestock barns, and camping. Hosts festivals, weddings, trade shows, horse shows, livestock auctions. Current process requires manual calls/emails for booking - perfect for digital permit/intake system.",
-    "fit_score": 95
+  "slug": "event-permit",
+  "site_name": "Event Permit Express",
+  "target": "Ashtabula County Fairgrounds",
+  "description": "Special event permits for Ashtabula County Fairgrounds",
+  "category": "Government & Civic",
+
+  "visual_direction": {
+    "aesthetic": "Bright, modern municipal — clean glassmorphism overlays over fairgrounds photography",
+    "mood": "Welcoming, accessible, community-oriented"
   },
-  "target_buyer_2": {
-    "organization": "Village of Jefferson Recreation Department",
-    "type": "Municipal Recreation Department",
-    "website": "https://jeffersonohio.gov/recreation/",
-    "address": "11 East Jefferson St, Jefferson, OH 44047",
-    "contact": "440-576-9052, reccenter@jeffersonohio.us",
-    "why_top_candidate": "Manages parks and building rentals in the Village of Jefferson (Ashtabula County seat). Offers fitness center, park rentals, and event facilities. Serves as municipal hub for community events and recreation programming. Would benefit from streamlined event permit system for park usage and facility rentals.",
-    "fit_score": 87
+
+  "colors": {
+    "primary": "#1B4F72",
+    "primary_hex": "#1B4F72",
+    "secondary": "#D4AC0D",
+    "secondary_hex": "#D4AC0D",
+    "accent": "#2E86C1",
+    "accent_hex": "#2E86C1",
+    "light": "#F8F9FA",
+    "dark": "#1A1A2E",
+    "glass": "rgba(255, 255, 255, 0.15)",
+    "glass_blur": "8px"
   },
-  "actual_brand_research": {
-    "ashtabula_county_fairgrounds": {
-      "facilities": [
-        {
-          "name": "Expo Center (4-H Building)",
-          "size": "60' x 175'",
-          "capacity": "Up to 450 people",
-          "features": "Kitchen, tables, chairs, round tables, sound system, heat/AC",
-          "rates": "$750+ deposit (Fri/Sat), $375+ deposit (Sun-Thu)"
-        },
-        {
-          "name": "Commercial Building",
-          "size": "100' x 60'",
-          "features": "Steel building, cement floor, 2 overhead doors",
-          "rates": "$150-200 + deposit"
-        },
-        {
-          "name": "Pavilion (Bob Barnard Entertainment Center)",
-          "features": "Open pavilion with stage, lawn area, picnic tables, restrooms",
-          "rates": "$50 + deposit"
-        },
-        {
-          "name": "Grandstand",
-          "capacity": "1,900 people",
-          "features": "Oval half-mile track"
-        },
-        {
-          "name": "Horse Show Facilities",
-          "features": "Outdoor arena, 2 horse barns, practice ring, stalls",
-          "rates": "$250/day + deposit"
-        },
-        {
-          "name": "Livestock Buildings",
-          "buildings": ["Dr. Ernie Kaszar Show Barn (60' x 120')", "MAC Building & Arena (60' x 200')", "Market Animal Barn", "Cattle Barn", "2 Pole Barns"]
-        }
-      ],
-      "event_types": ["Weddings", "Trade shows", "Banquets", "Swap meets", "Auctions", "Company picnics", "Horse shows", "Livestock auctions", "Festivals", "Flea markets", "Car shows", "Camping rallies"],
-      "security_deposit": "$250 (refundable)",
-      "location": "Jefferson, OH (Ashtabula County seat)",
-      "visual_style": "County fairgrounds, agricultural heritage, community events, versatile venue"
+
+  "typography": {
+    "headings": {
+      "font": "Inter",
+      "fallback": "system-ui, -apple-system, sans-serif",
+      "weights": [600, 700, 800]
     },
-    "village_of_jefferson_recreation": {
-      "location": "11 East Jefferson St, Jefferson, OH",
-      "contact": "440-576-9052, reccenter@jeffersonohio.us",
-      "hours": "Mon-Thu 8AM-8PM, Fri 8AM-4PM (Fitness Center 24/7)",
-      "services": ["Fitness Center", "Park Rentals", "Building Rentals", "Preschool", "Fall Programs", "Senior Center", "Sports Registration"],
-      "visual_style": "Municipal recreation, community wellness, family activities"
-    }
-  },
-  "brandkit_for_mvp": {
-    "proposed_tagline": "Your Event. Our Grounds. Permitted.",
-    "positioning": "The unified event permit and venue booking platform for Ashtabula County — streamlining reservations for the County Fairgrounds' extensive facilities and Village of Jefferson Recreation parks and buildings.",
-    "color_palette_derived_from_research": {
-      "primary": "#8B4513",
-      "accent": "#2E7D32",
-      "background": "#FAF8F5",
-      "text": "#3D3D3D",
-      "secondary": "#D4A574"
+    "body": {
+      "font": "Inter",
+      "fallback": "system-ui, -apple-system, sans-serif",
+      "weights": [400, 500]
     },
-    "typography_recommendation": {
-      "heading_font": "Friendly community-focused serif or rounded sans-serif",
-      "body_font": "Clean readable sans-serif"
-    },
-    "mood_keywords_from_research": ["agricultural", "community", "versatile", "county-fair", "family-events", "livestock", "weddings"],
-    "visual_direction": {
-      "hero_image_concept": "Ashtabula County Fairgrounds with Expo Center, livestock barns, and pavilion events",
-      "color_scheme": "Warm earth tones with agricultural greens and browns",
-      "photography_style": "County fair events, weddings, horse shows, livestock, community gatherings"
-    }
+    "source": "Google Fonts"
   },
-  "implementation_recommendations": {
-    "priority": 1,
-    "brand_alignment": "Align with Ashtabula County agricultural heritage and community event focus",
-    "key_features_needed": [
-      "Online facility booking (replacing phone/email)",
-      "Real-time availability calendar",
-      "Event type categorization (weddings, horse shows, livestock, etc.)",
-      "Deposit payment processing ($250 security deposits)",
-      "Multi-building package bookings",
-      "Camping reservation integration",
-      "Vendor coordination for festivals",
-      "Insurance requirement verification"
-    ],
-    "differentiators_based_on_research": [
-      "Expo Center holds 450 people - largest hall in county",
-      "1,900-seat Grandstand with half-mile track",
-      "Multiple livestock barns and horse facilities",
-      "Full-service kitchen in Expo Center",
-      "On-site camping with hookups",
-      "Jefferson - Ashtabula County seat location",
-      "Currently manual phone/email booking process"
-    ]
+
+  "logo": {
+    "type": "typographic",
+    "style": "Clean sans-serif logotype on glassmorphism background",
+    "placement": "top-left on hero, centered in footer"
+  },
+
+  "design_tokens": {
+    "border_radius": "12px",
+    "card_padding": "1.5rem",
+    "glass_opacity": "0.15",
+    "glass_blur": "8px",
+    "section_spacing": "4rem",
+    "max_content_width": "1200px"
+  },
+
+  "hero_assets": {
+    "primary": "assets/expo-center-hero.webp",
+    "secondary": "assets/grandstand-hero.webp",
+    "pavilion": "assets/pavilion-hero.webp",
+    "panoramic": "assets/panoramic-hero.webp",
+    "usage": "Glassmorphism overlay. Bright daylight subjects. Clear focal points allow text overlay.",
+    "overlay_css": "background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(8px);"
+  },
+
+  "asset_inventory": {
+    "total_images": 8,
+    "format": "PNG (source) + WebP (web-optimized)",
+    "location": "branding_research/event-permit/assets/"
   }
 }

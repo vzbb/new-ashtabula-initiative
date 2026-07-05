@@ -1,0 +1,14 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="presentation">
+  <defs>
+    <pattern id="frost-pattern" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <!-- Tiny frost crystals -->
+      <path d="M30 5 L32 10 L37 10 L33 14 L35 20 L30 16 L25 20 L27 14 L23 10 L28 10 Z" 
+            fill="rgba(255,255,255,0.04)" stroke="none"/>
+      <path d="M10 50 L12 53 L16 53 L13 56 L14 60 L10 57 L6 60 L7 56 L4 53 L8 53 Z" 
+            fill="rgba(255,255,255,0.03)" stroke="none"/>
+      <path d="M50 30 L51 33 L54 33 L52 35 L53 38 L50 36 L47 38 L48 35 L46 33 L49 33 Z" 
+            fill="rgba(255,255,255,0.025)" stroke="none"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#frost-pattern)"/>
+</svg>

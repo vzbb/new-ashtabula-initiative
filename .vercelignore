@@ -1,0 +1,11 @@
+node_modules
+.git
+sitemap_screenshots
+.sitemap_screenshots_snapshot
+branding_research
+brandkits
+lead_research_json
+email_prospects
+*.md
+.env*
+.gitignore

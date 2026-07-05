@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
 import "./App.css";
 
 const ACTS = {
@@ -208,6 +208,44 @@ const ClockIcon = () => (
   </svg>
 );
 
+/* ─── scroll-reveal hook ─── */
+function useScrollReveal() {
+  const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.12 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return [sectionRef, visible];
+}
+
+/* ─── animated section wrapper ─── */
+function RevealSection({ children, className = "", delay = 0 }) {
+  const [ref, visible] = useScrollReveal();
+  return (
+    <section
+      ref={ref}
+      className={`reveal-section ${visible ? "revealed" : ""} ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    >
+      {children}
+    </section>
+  );
+}
+
 function App() {
   const [from, setFrom] = useState("Downtown");
   const [to, setTo] = useState("Hospital");
@@ -256,21 +294,26 @@ Write exactly 3 short bullets and one short CTA. Keep it under 90 words. Make it
 
   return (
     <div className="page">
-      <header className="topbar">
-        <div className="brand-lockup">
-          <div className="brand-mark">
-            <BusIcon />
-          </div>
-          <div>
-            <div className="brand-name">{ACTS.shortName} Ride Ready</div>
-            <div className="brand-sub">{ACTS.name} scheduling demo</div>
-          </div>
+      {/* ── Hero ── */}
+      <RevealSection className="hero-section" delay={0}>
+        <div className="hero-bg" aria-hidden="true">
+          <img src="/hero.jpg" alt="" className="hero-img" />
+          <div className="hero-overlay" />
         </div>
-        <div className="meta-pill">ACTS + ReliaRide / Ashtabula County</div>
-      </header>
-
-      <section className="hero">
         <div className="hero-content">
+          <header className="topbar">
+            <div className="brand-lockup">
+              <div className="brand-mark glass-icon">
+                <BusIcon />
+              </div>
+              <div>
+                <div className="brand-name">{ACTS.shortName} Ride Ready</div>
+                <div className="brand-sub">{ACTS.name} scheduling demo</div>
+              </div>
+            </div>
+            <div className="meta-pill glass-pill">ACTS + ReliaRide / Ashtabula County</div>
+          </header>
+
           <div className="eyebrow">
             <ShieldIcon />
             <span>Senior-friendly ride scheduling</span>
@@ -282,21 +325,21 @@ Write exactly 3 short bullets and one short CTA. Keep it under 90 words. Make it
           </p>
 
           <div className="stats">
-            <div className="stat">
+            <div className="stat glass-stat">
               <span>Primary contact</span>
               <strong>{ACTS.programManager}</strong>
             </div>
-            <div className="stat">
+            <div className="stat glass-stat">
               <span>Service line</span>
               <strong>{ACTS.phone} / {ACTS.altPhone}</strong>
             </div>
-            <div className="stat">
+            <div className="stat glass-stat">
               <span>Care brand cue</span>
               <strong>{RELIARIDE.tag}</strong>
             </div>
           </div>
 
-          <div className="input-card">
+          <div className="input-card glass-card">
             <h3>Ride details</h3>
             <p className="input-hint">Use simple language. The flow is designed for seniors and caregivers first.</p>
             <div className="form-grid">
@@ -325,99 +368,166 @@ Write exactly 3 short bullets and one short CTA. Keep it under 90 words. Make it
           </div>
 
           <div className="hero-actions">
-            <button className="primary" onClick={lookup} disabled={loading}>
+            <button className="primary pulse-cta" onClick={lookup} disabled={loading}>
               <ClockIcon />
               <span>{loading ? "Checking ride options..." : "Generate ride confirmation"}</span>
             </button>
-            <a className="ghost" href={`tel:${ACTS.phone}`} aria-label="Call ACTS now">
+            <a className="ghost glass-ghost" href={`tel:${ACTS.phone}`} aria-label="Call ACTS now">
               <span>Call {ACTS.shortName}</span>
             </a>
           </div>
 
           <div className="trust">
             {tonePoints.map((point) => (
-              <span key={point}>
+              <span key={point} className="glass-pill">
                 <HeartIcon />
                 <span>{point}</span>
               </span>
             ))}
           </div>
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="card">
-        <div className="card-head">
-          <div>
-            <h2>Ride readiness snapshot</h2>
-            <p>{toneSummary}</p>
-          </div>
-          <span className="pill">ACTS-first</span>
+      {/* ── Ride readiness snapshot ── */}
+      <RevealSection className="photo-section" delay={100}>
+        <div className="section-bg" aria-hidden="true">
+          <img src="/seniors-community.jpg" alt="" className="section-bg-img" />
+          <div className="section-bg-overlay" />
         </div>
-
-        {error ? <div className="error">⚠️ {error}</div> : null}
-
-        {answer ? (
-          <pre className="output">{answer}</pre>
-        ) : (
-          <div className="snapshot">
-            <p className="snapshot-title">{RELIARIDE.name}</p>
-            <p className="muted">
-              Start with a trip, time, and accessibility need to generate a simple confirmation tailored to the
-              rider or caregiver.
-            </p>
-            <pre className="output output-sample">{sampleSummary}</pre>
-          </div>
-        )}
-      </section>
-
-      <section className="grid">
-        {bookingModes.map((item) => (
-          <article className="tile" key={item.title}>
-            <div className="tile-icon">
-              <HeartIcon />
+        <div className="section-content">
+          <div className="card glass-card">
+            <div className="card-head">
+              <div>
+                <h2>Ride readiness snapshot</h2>
+                <p>{toneSummary}</p>
+              </div>
+              <span className="pill">ACTS-first</span>
             </div>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </article>
-        ))}
-      </section>
 
-      <section className="card">
-        <div className="card-head">
-          <div>
-            <h2>Operational cues</h2>
-            <p>These are the details that make the pitch feel like a real county service, not a generic app.</p>
+            {error ? <div className="error">⚠️ {error}</div> : null}
+
+            {answer ? (
+              <pre className="output">{answer}</pre>
+            ) : (
+              <div className="snapshot glass-snapshot">
+                <p className="snapshot-title">{RELIARIDE.name}</p>
+                <p className="muted">
+                  Start with a trip, time, and accessibility need to generate a simple confirmation tailored to the
+                  rider or caregiver.
+                </p>
+                <pre className="output output-sample">{sampleSummary}</pre>
+              </div>
+            )}
           </div>
         </div>
+      </RevealSection>
 
-        <div className="policy-grid">
-          {routeCards.map((item) => (
-            <div className="policy-item" key={item.label}>
-              <span>{item.label}</span>
-              <strong>{item.value}</strong>
-              <p>{item.note}</p>
-            </div>
+      {/* ── Booking modes ── */}
+      <RevealSection className="tiles-section" delay={200}>
+        <div className="section-header">
+          <h2>Three ways to ride</h2>
+          <p>Choose the booking method that works best for you or your loved one.</p>
+        </div>
+        <div className="grid">
+          {bookingModes.map((item) => (
+            <article className="tile glass-tile" key={item.title}>
+              <div className="tile-icon glass-icon">
+                <HeartIcon />
+              </div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </article>
           ))}
         </div>
-      </section>
+      </RevealSection>
 
-      <section className="policy-card">
-        <div className="card-head">
-          <div>
-            <h2>What this pass emphasizes</h2>
-            <p>The brand is now ACTS-first, with ReliaRide-level care cues for high-trust transportation.</p>
+      {/* ── Operational cues ── */}
+      <RevealSection className="photo-section" delay={300}>
+        <div className="section-bg" aria-hidden="true">
+          <img src="/acts-vehicle.jpg" alt="" className="section-bg-img" />
+          <div className="section-bg-overlay-orange" />
+        </div>
+        <div className="section-content">
+          <div className="card glass-card">
+            <div className="card-head">
+              <div>
+                <h2>Operational cues</h2>
+                <p>These are the details that make the pitch feel like a real county service, not a generic app.</p>
+              </div>
+            </div>
+
+            <div className="policy-grid">
+              {routeCards.map((item) => (
+                <div className="policy-item glass-policy" key={item.label}>
+                  <span>{item.label}</span>
+                  <strong>{item.value}</strong>
+                  <p>{item.note}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="policy-grid policy-grid-tight">
-          {needs.map((need) => (
-            <div className="policy-item policy-item-compact" key={need}>
-              <strong>{need}</strong>
-            </div>
-          ))}
-        </div>
-      </section>
+      </RevealSection>
 
-      <footer className="footer">
+      {/* ── Caregiver focus ── */}
+      <RevealSection className="photo-section" delay={400}>
+        <div className="section-bg" aria-hidden="true">
+          <img src="/senior-caregiver.jpg" alt="" className="section-bg-img" />
+          <div className="section-bg-overlay-blue" />
+        </div>
+        <div className="section-content">
+          <div className="card glass-card">
+            <div className="card-head">
+              <div>
+                <h2>What this pass emphasizes</h2>
+                <p>The brand is now ACTS-first, with ReliaRide-level care cues for high-trust transportation.</p>
+              </div>
+            </div>
+            <div className="policy-grid policy-grid-tight">
+              {needs.map((need) => (
+                <div className="policy-item policy-item-compact glass-policy" key={need}>
+                  <strong>{need}</strong>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </RevealSection>
+
+      {/* ── Service area ── */}
+      <RevealSection className="photo-section" delay={500}>
+        <div className="section-bg" aria-hidden="true">
+          <img src="/community-street.jpg" alt="" className="section-bg-img" />
+          <div className="section-bg-overlay-navy" />
+        </div>
+        <div className="section-content">
+          <div className="card glass-card service-card">
+            <div className="card-head">
+              <div>
+                <h2>Serving Ashtabula County Since 1976</h2>
+                <p>Reliable, caring transportation for seniors, disabled individuals, and medical appointments across all of Ashtabula County.</p>
+              </div>
+            </div>
+            <div className="service-highlights">
+              <div className="stat glass-stat">
+                <span>Rides completed</span>
+                <strong>{RELIARIDE.ridesCompleted}</strong>
+              </div>
+              <div className="stat glass-stat">
+                <span>Avg. return time</span>
+                <strong>{RELIARIDE.avgReturn}</strong>
+              </div>
+              <div className="stat glass-stat">
+                <span>Service area</span>
+                <strong>Ashtabula County</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </RevealSection>
+
+      {/* ── Footer ── */}
+      <footer className="footer reveal-section revealed">
         <div>{ACTS.shortName} • Ashtabula County Transportation System</div>
         <div className="footer-sub">
           {RELIARIDE.name} • {RELIARIDE.since} • {RELIARIDE.ridesCompleted} rides completed

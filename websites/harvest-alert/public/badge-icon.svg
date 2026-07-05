@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" width="400" height="180">
+  <defs>
+    <!-- Rich Emerald Green gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1B5E20"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+    <!-- Warm Amber/Gold gradient -->
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFC107"/>
+      <stop offset="100%" stop-color="#D4A017"/>
+    </linearGradient>
+    <!-- Leaf gradient -->
+    <linearGradient id="leafGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#43A047"/>
+      <stop offset="100%" stop-color="#66BB6A"/>
+    </linearGradient>
+    <!-- Badge border gradient (metallic green) -->
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="50%" stop-color="#388E3C"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </linearGradient>
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1B5E20" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Badge body with rounded rectangle shape -->
+  <rect x="4" y="4" width="392" height="172" rx="16" ry="16" fill="url(#bgGrad)" filter="url(#shadow)"/>
+
+  <!-- Inner decorative border -->
+  <rect x="14" y="14" width="372" height="152" rx="12" ry="12" fill="none" stroke="url(#borderGrad)" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- Decorative top rule (gold) -->
+  <line x1="60" y1="28" x2="340" y2="28" stroke="url(#goldGrad)" stroke-width="2" opacity="0.8"/>
+
+  <!-- Left leaf icon -->
+  <g transform="translate(48, 90)">
+    <path d="M0,0 C-4,-12 -2,-24 6,-30 C14,-36 22,-30 24,-22 C26,-14 20,-6 12,-2 C8,0 4,2 0,0 Z"
+          fill="url(#leafGrad)" opacity="0.9"/>
+    <path d="M0,0 C4,-4 10,-6 16,-4" fill="none" stroke="#2E7D32" stroke-width="1" opacity="0.5"/>
+    <path d="M2,2 C6,-6 14,-12 20,-16" fill="none" stroke="#66BB6A" stroke-width="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- Right leaf icon (mirrored) -->
+  <g transform="translate(352, 90) scale(-1, 1)">
+    <path d="M0,0 C-4,-12 -2,-24 6,-30 C14,-36 22,-30 24,-22 C26,-14 20,-6 12,-2 C8,0 4,2 0,0 Z"
+          fill="url(#leafGrad)" opacity="0.9"/>
+    <path d="M0,0 C4,-4 10,-6 16,-4" fill="none" stroke="#2E7D32" stroke-width="1" opacity="0.5"/>
+    <path d="M2,2 C6,-6 14,-12 20,-16" fill="none" stroke="#66BB6A" stroke-width="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- FARMERS MARKET text (top arc) -->
+  <text x="200" y="62" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="14" font-weight="700" fill="#A5D6A7" letter-spacing="4">ASHTABULA COUNTY</text>
+
+  <!-- APPROVED (main wordmark) -->
+  <text x="200" y="108" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="42" font-weight="700" fill="url(#goldGrad)" letter-spacing="3">APPROVED</text>
+
+  <!-- FARMERS MARKET subtitle -->
+  <text x="200" y="130" text-anchor="middle" font-family="'Helvetica Neue', Arial, sans-serif"
+        font-size="11" font-weight="600" fill="#C8E6C9" letter-spacing="5" text-transform="uppercase">FARMERS MARKET</text>
+
+  <!-- Decorative bottom rule (gold) -->
+  <line x1="100" y1="145" x2="300" y2="145" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Small wheat icons flanking the bottom -->
+  <g transform="translate(140, 155)" opacity="0.5">
+    <line x1="0" y1="0" x2="0" y2="-8" stroke="#C8E6C9" stroke-width="1.5"/>
+    <line x1="-2" y1="-3" x2="-5" y2="-6" stroke="#C8E6C9" stroke-width="1"/>
+    <line x1="2" y1="-3" x2="5" y2="-6" stroke="#C8E6C9" stroke-width="1"/>
+  </g>
+  <g transform="translate(260, 155) scale(-1,1) translate(-260, 0)" opacity="0.5">
+    <line x1="0" y1="0" x2="0" y2="-8" stroke="#C8E6C9" stroke-width="1.5"/>
+    <line x1="-2" y1="-3" x2="-5" y2="-6" stroke="#C8E6C9" stroke-width="1"/>
+    <line x1="2" y1="-3" x2="5" y2="-6" stroke="#C8E6C9" stroke-width="1"/>
+  </g>
+</svg>

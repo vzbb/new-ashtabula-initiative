@@ -1,0 +1,1459 @@
+{
+  "version": "1.0",
+  "generated": "2026-07-04",
+  "total_mvps": 76,
+  "scoring_formula": {
+    "revenue_weight": 0.25,
+    "community_weight": 0.2,
+    "brand_weight": 0.15,
+    "design_weight": 0.15,
+    "simplicity_weight": 0.15,
+    "urgency_weight": 0.1
+  },
+  "mvps": [
+    {
+      "num": 18,
+      "site": "Landlord Repair Queue",
+      "route": "landlord",
+      "buyer": "Ashtabula Metropolitan Housing Authority (AMHA)",
+      "desc": "Maintenance management",
+      "scores": {
+        "revenue": 7,
+        "community": 7,
+        "brand": 8,
+        "design": 6,
+        "simplicity": 7,
+        "urgency": 8,
+        "composite": 6.95
+      },
+      "state": "assessed",
+      "assessed_at": "2026-07-05T01:26:00.543163+00:00",
+      "notes": "RENDER: clean, no errors. BRAND: AMHA logo + colors, specific to buyer. DESIGN: 6/10 \u2014 functional, decent hierarchy, uses brand palette but flat \u2014 no photography, no depth/shadows, no modern patterns. SELLABLE: yes, demo-ready with strong value prop."
+    },
+    {
+      "num": 20,
+      "site": "HVAC Tuneup",
+      "route": "hvac",
+      "buyer": "HAVE Heating and Cooling (HAVE, Inc.)",
+      "desc": "HVAC service scheduler",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 8,
+        "composite": 6.65
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 35,
+      "site": "Compassionate Planner",
+      "route": "compassionate",
+      "buyer": "Ducro Funeral Services",
+      "desc": "Compassionate end-of-life planning assistant",
+      "scores": {
+        "revenue": 7,
+        "community": 7,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 6.65
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 62,
+      "site": "Ashtabula Fence",
+      "route": "ashtabula-fence",
+      "buyer": "Thomas Fence Co.",
+      "desc": "Fence company site",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 6.65
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 63,
+      "site": "Thomas Fence",
+      "route": "thomas-fence",
+      "buyer": "Thomas Fence Co.",
+      "desc": "Thomas Fence site",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 6.65
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 69,
+      "site": "RoofQuote",
+      "route": "roofquote",
+      "buyer": "A & R Roofing",
+      "desc": "Roofing quotes",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 8,
+        "composite": 6.65
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 64,
+      "site": "Cut Custom",
+      "route": "cut-custom",
+      "buyer": "Trumbull Locker Plant",
+      "desc": "Custom cutting service",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 8,
+        "composite": 6.45
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 65,
+      "site": "Rennick Market",
+      "route": "rennick-market",
+      "buyer": "Rennick Meat Market",
+      "desc": "Rennick Market site",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 8,
+        "composite": 6.45
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 66,
+      "site": "Trumbull Locker",
+      "route": "trumbull-locker",
+      "buyer": "Trumbull Locker Plant",
+      "desc": "Trumbull Locker site",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 8,
+        "composite": 6.45
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 25,
+      "site": "Engineer's Assistant",
+      "route": "engineers",
+      "buyer": "City of Ashtabula Engineering Division",
+      "desc": "Engineering document AI",
+      "scores": {
+        "revenue": 7,
+        "community": 9,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 6.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 17,
+      "site": "Fence Quote",
+      "route": "fence-quote",
+      "buyer": "Miller's Integrity Construction LLC",
+      "desc": "Instant fence estimates",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 6.35
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 19,
+      "site": "Lawn Quote Tool",
+      "route": "lawn",
+      "buyer": "MC Professional Lawn Care and Snow Plowing",
+      "desc": "Landscaping estimates",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 6.35
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 21,
+      "site": "Snow Plow Tracker",
+      "route": "snow-plow",
+      "buyer": "MC Professional Lawn Care and Snow Plowing",
+      "desc": "Snow removal coordination",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 6.35
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 50,
+      "site": "AI Docent Pro",
+      "route": "ai-docent-pro",
+      "buyer": "Ashtabula County Historical Society (ACHS)",
+      "desc": "Advanced museum AI",
+      "scores": {
+        "revenue": 7,
+        "community": 9,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 6.3
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 52,
+      "site": "Pocket Historian",
+      "route": "historian",
+      "buyer": "Ashtabula County Historical Society",
+      "desc": "Local history guide",
+      "scores": {
+        "revenue": 7,
+        "community": 9,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 6.3
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 53,
+      "site": "Pocket Historian Pro",
+      "route": "historian-pro",
+      "buyer": "Ashtabula County Historical Society",
+      "desc": "History archives",
+      "scores": {
+        "revenue": 7,
+        "community": 9,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 6.3
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 22,
+      "site": "Instant Dirt Quote",
+      "route": "dirt-quote",
+      "buyer": "Brockway's Topsoil",
+      "desc": "Excavation quotes",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 8,
+        "composite": 6.2
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 61,
+      "site": "Wedding Lead Form",
+      "route": "wedding",
+      "buyer": "Elks Lodge #208",
+      "desc": "Wedding vendor connector",
+      "scores": {
+        "revenue": 7,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 6.1
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 67,
+      "site": "Terra Vantage",
+      "route": "terra-vantage",
+      "buyer": "Severino Construction",
+      "desc": "Terra Vantage site",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 6.05
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 70,
+      "site": "Site Ops Pro",
+      "route": "site-ops-pro",
+      "buyer": "Brobst Earthworks, LTD",
+      "desc": "Site operations",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 6.05
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 58,
+      "site": "Pet Matchmaker",
+      "route": "pet-match",
+      "buyer": "Ashtabula County Animal Protective League (ACAPL)",
+      "desc": "Pet adoption matching",
+      "scores": {
+        "revenue": 5,
+        "community": 7,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 6.0
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 60,
+      "site": "Volunteer Scheduler",
+      "route": "volunteer",
+      "buyer": "RSVP (Retired Senior Volunteer Program) - Axess Family Services",
+      "desc": "Volunteer coordination",
+      "scores": {
+        "revenue": 5,
+        "community": 7,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 6.0
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 11,
+      "site": "Blueprint Analyzer",
+      "route": "blueprint",
+      "buyer": "Ashtabula County Building Department",
+      "desc": "Construction document AI",
+      "scores": {
+        "revenue": 9,
+        "community": 7,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 5.9
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 30,
+      "site": "Auto Detail Booking",
+      "route": "auto-detail",
+      "buyer": "Flawless Coating & Detailing",
+      "desc": "Detailing scheduler",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.9
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 31,
+      "site": "Truck Wash Booking",
+      "route": "truck-wash",
+      "buyer": "Quick Clean Car and Truck Wash",
+      "desc": "Fleet wash scheduling",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.9
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 36,
+      "site": "Virtual Concierge",
+      "route": "concierge",
+      "buyer": "The Lodge at Geneva-on-the-Lake",
+      "desc": "Visitor assistance",
+      "scores": {
+        "revenue": 7,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.8
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 42,
+      "site": "Charter Booking",
+      "route": "charter",
+      "buyer": "Compensator Lake Erie Fishing Charters",
+      "desc": "Charter service portal",
+      "scores": {
+        "revenue": 7,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.8
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 43,
+      "site": "Marina Slip Waitlist",
+      "route": "marina",
+      "buyer": "Harbor Yacht Club & Marina",
+      "desc": "Marina management",
+      "scores": {
+        "revenue": 7,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.8
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 48,
+      "site": "Boat Storage Waitlist",
+      "route": "boat-storage",
+      "buyer": "Geneva Marina",
+      "desc": "Storage management",
+      "scores": {
+        "revenue": 7,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.8
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 2,
+      "site": "Permit Whisperer",
+      "route": "permits",
+      "buyer": "City of Ashtabula",
+      "desc": "AI permit guidance assistant",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 8,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 5.75
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 23,
+      "site": "Rental Availability",
+      "route": "rental",
+      "buyer": "Ridgeview Estates",
+      "desc": "Housing portal",
+      "scores": {
+        "revenue": 7,
+        "community": 7,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 5.7
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 24,
+      "site": "Adaptive Reuse Planner",
+      "route": "adaptive-reuse",
+      "buyer": "Renew Partners LLC",
+      "desc": "Historic building reuse",
+      "scores": {
+        "revenue": 7,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 5.6
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 28,
+      "site": "Farm Stand Finder",
+      "route": "farm-stand",
+      "buyer": "Ashtabula Farmers Market",
+      "desc": "Local farm locator",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 5.6
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 49,
+      "site": "Harvest Alert",
+      "route": "harvest",
+      "buyer": "Ashtabula County Board of Commissioners",
+      "desc": "County agricultural alert system",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 5,
+        "composite": 5.6
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 29,
+      "site": "Mobile Notary",
+      "route": "notary",
+      "buyer": "Notes and Prints Mobile",
+      "desc": "Notary booking service",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 3,
+        "composite": 5.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 40,
+      "site": "Route Optimizer",
+      "route": "routes",
+      "buyer": "Ashtabula County Transportation System (ACTS)",
+      "desc": "Delivery route planning",
+      "scores": {
+        "revenue": 5,
+        "community": 7,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 5.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 41,
+      "site": "Ride Ready",
+      "route": "ride-ready",
+      "buyer": "Ashtabula County Transportation System (ACTS)",
+      "desc": "Transportation access",
+      "scores": {
+        "revenue": 5,
+        "community": 7,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 5.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 7,
+      "site": "License Wizard",
+      "route": "license",
+      "buyer": "City of Ashtabula",
+      "desc": "Business licensing guide",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 3,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 8,
+      "site": "Event Permit Express",
+      "route": "event-permit",
+      "buyer": "Ashtabula County Fairgrounds",
+      "desc": "Special event permits",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 3,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 9,
+      "site": "GovTech Box",
+      "route": "govtech",
+      "buyer": "Ashtabula County Data Board / IT Services",
+      "desc": "Government tech portal",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 3,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 32,
+      "site": "Service Scheduler",
+      "route": "scheduler",
+      "buyer": "Blank Heating Company Inc",
+      "desc": "Appointment booking",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 33,
+      "site": "Service Scheduler SMS",
+      "route": "scheduler-sms",
+      "buyer": "Blank Heating Company Inc",
+      "desc": "SMS-based scheduling",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 34,
+      "site": "Insta Book",
+      "route": "insta-book",
+      "buyer": "The Lakehouse Inn",
+      "desc": "Instant booking system",
+      "scores": {
+        "revenue": 7,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 37,
+      "site": "Visitor Parking Finder",
+      "route": "parking",
+      "buyer": "City of Ashtabula",
+      "desc": "Downtown parking guide",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 3,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 57,
+      "site": "Harbor Cam Dashboard",
+      "route": "harbor",
+      "buyer": "Ashtabula Yacht Club",
+      "desc": "Live harbor conditions",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 3,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 59,
+      "site": "Visual Portfolio",
+      "route": "portfolio",
+      "buyer": "PIPE! Creative",
+      "desc": "Portfolio showcase",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 3,
+        "composite": 5.4
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 26,
+      "site": "Local Grocer Go",
+      "route": "grocer",
+      "buyer": "Harbor Gardens",
+      "desc": "Local food marketplace",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.3
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 27,
+      "site": "Curbside Pickup Tracker",
+      "route": "curbside",
+      "buyer": "Harbor Gardens",
+      "desc": "Order coordination",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.3
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 38,
+      "site": "MyTrip Planner",
+      "route": "mytrip",
+      "buyer": "Visit Ashtabula County (Official Tourism Site)",
+      "desc": "Trip itinerary builder",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.3
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 39,
+      "site": "MyTrip Export",
+      "route": "mytrip-export",
+      "buyer": "Ashtabula County Convention & Visitors Bureau",
+      "desc": "Trip plan export",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.3
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 56,
+      "site": "GOTL Weekend Planner",
+      "route": "gotl",
+      "buyer": "Geneva-on-the-Lake Convention and Visitors Bureau",
+      "desc": "Geneva-on-the-Lake planner",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 5,
+        "composite": 5.3
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 12,
+      "site": "BoxFlow Estimator",
+      "route": "boxflow",
+      "buyer": "World Shipping, Inc. (Port of Ashtabula)",
+      "desc": "Logistics cost estimator",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 5.1
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 13,
+      "site": "Parts Finder",
+      "route": "parts",
+      "buyer": "Grand River Rubber & Plastics Co.",
+      "desc": "Industrial parts locator",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 5.1
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 14,
+      "site": "Parts Request",
+      "route": "parts-request",
+      "buyer": "Grand River Rubber & Plastics Co.",
+      "desc": "Custom parts sourcing",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 5.1
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 15,
+      "site": "Plating Tracker",
+      "route": "plating",
+      "buyer": "Lake City Plating",
+      "desc": "Quality tracking system",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 5.1
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 16,
+      "site": "Plating Tracker Pro",
+      "route": "plating-pro",
+      "buyer": "Lake City Plating",
+      "desc": "Advanced plating analytics",
+      "scores": {
+        "revenue": 9,
+        "community": 3,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 5.1
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 54,
+      "site": "Pocket Sommelier",
+      "route": "sommelier",
+      "buyer": "Ferrante Winery & Ristorante",
+      "desc": "Wine pairing guide",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 5.1
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 3,
+      "site": "Zoning Clerk",
+      "route": "zoning",
+      "buyer": "Ashtabula County Planning & Development Department",
+      "desc": "Zoning guidance tool",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 5.0
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 4,
+      "site": "Eligibility Screener",
+      "route": "eligibility",
+      "buyer": "Ashtabula County Department of Job and Family Services",
+      "desc": "Benefits eligibility wizard",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 5.0
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 5,
+      "site": "Eligibility Lite",
+      "route": "eligibility-lite",
+      "buyer": "Ashtabula County Department of Job and Family Services",
+      "desc": "Streamlined benefits check",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 5.0
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 6,
+      "site": "Eligibility Pro",
+      "route": "eligibility-pro",
+      "buyer": "Ashtabula County Department of Job and Family Services (ACDJFS)",
+      "desc": "Advanced benefits analysis",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 5.0
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 10,
+      "site": "Invest Ashtabula",
+      "route": "invest",
+      "buyer": "Ashtabula Area Chamber of Commerce",
+      "desc": "Investment attraction portal",
+      "scores": {
+        "revenue": 3,
+        "community": 7,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 9,
+        "urgency": 3,
+        "composite": 5.0
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 76,
+      "site": "Saybrook Zoning Clerk",
+      "route": "saybrook-zoning",
+      "buyer": "Saybrook Township Zoning Office",
+      "desc": "Zoning code assistant and permit guidance",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 8,
+        "composite": 5.0
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 71,
+      "site": "SBDC Business Counseling",
+      "route": "sbdc-business-counseling",
+      "buyer": "Ohio SBDC at Lakeland Community College",
+      "desc": "SBDC counseling",
+      "scores": {
+        "revenue": 3,
+        "community": 7,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 4.7
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 72,
+      "site": "SBDC Business Planning",
+      "route": "sbdc-business-planning",
+      "buyer": "Ohio Small Business Development Centers (State Network)",
+      "desc": "Business planning",
+      "scores": {
+        "revenue": 3,
+        "community": 7,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 4.7
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 73,
+      "site": "SBDC Educational Resources",
+      "route": "sbdc-educational-resources",
+      "buyer": "Ohio Small Business Development Centers (Statewide Network)",
+      "desc": "Educational content",
+      "scores": {
+        "revenue": 3,
+        "community": 7,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 4.7
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 74,
+      "site": "SBDC Learning Modules",
+      "route": "sbdc-learning-modules",
+      "buyer": "Ohio Small Business Development Centers (Statewide Network)",
+      "desc": "Learning platform",
+      "scores": {
+        "revenue": 3,
+        "community": 7,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 4.7
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 75,
+      "site": "SBDC Support Tools",
+      "route": "sbdc-support-tools",
+      "buyer": "Ohio Small Business Development Centers (State Network)",
+      "desc": "Support resources",
+      "scores": {
+        "revenue": 3,
+        "community": 7,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 4.7
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 1,
+      "site": "Civic Insight Engine",
+      "route": "civic-insight",
+      "buyer": "Ashtabula County Government (Transparency Portal)",
+      "desc": "Municipal transparency dashboard",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 44,
+      "site": "AidFlow Navigator",
+      "route": "aidflow",
+      "buyer": "211 Ashtabula County / United Way of Ashtabula County",
+      "desc": "Benefits navigation",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 45,
+      "site": "Resource Compass",
+      "route": "resource",
+      "buyer": "211 Ashtabula County / United Way of Ashtabula County",
+      "desc": "Resource directory",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 46,
+      "site": "Resource Compass Pro",
+      "route": "resource-pro",
+      "buyer": "OhioMeansJobs Ashtabula County",
+      "desc": "Advanced resource matching",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 51,
+      "site": "Artist Commission Form",
+      "route": "artist-commission",
+      "buyer": "Ashtabula Arts Center",
+      "desc": "Commission system",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 55,
+      "site": "Pocket Sommelier Pro",
+      "route": "sommelier-pro",
+      "buyer": "Ferrante Winery & Ristorante",
+      "desc": "Advanced wine AI",
+      "scores": {
+        "revenue": 5,
+        "community": 5,
+        "brand": 5,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 68,
+      "site": "ParcelVisor",
+      "route": "parcelvisor",
+      "buyer": "Ashtabula County Land Reutilization Corporation (AC Land Bank)",
+      "desc": "Parcel management",
+      "scores": {
+        "revenue": 3,
+        "community": 9,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 3,
+        "urgency": 3,
+        "composite": 4.5
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    },
+    {
+      "num": 47,
+      "site": "Policy Pal",
+      "route": "policy-pal",
+      "buyer": "Kollhoff Insurance Agency",
+      "desc": "Insurance guidance",
+      "scores": {
+        "revenue": 3,
+        "community": 3,
+        "brand": 3,
+        "design": 5,
+        "simplicity": 7,
+        "urgency": 3,
+        "composite": 3.9
+      },
+      "state": "unscanned",
+      "assessed_at": null,
+      "notes": ""
+    }
+  ]
+}
