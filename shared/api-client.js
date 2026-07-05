@@ -1,6 +1,7 @@
 /**
  * NAI API Client - Robust API integration with retry logic, rate limiting, and error handling
- * Use this module for all Gemini API calls across NAI sites
+ * Routes all AI calls through OpenRouter for provider-agnostic flexibility.
+ * callGeminiAPI is retained as a backward-compatible alias that translates response formats.
  */
 
 // API Configuration Constants
@@ -12,6 +13,18 @@ const API_CONFIG = {
   RATE_LIMIT_STATUS: 429,
   RETRYABLE_STATUS_CODES: [408, 429, 500, 502, 503, 504],
 };
+
+// Map old model names to OpenRouter model IDs (all provider-agnostic)
+const MODEL_MAP = {
+  'gemini-1.5-flash': 'google/gemini-2.5-flash-lite',
+  'gemini-2.0-flash': 'google/gemini-2.5-flash-lite',
+  'gemini-1.5-pro': 'google/gemini-2.5-flash',
+};
+
+/**
+ * Resolve model name — handle old Gemini names and pass through others
+ */
+const resolveModel = (model) => MODEL_MAP[model] || model;
 
 /**
  * Delay utility with jitter to prevent thundering herd
@@ -77,26 +90,31 @@ const isRetryable = (errorOrResponse) => {
 };
 
 /**
- * Call Gemini API with robust error handling, retry logic, and rate limiting protection
+ * Call OpenRouter API with robust error handling, retry logic, and rate limiting protection
  * @param {string} prompt - The prompt text to send
- * @param {string} model - Gemini model to use (default: gemini-1.5-flash)
+ * @param {string} model - Model ID to use (default: google/gemini-2.5-flash-lite)
  * @param {number} retryCount - Internal retry counter (do not set manually)
- * @returns {Promise<Object>} API response data
+ * @returns {Promise<Object>} API response data (OpenAI-compatible format)
  * @throws {Error} After all retries exhausted or non-retryable error
  */
-export const callGeminiAPI = async (prompt, model = 'gemini-1.5-flash', retryCount = 0) => {
-  const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+export const callOpenRouterAPI = async (prompt, model = 'google/gemini-2.5-flash-lite', retryCount = 0) => {
+  const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY;
   
   if (!apiKey) {
     throw new Error('API key not configured. Please check your environment settings.');
   }
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+  const url = 'https://openrouter.ai/api/v1/chat/completions';
   const options = {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${apiKey}`,
+    },
     body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }]
+      model: resolveModel(model),
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 500,
     })
   };
 
@@ -107,7 +125,7 @@ export const callGeminiAPI = async (prompt, model = 'gemini-1.5-flash', retryCou
       if (retryCount < API_CONFIG.MAX_RETRIES) {
         const backoffDelay = getBackoffDelay(retryCount);
         await delay(backoffDelay);
-        return callGeminiAPI(prompt, model, retryCount + 1);
+        return callOpenRouterAPI(prompt, model, retryCount + 1);
       }
       throw new Error('Rate limit exceeded. Please wait a moment and try again.');
     }
@@ -119,7 +137,7 @@ export const callGeminiAPI = async (prompt, model = 'gemini-1.5-flash', retryCou
       if (API_CONFIG.RETRYABLE_STATUS_CODES.includes(response.status) && retryCount < API_CONFIG.MAX_RETRIES) {
         const backoffDelay = getBackoffDelay(retryCount);
         await delay(backoffDelay);
-        return callGeminiAPI(prompt, model, retryCount + 1);
+        return callOpenRouterAPI(prompt, model, retryCount + 1);
       }
       
       throw new Error(errorMessage);
@@ -127,7 +145,7 @@ export const callGeminiAPI = async (prompt, model = 'gemini-1.5-flash', retryCou
 
     const data = await response.json();
     
-    const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+    const text = data?.choices?.[0]?.message?.content;
     if (!text) {
       throw new Error('No response content received from API.');
     }
@@ -138,7 +156,7 @@ export const callGeminiAPI = async (prompt, model = 'gemini-1.5-flash', retryCou
     if (isRetryable(error) && retryCount < API_CONFIG.MAX_RETRIES) {
       const backoffDelay = getBackoffDelay(retryCount);
       await delay(backoffDelay);
-      return callGeminiAPI(prompt, model, retryCount + 1);
+      return callOpenRouterAPI(prompt, model, retryCount + 1);
     }
 
     let userMessage = 'An error occurred while processing your request.';
@@ -157,12 +175,49 @@ export const callGeminiAPI = async (prompt, model = 'gemini-1.5-flash', retryCou
   }
 };
 
+/**
+ * Call Gemini API — backward-compatible wrapper that routes through OpenRouter
+ * Translates OpenRouter response format to Gemini format for existing callers.
+ * @param {string} prompt - The prompt text to send
+ * @param {string} model - Model to use (default: gemini-1.5-flash, mapped to OpenRouter ID)
+ * @param {number} retryCount - Internal retry counter (do not set manually)
+ * @returns {Promise<Object>} API response data (Gemini-compatible format)
+ * @throws {Error} After all retries exhausted or non-retryable error
+ */
+export const callGeminiAPI = async (prompt, model = 'gemini-1.5-flash', retryCount = 0) => {
+  const openRouterModel = resolveModel(model);
+  const data = await callOpenRouterAPI(prompt, openRouterModel, retryCount);
+  
+  // Translate OpenRouter (OpenAI-format) response to Gemini format for backward compatibility
+  return {
+    candidates: [{
+      content: {
+        parts: [{ text: data?.choices?.[0]?.message?.content || '' }]
+      }
+    }]
+  };
+};
+
+/**
+ * Extract response text from API response data
+ * Handles both Gemini format and OpenRouter (OpenAI) format
+ * @param {Object} responseData - API response data
+ * @returns {string} Extracted text
+ */
 export const extractResponseText = (responseData) => {
-  return responseData?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+  // Gemini format: candidates[0].content.parts[0].text
+  const geminiText = responseData?.candidates?.[0]?.content?.parts?.[0]?.text;
+  if (geminiText) return geminiText;
+  
+  // OpenRouter / OpenAI format: choices[0].message.content
+  const openRouterText = responseData?.choices?.[0]?.message?.content;
+  if (openRouterText) return openRouterText;
+  
+  return '';
 };
 
 export const isAPIConfigured = () => {
-  return !!import.meta.env.VITE_GEMINI_API_KEY;
+  return !!import.meta.env.VITE_OPENROUTER_API_KEY;
 };
 
 export const getErrorMessage = (error) => {
@@ -170,6 +225,7 @@ export const getErrorMessage = (error) => {
 };
 
 export default {
+  callOpenRouterAPI,
   callGeminiAPI,
   extractResponseText,
   isAPIConfigured,
