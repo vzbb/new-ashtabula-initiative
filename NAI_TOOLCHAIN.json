@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "tools": {
+    "core": [
+      {"path": "nai", "purpose": "Primary route-aware operator CLI"},
+      {"path": "nai_suite/pipeline.py", "purpose": "Canonical assignments, gates, context packets, and recovery"},
+      {"path": "nai_suite/sitemap_data.py", "purpose": "Canonical SITEMAP.json validation and rendering"},
+      {"path": "nai_suite/siteflow.py", "purpose": "Slug-to-source mapping, focused builds, and build-root detection"},
+      {"path": "nai_suite/screenshots_sitemap.py", "purpose": "Local-preview and live-production browser capture"},
+      {"path": "nai_suite/analyze_sitemap_screenshots.py", "purpose": "Visual and branding analysis over captured screenshots"},
+      {"path": "nai_suite/update_vercel.py", "purpose": "Vercel route generation from canonical sitemap data"},
+      {"path": "nai_suite/generate_all_mvps_page.py", "purpose": "Landing-page portfolio inventory generation"},
+      {"path": "nai_suite/openrouter_proxy_function.js", "purpose": "Server-side OpenRouter API proxy packaged by the deploy path"},
+      {"path": "deploy.sh", "purpose": "Thin wrapper around the guarded production deploy path"}
+    ],
+    "support": [
+      {"path": "visual_report_summary.py", "purpose": "Summarize current visual-analysis results"},
+      {"path": "check_vite_base_paths.py", "purpose": "Diagnose route-relative Vite asset paths"},
+      {"path": "fix_all_vite_configs.py", "purpose": "Bulk Vite base repair for an explicitly approved batch"},
+      {"path": "fix_index_html_paths.py", "purpose": "Repair diagnosed generated HTML path problems"},
+      {"path": "nai-deploy-check.py", "purpose": "Inspect deploy readiness"},
+      {"path": "nai_deployment_diagnostic.py", "purpose": "Diagnose deployment and environment failures"},
+      {"path": "nai_qa_suite.py", "purpose": "Broader repository QA helper"},
+      {"path": "nai_site_fixer.py", "purpose": "General site repair helper for scoped use"},
+      {"path": "tier1_verification_assistant.py", "purpose": "Support evidence-driven verification passes"}
+    ],
+    "legacy": [
+      {"path": "audit_urls.py", "purpose": "Older URL audit script"},
+      {"path": "audit_urls.sh", "purpose": "Older URL audit wrapper"},
+      {"path": "collect_results.py", "purpose": "Historical result collector"},
+      {"path": "find_unprocessed.py", "purpose": "Historical batch discovery helper"},
+      {"path": "full_audit_api.py", "purpose": "Superseded audit pipeline"},
+      {"path": "single_audit.py", "purpose": "Superseded single-site audit helper"},
+      {"path": "verify_fixes.py", "purpose": "Older fix verification pass"},
+      {"path": "verify_fixes_v2.py", "purpose": "Second-generation older fix verifier"},
+      {"path": "fix_vercel_paths.sh", "purpose": "Older Vercel path repair helper"},
+      {"path": "cycle.sh", "purpose": "Historical local workflow loop"},
+      {"path": "commit-all-websites.sh", "purpose": "Unsafe bulk commit helper; never use routinely"}
+    ]
+  }
+}

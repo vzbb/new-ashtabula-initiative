@@ -1,0 +1,4 @@
+interface:
+  display_name: "NAI MVP Worker"
+  short_description: "Complete one bounded NAI gate assignment"
+  default_prompt: "Use $nai-mvp-worker to complete the supplied NAI assignment context without crossing its boundaries."
