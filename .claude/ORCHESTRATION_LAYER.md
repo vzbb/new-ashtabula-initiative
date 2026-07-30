@@ -58,23 +58,58 @@ would drift and there would be two contradicting contracts.
 
 ## Permissions: `settings.recommended.json`
 
-Claude is intentionally prevented from writing `.claude/settings.json` — an agent
-that can widen its own permissions has none. Review
-`settings.recommended.json`, then merge it into `.claude/settings.json` yourself,
-or ask Claude to do it via `/update-config` so the change is explicit.
+Claude cannot write `.claude/settings.json` — the permission classifier refuses
+it, including under `/update-config`, because that file governs Claude's own
+permissions. An agent that can widen its own authority has none. **Apply it
+yourself:**
 
-Its shape follows the repo's real risks:
+```bash
+cp .claude/settings.recommended.json .claude/settings.json   # then remove the _comment key
+```
 
-- **allow** — read-only orientation and focused, per-slug builds/screenshots.
-  These are the commands a session runs dozens of times.
-- **ask** — anything that writes canonical state (`pass`, `fail`, `reset`,
-  `quarantine`), regenerates routes, clones an MVP, hits live production, or moves
-  git history.
-- **deny** — `./nai deploy` (user-authorized only), legacy bulk fixers, and every
-  form of mass tree mutation (`git reset --hard`, `git clean`, `git stash`,
-  `git add -A`, force push). Also direct writes to generated/canonical files
-  (`NAI_STATE.json`, `CHIEF_OF_STAFF.md`, `SITEMAP.md`, `NAI_TOOLCHAIN.md`,
-  `vercel.json`, `.vercel/**`) and reads of secret-bearing env files.
+The ruleset separates *supported tooling* from *manual mutation*:
+
+- **allow** — the full `./nai pipeline` surface, including the canonical
+  transitions (`assign`, `context`, `pass`, `fail`, `retry`, `reassign`, `block`,
+  `unblock`, `reset`, `quarantine`), plus `scan`, `tooling`, focused
+  `build --slugs` / `screenshots --slugs` / `analyze-screenshots`,
+  `sitemap-validate`, and read-only git. State *is* meant to change — through the
+  supported control surface, dozens of times a session, without a prompt.
+- **ask** — `./nai deploy` (user-authorized per deploy), `git commit`,
+  `git push`, generic `git checkout`, `git add` of specific paths, route/sitemap
+  regeneration, `clone-mvp`, `fix-bases`, `render-all-mvps`, live production
+  screenshots, and `rm`/`mv`.
+- **deny** — every form of mass tree mutation (`git reset --hard`, `git clean`,
+  `git stash`, `git restore`, `git checkout --`, `git add -A`, `git commit -a`,
+  force push in any flag position, `rm -rf`), direct Edit/Write of generated or
+  canonical files (`NAI_STATE.json`, `CHIEF_OF_STAFF.md`, `SITEMAP.md`,
+  `NAI_TOOLCHAIN.md`, `vercel.json`, `.vercel/**`), and Read of the
+  secret-bearing env files. Path rules are written project-root-relative
+  (`Edit(/NAI_STATE.json)`) so they anchor to the repository root rather than
+  matching a same-named file anywhere.
+
+The distinction that matters: the deny rules block the **Edit/Write tools** on
+generated files; they do not touch `./nai pipeline`, which is how those files are
+legitimately regenerated. Blocking the artifact, not the pipeline.
+
+### What these rules are, and are not
+
+These are **workflow guardrails on Claude's built-in tools** — they make the
+wrong move require a deliberate step instead of happening by reflex. They are
+**not** OS-level isolation:
+
+- `Read(/.env)` stops the Read tool. It does not stop a Bash subprocess —
+  `cat .env`, `grep -r KEY .`, `python3 -c "open('.env')"`, or a build script
+  that prints the environment all read the same bytes. Bash rules match command
+  strings, and no practical pattern list closes that surface.
+- Likewise, `Edit(/NAI_STATE.json)` stops the Edit tool, not
+  `python3 -c "open('NAI_STATE.json','w')"`.
+
+So the real protection for secrets and canonical state is the policy in
+`CLAUDE.md` plus review of what Claude actually runs — the permission rules just
+remove the easy accidents. Treat any command that reads or writes those paths as
+requiring the same scrutiny whether or not a rule names it. Genuine isolation
+would need OS-level sandboxing, which this layer deliberately does not configure.
 
 `git stash` is denied because the stash stack is shared across worktrees and other
 agents; a WIP commit on a branch is the safe alternative. Existing
@@ -82,9 +117,13 @@ agents; a WIP commit on a branch is the safe alternative. Existing
 
 ## Installing / verifying
 
+The two skill symlinks are committed, so a fresh clone needs nothing. Run the
+installer only to repair them (it is idempotent and refuses to overwrite a real
+directory):
+
 ```bash
 cd /root/new-ashtabula-initiative
-bash .claude/install-nai-claude-layer.sh   # creates the two skill symlinks
+bash .claude/install-nai-claude-layer.sh
 claude                                     # then: /nai-bootstrap
 ```
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "NAI MVP Orchestrator"
+  short_description: "Assign and govern one NAI MVP pipeline"
+  default_prompt: "Use $nai-mvp-orchestrator to assign and govern one NAI MVP through its gates."
