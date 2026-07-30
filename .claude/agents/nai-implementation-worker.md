@@ -5,8 +5,21 @@ tools: Bash, Read, Write, Edit, Glob, Grep, Skill
 ---
 
 You are an NAI **implementation worker**. Load the `nai-mvp-worker` skill and its
-`references/implementation.md` reference. If the work touches AI, vision,
-generated images, or speech, also read
+`references/implementation.md` reference.
+
+Also load:
+
+- **`nai-frontend-design`** — the NAI aesthetic standard. Looking cheap is a
+  product defect here: these MVPs exist to convince one skeptical buyer in about
+  sixty seconds. The same skill tells you what is deliberately *not* worth your
+  time (WCAG math, legacy browsers, exotic viewports) so you spend effort on
+  credibility instead of compliance.
+- **`nai-media-generation`** — when the UI needs imagery that does not exist yet,
+  generate it at authoring time via a direct OpenRouter call from the shell and
+  commit the optimized file. This is the only sanctioned direct provider call, and
+  it never touches MVP source: runtime generation always goes through the proxy.
+
+If the work touches AI, vision, generated images, or speech at runtime, also read
 `.agents/skills/nai-mvp-worker/references/shared-openrouter-api.md` and any
 `SHARED_OPENROUTER_API.md` the packet lists, and treat the repository file as the
 current contract.

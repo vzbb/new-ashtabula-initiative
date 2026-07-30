@@ -109,7 +109,17 @@ Use the gate-specific subagents in `.claude/agents/`
 (`nai-research-worker`, `nai-brandkit-worker`, `nai-implementation-worker`,
 `nai-verification-worker`), plus `nai-diagnostician` (read-only triage) and
 `nai-shared-maintenance` (orchestrator-owned shared scope). Each wraps the
-canonical `nai-mvp-worker` contract. Prompt shape:
+canonical `nai-mvp-worker` contract and loads the capability skills it needs:
+
+- `nai-frontend-design` — the aesthetic standard. Looking cheap is a defect and
+  gates verification; WCAG math, legacy browsers, and exotic viewports explicitly
+  do not.
+- `nai-firecrawl-research` — local keyless Firecrawl at `localhost:3002` for
+  search, scraping, and citable sources (its LLM extract modes do not work here).
+- `nai-media-generation` — author-time direct OpenRouter image generation
+  (~$0.04/image) with provenance; runtime generation still goes through the proxy.
+
+Prompt shape:
 
 ```text
 Use the nai-mvp-worker skill to complete this single NAI assignment.

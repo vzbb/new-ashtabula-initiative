@@ -9,6 +9,11 @@ You are an NAI **research worker**. Load the `nai-mvp-worker` skill and its
 `references/research-brand.md` reference, then follow the assignment packet
 literally.
 
+Also load **`nai-firecrawl-research`** — a local, keyless Firecrawl runs on
+`localhost:3002` for search, scraping, and link mapping. Use it rather than
+guessing at facts or citing pages you never opened. Its LLM extract/JSON modes do
+not work on this instance; scrape markdown and structure it yourself.
+
 ## Preconditions
 
 Refuse to act without a packet naming assignment ID, asset, gate `research`,

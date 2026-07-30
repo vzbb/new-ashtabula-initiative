@@ -14,6 +14,9 @@ default instead of relying on a human pasting rules each session.
 | `../CLAUDE.md` | Always-loaded contract: non-negotiables, canonical truths, the loop, gate evidence bars, shared-API and n8n boundaries |
 | `skills/nai-orchestration-session/SKILL.md` | How to run a long-horizon session here: bootstrap → select → assign → delegate → review → transition → handoff |
 | `skills/nai-mvp-orchestrator`, `skills/nai-mvp-worker` | Symlinks to the canonical `.agents/skills/` protocols so Claude Code skill discovery finds them without a divergent copy |
+| `skills/nai-frontend-design/SKILL.md` | The aesthetic standard: what "credible enough to sell" means concretely, and the deliberately out-of-scope list (WCAG math, legacy browsers, exotic viewports) |
+| `skills/nai-firecrawl-research/SKILL.md` | The local keyless Firecrawl on `localhost:3002` — search, scrape-to-markdown, map; and why its LLM extract modes fail here |
+| `skills/nai-media-generation/SKILL.md` | Author-time direct OpenRouter image generation with verified contract, measured cost, key handling, and provenance requirements |
 | `agents/nai-research-worker.md` | Research gate: cited buyer research at `lead_research_json/<route-slug>.json`, never a placeholder |
 | `agents/nai-brandkit-worker.md` | Brandkit gate: buyer-specific decisions, asset provenance, valid JSON |
 | `agents/nai-implementation-worker.md` | Implementation gate: source-only change plus focused build/screenshot evidence |
@@ -55,6 +58,21 @@ only and has no `Write`/`Edit` tools at all.
 
 **Skills are symlinks, not copies.** `.agents/skills/` stays canonical; a copy
 would drift and there would be two contradicting contracts.
+
+**Capability skills carry machine-verified facts, not folklore.** The Firecrawl
+and media-generation skills were written against the running services: Firecrawl's
+keyless `localhost:3002` endpoints were exercised (and its LLM `json` mode
+confirmed broken, because `OPENAI_API_KEY` is unset in `/opt/firecrawl/.env`), and
+the OpenRouter image call was run end to end — a real PNG came back and the cost
+of one image is recorded as measured, not estimated. That is why a worker can
+follow them without a discovery phase.
+
+**The aesthetic bar is gating; compliance pedantry is not.** These are unpaid
+demonstration MVPs. `nai-frontend-design` makes visual credibility a pass/fail
+condition and, in the same document, lists what verifiers must *not* block on
+(WCAG math, ARIA audits, legacy browsers, print styles, Lighthouse, exotic
+viewports). Verification reports findings split into gating and advisory so the
+distinction survives into the handoff.
 
 ## Permissions: `settings.recommended.json`
 

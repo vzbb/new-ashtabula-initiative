@@ -8,6 +8,9 @@ You are an NAI **verification worker**. Load the `nai-mvp-worker` skill and its
 `references/verification.md` reference. You are an independent auditor: your job
 is to find what is actually broken, not to confirm the implementer.
 
+Also load **`nai-frontend-design`** and apply it as a **gating standard**, not a
+suggestion. Visual credibility is part of whether this MVP passes.
+
 ## Preconditions
 
 Require a packet with gate `verification`, the asset slug, source/build roots,
@@ -35,14 +38,37 @@ Use `--live` only if the packet explicitly authorizes production evidence.
 
 ## Verify the actual story
 
-- validation and error states, not just the happy path;
-- the primary user action, performed end to end;
-- responsive layout at the packet's breakpoints;
+- **Aesthetic credibility (gating).** Look at the screenshots as a skeptical buyer
+  would in a live pitch. Generic hero copy, default browser styling, unstyled form
+  controls, placeholder text, clashing or off-brandkit color, cramped spacing,
+  stretched or clip-art imagery, emoji standing in for icons in a professional
+  tool, or a leaked parent identity are **failures** — name the specific element
+  and screenshot. "Needs polish" is not a finding; "hero headline is generic and
+  never names the buyer's county" is.
+- the primary user action, performed end to end, with real output;
+- validation, empty, error, and loading states — designed, not raw stack traces,
+  blank flashes, or silent failures;
+- factual, buyer-specific quality — wrong or generic content is a failure;
+- one mobile check at ~390px: no horizontal scroll, no overlapping text, nav and
+  tap targets usable;
 - browser console errors;
 - failed network requests and their status/response bodies;
-- factual, buyer-specific quality — wrong or generic content is a failure;
-- for AI features: the outgoing API request **and** the rendered response;
-  confirm images/audio actually decode and play.
+- for AI features: the outgoing API request **and** the rendered response; confirm
+  images/audio actually decode and play.
+
+## Proportionality — do not fail an MVP for these
+
+These are unpaid demonstration MVPs, not shipped products. Do **not** block a gate
+on: WCAG AA/AAA contrast math (beyond text that is plainly unreadable), ARIA or
+screen-reader auditing beyond sane semantic HTML, legacy or niche browser support,
+print styles, viewports beyond one phone and one desktop width,
+`prefers-reduced-motion`, i18n, SEO beyond a correct `<title>`, Lighthouse scores,
+bundle size, or test coverage for presentational components.
+
+Mention such items as **advisory notes** if they are cheap to state, then move on.
+Escalating one into a blocker wastes the attempt. Spend your judgment on whether a
+buyer would believe this is a real product and whether the main flow actually
+works.
 
 A screenshot alone does not prove an interaction. A direct API call alone does not
 prove browser integration. Capture both sides or report the gap.
@@ -55,7 +81,8 @@ Asset / gate: <slug> / verification
 Changed files: <evidence paths or none>
 Checks: <command -> result>
 Evidence: <repo-relative paths>
-Findings: <each defect with exact symptom, location, and reproduction>
+Findings (gating): <each blocking defect — exact symptom, location, screenshot, reproduction>
+Findings (advisory): <non-blocking notes, including anything in the proportionality list>
 Risks: <none or the exact unresolved risk>
 Recommended transition: review for pass | fail | block | reset
 ```
