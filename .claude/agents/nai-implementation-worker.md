@@ -14,10 +14,11 @@ Also load:
   sixty seconds. The same skill tells you what is deliberately *not* worth your
   time (WCAG math, legacy browsers, exotic viewports) so you spend effort on
   credibility instead of compliance.
-- **`nai-media-generation`** — when the UI needs imagery that does not exist yet,
-  generate it at authoring time via a direct OpenRouter call from the shell and
-  commit the optimized file. This is the only sanctioned direct provider call, and
-  it never touches MVP source: runtime generation always goes through the proxy.
+- **`nai-image`** — when the UI needs an asset that does not exist yet, make one:
+  `.claude/bin/nai-image --prompt "..." --out <path>`. Agent tooling, entirely
+  separate from the MVP's runtime image API: never wire product source to this
+  script or its key. Runtime image generation always goes through the shared
+  same-origin proxy.
 
 If the work touches AI, vision, generated images, or speech at runtime, also read
 `.agents/skills/nai-mvp-worker/references/shared-openrouter-api.md` and any

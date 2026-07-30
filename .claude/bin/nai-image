@@ -1,0 +1,205 @@
+#!/usr/bin/env python3
+"""Agent-side image generation. One command, one file on disk.
+
+This is an AGENT TOOL. It has nothing to do with the MVP-facing shared API
+(`/api/image`, `shared/api-client.js`, `nai_suite/openrouter_proxy_function.js`).
+That surface serves browsers at runtime and is governed separately. This script
+exists so a worker can produce a logo or hero image at authoring time and commit
+the file. MVP source must never call this script or read its key.
+
+Usage:
+  .claude/bin/nai-image --prompt "flat vector snow plow icon, navy on white" \\
+      --out branding_research/snow-plow/icon.png --aspect 1:1
+
+  .claude/bin/nai-image --prompt "..." --out hero.png --aspect 16:9 --n 2
+  .claude/bin/nai-image --prompt "..." --out retry.png --seed 42
+  .claude/bin/nai-image --prompt "..." --out b.png --ref branding_research/x/a.png
+
+Key resolution (never printed): NAI_AGENT_IMAGE_KEY, else OPENROUTER_API_KEY from
+the environment, else OPENROUTER_API_KEY from the repo-root .env. Set
+NAI_AGENT_IMAGE_KEY if you want agent image spend on a separate key from the
+MVP runtime key.
+
+Writes <out>.provenance.json (model, prompt, date, cost, seed) unless
+--no-provenance. Brandkit acceptance requires that provenance.
+"""
+
+import argparse
+import base64
+import json
+import os
+import pathlib
+import sys
+import urllib.error
+import urllib.request
+from datetime import datetime, timezone
+
+API_URL = "https://openrouter.ai/api/v1/images"
+DEFAULT_MODEL = "google/gemini-2.5-flash-image"
+MAGIC = {
+    b"\x89PNG\r\n\x1a\n": "png",
+    b"\xff\xd8\xff": "jpeg",
+    b"RIFF": "webp",
+}
+
+
+def key_from_env_files() -> str | None:
+    """First .env at or above this script that defines OPENROUTER_API_KEY.
+
+    Walking upward matters: run from .claude/worktrees/<name>/ the worktree has no
+    .env of its own, and the real one lives in the main checkout above it.
+    """
+    start = pathlib.Path(os.environ.get("NAI_ROOT") or pathlib.Path(__file__).resolve().parent)
+    for directory in [start, *start.parents]:
+        env_file = directory / ".env"
+        if not env_file.is_file():
+            continue
+        for line in env_file.read_text(errors="replace").splitlines():
+            line = line.strip()
+            if line.startswith("OPENROUTER_API_KEY="):
+                value = line.split("=", 1)[1].strip().strip("'\"")
+                if value:
+                    return value
+    return None
+
+
+def load_key() -> str:
+    for var in ("NAI_AGENT_IMAGE_KEY", "OPENROUTER_API_KEY"):
+        value = os.environ.get(var, "").strip()
+        if value:
+            return value
+    from_file = key_from_env_files()
+    if from_file:
+        return from_file
+    sys.exit(
+        "no API key found. Set NAI_AGENT_IMAGE_KEY or OPENROUTER_API_KEY, or add "
+        "OPENROUTER_API_KEY to the repo-root .env. Never paste a key into a command."
+    )
+
+
+def reference(value: str) -> dict:
+    if value.startswith(("http://", "https://", "data:")):
+        if value.startswith("http://"):
+            sys.exit("remote references must use https")
+        url = value
+    else:
+        path = pathlib.Path(value)
+        if not path.is_file():
+            sys.exit(f"reference not found: {value}")
+        raw = path.read_bytes()
+        kind = next((k for magic, k in MAGIC.items() if raw.startswith(magic)), None)
+        if not kind:
+            sys.exit(f"reference is not a png/jpeg/webp image: {value}")
+        url = f"data:image/{kind};base64," + base64.b64encode(raw).decode()
+    return {"type": "image_url", "image_url": {"url": url}}
+
+
+def main() -> int:
+    p = argparse.ArgumentParser(add_help=True)
+    p.add_argument("--prompt", required=True)
+    p.add_argument("--out", required=True, help="output path; .png/.jpg/.webp")
+    p.add_argument("--model", default=DEFAULT_MODEL)
+    p.add_argument("--aspect", help="e.g. 1:1, 16:9, 3:2, 1.91:1")
+    p.add_argument("--size")
+    p.add_argument("--quality")
+    p.add_argument("--background", help="e.g. transparent")
+    p.add_argument("--n", type=int, default=1, help="candidates (default 1)")
+    p.add_argument("--seed", type=int, help="reuse to retry a near-miss")
+    p.add_argument("--ref", action="append", default=[], help="style/subject reference; repeatable")
+    p.add_argument("--no-provenance", action="store_true")
+    p.add_argument("--dry-run", action="store_true", help="print the request, call nothing")
+    args = p.parse_args()
+
+    out = pathlib.Path(args.out)
+    fmt = {".png": "png", ".jpg": "jpeg", ".jpeg": "jpeg", ".webp": "webp"}.get(out.suffix.lower())
+    if not fmt:
+        return print(f"--out must end in .png, .jpg, or .webp (got {out.suffix!r})") or 2
+    if args.n < 1 or args.n > 10:
+        return print("--n must be 1..10; generate a few candidates, not dozens") or 2
+
+    body = {"model": args.model, "prompt": args.prompt, "n": args.n, "output_format": fmt}
+    for key, value in (
+        ("aspect_ratio", args.aspect),
+        ("size", args.size),
+        ("quality", args.quality),
+        ("background", args.background),
+        ("seed", args.seed),
+    ):
+        if value is not None:
+            body[key] = value
+    if args.ref:
+        body["input_references"] = [reference(r) for r in args.ref]
+
+    if args.dry_run:
+        print(json.dumps(body, indent=2)[:2000])
+        return 0
+
+    request = urllib.request.Request(
+        API_URL,
+        data=json.dumps(body).encode(),
+        headers={
+            "authorization": f"Bearer {load_key()}",
+            "content-type": "application/json",
+            "http-referer": "https://new-ashtabula-initiative.com",
+            "x-title": "New Ashtabula Initiative (agent tooling)",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=300) as response:
+            payload = json.load(response)
+    except urllib.error.HTTPError as error:  # surface the provider's own message
+        detail = error.read().decode(errors="replace")[:600]
+        return print(f"image generation failed [http {error.code}]: {detail}") or 1
+    except (urllib.error.URLError, TimeoutError) as error:
+        return print(f"image generation failed (network): {error}") or 1
+
+    images = payload.get("data") or []
+    if not images:
+        return print(f"no image returned: {json.dumps(payload)[:400]}") or 1
+
+    out.parent.mkdir(parents=True, exist_ok=True)
+    written = []
+    for index, image in enumerate(images, start=1):
+        b64 = image.get("b64_json")
+        if not b64:
+            print(f"candidate {index}: no image data, skipped")
+            continue
+        raw = base64.b64decode(b64)
+        if not any(raw.startswith(magic) for magic in MAGIC):
+            print(f"candidate {index}: response is not a valid image, skipped")
+            continue
+        target = out if len(images) == 1 else out.with_name(f"{out.stem}-{index}{out.suffix}")
+        target.write_bytes(raw)
+        written.append(target)
+        note = "  <-- large, downsize before committing" if len(raw) > 400_000 else ""
+        print(f"wrote {target} ({len(raw):,} bytes, {image.get('media_type', fmt)}){note}")
+
+    if not written:
+        return 1
+
+    cost = (payload.get("usage") or {}).get("cost")
+    print(f"model {payload.get('model', args.model)}   cost ${cost}" if cost is not None else "")
+
+    if not args.no_provenance:
+        record = {
+            "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "model": payload.get("model", args.model),
+            "prompt": args.prompt,
+            "files": [str(path) for path in written],
+            "cost_usd": cost,
+            "seed": args.seed,
+            "aspect_ratio": args.aspect,
+            "references": args.ref or None,
+            "tool": ".claude/bin/nai-image",
+        }
+        sidecar = out.with_suffix(out.suffix + ".provenance.json")
+        sidecar.write_text(json.dumps(record, indent=2) + "\n")
+        print(f"provenance {sidecar}")
+
+    print("look at the image before committing it; it is not evidence until you have")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

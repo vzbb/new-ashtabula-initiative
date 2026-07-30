@@ -60,11 +60,11 @@ is waste.
 `/opt/firecrawl/.env`, so the extraction path errors out (verified: returns
 `success:false, UNKNOWN_ERROR`).
 
-Instead: scrape to markdown, then do the structuring yourself. If you need model
-help turning a messy page into structured fields, use the NAI shared AI backend
-(OpenRouter) rather than trying to enable Firecrawl's extractor — see
-`nai-media-generation` for the direct-call pattern, and never enable a new
-provider key inside `/opt/firecrawl` from a worker assignment.
+Instead: scrape to markdown and structure it yourself — you are the extractor, and
+reading the page properly beats a lossy auto-extraction anyway. Never add a
+provider key inside `/opt/firecrawl` or change that deployment from a worker
+assignment; if extraction at scale is genuinely needed, escalate to the
+orchestrator.
 
 ## Research discipline
 

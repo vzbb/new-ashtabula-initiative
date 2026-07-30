@@ -116,8 +116,10 @@ canonical `nai-mvp-worker` contract and loads the capability skills it needs:
   do not.
 - `nai-firecrawl-research` — local keyless Firecrawl at `localhost:3002` for
   search, scraping, and citable sources (its LLM extract modes do not work here).
-- `nai-media-generation` — author-time direct OpenRouter image generation
-  (~$0.04/image) with provenance; runtime generation still goes through the proxy.
+- `nai-image` — agent tooling that makes image files:
+  `.claude/bin/nai-image --prompt "..." --out <path>` (~$0.04/image, writes a
+  provenance sidecar). Separate from the MVP runtime image API by design; never
+  wire product source to it.
 
 Prompt shape:
 

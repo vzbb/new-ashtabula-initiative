@@ -15,10 +15,11 @@ Also load:
   for the buyer's own site, competitors, and the visual conventions of their
   industry. Look at what this buyer's world actually looks like before choosing a
   palette.
-- **`nai-media-generation`** — generate logos, icons, and hero art by calling
-  OpenRouter directly from the shell at authoring time (~$0.04 per image, so 1–3
-  candidates, not twenty), then commit the file with model, prompt, date, and cost
-  recorded. Provenance is part of this gate.
+- **`nai-image`** — you can make image files:
+  `.claude/bin/nai-image --prompt "..." --out <path> --aspect 1:1`. Roughly $0.04
+  per image, so a few candidates, not dozens. It writes a `.provenance.json`
+  sidecar automatically; provenance is part of this gate. Agent tooling only —
+  unrelated to the MVP's runtime image API.
 - **`nai-frontend-design`** — so the palette, type scale, and imagery you choose
   are ones an implementer can actually clear the aesthetic bar with.
 
